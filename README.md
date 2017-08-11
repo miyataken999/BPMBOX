@@ -1,5 +1,5 @@
 # BPMBOX
-BPMBOX IS BRMS SYSTEM
+BPMBOX IS BPMS SYSTEM
 Connecting...
 /develop/include/appsettings.php
 /develop/include/audit.php
