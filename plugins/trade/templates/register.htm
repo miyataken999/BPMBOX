@@ -1,0 +1,204 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-register" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_regpage}
+<div {$regpage_chiddenattr} data-pageid="{$pageid}" data-container="regpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN regheader}
+	<h2 {$regheader_hiddenattr} data-pageid="{$pageid}" data-brick="regheader">{$pagetitlelabel  register}</h2>
+
+{END regheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_regpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$regfields_hiddenattr} data-pageid="{$pageid}" data-brick="regfields" class="form-horizontal" role="form">
+			
+		{BEGIN login_id_fieldblock}
+<div class="container">
+<div class="form-group {$fielddispclass_login_id}" data-fieldname="login_id" data-signal-error-for="login_id{$id}">
+	<label class="col-md-3 control-label" for="{$labelfor_login_id}">
+	{BEGIN login_id_label}{$label dtb_member login_id}{END login_id_label}
+	</label>
+	<div class="col-md-6">
+	{$login_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="login_id">
+		<div class="text-muted" >
+		{$tooltip dtb_member login_id}
+		</div>
+	</div>
+</div>
+</div>
+{END login_id_fieldblock}
+					<div class="container">
+		<div class="form-group" data-fieldname="{$captcha_field_name}" data-signal-error-for="{$captcha_field_name}{$id}" >
+	<div class="col-md-6 col-md-offset-3" >
+		{$captcha}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="{$captcha_field_name}">
+		<div class="text-muted" >
+		</div>
+	</div>
+	
+</div>
+
+		</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN regbuttons}
+	<a href="#" class="btn btn-primary" {$submit_attrs}>登録</a>
+	<a href="login.php" class="btn btn-default" {$backlink_attrs}>ログインページに戻る</a>
+
+	
+	
+		
+	
+	
+
+
+{END regbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

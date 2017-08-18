@@ -1,0 +1,1635 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel dtb_order1 search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN JPN_fieldblock}		
+	<div class="container {$fielddispclass_JPN}" data-fieldname="JPN">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 JPN}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_JPN}
+			</div>
+			<div class="col-md-4" >
+				{$JPN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$JPN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END JPN_fieldblock}
+	{BEGIN APPLICATION_fieldblock}		
+	<div class="container {$fielddispclass_APPLICATION}" data-fieldname="APPLICATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APPLICATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APPLICATION}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APPLICATION_fieldblock}
+	{BEGIN APPLICATION_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_APPLICATION_LABEL}" data-fieldname="APPLICATION_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APPLICATION_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APPLICATION_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APPLICATION_LABEL_fieldblock}
+	{BEGIN APP_UID_fieldblock}		
+	<div class="container {$fielddispclass_APP_UID}" data-fieldname="APP_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_UID}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_UID_fieldblock}
+	{BEGIN DEL_INDEX_fieldblock}		
+	<div class="container {$fielddispclass_DEL_INDEX}" data-fieldname="DEL_INDEX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_INDEX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_INDEX}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_INDEX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_INDEX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_INDEX_fieldblock}
+	{BEGIN DEL_LAST_INDEX_fieldblock}		
+	<div class="container {$fielddispclass_DEL_LAST_INDEX}" data-fieldname="DEL_LAST_INDEX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_LAST_INDEX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_LAST_INDEX}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_LAST_INDEX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_LAST_INDEX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_LAST_INDEX_fieldblock}
+	{BEGIN APP_NUMBER_fieldblock}		
+	<div class="container {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_NUMBER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_NUMBER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_NUMBER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_NUMBER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_NUMBER_fieldblock}
+	{BEGIN APP_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$APP_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_STATUS_fieldblock}
+	{BEGIN USR_UID_fieldblock}		
+	<div class="container {$fielddispclass_USR_UID}" data-fieldname="USR_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 USR_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_UID}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_UID_fieldblock}
+	{BEGIN PREVIOUS_USR_UID_fieldblock}		
+	<div class="container {$fielddispclass_PREVIOUS_USR_UID}" data-fieldname="PREVIOUS_USR_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 PREVIOUS_USR_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PREVIOUS_USR_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PREVIOUS_USR_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PREVIOUS_USR_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PREVIOUS_USR_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}		
+	<div class="container {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 TAS_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_UID}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN DEL_DELEGATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_DEL_DELEGATE_DATE}" data-fieldname="DEL_DELEGATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_DELEGATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_DELEGATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DELEGATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DELEGATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_DELEGATE_DATE_fieldblock}
+	{BEGIN DEL_INIT_DATE_fieldblock}		
+	<div class="container {$fielddispclass_DEL_INIT_DATE}" data-fieldname="DEL_INIT_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_INIT_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_INIT_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_INIT_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_INIT_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_INIT_DATE_fieldblock}
+	{BEGIN DEL_FINISH_DATE_fieldblock}		
+	<div class="container {$fielddispclass_DEL_FINISH_DATE}" data-fieldname="DEL_FINISH_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_FINISH_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_FINISH_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_FINISH_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_FINISH_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_FINISH_DATE_fieldblock}
+	{BEGIN DEL_TASK_DUE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_DEL_TASK_DUE_DATE}" data-fieldname="DEL_TASK_DUE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_TASK_DUE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_TASK_DUE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_TASK_DUE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_TASK_DUE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_TASK_DUE_DATE_fieldblock}
+	{BEGIN DEL_RISK_DATE_fieldblock}		
+	<div class="container {$fielddispclass_DEL_RISK_DATE}" data-fieldname="DEL_RISK_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_RISK_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_RISK_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_RISK_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_RISK_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_RISK_DATE_fieldblock}
+	{BEGIN DEL_THREAD_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_DEL_THREAD_STATUS}" data-fieldname="DEL_THREAD_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_THREAD_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_THREAD_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_THREAD_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_THREAD_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_THREAD_STATUS_fieldblock}
+	{BEGIN APP_THREAD_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_APP_THREAD_STATUS}" data-fieldname="APP_THREAD_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_THREAD_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_THREAD_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$APP_THREAD_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_THREAD_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_THREAD_STATUS_fieldblock}
+	{BEGIN APP_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_APP_TITLE}" data-fieldname="APP_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_TITLE_fieldblock}
+	{BEGIN APP_PRO_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_APP_PRO_TITLE}" data-fieldname="APP_PRO_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_PRO_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_PRO_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PRO_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PRO_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_PRO_TITLE_fieldblock}
+	{BEGIN APP_TAS_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_APP_TAS_TITLE}" data-fieldname="APP_TAS_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_TAS_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_TAS_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_TAS_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_TAS_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_TAS_TITLE_fieldblock}
+	{BEGIN APP_CURRENT_USER_fieldblock}		
+	<div class="container {$fielddispclass_APP_CURRENT_USER}" data-fieldname="APP_CURRENT_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_CURRENT_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_CURRENT_USER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CURRENT_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CURRENT_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_CURRENT_USER_fieldblock}
+	{BEGIN APP_DEL_PREVIOUS_USER_fieldblock}		
+	<div class="container {$fielddispclass_APP_DEL_PREVIOUS_USER}" data-fieldname="APP_DEL_PREVIOUS_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_DEL_PREVIOUS_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_DEL_PREVIOUS_USER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DEL_PREVIOUS_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DEL_PREVIOUS_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_DEL_PREVIOUS_USER_fieldblock}
+	{BEGIN DEL_PRIORITY_fieldblock}		
+	<div class="container {$fielddispclass_DEL_PRIORITY}" data-fieldname="DEL_PRIORITY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_PRIORITY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_PRIORITY}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_PRIORITY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_PRIORITY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_PRIORITY_fieldblock}
+	{BEGIN DEL_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_DEL_DURATION}" data-fieldname="DEL_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_DURATION_fieldblock}
+	{BEGIN DEL_QUEUE_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_DEL_QUEUE_DURATION}" data-fieldname="DEL_QUEUE_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_QUEUE_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_QUEUE_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_QUEUE_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_QUEUE_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_QUEUE_DURATION_fieldblock}
+	{BEGIN DEL_DELAY_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_DEL_DELAY_DURATION}" data-fieldname="DEL_DELAY_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_DELAY_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_DELAY_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DELAY_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DELAY_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_DELAY_DURATION_fieldblock}
+	{BEGIN DEL_STARTED_fieldblock}		
+	<div class="container {$fielddispclass_DEL_STARTED}" data-fieldname="DEL_STARTED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_STARTED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_STARTED}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_STARTED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_STARTED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_STARTED_fieldblock}
+	{BEGIN DEL_FINISHED_fieldblock}		
+	<div class="container {$fielddispclass_DEL_FINISHED}" data-fieldname="DEL_FINISHED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_FINISHED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_FINISHED}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_FINISHED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_FINISHED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_FINISHED_fieldblock}
+	{BEGIN DEL_DELAYED_fieldblock}		
+	<div class="container {$fielddispclass_DEL_DELAYED}" data-fieldname="DEL_DELAYED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 DEL_DELAYED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEL_DELAYED}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DELAYED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEL_DELAYED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEL_DELAYED_fieldblock}
+	{BEGIN APP_CREATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_CREATE_DATE}" data-fieldname="APP_CREATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_CREATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_CREATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CREATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CREATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_CREATE_DATE_fieldblock}
+	{BEGIN APP_FINISH_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_FINISH_DATE}" data-fieldname="APP_FINISH_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_FINISH_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_FINISH_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_FINISH_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_FINISH_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_FINISH_DATE_fieldblock}
+	{BEGIN APP_UPDATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_UPDATE_DATE}" data-fieldname="APP_UPDATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_UPDATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_UPDATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UPDATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UPDATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_UPDATE_DATE_fieldblock}
+	{BEGIN APP_OVERDUE_PERCENTAGE_fieldblock}		
+	<div class="container {$fielddispclass_APP_OVERDUE_PERCENTAGE}" data-fieldname="APP_OVERDUE_PERCENTAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 APP_OVERDUE_PERCENTAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_OVERDUE_PERCENTAGE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_OVERDUE_PERCENTAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_OVERDUE_PERCENTAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_OVERDUE_PERCENTAGE_fieldblock}
+	{BEGIN order_id_fieldblock}		
+	<div class="container {$fielddispclass_order_id}" data-fieldname="order_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_id}
+			</div>
+			<div class="col-md-4" >
+				{$order_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_id_fieldblock}
+	{BEGIN customer_id_fieldblock}		
+	<div class="container {$fielddispclass_customer_id}" data-fieldname="customer_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 customer_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_customer_id}
+			</div>
+			<div class="col-md-4" >
+				{$customer_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$customer_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END customer_id_fieldblock}
+	{BEGIN status_fieldblock}		
+	<div class="container {$fielddispclass_status}" data-fieldname="status">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 status}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_status}
+			</div>
+			<div class="col-md-4" >
+				{$status_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$status_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END status_fieldblock}
+	{BEGIN order_country_id_fieldblock}		
+	<div class="container {$fielddispclass_order_country_id}" data-fieldname="order_country_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_country_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_country_id}
+			</div>
+			<div class="col-md-4" >
+				{$order_country_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_country_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_country_id_fieldblock}
+	{BEGIN order_pref_fieldblock}		
+	<div class="container {$fielddispclass_order_pref}" data-fieldname="order_pref">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_pref}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_pref}
+			</div>
+			<div class="col-md-4" >
+				{$order_pref_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_pref_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_pref_fieldblock}
+	{BEGIN order_sex_fieldblock}		
+	<div class="container {$fielddispclass_order_sex}" data-fieldname="order_sex">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_sex}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_sex}
+			</div>
+			<div class="col-md-4" >
+				{$order_sex_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_sex_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_sex_fieldblock}
+	{BEGIN order_job_fieldblock}		
+	<div class="container {$fielddispclass_order_job}" data-fieldname="order_job">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_job}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_job}
+			</div>
+			<div class="col-md-4" >
+				{$order_job_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_job_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_job_fieldblock}
+	{BEGIN payment_id_fieldblock}		
+	<div class="container {$fielddispclass_payment_id}" data-fieldname="payment_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 payment_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_payment_id}
+			</div>
+			<div class="col-md-4" >
+				{$payment_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$payment_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END payment_id_fieldblock}
+	{BEGIN device_type_id_fieldblock}		
+	<div class="container {$fielddispclass_device_type_id}" data-fieldname="device_type_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 device_type_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_device_type_id}
+			</div>
+			<div class="col-md-4" >
+				{$device_type_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$device_type_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END device_type_id_fieldblock}
+	{BEGIN pre_order_id_fieldblock}		
+	<div class="container {$fielddispclass_pre_order_id}" data-fieldname="pre_order_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 pre_order_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_pre_order_id}
+			</div>
+			<div class="col-md-4" >
+				{$pre_order_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pre_order_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pre_order_id_fieldblock}
+	{BEGIN message_fieldblock}		
+	<div class="container {$fielddispclass_message}" data-fieldname="message">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 message}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_message}
+			</div>
+			<div class="col-md-4" >
+				{$message_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$message_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END message_fieldblock}
+	{BEGIN order_name01_fieldblock}		
+	<div class="container {$fielddispclass_order_name01}" data-fieldname="order_name01">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_name01}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_name01}
+			</div>
+			<div class="col-md-4" >
+				{$order_name01_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_name01_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_name01_fieldblock}
+	{BEGIN order_name02_fieldblock}		
+	<div class="container {$fielddispclass_order_name02}" data-fieldname="order_name02">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_name02}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_name02}
+			</div>
+			<div class="col-md-4" >
+				{$order_name02_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_name02_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_name02_fieldblock}
+	{BEGIN order_kana01_fieldblock}		
+	<div class="container {$fielddispclass_order_kana01}" data-fieldname="order_kana01">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_kana01}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_kana01}
+			</div>
+			<div class="col-md-4" >
+				{$order_kana01_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_kana01_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_kana01_fieldblock}
+	{BEGIN order_kana02_fieldblock}		
+	<div class="container {$fielddispclass_order_kana02}" data-fieldname="order_kana02">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_kana02}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_kana02}
+			</div>
+			<div class="col-md-4" >
+				{$order_kana02_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_kana02_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_kana02_fieldblock}
+	{BEGIN order_company_name_fieldblock}		
+	<div class="container {$fielddispclass_order_company_name}" data-fieldname="order_company_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_company_name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_company_name}
+			</div>
+			<div class="col-md-4" >
+				{$order_company_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_company_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_company_name_fieldblock}
+	{BEGIN order_email_fieldblock}		
+	<div class="container {$fielddispclass_order_email}" data-fieldname="order_email">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_email}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_email}
+			</div>
+			<div class="col-md-4" >
+				{$order_email_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_email_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_email_fieldblock}
+	{BEGIN order_tel01_fieldblock}		
+	<div class="container {$fielddispclass_order_tel01}" data-fieldname="order_tel01">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_tel01}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_tel01}
+			</div>
+			<div class="col-md-4" >
+				{$order_tel01_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_tel01_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_tel01_fieldblock}
+	{BEGIN order_tel02_fieldblock}		
+	<div class="container {$fielddispclass_order_tel02}" data-fieldname="order_tel02">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_tel02}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_tel02}
+			</div>
+			<div class="col-md-4" >
+				{$order_tel02_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_tel02_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_tel02_fieldblock}
+	{BEGIN order_tel03_fieldblock}		
+	<div class="container {$fielddispclass_order_tel03}" data-fieldname="order_tel03">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_tel03}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_tel03}
+			</div>
+			<div class="col-md-4" >
+				{$order_tel03_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_tel03_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_tel03_fieldblock}
+	{BEGIN order_fax01_fieldblock}		
+	<div class="container {$fielddispclass_order_fax01}" data-fieldname="order_fax01">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_fax01}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_fax01}
+			</div>
+			<div class="col-md-4" >
+				{$order_fax01_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_fax01_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_fax01_fieldblock}
+	{BEGIN order_fax02_fieldblock}		
+	<div class="container {$fielddispclass_order_fax02}" data-fieldname="order_fax02">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_fax02}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_fax02}
+			</div>
+			<div class="col-md-4" >
+				{$order_fax02_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_fax02_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_fax02_fieldblock}
+	{BEGIN order_fax03_fieldblock}		
+	<div class="container {$fielddispclass_order_fax03}" data-fieldname="order_fax03">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_fax03}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_fax03}
+			</div>
+			<div class="col-md-4" >
+				{$order_fax03_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_fax03_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_fax03_fieldblock}
+	{BEGIN order_zip01_fieldblock}		
+	<div class="container {$fielddispclass_order_zip01}" data-fieldname="order_zip01">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_zip01}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_zip01}
+			</div>
+			<div class="col-md-4" >
+				{$order_zip01_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_zip01_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_zip01_fieldblock}
+	{BEGIN order_zip02_fieldblock}		
+	<div class="container {$fielddispclass_order_zip02}" data-fieldname="order_zip02">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_zip02}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_zip02}
+			</div>
+			<div class="col-md-4" >
+				{$order_zip02_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_zip02_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_zip02_fieldblock}
+	{BEGIN order_zipcode_fieldblock}		
+	<div class="container {$fielddispclass_order_zipcode}" data-fieldname="order_zipcode">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_zipcode}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_zipcode}
+			</div>
+			<div class="col-md-4" >
+				{$order_zipcode_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_zipcode_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_zipcode_fieldblock}
+	{BEGIN order_addr01_fieldblock}		
+	<div class="container {$fielddispclass_order_addr01}" data-fieldname="order_addr01">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_addr01}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_addr01}
+			</div>
+			<div class="col-md-4" >
+				{$order_addr01_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_addr01_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_addr01_fieldblock}
+	{BEGIN order_addr02_fieldblock}		
+	<div class="container {$fielddispclass_order_addr02}" data-fieldname="order_addr02">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_addr02}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_addr02}
+			</div>
+			<div class="col-md-4" >
+				{$order_addr02_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_addr02_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_addr02_fieldblock}
+	{BEGIN order_birth_fieldblock}		
+	<div class="container {$fielddispclass_order_birth}" data-fieldname="order_birth">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_birth}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_birth}
+			</div>
+			<div class="col-md-4" >
+				{$order_birth_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_birth_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_birth_fieldblock}
+	{BEGIN subtotal_fieldblock}		
+	<div class="container {$fielddispclass_subtotal}" data-fieldname="subtotal">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 subtotal}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_subtotal}
+			</div>
+			<div class="col-md-4" >
+				{$subtotal_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$subtotal_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END subtotal_fieldblock}
+	{BEGIN discount_fieldblock}		
+	<div class="container {$fielddispclass_discount}" data-fieldname="discount">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 discount}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_discount}
+			</div>
+			<div class="col-md-4" >
+				{$discount_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$discount_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END discount_fieldblock}
+	{BEGIN delivery_fee_total_fieldblock}		
+	<div class="container {$fielddispclass_delivery_fee_total}" data-fieldname="delivery_fee_total">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 delivery_fee_total}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_delivery_fee_total}
+			</div>
+			<div class="col-md-4" >
+				{$delivery_fee_total_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$delivery_fee_total_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END delivery_fee_total_fieldblock}
+	{BEGIN charge_fieldblock}		
+	<div class="container {$fielddispclass_charge}" data-fieldname="charge">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 charge}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_charge}
+			</div>
+			<div class="col-md-4" >
+				{$charge_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$charge_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END charge_fieldblock}
+	{BEGIN tax_fieldblock}		
+	<div class="container {$fielddispclass_tax}" data-fieldname="tax">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 tax}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_tax}
+			</div>
+			<div class="col-md-4" >
+				{$tax_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$tax_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END tax_fieldblock}
+	{BEGIN total_fieldblock}		
+	<div class="container {$fielddispclass_total}" data-fieldname="total">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 total}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_total}
+			</div>
+			<div class="col-md-4" >
+				{$total_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$total_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END total_fieldblock}
+	{BEGIN payment_total_fieldblock}		
+	<div class="container {$fielddispclass_payment_total}" data-fieldname="payment_total">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 payment_total}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_payment_total}
+			</div>
+			<div class="col-md-4" >
+				{$payment_total_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$payment_total_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END payment_total_fieldblock}
+	{BEGIN payment_method_fieldblock}		
+	<div class="container {$fielddispclass_payment_method}" data-fieldname="payment_method">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 payment_method}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_payment_method}
+			</div>
+			<div class="col-md-4" >
+				{$payment_method_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$payment_method_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END payment_method_fieldblock}
+	{BEGIN note_fieldblock}		
+	<div class="container {$fielddispclass_note}" data-fieldname="note">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 note}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_note}
+			</div>
+			<div class="col-md-4" >
+				{$note_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$note_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END note_fieldblock}
+	{BEGIN create_date_fieldblock}		
+	<div class="container {$fielddispclass_create_date}" data-fieldname="create_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 create_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_create_date}
+			</div>
+			<div class="col-md-4" >
+				{$create_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$create_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END create_date_fieldblock}
+	{BEGIN update_date_fieldblock}		
+	<div class="container {$fielddispclass_update_date}" data-fieldname="update_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 update_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_update_date}
+			</div>
+			<div class="col-md-4" >
+				{$update_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$update_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END update_date_fieldblock}
+	{BEGIN order_date_fieldblock}		
+	<div class="container {$fielddispclass_order_date}" data-fieldname="order_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 order_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_order_date}
+			</div>
+			<div class="col-md-4" >
+				{$order_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$order_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END order_date_fieldblock}
+	{BEGIN commit_date_fieldblock}		
+	<div class="container {$fielddispclass_commit_date}" data-fieldname="commit_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 commit_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_commit_date}
+			</div>
+			<div class="col-md-4" >
+				{$commit_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$commit_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END commit_date_fieldblock}
+	{BEGIN payment_date_fieldblock}		
+	<div class="container {$fielddispclass_payment_date}" data-fieldname="payment_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 payment_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_payment_date}
+			</div>
+			<div class="col-md-4" >
+				{$payment_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$payment_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END payment_date_fieldblock}
+	{BEGIN del_flg_fieldblock}		
+	<div class="container {$fielddispclass_del_flg}" data-fieldname="del_flg">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_order1 del_flg}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_del_flg}
+			</div>
+			<div class="col-md-4" >
+				{$del_flg_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$del_flg_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END del_flg_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_member masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$member_id_class}">{$label dtb_member member_id}</th>
+			<th class="{$work_class}">{$label dtb_member work}</th>
+			<th class="{$authority_class}">{$label dtb_member authority}</th>
+			<th class="{$creator_id_class}">{$label dtb_member creator_id}</th>
+			<th class="{$name_class}">{$label dtb_member name}</th>
+			<th class="{$department_class}">{$label dtb_member department}</th>
+			<th class="{$login_id_class}">{$label dtb_member login_id}</th>
+			<th class="{$password_class}">{$label dtb_member password}</th>
+			<th class="{$salt_class}">{$label dtb_member salt}</th>
+			<th class="{$rank_class}">{$label dtb_member rank}</th>
+			<th class="{$del_flg_class}">{$label dtb_member del_flg}</th>
+			<th class="{$create_date_class}">{$label dtb_member create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_member update_date}</th>
+			<th class="{$login_date_class}">{$label dtb_member login_date}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$member_id_class}">{$member_id_mastervalue}</td>
+			<td class="{$work_class}">{$work_mastervalue}</td>
+			<td class="{$authority_class}">{$authority_mastervalue}</td>
+			<td class="{$creator_id_class}">{$creator_id_mastervalue}</td>
+			<td class="{$name_class}">{$name_mastervalue}</td>
+			<td class="{$department_class}">{$department_mastervalue}</td>
+			<td class="{$login_id_class}">{$login_id_mastervalue}</td>
+			<td class="{$password_class}">{$password_mastervalue}</td>
+			<td class="{$salt_class}">{$salt_mastervalue}</td>
+			<td class="{$rank_class}">{$rank_mastervalue}</td>
+			<td class="{$del_flg_class}">{$del_flg_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$login_date_class}">{$login_date_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

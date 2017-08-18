@@ -1,0 +1,101 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_shipping masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$shipping_id_class}">{$label dtb_shipping shipping_id}</th>
+			<th class="{$shipping_country_id_class}">{$label dtb_shipping shipping_country_id}</th>
+			<th class="{$shipping_pref_class}">{$label dtb_shipping shipping_pref}</th>
+			<th class="{$order_id_class}">{$label dtb_shipping order_id}</th>
+			<th class="{$delivery_id_class}">{$label dtb_shipping delivery_id}</th>
+			<th class="{$time_id_class}">{$label dtb_shipping time_id}</th>
+			<th class="{$fee_id_class}">{$label dtb_shipping fee_id}</th>
+			<th class="{$shipping_name01_class}">{$label dtb_shipping shipping_name01}</th>
+			<th class="{$shipping_name02_class}">{$label dtb_shipping shipping_name02}</th>
+			<th class="{$shipping_kana01_class}">{$label dtb_shipping shipping_kana01}</th>
+			<th class="{$shipping_kana02_class}">{$label dtb_shipping shipping_kana02}</th>
+			<th class="{$shipping_company_name_class}">{$label dtb_shipping shipping_company_name}</th>
+			<th class="{$shipping_tel01_class}">{$label dtb_shipping shipping_tel01}</th>
+			<th class="{$shipping_tel02_class}">{$label dtb_shipping shipping_tel02}</th>
+			<th class="{$shipping_tel03_class}">{$label dtb_shipping shipping_tel03}</th>
+			<th class="{$shipping_fax01_class}">{$label dtb_shipping shipping_fax01}</th>
+			<th class="{$shipping_fax02_class}">{$label dtb_shipping shipping_fax02}</th>
+			<th class="{$shipping_fax03_class}">{$label dtb_shipping shipping_fax03}</th>
+			<th class="{$shipping_zip01_class}">{$label dtb_shipping shipping_zip01}</th>
+			<th class="{$shipping_zip02_class}">{$label dtb_shipping shipping_zip02}</th>
+			<th class="{$shipping_zipcode_class}">{$label dtb_shipping shipping_zipcode}</th>
+			<th class="{$shipping_addr01_class}">{$label dtb_shipping shipping_addr01}</th>
+			<th class="{$shipping_addr02_class}">{$label dtb_shipping shipping_addr02}</th>
+			<th class="{$shipping_delivery_name_class}">{$label dtb_shipping shipping_delivery_name}</th>
+			<th class="{$shipping_delivery_time_class}">{$label dtb_shipping shipping_delivery_time}</th>
+			<th class="{$shipping_delivery_date_class}">{$label dtb_shipping shipping_delivery_date}</th>
+			<th class="{$shipping_delivery_fee_class}">{$label dtb_shipping shipping_delivery_fee}</th>
+			<th class="{$shipping_commit_date_class}">{$label dtb_shipping shipping_commit_date}</th>
+			<th class="{$rank_class}">{$label dtb_shipping rank}</th>
+			<th class="{$create_date_class}">{$label dtb_shipping create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_shipping update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_shipping del_flg}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$shipping_id_class}">{$shipping_id_mastervalue}</td>
+			<td class="{$shipping_country_id_class}">{$shipping_country_id_mastervalue}</td>
+			<td class="{$shipping_pref_class}">{$shipping_pref_mastervalue}</td>
+			<td class="{$order_id_class}">{$order_id_mastervalue}</td>
+			<td class="{$delivery_id_class}">{$delivery_id_mastervalue}</td>
+			<td class="{$time_id_class}">{$time_id_mastervalue}</td>
+			<td class="{$fee_id_class}">{$fee_id_mastervalue}</td>
+			<td class="{$shipping_name01_class}">{$shipping_name01_mastervalue}</td>
+			<td class="{$shipping_name02_class}">{$shipping_name02_mastervalue}</td>
+			<td class="{$shipping_kana01_class}">{$shipping_kana01_mastervalue}</td>
+			<td class="{$shipping_kana02_class}">{$shipping_kana02_mastervalue}</td>
+			<td class="{$shipping_company_name_class}">{$shipping_company_name_mastervalue}</td>
+			<td class="{$shipping_tel01_class}">{$shipping_tel01_mastervalue}</td>
+			<td class="{$shipping_tel02_class}">{$shipping_tel02_mastervalue}</td>
+			<td class="{$shipping_tel03_class}">{$shipping_tel03_mastervalue}</td>
+			<td class="{$shipping_fax01_class}">{$shipping_fax01_mastervalue}</td>
+			<td class="{$shipping_fax02_class}">{$shipping_fax02_mastervalue}</td>
+			<td class="{$shipping_fax03_class}">{$shipping_fax03_mastervalue}</td>
+			<td class="{$shipping_zip01_class}">{$shipping_zip01_mastervalue}</td>
+			<td class="{$shipping_zip02_class}">{$shipping_zip02_mastervalue}</td>
+			<td class="{$shipping_zipcode_class}">{$shipping_zipcode_mastervalue}</td>
+			<td class="{$shipping_addr01_class}">{$shipping_addr01_mastervalue}</td>
+			<td class="{$shipping_addr02_class}">{$shipping_addr02_mastervalue}</td>
+			<td class="{$shipping_delivery_name_class}">{$shipping_delivery_name_mastervalue}</td>
+			<td class="{$shipping_delivery_time_class}">{$shipping_delivery_time_mastervalue}</td>
+			<td class="{$shipping_delivery_date_class}">{$shipping_delivery_date_mastervalue}</td>
+			<td class="{$shipping_delivery_fee_class}">{$shipping_delivery_fee_mastervalue}</td>
+			<td class="{$shipping_commit_date_class}">{$shipping_commit_date_mastervalue}</td>
+			<td class="{$rank_class}">{$rank_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$del_flg_class}">{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

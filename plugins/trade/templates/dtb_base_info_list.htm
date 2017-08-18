@@ -1,0 +1,1981 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="dtb_base_info_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="dtb_base_info_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="dtb_base_info_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="dtb_base_info_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="dtb_base_info_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_id" checked="checked" value="1" data-field="id">
+			  <span>{$label dtb_base_info id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_country_id" checked="checked" value="1" data-field="country_id">
+			  <span>{$label dtb_base_info country_id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_pref" checked="checked" value="1" data-field="pref">
+			  <span>{$label dtb_base_info pref}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_company_name" checked="checked" value="1" data-field="company_name">
+			  <span>{$label dtb_base_info company_name}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_company_kana" checked="checked" value="1" data-field="company_kana">
+			  <span>{$label dtb_base_info company_kana}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_zip01" checked="checked" value="1" data-field="zip01">
+			  <span>{$label dtb_base_info zip01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_zip02" checked="checked" value="1" data-field="zip02">
+			  <span>{$label dtb_base_info zip02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_zipcode" checked="checked" value="1" data-field="zipcode">
+			  <span>{$label dtb_base_info zipcode}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_addr01" checked="checked" value="1" data-field="addr01">
+			  <span>{$label dtb_base_info addr01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_addr02" checked="checked" value="1" data-field="addr02">
+			  <span>{$label dtb_base_info addr02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_tel01" checked="checked" value="1" data-field="tel01">
+			  <span>{$label dtb_base_info tel01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_tel02" checked="checked" value="1" data-field="tel02">
+			  <span>{$label dtb_base_info tel02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_tel03" checked="checked" value="1" data-field="tel03">
+			  <span>{$label dtb_base_info tel03}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_fax01" checked="checked" value="1" data-field="fax01">
+			  <span>{$label dtb_base_info fax01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_fax02" checked="checked" value="1" data-field="fax02">
+			  <span>{$label dtb_base_info fax02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_fax03" checked="checked" value="1" data-field="fax03">
+			  <span>{$label dtb_base_info fax03}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_business_hour" checked="checked" value="1" data-field="business_hour">
+			  <span>{$label dtb_base_info business_hour}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_email01" checked="checked" value="1" data-field="email01">
+			  <span>{$label dtb_base_info email01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_email02" checked="checked" value="1" data-field="email02">
+			  <span>{$label dtb_base_info email02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_email03" checked="checked" value="1" data-field="email03">
+			  <span>{$label dtb_base_info email03}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_email04" checked="checked" value="1" data-field="email04">
+			  <span>{$label dtb_base_info email04}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_shop_name" checked="checked" value="1" data-field="shop_name">
+			  <span>{$label dtb_base_info shop_name}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_shop_kana" checked="checked" value="1" data-field="shop_kana">
+			  <span>{$label dtb_base_info shop_kana}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_shop_name_eng" checked="checked" value="1" data-field="shop_name_eng">
+			  <span>{$label dtb_base_info shop_name_eng}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_update_date" checked="checked" value="1" data-field="update_date">
+			  <span>{$label dtb_base_info update_date}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_good_traded" checked="checked" value="1" data-field="good_traded">
+			  <span>{$label dtb_base_info good_traded}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_message" checked="checked" value="1" data-field="message">
+			  <span>{$label dtb_base_info message}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_latitude" checked="checked" value="1" data-field="latitude">
+			  <span>{$label dtb_base_info latitude}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_longitude" checked="checked" value="1" data-field="longitude">
+			  <span>{$label dtb_base_info longitude}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_delivery_free_amount" checked="checked" value="1" data-field="delivery_free_amount">
+			  <span>{$label dtb_base_info delivery_free_amount}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_delivery_free_quantity" checked="checked" value="1" data-field="delivery_free_quantity">
+			  <span>{$label dtb_base_info delivery_free_quantity}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_multiple_shipping" checked="checked" value="1" data-field="option_multiple_shipping">
+			  <span>{$label dtb_base_info option_multiple_shipping}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_mypage_order_status_display" checked="checked" value="1" data-field="option_mypage_order_status_display">
+			  <span>{$label dtb_base_info option_mypage_order_status_display}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_nostock_hidden" checked="checked" value="1" data-field="nostock_hidden">
+			  <span>{$label dtb_base_info nostock_hidden}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_favorite_product" checked="checked" value="1" data-field="option_favorite_product">
+			  <span>{$label dtb_base_info option_favorite_product}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_product_delivery_fee" checked="checked" value="1" data-field="option_product_delivery_fee">
+			  <span>{$label dtb_base_info option_product_delivery_fee}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_product_tax_rule" checked="checked" value="1" data-field="option_product_tax_rule">
+			  <span>{$label dtb_base_info option_product_tax_rule}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_customer_activate" checked="checked" value="1" data-field="option_customer_activate">
+			  <span>{$label dtb_base_info option_customer_activate}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_option_remember_me" checked="checked" value="1" data-field="option_remember_me">
+			  <span>{$label dtb_base_info option_remember_me}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_authentication_key" checked="checked" value="1" data-field="authentication_key">
+			  <span>{$label dtb_base_info authentication_key}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label dtb_base_info id}";
+	}
+	.bs-gridcell[data-field=country_id]:before {
+		content: "{$label dtb_base_info country_id}";
+	}
+	.bs-gridcell[data-field=pref]:before {
+		content: "{$label dtb_base_info pref}";
+	}
+	.bs-gridcell[data-field=company_name]:before {
+		content: "{$label dtb_base_info company_name}";
+	}
+	.bs-gridcell[data-field=company_kana]:before {
+		content: "{$label dtb_base_info company_kana}";
+	}
+	.bs-gridcell[data-field=zip01]:before {
+		content: "{$label dtb_base_info zip01}";
+	}
+	.bs-gridcell[data-field=zip02]:before {
+		content: "{$label dtb_base_info zip02}";
+	}
+	.bs-gridcell[data-field=zipcode]:before {
+		content: "{$label dtb_base_info zipcode}";
+	}
+	.bs-gridcell[data-field=addr01]:before {
+		content: "{$label dtb_base_info addr01}";
+	}
+	.bs-gridcell[data-field=addr02]:before {
+		content: "{$label dtb_base_info addr02}";
+	}
+	.bs-gridcell[data-field=tel01]:before {
+		content: "{$label dtb_base_info tel01}";
+	}
+	.bs-gridcell[data-field=tel02]:before {
+		content: "{$label dtb_base_info tel02}";
+	}
+	.bs-gridcell[data-field=tel03]:before {
+		content: "{$label dtb_base_info tel03}";
+	}
+	.bs-gridcell[data-field=fax01]:before {
+		content: "{$label dtb_base_info fax01}";
+	}
+	.bs-gridcell[data-field=fax02]:before {
+		content: "{$label dtb_base_info fax02}";
+	}
+	.bs-gridcell[data-field=fax03]:before {
+		content: "{$label dtb_base_info fax03}";
+	}
+	.bs-gridcell[data-field=business_hour]:before {
+		content: "{$label dtb_base_info business_hour}";
+	}
+	.bs-gridcell[data-field=email01]:before {
+		content: "{$label dtb_base_info email01}";
+	}
+	.bs-gridcell[data-field=email02]:before {
+		content: "{$label dtb_base_info email02}";
+	}
+	.bs-gridcell[data-field=email03]:before {
+		content: "{$label dtb_base_info email03}";
+	}
+	.bs-gridcell[data-field=email04]:before {
+		content: "{$label dtb_base_info email04}";
+	}
+	.bs-gridcell[data-field=shop_name]:before {
+		content: "{$label dtb_base_info shop_name}";
+	}
+	.bs-gridcell[data-field=shop_kana]:before {
+		content: "{$label dtb_base_info shop_kana}";
+	}
+	.bs-gridcell[data-field=shop_name_eng]:before {
+		content: "{$label dtb_base_info shop_name_eng}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_base_info update_date}";
+	}
+	.bs-gridcell[data-field=good_traded]:before {
+		content: "{$label dtb_base_info good_traded}";
+	}
+	.bs-gridcell[data-field=message]:before {
+		content: "{$label dtb_base_info message}";
+	}
+	.bs-gridcell[data-field=latitude]:before {
+		content: "{$label dtb_base_info latitude}";
+	}
+	.bs-gridcell[data-field=longitude]:before {
+		content: "{$label dtb_base_info longitude}";
+	}
+	.bs-gridcell[data-field=delivery_free_amount]:before {
+		content: "{$label dtb_base_info delivery_free_amount}";
+	}
+	.bs-gridcell[data-field=delivery_free_quantity]:before {
+		content: "{$label dtb_base_info delivery_free_quantity}";
+	}
+	.bs-gridcell[data-field=option_multiple_shipping]:before {
+		content: "{$label dtb_base_info option_multiple_shipping}";
+	}
+	.bs-gridcell[data-field=option_mypage_order_status_display]:before {
+		content: "{$label dtb_base_info option_mypage_order_status_display}";
+	}
+	.bs-gridcell[data-field=nostock_hidden]:before {
+		content: "{$label dtb_base_info nostock_hidden}";
+	}
+	.bs-gridcell[data-field=option_favorite_product]:before {
+		content: "{$label dtb_base_info option_favorite_product}";
+	}
+	.bs-gridcell[data-field=option_product_delivery_fee]:before {
+		content: "{$label dtb_base_info option_product_delivery_fee}";
+	}
+	.bs-gridcell[data-field=option_product_tax_rule]:before {
+		content: "{$label dtb_base_info option_product_tax_rule}";
+	}
+	.bs-gridcell[data-field=option_customer_activate]:before {
+		content: "{$label dtb_base_info option_customer_activate}";
+	}
+	.bs-gridcell[data-field=option_remember_me]:before {
+		content: "{$label dtb_base_info option_remember_me}";
+	}
+	.bs-gridcell[data-field=authentication_key]:before {
+		content: "{$label dtb_base_info authentication_key}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_class}" data-field=id>
+									{BEGIN id_fieldheader}
+																				<span {$id_orderlinkattrs}>
+											{$label dtb_base_info id}
+										</span>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN country_id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$country_id_class}" data-field=country_id>
+									{BEGIN country_id_fieldheader}
+																				<span {$country_id_orderlinkattrs}>
+											{$label dtb_base_info country_id}
+										</span>
+									{END country_id_fieldheader}
+									</th>
+									{END country_id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN pref_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$pref_class}" data-field=pref>
+									{BEGIN pref_fieldheader}
+																				<span {$pref_orderlinkattrs}>
+											{$label dtb_base_info pref}
+										</span>
+									{END pref_fieldheader}
+									</th>
+									{END pref_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN company_name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$company_name_class}" data-field=company_name>
+									{BEGIN company_name_fieldheader}
+																				<span {$company_name_orderlinkattrs}>
+											{$label dtb_base_info company_name}
+										</span>
+									{END company_name_fieldheader}
+									</th>
+									{END company_name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN company_kana_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$company_kana_class}" data-field=company_kana>
+									{BEGIN company_kana_fieldheader}
+																				<span {$company_kana_orderlinkattrs}>
+											{$label dtb_base_info company_kana}
+										</span>
+									{END company_kana_fieldheader}
+									</th>
+									{END company_kana_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN zip01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$zip01_class}" data-field=zip01>
+									{BEGIN zip01_fieldheader}
+																				<span {$zip01_orderlinkattrs}>
+											{$label dtb_base_info zip01}
+										</span>
+									{END zip01_fieldheader}
+									</th>
+									{END zip01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN zip02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$zip02_class}" data-field=zip02>
+									{BEGIN zip02_fieldheader}
+																				<span {$zip02_orderlinkattrs}>
+											{$label dtb_base_info zip02}
+										</span>
+									{END zip02_fieldheader}
+									</th>
+									{END zip02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN zipcode_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$zipcode_class}" data-field=zipcode>
+									{BEGIN zipcode_fieldheader}
+																				<span {$zipcode_orderlinkattrs}>
+											{$label dtb_base_info zipcode}
+										</span>
+									{END zipcode_fieldheader}
+									</th>
+									{END zipcode_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN addr01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$addr01_class}" data-field=addr01>
+									{BEGIN addr01_fieldheader}
+																				<span {$addr01_orderlinkattrs}>
+											{$label dtb_base_info addr01}
+										</span>
+									{END addr01_fieldheader}
+									</th>
+									{END addr01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN addr02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$addr02_class}" data-field=addr02>
+									{BEGIN addr02_fieldheader}
+																				<span {$addr02_orderlinkattrs}>
+											{$label dtb_base_info addr02}
+										</span>
+									{END addr02_fieldheader}
+									</th>
+									{END addr02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN tel01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$tel01_class}" data-field=tel01>
+									{BEGIN tel01_fieldheader}
+																				<span {$tel01_orderlinkattrs}>
+											{$label dtb_base_info tel01}
+										</span>
+									{END tel01_fieldheader}
+									</th>
+									{END tel01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN tel02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$tel02_class}" data-field=tel02>
+									{BEGIN tel02_fieldheader}
+																				<span {$tel02_orderlinkattrs}>
+											{$label dtb_base_info tel02}
+										</span>
+									{END tel02_fieldheader}
+									</th>
+									{END tel02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN tel03_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$tel03_class}" data-field=tel03>
+									{BEGIN tel03_fieldheader}
+																				<span {$tel03_orderlinkattrs}>
+											{$label dtb_base_info tel03}
+										</span>
+									{END tel03_fieldheader}
+									</th>
+									{END tel03_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fax01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fax01_class}" data-field=fax01>
+									{BEGIN fax01_fieldheader}
+																				<span {$fax01_orderlinkattrs}>
+											{$label dtb_base_info fax01}
+										</span>
+									{END fax01_fieldheader}
+									</th>
+									{END fax01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fax02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fax02_class}" data-field=fax02>
+									{BEGIN fax02_fieldheader}
+																				<span {$fax02_orderlinkattrs}>
+											{$label dtb_base_info fax02}
+										</span>
+									{END fax02_fieldheader}
+									</th>
+									{END fax02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fax03_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fax03_class}" data-field=fax03>
+									{BEGIN fax03_fieldheader}
+																				<span {$fax03_orderlinkattrs}>
+											{$label dtb_base_info fax03}
+										</span>
+									{END fax03_fieldheader}
+									</th>
+									{END fax03_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN business_hour_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$business_hour_class}" data-field=business_hour>
+									{BEGIN business_hour_fieldheader}
+																				<span {$business_hour_orderlinkattrs}>
+											{$label dtb_base_info business_hour}
+										</span>
+									{END business_hour_fieldheader}
+									</th>
+									{END business_hour_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN email01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$email01_class}" data-field=email01>
+									{BEGIN email01_fieldheader}
+																				<span {$email01_orderlinkattrs}>
+											{$label dtb_base_info email01}
+										</span>
+									{END email01_fieldheader}
+									</th>
+									{END email01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN email02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$email02_class}" data-field=email02>
+									{BEGIN email02_fieldheader}
+																				<span {$email02_orderlinkattrs}>
+											{$label dtb_base_info email02}
+										</span>
+									{END email02_fieldheader}
+									</th>
+									{END email02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN email03_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$email03_class}" data-field=email03>
+									{BEGIN email03_fieldheader}
+																				<span {$email03_orderlinkattrs}>
+											{$label dtb_base_info email03}
+										</span>
+									{END email03_fieldheader}
+									</th>
+									{END email03_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN email04_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$email04_class}" data-field=email04>
+									{BEGIN email04_fieldheader}
+																				<span {$email04_orderlinkattrs}>
+											{$label dtb_base_info email04}
+										</span>
+									{END email04_fieldheader}
+									</th>
+									{END email04_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN shop_name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$shop_name_class}" data-field=shop_name>
+									{BEGIN shop_name_fieldheader}
+																				<span {$shop_name_orderlinkattrs}>
+											{$label dtb_base_info shop_name}
+										</span>
+									{END shop_name_fieldheader}
+									</th>
+									{END shop_name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN shop_kana_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$shop_kana_class}" data-field=shop_kana>
+									{BEGIN shop_kana_fieldheader}
+																				<span {$shop_kana_orderlinkattrs}>
+											{$label dtb_base_info shop_kana}
+										</span>
+									{END shop_kana_fieldheader}
+									</th>
+									{END shop_kana_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN shop_name_eng_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$shop_name_eng_class}" data-field=shop_name_eng>
+									{BEGIN shop_name_eng_fieldheader}
+																				<span {$shop_name_eng_orderlinkattrs}>
+											{$label dtb_base_info shop_name_eng}
+										</span>
+									{END shop_name_eng_fieldheader}
+									</th>
+									{END shop_name_eng_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN update_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$update_date_class}" data-field=update_date>
+									{BEGIN update_date_fieldheader}
+																				<span {$update_date_orderlinkattrs}>
+											{$label dtb_base_info update_date}
+										</span>
+									{END update_date_fieldheader}
+									</th>
+									{END update_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN good_traded_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$good_traded_class}" data-field=good_traded>
+									{BEGIN good_traded_fieldheader}
+																				<span {$good_traded_orderlinkattrs}>
+											{$label dtb_base_info good_traded}
+										</span>
+									{END good_traded_fieldheader}
+									</th>
+									{END good_traded_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN message_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$message_class}" data-field=message>
+									{BEGIN message_fieldheader}
+																				<span {$message_orderlinkattrs}>
+											{$label dtb_base_info message}
+										</span>
+									{END message_fieldheader}
+									</th>
+									{END message_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN latitude_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$latitude_class}" data-field=latitude>
+									{BEGIN latitude_fieldheader}
+																				<span {$latitude_orderlinkattrs}>
+											{$label dtb_base_info latitude}
+										</span>
+									{END latitude_fieldheader}
+									</th>
+									{END latitude_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN longitude_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$longitude_class}" data-field=longitude>
+									{BEGIN longitude_fieldheader}
+																				<span {$longitude_orderlinkattrs}>
+											{$label dtb_base_info longitude}
+										</span>
+									{END longitude_fieldheader}
+									</th>
+									{END longitude_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN delivery_free_amount_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$delivery_free_amount_class}" data-field=delivery_free_amount>
+									{BEGIN delivery_free_amount_fieldheader}
+																				<span {$delivery_free_amount_orderlinkattrs}>
+											{$label dtb_base_info delivery_free_amount}
+										</span>
+									{END delivery_free_amount_fieldheader}
+									</th>
+									{END delivery_free_amount_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN delivery_free_quantity_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$delivery_free_quantity_class}" data-field=delivery_free_quantity>
+									{BEGIN delivery_free_quantity_fieldheader}
+																				<span {$delivery_free_quantity_orderlinkattrs}>
+											{$label dtb_base_info delivery_free_quantity}
+										</span>
+									{END delivery_free_quantity_fieldheader}
+									</th>
+									{END delivery_free_quantity_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_multiple_shipping_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_multiple_shipping_class}" data-field=option_multiple_shipping>
+									{BEGIN option_multiple_shipping_fieldheader}
+																				<span {$option_multiple_shipping_orderlinkattrs}>
+											{$label dtb_base_info option_multiple_shipping}
+										</span>
+									{END option_multiple_shipping_fieldheader}
+									</th>
+									{END option_multiple_shipping_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_mypage_order_status_display_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_mypage_order_status_display_class}" data-field=option_mypage_order_status_display>
+									{BEGIN option_mypage_order_status_display_fieldheader}
+																				<span {$option_mypage_order_status_display_orderlinkattrs}>
+											{$label dtb_base_info option_mypage_order_status_display}
+										</span>
+									{END option_mypage_order_status_display_fieldheader}
+									</th>
+									{END option_mypage_order_status_display_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN nostock_hidden_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$nostock_hidden_class}" data-field=nostock_hidden>
+									{BEGIN nostock_hidden_fieldheader}
+																				<span {$nostock_hidden_orderlinkattrs}>
+											{$label dtb_base_info nostock_hidden}
+										</span>
+									{END nostock_hidden_fieldheader}
+									</th>
+									{END nostock_hidden_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_favorite_product_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_favorite_product_class}" data-field=option_favorite_product>
+									{BEGIN option_favorite_product_fieldheader}
+																				<span {$option_favorite_product_orderlinkattrs}>
+											{$label dtb_base_info option_favorite_product}
+										</span>
+									{END option_favorite_product_fieldheader}
+									</th>
+									{END option_favorite_product_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_product_delivery_fee_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_product_delivery_fee_class}" data-field=option_product_delivery_fee>
+									{BEGIN option_product_delivery_fee_fieldheader}
+																				<span {$option_product_delivery_fee_orderlinkattrs}>
+											{$label dtb_base_info option_product_delivery_fee}
+										</span>
+									{END option_product_delivery_fee_fieldheader}
+									</th>
+									{END option_product_delivery_fee_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_product_tax_rule_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_product_tax_rule_class}" data-field=option_product_tax_rule>
+									{BEGIN option_product_tax_rule_fieldheader}
+																				<span {$option_product_tax_rule_orderlinkattrs}>
+											{$label dtb_base_info option_product_tax_rule}
+										</span>
+									{END option_product_tax_rule_fieldheader}
+									</th>
+									{END option_product_tax_rule_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_customer_activate_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_customer_activate_class}" data-field=option_customer_activate>
+									{BEGIN option_customer_activate_fieldheader}
+																				<span {$option_customer_activate_orderlinkattrs}>
+											{$label dtb_base_info option_customer_activate}
+										</span>
+									{END option_customer_activate_fieldheader}
+									</th>
+									{END option_customer_activate_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN option_remember_me_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$option_remember_me_class}" data-field=option_remember_me>
+									{BEGIN option_remember_me_fieldheader}
+																				<span {$option_remember_me_orderlinkattrs}>
+											{$label dtb_base_info option_remember_me}
+										</span>
+									{END option_remember_me_fieldheader}
+									</th>
+									{END option_remember_me_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN authentication_key_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$authentication_key_class}" data-field=authentication_key>
+									{BEGIN authentication_key_fieldheader}
+																				<span {$authentication_key_orderlinkattrs}>
+											{$label dtb_base_info authentication_key}
+										</span>
+									{END authentication_key_fieldheader}
+									</th>
+									{END authentication_key_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN id_fieldcolumn}
+	<td class="bs-gridcell {$id_class}"  data-field=id {$rowstyle} {$recordattrs}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+
+	{BEGIN country_id_fieldcolumn}
+	<td class="bs-gridcell {$country_id_class}"  data-field=country_id {$rowstyle} {$recordattrs}>
+		{$country_id_value}
+	</td>
+{END country_id_fieldcolumn}
+
+
+	{BEGIN pref_fieldcolumn}
+	<td class="bs-gridcell {$pref_class}"  data-field=pref {$rowstyle} {$recordattrs}>
+		{$pref_value}
+	</td>
+{END pref_fieldcolumn}
+
+
+	{BEGIN company_name_fieldcolumn}
+	<td class="bs-gridcell {$company_name_class}"  data-field=company_name {$rowstyle} {$recordattrs}>
+		{$company_name_value}
+	</td>
+{END company_name_fieldcolumn}
+
+
+	{BEGIN company_kana_fieldcolumn}
+	<td class="bs-gridcell {$company_kana_class}"  data-field=company_kana {$rowstyle} {$recordattrs}>
+		{$company_kana_value}
+	</td>
+{END company_kana_fieldcolumn}
+
+
+	{BEGIN zip01_fieldcolumn}
+	<td class="bs-gridcell {$zip01_class}"  data-field=zip01 {$rowstyle} {$recordattrs}>
+		{$zip01_value}
+	</td>
+{END zip01_fieldcolumn}
+
+
+	{BEGIN zip02_fieldcolumn}
+	<td class="bs-gridcell {$zip02_class}"  data-field=zip02 {$rowstyle} {$recordattrs}>
+		{$zip02_value}
+	</td>
+{END zip02_fieldcolumn}
+
+
+	{BEGIN zipcode_fieldcolumn}
+	<td class="bs-gridcell {$zipcode_class}"  data-field=zipcode {$rowstyle} {$recordattrs}>
+		{$zipcode_value}
+	</td>
+{END zipcode_fieldcolumn}
+
+
+	{BEGIN addr01_fieldcolumn}
+	<td class="bs-gridcell {$addr01_class}"  data-field=addr01 {$rowstyle} {$recordattrs}>
+		{$addr01_value}
+	</td>
+{END addr01_fieldcolumn}
+
+
+	{BEGIN addr02_fieldcolumn}
+	<td class="bs-gridcell {$addr02_class}"  data-field=addr02 {$rowstyle} {$recordattrs}>
+		{$addr02_value}
+	</td>
+{END addr02_fieldcolumn}
+
+
+	{BEGIN tel01_fieldcolumn}
+	<td class="bs-gridcell {$tel01_class}"  data-field=tel01 {$rowstyle} {$recordattrs}>
+		{$tel01_value}
+	</td>
+{END tel01_fieldcolumn}
+
+
+	{BEGIN tel02_fieldcolumn}
+	<td class="bs-gridcell {$tel02_class}"  data-field=tel02 {$rowstyle} {$recordattrs}>
+		{$tel02_value}
+	</td>
+{END tel02_fieldcolumn}
+
+
+	{BEGIN tel03_fieldcolumn}
+	<td class="bs-gridcell {$tel03_class}"  data-field=tel03 {$rowstyle} {$recordattrs}>
+		{$tel03_value}
+	</td>
+{END tel03_fieldcolumn}
+
+
+	{BEGIN fax01_fieldcolumn}
+	<td class="bs-gridcell {$fax01_class}"  data-field=fax01 {$rowstyle} {$recordattrs}>
+		{$fax01_value}
+	</td>
+{END fax01_fieldcolumn}
+
+
+	{BEGIN fax02_fieldcolumn}
+	<td class="bs-gridcell {$fax02_class}"  data-field=fax02 {$rowstyle} {$recordattrs}>
+		{$fax02_value}
+	</td>
+{END fax02_fieldcolumn}
+
+
+	{BEGIN fax03_fieldcolumn}
+	<td class="bs-gridcell {$fax03_class}"  data-field=fax03 {$rowstyle} {$recordattrs}>
+		{$fax03_value}
+	</td>
+{END fax03_fieldcolumn}
+
+
+	{BEGIN business_hour_fieldcolumn}
+	<td class="bs-gridcell {$business_hour_class}"  data-field=business_hour {$rowstyle} {$recordattrs}>
+		{$business_hour_value}
+	</td>
+{END business_hour_fieldcolumn}
+
+
+	{BEGIN email01_fieldcolumn}
+	<td class="bs-gridcell {$email01_class}"  data-field=email01 {$rowstyle} {$recordattrs}>
+		{$email01_value}
+	</td>
+{END email01_fieldcolumn}
+
+
+	{BEGIN email02_fieldcolumn}
+	<td class="bs-gridcell {$email02_class}"  data-field=email02 {$rowstyle} {$recordattrs}>
+		{$email02_value}
+	</td>
+{END email02_fieldcolumn}
+
+
+	{BEGIN email03_fieldcolumn}
+	<td class="bs-gridcell {$email03_class}"  data-field=email03 {$rowstyle} {$recordattrs}>
+		{$email03_value}
+	</td>
+{END email03_fieldcolumn}
+
+
+	{BEGIN email04_fieldcolumn}
+	<td class="bs-gridcell {$email04_class}"  data-field=email04 {$rowstyle} {$recordattrs}>
+		{$email04_value}
+	</td>
+{END email04_fieldcolumn}
+
+
+	{BEGIN shop_name_fieldcolumn}
+	<td class="bs-gridcell {$shop_name_class}"  data-field=shop_name {$rowstyle} {$recordattrs}>
+		{$shop_name_value}
+	</td>
+{END shop_name_fieldcolumn}
+
+
+	{BEGIN shop_kana_fieldcolumn}
+	<td class="bs-gridcell {$shop_kana_class}"  data-field=shop_kana {$rowstyle} {$recordattrs}>
+		{$shop_kana_value}
+	</td>
+{END shop_kana_fieldcolumn}
+
+
+	{BEGIN shop_name_eng_fieldcolumn}
+	<td class="bs-gridcell {$shop_name_eng_class}"  data-field=shop_name_eng {$rowstyle} {$recordattrs}>
+		{$shop_name_eng_value}
+	</td>
+{END shop_name_eng_fieldcolumn}
+
+
+	{BEGIN update_date_fieldcolumn}
+	<td class="bs-gridcell {$update_date_class}"  data-field=update_date {$rowstyle} {$recordattrs}>
+		{$update_date_value}
+	</td>
+{END update_date_fieldcolumn}
+
+
+	{BEGIN good_traded_fieldcolumn}
+	<td class="bs-gridcell {$good_traded_class}"  data-field=good_traded {$rowstyle} {$recordattrs}>
+		{$good_traded_value}
+	</td>
+{END good_traded_fieldcolumn}
+
+
+	{BEGIN message_fieldcolumn}
+	<td class="bs-gridcell {$message_class}"  data-field=message {$rowstyle} {$recordattrs}>
+		{$message_value}
+	</td>
+{END message_fieldcolumn}
+
+
+	{BEGIN latitude_fieldcolumn}
+	<td class="bs-gridcell {$latitude_class}"  data-field=latitude {$rowstyle} {$recordattrs}>
+		{$latitude_value}
+	</td>
+{END latitude_fieldcolumn}
+
+
+	{BEGIN longitude_fieldcolumn}
+	<td class="bs-gridcell {$longitude_class}"  data-field=longitude {$rowstyle} {$recordattrs}>
+		{$longitude_value}
+	</td>
+{END longitude_fieldcolumn}
+
+
+	{BEGIN delivery_free_amount_fieldcolumn}
+	<td class="bs-gridcell {$delivery_free_amount_class}"  data-field=delivery_free_amount {$rowstyle} {$recordattrs}>
+		{$delivery_free_amount_value}
+	</td>
+{END delivery_free_amount_fieldcolumn}
+
+
+	{BEGIN delivery_free_quantity_fieldcolumn}
+	<td class="bs-gridcell {$delivery_free_quantity_class}"  data-field=delivery_free_quantity {$rowstyle} {$recordattrs}>
+		{$delivery_free_quantity_value}
+	</td>
+{END delivery_free_quantity_fieldcolumn}
+
+
+	{BEGIN option_multiple_shipping_fieldcolumn}
+	<td class="bs-gridcell {$option_multiple_shipping_class}"  data-field=option_multiple_shipping {$rowstyle} {$recordattrs}>
+		{$option_multiple_shipping_value}
+	</td>
+{END option_multiple_shipping_fieldcolumn}
+
+
+	{BEGIN option_mypage_order_status_display_fieldcolumn}
+	<td class="bs-gridcell {$option_mypage_order_status_display_class}"  data-field=option_mypage_order_status_display {$rowstyle} {$recordattrs}>
+		{$option_mypage_order_status_display_value}
+	</td>
+{END option_mypage_order_status_display_fieldcolumn}
+
+
+	{BEGIN nostock_hidden_fieldcolumn}
+	<td class="bs-gridcell {$nostock_hidden_class}"  data-field=nostock_hidden {$rowstyle} {$recordattrs}>
+		{$nostock_hidden_value}
+	</td>
+{END nostock_hidden_fieldcolumn}
+
+
+	{BEGIN option_favorite_product_fieldcolumn}
+	<td class="bs-gridcell {$option_favorite_product_class}"  data-field=option_favorite_product {$rowstyle} {$recordattrs}>
+		{$option_favorite_product_value}
+	</td>
+{END option_favorite_product_fieldcolumn}
+
+
+	{BEGIN option_product_delivery_fee_fieldcolumn}
+	<td class="bs-gridcell {$option_product_delivery_fee_class}"  data-field=option_product_delivery_fee {$rowstyle} {$recordattrs}>
+		{$option_product_delivery_fee_value}
+	</td>
+{END option_product_delivery_fee_fieldcolumn}
+
+
+	{BEGIN option_product_tax_rule_fieldcolumn}
+	<td class="bs-gridcell {$option_product_tax_rule_class}"  data-field=option_product_tax_rule {$rowstyle} {$recordattrs}>
+		{$option_product_tax_rule_value}
+	</td>
+{END option_product_tax_rule_fieldcolumn}
+
+
+	{BEGIN option_customer_activate_fieldcolumn}
+	<td class="bs-gridcell {$option_customer_activate_class}"  data-field=option_customer_activate {$rowstyle} {$recordattrs}>
+		{$option_customer_activate_value}
+	</td>
+{END option_customer_activate_fieldcolumn}
+
+
+	{BEGIN option_remember_me_fieldcolumn}
+	<td class="bs-gridcell {$option_remember_me_class}"  data-field=option_remember_me {$rowstyle} {$recordattrs}>
+		{$option_remember_me_value}
+	</td>
+{END option_remember_me_fieldcolumn}
+
+
+	{BEGIN authentication_key_fieldcolumn}
+	<td class="bs-gridcell {$authentication_key_class}"  data-field=authentication_key {$rowstyle} {$recordattrs}>
+		{$authentication_key_value}
+	</td>
+{END authentication_key_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

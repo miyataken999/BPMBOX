@@ -1,0 +1,407 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel dtb_delivery_fee edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN delivery_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_delivery_id}" data-fieldname="delivery_id" data-signal-error-for="delivery_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_delivery_id}">
+		{BEGIN delivery_id_label}{$label dtb_delivery_fee delivery_id}{END delivery_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$delivery_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="delivery_id">
+		<div class="text-muted" >
+		{$tooltip dtb_delivery_fee delivery_id}
+		</div>
+	</div>
+</div>
+</div>
+{END delivery_id_fieldblock}
+
+			{BEGIN pref_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pref}" data-fieldname="pref" data-signal-error-for="pref{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pref}">
+		{BEGIN pref_label}{$label dtb_delivery_fee pref}{END pref_label}
+	</label>
+	<div class="col-md-6" >
+		{$pref_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pref">
+		<div class="text-muted" >
+		{$tooltip dtb_delivery_fee pref}
+		</div>
+	</div>
+</div>
+</div>
+{END pref_fieldblock}
+
+			{BEGIN fee_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fee}" data-fieldname="fee" data-signal-error-for="fee{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fee}">
+		{BEGIN fee_label}{$label dtb_delivery_fee fee}{END fee_label}
+	</label>
+	<div class="col-md-6" >
+		{$fee_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fee">
+		<div class="text-muted" >
+		{$tooltip dtb_delivery_fee fee}
+		</div>
+	</div>
+</div>
+</div>
+{END fee_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_dtb_shipping}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">配送
+		<span>
+{BEGIN details_inlineadd_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_shipping_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_shipping_link}		
+{BEGIN details_add_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_shipping_attrs}>追加</button>
+{END details_add_dtb_shipping_link}
+{BEGIN details_edit_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_shipping_attrs}>編集</button>
+{END details_edit_dtb_shipping_link}
+{BEGIN details_updateselected_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_shipping_attrs}>Update selected</button>
+{END details_updateselected_dtb_shipping_link}
+
+
+{BEGIN details_delete_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_shipping_attrs}>削除</button>
+{END details_delete_dtb_shipping_link}
+
+{BEGIN saveall_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_dtb_shipping_attrs} {$savealllink_dtb_shipping_span}>全て保存</button>
+{END saveall_dtb_shipping_link}
+{BEGIN cancelall_dtb_shipping_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_dtb_shipping_attrs} {$cancelalllink_dtb_shipping_span}>キャンセル</button>
+{END cancelall_dtb_shipping_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_shipping}
+</div>
+</div>
+</div>
+{END details_dtb_shipping}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

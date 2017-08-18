@@ -1,0 +1,71 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$member_id_class}">{$label dtb_member member_id}</th>
+			<th class="{$work_class}">{$label dtb_member work}</th>
+			<th class="{$authority_class}">{$label dtb_member authority}</th>
+			<th class="{$creator_id_class}">{$label dtb_member creator_id}</th>
+			<th class="{$name_class}">{$label dtb_member name}</th>
+			<th class="{$department_class}">{$label dtb_member department}</th>
+			<th class="{$login_id_class}">{$label dtb_member login_id}</th>
+			<th class="{$password_class}">{$label dtb_member password}</th>
+			<th class="{$salt_class}">{$label dtb_member salt}</th>
+			<th class="{$rank_class}">{$label dtb_member rank}</th>
+			<th class="{$del_flg_class}">{$label dtb_member del_flg}</th>
+			<th class="{$create_date_class}">{$label dtb_member create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_member update_date}</th>
+			<th class="{$login_date_class}">{$label dtb_member login_date}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$member_id_class}">{$member_id_value}</td>
+			<td class="{$work_class}">{$work_value}</td>
+			<td class="{$authority_class}">{$authority_value}</td>
+			<td class="{$creator_id_class}">{$creator_id_value}</td>
+			<td class="{$name_class}">{$name_value}</td>
+			<td class="{$department_class}">{$department_value}</td>
+			<td class="{$login_id_class}">{$login_id_value}</td>
+			<td class="{$password_class}">{$password_value}</td>
+			<td class="{$salt_class}">{$salt_value}</td>
+			<td class="{$rank_class}">{$rank_value}</td>
+			<td class="{$del_flg_class}">{$del_flg_value}</td>
+			<td class="{$create_date_class}">{$create_date_value}</td>
+			<td class="{$update_date_class}">{$update_date_value}</td>
+			<td class="{$login_date_class}">{$login_date_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

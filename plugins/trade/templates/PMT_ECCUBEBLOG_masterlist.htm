@@ -1,0 +1,345 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel PMT_ECCUBEBLOG masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label PMT_ECCUBEBLOG APP_UID}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label PMT_ECCUBEBLOG APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label PMT_ECCUBEBLOG APP_STATUS}";
+	}
+	.bs-gridcell[data-field=BLOC_ID]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_ID}";
+	}
+	.bs-gridcell[data-field=BLOC_ID_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}";
+	}
+	.bs-gridcell[data-field=BLOC_NAME]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_NAME}";
+	}
+	.bs-gridcell[data-field=BLOC_NAME_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}";
+	}
+	.bs-gridcell[data-field=APPLICATION]:before {
+		content: "{$label PMT_ECCUBEBLOG APPLICATION}";
+	}
+	.bs-gridcell[data-field=APPLICATION_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG APPLICATION_LABEL}";
+	}
+	.bs-gridcell[data-field=PROCESS]:before {
+		content: "{$label PMT_ECCUBEBLOG PROCESS}";
+	}
+	.bs-gridcell[data-field=PROCESS_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG PROCESS_LABEL}";
+	}
+	.bs-gridcell[data-field=CHECKBOXVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG CHECKBOXVAR001}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR001}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR001_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR002]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR002}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR002_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR001}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR002]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR002}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR003]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR003}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR003_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}";
+	}
+	.bs-gridcell[data-field=SATEI]:before {
+		content: "{$label PMT_ECCUBEBLOG SATEI}";
+	}
+	.bs-gridcell[data-field=SATEI_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG SATEI_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR001}";
+	}
+	.bs-gridcell[data-field=TEXTVAR001_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR004]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR004}";
+	}
+	.bs-gridcell[data-field=TEXTVAR004_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR005]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR005}";
+	}
+	.bs-gridcell[data-field=TEXTVAR006]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR006}";
+	}
+	.bs-gridcell[data-field=TEXTVAR006_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR007]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR007}";
+	}
+	.bs-gridcell[data-field=TEXTVAR007_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR008]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR008}";
+	}
+	.bs-gridcell[data-field=TEXTVAR008_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR009]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR009}";
+	}
+	.bs-gridcell[data-field=TEXTVAR009_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR010]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR010}";
+	}
+	.bs-gridcell[data-field=TEXTVAR010_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR011]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR011}";
+	}
+	.bs-gridcell[data-field=TEXTVAR011_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR012]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR012}";
+	}
+	.bs-gridcell[data-field=TEXTVAR012_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR013]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR013}";
+	}
+	.bs-gridcell[data-field=TEXTVAR013_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR014]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR014}";
+	}
+	.bs-gridcell[data-field=TEXTVAR014_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR015]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR015}";
+	}
+	.bs-gridcell[data-field=TEXTVAR015_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR001}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR002]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR002}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR003]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR003}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR003_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR004]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR004}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR004_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR005]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR005}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR005_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR006]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR006}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR006_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}";
+	}
+	.bs-gridcell[data-field=JPN]:before {
+		content: "{$label PMT_ECCUBEBLOG JPN}";
+	}
+	.bs-gridcell[data-field=JPN_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG JPN_LABEL}";
+	}
+	.bs-gridcell[data-field=TPL_PATH]:before {
+		content: "{$label PMT_ECCUBEBLOG TPL_PATH}";
+	}
+	.bs-gridcell[data-field=TPL_PATH_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$APP_UID_class}">{$label PMT_ECCUBEBLOG APP_UID}</th>
+			<th class="{$APP_NUMBER_class}">{$label PMT_ECCUBEBLOG APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label PMT_ECCUBEBLOG APP_STATUS}</th>
+			<th class="{$BLOC_ID_class}">{$label PMT_ECCUBEBLOG BLOC_ID}</th>
+			<th class="{$BLOC_ID_LABEL_class}">{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}</th>
+			<th class="{$BLOC_NAME_class}">{$label PMT_ECCUBEBLOG BLOC_NAME}</th>
+			<th class="{$BLOC_NAME_LABEL_class}">{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}</th>
+			<th class="{$APPLICATION_class}">{$label PMT_ECCUBEBLOG APPLICATION}</th>
+			<th class="{$APPLICATION_LABEL_class}">{$label PMT_ECCUBEBLOG APPLICATION_LABEL}</th>
+			<th class="{$PROCESS_class}">{$label PMT_ECCUBEBLOG PROCESS}</th>
+			<th class="{$PROCESS_LABEL_class}">{$label PMT_ECCUBEBLOG PROCESS_LABEL}</th>
+			<th class="{$CHECKBOXVAR001_class}">{$label PMT_ECCUBEBLOG CHECKBOXVAR001}</th>
+			<th class="{$DATETIMEVAR001_class}">{$label PMT_ECCUBEBLOG DATETIMEVAR001}</th>
+			<th class="{$DATETIMEVAR001_LABEL_class}">{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}</th>
+			<th class="{$DATETIMEVAR002_class}">{$label PMT_ECCUBEBLOG DATETIMEVAR002}</th>
+			<th class="{$DATETIMEVAR002_LABEL_class}">{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}</th>
+			<th class="{$DROPDOWNVAR001_class}">{$label PMT_ECCUBEBLOG DROPDOWNVAR001}</th>
+			<th class="{$DROPDOWNVAR002_class}">{$label PMT_ECCUBEBLOG DROPDOWNVAR002}</th>
+			<th class="{$DROPDOWNVAR003_class}">{$label PMT_ECCUBEBLOG DROPDOWNVAR003}</th>
+			<th class="{$DROPDOWNVAR003_LABEL_class}">{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}</th>
+			<th class="{$SATEI_class}">{$label PMT_ECCUBEBLOG SATEI}</th>
+			<th class="{$SATEI_LABEL_class}">{$label PMT_ECCUBEBLOG SATEI_LABEL}</th>
+			<th class="{$TEXTVAR001_class}">{$label PMT_ECCUBEBLOG TEXTVAR001}</th>
+			<th class="{$TEXTVAR001_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}</th>
+			<th class="{$TEXTVAR004_class}">{$label PMT_ECCUBEBLOG TEXTVAR004}</th>
+			<th class="{$TEXTVAR004_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}</th>
+			<th class="{$TEXTVAR005_class}">{$label PMT_ECCUBEBLOG TEXTVAR005}</th>
+			<th class="{$TEXTVAR006_class}">{$label PMT_ECCUBEBLOG TEXTVAR006}</th>
+			<th class="{$TEXTVAR006_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}</th>
+			<th class="{$TEXTVAR007_class}">{$label PMT_ECCUBEBLOG TEXTVAR007}</th>
+			<th class="{$TEXTVAR007_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}</th>
+			<th class="{$TEXTVAR008_class}">{$label PMT_ECCUBEBLOG TEXTVAR008}</th>
+			<th class="{$TEXTVAR008_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}</th>
+			<th class="{$TEXTVAR009_class}">{$label PMT_ECCUBEBLOG TEXTVAR009}</th>
+			<th class="{$TEXTVAR009_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}</th>
+			<th class="{$TEXTVAR010_class}">{$label PMT_ECCUBEBLOG TEXTVAR010}</th>
+			<th class="{$TEXTVAR010_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}</th>
+			<th class="{$TEXTVAR011_class}">{$label PMT_ECCUBEBLOG TEXTVAR011}</th>
+			<th class="{$TEXTVAR011_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}</th>
+			<th class="{$TEXTVAR012_class}">{$label PMT_ECCUBEBLOG TEXTVAR012}</th>
+			<th class="{$TEXTVAR012_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}</th>
+			<th class="{$TEXTVAR013_class}">{$label PMT_ECCUBEBLOG TEXTVAR013}</th>
+			<th class="{$TEXTVAR013_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}</th>
+			<th class="{$TEXTVAR014_class}">{$label PMT_ECCUBEBLOG TEXTVAR014}</th>
+			<th class="{$TEXTVAR014_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}</th>
+			<th class="{$TEXTVAR015_class}">{$label PMT_ECCUBEBLOG TEXTVAR015}</th>
+			<th class="{$TEXTVAR015_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}</th>
+			<th class="{$TEXTAREAVAR001_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR001}</th>
+			<th class="{$TEXTAREAVAR002_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR002}</th>
+			<th class="{$TEXTAREAVAR003_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR003}</th>
+			<th class="{$TEXTAREAVAR003_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}</th>
+			<th class="{$TEXTAREAVAR004_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR004}</th>
+			<th class="{$TEXTAREAVAR004_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}</th>
+			<th class="{$TEXTAREAVAR005_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR005}</th>
+			<th class="{$TEXTAREAVAR005_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}</th>
+			<th class="{$TEXTAREAVAR006_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR006}</th>
+			<th class="{$TEXTAREAVAR006_LABEL_class}">{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}</th>
+			<th class="{$JPN_class}">{$label PMT_ECCUBEBLOG JPN}</th>
+			<th class="{$JPN_LABEL_class}">{$label PMT_ECCUBEBLOG JPN_LABEL}</th>
+			<th class="{$TPL_PATH_class}">{$label PMT_ECCUBEBLOG TPL_PATH}</th>
+			<th class="{$TPL_PATH_LABEL_class}">{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$APP_NUMBER_class} bs-gridcell" data-field=APP_NUMBER>{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_STATUS_class} bs-gridcell" data-field=APP_STATUS>{$APP_STATUS_mastervalue}</td>
+			<td class="{$BLOC_ID_class} bs-gridcell" data-field=BLOC_ID>{$BLOC_ID_mastervalue}</td>
+			<td class="{$BLOC_ID_LABEL_class} bs-gridcell" data-field=BLOC_ID_LABEL>{$BLOC_ID_LABEL_mastervalue}</td>
+			<td class="{$BLOC_NAME_class} bs-gridcell" data-field=BLOC_NAME>{$BLOC_NAME_mastervalue}</td>
+			<td class="{$BLOC_NAME_LABEL_class} bs-gridcell" data-field=BLOC_NAME_LABEL>{$BLOC_NAME_LABEL_mastervalue}</td>
+			<td class="{$APPLICATION_class} bs-gridcell" data-field=APPLICATION>{$APPLICATION_mastervalue}</td>
+			<td class="{$APPLICATION_LABEL_class} bs-gridcell" data-field=APPLICATION_LABEL>{$APPLICATION_LABEL_mastervalue}</td>
+			<td class="{$PROCESS_class} bs-gridcell" data-field=PROCESS>{$PROCESS_mastervalue}</td>
+			<td class="{$PROCESS_LABEL_class} bs-gridcell" data-field=PROCESS_LABEL>{$PROCESS_LABEL_mastervalue}</td>
+			<td class="{$CHECKBOXVAR001_class} bs-gridcell" data-field=CHECKBOXVAR001>{$CHECKBOXVAR001_mastervalue}</td>
+			<td class="{$DATETIMEVAR001_class} bs-gridcell" data-field=DATETIMEVAR001>{$DATETIMEVAR001_mastervalue}</td>
+			<td class="{$DATETIMEVAR001_LABEL_class} bs-gridcell" data-field=DATETIMEVAR001_LABEL>{$DATETIMEVAR001_LABEL_mastervalue}</td>
+			<td class="{$DATETIMEVAR002_class} bs-gridcell" data-field=DATETIMEVAR002>{$DATETIMEVAR002_mastervalue}</td>
+			<td class="{$DATETIMEVAR002_LABEL_class} bs-gridcell" data-field=DATETIMEVAR002_LABEL>{$DATETIMEVAR002_LABEL_mastervalue}</td>
+			<td class="{$DROPDOWNVAR001_class} bs-gridcell" data-field=DROPDOWNVAR001>{$DROPDOWNVAR001_mastervalue}</td>
+			<td class="{$DROPDOWNVAR002_class} bs-gridcell" data-field=DROPDOWNVAR002>{$DROPDOWNVAR002_mastervalue}</td>
+			<td class="{$DROPDOWNVAR003_class} bs-gridcell" data-field=DROPDOWNVAR003>{$DROPDOWNVAR003_mastervalue}</td>
+			<td class="{$DROPDOWNVAR003_LABEL_class} bs-gridcell" data-field=DROPDOWNVAR003_LABEL>{$DROPDOWNVAR003_LABEL_mastervalue}</td>
+			<td class="{$SATEI_class} bs-gridcell" data-field=SATEI>{$SATEI_mastervalue}</td>
+			<td class="{$SATEI_LABEL_class} bs-gridcell" data-field=SATEI_LABEL>{$SATEI_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR001_class} bs-gridcell" data-field=TEXTVAR001>{$TEXTVAR001_mastervalue}</td>
+			<td class="{$TEXTVAR001_LABEL_class} bs-gridcell" data-field=TEXTVAR001_LABEL>{$TEXTVAR001_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR004_class} bs-gridcell" data-field=TEXTVAR004>{$TEXTVAR004_mastervalue}</td>
+			<td class="{$TEXTVAR004_LABEL_class} bs-gridcell" data-field=TEXTVAR004_LABEL>{$TEXTVAR004_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR005_class} bs-gridcell" data-field=TEXTVAR005>{$TEXTVAR005_mastervalue}</td>
+			<td class="{$TEXTVAR006_class} bs-gridcell" data-field=TEXTVAR006>{$TEXTVAR006_mastervalue}</td>
+			<td class="{$TEXTVAR006_LABEL_class} bs-gridcell" data-field=TEXTVAR006_LABEL>{$TEXTVAR006_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR007_class} bs-gridcell" data-field=TEXTVAR007>{$TEXTVAR007_mastervalue}</td>
+			<td class="{$TEXTVAR007_LABEL_class} bs-gridcell" data-field=TEXTVAR007_LABEL>{$TEXTVAR007_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR008_class} bs-gridcell" data-field=TEXTVAR008>{$TEXTVAR008_mastervalue}</td>
+			<td class="{$TEXTVAR008_LABEL_class} bs-gridcell" data-field=TEXTVAR008_LABEL>{$TEXTVAR008_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR009_class} bs-gridcell" data-field=TEXTVAR009>{$TEXTVAR009_mastervalue}</td>
+			<td class="{$TEXTVAR009_LABEL_class} bs-gridcell" data-field=TEXTVAR009_LABEL>{$TEXTVAR009_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR010_class} bs-gridcell" data-field=TEXTVAR010>{$TEXTVAR010_mastervalue}</td>
+			<td class="{$TEXTVAR010_LABEL_class} bs-gridcell" data-field=TEXTVAR010_LABEL>{$TEXTVAR010_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR011_class} bs-gridcell" data-field=TEXTVAR011>{$TEXTVAR011_mastervalue}</td>
+			<td class="{$TEXTVAR011_LABEL_class} bs-gridcell" data-field=TEXTVAR011_LABEL>{$TEXTVAR011_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR012_class} bs-gridcell" data-field=TEXTVAR012>{$TEXTVAR012_mastervalue}</td>
+			<td class="{$TEXTVAR012_LABEL_class} bs-gridcell" data-field=TEXTVAR012_LABEL>{$TEXTVAR012_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR013_class} bs-gridcell" data-field=TEXTVAR013>{$TEXTVAR013_mastervalue}</td>
+			<td class="{$TEXTVAR013_LABEL_class} bs-gridcell" data-field=TEXTVAR013_LABEL>{$TEXTVAR013_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR014_class} bs-gridcell" data-field=TEXTVAR014>{$TEXTVAR014_mastervalue}</td>
+			<td class="{$TEXTVAR014_LABEL_class} bs-gridcell" data-field=TEXTVAR014_LABEL>{$TEXTVAR014_LABEL_mastervalue}</td>
+			<td class="{$TEXTVAR015_class} bs-gridcell" data-field=TEXTVAR015>{$TEXTVAR015_mastervalue}</td>
+			<td class="{$TEXTVAR015_LABEL_class} bs-gridcell" data-field=TEXTVAR015_LABEL>{$TEXTVAR015_LABEL_mastervalue}</td>
+			<td class="{$TEXTAREAVAR001_class} bs-gridcell" data-field=TEXTAREAVAR001>{$TEXTAREAVAR001_mastervalue}</td>
+			<td class="{$TEXTAREAVAR002_class} bs-gridcell" data-field=TEXTAREAVAR002>{$TEXTAREAVAR002_mastervalue}</td>
+			<td class="{$TEXTAREAVAR003_class} bs-gridcell" data-field=TEXTAREAVAR003>{$TEXTAREAVAR003_mastervalue}</td>
+			<td class="{$TEXTAREAVAR003_LABEL_class} bs-gridcell" data-field=TEXTAREAVAR003_LABEL>{$TEXTAREAVAR003_LABEL_mastervalue}</td>
+			<td class="{$TEXTAREAVAR004_class} bs-gridcell" data-field=TEXTAREAVAR004>{$TEXTAREAVAR004_mastervalue}</td>
+			<td class="{$TEXTAREAVAR004_LABEL_class} bs-gridcell" data-field=TEXTAREAVAR004_LABEL>{$TEXTAREAVAR004_LABEL_mastervalue}</td>
+			<td class="{$TEXTAREAVAR005_class} bs-gridcell" data-field=TEXTAREAVAR005>{$TEXTAREAVAR005_mastervalue}</td>
+			<td class="{$TEXTAREAVAR005_LABEL_class} bs-gridcell" data-field=TEXTAREAVAR005_LABEL>{$TEXTAREAVAR005_LABEL_mastervalue}</td>
+			<td class="{$TEXTAREAVAR006_class} bs-gridcell" data-field=TEXTAREAVAR006>{$TEXTAREAVAR006_mastervalue}</td>
+			<td class="{$TEXTAREAVAR006_LABEL_class} bs-gridcell" data-field=TEXTAREAVAR006_LABEL>{$TEXTAREAVAR006_LABEL_mastervalue}</td>
+			<td class="{$JPN_class} bs-gridcell" data-field=JPN>{$JPN_mastervalue}</td>
+			<td class="{$JPN_LABEL_class} bs-gridcell" data-field=JPN_LABEL>{$JPN_LABEL_mastervalue}</td>
+			<td class="{$TPL_PATH_class} bs-gridcell" data-field=TPL_PATH>{$TPL_PATH_mastervalue}</td>
+			<td class="{$TPL_PATH_LABEL_class} bs-gridcell" data-field=TPL_PATH_LABEL>{$TPL_PATH_LABEL_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,55 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel mtb_customer_status masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label mtb_customer_status id}";
+	}
+	.bs-gridcell[data-field=name]:before {
+		content: "{$label mtb_customer_status name}";
+	}
+	.bs-gridcell[data-field=rank]:before {
+		content: "{$label mtb_customer_status rank}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$id_class}">{$label mtb_customer_status id}</th>
+			<th class="{$name_class}">{$label mtb_customer_status name}</th>
+			<th class="{$rank_class}">{$label mtb_customer_status rank}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$id_class} bs-gridcell" data-field=id>{$id_mastervalue}</td>
+			<td class="{$name_class} bs-gridcell" data-field=name>{$name_mastervalue}</td>
+			<td class="{$rank_class} bs-gridcell" data-field=rank>{$rank_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

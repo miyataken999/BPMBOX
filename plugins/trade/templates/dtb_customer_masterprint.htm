@@ -1,0 +1,111 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_customer masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$customer_id_class}">{$label dtb_customer customer_id}</th>
+			<th class="{$status_class}">{$label dtb_customer status}</th>
+			<th class="{$sex_class}">{$label dtb_customer sex}</th>
+			<th class="{$job_class}">{$label dtb_customer job}</th>
+			<th class="{$country_id_class}">{$label dtb_customer country_id}</th>
+			<th class="{$pref_class}">{$label dtb_customer pref}</th>
+			<th class="{$name01_class}">{$label dtb_customer name01}</th>
+			<th class="{$name02_class}">{$label dtb_customer name02}</th>
+			<th class="{$kana01_class}">{$label dtb_customer kana01}</th>
+			<th class="{$kana02_class}">{$label dtb_customer kana02}</th>
+			<th class="{$company_name_class}">{$label dtb_customer company_name}</th>
+			<th class="{$zip01_class}">{$label dtb_customer zip01}</th>
+			<th class="{$zip02_class}">{$label dtb_customer zip02}</th>
+			<th class="{$zipcode_class}">{$label dtb_customer zipcode}</th>
+			<th class="{$addr01_class}">{$label dtb_customer addr01}</th>
+			<th class="{$addr02_class}">{$label dtb_customer addr02}</th>
+			<th class="{$email_class}">{$label dtb_customer email}</th>
+			<th class="{$tel01_class}">{$label dtb_customer tel01}</th>
+			<th class="{$tel02_class}">{$label dtb_customer tel02}</th>
+			<th class="{$tel03_class}">{$label dtb_customer tel03}</th>
+			<th class="{$fax01_class}">{$label dtb_customer fax01}</th>
+			<th class="{$fax02_class}">{$label dtb_customer fax02}</th>
+			<th class="{$fax03_class}">{$label dtb_customer fax03}</th>
+			<th class="{$birth_class}">{$label dtb_customer birth}</th>
+			<th class="{$password_class}">{$label dtb_customer password}</th>
+			<th class="{$salt_class}">{$label dtb_customer salt}</th>
+			<th class="{$secret_key_class}">{$label dtb_customer secret_key}</th>
+			<th class="{$first_buy_date_class}">{$label dtb_customer first_buy_date}</th>
+			<th class="{$last_buy_date_class}">{$label dtb_customer last_buy_date}</th>
+			<th class="{$buy_times_class}">{$label dtb_customer buy_times}</th>
+			<th class="{$buy_total_class}">{$label dtb_customer buy_total}</th>
+			<th class="{$note_class}">{$label dtb_customer note}</th>
+			<th class="{$reset_key_class}">{$label dtb_customer reset_key}</th>
+			<th class="{$reset_expire_class}">{$label dtb_customer reset_expire}</th>
+			<th class="{$create_date_class}">{$label dtb_customer create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_customer update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_customer del_flg}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$customer_id_class}">{$customer_id_mastervalue}</td>
+			<td class="{$status_class}">{$status_mastervalue}</td>
+			<td class="{$sex_class}">{$sex_mastervalue}</td>
+			<td class="{$job_class}">{$job_mastervalue}</td>
+			<td class="{$country_id_class}">{$country_id_mastervalue}</td>
+			<td class="{$pref_class}">{$pref_mastervalue}</td>
+			<td class="{$name01_class}">{$name01_mastervalue}</td>
+			<td class="{$name02_class}">{$name02_mastervalue}</td>
+			<td class="{$kana01_class}">{$kana01_mastervalue}</td>
+			<td class="{$kana02_class}">{$kana02_mastervalue}</td>
+			<td class="{$company_name_class}">{$company_name_mastervalue}</td>
+			<td class="{$zip01_class}">{$zip01_mastervalue}</td>
+			<td class="{$zip02_class}">{$zip02_mastervalue}</td>
+			<td class="{$zipcode_class}">{$zipcode_mastervalue}</td>
+			<td class="{$addr01_class}">{$addr01_mastervalue}</td>
+			<td class="{$addr02_class}">{$addr02_mastervalue}</td>
+			<td class="{$email_class}">{$email_mastervalue}</td>
+			<td class="{$tel01_class}">{$tel01_mastervalue}</td>
+			<td class="{$tel02_class}">{$tel02_mastervalue}</td>
+			<td class="{$tel03_class}">{$tel03_mastervalue}</td>
+			<td class="{$fax01_class}">{$fax01_mastervalue}</td>
+			<td class="{$fax02_class}">{$fax02_mastervalue}</td>
+			<td class="{$fax03_class}">{$fax03_mastervalue}</td>
+			<td class="{$birth_class}">{$birth_mastervalue}</td>
+			<td class="{$password_class}">{$password_mastervalue}</td>
+			<td class="{$salt_class}">{$salt_mastervalue}</td>
+			<td class="{$secret_key_class}">{$secret_key_mastervalue}</td>
+			<td class="{$first_buy_date_class}">{$first_buy_date_mastervalue}</td>
+			<td class="{$last_buy_date_class}">{$last_buy_date_mastervalue}</td>
+			<td class="{$buy_times_class}">{$buy_times_mastervalue}</td>
+			<td class="{$buy_total_class}">{$buy_total_mastervalue}</td>
+			<td class="{$note_class}">{$note_mastervalue}</td>
+			<td class="{$reset_key_class}">{$reset_key_mastervalue}</td>
+			<td class="{$reset_expire_class}">{$reset_expire_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$del_flg_class}">{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

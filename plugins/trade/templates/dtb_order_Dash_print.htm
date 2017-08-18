@@ -1,0 +1,597 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_order_Dash print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN order_id_fieldheadercolumn}
+			<th class="{$order_id_class}" {$order_id_style}  data-field="order_id">
+				{$label dtb_order_Dash order_id}
+			</th>
+			{END order_id_fieldheadercolumn}
+			{BEGIN customer_id_fieldheadercolumn}
+			<th class="{$customer_id_class}" {$customer_id_style}  data-field="customer_id">
+				{$label dtb_order_Dash customer_id}
+			</th>
+			{END customer_id_fieldheadercolumn}
+			{BEGIN order_country_id_fieldheadercolumn}
+			<th class="{$order_country_id_class}" {$order_country_id_style}  data-field="order_country_id">
+				{$label dtb_order_Dash order_country_id}
+			</th>
+			{END order_country_id_fieldheadercolumn}
+			{BEGIN order_pref_fieldheadercolumn}
+			<th class="{$order_pref_class}" {$order_pref_style}  data-field="order_pref">
+				{$label dtb_order_Dash order_pref}
+			</th>
+			{END order_pref_fieldheadercolumn}
+			{BEGIN order_sex_fieldheadercolumn}
+			<th class="{$order_sex_class}" {$order_sex_style}  data-field="order_sex">
+				{$label dtb_order_Dash order_sex}
+			</th>
+			{END order_sex_fieldheadercolumn}
+			{BEGIN order_job_fieldheadercolumn}
+			<th class="{$order_job_class}" {$order_job_style}  data-field="order_job">
+				{$label dtb_order_Dash order_job}
+			</th>
+			{END order_job_fieldheadercolumn}
+			{BEGIN payment_id_fieldheadercolumn}
+			<th class="{$payment_id_class}" {$payment_id_style}  data-field="payment_id">
+				{$label dtb_order_Dash payment_id}
+			</th>
+			{END payment_id_fieldheadercolumn}
+			{BEGIN device_type_id_fieldheadercolumn}
+			<th class="{$device_type_id_class}" {$device_type_id_style}  data-field="device_type_id">
+				{$label dtb_order_Dash device_type_id}
+			</th>
+			{END device_type_id_fieldheadercolumn}
+			{BEGIN pre_order_id_fieldheadercolumn}
+			<th class="{$pre_order_id_class}" {$pre_order_id_style}  data-field="pre_order_id">
+				{$label dtb_order_Dash pre_order_id}
+			</th>
+			{END pre_order_id_fieldheadercolumn}
+			{BEGIN message_fieldheadercolumn}
+			<th class="{$message_class}" {$message_style}  data-field="message">
+				{$label dtb_order_Dash message}
+			</th>
+			{END message_fieldheadercolumn}
+			{BEGIN order_name01_fieldheadercolumn}
+			<th class="{$order_name01_class}" {$order_name01_style}  data-field="order_name01">
+				{$label dtb_order_Dash order_name01}
+			</th>
+			{END order_name01_fieldheadercolumn}
+			{BEGIN order_name02_fieldheadercolumn}
+			<th class="{$order_name02_class}" {$order_name02_style}  data-field="order_name02">
+				{$label dtb_order_Dash order_name02}
+			</th>
+			{END order_name02_fieldheadercolumn}
+			{BEGIN order_kana01_fieldheadercolumn}
+			<th class="{$order_kana01_class}" {$order_kana01_style}  data-field="order_kana01">
+				{$label dtb_order_Dash order_kana01}
+			</th>
+			{END order_kana01_fieldheadercolumn}
+			{BEGIN order_kana02_fieldheadercolumn}
+			<th class="{$order_kana02_class}" {$order_kana02_style}  data-field="order_kana02">
+				{$label dtb_order_Dash order_kana02}
+			</th>
+			{END order_kana02_fieldheadercolumn}
+			{BEGIN order_company_name_fieldheadercolumn}
+			<th class="{$order_company_name_class}" {$order_company_name_style}  data-field="order_company_name">
+				{$label dtb_order_Dash order_company_name}
+			</th>
+			{END order_company_name_fieldheadercolumn}
+			{BEGIN order_email_fieldheadercolumn}
+			<th class="{$order_email_class}" {$order_email_style}  data-field="order_email">
+				{$label dtb_order_Dash order_email}
+			</th>
+			{END order_email_fieldheadercolumn}
+			{BEGIN order_tel01_fieldheadercolumn}
+			<th class="{$order_tel01_class}" {$order_tel01_style}  data-field="order_tel01">
+				{$label dtb_order_Dash order_tel01}
+			</th>
+			{END order_tel01_fieldheadercolumn}
+			{BEGIN order_tel02_fieldheadercolumn}
+			<th class="{$order_tel02_class}" {$order_tel02_style}  data-field="order_tel02">
+				{$label dtb_order_Dash order_tel02}
+			</th>
+			{END order_tel02_fieldheadercolumn}
+			{BEGIN order_tel03_fieldheadercolumn}
+			<th class="{$order_tel03_class}" {$order_tel03_style}  data-field="order_tel03">
+				{$label dtb_order_Dash order_tel03}
+			</th>
+			{END order_tel03_fieldheadercolumn}
+			{BEGIN order_fax01_fieldheadercolumn}
+			<th class="{$order_fax01_class}" {$order_fax01_style}  data-field="order_fax01">
+				{$label dtb_order_Dash order_fax01}
+			</th>
+			{END order_fax01_fieldheadercolumn}
+			{BEGIN order_fax02_fieldheadercolumn}
+			<th class="{$order_fax02_class}" {$order_fax02_style}  data-field="order_fax02">
+				{$label dtb_order_Dash order_fax02}
+			</th>
+			{END order_fax02_fieldheadercolumn}
+			{BEGIN order_fax03_fieldheadercolumn}
+			<th class="{$order_fax03_class}" {$order_fax03_style}  data-field="order_fax03">
+				{$label dtb_order_Dash order_fax03}
+			</th>
+			{END order_fax03_fieldheadercolumn}
+			{BEGIN order_zip01_fieldheadercolumn}
+			<th class="{$order_zip01_class}" {$order_zip01_style}  data-field="order_zip01">
+				{$label dtb_order_Dash order_zip01}
+			</th>
+			{END order_zip01_fieldheadercolumn}
+			{BEGIN order_zip02_fieldheadercolumn}
+			<th class="{$order_zip02_class}" {$order_zip02_style}  data-field="order_zip02">
+				{$label dtb_order_Dash order_zip02}
+			</th>
+			{END order_zip02_fieldheadercolumn}
+			{BEGIN order_zipcode_fieldheadercolumn}
+			<th class="{$order_zipcode_class}" {$order_zipcode_style}  data-field="order_zipcode">
+				{$label dtb_order_Dash order_zipcode}
+			</th>
+			{END order_zipcode_fieldheadercolumn}
+			{BEGIN order_addr01_fieldheadercolumn}
+			<th class="{$order_addr01_class}" {$order_addr01_style}  data-field="order_addr01">
+				{$label dtb_order_Dash order_addr01}
+			</th>
+			{END order_addr01_fieldheadercolumn}
+			{BEGIN order_addr02_fieldheadercolumn}
+			<th class="{$order_addr02_class}" {$order_addr02_style}  data-field="order_addr02">
+				{$label dtb_order_Dash order_addr02}
+			</th>
+			{END order_addr02_fieldheadercolumn}
+			{BEGIN order_birth_fieldheadercolumn}
+			<th class="{$order_birth_class}" {$order_birth_style}  data-field="order_birth">
+				{$label dtb_order_Dash order_birth}
+			</th>
+			{END order_birth_fieldheadercolumn}
+			{BEGIN subtotal_fieldheadercolumn}
+			<th class="{$subtotal_class}" {$subtotal_style}  data-field="subtotal">
+				{$label dtb_order_Dash subtotal}
+			</th>
+			{END subtotal_fieldheadercolumn}
+			{BEGIN discount_fieldheadercolumn}
+			<th class="{$discount_class}" {$discount_style}  data-field="discount">
+				{$label dtb_order_Dash discount}
+			</th>
+			{END discount_fieldheadercolumn}
+			{BEGIN delivery_fee_total_fieldheadercolumn}
+			<th class="{$delivery_fee_total_class}" {$delivery_fee_total_style}  data-field="delivery_fee_total">
+				{$label dtb_order_Dash delivery_fee_total}
+			</th>
+			{END delivery_fee_total_fieldheadercolumn}
+			{BEGIN charge_fieldheadercolumn}
+			<th class="{$charge_class}" {$charge_style}  data-field="charge">
+				{$label dtb_order_Dash charge}
+			</th>
+			{END charge_fieldheadercolumn}
+			{BEGIN tax_fieldheadercolumn}
+			<th class="{$tax_class}" {$tax_style}  data-field="tax">
+				{$label dtb_order_Dash tax}
+			</th>
+			{END tax_fieldheadercolumn}
+			{BEGIN total_fieldheadercolumn}
+			<th class="{$total_class}" {$total_style}  data-field="total">
+				{$label dtb_order_Dash total}
+			</th>
+			{END total_fieldheadercolumn}
+			{BEGIN payment_total_fieldheadercolumn}
+			<th class="{$payment_total_class}" {$payment_total_style}  data-field="payment_total">
+				{$label dtb_order_Dash payment_total}
+			</th>
+			{END payment_total_fieldheadercolumn}
+			{BEGIN payment_method_fieldheadercolumn}
+			<th class="{$payment_method_class}" {$payment_method_style}  data-field="payment_method">
+				{$label dtb_order_Dash payment_method}
+			</th>
+			{END payment_method_fieldheadercolumn}
+			{BEGIN note_fieldheadercolumn}
+			<th class="{$note_class}" {$note_style}  data-field="note">
+				{$label dtb_order_Dash note}
+			</th>
+			{END note_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_order_Dash create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_order_Dash update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN order_date_fieldheadercolumn}
+			<th class="{$order_date_class}" {$order_date_style}  data-field="order_date">
+				{$label dtb_order_Dash order_date}
+			</th>
+			{END order_date_fieldheadercolumn}
+			{BEGIN commit_date_fieldheadercolumn}
+			<th class="{$commit_date_class}" {$commit_date_style}  data-field="commit_date">
+				{$label dtb_order_Dash commit_date}
+			</th>
+			{END commit_date_fieldheadercolumn}
+			{BEGIN payment_date_fieldheadercolumn}
+			<th class="{$payment_date_class}" {$payment_date_style}  data-field="payment_date">
+				{$label dtb_order_Dash payment_date}
+			</th>
+			{END payment_date_fieldheadercolumn}
+			{BEGIN del_flg_fieldheadercolumn}
+			<th class="{$del_flg_class}" {$del_flg_style}  data-field="del_flg">
+				{$label dtb_order_Dash del_flg}
+			</th>
+			{END del_flg_fieldheadercolumn}
+			{BEGIN status_fieldheadercolumn}
+			<th class="{$status_class}" {$status_style}  data-field="status">
+				{$label dtb_order_Dash status}
+			</th>
+			{END status_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN order_id_fieldcolumn}
+			<td  class="{$order_id_class}" {$order_id_style} {$recordattrs}>
+				{$order_id_value}
+			</td>
+			{END order_id_fieldcolumn}
+			{BEGIN customer_id_fieldcolumn}
+			<td  class="{$customer_id_class}" {$customer_id_style} {$recordattrs}>
+				{$customer_id_value}
+			</td>
+			{END customer_id_fieldcolumn}
+			{BEGIN order_country_id_fieldcolumn}
+			<td  class="{$order_country_id_class}" {$order_country_id_style} {$recordattrs}>
+				{$order_country_id_value}
+			</td>
+			{END order_country_id_fieldcolumn}
+			{BEGIN order_pref_fieldcolumn}
+			<td  class="{$order_pref_class}" {$order_pref_style} {$recordattrs}>
+				{$order_pref_value}
+			</td>
+			{END order_pref_fieldcolumn}
+			{BEGIN order_sex_fieldcolumn}
+			<td  class="{$order_sex_class}" {$order_sex_style} {$recordattrs}>
+				{$order_sex_value}
+			</td>
+			{END order_sex_fieldcolumn}
+			{BEGIN order_job_fieldcolumn}
+			<td  class="{$order_job_class}" {$order_job_style} {$recordattrs}>
+				{$order_job_value}
+			</td>
+			{END order_job_fieldcolumn}
+			{BEGIN payment_id_fieldcolumn}
+			<td  class="{$payment_id_class}" {$payment_id_style} {$recordattrs}>
+				{$payment_id_value}
+			</td>
+			{END payment_id_fieldcolumn}
+			{BEGIN device_type_id_fieldcolumn}
+			<td  class="{$device_type_id_class}" {$device_type_id_style} {$recordattrs}>
+				{$device_type_id_value}
+			</td>
+			{END device_type_id_fieldcolumn}
+			{BEGIN pre_order_id_fieldcolumn}
+			<td  class="{$pre_order_id_class}" {$pre_order_id_style} {$recordattrs}>
+				{$pre_order_id_value}
+			</td>
+			{END pre_order_id_fieldcolumn}
+			{BEGIN message_fieldcolumn}
+			<td  class="{$message_class}" {$message_style} {$recordattrs}>
+				{$message_value}
+			</td>
+			{END message_fieldcolumn}
+			{BEGIN order_name01_fieldcolumn}
+			<td  class="{$order_name01_class}" {$order_name01_style} {$recordattrs}>
+				{$order_name01_value}
+			</td>
+			{END order_name01_fieldcolumn}
+			{BEGIN order_name02_fieldcolumn}
+			<td  class="{$order_name02_class}" {$order_name02_style} {$recordattrs}>
+				{$order_name02_value}
+			</td>
+			{END order_name02_fieldcolumn}
+			{BEGIN order_kana01_fieldcolumn}
+			<td  class="{$order_kana01_class}" {$order_kana01_style} {$recordattrs}>
+				{$order_kana01_value}
+			</td>
+			{END order_kana01_fieldcolumn}
+			{BEGIN order_kana02_fieldcolumn}
+			<td  class="{$order_kana02_class}" {$order_kana02_style} {$recordattrs}>
+				{$order_kana02_value}
+			</td>
+			{END order_kana02_fieldcolumn}
+			{BEGIN order_company_name_fieldcolumn}
+			<td  class="{$order_company_name_class}" {$order_company_name_style} {$recordattrs}>
+				{$order_company_name_value}
+			</td>
+			{END order_company_name_fieldcolumn}
+			{BEGIN order_email_fieldcolumn}
+			<td  class="{$order_email_class}" {$order_email_style} {$recordattrs}>
+				{$order_email_value}
+			</td>
+			{END order_email_fieldcolumn}
+			{BEGIN order_tel01_fieldcolumn}
+			<td  class="{$order_tel01_class}" {$order_tel01_style} {$recordattrs}>
+				{$order_tel01_value}
+			</td>
+			{END order_tel01_fieldcolumn}
+			{BEGIN order_tel02_fieldcolumn}
+			<td  class="{$order_tel02_class}" {$order_tel02_style} {$recordattrs}>
+				{$order_tel02_value}
+			</td>
+			{END order_tel02_fieldcolumn}
+			{BEGIN order_tel03_fieldcolumn}
+			<td  class="{$order_tel03_class}" {$order_tel03_style} {$recordattrs}>
+				{$order_tel03_value}
+			</td>
+			{END order_tel03_fieldcolumn}
+			{BEGIN order_fax01_fieldcolumn}
+			<td  class="{$order_fax01_class}" {$order_fax01_style} {$recordattrs}>
+				{$order_fax01_value}
+			</td>
+			{END order_fax01_fieldcolumn}
+			{BEGIN order_fax02_fieldcolumn}
+			<td  class="{$order_fax02_class}" {$order_fax02_style} {$recordattrs}>
+				{$order_fax02_value}
+			</td>
+			{END order_fax02_fieldcolumn}
+			{BEGIN order_fax03_fieldcolumn}
+			<td  class="{$order_fax03_class}" {$order_fax03_style} {$recordattrs}>
+				{$order_fax03_value}
+			</td>
+			{END order_fax03_fieldcolumn}
+			{BEGIN order_zip01_fieldcolumn}
+			<td  class="{$order_zip01_class}" {$order_zip01_style} {$recordattrs}>
+				{$order_zip01_value}
+			</td>
+			{END order_zip01_fieldcolumn}
+			{BEGIN order_zip02_fieldcolumn}
+			<td  class="{$order_zip02_class}" {$order_zip02_style} {$recordattrs}>
+				{$order_zip02_value}
+			</td>
+			{END order_zip02_fieldcolumn}
+			{BEGIN order_zipcode_fieldcolumn}
+			<td  class="{$order_zipcode_class}" {$order_zipcode_style} {$recordattrs}>
+				{$order_zipcode_value}
+			</td>
+			{END order_zipcode_fieldcolumn}
+			{BEGIN order_addr01_fieldcolumn}
+			<td  class="{$order_addr01_class}" {$order_addr01_style} {$recordattrs}>
+				{$order_addr01_value}
+			</td>
+			{END order_addr01_fieldcolumn}
+			{BEGIN order_addr02_fieldcolumn}
+			<td  class="{$order_addr02_class}" {$order_addr02_style} {$recordattrs}>
+				{$order_addr02_value}
+			</td>
+			{END order_addr02_fieldcolumn}
+			{BEGIN order_birth_fieldcolumn}
+			<td  class="{$order_birth_class}" {$order_birth_style} {$recordattrs}>
+				{$order_birth_value}
+			</td>
+			{END order_birth_fieldcolumn}
+			{BEGIN subtotal_fieldcolumn}
+			<td  class="{$subtotal_class}" {$subtotal_style} {$recordattrs}>
+				{$subtotal_value}
+			</td>
+			{END subtotal_fieldcolumn}
+			{BEGIN discount_fieldcolumn}
+			<td  class="{$discount_class}" {$discount_style} {$recordattrs}>
+				{$discount_value}
+			</td>
+			{END discount_fieldcolumn}
+			{BEGIN delivery_fee_total_fieldcolumn}
+			<td  class="{$delivery_fee_total_class}" {$delivery_fee_total_style} {$recordattrs}>
+				{$delivery_fee_total_value}
+			</td>
+			{END delivery_fee_total_fieldcolumn}
+			{BEGIN charge_fieldcolumn}
+			<td  class="{$charge_class}" {$charge_style} {$recordattrs}>
+				{$charge_value}
+			</td>
+			{END charge_fieldcolumn}
+			{BEGIN tax_fieldcolumn}
+			<td  class="{$tax_class}" {$tax_style} {$recordattrs}>
+				{$tax_value}
+			</td>
+			{END tax_fieldcolumn}
+			{BEGIN total_fieldcolumn}
+			<td  class="{$total_class}" {$total_style} {$recordattrs}>
+				{$total_value}
+			</td>
+			{END total_fieldcolumn}
+			{BEGIN payment_total_fieldcolumn}
+			<td  class="{$payment_total_class}" {$payment_total_style} {$recordattrs}>
+				{$payment_total_value}
+			</td>
+			{END payment_total_fieldcolumn}
+			{BEGIN payment_method_fieldcolumn}
+			<td  class="{$payment_method_class}" {$payment_method_style} {$recordattrs}>
+				{$payment_method_value}
+			</td>
+			{END payment_method_fieldcolumn}
+			{BEGIN note_fieldcolumn}
+			<td  class="{$note_class}" {$note_style} {$recordattrs}>
+				{$note_value}
+			</td>
+			{END note_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN order_date_fieldcolumn}
+			<td  class="{$order_date_class}" {$order_date_style} {$recordattrs}>
+				{$order_date_value}
+			</td>
+			{END order_date_fieldcolumn}
+			{BEGIN commit_date_fieldcolumn}
+			<td  class="{$commit_date_class}" {$commit_date_style} {$recordattrs}>
+				{$commit_date_value}
+			</td>
+			{END commit_date_fieldcolumn}
+			{BEGIN payment_date_fieldcolumn}
+			<td  class="{$payment_date_class}" {$payment_date_style} {$recordattrs}>
+				{$payment_date_value}
+			</td>
+			{END payment_date_fieldcolumn}
+			{BEGIN del_flg_fieldcolumn}
+			<td  class="{$del_flg_class}" {$del_flg_style} {$recordattrs}>
+				{$del_flg_value}
+			</td>
+			{END del_flg_fieldcolumn}
+			{BEGIN status_fieldcolumn}
+			<td  class="{$status_class}" {$status_style} {$recordattrs}>
+				{$status_value}
+			</td>
+			{END status_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="45">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

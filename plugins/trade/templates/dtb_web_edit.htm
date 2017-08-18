@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <META name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    <META name="GENERATOR" content="MSHTML 11.00.9600.18739">
+  </HEAD>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      sssssssssssssssssssssssss
+<div>
+100％がいいＤすなー
+</div>
+
+      <STYLE>
+        {$containerCss}
+      </STYLE>
+      {BEGIN container_menu}
+        <NAV class="navbar navbar-default" data-container="menu" data-pageid="{$pageid}" {$menu_chiddenattr}>
+          {BEGIN container_hdr}
+            <DIV class="navbar-header" data-container="hdr" data-pageid="{$pageid}" {$hdr_chiddenattr}>
+              {BEGIN logo_block}
+                <A class="navbar-brand" href="{$home_link}" data-brick="logo" data-pageid="{$pageid}" {$logo_hiddenattr}>
+                  {$logo}
+                </A>
+              {END logo_block}
+              {BEGIN collapse_block}
+                <BUTTON class="navbar-toggle collapsed" type="button" data-brick="bsnavbarcollapse" data-pageid="{$pageid}" data-target=".bs-navcontrolled" data-runner-toggle="collapse" {$bsnavbarcollapse_hiddenattr}>
+                  <SPAN class="sr-only">
+                    Toggle navigation
+                  </SPAN>
+                  <SPAN class="icon-bar">
+                  </SPAN>
+                </BUTTON>
+              {END collapse_block}
+            </DIV>
+          {END container_hdr}
+          {BEGIN container_menu_1}
+            <DIV class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" data-container="menu_1" data-pageid="{$pageid}" {$menu_1_chiddenattr}>
+              {BEGIN menu_block}
+                {$menu main horizontal}
+              {END menu_block}
+              {BEGIN container_more}
+                <DIV class="navbar-right navbar-form" data-container="more" data-pageid="{$pageid}" {$more_chiddenattr}>
+                  {BEGIN security_block}
+                    <SPAN class="bs-navsection" id="login_block{$id}" data-brick="loggedas" data-pageid="{$pageid}" {$loggedas_hiddenattr}>
+                      {BEGIN guestloginbutton}
+                        <BUTTON class="btn btn-info" type="button" {$guestloginlink_attrs}>
+                          ログイン
+                        </BUTTON>
+                      {END guestloginbutton}
+                      {BEGIN loggedas_message}
+                        <SPAN class="dropdown">
+                          <BUTTON class="btn btn-info dropdown-toggle" aria-expanded="false" aria-haspopup="true" type="button" data-toggle="dropdown">
+                            <SPAN class="glyphicon glyphicon-user">
+                            </SPAN>
+                            {$username}
+                          </BUTTON>
+                          <UL class="dropdown-menu">
+                            {BEGIN logoutbutton}
+                              <LI>
+                                <A href="#" {$logoutlink_attrs}>
+                                  ログアウト
+                                </A>
+                              </LI>
+                            {END logoutbutton}
+                            {BEGIN adminarea_link}
+                              <LI>
+                                <A href="admin_rights_list.php" {$adminarealink_attrs}>
+                                  管理エリア
+                                </A>
+                              </LI>
+                            {END adminarea_link}
+                          </UL>
+                        </SPAN>
+                      {END loggedas_message}
+                    </SPAN>
+                  {END security_block}
+                </DIV>
+              {END container_more}
+            </DIV>
+          {END container_menu_1}
+        </NAV>
+      {END container_menu}
+      {BEGIN container_editpage}
+        <DIV class="container" data-container="editpage" data-pageid="{$pageid}" {$editpage_chiddenattr}>
+          {BEGIN container_header}
+            <DIV class="col-md-9 col-md-offset-3" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+              {BEGIN editheader}
+                <H2 data-brick="editheader" data-pageid="{$pageid}" {$editheader_hiddenattr}>
+                  {$pagetitlelabel dtb_web edit}
+                </H2>
+              {END editheader}
+            </DIV>
+          {END container_header}
+          {BEGIN container_message}
+            <DIV class="col-md-6 col-md-offset-3" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+              {BEGIN message_block}
+                <DIV class="alert {$message_class}" role="alert" data-brick="message" data-pageid="{$pageid}" {$message_hiddenattr}>
+                  <H5>
+                    {$message}
+                  </H5>
+                  <DIV>
+                    {BEGIN back_button}
+                      <BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>
+                        一覧に戻る
+                      </BUTTON>
+                    {END back_button}
+                    {BEGIN view_page_button}
+                      <BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>
+                        表示
+                      </BUTTON>
+                    {END view_page_button}
+                  </DIV>
+                </DIV>
+              {END message_block}
+            </DIV>
+          {END container_message}
+        </DIV>
+      {END container_editpage}
+      {BEGIN container_fields}
+        <DIV class="col-md-12" data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}>
+          <DIV class="form-horizontal" role="form" data-brick="editfields" data-pageid="{$pageid}" {$editfields_hiddenattr}>
+            {BEGIN id_fieldblock}
+              <DIV class="container">
+                <DIV class="form-group {$fielddispclass_id}" data-signal-error-for="id{$id}" data-fieldname="id">
+                  <LABEL class="col-md-3 control-label" for="{$labelfor_id}">
+                    {BEGIN id_label}
+                      {$label dtb_web id}
+                    {END id_label}
+                  </LABEL>
+                  <DIV class="col-md-6">
+                    {$id_editcontrol}
+                  </DIV>
+                  <DIV class="col-md-3 help-block" data-helpfor="id">
+                    <DIV class="text-muted">
+                      {$tooltip dtb_web id}
+                    </DIV>
+                  </DIV>
+                </DIV>
+              </DIV>
+            {END id_fieldblock}
+          </DIV>
+        </DIV>
+      {END container_fields}
+      {BEGIN container_bottombuttons}
+        <DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+          {BEGIN container_buttons}
+            <DIV class="form-group" data-container="buttons" data-pageid="{$pageid}" {$buttons_chiddenattr}>
+              {BEGIN container_leftbuttons}
+                <DIV class="col-md-3 col-md-offset-3" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>
+                  {BEGIN editbuttons}
+                    {BEGIN save_button}
+                      <BUTTON class="btn btn-primary" {$savebutton_attrs}>
+                        保存
+                      </BUTTON>
+                    {END save_button}
+                    {BEGIN back_button}
+                      <BUTTON class="btn btn-default" {$backbutton_attrs}>
+                        一覧に戻る
+                      </BUTTON>
+                    {END back_button}
+                    {BEGIN close_button}
+                      <A class="btn btn-default" href="#" {$closebutton_attrs}>
+                        キャンセル(Cancel)
+                      </A>
+                    {END close_button}
+                  {END editbuttons}
+                </DIV>
+              {END container_leftbuttons}
+              {BEGIN container_leftbuttons_1}
+                <DIV class="text-right col-md-3" data-container="leftbuttons_1" data-pageid="{$pageid}" {$leftbuttons_1_chiddenattr}>
+                  {BEGIN righteditbuttons}
+                    <DIV class="btn-group" role="group">
+                      {BEGIN prev_button}
+                        <BUTTON class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}>
+                          <SPAN class="glyphicon glyphicon-chevron-left">
+                          </SPAN>
+                        </BUTTON>
+                      {END prev_button}
+                      {BEGIN next_button}
+                        <BUTTON class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}>
+                          <SPAN class="glyphicon glyphicon-chevron-right">
+                          </SPAN>
+                        </BUTTON>
+                      {END next_button}
+                      <DIV class="btn-group dropup" role="group">
+                        <BUTTON class="btn btn-default dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+                          <SPAN class="glyphicon glyphicon-menu-hamburger">
+                          </SPAN>
+                        </BUTTON>
+                        <UL class="dropdown-menu dropdown-left">
+                          {BEGIN reset_button}
+                            <LI>
+                              <A href="#" {$resetbutton_attrs}>
+                                リセット
+                              </A>
+                            </LI>
+                          {END reset_button}
+                          {BEGIN view_page_button}
+                            <LI>
+                              <A href="#" {$view_page_button_attrs}>
+                                表示
+                              </A>
+                            </LI>
+                          {END view_page_button}
+                        </UL>
+                      </DIV>
+                    </DIV>
+                  {END righteditbuttons}
+                </DIV>
+              {END container_leftbuttons_1}
+            </DIV>
+          {END container_buttons}
+        </DIV>
+      {END container_bottombuttons}
+      <DIV class="bs-middle">
+        <DIV class="bs-topmiddle">
+        </DIV>
+        <DIV class="bs-left" {$blockattr_left}>
+        </DIV>
+        <DIV class="bs-center bs-screenwidth bs-minwidth">
+        </DIV>
+        <DIV class="bs-right">
+        </DIV>
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

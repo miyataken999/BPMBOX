@@ -1,0 +1,53 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_block masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$block_id_class}">{$label dtb_block block_id}</th>
+			<th class="{$device_type_id_class}">{$label dtb_block device_type_id}</th>
+			<th class="{$block_name_class}">{$label dtb_block block_name}</th>
+			<th class="{$file_name_class}">{$label dtb_block file_name}</th>
+			<th class="{$create_date_class}">{$label dtb_block create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_block update_date}</th>
+			<th class="{$logic_flg_class}">{$label dtb_block logic_flg}</th>
+			<th class="{$deletable_flg_class}">{$label dtb_block deletable_flg}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$block_id_class}">{$block_id_mastervalue}</td>
+			<td class="{$device_type_id_class}">{$device_type_id_mastervalue}</td>
+			<td class="{$block_name_class}">{$block_name_mastervalue}</td>
+			<td class="{$file_name_class}">{$file_name_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$logic_flg_class}">{$logic_flg_mastervalue}</td>
+			<td class="{$deletable_flg_class}">{$deletable_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,71 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+
+<div class="bs-gridintab-container">
+
+
+
+
+
+
+
+{BEGIN details_PMT_ECCUBEBLOG}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">業務履歴
+		<span>
+{BEGIN details_inlineadd_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PMT_ECCUBEBLOG_attrs}>インライン追加</button>
+{END details_inlineadd_PMT_ECCUBEBLOG_link}		
+{BEGIN details_add_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PMT_ECCUBEBLOG_attrs}>追加</button>
+{END details_add_PMT_ECCUBEBLOG_link}
+{BEGIN details_edit_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PMT_ECCUBEBLOG_attrs}>編集</button>
+{END details_edit_PMT_ECCUBEBLOG_link}
+{BEGIN details_updateselected_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PMT_ECCUBEBLOG_attrs}>Update selected</button>
+{END details_updateselected_PMT_ECCUBEBLOG_link}
+
+
+{BEGIN details_delete_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PMT_ECCUBEBLOG_attrs}>削除</button>
+{END details_delete_PMT_ECCUBEBLOG_link}
+
+{BEGIN saveall_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PMT_ECCUBEBLOG_attrs} {$savealllink_PMT_ECCUBEBLOG_span}>全て保存</button>
+{END saveall_PMT_ECCUBEBLOG_link}
+{BEGIN cancelall_PMT_ECCUBEBLOG_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PMT_ECCUBEBLOG_attrs} {$cancelalllink_PMT_ECCUBEBLOG_span}>キャンセル</button>
+{END cancelall_PMT_ECCUBEBLOG_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PMT_ECCUBEBLOG}
+</div>
+</div>
+</div>
+{END details_PMT_ECCUBEBLOG}
+	
+	
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

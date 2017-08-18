@@ -1,0 +1,1217 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel dtb_order1 view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN JPN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_JPN} bs-viewform-group" data-fieldname="JPN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_JPN}">
+			{$label dtb_order1 JPN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$JPN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END JPN_fieldblock}
+	{BEGIN APPLICATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APPLICATION} bs-viewform-group" data-fieldname="APPLICATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APPLICATION}">
+			{$label dtb_order1 APPLICATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APPLICATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APPLICATION_fieldblock}
+	{BEGIN APPLICATION_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APPLICATION_LABEL} bs-viewform-group" data-fieldname="APPLICATION_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APPLICATION_LABEL}">
+			{$label dtb_order1 APPLICATION_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APPLICATION_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APPLICATION_LABEL_fieldblock}
+	{BEGIN APP_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_UID} bs-viewform-group" data-fieldname="APP_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_UID}">
+			{$label dtb_order1 APP_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_UID_fieldblock}
+	{BEGIN DEL_INDEX_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_INDEX} bs-viewform-group" data-fieldname="DEL_INDEX">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_INDEX}">
+			{$label dtb_order1 DEL_INDEX}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_INDEX_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_INDEX_fieldblock}
+	{BEGIN DEL_LAST_INDEX_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_LAST_INDEX} bs-viewform-group" data-fieldname="DEL_LAST_INDEX">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_LAST_INDEX}">
+			{$label dtb_order1 DEL_LAST_INDEX}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_LAST_INDEX_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_LAST_INDEX_fieldblock}
+	{BEGIN APP_NUMBER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_NUMBER} bs-viewform-group" data-fieldname="APP_NUMBER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_NUMBER}">
+			{$label dtb_order1 APP_NUMBER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_NUMBER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_NUMBER_fieldblock}
+	{BEGIN APP_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_STATUS} bs-viewform-group" data-fieldname="APP_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_STATUS}">
+			{$label dtb_order1 APP_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_STATUS_fieldblock}
+	{BEGIN USR_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_UID} bs-viewform-group" data-fieldname="USR_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_UID}">
+			{$label dtb_order1 USR_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_UID_fieldblock}
+	{BEGIN PREVIOUS_USR_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PREVIOUS_USR_UID} bs-viewform-group" data-fieldname="PREVIOUS_USR_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PREVIOUS_USR_UID}">
+			{$label dtb_order1 PREVIOUS_USR_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PREVIOUS_USR_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PREVIOUS_USR_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_UID} bs-viewform-group" data-fieldname="TAS_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_UID}">
+			{$label dtb_order1 TAS_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label dtb_order1 PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN DEL_DELEGATE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DELEGATE_DATE} bs-viewform-group" data-fieldname="DEL_DELEGATE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DELEGATE_DATE}">
+			{$label dtb_order1 DEL_DELEGATE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DELEGATE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DELEGATE_DATE_fieldblock}
+	{BEGIN DEL_INIT_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_INIT_DATE} bs-viewform-group" data-fieldname="DEL_INIT_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_INIT_DATE}">
+			{$label dtb_order1 DEL_INIT_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_INIT_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_INIT_DATE_fieldblock}
+	{BEGIN DEL_FINISH_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_FINISH_DATE} bs-viewform-group" data-fieldname="DEL_FINISH_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_FINISH_DATE}">
+			{$label dtb_order1 DEL_FINISH_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_FINISH_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_FINISH_DATE_fieldblock}
+	{BEGIN DEL_TASK_DUE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_TASK_DUE_DATE} bs-viewform-group" data-fieldname="DEL_TASK_DUE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_TASK_DUE_DATE}">
+			{$label dtb_order1 DEL_TASK_DUE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_TASK_DUE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_TASK_DUE_DATE_fieldblock}
+	{BEGIN DEL_RISK_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_RISK_DATE} bs-viewform-group" data-fieldname="DEL_RISK_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_RISK_DATE}">
+			{$label dtb_order1 DEL_RISK_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_RISK_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_RISK_DATE_fieldblock}
+	{BEGIN DEL_THREAD_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_THREAD_STATUS} bs-viewform-group" data-fieldname="DEL_THREAD_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_THREAD_STATUS}">
+			{$label dtb_order1 DEL_THREAD_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_THREAD_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_THREAD_STATUS_fieldblock}
+	{BEGIN APP_THREAD_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_THREAD_STATUS} bs-viewform-group" data-fieldname="APP_THREAD_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_THREAD_STATUS}">
+			{$label dtb_order1 APP_THREAD_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_THREAD_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_THREAD_STATUS_fieldblock}
+	{BEGIN APP_TITLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_TITLE} bs-viewform-group" data-fieldname="APP_TITLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_TITLE}">
+			{$label dtb_order1 APP_TITLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_TITLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_TITLE_fieldblock}
+	{BEGIN APP_PRO_TITLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_PRO_TITLE} bs-viewform-group" data-fieldname="APP_PRO_TITLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_PRO_TITLE}">
+			{$label dtb_order1 APP_PRO_TITLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_PRO_TITLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_PRO_TITLE_fieldblock}
+	{BEGIN APP_TAS_TITLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_TAS_TITLE} bs-viewform-group" data-fieldname="APP_TAS_TITLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_TAS_TITLE}">
+			{$label dtb_order1 APP_TAS_TITLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_TAS_TITLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_TAS_TITLE_fieldblock}
+	{BEGIN APP_CURRENT_USER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_CURRENT_USER} bs-viewform-group" data-fieldname="APP_CURRENT_USER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_CURRENT_USER}">
+			{$label dtb_order1 APP_CURRENT_USER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_CURRENT_USER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_CURRENT_USER_fieldblock}
+	{BEGIN APP_DEL_PREVIOUS_USER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_DEL_PREVIOUS_USER} bs-viewform-group" data-fieldname="APP_DEL_PREVIOUS_USER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_DEL_PREVIOUS_USER}">
+			{$label dtb_order1 APP_DEL_PREVIOUS_USER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_DEL_PREVIOUS_USER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_DEL_PREVIOUS_USER_fieldblock}
+	{BEGIN DEL_PRIORITY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_PRIORITY} bs-viewform-group" data-fieldname="DEL_PRIORITY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_PRIORITY}">
+			{$label dtb_order1 DEL_PRIORITY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_PRIORITY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_PRIORITY_fieldblock}
+	{BEGIN DEL_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DURATION} bs-viewform-group" data-fieldname="DEL_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DURATION}">
+			{$label dtb_order1 DEL_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DURATION_fieldblock}
+	{BEGIN DEL_QUEUE_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_QUEUE_DURATION} bs-viewform-group" data-fieldname="DEL_QUEUE_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_QUEUE_DURATION}">
+			{$label dtb_order1 DEL_QUEUE_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_QUEUE_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_QUEUE_DURATION_fieldblock}
+	{BEGIN DEL_DELAY_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DELAY_DURATION} bs-viewform-group" data-fieldname="DEL_DELAY_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DELAY_DURATION}">
+			{$label dtb_order1 DEL_DELAY_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DELAY_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DELAY_DURATION_fieldblock}
+	{BEGIN DEL_STARTED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_STARTED} bs-viewform-group" data-fieldname="DEL_STARTED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_STARTED}">
+			{$label dtb_order1 DEL_STARTED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_STARTED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_STARTED_fieldblock}
+	{BEGIN DEL_FINISHED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_FINISHED} bs-viewform-group" data-fieldname="DEL_FINISHED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_FINISHED}">
+			{$label dtb_order1 DEL_FINISHED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_FINISHED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_FINISHED_fieldblock}
+	{BEGIN DEL_DELAYED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DELAYED} bs-viewform-group" data-fieldname="DEL_DELAYED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DELAYED}">
+			{$label dtb_order1 DEL_DELAYED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DELAYED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DELAYED_fieldblock}
+	{BEGIN APP_CREATE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_CREATE_DATE} bs-viewform-group" data-fieldname="APP_CREATE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_CREATE_DATE}">
+			{$label dtb_order1 APP_CREATE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_CREATE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_CREATE_DATE_fieldblock}
+	{BEGIN APP_FINISH_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_FINISH_DATE} bs-viewform-group" data-fieldname="APP_FINISH_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_FINISH_DATE}">
+			{$label dtb_order1 APP_FINISH_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_FINISH_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_FINISH_DATE_fieldblock}
+	{BEGIN APP_UPDATE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_UPDATE_DATE} bs-viewform-group" data-fieldname="APP_UPDATE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_UPDATE_DATE}">
+			{$label dtb_order1 APP_UPDATE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_UPDATE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_UPDATE_DATE_fieldblock}
+	{BEGIN APP_OVERDUE_PERCENTAGE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_OVERDUE_PERCENTAGE} bs-viewform-group" data-fieldname="APP_OVERDUE_PERCENTAGE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_OVERDUE_PERCENTAGE}">
+			{$label dtb_order1 APP_OVERDUE_PERCENTAGE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_OVERDUE_PERCENTAGE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_OVERDUE_PERCENTAGE_fieldblock}
+	{BEGIN order_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_id} bs-viewform-group" data-fieldname="order_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_id}">
+			{$label dtb_order1 order_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_id_fieldblock}
+	{BEGIN customer_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_customer_id} bs-viewform-group" data-fieldname="customer_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_customer_id}">
+			{$label dtb_order1 customer_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$customer_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END customer_id_fieldblock}
+	{BEGIN status_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_status} bs-viewform-group" data-fieldname="status">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_status}">
+			{$label dtb_order1 status}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$status_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END status_fieldblock}
+	{BEGIN order_country_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_country_id} bs-viewform-group" data-fieldname="order_country_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_country_id}">
+			{$label dtb_order1 order_country_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_country_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_country_id_fieldblock}
+	{BEGIN order_pref_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_pref} bs-viewform-group" data-fieldname="order_pref">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_pref}">
+			{$label dtb_order1 order_pref}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_pref_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_pref_fieldblock}
+	{BEGIN order_sex_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_sex} bs-viewform-group" data-fieldname="order_sex">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_sex}">
+			{$label dtb_order1 order_sex}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_sex_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_sex_fieldblock}
+	{BEGIN order_job_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_job} bs-viewform-group" data-fieldname="order_job">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_job}">
+			{$label dtb_order1 order_job}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_job_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_job_fieldblock}
+	{BEGIN payment_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_payment_id} bs-viewform-group" data-fieldname="payment_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_payment_id}">
+			{$label dtb_order1 payment_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$payment_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END payment_id_fieldblock}
+	{BEGIN device_type_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_device_type_id} bs-viewform-group" data-fieldname="device_type_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_device_type_id}">
+			{$label dtb_order1 device_type_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$device_type_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END device_type_id_fieldblock}
+	{BEGIN pre_order_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_pre_order_id} bs-viewform-group" data-fieldname="pre_order_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_pre_order_id}">
+			{$label dtb_order1 pre_order_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$pre_order_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END pre_order_id_fieldblock}
+	{BEGIN message_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_message} bs-viewform-group" data-fieldname="message">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_message}">
+			{$label dtb_order1 message}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$message_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END message_fieldblock}
+	{BEGIN order_name01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_name01} bs-viewform-group" data-fieldname="order_name01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_name01}">
+			{$label dtb_order1 order_name01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_name01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_name01_fieldblock}
+	{BEGIN order_name02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_name02} bs-viewform-group" data-fieldname="order_name02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_name02}">
+			{$label dtb_order1 order_name02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_name02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_name02_fieldblock}
+	{BEGIN order_kana01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_kana01} bs-viewform-group" data-fieldname="order_kana01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_kana01}">
+			{$label dtb_order1 order_kana01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_kana01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_kana01_fieldblock}
+	{BEGIN order_kana02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_kana02} bs-viewform-group" data-fieldname="order_kana02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_kana02}">
+			{$label dtb_order1 order_kana02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_kana02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_kana02_fieldblock}
+	{BEGIN order_company_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_company_name} bs-viewform-group" data-fieldname="order_company_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_company_name}">
+			{$label dtb_order1 order_company_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_company_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_company_name_fieldblock}
+	{BEGIN order_email_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_email} bs-viewform-group" data-fieldname="order_email">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_email}">
+			{$label dtb_order1 order_email}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_email_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_email_fieldblock}
+	{BEGIN order_tel01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_tel01} bs-viewform-group" data-fieldname="order_tel01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_tel01}">
+			{$label dtb_order1 order_tel01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_tel01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_tel01_fieldblock}
+	{BEGIN order_tel02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_tel02} bs-viewform-group" data-fieldname="order_tel02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_tel02}">
+			{$label dtb_order1 order_tel02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_tel02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_tel02_fieldblock}
+	{BEGIN order_tel03_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_tel03} bs-viewform-group" data-fieldname="order_tel03">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_tel03}">
+			{$label dtb_order1 order_tel03}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_tel03_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_tel03_fieldblock}
+	{BEGIN order_fax01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_fax01} bs-viewform-group" data-fieldname="order_fax01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_fax01}">
+			{$label dtb_order1 order_fax01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_fax01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_fax01_fieldblock}
+	{BEGIN order_fax02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_fax02} bs-viewform-group" data-fieldname="order_fax02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_fax02}">
+			{$label dtb_order1 order_fax02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_fax02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_fax02_fieldblock}
+	{BEGIN order_fax03_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_fax03} bs-viewform-group" data-fieldname="order_fax03">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_fax03}">
+			{$label dtb_order1 order_fax03}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_fax03_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_fax03_fieldblock}
+	{BEGIN order_zip01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_zip01} bs-viewform-group" data-fieldname="order_zip01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_zip01}">
+			{$label dtb_order1 order_zip01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_zip01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_zip01_fieldblock}
+	{BEGIN order_zip02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_zip02} bs-viewform-group" data-fieldname="order_zip02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_zip02}">
+			{$label dtb_order1 order_zip02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_zip02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_zip02_fieldblock}
+	{BEGIN order_zipcode_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_zipcode} bs-viewform-group" data-fieldname="order_zipcode">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_zipcode}">
+			{$label dtb_order1 order_zipcode}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_zipcode_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_zipcode_fieldblock}
+	{BEGIN order_addr01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_addr01} bs-viewform-group" data-fieldname="order_addr01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_addr01}">
+			{$label dtb_order1 order_addr01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_addr01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_addr01_fieldblock}
+	{BEGIN order_addr02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_addr02} bs-viewform-group" data-fieldname="order_addr02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_addr02}">
+			{$label dtb_order1 order_addr02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_addr02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_addr02_fieldblock}
+	{BEGIN order_birth_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_birth} bs-viewform-group" data-fieldname="order_birth">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_birth}">
+			{$label dtb_order1 order_birth}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_birth_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_birth_fieldblock}
+	{BEGIN subtotal_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_subtotal} bs-viewform-group" data-fieldname="subtotal">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_subtotal}">
+			{$label dtb_order1 subtotal}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$subtotal_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END subtotal_fieldblock}
+	{BEGIN discount_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_discount} bs-viewform-group" data-fieldname="discount">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_discount}">
+			{$label dtb_order1 discount}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$discount_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END discount_fieldblock}
+	{BEGIN delivery_fee_total_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_delivery_fee_total} bs-viewform-group" data-fieldname="delivery_fee_total">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_delivery_fee_total}">
+			{$label dtb_order1 delivery_fee_total}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$delivery_fee_total_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END delivery_fee_total_fieldblock}
+	{BEGIN charge_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_charge} bs-viewform-group" data-fieldname="charge">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_charge}">
+			{$label dtb_order1 charge}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$charge_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END charge_fieldblock}
+	{BEGIN tax_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_tax} bs-viewform-group" data-fieldname="tax">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_tax}">
+			{$label dtb_order1 tax}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$tax_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END tax_fieldblock}
+	{BEGIN total_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_total} bs-viewform-group" data-fieldname="total">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_total}">
+			{$label dtb_order1 total}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$total_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END total_fieldblock}
+	{BEGIN payment_total_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_payment_total} bs-viewform-group" data-fieldname="payment_total">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_payment_total}">
+			{$label dtb_order1 payment_total}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$payment_total_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END payment_total_fieldblock}
+	{BEGIN payment_method_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_payment_method} bs-viewform-group" data-fieldname="payment_method">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_payment_method}">
+			{$label dtb_order1 payment_method}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$payment_method_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END payment_method_fieldblock}
+	{BEGIN note_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_note} bs-viewform-group" data-fieldname="note">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_note}">
+			{$label dtb_order1 note}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$note_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END note_fieldblock}
+	{BEGIN create_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_create_date} bs-viewform-group" data-fieldname="create_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_create_date}">
+			{$label dtb_order1 create_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$create_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END create_date_fieldblock}
+	{BEGIN update_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_update_date} bs-viewform-group" data-fieldname="update_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_update_date}">
+			{$label dtb_order1 update_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$update_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END update_date_fieldblock}
+	{BEGIN order_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_date} bs-viewform-group" data-fieldname="order_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_date}">
+			{$label dtb_order1 order_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_date_fieldblock}
+	{BEGIN commit_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_commit_date} bs-viewform-group" data-fieldname="commit_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_commit_date}">
+			{$label dtb_order1 commit_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$commit_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END commit_date_fieldblock}
+	{BEGIN payment_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_payment_date} bs-viewform-group" data-fieldname="payment_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_payment_date}">
+			{$label dtb_order1 payment_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$payment_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END payment_date_fieldblock}
+	{BEGIN del_flg_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_del_flg} bs-viewform-group" data-fieldname="del_flg">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_del_flg}">
+			{$label dtb_order1 del_flg}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$del_flg_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END del_flg_fieldblock}
+	
+	
+
+{BEGIN details_APP_CACHE_VIEW}
+<div data-pageid="1" data-container="detailscontainer" class=" bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">業部ナビゲート</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_APP_CACHE_VIEW}
+		</div>
+	</div>
+</div>
+{END details_APP_CACHE_VIEW}
+		
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

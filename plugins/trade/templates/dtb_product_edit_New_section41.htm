@@ -1,0 +1,71 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+
+<div class="bs-gridintab-container">
+
+
+
+
+
+
+
+{BEGIN details_dtb_customer_favorite_product}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">カスタマーお気に入り製品
+		<span>
+{BEGIN details_inlineadd_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_customer_favorite_product_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_customer_favorite_product_link}		
+{BEGIN details_add_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_customer_favorite_product_attrs}>追加</button>
+{END details_add_dtb_customer_favorite_product_link}
+{BEGIN details_edit_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_customer_favorite_product_attrs}>編集</button>
+{END details_edit_dtb_customer_favorite_product_link}
+{BEGIN details_updateselected_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_customer_favorite_product_attrs}>Update selected</button>
+{END details_updateselected_dtb_customer_favorite_product_link}
+
+
+{BEGIN details_delete_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_customer_favorite_product_attrs}>削除</button>
+{END details_delete_dtb_customer_favorite_product_link}
+
+{BEGIN saveall_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_dtb_customer_favorite_product_attrs} {$savealllink_dtb_customer_favorite_product_span}>全て保存</button>
+{END saveall_dtb_customer_favorite_product_link}
+{BEGIN cancelall_dtb_customer_favorite_product_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_dtb_customer_favorite_product_attrs} {$cancelalllink_dtb_customer_favorite_product_span}>キャンセル</button>
+{END cancelall_dtb_customer_favorite_product_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_customer_favorite_product}
+</div>
+</div>
+</div>
+{END details_dtb_customer_favorite_product}
+	
+	
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

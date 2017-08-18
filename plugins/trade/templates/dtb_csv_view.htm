@@ -1,0 +1,385 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel dtb_csv view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN csv_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_csv_id} bs-viewform-group" data-fieldname="csv_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_csv_id}">
+			{$label dtb_csv csv_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$csv_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END csv_id_fieldblock}
+	{BEGIN csv_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_csv_type} bs-viewform-group" data-fieldname="csv_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_csv_type}">
+			{$label dtb_csv csv_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$csv_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END csv_type_fieldblock}
+	{BEGIN creator_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_creator_id} bs-viewform-group" data-fieldname="creator_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_creator_id}">
+			{$label dtb_csv creator_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$creator_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END creator_id_fieldblock}
+	{BEGIN entity_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_entity_name} bs-viewform-group" data-fieldname="entity_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_entity_name}">
+			{$label dtb_csv entity_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$entity_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END entity_name_fieldblock}
+	{BEGIN field_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_field_name} bs-viewform-group" data-fieldname="field_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_field_name}">
+			{$label dtb_csv field_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$field_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END field_name_fieldblock}
+	{BEGIN reference_field_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_reference_field_name} bs-viewform-group" data-fieldname="reference_field_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_reference_field_name}">
+			{$label dtb_csv reference_field_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$reference_field_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END reference_field_name_fieldblock}
+	{BEGIN disp_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_disp_name} bs-viewform-group" data-fieldname="disp_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_disp_name}">
+			{$label dtb_csv disp_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$disp_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END disp_name_fieldblock}
+	{BEGIN rank_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_rank} bs-viewform-group" data-fieldname="rank">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_rank}">
+			{$label dtb_csv rank}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$rank_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END rank_fieldblock}
+	{BEGIN enable_flg_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_enable_flg} bs-viewform-group" data-fieldname="enable_flg">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_enable_flg}">
+			{$label dtb_csv enable_flg}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$enable_flg_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END enable_flg_fieldblock}
+	{BEGIN create_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_create_date} bs-viewform-group" data-fieldname="create_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_create_date}">
+			{$label dtb_csv create_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$create_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END create_date_fieldblock}
+	{BEGIN update_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_update_date} bs-viewform-group" data-fieldname="update_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_update_date}">
+			{$label dtb_csv update_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$update_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END update_date_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

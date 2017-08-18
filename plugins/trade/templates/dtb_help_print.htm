@@ -1,0 +1,453 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_help print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN id_fieldheadercolumn}
+			<th class="{$id_class}" {$id_style}  data-field="id">
+				{$label dtb_help id}
+			</th>
+			{END id_fieldheadercolumn}
+			{BEGIN law_country_id_fieldheadercolumn}
+			<th class="{$law_country_id_class}" {$law_country_id_style}  data-field="law_country_id">
+				{$label dtb_help law_country_id}
+			</th>
+			{END law_country_id_fieldheadercolumn}
+			{BEGIN law_pref_fieldheadercolumn}
+			<th class="{$law_pref_class}" {$law_pref_style}  data-field="law_pref">
+				{$label dtb_help law_pref}
+			</th>
+			{END law_pref_fieldheadercolumn}
+			{BEGIN customer_agreement_fieldheadercolumn}
+			<th class="{$customer_agreement_class}" {$customer_agreement_style}  data-field="customer_agreement">
+				{$label dtb_help customer_agreement}
+			</th>
+			{END customer_agreement_fieldheadercolumn}
+			{BEGIN law_company_fieldheadercolumn}
+			<th class="{$law_company_class}" {$law_company_style}  data-field="law_company">
+				{$label dtb_help law_company}
+			</th>
+			{END law_company_fieldheadercolumn}
+			{BEGIN law_manager_fieldheadercolumn}
+			<th class="{$law_manager_class}" {$law_manager_style}  data-field="law_manager">
+				{$label dtb_help law_manager}
+			</th>
+			{END law_manager_fieldheadercolumn}
+			{BEGIN law_zip01_fieldheadercolumn}
+			<th class="{$law_zip01_class}" {$law_zip01_style}  data-field="law_zip01">
+				{$label dtb_help law_zip01}
+			</th>
+			{END law_zip01_fieldheadercolumn}
+			{BEGIN law_zip02_fieldheadercolumn}
+			<th class="{$law_zip02_class}" {$law_zip02_style}  data-field="law_zip02">
+				{$label dtb_help law_zip02}
+			</th>
+			{END law_zip02_fieldheadercolumn}
+			{BEGIN law_zipcode_fieldheadercolumn}
+			<th class="{$law_zipcode_class}" {$law_zipcode_style}  data-field="law_zipcode">
+				{$label dtb_help law_zipcode}
+			</th>
+			{END law_zipcode_fieldheadercolumn}
+			{BEGIN law_addr01_fieldheadercolumn}
+			<th class="{$law_addr01_class}" {$law_addr01_style}  data-field="law_addr01">
+				{$label dtb_help law_addr01}
+			</th>
+			{END law_addr01_fieldheadercolumn}
+			{BEGIN law_addr02_fieldheadercolumn}
+			<th class="{$law_addr02_class}" {$law_addr02_style}  data-field="law_addr02">
+				{$label dtb_help law_addr02}
+			</th>
+			{END law_addr02_fieldheadercolumn}
+			{BEGIN law_tel01_fieldheadercolumn}
+			<th class="{$law_tel01_class}" {$law_tel01_style}  data-field="law_tel01">
+				{$label dtb_help law_tel01}
+			</th>
+			{END law_tel01_fieldheadercolumn}
+			{BEGIN law_tel02_fieldheadercolumn}
+			<th class="{$law_tel02_class}" {$law_tel02_style}  data-field="law_tel02">
+				{$label dtb_help law_tel02}
+			</th>
+			{END law_tel02_fieldheadercolumn}
+			{BEGIN law_tel03_fieldheadercolumn}
+			<th class="{$law_tel03_class}" {$law_tel03_style}  data-field="law_tel03">
+				{$label dtb_help law_tel03}
+			</th>
+			{END law_tel03_fieldheadercolumn}
+			{BEGIN law_fax01_fieldheadercolumn}
+			<th class="{$law_fax01_class}" {$law_fax01_style}  data-field="law_fax01">
+				{$label dtb_help law_fax01}
+			</th>
+			{END law_fax01_fieldheadercolumn}
+			{BEGIN law_fax02_fieldheadercolumn}
+			<th class="{$law_fax02_class}" {$law_fax02_style}  data-field="law_fax02">
+				{$label dtb_help law_fax02}
+			</th>
+			{END law_fax02_fieldheadercolumn}
+			{BEGIN law_fax03_fieldheadercolumn}
+			<th class="{$law_fax03_class}" {$law_fax03_style}  data-field="law_fax03">
+				{$label dtb_help law_fax03}
+			</th>
+			{END law_fax03_fieldheadercolumn}
+			{BEGIN law_email_fieldheadercolumn}
+			<th class="{$law_email_class}" {$law_email_style}  data-field="law_email">
+				{$label dtb_help law_email}
+			</th>
+			{END law_email_fieldheadercolumn}
+			{BEGIN law_url_fieldheadercolumn}
+			<th class="{$law_url_class}" {$law_url_style}  data-field="law_url">
+				{$label dtb_help law_url}
+			</th>
+			{END law_url_fieldheadercolumn}
+			{BEGIN law_term01_fieldheadercolumn}
+			<th class="{$law_term01_class}" {$law_term01_style}  data-field="law_term01">
+				{$label dtb_help law_term01}
+			</th>
+			{END law_term01_fieldheadercolumn}
+			{BEGIN law_term02_fieldheadercolumn}
+			<th class="{$law_term02_class}" {$law_term02_style}  data-field="law_term02">
+				{$label dtb_help law_term02}
+			</th>
+			{END law_term02_fieldheadercolumn}
+			{BEGIN law_term03_fieldheadercolumn}
+			<th class="{$law_term03_class}" {$law_term03_style}  data-field="law_term03">
+				{$label dtb_help law_term03}
+			</th>
+			{END law_term03_fieldheadercolumn}
+			{BEGIN law_term04_fieldheadercolumn}
+			<th class="{$law_term04_class}" {$law_term04_style}  data-field="law_term04">
+				{$label dtb_help law_term04}
+			</th>
+			{END law_term04_fieldheadercolumn}
+			{BEGIN law_term05_fieldheadercolumn}
+			<th class="{$law_term05_class}" {$law_term05_style}  data-field="law_term05">
+				{$label dtb_help law_term05}
+			</th>
+			{END law_term05_fieldheadercolumn}
+			{BEGIN law_term06_fieldheadercolumn}
+			<th class="{$law_term06_class}" {$law_term06_style}  data-field="law_term06">
+				{$label dtb_help law_term06}
+			</th>
+			{END law_term06_fieldheadercolumn}
+			{BEGIN law_term07_fieldheadercolumn}
+			<th class="{$law_term07_class}" {$law_term07_style}  data-field="law_term07">
+				{$label dtb_help law_term07}
+			</th>
+			{END law_term07_fieldheadercolumn}
+			{BEGIN law_term08_fieldheadercolumn}
+			<th class="{$law_term08_class}" {$law_term08_style}  data-field="law_term08">
+				{$label dtb_help law_term08}
+			</th>
+			{END law_term08_fieldheadercolumn}
+			{BEGIN law_term09_fieldheadercolumn}
+			<th class="{$law_term09_class}" {$law_term09_style}  data-field="law_term09">
+				{$label dtb_help law_term09}
+			</th>
+			{END law_term09_fieldheadercolumn}
+			{BEGIN law_term10_fieldheadercolumn}
+			<th class="{$law_term10_class}" {$law_term10_style}  data-field="law_term10">
+				{$label dtb_help law_term10}
+			</th>
+			{END law_term10_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_help create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_help update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN id_fieldcolumn}
+			<td  class="{$id_class}" {$id_style} {$recordattrs}>
+				{$id_value}
+			</td>
+			{END id_fieldcolumn}
+			{BEGIN law_country_id_fieldcolumn}
+			<td  class="{$law_country_id_class}" {$law_country_id_style} {$recordattrs}>
+				{$law_country_id_value}
+			</td>
+			{END law_country_id_fieldcolumn}
+			{BEGIN law_pref_fieldcolumn}
+			<td  class="{$law_pref_class}" {$law_pref_style} {$recordattrs}>
+				{$law_pref_value}
+			</td>
+			{END law_pref_fieldcolumn}
+			{BEGIN customer_agreement_fieldcolumn}
+			<td  class="{$customer_agreement_class}" {$customer_agreement_style} {$recordattrs}>
+				{$customer_agreement_value}
+			</td>
+			{END customer_agreement_fieldcolumn}
+			{BEGIN law_company_fieldcolumn}
+			<td  class="{$law_company_class}" {$law_company_style} {$recordattrs}>
+				{$law_company_value}
+			</td>
+			{END law_company_fieldcolumn}
+			{BEGIN law_manager_fieldcolumn}
+			<td  class="{$law_manager_class}" {$law_manager_style} {$recordattrs}>
+				{$law_manager_value}
+			</td>
+			{END law_manager_fieldcolumn}
+			{BEGIN law_zip01_fieldcolumn}
+			<td  class="{$law_zip01_class}" {$law_zip01_style} {$recordattrs}>
+				{$law_zip01_value}
+			</td>
+			{END law_zip01_fieldcolumn}
+			{BEGIN law_zip02_fieldcolumn}
+			<td  class="{$law_zip02_class}" {$law_zip02_style} {$recordattrs}>
+				{$law_zip02_value}
+			</td>
+			{END law_zip02_fieldcolumn}
+			{BEGIN law_zipcode_fieldcolumn}
+			<td  class="{$law_zipcode_class}" {$law_zipcode_style} {$recordattrs}>
+				{$law_zipcode_value}
+			</td>
+			{END law_zipcode_fieldcolumn}
+			{BEGIN law_addr01_fieldcolumn}
+			<td  class="{$law_addr01_class}" {$law_addr01_style} {$recordattrs}>
+				{$law_addr01_value}
+			</td>
+			{END law_addr01_fieldcolumn}
+			{BEGIN law_addr02_fieldcolumn}
+			<td  class="{$law_addr02_class}" {$law_addr02_style} {$recordattrs}>
+				{$law_addr02_value}
+			</td>
+			{END law_addr02_fieldcolumn}
+			{BEGIN law_tel01_fieldcolumn}
+			<td  class="{$law_tel01_class}" {$law_tel01_style} {$recordattrs}>
+				{$law_tel01_value}
+			</td>
+			{END law_tel01_fieldcolumn}
+			{BEGIN law_tel02_fieldcolumn}
+			<td  class="{$law_tel02_class}" {$law_tel02_style} {$recordattrs}>
+				{$law_tel02_value}
+			</td>
+			{END law_tel02_fieldcolumn}
+			{BEGIN law_tel03_fieldcolumn}
+			<td  class="{$law_tel03_class}" {$law_tel03_style} {$recordattrs}>
+				{$law_tel03_value}
+			</td>
+			{END law_tel03_fieldcolumn}
+			{BEGIN law_fax01_fieldcolumn}
+			<td  class="{$law_fax01_class}" {$law_fax01_style} {$recordattrs}>
+				{$law_fax01_value}
+			</td>
+			{END law_fax01_fieldcolumn}
+			{BEGIN law_fax02_fieldcolumn}
+			<td  class="{$law_fax02_class}" {$law_fax02_style} {$recordattrs}>
+				{$law_fax02_value}
+			</td>
+			{END law_fax02_fieldcolumn}
+			{BEGIN law_fax03_fieldcolumn}
+			<td  class="{$law_fax03_class}" {$law_fax03_style} {$recordattrs}>
+				{$law_fax03_value}
+			</td>
+			{END law_fax03_fieldcolumn}
+			{BEGIN law_email_fieldcolumn}
+			<td  class="{$law_email_class}" {$law_email_style} {$recordattrs}>
+				{$law_email_value}
+			</td>
+			{END law_email_fieldcolumn}
+			{BEGIN law_url_fieldcolumn}
+			<td  class="{$law_url_class}" {$law_url_style} {$recordattrs}>
+				{$law_url_value}
+			</td>
+			{END law_url_fieldcolumn}
+			{BEGIN law_term01_fieldcolumn}
+			<td  class="{$law_term01_class}" {$law_term01_style} {$recordattrs}>
+				{$law_term01_value}
+			</td>
+			{END law_term01_fieldcolumn}
+			{BEGIN law_term02_fieldcolumn}
+			<td  class="{$law_term02_class}" {$law_term02_style} {$recordattrs}>
+				{$law_term02_value}
+			</td>
+			{END law_term02_fieldcolumn}
+			{BEGIN law_term03_fieldcolumn}
+			<td  class="{$law_term03_class}" {$law_term03_style} {$recordattrs}>
+				{$law_term03_value}
+			</td>
+			{END law_term03_fieldcolumn}
+			{BEGIN law_term04_fieldcolumn}
+			<td  class="{$law_term04_class}" {$law_term04_style} {$recordattrs}>
+				{$law_term04_value}
+			</td>
+			{END law_term04_fieldcolumn}
+			{BEGIN law_term05_fieldcolumn}
+			<td  class="{$law_term05_class}" {$law_term05_style} {$recordattrs}>
+				{$law_term05_value}
+			</td>
+			{END law_term05_fieldcolumn}
+			{BEGIN law_term06_fieldcolumn}
+			<td  class="{$law_term06_class}" {$law_term06_style} {$recordattrs}>
+				{$law_term06_value}
+			</td>
+			{END law_term06_fieldcolumn}
+			{BEGIN law_term07_fieldcolumn}
+			<td  class="{$law_term07_class}" {$law_term07_style} {$recordattrs}>
+				{$law_term07_value}
+			</td>
+			{END law_term07_fieldcolumn}
+			{BEGIN law_term08_fieldcolumn}
+			<td  class="{$law_term08_class}" {$law_term08_style} {$recordattrs}>
+				{$law_term08_value}
+			</td>
+			{END law_term08_fieldcolumn}
+			{BEGIN law_term09_fieldcolumn}
+			<td  class="{$law_term09_class}" {$law_term09_style} {$recordattrs}>
+				{$law_term09_value}
+			</td>
+			{END law_term09_fieldcolumn}
+			{BEGIN law_term10_fieldcolumn}
+			<td  class="{$law_term10_class}" {$law_term10_style} {$recordattrs}>
+				{$law_term10_value}
+			</td>
+			{END law_term10_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

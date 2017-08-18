@@ -1,0 +1,357 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel dtb_block search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN block_id_fieldblock}		
+	<div class="container {$fielddispclass_block_id}" data-fieldname="block_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block block_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_block_id}
+			</div>
+			<div class="col-md-4" >
+				{$block_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$block_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END block_id_fieldblock}
+	{BEGIN device_type_id_fieldblock}		
+	<div class="container {$fielddispclass_device_type_id}" data-fieldname="device_type_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block device_type_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_device_type_id}
+			</div>
+			<div class="col-md-4" >
+				{$device_type_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$device_type_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END device_type_id_fieldblock}
+	{BEGIN block_name_fieldblock}		
+	<div class="container {$fielddispclass_block_name}" data-fieldname="block_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block block_name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_block_name}
+			</div>
+			<div class="col-md-4" >
+				{$block_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$block_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END block_name_fieldblock}
+	{BEGIN file_name_fieldblock}		
+	<div class="container {$fielddispclass_file_name}" data-fieldname="file_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block file_name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_file_name}
+			</div>
+			<div class="col-md-4" >
+				{$file_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$file_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END file_name_fieldblock}
+	{BEGIN create_date_fieldblock}		
+	<div class="container {$fielddispclass_create_date}" data-fieldname="create_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block create_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_create_date}
+			</div>
+			<div class="col-md-4" >
+				{$create_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$create_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END create_date_fieldblock}
+	{BEGIN update_date_fieldblock}		
+	<div class="container {$fielddispclass_update_date}" data-fieldname="update_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block update_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_update_date}
+			</div>
+			<div class="col-md-4" >
+				{$update_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$update_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END update_date_fieldblock}
+	{BEGIN logic_flg_fieldblock}		
+	<div class="container {$fielddispclass_logic_flg}" data-fieldname="logic_flg">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block logic_flg}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_logic_flg}
+			</div>
+			<div class="col-md-4" >
+				{$logic_flg_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$logic_flg_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END logic_flg_fieldblock}
+	{BEGIN deletable_flg_fieldblock}		
+	<div class="container {$fielddispclass_deletable_flg}" data-fieldname="deletable_flg">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label dtb_block deletable_flg}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_deletable_flg}
+			</div>
+			<div class="col-md-4" >
+				{$deletable_flg_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$deletable_flg_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END deletable_flg_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

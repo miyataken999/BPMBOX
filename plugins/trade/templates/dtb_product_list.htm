@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <META name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    <META name="GENERATOR" content="MSHTML 11.00.9600.18739">
+  </HEAD>
+  <BODY class="{$stylename} function-list" {$bodyattrs}>
+    {BEGIN body}
+      <STYLE>
+        {$containerCss}
+      </STYLE>
+      <DIV class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+        <DIV class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+          {BEGIN container_logo}
+            <DIV class="bs-sidebarlogo" data-container="logo" data-pageid="{$pageid}" {$logo_chiddenattr}>
+              {BEGIN logo_block}
+                <A class="navbar-brand" href="{$home_link}" data-brick="logo" data-pageid="{$pageid}" {$logo_hiddenattr}>
+                  {$logo}
+                </A>
+              {END logo_block}
+            </DIV>
+          {END container_logo}
+          {BEGIN container_hdr}
+            <DIV class="navbar-default clearfix" data-container="hdr" data-pageid="{$pageid}" {$hdr_chiddenattr}>
+              {BEGIN collapse_block}
+                <BUTTON class="navbar-toggle collapsed" type="button" data-brick="bsnavbarcollapse" data-pageid="{$pageid}" data-target=".bs-navcontrolled" data-runner-toggle="collapse" {$bsnavbarcollapse_hiddenattr}>
+                  <SPAN class="sr-only">
+                    Toggle navigation
+                  </SPAN>
+                  <SPAN class="icon-bar">
+                  </SPAN>
+                </BUTTON>
+              {END collapse_block}
+            </DIV>
+          {END container_hdr}
+          {BEGIN container_sidemenu}
+            <DIV class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" data-container="sidemenu" data-pageid="{$pageid}" {$sidemenu_chiddenattr}>
+              {BEGIN menu_block}
+                {$menu main}
+              {END menu_block}
+            </DIV>
+          {END container_sidemenu}
+          {BEGIN container_left}
+            <DIV class="sidebar-container" data-container="left" data-pageid="{$pageid}" {$left_chiddenattr}>
+              {BEGIN searchPanel}
+                <DIV class="searchOptions panel panel-primary searchPanelContainer" data-brick="searchpanel" data-pageid="{$pageid}" {$searchpanel_hiddenattr} {$srchOpt_attrs}>
+                  <!-- Search panel content -->
+                  <DIV class="panel-heading">
+                    <DIV class="btn-group" id="addSearchFieldButton{$id}">
+                      <BUTTON class="btn btn-default dropdown-toggle" id="showHideControlChooseMenu{$id}" aria-expanded="false" aria-haspopup="true" type="button" data-toggle="dropdown">
+                        Search in
+                        <SPAN class="caret">
+                        </SPAN>
+                      </BUTTON>
+                    </DIV>
+                    <DIV class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+                      <BUTTON class="btn btn-default dropdown-toggle" aria-expanded="false" aria-haspopup="true" type="button" data-toggle="dropdown">
+                        <SPAN class="glyphicon glyphicon glyphicon-option-vertical">
+                        </SPAN>
+                      </BUTTON>
+                      <UL class="dropdown-menu dropdown-left">
+                        <LI id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}>
+                          <A>
+                            オプションの表示
+                          </A>
+                        </LI>
+                        <LI class="divider" role="separator">
+                        </LI>
+                        <LI class="srchCritTop" style="display: none;">
+                          <A>
+                            <INPUT name="srchType{$id}" id="radioAll" type="radio" {$all_checkbox}>
+                            <LABEL for="radioAll">
+                              <SPAN class="glyphicon">
+                                &nbsp;
+                              </SPAN>
+                              all conditions
+                            </LABEL>
+                          </A>
+                        </LI>
+                        <LI class="srchCritTop" style="display: none;">
+                          <A>
+                            <INPUT name="srchType{$id}" id="radioAny" type="radio" {$any_checkbox}>
+                            <LABEL for="radioAny">
+                              <SPAN class="glyphicon">
+                                &nbsp;
+                              </SPAN>
+                              any condition
+                            </LABEL>
+                          </A>
+                        </LI>
+                        <LI class="divider" role="separator">
+                        </LI>
+                        <LI>
+                          <A class="close-button">
+                            <SPAN class="glyphicon glyphicon-remove">
+                              &nbsp;
+                            </SPAN>
+                            隠す：
+                          </A>
+                        </LI>
+                      </UL>
+                    </DIV>
+                  </DIV>
+                  <DIV class="panel-body controlsBlock" {$bottomSearchButt_attrs}>
+                    {BEGIN searchCtrlBlock}
+                      <DIV class="srchPanelRow form-group" {$filterRow_attrs}>
+                        <LABEL>
+                          {$fLabel}
+                        </LABEL>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype}
+                        </SPAN>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol}
+                        </SPAN>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1}
+                        </SPAN>
+                      </DIV>
+                    {END searchCtrlBlock}
+                  </DIV>
+                  <DIV class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+                    <BUTTON class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>
+                      検索
+                    </BUTTON>
+                    <BUTTON class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>
+                      全て表示
+                    </BUTTON>
+                  </DIV>
+                </DIV>
+              {END searchPanel}
+              {BEGIN filterPanel}
+                <DIV data-brick="filterpanel" data-pageid="{$pageid}" {$filterpanel_hiddenattr}>
+                  <BUTTON class="bs-hidden-xs bs-navcontrolled btn btn-info bs-togglebutton bottom-margin collapsed" type="button" data-target=".filterPanelContainer" data-runner-toggle="collapse">
+                    <SPAN class="glyphicon glyphicon-filter">
+                      <SPAN>
+                        Filter
+                      </SPAN>
+                    </SPAN>
+                  </BUTTON>
+                  <DIV class="bs-hidden-xs filterPanelContainer {$filterPanelStateClass}">
+                    {BEGIN filter_control_status}
+                      <DIV class="panel panel-info filter-field filter-status-container">
+                        <DIV class="panel-heading filter-expander">
+                          <SPAN class="filter-indicator glyphicon glyphicon-triangle-bottom">
+                          </SPAN>
+                          <INPUT name="selectAll" class="filter-selectAll-status" type="checkbox" {$selectAll_attrs_status}>
+                          {$label dtb_product status}
+                          {BEGIN clearLink_status}
+                            <A class="filter-clear filter-clear-status" href="#">
+                              解除
+                            </A>
+                          {END clearLink_status}
+                        </DIV>
+                        <UL class="list-group">
+                          {BEGIN filterCtrlBlock_status}
+                            <LI class="list-group-item filter-values filter-values-status {$collapsedClass_status} {$visibilityClass_status}">
+                              {$status_filter}
+                            </LI>
+                          {END filterCtrlBlock_status}
+                          {BEGIN filter_button_showmore_status}
+                            <LI class="list-group-item filter-show-more {$collapsedClass_status} {$showMoreBtnClass_status}">
+                              <A class="filter-show-more-link filterShowMore_status" href="#">
+                                {$show_n_more_status}
+                              </A>
+                            </LI>
+                          {END filter_button_showmore_status}
+                          {BEGIN filter_button_apply_status}
+                            <LI class="list-group-item filter-field-btn {$collapsedClass_status}">
+                              <A class="rnr-button filter-btn-apply filter-apply-status" href="#" {$filterbutton_attrs_status}>
+                                適用
+                              </A>
+                            </LI>
+                          {END filter_button_apply_status}
+                        </UL>
+                      </DIV>
+                    {END filter_control_status}
+                    {BEGIN filter_control_name}
+                      <DIV class="panel panel-info filter-field filter-name-container">
+                        <DIV class="panel-heading filter-expander">
+                          <SPAN class="filter-indicator glyphicon glyphicon-triangle-top">
+                          </SPAN>
+                          {$label dtb_product name}
+                          {BEGIN clearLink_name}
+                            <A class="filter-clear filter-clear-name" href="#">
+                              解除
+                            </A>
+                          {END clearLink_name}
+                        </DIV>
+                        <UL class="list-group">
+                          {BEGIN filterCtrlBlock_name}
+                            <LI class="list-group-item filter-values filter-values-name {$collapsedClass_name} {$visibilityClass_name}">
+                              {$name_filter}
+                            </LI>
+                          {END filterCtrlBlock_name}
+                          {BEGIN filter_button_showmore_name}
+                            <LI class="list-group-item filter-show-more {$collapsedClass_name} {$showMoreBtnClass_name}">
+                              <A class="filter-show-more-link filterShowMore_name" href="#">
+                                {$show_n_more_name}
+                              </A>
+                            </LI>
+                          {END filter_button_showmore_name}
+                        </UL>
+                      </DIV>
+                    {END filter_control_name}
+                    {BEGIN filter_control_del_flg}
+                      <DIV class="panel panel-info filter-field filter-del_flg-container">
+                        <DIV class="panel-heading filter-expander">
+                          <SPAN class="filter-indicator glyphicon glyphicon-triangle-top">
+                          </SPAN>
+                          {$label dtb_product del_flg}
+                          {BEGIN clearLink_del_flg}
+                            <A class="filter-clear filter-clear-del_flg" href="#">
+                              解除
+                            </A>
+                          {END clearLink_del_flg}
+                        </DIV>
+                        <UL class="list-group">
+                          {BEGIN filterCtrlBlock_del_flg}
+                            <LI class="list-group-item filter-values filter-values-del_flg {$collapsedClass_del_flg} {$visibilityClass_del_flg}">
+                              {$del_flg_filter}
+                            </LI>
+                          {END filterCtrlBlock_del_flg}
+                          {BEGIN filter_button_showmore_del_flg}
+                            <LI class="list-group-item filter-show-more {$collapsedClass_del_flg} {$showMoreBtnClass_del_flg}">
+                              <A class="filter-show-more-link filterShowMore_del_flg" href="#">
+                                {$show_n_more_del_flg}
+                              </A>
+                            </LI>
+                          {END filter_button_showmore_del_flg}
+                        </UL>
+                      </DIV>
+                    {END filter_control_del_flg}
+                  </DIV>
+                </DIV>
+              {END filterPanel}
+            </DIV>
+          {END container_left}
+        </DIV>
+      </DIV>
+      <DIV class="bs-wrapper">
+        <DIV class="bs-fixedheader" id="fixedheader{$id}">
+          {BEGIN container_menu}
+            <NAV class="navbar navbar-default bs-fullwidth-navbar" data-container="menu" data-pageid="{$pageid}" {$menu_chiddenattr}>
+              {BEGIN container_bc}
+                <DIV class="navbar-form navbar-left" data-container="bc" data-pageid="{$pageid}" {$bc_chiddenattr}>
+                  {BEGIN breadcrumbs}
+                    <OL class="breadcrumb">
+                      <LI>
+                        <A href="{$home_link}">
+                          <SPAN class="glyphicon glyphicon-home">
+                          </SPAN>
+                        </A>
+                        {$crumb_dropdown}
+                      </LI>
+                      {BEGIN crumb}
+                        <LI class="{$crumb_item_class}">
+                          {BEGIN crumb_title_link}
+                            <A {$crumb_attrs}>
+                              {$crumb_title}
+                            </A>
+                          {END crumb_title_link}
+                          {BEGIN crumb_title_span}
+                            <SPAN {$crumb_attrs}>
+                              {$crumb_title}
+                            </SPAN>
+                          {END crumb_title_span}
+                          {$crumb_dropdown}
+                        </LI>
+                      {END crumb}
+                    </OL>
+                  {END breadcrumbs}
+                </DIV>
+              {END container_bc}
+              {BEGIN container_menu_1}
+                <DIV class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" data-container="menu_1" data-pageid="{$pageid}" {$menu_1_chiddenattr}>
+                  {BEGIN container_more}
+                    <DIV class="navbar-right navbar-form" data-container="more" data-pageid="{$pageid}" {$more_chiddenattr}>
+                      {BEGIN more_list}
+                        <DIV class="btn-group bs-navsection" data-brick="morebutton" data-pageid="{$pageid}" {$morebutton_hiddenattr}>
+                          <BUTTON class="btn btn-default dropdown-toggle" aria-expanded="false" aria-haspopup="true" type="button" data-toggle="dropdown">
+                            <SPAN class="glyphicon glyphicon-cog">
+                            </SPAN>
+                            <SPAN class="caret">
+                            </SPAN>
+                          </BUTTON>
+                          <UL class="dropdown-menu">
+                            {BEGIN editselected_link}
+                              <LI class="massButton{$id} disabled">
+                                <A href="#" {$editselectedlink_attrs} {$editselectedlink_span}>
+                                  選択範囲を編集
+                                </A>
+                              </LI>
+                            {END editselected_link}
+                            {BEGIN exportselected_link}
+                              <LI class="massButton{$id} disabled">
+                                <A href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}>
+                                  選択対象のエクスポート
+                                </A>
+                              </LI>
+                            {END exportselected_link}
+                            {BEGIN deleteselected_link}
+                              <LI class="massButton{$id} disabled">
+                                <A href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>
+                                  選択対象の削除
+                                </A>
+                              </LI>
+                            {END deleteselected_link}
+                            <LI class="divider" role="separator">
+                            </LI>
+                            {BEGIN asearch_link}
+                              <LI>
+                                <A href="dtb_product_search.php" {$advsearchlink_attrs}>
+                                  詳細検索
+                                </A>
+                              </LI>
+                            {END asearch_link}
+                            {BEGIN searchPanelTopButtons}
+                              <LI>
+                                <A id="showOptPanel{$id}" href="#">
+                                  Show search panel
+                                </A>
+                              </LI>
+                            {END searchPanelTopButtons}
+                            <LI class="divider" role="separator">
+                            </LI>
+                            {BEGIN export_link}
+                              <LI>
+                                <A href="dtb_product_export.php" target="_blank" {$exportlink_attrs}>
+                                  結果のエクスポート
+                                </A>
+                              </LI>
+                            {END export_link}
+                            {BEGIN import_link}
+                              <LI>
+                                <A href="dtb_product_import.php?{$crosstable_attrs}" {$importlink_attrs}>
+                                  インポート
+                                </A>
+                              </LI>
+                            {END import_link}
+                          </UL>
+                        </DIV>
+                      {END more_list}
+                      {BEGIN security_block}
+                        <SPAN class="bs-navsection" id="login_block{$id}" data-brick="loggedas" data-pageid="{$pageid}" {$loggedas_hiddenattr}>
+                          {BEGIN guestloginbutton}
+                            <BUTTON class="btn btn-info" type="button" {$guestloginlink_attrs}>
+                              ログイン
+                            </BUTTON>
+                          {END guestloginbutton}
+                          {BEGIN loggedas_message}
+                            <SPAN class="dropdown">
+                              <BUTTON class="btn btn-info dropdown-toggle" aria-expanded="false" aria-haspopup="true" type="button" data-toggle="dropdown">
+                                <SPAN class="glyphicon glyphicon-user">
+                                </SPAN>
+                                {$username}
+                              </BUTTON>
+                              <UL class="dropdown-menu">
+                                {BEGIN logoutbutton}
+                                  <LI>
+                                    <A href="#" {$logoutlink_attrs}>
+                                      ログアウト
+                                    </A>
+                                  </LI>
+                                {END logoutbutton}
+                                {BEGIN adminarea_link}
+                                  <LI>
+                                    <A href="admin_rights_list.php" {$adminarealink_attrs}>
+                                      管理エリア
+                                    </A>
+                                  </LI>
+                                {END adminarea_link}
+                              </UL>
+                            </SPAN>
+                          {END loggedas_message}
+                        </SPAN>
+                      {END security_block}
+                    </DIV>
+                  {END container_more}
+                  {BEGIN container_more_1}
+                    <DIV class="navbar-right navbar-form" data-container="more_1" data-pageid="{$pageid}" {$more_1_chiddenattr}>
+                      {BEGIN searchform_block}
+                        <SPAN class="form-group" data-brick="search" data-pageid="{$pageid}" {$search_hiddenattr}>
+                          <DIV class="input-group">
+                            {BEGIN searchform_text}
+                              <INPUT class="form-control" type="search" size="25" {$searchfor_attrs}>
+                            {END searchform_text}
+                            <SPAN class="input-group-btn">
+                              {BEGIN searchform_showall}
+                                <BUTTON title="全て表示" class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>
+                                  <SPAN class="glyphicon glyphicon-remove">
+                                  </SPAN>
+                                </BUTTON>
+                              {END searchform_showall}
+                              {BEGIN searchform_search}
+                                <BUTTON class="btn btn-primary" {$searchbutton_attrs}>
+                                  <SPAN class="glyphicon glyphicon-search">
+                                  </SPAN>
+                                </BUTTON>
+                              {END searchform_search}
+                            </SPAN>
+                          </DIV>
+                        </SPAN>
+                      {END searchform_block}
+                    </DIV>
+                  {END container_more_1}
+                </DIV>
+              {END container_menu_1}
+            </NAV>
+          {END container_menu}
+        </DIV>
+        <DIV class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+          {$header}
+          <DIV class="bs-sidebar-screenbound">
+            {BEGIN container_masterinfo}
+              <DIV class=" " data-container="masterinfo" data-pageid="{$pageid}" {$masterinfo_chiddenattr}>
+                {BEGIN mastertable_block}
+                  <DIV class="panel panel-info table-panel">
+                    <DIV class="panel-heading">
+                      {$master_heading}
+                    </DIV>
+                    <DIV class="panel-body">
+                      {$showmasterfile}
+                    </DIV>
+                  </DIV>
+                {END mastertable_block}
+              </DIV>
+            {END container_masterinfo}
+            {BEGIN container_messagerow}
+              <DIV class=" " data-container="messagerow" data-pageid="{$pageid}" {$messagerow_chiddenattr}>
+                {BEGIN container_message}
+                  <DIV class="col-md-12" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+                    {BEGIN message_block}
+                      <DIV class="alert {$message_class}" role="alert" data-brick="message" data-pageid="{$pageid}" {$message_hiddenattr}>
+                        {$message}
+                      </DIV>
+                    {END message_block}
+                  </DIV>
+                {END container_message}
+              </DIV>
+            {END container_messagerow}
+            {BEGIN container_gridcontrols}
+              <DIV class="bs-navcontrolled bs-hidden-xs" data-container="gridcontrols" data-pageid="{$pageid}" {$gridcontrols_chiddenattr}>
+                {BEGIN container_add_delete}
+                  <DIV class="bottom-margin col-md-6" data-container="add_delete" data-pageid="{$pageid}" {$add_delete_chiddenattr}>
+                    {BEGIN newrecord_controls_block}
+                      {BEGIN add_link}
+                        <A class="btn btn-primary" type="button" data-brick="add" data-pageid="{$pageid}" {$add_hiddenattr} {$addlink_attrs}>
+                          追加
+                        </A>
+                      {END add_link}
+                      {BEGIN inlineadd_link}
+                        <BUTTON class="btn btn-primary" type="button" data-brick="add" data-pageid="{$pageid}" {$add_hiddenattr} {$inlineaddlink_attrs}>
+                          インライン追加
+                        </BUTTON>
+                      {END inlineadd_link}
+                    {END newrecord_controls_block}
+                    {BEGIN record_controls_block}
+                      <SPAN data-brick="recordcontrol" data-pageid="{$pageid}" {$recordcontrol_hiddenattr}>
+                        {BEGIN deleteselected_link}
+                          <BUTTON disabled class="btn btn-default" type="button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>
+                            削除
+                          </BUTTON>
+                        {END deleteselected_link}
+                        {BEGIN updateselected_link}
+                          <BUTTON disabled class="btn btn-default" type="button" {$updateselectedlink_attrs}>
+                            Update selected
+                          </BUTTON>
+                        {END updateselected_link}
+                        {BEGIN saveall_link}
+                          <BUTTON class="btn btn-primary" type="button" {$savealllink_attrs} {$savealllink_span}>
+                            全て保存
+                          </BUTTON>
+                        {END saveall_link}
+                        {BEGIN cancelall_link}
+                          <BUTTON class="btn btn-default" type="button" {$cancelalllink_attrs} {$cancelalllink_span}>
+                            キャンセル
+                          </BUTTON>
+                        {END cancelall_link}
+                        {$event dtb_product_snippet}
+                        <A class="rnr-button btn btn-default" id="New_Button" href="#" typeid="ib">
+                          音声翻訳
+                        </A>
+                        <A class="rnr-button btn btn-default" id="New_Button1" href="#" typeid="ib">
+                          画像認識
+                        </A>
+                        <DIV id="status">
+                        </DIV>
+                      </SPAN>
+                    {END record_controls_block}
+                  </DIV>
+                {END container_add_delete}
+                {BEGIN container_gridinfo}
+                  <DIV class="bottom-margin text-right col-md-6" data-container="gridinfo" data-pageid="{$pageid}" {$gridinfo_chiddenattr}>
+                    {BEGIN details_found}
+                      <SPAN class="form-inline form-inline-always" data-brick="details_found" data-pageid="{$pageid}" {$details_found_hiddenattr}>
+                        {$records_indicator}
+                        <SPAN>
+                          {BEGIN recordspp_block}
+                            {$recsPerPage}
+                          {END recordspp_block}
+                        </SPAN>
+                      </SPAN>
+                    {END details_found}
+                    {BEGIN print_friendly}
+                      <SPAN class="bs-printpanel" id="printpanelblock{$id}" data-brick="printpanel" data-pageid="{$pageid}" {$printpanel_hiddenattr}>
+                        <BUTTON title="印刷用ページ" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                          <SPAN class="glyphicon glyphicon-print">
+                          </SPAN>
+                          <SPAN class="caret">
+                          </SPAN>
+                        </BUTTON>
+                        <UL class="dropdown-menu pull-right">
+                          <LI>
+                            <DIV class="container-fluid" id="print_friendly_scope{$id}">
+                              <DIV class="row">
+                                <DIV class="col-md-4">
+                                  Scope:
+                                </DIV>
+                                {BEGIN print_friendly_all}
+                                  <DIV class="col-md-8">
+                                    <LABEL for="printAll{$id}">
+                                      <INPUT name="printScope" id="printAll{$id}" type="radio" data-href="dtb_product_print.php?all=1&amp;{$crosstable_attrs}">
+                                      Print all pages
+                                    </LABEL>
+                                  </DIV>
+                                {END print_friendly_all}
+                              </DIV>
+                              <DIV class="row">
+                                <DIV class="col-md-4">
+                                  &nbsp;
+                                </DIV>
+                                <DIV class="col-md-8">
+                                  <LABEL for="printPage{$id}">
+                                    <INPUT name="printScope" id="printPage{$id}" type="radio" checked data-href="dtb_product_print.php?{$crosstable_attrs}">
+                                    Print this page
+                                  </LABEL>
+                                </DIV>
+                              </DIV>
+                              <DIV class="row">
+                                <DIV class="col-md-4">
+                                  &nbsp;
+                                </DIV>
+                                <DIV class="col-md-8">
+                                  <LABEL style="color: gray;" 
+  for="printSelection{$id}">
+                                    <INPUT name="printScope" disabled="disabled" id="printSelection{$id}" type="radio">
+                                    Print selected
+                                  </LABEL>
+                                </DIV>
+                              </DIV>
+                            </DIV>
+                          </LI>
+                          <LI class="divider" role="separator">
+                          </LI>
+                          <LI>
+                            {BEGIN print_details}
+                              <DIV class="rnr-printdetails">
+                                <LABEL for="printDetailsToggler{$id}">
+                                  <INPUT id="printDetailsToggler{$id}" type="checkbox">
+                                  Print details
+                                </LABEL>
+                                <DIV class="rnr-printdetailstables" id="printdetailstables{$id}" style="display: none;">
+                                  {BEGIN print_details_dtb_product_category}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_product_category{$id}">
+                                        <INPUT id="printDetailsdtb_product_category{$id}" type="checkbox" checked value="dtb_product_category">
+                                        商品カテゴリー
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_product_category}
+                                  {BEGIN print_details_dtb_product_class}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_product_class{$id}">
+                                        <INPUT id="printDetailsdtb_product_class{$id}" type="checkbox" checked value="dtb_product_class">
+                                        商品分類
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_product_class}
+                                  {BEGIN print_details_dtb_product_tag}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_product_tag{$id}">
+                                        <INPUT id="printDetailsdtb_product_tag{$id}" type="checkbox" checked value="dtb_product_tag">
+                                        商品タグ
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_product_tag}
+                                  {BEGIN print_details_dtb_product_image}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_product_image{$id}">
+                                        <INPUT id="printDetailsdtb_product_image{$id}" type="checkbox" checked value="dtb_product_image">
+                                        商品画像
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_product_image}
+                                  {BEGIN print_details_dtb_tax_rule}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_tax_rule{$id}">
+                                        <INPUT id="printDetailsdtb_tax_rule{$id}" type="checkbox" checked value="dtb_tax_rule">
+                                        税規則
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_tax_rule}
+                                  {BEGIN print_details_dtb_order_detail}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_order_detail{$id}">
+                                        <INPUT id="printDetailsdtb_order_detail{$id}" type="checkbox" checked value="dtb_order_detail">
+                                        注文詳細
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_order_detail}
+                                  {BEGIN print_details_dtb_customer_favorite_product}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_customer_favorite_product{$id}">
+                                        <INPUT id="printDetailsdtb_customer_favorite_product{$id}" type="checkbox" checked value="dtb_customer_favorite_product">
+                                        カスタマーお気に入り製品
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_customer_favorite_product}
+                                  {BEGIN print_details_dtb_shipment_item}
+                                    <DIV class="rnr-printdetialstable">
+                                      <LABEL for="printDetailsdtb_shipment_item{$id}">
+                                        <INPUT id="printDetailsdtb_shipment_item{$id}" type="checkbox" checked value="dtb_shipment_item">
+                                        配送商品
+                                      </LABEL>
+                                    </DIV>
+                                  {END print_details_dtb_shipment_item}
+                                </DIV>
+                              </DIV>
+                            {END print_details}
+                          </LI>
+                          <LI class="divider" role="separator">
+                          </LI>
+                          <LI>
+                            <DIV class="rnr-printdetails">
+                              <LABEL for="printPerPage{$id}">
+                                １頁あたり表示数:
+                              </LABEL>
+                              <INPUT class="rnr-printrecspp" id="printPerPage{$id}" type="number" value="{$print_recspp}">
+                            </DIV>
+                          </LI>
+                          <LI class="divider" role="separator">
+                          </LI>
+                          <LI class="rnr-printbutton">
+                            <BUTTON class="btn btn-primary" id="print_friendly_button{$id}" type="button">
+                              Print
+                            </BUTTON>
+                          </LI>
+                        </UL>
+                      </SPAN>
+                    {END print_friendly}
+                    {BEGIN field_hide_panel}
+                      <DIV title="Show/hide columns" class="keep-open btn-group" id="fildhidepanel{$id}" data-brick="bsfieldhidepanel" data-pageid="{$pageid}" {$bsfieldhidepanel_hiddenattr}>
+                        <BUTTON class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                          <I class="glyphicon glyphicon-th-list">
+                          </I>
+                          <SPAN class="caret">
+                          </SPAN>
+                        </BUTTON>
+                        <UL class="dropdown-menu dropdown-left" role="menu">
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_product_id" type="checkbox" 
+  checked="checked" value="1" data-field="product_id">
+                                  <SPAN>
+                                    {$label dtb_product product_id}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_creator_id" type="checkbox" 
+  checked="checked" value="1" data-field="creator_id">
+                                  <SPAN>
+                                    {$label dtb_product creator_id}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_status" type="checkbox" checked="checked" 
+  value="1" data-field="status">
+                                  <SPAN>
+                                    {$label dtb_product status}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_name" type="checkbox" checked="checked" 
+  value="1" data-field="name">
+                                  <SPAN>
+                                    {$label dtb_product name}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_note" type="checkbox" checked="checked" 
+  value="1" data-field="note">
+                                  <SPAN>
+                                    {$label dtb_product note}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_description_list" type="checkbox" 
+  checked="checked" value="1" data-field="description_list">
+                                  <SPAN>
+                                    {$label dtb_product description_list}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_description_detail" type="checkbox" 
+  checked="checked" value="1" data-field="description_detail">
+                                  <SPAN>
+                                    {$label dtb_product description_detail}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_search_word" type="checkbox" 
+  checked="checked" value="1" data-field="search_word">
+                                  <SPAN>
+                                    {$label dtb_product search_word}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_free_area" type="checkbox" 
+  checked="checked" value="1" data-field="free_area">
+                                  <SPAN>
+                                    {$label dtb_product free_area}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_del_flg" type="checkbox" checked="checked" 
+  value="1" data-field="del_flg">
+                                  <SPAN>
+                                    {$label dtb_product del_flg}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_create_date" type="checkbox" 
+  checked="checked" value="1" data-field="create_date">
+                                  <SPAN>
+                                    {$label dtb_product create_date}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                          <LI>
+                            <A>
+                              <DIV class="checkbox">
+                                <LABEL>
+                                  <INPUT id="hide_update_date" type="checkbox" 
+  checked="checked" value="1" data-field="update_date">
+                                  <SPAN>
+                                    {$label dtb_product update_date}
+                                  </SPAN>
+                                </LABEL>
+                              </DIV>
+                            </A>
+                          </LI>
+                        </UL>
+                      </DIV>
+                    {END field_hide_panel}
+                  </DIV>
+                {END container_gridinfo}
+                {BEGIN container_gridinfo_sort}
+                  <DIV class="bottom-margin text-right col-md-12" data-container="gridinfo_sort" data-pageid="{$pageid}" {$gridinfo_sort_chiddenattr}>
+                    {BEGIN reorder_records}
+                      <DIV class="form-inline sortby-ctrl" data-brick="reorder_records" data-pageid="{$pageid}" {$reorder_records_hiddenattr}>
+                        Sort by&nbsp;{$sortByDropdown}
+                      </DIV>
+                    {END reorder_records}
+                  </DIV>
+                {END container_gridinfo_sort}
+              </DIV>
+            {END container_gridcontrols}
+          </DIV>
+          <DIV>
+          </DIV>
+          <DIV class="bs-sidebar-screenbound bs-minwidth">
+            {BEGIN container_center}
+              <DIV class=" " data-container="center" data-pageid="{$pageid}" {$center_chiddenattr}>
+                {BEGIN container_grid}
+                  <DIV class="bs-grid" data-container="grid" data-pageid="{$pageid}" {$grid_chiddenattr}>
+                    {BEGIN grid_block}
+                      <STYLE>
+                        .bs-gridcell[data-field=product_id]:before {
+                        content: "{$label dtb_product product_id}";
+                        }
+                        .bs-gridcell[data-field=creator_id]:before {
+                        content: "{$label dtb_product creator_id}";
+                        }
+                        .bs-gridcell[data-field=status]:before {
+                        content: "{$label dtb_product status}";
+                        }
+                        .bs-gridcell[data-field=name]:before {
+                        content: "{$label dtb_product name}";
+                        }
+                        .bs-gridcell[data-field=note]:before {
+                        content: "{$label dtb_product note}";
+                        }
+                        .bs-gridcell[data-field=description_list]:before {
+                        content: "{$label dtb_product description_list}";
+                        }
+                        .bs-gridcell[data-field=description_detail]:before {
+                        content: "{$label dtb_product description_detail}";
+                        }
+                        .bs-gridcell[data-field=search_word]:before {
+                        content: "{$label dtb_product search_word}";
+                        }
+                        .bs-gridcell[data-field=free_area]:before {
+                        content: "{$label dtb_product free_area}";
+                        }
+                        .bs-gridcell[data-field=del_flg]:before {
+                        content: "{$label dtb_product del_flg}";
+                        }
+                        .bs-gridcell[data-field=create_date]:before {
+                        content: "{$label dtb_product create_date}";
+                        }
+                        .bs-gridcell[data-field=update_date]:before {
+                        content: "{$label dtb_product update_date}";
+                        }
+                      </STYLE>
+                      <TABLE class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" data-brick="grid" data-pageid="{$pageid}" {$grid_hiddenattr}>
+                        <THEAD>
+                          {BEGIN grid_header}
+                            <TR class="rnr-toprow {$gridHeader_class}">
+                              {BEGIN record_header}
+                                {BEGIN listIcons_column}
+                                  <TH ieditcont="all">
+                                    &nbsp;
+                                  </TH>
+                                {END listIcons_column}
+                                {BEGIN checkbox_column}
+                                  <TH>
+                                    <INPUT type="checkbox" {$checkboxheader_attrs}>
+                                  </TH>
+                                {END checkbox_column}
+                                {BEGIN dtb_product_dtable_column}
+                                  <TH>
+                                    &nbsp;
+                                  </TH>
+                                {END dtb_product_dtable_column}
+                                {BEGIN product_id_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$product_id_class}" data-field="product_id">
+                                    {BEGIN product_id_fieldheader}
+                                      <SPAN {$product_id_orderlinkattrs}>
+                                        {$label dtb_product product_id}
+                                      </SPAN>
+                                    {END product_id_fieldheader}
+                                  </TH>
+                                {END product_id_fieldheadercolumn}
+                                {BEGIN creator_id_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$creator_id_class}" data-field="creator_id">
+                                    {BEGIN creator_id_fieldheader}
+                                      <SPAN {$creator_id_orderlinkattrs}>
+                                        {$label dtb_product creator_id}
+                                      </SPAN>
+                                    {END creator_id_fieldheader}
+                                  </TH>
+                                {END creator_id_fieldheadercolumn}
+                                {BEGIN status_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$status_class}" data-field="status">
+                                    {BEGIN status_fieldheader}
+                                      <SPAN {$status_orderlinkattrs}>
+                                        {$label dtb_product status}
+                                      </SPAN>
+                                    {END status_fieldheader}
+                                  </TH>
+                                {END status_fieldheadercolumn}
+                                {BEGIN name_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$name_class}" data-field="name">
+                                    {BEGIN name_fieldheader}
+                                      <SPAN {$name_orderlinkattrs}>
+                                        {$label dtb_product name}
+                                      </SPAN>
+                                    {END name_fieldheader}
+                                  </TH>
+                                {END name_fieldheadercolumn}
+                                {BEGIN note_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$note_class}" data-field="note">
+                                    {BEGIN note_fieldheader}
+                                      <SPAN {$note_orderlinkattrs}>
+                                        {$label dtb_product note}
+                                      </SPAN>
+                                    {END note_fieldheader}
+                                  </TH>
+                                {END note_fieldheadercolumn}
+                                {BEGIN description_list_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$description_list_class}" data-field="description_list">
+                                    {BEGIN description_list_fieldheader}
+                                      <SPAN {$description_list_orderlinkattrs}>
+                                        {$label dtb_product description_list}
+                                      </SPAN>
+                                    {END description_list_fieldheader}
+                                  </TH>
+                                {END description_list_fieldheadercolumn}
+                                {BEGIN description_detail_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$description_detail_class}" data-field="description_detail">
+                                    {BEGIN description_detail_fieldheader}
+                                      <SPAN {$description_detail_orderlinkattrs}>
+                                        {$label dtb_product description_detail}
+                                      </SPAN>
+                                    {END description_detail_fieldheader}
+                                  </TH>
+                                {END description_detail_fieldheadercolumn}
+                                {BEGIN search_word_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$search_word_class}" data-field="search_word">
+                                    {BEGIN search_word_fieldheader}
+                                      <SPAN {$search_word_orderlinkattrs}>
+                                        {$label dtb_product search_word}
+                                      </SPAN>
+                                    {END search_word_fieldheader}
+                                  </TH>
+                                {END search_word_fieldheadercolumn}
+                                {BEGIN free_area_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$free_area_class}" data-field="free_area">
+                                    {BEGIN free_area_fieldheader}
+                                      <SPAN {$free_area_orderlinkattrs}>
+                                        {$label dtb_product free_area}
+                                      </SPAN>
+                                    {END free_area_fieldheader}
+                                  </TH>
+                                {END free_area_fieldheadercolumn}
+                                {BEGIN del_flg_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$del_flg_class}" data-field="del_flg">
+                                    {BEGIN del_flg_fieldheader}
+                                      <SPAN {$del_flg_orderlinkattrs}>
+                                        {$label dtb_product del_flg}
+                                      </SPAN>
+                                    {END del_flg_fieldheader}
+                                  </TH>
+                                {END del_flg_fieldheadercolumn}
+                                {BEGIN create_date_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$create_date_class}" data-field="create_date">
+                                    {BEGIN create_date_fieldheader}
+                                      <SPAN {$create_date_orderlinkattrs}>
+                                        {$label dtb_product create_date}
+                                      </SPAN>
+                                    {END create_date_fieldheader}
+                                  </TH>
+                                {END create_date_fieldheadercolumn}
+                                {BEGIN update_date_fieldheadercolumn}
+                                  <TH class="rnr-gridfieldlabel {$update_date_class}" data-field="update_date">
+                                    {BEGIN update_date_fieldheader}
+                                      <SPAN {$update_date_orderlinkattrs}>
+                                        {$label dtb_product update_date}
+                                      </SPAN>
+                                    {END update_date_fieldheader}
+                                  </TH>
+                                {END update_date_fieldheadercolumn}
+                                {BEGIN endrecordheader_block}
+                                  <TH class="rnr-cs">
+                                    &nbsp;
+                                  </TH>
+                                {END endrecordheader_block}
+                              {END record_header}
+                            </TR>
+                          {END grid_header}
+                        </THEAD>
+                        <TBODY>
+                          {BEGIN grid_row}
+                            <TR class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+                              {BEGIN grid_record}
+                                {BEGIN listIcons_column}
+                                  <TD class="bs-gridicons" ieditcont="all" {$rowstyle} {$recordattrs}>
+                                    {BEGIN edit_column}
+                                      {BEGIN edit_link}
+                                        <A title="編集" class="glyphicon glyphicon-pencil" {$editlink_attrs}>
+                                        </A>
+                                      {END edit_link}
+                                    {END edit_column}
+                                    {BEGIN inlineedit_column}
+                                      {BEGIN inlineedit_link}
+                                        <A title="編集" class="glyphicon glyphicon-edit" {$inlineeditlink_attrs}>
+                                        </A>
+                                      {END inlineedit_link}
+                                    {END inlineedit_column}
+                                    {BEGIN copy_column}
+                                      {BEGIN copy_link}
+                                        <A title="コピー" class="glyphicon glyphicon-duplicate" {$copylink_attrs}>
+                                        </A>
+                                      {END copy_link}
+                                    {END copy_column}
+                                    {BEGIN view_column}
+                                      {BEGIN view_link}
+                                        <A title="表示" class="glyphicon glyphicon-search" {$viewlink_attrs}>
+                                        </A>
+                                      {END view_link}
+                                    {END view_column}
+                                  </TD>
+                                {END listIcons_column}
+                                {BEGIN checkbox_column}
+                                  <TD class="bs-gridcheckbox" ieditcont="checkBox" {$rowstyle} {$recordattrs}>
+                                    {BEGIN checkbox}
+                                      <INPUT type="checkbox" {$checkbox_attrs}>
+                                    {END checkbox}
+                                  </TD>
+                                {END checkbox_column}
+                                {BEGIN dtb_product_dtable_column}
+                                  <TD class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+                                    {BEGIN dtables_link}
+                                      <A title="Show details" class="glyphicon glyphicon-th-list {$dtables_link_class}" {$dtables_link_attrs}>
+                                      </A>
+                                      {BEGIN dtb_product_category_childcount}
+                                        <A title="商品カテゴリー" class="{$dtb_product_category_dlink_class}" {$dtb_product_category_link_attrs}>
+                                          <SPAN class="details-badge badge dtb_product_category_badge" {$dtb_product_category_childnumber_attr}>
+                                            {$dtb_product_category_childnumber}
+                                          </SPAN>
+                                        </A>
+                                      {END dtb_product_category_childcount}
+                                      {BEGIN dtb_product_class_childcount}
+                                        <A title="商品分類" class="{$dtb_product_class_dlink_class}" {$dtb_product_class_link_attrs}>
+                                          <SPAN class="details-badge badge dtb_product_class_badge" {$dtb_product_class_childnumber_attr}>
+                                            {$dtb_product_class_childnumber}
+                                          </SPAN>
+                                        </A>
+                                      {END dtb_product_class_childcount}
+                                      {BEGIN dtb_product_image_childcount}
+                                        <A title="商品画像" class="{$dtb_product_image_dlink_class}" {$dtb_product_image_link_attrs}>
+                                          <SPAN class="details-badge badge dtb_product_image_badge" {$dtb_product_image_childnumber_attr}>
+                                            {$dtb_product_image_childnumber}
+                                          </SPAN>
+                                        </A>
+                                      {END dtb_product_image_childcount}
+                                      {BEGIN dtb_customer_favorite_product_childcount}
+                                        <A title="カスタマーお気に入り製品" class="{$dtb_customer_favorite_product_dlink_class}" {$dtb_customer_favorite_product_link_attrs}>
+                                          <SPAN class="details-badge badge dtb_customer_favorite_product_badge" {$dtb_customer_favorite_product_childnumber_attr}>
+                                            {$dtb_customer_favorite_product_childnumber}
+                                          </SPAN>
+                                        </A>
+                                      {END dtb_customer_favorite_product_childcount}
+                                      {BEGIN dtb_shipment_item_childcount}
+                                        <A title="配送商品" class="{$dtb_shipment_item_dlink_class}" {$dtb_shipment_item_link_attrs}>
+                                          <SPAN class="details-badge badge dtb_shipment_item_badge" {$dtb_shipment_item_childnumber_attr}>
+                                            {$dtb_shipment_item_childnumber}
+                                          </SPAN>
+                                        </A>
+                                      {END dtb_shipment_item_childcount}
+                                    {END dtables_link}
+                                  </TD>
+                                {END dtb_product_dtable_column}
+                                {BEGIN product_id_fieldcolumn}
+                                  <TD class="bs-gridcell {$product_id_class}" data-field="product_id" {$rowstyle} {$recordattrs}>
+                                    {$product_id_value}
+                                  </TD>
+                                {END product_id_fieldcolumn}
+                                {BEGIN creator_id_fieldcolumn}
+                                  <TD class="bs-gridcell {$creator_id_class}" data-field="creator_id" {$rowstyle} {$recordattrs}>
+                                    {$creator_id_value}
+                                  </TD>
+                                {END creator_id_fieldcolumn}
+                                {BEGIN status_fieldcolumn}
+                                  <TD class="bs-gridcell {$status_class}" data-field="status" {$rowstyle} {$recordattrs}>
+                                    {$status_value}
+                                  </TD>
+                                {END status_fieldcolumn}
+                                {BEGIN name_fieldcolumn}
+                                  <TD class="bs-gridcell {$name_class}" data-field="name" {$rowstyle} {$recordattrs}>
+                                    {$name_value}
+                                  </TD>
+                                {END name_fieldcolumn}
+                                {BEGIN note_fieldcolumn}
+                                  <TD class="bs-gridcell {$note_class}" data-field="note" {$rowstyle} {$recordattrs}>
+                                    {$note_value}
+                                  </TD>
+                                {END note_fieldcolumn}
+                                {BEGIN description_list_fieldcolumn}
+                                  <TD class="bs-gridcell {$description_list_class}" data-field="description_list" {$rowstyle} {$recordattrs}>
+                                    {$description_list_value}
+                                  </TD>
+                                {END description_list_fieldcolumn}
+                                {BEGIN description_detail_fieldcolumn}
+                                  <TD class="bs-gridcell {$description_detail_class}" data-field="description_detail" {$rowstyle} {$recordattrs}>
+                                    {$description_detail_value}
+                                  </TD>
+                                {END description_detail_fieldcolumn}
+                                {BEGIN search_word_fieldcolumn}
+                                  <TD class="bs-gridcell {$search_word_class}" data-field="search_word" {$rowstyle} {$recordattrs}>
+                                    {$search_word_value}
+                                  </TD>
+                                {END search_word_fieldcolumn}
+                                {BEGIN free_area_fieldcolumn}
+                                  <TD class="bs-gridcell {$free_area_class}" data-field="free_area" {$rowstyle} {$recordattrs}>
+                                    {$free_area_value}
+                                  </TD>
+                                {END free_area_fieldcolumn}
+                                {BEGIN del_flg_fieldcolumn}
+                                  <TD class="bs-gridcell {$del_flg_class}" data-field="del_flg" {$rowstyle} {$recordattrs}>
+                                    {$del_flg_value}
+                                  </TD>
+                                {END del_flg_fieldcolumn}
+                                {BEGIN create_date_fieldcolumn}
+                                  <TD class="bs-gridcell {$create_date_class}" data-field="create_date" {$rowstyle} {$recordattrs}>
+                                    {$create_date_value}
+                                  </TD>
+                                {END create_date_fieldcolumn}
+                                {BEGIN update_date_fieldcolumn}
+                                  <TD class="bs-gridcell {$update_date_class}" data-field="update_date" {$rowstyle} {$recordattrs}>
+                                    {$update_date_value}
+                                  </TD>
+                                {END update_date_fieldcolumn}
+                                {BEGIN endrecord_block}
+                                  <TD class="rnr-cs" {$endrecordblock_attrs}>
+                                    &nbsp;
+                                  </TD>
+                                {END endrecord_block}
+                              {END grid_record}
+                            </TR>
+                          {END grid_row}
+                        </TBODY>
+                        <TFOOT>
+                        </TFOOT>
+                      </TABLE>
+                    {END grid_block}
+                  </DIV>
+                {END container_grid}
+              </DIV>
+            {END container_center}
+            {BEGIN container_pagination}
+              <DIV class="text-center col-md-12" data-container="pagination" data-pageid="{$pageid}" {$pagination_chiddenattr}>
+                {BEGIN pagination_block}
+                  <DIV data-brick="pagination" data-pageid="{$pageid}" {$pagination_hiddenattr}>
+                    {$pagination}
+                  </DIV>
+                {END pagination_block}
+              </DIV>
+            {END container_pagination}
+          </DIV>
+        </DIV>
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

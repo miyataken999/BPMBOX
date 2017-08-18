@@ -1,0 +1,71 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+
+<div class="bs-gridintab-container">
+
+
+
+
+
+
+
+{BEGIN details_dtb_product_class}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">商品分類
+		<span>
+{BEGIN details_inlineadd_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_product_class_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_product_class_link}		
+{BEGIN details_add_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_product_class_attrs}>追加</button>
+{END details_add_dtb_product_class_link}
+{BEGIN details_edit_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_product_class_attrs}>編集</button>
+{END details_edit_dtb_product_class_link}
+{BEGIN details_updateselected_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_product_class_attrs}>Update selected</button>
+{END details_updateselected_dtb_product_class_link}
+
+
+{BEGIN details_delete_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_product_class_attrs}>削除</button>
+{END details_delete_dtb_product_class_link}
+
+{BEGIN saveall_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_dtb_product_class_attrs} {$savealllink_dtb_product_class_span}>全て保存</button>
+{END saveall_dtb_product_class_link}
+{BEGIN cancelall_dtb_product_class_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_dtb_product_class_attrs} {$cancelalllink_dtb_product_class_span}>キャンセル</button>
+{END cancelall_dtb_product_class_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_product_class}
+</div>
+</div>
+</div>
+{END details_dtb_product_class}
+	
+	
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

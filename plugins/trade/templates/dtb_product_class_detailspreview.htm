@@ -1,0 +1,77 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$product_class_id_class}">{$label dtb_product_class product_class_id}</th>
+			<th class="{$product_id_class}">{$label dtb_product_class product_id}</th>
+			<th class="{$product_type_id_class}">{$label dtb_product_class product_type_id}</th>
+			<th class="{$class_category_id1_class}">{$label dtb_product_class class_category_id1}</th>
+			<th class="{$class_category_id2_class}">{$label dtb_product_class class_category_id2}</th>
+			<th class="{$delivery_date_id_class}">{$label dtb_product_class delivery_date_id}</th>
+			<th class="{$creator_id_class}">{$label dtb_product_class creator_id}</th>
+			<th class="{$product_code_class}">{$label dtb_product_class product_code}</th>
+			<th class="{$stock_class}">{$label dtb_product_class stock}</th>
+			<th class="{$stock_unlimited_class}">{$label dtb_product_class stock_unlimited}</th>
+			<th class="{$sale_limit_class}">{$label dtb_product_class sale_limit}</th>
+			<th class="{$price01_class}">{$label dtb_product_class price01}</th>
+			<th class="{$price02_class}">{$label dtb_product_class price02}</th>
+			<th class="{$delivery_fee_class}">{$label dtb_product_class delivery_fee}</th>
+			<th class="{$create_date_class}">{$label dtb_product_class create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_product_class update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_product_class del_flg}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$product_class_id_class}">{$product_class_id_value}</td>
+			<td class="{$product_id_class}">{$product_id_value}</td>
+			<td class="{$product_type_id_class}">{$product_type_id_value}</td>
+			<td class="{$class_category_id1_class}">{$class_category_id1_value}</td>
+			<td class="{$class_category_id2_class}">{$class_category_id2_value}</td>
+			<td class="{$delivery_date_id_class}">{$delivery_date_id_value}</td>
+			<td class="{$creator_id_class}">{$creator_id_value}</td>
+			<td class="{$product_code_class}">{$product_code_value}</td>
+			<td class="{$stock_class}">{$stock_value}</td>
+			<td class="{$stock_unlimited_class}">{$stock_unlimited_value}</td>
+			<td class="{$sale_limit_class}">{$sale_limit_value}</td>
+			<td class="{$price01_class}">{$price01_value}</td>
+			<td class="{$price02_class}">{$price02_value}</td>
+			<td class="{$delivery_fee_class}">{$delivery_fee_value}</td>
+			<td class="{$create_date_class}">{$create_date_value}</td>
+			<td class="{$update_date_class}">{$update_date_value}</td>
+			<td class="{$del_flg_class}">{$del_flg_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

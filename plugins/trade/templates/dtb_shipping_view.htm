@@ -1,0 +1,653 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel dtb_shipping view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN shipping_country_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_country_id} bs-viewform-group" data-fieldname="shipping_country_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_country_id}">
+			{$label dtb_shipping shipping_country_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_country_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_country_id_fieldblock}
+	{BEGIN shipping_pref_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_pref} bs-viewform-group" data-fieldname="shipping_pref">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_pref}">
+			{$label dtb_shipping shipping_pref}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_pref_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_pref_fieldblock}
+	{BEGIN order_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_order_id} bs-viewform-group" data-fieldname="order_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_order_id}">
+			{$label dtb_shipping order_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$order_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END order_id_fieldblock}
+	{BEGIN delivery_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_delivery_id} bs-viewform-group" data-fieldname="delivery_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_delivery_id}">
+			{$label dtb_shipping delivery_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$delivery_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END delivery_id_fieldblock}
+	{BEGIN time_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_time_id} bs-viewform-group" data-fieldname="time_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_time_id}">
+			{$label dtb_shipping time_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$time_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END time_id_fieldblock}
+	{BEGIN fee_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_fee_id} bs-viewform-group" data-fieldname="fee_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_fee_id}">
+			{$label dtb_shipping fee_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$fee_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END fee_id_fieldblock}
+	{BEGIN shipping_name01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_name01} bs-viewform-group" data-fieldname="shipping_name01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_name01}">
+			{$label dtb_shipping shipping_name01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_name01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_name01_fieldblock}
+	{BEGIN shipping_name02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_name02} bs-viewform-group" data-fieldname="shipping_name02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_name02}">
+			{$label dtb_shipping shipping_name02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_name02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_name02_fieldblock}
+	{BEGIN shipping_kana01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_kana01} bs-viewform-group" data-fieldname="shipping_kana01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_kana01}">
+			{$label dtb_shipping shipping_kana01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_kana01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_kana01_fieldblock}
+	{BEGIN shipping_kana02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_kana02} bs-viewform-group" data-fieldname="shipping_kana02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_kana02}">
+			{$label dtb_shipping shipping_kana02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_kana02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_kana02_fieldblock}
+	{BEGIN shipping_company_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_company_name} bs-viewform-group" data-fieldname="shipping_company_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_company_name}">
+			{$label dtb_shipping shipping_company_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_company_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_company_name_fieldblock}
+	{BEGIN shipping_tel01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_tel01} bs-viewform-group" data-fieldname="shipping_tel01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_tel01}">
+			{$label dtb_shipping shipping_tel01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_tel01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_tel01_fieldblock}
+	{BEGIN shipping_tel02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_tel02} bs-viewform-group" data-fieldname="shipping_tel02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_tel02}">
+			{$label dtb_shipping shipping_tel02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_tel02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_tel02_fieldblock}
+	{BEGIN shipping_tel03_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_tel03} bs-viewform-group" data-fieldname="shipping_tel03">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_tel03}">
+			{$label dtb_shipping shipping_tel03}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_tel03_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_tel03_fieldblock}
+	{BEGIN shipping_fax01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_fax01} bs-viewform-group" data-fieldname="shipping_fax01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_fax01}">
+			{$label dtb_shipping shipping_fax01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_fax01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_fax01_fieldblock}
+	{BEGIN shipping_fax02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_fax02} bs-viewform-group" data-fieldname="shipping_fax02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_fax02}">
+			{$label dtb_shipping shipping_fax02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_fax02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_fax02_fieldblock}
+	{BEGIN shipping_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_id} bs-viewform-group" data-fieldname="shipping_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_id}">
+			{$label dtb_shipping shipping_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_id_fieldblock}
+	{BEGIN shipping_zip01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_zip01} bs-viewform-group" data-fieldname="shipping_zip01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_zip01}">
+			{$label dtb_shipping shipping_zip01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_zip01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_zip01_fieldblock}
+	{BEGIN shipping_zip02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_zip02} bs-viewform-group" data-fieldname="shipping_zip02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_zip02}">
+			{$label dtb_shipping shipping_zip02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_zip02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_zip02_fieldblock}
+	{BEGIN shipping_zipcode_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_zipcode} bs-viewform-group" data-fieldname="shipping_zipcode">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_zipcode}">
+			{$label dtb_shipping shipping_zipcode}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_zipcode_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_zipcode_fieldblock}
+	{BEGIN shipping_addr01_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_addr01} bs-viewform-group" data-fieldname="shipping_addr01">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_addr01}">
+			{$label dtb_shipping shipping_addr01}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_addr01_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_addr01_fieldblock}
+	{BEGIN shipping_addr02_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_addr02} bs-viewform-group" data-fieldname="shipping_addr02">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_addr02}">
+			{$label dtb_shipping shipping_addr02}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_addr02_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_addr02_fieldblock}
+	{BEGIN shipping_delivery_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_delivery_name} bs-viewform-group" data-fieldname="shipping_delivery_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_delivery_name}">
+			{$label dtb_shipping shipping_delivery_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_delivery_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_delivery_name_fieldblock}
+	{BEGIN shipping_delivery_time_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_delivery_time} bs-viewform-group" data-fieldname="shipping_delivery_time">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_delivery_time}">
+			{$label dtb_shipping shipping_delivery_time}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_delivery_time_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_delivery_time_fieldblock}
+	{BEGIN shipping_delivery_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_delivery_date} bs-viewform-group" data-fieldname="shipping_delivery_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_delivery_date}">
+			{$label dtb_shipping shipping_delivery_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_delivery_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_delivery_date_fieldblock}
+	{BEGIN shipping_delivery_fee_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_delivery_fee} bs-viewform-group" data-fieldname="shipping_delivery_fee">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_delivery_fee}">
+			{$label dtb_shipping shipping_delivery_fee}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_delivery_fee_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_delivery_fee_fieldblock}
+	{BEGIN shipping_commit_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_commit_date} bs-viewform-group" data-fieldname="shipping_commit_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_commit_date}">
+			{$label dtb_shipping shipping_commit_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_commit_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_commit_date_fieldblock}
+	{BEGIN rank_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_rank} bs-viewform-group" data-fieldname="rank">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_rank}">
+			{$label dtb_shipping rank}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$rank_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END rank_fieldblock}
+	{BEGIN create_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_create_date} bs-viewform-group" data-fieldname="create_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_create_date}">
+			{$label dtb_shipping create_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$create_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END create_date_fieldblock}
+	{BEGIN update_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_update_date} bs-viewform-group" data-fieldname="update_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_update_date}">
+			{$label dtb_shipping update_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$update_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END update_date_fieldblock}
+	{BEGIN del_flg_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_del_flg} bs-viewform-group" data-fieldname="del_flg">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_del_flg}">
+			{$label dtb_shipping del_flg}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$del_flg_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END del_flg_fieldblock}
+	{BEGIN shipping_fax03_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_shipping_fax03} bs-viewform-group" data-fieldname="shipping_fax03">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_shipping_fax03}">
+			{$label dtb_shipping shipping_fax03}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$shipping_fax03_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END shipping_fax03_fieldblock}
+	
+	
+
+{BEGIN details_dtb_shipment_item}
+<div data-pageid="1" data-container="detailscontainer" class=" bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">配送商品</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_dtb_shipment_item}
+		</div>
+	</div>
+</div>
+{END details_dtb_shipment_item}
+		
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

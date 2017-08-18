@@ -1,0 +1,55 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_category masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$category_id_class}">{$label dtb_category category_id}</th>
+			<th class="{$parent_category_id_class}">{$label dtb_category parent_category_id}</th>
+			<th class="{$creator_id_class}">{$label dtb_category creator_id}</th>
+			<th class="{$category_name_class}">{$label dtb_category category_name}</th>
+			<th class="{$level_class}">{$label dtb_category level}</th>
+			<th class="{$rank_class}">{$label dtb_category rank}</th>
+			<th class="{$create_date_class}">{$label dtb_category create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_category update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_category del_flg}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$category_id_class}">{$category_id_mastervalue}</td>
+			<td class="{$parent_category_id_class}">{$parent_category_id_mastervalue}</td>
+			<td class="{$creator_id_class}">{$creator_id_mastervalue}</td>
+			<td class="{$category_name_class}">{$category_name_mastervalue}</td>
+			<td class="{$level_class}">{$level_mastervalue}</td>
+			<td class="{$rank_class}">{$rank_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$del_flg_class}">{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

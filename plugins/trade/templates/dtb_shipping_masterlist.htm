@@ -1,0 +1,200 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_shipping masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=shipping_id]:before {
+		content: "{$label dtb_shipping shipping_id}";
+	}
+	.bs-gridcell[data-field=shipping_country_id]:before {
+		content: "{$label dtb_shipping shipping_country_id}";
+	}
+	.bs-gridcell[data-field=shipping_pref]:before {
+		content: "{$label dtb_shipping shipping_pref}";
+	}
+	.bs-gridcell[data-field=order_id]:before {
+		content: "{$label dtb_shipping order_id}";
+	}
+	.bs-gridcell[data-field=delivery_id]:before {
+		content: "{$label dtb_shipping delivery_id}";
+	}
+	.bs-gridcell[data-field=time_id]:before {
+		content: "{$label dtb_shipping time_id}";
+	}
+	.bs-gridcell[data-field=fee_id]:before {
+		content: "{$label dtb_shipping fee_id}";
+	}
+	.bs-gridcell[data-field=shipping_name01]:before {
+		content: "{$label dtb_shipping shipping_name01}";
+	}
+	.bs-gridcell[data-field=shipping_name02]:before {
+		content: "{$label dtb_shipping shipping_name02}";
+	}
+	.bs-gridcell[data-field=shipping_kana01]:before {
+		content: "{$label dtb_shipping shipping_kana01}";
+	}
+	.bs-gridcell[data-field=shipping_kana02]:before {
+		content: "{$label dtb_shipping shipping_kana02}";
+	}
+	.bs-gridcell[data-field=shipping_company_name]:before {
+		content: "{$label dtb_shipping shipping_company_name}";
+	}
+	.bs-gridcell[data-field=shipping_tel01]:before {
+		content: "{$label dtb_shipping shipping_tel01}";
+	}
+	.bs-gridcell[data-field=shipping_tel02]:before {
+		content: "{$label dtb_shipping shipping_tel02}";
+	}
+	.bs-gridcell[data-field=shipping_tel03]:before {
+		content: "{$label dtb_shipping shipping_tel03}";
+	}
+	.bs-gridcell[data-field=shipping_fax01]:before {
+		content: "{$label dtb_shipping shipping_fax01}";
+	}
+	.bs-gridcell[data-field=shipping_fax02]:before {
+		content: "{$label dtb_shipping shipping_fax02}";
+	}
+	.bs-gridcell[data-field=shipping_fax03]:before {
+		content: "{$label dtb_shipping shipping_fax03}";
+	}
+	.bs-gridcell[data-field=shipping_zip01]:before {
+		content: "{$label dtb_shipping shipping_zip01}";
+	}
+	.bs-gridcell[data-field=shipping_zip02]:before {
+		content: "{$label dtb_shipping shipping_zip02}";
+	}
+	.bs-gridcell[data-field=shipping_zipcode]:before {
+		content: "{$label dtb_shipping shipping_zipcode}";
+	}
+	.bs-gridcell[data-field=shipping_addr01]:before {
+		content: "{$label dtb_shipping shipping_addr01}";
+	}
+	.bs-gridcell[data-field=shipping_addr02]:before {
+		content: "{$label dtb_shipping shipping_addr02}";
+	}
+	.bs-gridcell[data-field=shipping_delivery_name]:before {
+		content: "{$label dtb_shipping shipping_delivery_name}";
+	}
+	.bs-gridcell[data-field=shipping_delivery_time]:before {
+		content: "{$label dtb_shipping shipping_delivery_time}";
+	}
+	.bs-gridcell[data-field=shipping_delivery_date]:before {
+		content: "{$label dtb_shipping shipping_delivery_date}";
+	}
+	.bs-gridcell[data-field=shipping_delivery_fee]:before {
+		content: "{$label dtb_shipping shipping_delivery_fee}";
+	}
+	.bs-gridcell[data-field=shipping_commit_date]:before {
+		content: "{$label dtb_shipping shipping_commit_date}";
+	}
+	.bs-gridcell[data-field=rank]:before {
+		content: "{$label dtb_shipping rank}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_shipping create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_shipping update_date}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_shipping del_flg}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$shipping_id_class}">{$label dtb_shipping shipping_id}</th>
+			<th class="{$shipping_country_id_class}">{$label dtb_shipping shipping_country_id}</th>
+			<th class="{$shipping_pref_class}">{$label dtb_shipping shipping_pref}</th>
+			<th class="{$order_id_class}">{$label dtb_shipping order_id}</th>
+			<th class="{$delivery_id_class}">{$label dtb_shipping delivery_id}</th>
+			<th class="{$time_id_class}">{$label dtb_shipping time_id}</th>
+			<th class="{$fee_id_class}">{$label dtb_shipping fee_id}</th>
+			<th class="{$shipping_name01_class}">{$label dtb_shipping shipping_name01}</th>
+			<th class="{$shipping_name02_class}">{$label dtb_shipping shipping_name02}</th>
+			<th class="{$shipping_kana01_class}">{$label dtb_shipping shipping_kana01}</th>
+			<th class="{$shipping_kana02_class}">{$label dtb_shipping shipping_kana02}</th>
+			<th class="{$shipping_company_name_class}">{$label dtb_shipping shipping_company_name}</th>
+			<th class="{$shipping_tel01_class}">{$label dtb_shipping shipping_tel01}</th>
+			<th class="{$shipping_tel02_class}">{$label dtb_shipping shipping_tel02}</th>
+			<th class="{$shipping_tel03_class}">{$label dtb_shipping shipping_tel03}</th>
+			<th class="{$shipping_fax01_class}">{$label dtb_shipping shipping_fax01}</th>
+			<th class="{$shipping_fax02_class}">{$label dtb_shipping shipping_fax02}</th>
+			<th class="{$shipping_fax03_class}">{$label dtb_shipping shipping_fax03}</th>
+			<th class="{$shipping_zip01_class}">{$label dtb_shipping shipping_zip01}</th>
+			<th class="{$shipping_zip02_class}">{$label dtb_shipping shipping_zip02}</th>
+			<th class="{$shipping_zipcode_class}">{$label dtb_shipping shipping_zipcode}</th>
+			<th class="{$shipping_addr01_class}">{$label dtb_shipping shipping_addr01}</th>
+			<th class="{$shipping_addr02_class}">{$label dtb_shipping shipping_addr02}</th>
+			<th class="{$shipping_delivery_name_class}">{$label dtb_shipping shipping_delivery_name}</th>
+			<th class="{$shipping_delivery_time_class}">{$label dtb_shipping shipping_delivery_time}</th>
+			<th class="{$shipping_delivery_date_class}">{$label dtb_shipping shipping_delivery_date}</th>
+			<th class="{$shipping_delivery_fee_class}">{$label dtb_shipping shipping_delivery_fee}</th>
+			<th class="{$shipping_commit_date_class}">{$label dtb_shipping shipping_commit_date}</th>
+			<th class="{$rank_class}">{$label dtb_shipping rank}</th>
+			<th class="{$create_date_class}">{$label dtb_shipping create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_shipping update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_shipping del_flg}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$shipping_id_class} bs-gridcell" data-field=shipping_id>{$shipping_id_mastervalue}</td>
+			<td class="{$shipping_country_id_class} bs-gridcell" data-field=shipping_country_id>{$shipping_country_id_mastervalue}</td>
+			<td class="{$shipping_pref_class} bs-gridcell" data-field=shipping_pref>{$shipping_pref_mastervalue}</td>
+			<td class="{$order_id_class} bs-gridcell" data-field=order_id>{$order_id_mastervalue}</td>
+			<td class="{$delivery_id_class} bs-gridcell" data-field=delivery_id>{$delivery_id_mastervalue}</td>
+			<td class="{$time_id_class} bs-gridcell" data-field=time_id>{$time_id_mastervalue}</td>
+			<td class="{$fee_id_class} bs-gridcell" data-field=fee_id>{$fee_id_mastervalue}</td>
+			<td class="{$shipping_name01_class} bs-gridcell" data-field=shipping_name01>{$shipping_name01_mastervalue}</td>
+			<td class="{$shipping_name02_class} bs-gridcell" data-field=shipping_name02>{$shipping_name02_mastervalue}</td>
+			<td class="{$shipping_kana01_class} bs-gridcell" data-field=shipping_kana01>{$shipping_kana01_mastervalue}</td>
+			<td class="{$shipping_kana02_class} bs-gridcell" data-field=shipping_kana02>{$shipping_kana02_mastervalue}</td>
+			<td class="{$shipping_company_name_class} bs-gridcell" data-field=shipping_company_name>{$shipping_company_name_mastervalue}</td>
+			<td class="{$shipping_tel01_class} bs-gridcell" data-field=shipping_tel01>{$shipping_tel01_mastervalue}</td>
+			<td class="{$shipping_tel02_class} bs-gridcell" data-field=shipping_tel02>{$shipping_tel02_mastervalue}</td>
+			<td class="{$shipping_tel03_class} bs-gridcell" data-field=shipping_tel03>{$shipping_tel03_mastervalue}</td>
+			<td class="{$shipping_fax01_class} bs-gridcell" data-field=shipping_fax01>{$shipping_fax01_mastervalue}</td>
+			<td class="{$shipping_fax02_class} bs-gridcell" data-field=shipping_fax02>{$shipping_fax02_mastervalue}</td>
+			<td class="{$shipping_fax03_class} bs-gridcell" data-field=shipping_fax03>{$shipping_fax03_mastervalue}</td>
+			<td class="{$shipping_zip01_class} bs-gridcell" data-field=shipping_zip01>{$shipping_zip01_mastervalue}</td>
+			<td class="{$shipping_zip02_class} bs-gridcell" data-field=shipping_zip02>{$shipping_zip02_mastervalue}</td>
+			<td class="{$shipping_zipcode_class} bs-gridcell" data-field=shipping_zipcode>{$shipping_zipcode_mastervalue}</td>
+			<td class="{$shipping_addr01_class} bs-gridcell" data-field=shipping_addr01>{$shipping_addr01_mastervalue}</td>
+			<td class="{$shipping_addr02_class} bs-gridcell" data-field=shipping_addr02>{$shipping_addr02_mastervalue}</td>
+			<td class="{$shipping_delivery_name_class} bs-gridcell" data-field=shipping_delivery_name>{$shipping_delivery_name_mastervalue}</td>
+			<td class="{$shipping_delivery_time_class} bs-gridcell" data-field=shipping_delivery_time>{$shipping_delivery_time_mastervalue}</td>
+			<td class="{$shipping_delivery_date_class} bs-gridcell" data-field=shipping_delivery_date>{$shipping_delivery_date_mastervalue}</td>
+			<td class="{$shipping_delivery_fee_class} bs-gridcell" data-field=shipping_delivery_fee>{$shipping_delivery_fee_mastervalue}</td>
+			<td class="{$shipping_commit_date_class} bs-gridcell" data-field=shipping_commit_date>{$shipping_commit_date_mastervalue}</td>
+			<td class="{$rank_class} bs-gridcell" data-field=rank>{$rank_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$del_flg_class} bs-gridcell" data-field=del_flg>{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

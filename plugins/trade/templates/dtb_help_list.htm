@@ -1,0 +1,1684 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="dtb_help_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="dtb_help_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="dtb_help_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="dtb_help_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="dtb_help_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_id" checked="checked" value="1" data-field="id">
+			  <span>{$label dtb_help id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_country_id" checked="checked" value="1" data-field="law_country_id">
+			  <span>{$label dtb_help law_country_id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_pref" checked="checked" value="1" data-field="law_pref">
+			  <span>{$label dtb_help law_pref}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_customer_agreement" checked="checked" value="1" data-field="customer_agreement">
+			  <span>{$label dtb_help customer_agreement}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_company" checked="checked" value="1" data-field="law_company">
+			  <span>{$label dtb_help law_company}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_manager" checked="checked" value="1" data-field="law_manager">
+			  <span>{$label dtb_help law_manager}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_zip01" checked="checked" value="1" data-field="law_zip01">
+			  <span>{$label dtb_help law_zip01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_zip02" checked="checked" value="1" data-field="law_zip02">
+			  <span>{$label dtb_help law_zip02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_zipcode" checked="checked" value="1" data-field="law_zipcode">
+			  <span>{$label dtb_help law_zipcode}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_addr01" checked="checked" value="1" data-field="law_addr01">
+			  <span>{$label dtb_help law_addr01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_addr02" checked="checked" value="1" data-field="law_addr02">
+			  <span>{$label dtb_help law_addr02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_tel01" checked="checked" value="1" data-field="law_tel01">
+			  <span>{$label dtb_help law_tel01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_tel02" checked="checked" value="1" data-field="law_tel02">
+			  <span>{$label dtb_help law_tel02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_tel03" checked="checked" value="1" data-field="law_tel03">
+			  <span>{$label dtb_help law_tel03}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_fax01" checked="checked" value="1" data-field="law_fax01">
+			  <span>{$label dtb_help law_fax01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_fax02" checked="checked" value="1" data-field="law_fax02">
+			  <span>{$label dtb_help law_fax02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_fax03" checked="checked" value="1" data-field="law_fax03">
+			  <span>{$label dtb_help law_fax03}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_email" checked="checked" value="1" data-field="law_email">
+			  <span>{$label dtb_help law_email}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_url" checked="checked" value="1" data-field="law_url">
+			  <span>{$label dtb_help law_url}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term01" checked="checked" value="1" data-field="law_term01">
+			  <span>{$label dtb_help law_term01}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term02" checked="checked" value="1" data-field="law_term02">
+			  <span>{$label dtb_help law_term02}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term03" checked="checked" value="1" data-field="law_term03">
+			  <span>{$label dtb_help law_term03}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term04" checked="checked" value="1" data-field="law_term04">
+			  <span>{$label dtb_help law_term04}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term05" checked="checked" value="1" data-field="law_term05">
+			  <span>{$label dtb_help law_term05}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term06" checked="checked" value="1" data-field="law_term06">
+			  <span>{$label dtb_help law_term06}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term07" checked="checked" value="1" data-field="law_term07">
+			  <span>{$label dtb_help law_term07}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term08" checked="checked" value="1" data-field="law_term08">
+			  <span>{$label dtb_help law_term08}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term09" checked="checked" value="1" data-field="law_term09">
+			  <span>{$label dtb_help law_term09}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_law_term10" checked="checked" value="1" data-field="law_term10">
+			  <span>{$label dtb_help law_term10}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_create_date" checked="checked" value="1" data-field="create_date">
+			  <span>{$label dtb_help create_date}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_update_date" checked="checked" value="1" data-field="update_date">
+			  <span>{$label dtb_help update_date}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label dtb_help id}";
+	}
+	.bs-gridcell[data-field=law_country_id]:before {
+		content: "{$label dtb_help law_country_id}";
+	}
+	.bs-gridcell[data-field=law_pref]:before {
+		content: "{$label dtb_help law_pref}";
+	}
+	.bs-gridcell[data-field=customer_agreement]:before {
+		content: "{$label dtb_help customer_agreement}";
+	}
+	.bs-gridcell[data-field=law_company]:before {
+		content: "{$label dtb_help law_company}";
+	}
+	.bs-gridcell[data-field=law_manager]:before {
+		content: "{$label dtb_help law_manager}";
+	}
+	.bs-gridcell[data-field=law_zip01]:before {
+		content: "{$label dtb_help law_zip01}";
+	}
+	.bs-gridcell[data-field=law_zip02]:before {
+		content: "{$label dtb_help law_zip02}";
+	}
+	.bs-gridcell[data-field=law_zipcode]:before {
+		content: "{$label dtb_help law_zipcode}";
+	}
+	.bs-gridcell[data-field=law_addr01]:before {
+		content: "{$label dtb_help law_addr01}";
+	}
+	.bs-gridcell[data-field=law_addr02]:before {
+		content: "{$label dtb_help law_addr02}";
+	}
+	.bs-gridcell[data-field=law_tel01]:before {
+		content: "{$label dtb_help law_tel01}";
+	}
+	.bs-gridcell[data-field=law_tel02]:before {
+		content: "{$label dtb_help law_tel02}";
+	}
+	.bs-gridcell[data-field=law_tel03]:before {
+		content: "{$label dtb_help law_tel03}";
+	}
+	.bs-gridcell[data-field=law_fax01]:before {
+		content: "{$label dtb_help law_fax01}";
+	}
+	.bs-gridcell[data-field=law_fax02]:before {
+		content: "{$label dtb_help law_fax02}";
+	}
+	.bs-gridcell[data-field=law_fax03]:before {
+		content: "{$label dtb_help law_fax03}";
+	}
+	.bs-gridcell[data-field=law_email]:before {
+		content: "{$label dtb_help law_email}";
+	}
+	.bs-gridcell[data-field=law_url]:before {
+		content: "{$label dtb_help law_url}";
+	}
+	.bs-gridcell[data-field=law_term01]:before {
+		content: "{$label dtb_help law_term01}";
+	}
+	.bs-gridcell[data-field=law_term02]:before {
+		content: "{$label dtb_help law_term02}";
+	}
+	.bs-gridcell[data-field=law_term03]:before {
+		content: "{$label dtb_help law_term03}";
+	}
+	.bs-gridcell[data-field=law_term04]:before {
+		content: "{$label dtb_help law_term04}";
+	}
+	.bs-gridcell[data-field=law_term05]:before {
+		content: "{$label dtb_help law_term05}";
+	}
+	.bs-gridcell[data-field=law_term06]:before {
+		content: "{$label dtb_help law_term06}";
+	}
+	.bs-gridcell[data-field=law_term07]:before {
+		content: "{$label dtb_help law_term07}";
+	}
+	.bs-gridcell[data-field=law_term08]:before {
+		content: "{$label dtb_help law_term08}";
+	}
+	.bs-gridcell[data-field=law_term09]:before {
+		content: "{$label dtb_help law_term09}";
+	}
+	.bs-gridcell[data-field=law_term10]:before {
+		content: "{$label dtb_help law_term10}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_help create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_help update_date}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_class}" data-field=id>
+									{BEGIN id_fieldheader}
+																				<span {$id_orderlinkattrs}>
+											{$label dtb_help id}
+										</span>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_country_id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_country_id_class}" data-field=law_country_id>
+									{BEGIN law_country_id_fieldheader}
+																				<span {$law_country_id_orderlinkattrs}>
+											{$label dtb_help law_country_id}
+										</span>
+									{END law_country_id_fieldheader}
+									</th>
+									{END law_country_id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_pref_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_pref_class}" data-field=law_pref>
+									{BEGIN law_pref_fieldheader}
+																				<span {$law_pref_orderlinkattrs}>
+											{$label dtb_help law_pref}
+										</span>
+									{END law_pref_fieldheader}
+									</th>
+									{END law_pref_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN customer_agreement_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$customer_agreement_class}" data-field=customer_agreement>
+									{BEGIN customer_agreement_fieldheader}
+																				<span {$customer_agreement_orderlinkattrs}>
+											{$label dtb_help customer_agreement}
+										</span>
+									{END customer_agreement_fieldheader}
+									</th>
+									{END customer_agreement_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_company_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_company_class}" data-field=law_company>
+									{BEGIN law_company_fieldheader}
+																				<span {$law_company_orderlinkattrs}>
+											{$label dtb_help law_company}
+										</span>
+									{END law_company_fieldheader}
+									</th>
+									{END law_company_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_manager_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_manager_class}" data-field=law_manager>
+									{BEGIN law_manager_fieldheader}
+																				<span {$law_manager_orderlinkattrs}>
+											{$label dtb_help law_manager}
+										</span>
+									{END law_manager_fieldheader}
+									</th>
+									{END law_manager_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_zip01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_zip01_class}" data-field=law_zip01>
+									{BEGIN law_zip01_fieldheader}
+																				<span {$law_zip01_orderlinkattrs}>
+											{$label dtb_help law_zip01}
+										</span>
+									{END law_zip01_fieldheader}
+									</th>
+									{END law_zip01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_zip02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_zip02_class}" data-field=law_zip02>
+									{BEGIN law_zip02_fieldheader}
+																				<span {$law_zip02_orderlinkattrs}>
+											{$label dtb_help law_zip02}
+										</span>
+									{END law_zip02_fieldheader}
+									</th>
+									{END law_zip02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_zipcode_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_zipcode_class}" data-field=law_zipcode>
+									{BEGIN law_zipcode_fieldheader}
+																				<span {$law_zipcode_orderlinkattrs}>
+											{$label dtb_help law_zipcode}
+										</span>
+									{END law_zipcode_fieldheader}
+									</th>
+									{END law_zipcode_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_addr01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_addr01_class}" data-field=law_addr01>
+									{BEGIN law_addr01_fieldheader}
+																				<span {$law_addr01_orderlinkattrs}>
+											{$label dtb_help law_addr01}
+										</span>
+									{END law_addr01_fieldheader}
+									</th>
+									{END law_addr01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_addr02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_addr02_class}" data-field=law_addr02>
+									{BEGIN law_addr02_fieldheader}
+																				<span {$law_addr02_orderlinkattrs}>
+											{$label dtb_help law_addr02}
+										</span>
+									{END law_addr02_fieldheader}
+									</th>
+									{END law_addr02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_tel01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_tel01_class}" data-field=law_tel01>
+									{BEGIN law_tel01_fieldheader}
+																				<span {$law_tel01_orderlinkattrs}>
+											{$label dtb_help law_tel01}
+										</span>
+									{END law_tel01_fieldheader}
+									</th>
+									{END law_tel01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_tel02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_tel02_class}" data-field=law_tel02>
+									{BEGIN law_tel02_fieldheader}
+																				<span {$law_tel02_orderlinkattrs}>
+											{$label dtb_help law_tel02}
+										</span>
+									{END law_tel02_fieldheader}
+									</th>
+									{END law_tel02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_tel03_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_tel03_class}" data-field=law_tel03>
+									{BEGIN law_tel03_fieldheader}
+																				<span {$law_tel03_orderlinkattrs}>
+											{$label dtb_help law_tel03}
+										</span>
+									{END law_tel03_fieldheader}
+									</th>
+									{END law_tel03_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_fax01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_fax01_class}" data-field=law_fax01>
+									{BEGIN law_fax01_fieldheader}
+																				<span {$law_fax01_orderlinkattrs}>
+											{$label dtb_help law_fax01}
+										</span>
+									{END law_fax01_fieldheader}
+									</th>
+									{END law_fax01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_fax02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_fax02_class}" data-field=law_fax02>
+									{BEGIN law_fax02_fieldheader}
+																				<span {$law_fax02_orderlinkattrs}>
+											{$label dtb_help law_fax02}
+										</span>
+									{END law_fax02_fieldheader}
+									</th>
+									{END law_fax02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_fax03_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_fax03_class}" data-field=law_fax03>
+									{BEGIN law_fax03_fieldheader}
+																				<span {$law_fax03_orderlinkattrs}>
+											{$label dtb_help law_fax03}
+										</span>
+									{END law_fax03_fieldheader}
+									</th>
+									{END law_fax03_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_email_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_email_class}" data-field=law_email>
+									{BEGIN law_email_fieldheader}
+																				<span {$law_email_orderlinkattrs}>
+											{$label dtb_help law_email}
+										</span>
+									{END law_email_fieldheader}
+									</th>
+									{END law_email_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_url_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_url_class}" data-field=law_url>
+									{BEGIN law_url_fieldheader}
+																				<span {$law_url_orderlinkattrs}>
+											{$label dtb_help law_url}
+										</span>
+									{END law_url_fieldheader}
+									</th>
+									{END law_url_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term01_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term01_class}" data-field=law_term01>
+									{BEGIN law_term01_fieldheader}
+																				<span {$law_term01_orderlinkattrs}>
+											{$label dtb_help law_term01}
+										</span>
+									{END law_term01_fieldheader}
+									</th>
+									{END law_term01_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term02_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term02_class}" data-field=law_term02>
+									{BEGIN law_term02_fieldheader}
+																				<span {$law_term02_orderlinkattrs}>
+											{$label dtb_help law_term02}
+										</span>
+									{END law_term02_fieldheader}
+									</th>
+									{END law_term02_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term03_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term03_class}" data-field=law_term03>
+									{BEGIN law_term03_fieldheader}
+																				<span {$law_term03_orderlinkattrs}>
+											{$label dtb_help law_term03}
+										</span>
+									{END law_term03_fieldheader}
+									</th>
+									{END law_term03_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term04_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term04_class}" data-field=law_term04>
+									{BEGIN law_term04_fieldheader}
+																				<span {$law_term04_orderlinkattrs}>
+											{$label dtb_help law_term04}
+										</span>
+									{END law_term04_fieldheader}
+									</th>
+									{END law_term04_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term05_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term05_class}" data-field=law_term05>
+									{BEGIN law_term05_fieldheader}
+																				<span {$law_term05_orderlinkattrs}>
+											{$label dtb_help law_term05}
+										</span>
+									{END law_term05_fieldheader}
+									</th>
+									{END law_term05_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term06_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term06_class}" data-field=law_term06>
+									{BEGIN law_term06_fieldheader}
+																				<span {$law_term06_orderlinkattrs}>
+											{$label dtb_help law_term06}
+										</span>
+									{END law_term06_fieldheader}
+									</th>
+									{END law_term06_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term07_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term07_class}" data-field=law_term07>
+									{BEGIN law_term07_fieldheader}
+																				<span {$law_term07_orderlinkattrs}>
+											{$label dtb_help law_term07}
+										</span>
+									{END law_term07_fieldheader}
+									</th>
+									{END law_term07_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term08_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term08_class}" data-field=law_term08>
+									{BEGIN law_term08_fieldheader}
+																				<span {$law_term08_orderlinkattrs}>
+											{$label dtb_help law_term08}
+										</span>
+									{END law_term08_fieldheader}
+									</th>
+									{END law_term08_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term09_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term09_class}" data-field=law_term09>
+									{BEGIN law_term09_fieldheader}
+																				<span {$law_term09_orderlinkattrs}>
+											{$label dtb_help law_term09}
+										</span>
+									{END law_term09_fieldheader}
+									</th>
+									{END law_term09_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN law_term10_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$law_term10_class}" data-field=law_term10>
+									{BEGIN law_term10_fieldheader}
+																				<span {$law_term10_orderlinkattrs}>
+											{$label dtb_help law_term10}
+										</span>
+									{END law_term10_fieldheader}
+									</th>
+									{END law_term10_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN create_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$create_date_class}" data-field=create_date>
+									{BEGIN create_date_fieldheader}
+																				<span {$create_date_orderlinkattrs}>
+											{$label dtb_help create_date}
+										</span>
+									{END create_date_fieldheader}
+									</th>
+									{END create_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN update_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$update_date_class}" data-field=update_date>
+									{BEGIN update_date_fieldheader}
+																				<span {$update_date_orderlinkattrs}>
+											{$label dtb_help update_date}
+										</span>
+									{END update_date_fieldheader}
+									</th>
+									{END update_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN id_fieldcolumn}
+	<td class="bs-gridcell {$id_class}"  data-field=id {$rowstyle} {$recordattrs}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+
+	{BEGIN law_country_id_fieldcolumn}
+	<td class="bs-gridcell {$law_country_id_class}"  data-field=law_country_id {$rowstyle} {$recordattrs}>
+		{$law_country_id_value}
+	</td>
+{END law_country_id_fieldcolumn}
+
+
+	{BEGIN law_pref_fieldcolumn}
+	<td class="bs-gridcell {$law_pref_class}"  data-field=law_pref {$rowstyle} {$recordattrs}>
+		{$law_pref_value}
+	</td>
+{END law_pref_fieldcolumn}
+
+
+	{BEGIN customer_agreement_fieldcolumn}
+	<td class="bs-gridcell {$customer_agreement_class}"  data-field=customer_agreement {$rowstyle} {$recordattrs}>
+		{$customer_agreement_value}
+	</td>
+{END customer_agreement_fieldcolumn}
+
+
+	{BEGIN law_company_fieldcolumn}
+	<td class="bs-gridcell {$law_company_class}"  data-field=law_company {$rowstyle} {$recordattrs}>
+		{$law_company_value}
+	</td>
+{END law_company_fieldcolumn}
+
+
+	{BEGIN law_manager_fieldcolumn}
+	<td class="bs-gridcell {$law_manager_class}"  data-field=law_manager {$rowstyle} {$recordattrs}>
+		{$law_manager_value}
+	</td>
+{END law_manager_fieldcolumn}
+
+
+	{BEGIN law_zip01_fieldcolumn}
+	<td class="bs-gridcell {$law_zip01_class}"  data-field=law_zip01 {$rowstyle} {$recordattrs}>
+		{$law_zip01_value}
+	</td>
+{END law_zip01_fieldcolumn}
+
+
+	{BEGIN law_zip02_fieldcolumn}
+	<td class="bs-gridcell {$law_zip02_class}"  data-field=law_zip02 {$rowstyle} {$recordattrs}>
+		{$law_zip02_value}
+	</td>
+{END law_zip02_fieldcolumn}
+
+
+	{BEGIN law_zipcode_fieldcolumn}
+	<td class="bs-gridcell {$law_zipcode_class}"  data-field=law_zipcode {$rowstyle} {$recordattrs}>
+		{$law_zipcode_value}
+	</td>
+{END law_zipcode_fieldcolumn}
+
+
+	{BEGIN law_addr01_fieldcolumn}
+	<td class="bs-gridcell {$law_addr01_class}"  data-field=law_addr01 {$rowstyle} {$recordattrs}>
+		{$law_addr01_value}
+	</td>
+{END law_addr01_fieldcolumn}
+
+
+	{BEGIN law_addr02_fieldcolumn}
+	<td class="bs-gridcell {$law_addr02_class}"  data-field=law_addr02 {$rowstyle} {$recordattrs}>
+		{$law_addr02_value}
+	</td>
+{END law_addr02_fieldcolumn}
+
+
+	{BEGIN law_tel01_fieldcolumn}
+	<td class="bs-gridcell {$law_tel01_class}"  data-field=law_tel01 {$rowstyle} {$recordattrs}>
+		{$law_tel01_value}
+	</td>
+{END law_tel01_fieldcolumn}
+
+
+	{BEGIN law_tel02_fieldcolumn}
+	<td class="bs-gridcell {$law_tel02_class}"  data-field=law_tel02 {$rowstyle} {$recordattrs}>
+		{$law_tel02_value}
+	</td>
+{END law_tel02_fieldcolumn}
+
+
+	{BEGIN law_tel03_fieldcolumn}
+	<td class="bs-gridcell {$law_tel03_class}"  data-field=law_tel03 {$rowstyle} {$recordattrs}>
+		{$law_tel03_value}
+	</td>
+{END law_tel03_fieldcolumn}
+
+
+	{BEGIN law_fax01_fieldcolumn}
+	<td class="bs-gridcell {$law_fax01_class}"  data-field=law_fax01 {$rowstyle} {$recordattrs}>
+		{$law_fax01_value}
+	</td>
+{END law_fax01_fieldcolumn}
+
+
+	{BEGIN law_fax02_fieldcolumn}
+	<td class="bs-gridcell {$law_fax02_class}"  data-field=law_fax02 {$rowstyle} {$recordattrs}>
+		{$law_fax02_value}
+	</td>
+{END law_fax02_fieldcolumn}
+
+
+	{BEGIN law_fax03_fieldcolumn}
+	<td class="bs-gridcell {$law_fax03_class}"  data-field=law_fax03 {$rowstyle} {$recordattrs}>
+		{$law_fax03_value}
+	</td>
+{END law_fax03_fieldcolumn}
+
+
+	{BEGIN law_email_fieldcolumn}
+	<td class="bs-gridcell {$law_email_class}"  data-field=law_email {$rowstyle} {$recordattrs}>
+		{$law_email_value}
+	</td>
+{END law_email_fieldcolumn}
+
+
+	{BEGIN law_url_fieldcolumn}
+	<td class="bs-gridcell {$law_url_class}"  data-field=law_url {$rowstyle} {$recordattrs}>
+		{$law_url_value}
+	</td>
+{END law_url_fieldcolumn}
+
+
+	{BEGIN law_term01_fieldcolumn}
+	<td class="bs-gridcell {$law_term01_class}"  data-field=law_term01 {$rowstyle} {$recordattrs}>
+		{$law_term01_value}
+	</td>
+{END law_term01_fieldcolumn}
+
+
+	{BEGIN law_term02_fieldcolumn}
+	<td class="bs-gridcell {$law_term02_class}"  data-field=law_term02 {$rowstyle} {$recordattrs}>
+		{$law_term02_value}
+	</td>
+{END law_term02_fieldcolumn}
+
+
+	{BEGIN law_term03_fieldcolumn}
+	<td class="bs-gridcell {$law_term03_class}"  data-field=law_term03 {$rowstyle} {$recordattrs}>
+		{$law_term03_value}
+	</td>
+{END law_term03_fieldcolumn}
+
+
+	{BEGIN law_term04_fieldcolumn}
+	<td class="bs-gridcell {$law_term04_class}"  data-field=law_term04 {$rowstyle} {$recordattrs}>
+		{$law_term04_value}
+	</td>
+{END law_term04_fieldcolumn}
+
+
+	{BEGIN law_term05_fieldcolumn}
+	<td class="bs-gridcell {$law_term05_class}"  data-field=law_term05 {$rowstyle} {$recordattrs}>
+		{$law_term05_value}
+	</td>
+{END law_term05_fieldcolumn}
+
+
+	{BEGIN law_term06_fieldcolumn}
+	<td class="bs-gridcell {$law_term06_class}"  data-field=law_term06 {$rowstyle} {$recordattrs}>
+		{$law_term06_value}
+	</td>
+{END law_term06_fieldcolumn}
+
+
+	{BEGIN law_term07_fieldcolumn}
+	<td class="bs-gridcell {$law_term07_class}"  data-field=law_term07 {$rowstyle} {$recordattrs}>
+		{$law_term07_value}
+	</td>
+{END law_term07_fieldcolumn}
+
+
+	{BEGIN law_term08_fieldcolumn}
+	<td class="bs-gridcell {$law_term08_class}"  data-field=law_term08 {$rowstyle} {$recordattrs}>
+		{$law_term08_value}
+	</td>
+{END law_term08_fieldcolumn}
+
+
+	{BEGIN law_term09_fieldcolumn}
+	<td class="bs-gridcell {$law_term09_class}"  data-field=law_term09 {$rowstyle} {$recordattrs}>
+		{$law_term09_value}
+	</td>
+{END law_term09_fieldcolumn}
+
+
+	{BEGIN law_term10_fieldcolumn}
+	<td class="bs-gridcell {$law_term10_class}"  data-field=law_term10 {$rowstyle} {$recordattrs}>
+		{$law_term10_value}
+	</td>
+{END law_term10_fieldcolumn}
+
+
+	{BEGIN create_date_fieldcolumn}
+	<td class="bs-gridcell {$create_date_class}"  data-field=create_date {$rowstyle} {$recordattrs}>
+		{$create_date_value}
+	</td>
+{END create_date_fieldcolumn}
+
+
+	{BEGIN update_date_fieldcolumn}
+	<td class="bs-gridcell {$update_date_class}"  data-field=update_date {$rowstyle} {$recordattrs}>
+		{$update_date_value}
+	</td>
+{END update_date_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

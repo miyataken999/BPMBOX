@@ -1,0 +1,253 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_csv print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN csv_id_fieldheadercolumn}
+			<th class="{$csv_id_class}" {$csv_id_style}  data-field="csv_id">
+				{$label dtb_csv csv_id}
+			</th>
+			{END csv_id_fieldheadercolumn}
+			{BEGIN csv_type_fieldheadercolumn}
+			<th class="{$csv_type_class}" {$csv_type_style}  data-field="csv_type">
+				{$label dtb_csv csv_type}
+			</th>
+			{END csv_type_fieldheadercolumn}
+			{BEGIN creator_id_fieldheadercolumn}
+			<th class="{$creator_id_class}" {$creator_id_style}  data-field="creator_id">
+				{$label dtb_csv creator_id}
+			</th>
+			{END creator_id_fieldheadercolumn}
+			{BEGIN entity_name_fieldheadercolumn}
+			<th class="{$entity_name_class}" {$entity_name_style}  data-field="entity_name">
+				{$label dtb_csv entity_name}
+			</th>
+			{END entity_name_fieldheadercolumn}
+			{BEGIN field_name_fieldheadercolumn}
+			<th class="{$field_name_class}" {$field_name_style}  data-field="field_name">
+				{$label dtb_csv field_name}
+			</th>
+			{END field_name_fieldheadercolumn}
+			{BEGIN reference_field_name_fieldheadercolumn}
+			<th class="{$reference_field_name_class}" {$reference_field_name_style}  data-field="reference_field_name">
+				{$label dtb_csv reference_field_name}
+			</th>
+			{END reference_field_name_fieldheadercolumn}
+			{BEGIN disp_name_fieldheadercolumn}
+			<th class="{$disp_name_class}" {$disp_name_style}  data-field="disp_name">
+				{$label dtb_csv disp_name}
+			</th>
+			{END disp_name_fieldheadercolumn}
+			{BEGIN rank_fieldheadercolumn}
+			<th class="{$rank_class}" {$rank_style}  data-field="rank">
+				{$label dtb_csv rank}
+			</th>
+			{END rank_fieldheadercolumn}
+			{BEGIN enable_flg_fieldheadercolumn}
+			<th class="{$enable_flg_class}" {$enable_flg_style}  data-field="enable_flg">
+				{$label dtb_csv enable_flg}
+			</th>
+			{END enable_flg_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_csv create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_csv update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN csv_id_fieldcolumn}
+			<td  class="{$csv_id_class}" {$csv_id_style} {$recordattrs}>
+				{$csv_id_value}
+			</td>
+			{END csv_id_fieldcolumn}
+			{BEGIN csv_type_fieldcolumn}
+			<td  class="{$csv_type_class}" {$csv_type_style} {$recordattrs}>
+				{$csv_type_value}
+			</td>
+			{END csv_type_fieldcolumn}
+			{BEGIN creator_id_fieldcolumn}
+			<td  class="{$creator_id_class}" {$creator_id_style} {$recordattrs}>
+				{$creator_id_value}
+			</td>
+			{END creator_id_fieldcolumn}
+			{BEGIN entity_name_fieldcolumn}
+			<td  class="{$entity_name_class}" {$entity_name_style} {$recordattrs}>
+				{$entity_name_value}
+			</td>
+			{END entity_name_fieldcolumn}
+			{BEGIN field_name_fieldcolumn}
+			<td  class="{$field_name_class}" {$field_name_style} {$recordattrs}>
+				{$field_name_value}
+			</td>
+			{END field_name_fieldcolumn}
+			{BEGIN reference_field_name_fieldcolumn}
+			<td  class="{$reference_field_name_class}" {$reference_field_name_style} {$recordattrs}>
+				{$reference_field_name_value}
+			</td>
+			{END reference_field_name_fieldcolumn}
+			{BEGIN disp_name_fieldcolumn}
+			<td  class="{$disp_name_class}" {$disp_name_style} {$recordattrs}>
+				{$disp_name_value}
+			</td>
+			{END disp_name_fieldcolumn}
+			{BEGIN rank_fieldcolumn}
+			<td  class="{$rank_class}" {$rank_style} {$recordattrs}>
+				{$rank_value}
+			</td>
+			{END rank_fieldcolumn}
+			{BEGIN enable_flg_fieldcolumn}
+			<td  class="{$enable_flg_class}" {$enable_flg_style} {$recordattrs}>
+				{$enable_flg_value}
+			</td>
+			{END enable_flg_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

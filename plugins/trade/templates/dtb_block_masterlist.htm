@@ -1,0 +1,80 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_block masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=block_id]:before {
+		content: "{$label dtb_block block_id}";
+	}
+	.bs-gridcell[data-field=device_type_id]:before {
+		content: "{$label dtb_block device_type_id}";
+	}
+	.bs-gridcell[data-field=block_name]:before {
+		content: "{$label dtb_block block_name}";
+	}
+	.bs-gridcell[data-field=file_name]:before {
+		content: "{$label dtb_block file_name}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_block create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_block update_date}";
+	}
+	.bs-gridcell[data-field=logic_flg]:before {
+		content: "{$label dtb_block logic_flg}";
+	}
+	.bs-gridcell[data-field=deletable_flg]:before {
+		content: "{$label dtb_block deletable_flg}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$block_id_class}">{$label dtb_block block_id}</th>
+			<th class="{$device_type_id_class}">{$label dtb_block device_type_id}</th>
+			<th class="{$block_name_class}">{$label dtb_block block_name}</th>
+			<th class="{$file_name_class}">{$label dtb_block file_name}</th>
+			<th class="{$create_date_class}">{$label dtb_block create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_block update_date}</th>
+			<th class="{$logic_flg_class}">{$label dtb_block logic_flg}</th>
+			<th class="{$deletable_flg_class}">{$label dtb_block deletable_flg}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$block_id_class} bs-gridcell" data-field=block_id>{$block_id_mastervalue}</td>
+			<td class="{$device_type_id_class} bs-gridcell" data-field=device_type_id>{$device_type_id_mastervalue}</td>
+			<td class="{$block_name_class} bs-gridcell" data-field=block_name>{$block_name_mastervalue}</td>
+			<td class="{$file_name_class} bs-gridcell" data-field=file_name>{$file_name_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$logic_flg_class} bs-gridcell" data-field=logic_flg>{$logic_flg_mastervalue}</td>
+			<td class="{$deletable_flg_class} bs-gridcell" data-field=deletable_flg>{$deletable_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,43 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel mtb_authority masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$id_class}">{$label mtb_authority id}</th>
+			<th class="{$name_class}">{$label mtb_authority name}</th>
+			<th class="{$rank_class}">{$label mtb_authority rank}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$id_class}">{$id_mastervalue}</td>
+			<td class="{$name_class}">{$name_mastervalue}</td>
+			<td class="{$rank_class}">{$rank_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

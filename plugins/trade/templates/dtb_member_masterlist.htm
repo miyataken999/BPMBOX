@@ -1,0 +1,110 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_member masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=member_id]:before {
+		content: "{$label dtb_member member_id}";
+	}
+	.bs-gridcell[data-field=work]:before {
+		content: "{$label dtb_member work}";
+	}
+	.bs-gridcell[data-field=authority]:before {
+		content: "{$label dtb_member authority}";
+	}
+	.bs-gridcell[data-field=creator_id]:before {
+		content: "{$label dtb_member creator_id}";
+	}
+	.bs-gridcell[data-field=name]:before {
+		content: "{$label dtb_member name}";
+	}
+	.bs-gridcell[data-field=department]:before {
+		content: "{$label dtb_member department}";
+	}
+	.bs-gridcell[data-field=login_id]:before {
+		content: "{$label dtb_member login_id}";
+	}
+	.bs-gridcell[data-field=password]:before {
+		content: "{$label dtb_member password}";
+	}
+	.bs-gridcell[data-field=salt]:before {
+		content: "{$label dtb_member salt}";
+	}
+	.bs-gridcell[data-field=rank]:before {
+		content: "{$label dtb_member rank}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_member del_flg}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_member create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_member update_date}";
+	}
+	.bs-gridcell[data-field=login_date]:before {
+		content: "{$label dtb_member login_date}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$member_id_class}">{$label dtb_member member_id}</th>
+			<th class="{$work_class}">{$label dtb_member work}</th>
+			<th class="{$authority_class}">{$label dtb_member authority}</th>
+			<th class="{$creator_id_class}">{$label dtb_member creator_id}</th>
+			<th class="{$name_class}">{$label dtb_member name}</th>
+			<th class="{$department_class}">{$label dtb_member department}</th>
+			<th class="{$login_id_class}">{$label dtb_member login_id}</th>
+			<th class="{$password_class}">{$label dtb_member password}</th>
+			<th class="{$salt_class}">{$label dtb_member salt}</th>
+			<th class="{$rank_class}">{$label dtb_member rank}</th>
+			<th class="{$del_flg_class}">{$label dtb_member del_flg}</th>
+			<th class="{$create_date_class}">{$label dtb_member create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_member update_date}</th>
+			<th class="{$login_date_class}">{$label dtb_member login_date}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$member_id_class} bs-gridcell" data-field=member_id>{$member_id_mastervalue}</td>
+			<td class="{$work_class} bs-gridcell" data-field=work>{$work_mastervalue}</td>
+			<td class="{$authority_class} bs-gridcell" data-field=authority>{$authority_mastervalue}</td>
+			<td class="{$creator_id_class} bs-gridcell" data-field=creator_id>{$creator_id_mastervalue}</td>
+			<td class="{$name_class} bs-gridcell" data-field=name>{$name_mastervalue}</td>
+			<td class="{$department_class} bs-gridcell" data-field=department>{$department_mastervalue}</td>
+			<td class="{$login_id_class} bs-gridcell" data-field=login_id>{$login_id_mastervalue}</td>
+			<td class="{$password_class} bs-gridcell" data-field=password>{$password_mastervalue}</td>
+			<td class="{$salt_class} bs-gridcell" data-field=salt>{$salt_mastervalue}</td>
+			<td class="{$rank_class} bs-gridcell" data-field=rank>{$rank_mastervalue}</td>
+			<td class="{$del_flg_class} bs-gridcell" data-field=del_flg>{$del_flg_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$login_date_class} bs-gridcell" data-field=login_date>{$login_date_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel dtb_product_image add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN product_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_product_id}" data-fieldname="product_id" data-signal-error-for="product_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_product_id}">
+		{BEGIN product_id_label}{$label dtb_product_image product_id}{END product_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$product_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="product_id">
+		<div class="text-muted" >
+		{$tooltip dtb_product_image product_id}
+		</div>
+	</div>
+</div>
+</div>
+{END product_id_fieldblock}
+
+			{BEGIN creator_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_creator_id}" data-fieldname="creator_id" data-signal-error-for="creator_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_creator_id}">
+		{BEGIN creator_id_label}{$label dtb_product_image creator_id}{END creator_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$creator_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="creator_id">
+		<div class="text-muted" >
+		{$tooltip dtb_product_image creator_id}
+		</div>
+	</div>
+</div>
+</div>
+{END creator_id_fieldblock}
+
+			{BEGIN file_name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_file_name}" data-fieldname="file_name" data-signal-error-for="file_name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_file_name}">
+		{BEGIN file_name_label}{$label dtb_product_image file_name}{END file_name_label}
+	</label>
+	<div class="col-md-6" >
+		{$file_name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="file_name">
+		<div class="text-muted" >
+		{$tooltip dtb_product_image file_name}
+		</div>
+	</div>
+</div>
+</div>
+{END file_name_fieldblock}
+
+			{BEGIN rank_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_rank}" data-fieldname="rank" data-signal-error-for="rank{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_rank}">
+		{BEGIN rank_label}{$label dtb_product_image rank}{END rank_label}
+	</label>
+	<div class="col-md-6" >
+		{$rank_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="rank">
+		<div class="text-muted" >
+		{$tooltip dtb_product_image rank}
+		</div>
+	</div>
+</div>
+</div>
+{END rank_fieldblock}
+
+			{BEGIN create_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_create_date}" data-fieldname="create_date" data-signal-error-for="create_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_create_date}">
+		{BEGIN create_date_label}{$label dtb_product_image create_date}{END create_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$create_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="create_date">
+		<div class="text-muted" >
+		{$tooltip dtb_product_image create_date}
+		</div>
+	</div>
+</div>
+</div>
+{END create_date_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,543 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_base_info print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN id_fieldheadercolumn}
+			<th class="{$id_class}" {$id_style}  data-field="id">
+				{$label dtb_base_info id}
+			</th>
+			{END id_fieldheadercolumn}
+			{BEGIN country_id_fieldheadercolumn}
+			<th class="{$country_id_class}" {$country_id_style}  data-field="country_id">
+				{$label dtb_base_info country_id}
+			</th>
+			{END country_id_fieldheadercolumn}
+			{BEGIN pref_fieldheadercolumn}
+			<th class="{$pref_class}" {$pref_style}  data-field="pref">
+				{$label dtb_base_info pref}
+			</th>
+			{END pref_fieldheadercolumn}
+			{BEGIN company_name_fieldheadercolumn}
+			<th class="{$company_name_class}" {$company_name_style}  data-field="company_name">
+				{$label dtb_base_info company_name}
+			</th>
+			{END company_name_fieldheadercolumn}
+			{BEGIN company_kana_fieldheadercolumn}
+			<th class="{$company_kana_class}" {$company_kana_style}  data-field="company_kana">
+				{$label dtb_base_info company_kana}
+			</th>
+			{END company_kana_fieldheadercolumn}
+			{BEGIN zip01_fieldheadercolumn}
+			<th class="{$zip01_class}" {$zip01_style}  data-field="zip01">
+				{$label dtb_base_info zip01}
+			</th>
+			{END zip01_fieldheadercolumn}
+			{BEGIN zip02_fieldheadercolumn}
+			<th class="{$zip02_class}" {$zip02_style}  data-field="zip02">
+				{$label dtb_base_info zip02}
+			</th>
+			{END zip02_fieldheadercolumn}
+			{BEGIN zipcode_fieldheadercolumn}
+			<th class="{$zipcode_class}" {$zipcode_style}  data-field="zipcode">
+				{$label dtb_base_info zipcode}
+			</th>
+			{END zipcode_fieldheadercolumn}
+			{BEGIN addr01_fieldheadercolumn}
+			<th class="{$addr01_class}" {$addr01_style}  data-field="addr01">
+				{$label dtb_base_info addr01}
+			</th>
+			{END addr01_fieldheadercolumn}
+			{BEGIN addr02_fieldheadercolumn}
+			<th class="{$addr02_class}" {$addr02_style}  data-field="addr02">
+				{$label dtb_base_info addr02}
+			</th>
+			{END addr02_fieldheadercolumn}
+			{BEGIN tel01_fieldheadercolumn}
+			<th class="{$tel01_class}" {$tel01_style}  data-field="tel01">
+				{$label dtb_base_info tel01}
+			</th>
+			{END tel01_fieldheadercolumn}
+			{BEGIN tel02_fieldheadercolumn}
+			<th class="{$tel02_class}" {$tel02_style}  data-field="tel02">
+				{$label dtb_base_info tel02}
+			</th>
+			{END tel02_fieldheadercolumn}
+			{BEGIN tel03_fieldheadercolumn}
+			<th class="{$tel03_class}" {$tel03_style}  data-field="tel03">
+				{$label dtb_base_info tel03}
+			</th>
+			{END tel03_fieldheadercolumn}
+			{BEGIN fax01_fieldheadercolumn}
+			<th class="{$fax01_class}" {$fax01_style}  data-field="fax01">
+				{$label dtb_base_info fax01}
+			</th>
+			{END fax01_fieldheadercolumn}
+			{BEGIN fax02_fieldheadercolumn}
+			<th class="{$fax02_class}" {$fax02_style}  data-field="fax02">
+				{$label dtb_base_info fax02}
+			</th>
+			{END fax02_fieldheadercolumn}
+			{BEGIN fax03_fieldheadercolumn}
+			<th class="{$fax03_class}" {$fax03_style}  data-field="fax03">
+				{$label dtb_base_info fax03}
+			</th>
+			{END fax03_fieldheadercolumn}
+			{BEGIN business_hour_fieldheadercolumn}
+			<th class="{$business_hour_class}" {$business_hour_style}  data-field="business_hour">
+				{$label dtb_base_info business_hour}
+			</th>
+			{END business_hour_fieldheadercolumn}
+			{BEGIN email01_fieldheadercolumn}
+			<th class="{$email01_class}" {$email01_style}  data-field="email01">
+				{$label dtb_base_info email01}
+			</th>
+			{END email01_fieldheadercolumn}
+			{BEGIN email02_fieldheadercolumn}
+			<th class="{$email02_class}" {$email02_style}  data-field="email02">
+				{$label dtb_base_info email02}
+			</th>
+			{END email02_fieldheadercolumn}
+			{BEGIN email03_fieldheadercolumn}
+			<th class="{$email03_class}" {$email03_style}  data-field="email03">
+				{$label dtb_base_info email03}
+			</th>
+			{END email03_fieldheadercolumn}
+			{BEGIN email04_fieldheadercolumn}
+			<th class="{$email04_class}" {$email04_style}  data-field="email04">
+				{$label dtb_base_info email04}
+			</th>
+			{END email04_fieldheadercolumn}
+			{BEGIN shop_name_fieldheadercolumn}
+			<th class="{$shop_name_class}" {$shop_name_style}  data-field="shop_name">
+				{$label dtb_base_info shop_name}
+			</th>
+			{END shop_name_fieldheadercolumn}
+			{BEGIN shop_kana_fieldheadercolumn}
+			<th class="{$shop_kana_class}" {$shop_kana_style}  data-field="shop_kana">
+				{$label dtb_base_info shop_kana}
+			</th>
+			{END shop_kana_fieldheadercolumn}
+			{BEGIN shop_name_eng_fieldheadercolumn}
+			<th class="{$shop_name_eng_class}" {$shop_name_eng_style}  data-field="shop_name_eng">
+				{$label dtb_base_info shop_name_eng}
+			</th>
+			{END shop_name_eng_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_base_info update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN good_traded_fieldheadercolumn}
+			<th class="{$good_traded_class}" {$good_traded_style}  data-field="good_traded">
+				{$label dtb_base_info good_traded}
+			</th>
+			{END good_traded_fieldheadercolumn}
+			{BEGIN message_fieldheadercolumn}
+			<th class="{$message_class}" {$message_style}  data-field="message">
+				{$label dtb_base_info message}
+			</th>
+			{END message_fieldheadercolumn}
+			{BEGIN latitude_fieldheadercolumn}
+			<th class="{$latitude_class}" {$latitude_style}  data-field="latitude">
+				{$label dtb_base_info latitude}
+			</th>
+			{END latitude_fieldheadercolumn}
+			{BEGIN longitude_fieldheadercolumn}
+			<th class="{$longitude_class}" {$longitude_style}  data-field="longitude">
+				{$label dtb_base_info longitude}
+			</th>
+			{END longitude_fieldheadercolumn}
+			{BEGIN delivery_free_amount_fieldheadercolumn}
+			<th class="{$delivery_free_amount_class}" {$delivery_free_amount_style}  data-field="delivery_free_amount">
+				{$label dtb_base_info delivery_free_amount}
+			</th>
+			{END delivery_free_amount_fieldheadercolumn}
+			{BEGIN delivery_free_quantity_fieldheadercolumn}
+			<th class="{$delivery_free_quantity_class}" {$delivery_free_quantity_style}  data-field="delivery_free_quantity">
+				{$label dtb_base_info delivery_free_quantity}
+			</th>
+			{END delivery_free_quantity_fieldheadercolumn}
+			{BEGIN option_multiple_shipping_fieldheadercolumn}
+			<th class="{$option_multiple_shipping_class}" {$option_multiple_shipping_style}  data-field="option_multiple_shipping">
+				{$label dtb_base_info option_multiple_shipping}
+			</th>
+			{END option_multiple_shipping_fieldheadercolumn}
+			{BEGIN option_mypage_order_status_display_fieldheadercolumn}
+			<th class="{$option_mypage_order_status_display_class}" {$option_mypage_order_status_display_style}  data-field="option_mypage_order_status_display">
+				{$label dtb_base_info option_mypage_order_status_display}
+			</th>
+			{END option_mypage_order_status_display_fieldheadercolumn}
+			{BEGIN nostock_hidden_fieldheadercolumn}
+			<th class="{$nostock_hidden_class}" {$nostock_hidden_style}  data-field="nostock_hidden">
+				{$label dtb_base_info nostock_hidden}
+			</th>
+			{END nostock_hidden_fieldheadercolumn}
+			{BEGIN option_favorite_product_fieldheadercolumn}
+			<th class="{$option_favorite_product_class}" {$option_favorite_product_style}  data-field="option_favorite_product">
+				{$label dtb_base_info option_favorite_product}
+			</th>
+			{END option_favorite_product_fieldheadercolumn}
+			{BEGIN option_product_delivery_fee_fieldheadercolumn}
+			<th class="{$option_product_delivery_fee_class}" {$option_product_delivery_fee_style}  data-field="option_product_delivery_fee">
+				{$label dtb_base_info option_product_delivery_fee}
+			</th>
+			{END option_product_delivery_fee_fieldheadercolumn}
+			{BEGIN option_product_tax_rule_fieldheadercolumn}
+			<th class="{$option_product_tax_rule_class}" {$option_product_tax_rule_style}  data-field="option_product_tax_rule">
+				{$label dtb_base_info option_product_tax_rule}
+			</th>
+			{END option_product_tax_rule_fieldheadercolumn}
+			{BEGIN option_customer_activate_fieldheadercolumn}
+			<th class="{$option_customer_activate_class}" {$option_customer_activate_style}  data-field="option_customer_activate">
+				{$label dtb_base_info option_customer_activate}
+			</th>
+			{END option_customer_activate_fieldheadercolumn}
+			{BEGIN option_remember_me_fieldheadercolumn}
+			<th class="{$option_remember_me_class}" {$option_remember_me_style}  data-field="option_remember_me">
+				{$label dtb_base_info option_remember_me}
+			</th>
+			{END option_remember_me_fieldheadercolumn}
+			{BEGIN authentication_key_fieldheadercolumn}
+			<th class="{$authentication_key_class}" {$authentication_key_style}  data-field="authentication_key">
+				{$label dtb_base_info authentication_key}
+			</th>
+			{END authentication_key_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN id_fieldcolumn}
+			<td  class="{$id_class}" {$id_style} {$recordattrs}>
+				{$id_value}
+			</td>
+			{END id_fieldcolumn}
+			{BEGIN country_id_fieldcolumn}
+			<td  class="{$country_id_class}" {$country_id_style} {$recordattrs}>
+				{$country_id_value}
+			</td>
+			{END country_id_fieldcolumn}
+			{BEGIN pref_fieldcolumn}
+			<td  class="{$pref_class}" {$pref_style} {$recordattrs}>
+				{$pref_value}
+			</td>
+			{END pref_fieldcolumn}
+			{BEGIN company_name_fieldcolumn}
+			<td  class="{$company_name_class}" {$company_name_style} {$recordattrs}>
+				{$company_name_value}
+			</td>
+			{END company_name_fieldcolumn}
+			{BEGIN company_kana_fieldcolumn}
+			<td  class="{$company_kana_class}" {$company_kana_style} {$recordattrs}>
+				{$company_kana_value}
+			</td>
+			{END company_kana_fieldcolumn}
+			{BEGIN zip01_fieldcolumn}
+			<td  class="{$zip01_class}" {$zip01_style} {$recordattrs}>
+				{$zip01_value}
+			</td>
+			{END zip01_fieldcolumn}
+			{BEGIN zip02_fieldcolumn}
+			<td  class="{$zip02_class}" {$zip02_style} {$recordattrs}>
+				{$zip02_value}
+			</td>
+			{END zip02_fieldcolumn}
+			{BEGIN zipcode_fieldcolumn}
+			<td  class="{$zipcode_class}" {$zipcode_style} {$recordattrs}>
+				{$zipcode_value}
+			</td>
+			{END zipcode_fieldcolumn}
+			{BEGIN addr01_fieldcolumn}
+			<td  class="{$addr01_class}" {$addr01_style} {$recordattrs}>
+				{$addr01_value}
+			</td>
+			{END addr01_fieldcolumn}
+			{BEGIN addr02_fieldcolumn}
+			<td  class="{$addr02_class}" {$addr02_style} {$recordattrs}>
+				{$addr02_value}
+			</td>
+			{END addr02_fieldcolumn}
+			{BEGIN tel01_fieldcolumn}
+			<td  class="{$tel01_class}" {$tel01_style} {$recordattrs}>
+				{$tel01_value}
+			</td>
+			{END tel01_fieldcolumn}
+			{BEGIN tel02_fieldcolumn}
+			<td  class="{$tel02_class}" {$tel02_style} {$recordattrs}>
+				{$tel02_value}
+			</td>
+			{END tel02_fieldcolumn}
+			{BEGIN tel03_fieldcolumn}
+			<td  class="{$tel03_class}" {$tel03_style} {$recordattrs}>
+				{$tel03_value}
+			</td>
+			{END tel03_fieldcolumn}
+			{BEGIN fax01_fieldcolumn}
+			<td  class="{$fax01_class}" {$fax01_style} {$recordattrs}>
+				{$fax01_value}
+			</td>
+			{END fax01_fieldcolumn}
+			{BEGIN fax02_fieldcolumn}
+			<td  class="{$fax02_class}" {$fax02_style} {$recordattrs}>
+				{$fax02_value}
+			</td>
+			{END fax02_fieldcolumn}
+			{BEGIN fax03_fieldcolumn}
+			<td  class="{$fax03_class}" {$fax03_style} {$recordattrs}>
+				{$fax03_value}
+			</td>
+			{END fax03_fieldcolumn}
+			{BEGIN business_hour_fieldcolumn}
+			<td  class="{$business_hour_class}" {$business_hour_style} {$recordattrs}>
+				{$business_hour_value}
+			</td>
+			{END business_hour_fieldcolumn}
+			{BEGIN email01_fieldcolumn}
+			<td  class="{$email01_class}" {$email01_style} {$recordattrs}>
+				{$email01_value}
+			</td>
+			{END email01_fieldcolumn}
+			{BEGIN email02_fieldcolumn}
+			<td  class="{$email02_class}" {$email02_style} {$recordattrs}>
+				{$email02_value}
+			</td>
+			{END email02_fieldcolumn}
+			{BEGIN email03_fieldcolumn}
+			<td  class="{$email03_class}" {$email03_style} {$recordattrs}>
+				{$email03_value}
+			</td>
+			{END email03_fieldcolumn}
+			{BEGIN email04_fieldcolumn}
+			<td  class="{$email04_class}" {$email04_style} {$recordattrs}>
+				{$email04_value}
+			</td>
+			{END email04_fieldcolumn}
+			{BEGIN shop_name_fieldcolumn}
+			<td  class="{$shop_name_class}" {$shop_name_style} {$recordattrs}>
+				{$shop_name_value}
+			</td>
+			{END shop_name_fieldcolumn}
+			{BEGIN shop_kana_fieldcolumn}
+			<td  class="{$shop_kana_class}" {$shop_kana_style} {$recordattrs}>
+				{$shop_kana_value}
+			</td>
+			{END shop_kana_fieldcolumn}
+			{BEGIN shop_name_eng_fieldcolumn}
+			<td  class="{$shop_name_eng_class}" {$shop_name_eng_style} {$recordattrs}>
+				{$shop_name_eng_value}
+			</td>
+			{END shop_name_eng_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN good_traded_fieldcolumn}
+			<td  class="{$good_traded_class}" {$good_traded_style} {$recordattrs}>
+				{$good_traded_value}
+			</td>
+			{END good_traded_fieldcolumn}
+			{BEGIN message_fieldcolumn}
+			<td  class="{$message_class}" {$message_style} {$recordattrs}>
+				{$message_value}
+			</td>
+			{END message_fieldcolumn}
+			{BEGIN latitude_fieldcolumn}
+			<td  class="{$latitude_class}" {$latitude_style} {$recordattrs}>
+				{$latitude_value}
+			</td>
+			{END latitude_fieldcolumn}
+			{BEGIN longitude_fieldcolumn}
+			<td  class="{$longitude_class}" {$longitude_style} {$recordattrs}>
+				{$longitude_value}
+			</td>
+			{END longitude_fieldcolumn}
+			{BEGIN delivery_free_amount_fieldcolumn}
+			<td  class="{$delivery_free_amount_class}" {$delivery_free_amount_style} {$recordattrs}>
+				{$delivery_free_amount_value}
+			</td>
+			{END delivery_free_amount_fieldcolumn}
+			{BEGIN delivery_free_quantity_fieldcolumn}
+			<td  class="{$delivery_free_quantity_class}" {$delivery_free_quantity_style} {$recordattrs}>
+				{$delivery_free_quantity_value}
+			</td>
+			{END delivery_free_quantity_fieldcolumn}
+			{BEGIN option_multiple_shipping_fieldcolumn}
+			<td  class="{$option_multiple_shipping_class}" {$option_multiple_shipping_style} {$recordattrs}>
+				{$option_multiple_shipping_value}
+			</td>
+			{END option_multiple_shipping_fieldcolumn}
+			{BEGIN option_mypage_order_status_display_fieldcolumn}
+			<td  class="{$option_mypage_order_status_display_class}" {$option_mypage_order_status_display_style} {$recordattrs}>
+				{$option_mypage_order_status_display_value}
+			</td>
+			{END option_mypage_order_status_display_fieldcolumn}
+			{BEGIN nostock_hidden_fieldcolumn}
+			<td  class="{$nostock_hidden_class}" {$nostock_hidden_style} {$recordattrs}>
+				{$nostock_hidden_value}
+			</td>
+			{END nostock_hidden_fieldcolumn}
+			{BEGIN option_favorite_product_fieldcolumn}
+			<td  class="{$option_favorite_product_class}" {$option_favorite_product_style} {$recordattrs}>
+				{$option_favorite_product_value}
+			</td>
+			{END option_favorite_product_fieldcolumn}
+			{BEGIN option_product_delivery_fee_fieldcolumn}
+			<td  class="{$option_product_delivery_fee_class}" {$option_product_delivery_fee_style} {$recordattrs}>
+				{$option_product_delivery_fee_value}
+			</td>
+			{END option_product_delivery_fee_fieldcolumn}
+			{BEGIN option_product_tax_rule_fieldcolumn}
+			<td  class="{$option_product_tax_rule_class}" {$option_product_tax_rule_style} {$recordattrs}>
+				{$option_product_tax_rule_value}
+			</td>
+			{END option_product_tax_rule_fieldcolumn}
+			{BEGIN option_customer_activate_fieldcolumn}
+			<td  class="{$option_customer_activate_class}" {$option_customer_activate_style} {$recordattrs}>
+				{$option_customer_activate_value}
+			</td>
+			{END option_customer_activate_fieldcolumn}
+			{BEGIN option_remember_me_fieldcolumn}
+			<td  class="{$option_remember_me_class}" {$option_remember_me_style} {$recordattrs}>
+				{$option_remember_me_value}
+			</td>
+			{END option_remember_me_fieldcolumn}
+			{BEGIN authentication_key_fieldcolumn}
+			<td  class="{$authentication_key_class}" {$authentication_key_style} {$recordattrs}>
+				{$authentication_key_value}
+			</td>
+			{END authentication_key_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

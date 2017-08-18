@@ -1,0 +1,716 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel dtb_payment edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN creator_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_creator_id}" data-fieldname="creator_id" data-signal-error-for="creator_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_creator_id}">
+		{BEGIN creator_id_label}{$label dtb_payment creator_id}{END creator_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$creator_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="creator_id">
+		<div class="text-muted" >
+		{$tooltip dtb_payment creator_id}
+		</div>
+	</div>
+</div>
+</div>
+{END creator_id_fieldblock}
+
+			{BEGIN payment_method_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_payment_method}" data-fieldname="payment_method" data-signal-error-for="payment_method{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_payment_method}">
+		{BEGIN payment_method_label}{$label dtb_payment payment_method}{END payment_method_label}
+	</label>
+	<div class="col-md-6" >
+		{$payment_method_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="payment_method">
+		<div class="text-muted" >
+		{$tooltip dtb_payment payment_method}
+		</div>
+	</div>
+</div>
+</div>
+{END payment_method_fieldblock}
+
+			{BEGIN charge_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_charge}" data-fieldname="charge" data-signal-error-for="charge{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_charge}">
+		{BEGIN charge_label}{$label dtb_payment charge}{END charge_label}
+	</label>
+	<div class="col-md-6" >
+		{$charge_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="charge">
+		<div class="text-muted" >
+		{$tooltip dtb_payment charge}
+		</div>
+	</div>
+</div>
+</div>
+{END charge_fieldblock}
+
+			{BEGIN rule_max_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_rule_max}" data-fieldname="rule_max" data-signal-error-for="rule_max{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_rule_max}">
+		{BEGIN rule_max_label}{$label dtb_payment rule_max}{END rule_max_label}
+	</label>
+	<div class="col-md-6" >
+		{$rule_max_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="rule_max">
+		<div class="text-muted" >
+		{$tooltip dtb_payment rule_max}
+		</div>
+	</div>
+</div>
+</div>
+{END rule_max_fieldblock}
+
+			{BEGIN rank_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_rank}" data-fieldname="rank" data-signal-error-for="rank{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_rank}">
+		{BEGIN rank_label}{$label dtb_payment rank}{END rank_label}
+	</label>
+	<div class="col-md-6" >
+		{$rank_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="rank">
+		<div class="text-muted" >
+		{$tooltip dtb_payment rank}
+		</div>
+	</div>
+</div>
+</div>
+{END rank_fieldblock}
+
+			{BEGIN fix_flg_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fix_flg}" data-fieldname="fix_flg" data-signal-error-for="fix_flg{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fix_flg}">
+		{BEGIN fix_flg_label}{$label dtb_payment fix_flg}{END fix_flg_label}
+	</label>
+	<div class="col-md-6" >
+		{$fix_flg_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fix_flg">
+		<div class="text-muted" >
+		{$tooltip dtb_payment fix_flg}
+		</div>
+	</div>
+</div>
+</div>
+{END fix_flg_fieldblock}
+
+			{BEGIN del_flg_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_del_flg}" data-fieldname="del_flg" data-signal-error-for="del_flg{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_del_flg}">
+		{BEGIN del_flg_label}{$label dtb_payment del_flg}{END del_flg_label}
+	</label>
+	<div class="col-md-6" >
+		{$del_flg_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="del_flg">
+		<div class="text-muted" >
+		{$tooltip dtb_payment del_flg}
+		</div>
+	</div>
+</div>
+</div>
+{END del_flg_fieldblock}
+
+			{BEGIN create_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_create_date}" data-fieldname="create_date" data-signal-error-for="create_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_create_date}">
+		{BEGIN create_date_label}{$label dtb_payment create_date}{END create_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$create_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="create_date">
+		<div class="text-muted" >
+		{$tooltip dtb_payment create_date}
+		</div>
+	</div>
+</div>
+</div>
+{END create_date_fieldblock}
+
+			{BEGIN update_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_update_date}" data-fieldname="update_date" data-signal-error-for="update_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_update_date}">
+		{BEGIN update_date_label}{$label dtb_payment update_date}{END update_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$update_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="update_date">
+		<div class="text-muted" >
+		{$tooltip dtb_payment update_date}
+		</div>
+	</div>
+</div>
+</div>
+{END update_date_fieldblock}
+
+			{BEGIN payment_image_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_payment_image}" data-fieldname="payment_image" data-signal-error-for="payment_image{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_payment_image}">
+		{BEGIN payment_image_label}{$label dtb_payment payment_image}{END payment_image_label}
+	</label>
+	<div class="col-md-6" >
+		{$payment_image_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="payment_image">
+		<div class="text-muted" >
+		{$tooltip dtb_payment payment_image}
+		</div>
+	</div>
+</div>
+</div>
+{END payment_image_fieldblock}
+
+			{BEGIN charge_flg_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_charge_flg}" data-fieldname="charge_flg" data-signal-error-for="charge_flg{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_charge_flg}">
+		{BEGIN charge_flg_label}{$label dtb_payment charge_flg}{END charge_flg_label}
+	</label>
+	<div class="col-md-6" >
+		{$charge_flg_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="charge_flg">
+		<div class="text-muted" >
+		{$tooltip dtb_payment charge_flg}
+		</div>
+	</div>
+</div>
+</div>
+{END charge_flg_fieldblock}
+
+			{BEGIN rule_min_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_rule_min}" data-fieldname="rule_min" data-signal-error-for="rule_min{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_rule_min}">
+		{BEGIN rule_min_label}{$label dtb_payment rule_min}{END rule_min_label}
+	</label>
+	<div class="col-md-6" >
+		{$rule_min_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="rule_min">
+		<div class="text-muted" >
+		{$tooltip dtb_payment rule_min}
+		</div>
+	</div>
+</div>
+</div>
+{END rule_min_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_dtb_order}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">注文
+		<span>
+{BEGIN details_inlineadd_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_order_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_order_link}		
+{BEGIN details_add_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_order_attrs}>追加</button>
+{END details_add_dtb_order_link}
+{BEGIN details_edit_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_order_attrs}>編集</button>
+{END details_edit_dtb_order_link}
+{BEGIN details_updateselected_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_order_attrs}>Update selected</button>
+{END details_updateselected_dtb_order_link}
+
+
+{BEGIN details_delete_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_order_attrs}>削除</button>
+{END details_delete_dtb_order_link}
+
+{BEGIN saveall_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_dtb_order_attrs} {$savealllink_dtb_order_span}>全て保存</button>
+{END saveall_dtb_order_link}
+{BEGIN cancelall_dtb_order_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_dtb_order_attrs} {$cancelalllink_dtb_order_span}>キャンセル</button>
+{END cancelall_dtb_order_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_order}
+</div>
+</div>
+</div>
+{END details_dtb_order}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_dtb_payment_option}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">お支払い方法
+		<span>
+{BEGIN details_inlineadd_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_payment_option_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_payment_option_link}		
+{BEGIN details_add_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_payment_option_attrs}>追加</button>
+{END details_add_dtb_payment_option_link}
+{BEGIN details_edit_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_payment_option_attrs}>編集</button>
+{END details_edit_dtb_payment_option_link}
+{BEGIN details_updateselected_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_payment_option_attrs}>Update selected</button>
+{END details_updateselected_dtb_payment_option_link}
+
+
+{BEGIN details_delete_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_payment_option_attrs}>削除</button>
+{END details_delete_dtb_payment_option_link}
+
+{BEGIN saveall_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_dtb_payment_option_attrs} {$savealllink_dtb_payment_option_span}>全て保存</button>
+{END saveall_dtb_payment_option_link}
+{BEGIN cancelall_dtb_payment_option_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_dtb_payment_option_attrs} {$cancelalllink_dtb_payment_option_span}>キャンセル</button>
+{END cancelall_dtb_payment_option_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_payment_option}
+</div>
+</div>
+</div>
+{END details_dtb_payment_option}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_dtb_order_Dash}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">注文ダッシュ
+		<span>
+{BEGIN details_inlineadd_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_order_Dash_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_order_Dash_link}		
+{BEGIN details_add_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_order_Dash_attrs}>追加</button>
+{END details_add_dtb_order_Dash_link}
+{BEGIN details_edit_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_order_Dash_attrs}>編集</button>
+{END details_edit_dtb_order_Dash_link}
+{BEGIN details_updateselected_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_order_Dash_attrs}>Update selected</button>
+{END details_updateselected_dtb_order_Dash_link}
+
+
+{BEGIN details_delete_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_order_Dash_attrs}>削除</button>
+{END details_delete_dtb_order_Dash_link}
+
+{BEGIN saveall_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_dtb_order_Dash_attrs} {$savealllink_dtb_order_Dash_span}>全て保存</button>
+{END saveall_dtb_order_Dash_link}
+{BEGIN cancelall_dtb_order_Dash_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_dtb_order_Dash_attrs} {$cancelalllink_dtb_order_Dash_span}>キャンセル</button>
+{END cancelall_dtb_order_Dash_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_order_Dash}
+</div>
+</div>
+</div>
+{END details_dtb_order_Dash}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_dtb_order_Chart}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">Dtb Order Chart
+		<span>
+{BEGIN details_inlineadd_dtb_order_Chart_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_dtb_order_Chart_attrs}>インライン追加</button>
+{END details_inlineadd_dtb_order_Chart_link}		
+{BEGIN details_add_dtb_order_Chart_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_dtb_order_Chart_attrs}>追加</button>
+{END details_add_dtb_order_Chart_link}
+{BEGIN details_edit_dtb_order_Chart_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_dtb_order_Chart_attrs}>編集</button>
+{END details_edit_dtb_order_Chart_link}
+{BEGIN details_updateselected_dtb_order_Chart_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_dtb_order_Chart_attrs}>Update selected</button>
+{END details_updateselected_dtb_order_Chart_link}
+
+
+{BEGIN details_delete_dtb_order_Chart_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_dtb_order_Chart_attrs}>削除</button>
+{END details_delete_dtb_order_Chart_link}
+
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_dtb_order_Chart}
+</div>
+</div>
+</div>
+{END details_dtb_order_Chart}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

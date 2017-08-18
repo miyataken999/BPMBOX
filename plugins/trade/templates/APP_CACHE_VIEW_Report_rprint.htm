@@ -1,0 +1,265 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel APP_CACHE_VIEW_Report rprint}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:120%;
+/*		padding: 4px 8px;*/
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+						{BEGIN grid_block}
+<table {$report_print_hiddenattr} data-pageid="{$pageid}" data-brick="report_print" class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+<tbody>
+			
+			
+			{BEGIN grid_row}
+
+			{BEGIN APP_STATUS_newgroup}
+								<tr class="group-headers">
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_STATUS}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_TITLE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_UID}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_INDEX}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_LAST_INDEX}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_NUMBER}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report USR_UID}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report PREVIOUS_USR_UID}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report TAS_UID}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report PRO_UID}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_DELEGATE_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_INIT_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_FINISH_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_TASK_DUE_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_RISK_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_THREAD_STATUS}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_THREAD_STATUS}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_PRO_TITLE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_TAS_TITLE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_CURRENT_USER}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_DEL_PREVIOUS_USER}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_PRIORITY}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_DURATION}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_QUEUE_DURATION}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_DELAY_DURATION}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_STARTED}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_FINISHED}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report DEL_DELAYED}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_CREATE_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_FINISH_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_UPDATE_DATE}</td>
+					<td class="blackshade">{$label APP_CACHE_VIEW_Report APP_OVERDUE_PERCENTAGE}</td>
+				</tr>
+				<tr class="group-spliter-1" >
+													<td colspan=32 class=header_1><font >{$APP_STATUS_grval}</font></td>
+										</tr>
+			{END APP_STATUS_newgroup}
+			{BEGIN APP_TITLE_newgroup}
+								<tr class="group-spliter-2" {$rowattrs}>
+													<td class=" group_1" >&nbsp;</td>
+						
+							<td colspan=31 class=header_2>
+								<font>
+									{$APP_TITLE_grval} 
+																</font>
+							</td>
+				</tr>
+			{END APP_TITLE_newgroup}
+						<!-------------------------------------  data ----------------------------------------->
+			{BEGIN row_data}
+				<tr >
+										<td class=" group_1" >&nbsp;</td>
+										<td class=" group_2" >&nbsp;</td>
+					<td class=data>{$APP_UID_value}</td>
+					<td class=data>{$DEL_INDEX_value}</td>
+					<td class=data>{$DEL_LAST_INDEX_value}</td>
+					<td class=data>{$APP_NUMBER_value}</td>
+					<td class=data>{$USR_UID_value}</td>
+					<td class=data>{$PREVIOUS_USR_UID_value}</td>
+					<td class=data>{$TAS_UID_value}</td>
+					<td class=data>{$PRO_UID_value}</td>
+					<td class=data>{$DEL_DELEGATE_DATE_value}</td>
+					<td class=data>{$DEL_INIT_DATE_value}</td>
+					<td class=data>{$DEL_FINISH_DATE_value}</td>
+					<td class=data>{$DEL_TASK_DUE_DATE_value}</td>
+					<td class=data>{$DEL_RISK_DATE_value}</td>
+					<td class=data>{$DEL_THREAD_STATUS_value}</td>
+					<td class=data>{$APP_THREAD_STATUS_value}</td>
+					<td class=data>{$APP_PRO_TITLE_value}</td>
+					<td class=data>{$APP_TAS_TITLE_value}</td>
+					<td class=data>{$APP_CURRENT_USER_value}</td>
+					<td class=data>{$APP_DEL_PREVIOUS_USER_value}</td>
+					<td class=data>{$DEL_PRIORITY_value}</td>
+					<td class=data>{$DEL_DURATION_value}</td>
+					<td class=data>{$DEL_QUEUE_DURATION_value}</td>
+					<td class=data>{$DEL_DELAY_DURATION_value}</td>
+					<td class=data>{$DEL_STARTED_value}</td>
+					<td class=data>{$DEL_FINISHED_value}</td>
+					<td class=data>{$DEL_DELAYED_value}</td>
+					<td class=data>{$APP_CREATE_DATE_value}</td>
+					<td class=data>{$APP_FINISH_DATE_value}</td>
+					<td class=data>{$APP_UPDATE_DATE_value}</td>
+					<td class=data>{$APP_OVERDUE_PERCENTAGE_value}</td>
+				</tr>
+			{END row_data}
+			<!-------------------------------------  group summary ----------------------------------------->
+						{BEGIN APP_TITLE_endgroup}
+				<tr class="summaryrow"  style="display:none; height:0px" >
+					<td class=group_1 style="border-top: none;"></td>
+										<td  class="group_2" colspan=31 >
+				要約 {$label APP_CACHE_VIEW_Report APP_TITLE} {$APP_TITLE_grval}
+					- <span class="summary-2" data-type="summary" data-value="{$groupAPP_TITLE_total_cnt}">{$groupAPP_TITLE_total_cnt}</span> 全レコード</td>
+				</tr>
+															{END APP_TITLE_endgroup}
+						{BEGIN APP_STATUS_endgroup}
+				<tr class="summaryrow" >
+										<td  class="group_1" colspan=32 >
+				要約 {$label APP_CACHE_VIEW_Report APP_STATUS} {$APP_STATUS_grval}
+					- <span class="summary-1" data-type="summary" data-value="{$groupAPP_STATUS_total_cnt}">{$groupAPP_STATUS_total_cnt}</span> 全レコード</td>
+				</tr>
+															{END APP_STATUS_endgroup}
+			{END grid_row}
+
+							<!--------------------------------------page summary-------------------------------------------->
+				<tr class="summaryrow summary-page">
+					
+										<td class=pagesummary colspan=32>ページの要約 
+					 <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - 全レコード</td>
+				</tr>
+																								<!--------------------------------------global summary-------------------------------------------->
+				{BEGIN global_summary}
+				<tr class="summaryrow summary-global">
+					
+										<td class=globalsummary colspan=32>全体の要約 
+					 {$global_total_cnt} - 全レコード</td>
+				</tr>
+																				{END global_summary}
+</tbody>
+</table>
+{END grid_block}
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

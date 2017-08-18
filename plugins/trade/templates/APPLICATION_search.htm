@@ -1,0 +1,609 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel APPLICATION search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN APP_UID_fieldblock}		
+	<div class="container {$fielddispclass_APP_UID}" data-fieldname="APP_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_UID}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_UID_fieldblock}
+	{BEGIN APP_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_APP_TITLE}" data-fieldname="APP_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_TITLE_fieldblock}
+	{BEGIN APP_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_APP_DESCRIPTION}" data-fieldname="APP_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_DESCRIPTION_fieldblock}
+	{BEGIN APP_NUMBER_fieldblock}		
+	<div class="container {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_NUMBER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_NUMBER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_NUMBER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_NUMBER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_NUMBER_fieldblock}
+	{BEGIN APP_PARENT_fieldblock}		
+	<div class="container {$fielddispclass_APP_PARENT}" data-fieldname="APP_PARENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_PARENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_PARENT}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PARENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PARENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_PARENT_fieldblock}
+	{BEGIN APP_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$APP_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_STATUS_fieldblock}
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN APP_PROC_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_APP_PROC_STATUS}" data-fieldname="APP_PROC_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_PROC_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_PROC_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PROC_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PROC_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_PROC_STATUS_fieldblock}
+	{BEGIN APP_PROC_CODE_fieldblock}		
+	<div class="container {$fielddispclass_APP_PROC_CODE}" data-fieldname="APP_PROC_CODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_PROC_CODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_PROC_CODE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PROC_CODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PROC_CODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_PROC_CODE_fieldblock}
+	{BEGIN APP_PARALLEL_fieldblock}		
+	<div class="container {$fielddispclass_APP_PARALLEL}" data-fieldname="APP_PARALLEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_PARALLEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_PARALLEL}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PARALLEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PARALLEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_PARALLEL_fieldblock}
+	{BEGIN APP_INIT_USER_fieldblock}		
+	<div class="container {$fielddispclass_APP_INIT_USER}" data-fieldname="APP_INIT_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_INIT_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_INIT_USER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_INIT_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_INIT_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_INIT_USER_fieldblock}
+	{BEGIN APP_CUR_USER_fieldblock}		
+	<div class="container {$fielddispclass_APP_CUR_USER}" data-fieldname="APP_CUR_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_CUR_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_CUR_USER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CUR_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CUR_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_CUR_USER_fieldblock}
+	{BEGIN APP_CREATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_CREATE_DATE}" data-fieldname="APP_CREATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_CREATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_CREATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CREATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_CREATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_CREATE_DATE_fieldblock}
+	{BEGIN APP_INIT_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_INIT_DATE}" data-fieldname="APP_INIT_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_INIT_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_INIT_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_INIT_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_INIT_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_INIT_DATE_fieldblock}
+	{BEGIN APP_FINISH_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_FINISH_DATE}" data-fieldname="APP_FINISH_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_FINISH_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_FINISH_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_FINISH_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_FINISH_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_FINISH_DATE_fieldblock}
+	{BEGIN APP_UPDATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_APP_UPDATE_DATE}" data-fieldname="APP_UPDATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_UPDATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_UPDATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UPDATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UPDATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_UPDATE_DATE_fieldblock}
+	{BEGIN APP_DATA_fieldblock}		
+	<div class="container {$fielddispclass_APP_DATA}" data-fieldname="APP_DATA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_DATA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_DATA}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DATA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DATA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_DATA_fieldblock}
+	{BEGIN APP_PIN_fieldblock}		
+	<div class="container {$fielddispclass_APP_PIN}" data-fieldname="APP_PIN">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_PIN}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_PIN}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PIN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_PIN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_PIN_fieldblock}
+	{BEGIN APP_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_APP_DURATION}" data-fieldname="APP_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_DURATION_fieldblock}
+	{BEGIN APP_DELAY_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_APP_DELAY_DURATION}" data-fieldname="APP_DELAY_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_DELAY_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_DELAY_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DELAY_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DELAY_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_DELAY_DURATION_fieldblock}
+	{BEGIN APP_DRIVE_FOLDER_UID_fieldblock}		
+	<div class="container {$fielddispclass_APP_DRIVE_FOLDER_UID}" data-fieldname="APP_DRIVE_FOLDER_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_DRIVE_FOLDER_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_DRIVE_FOLDER_UID}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DRIVE_FOLDER_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_DRIVE_FOLDER_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_DRIVE_FOLDER_UID_fieldblock}
+	{BEGIN APP_ROUTING_DATA_fieldblock}		
+	<div class="container {$fielddispclass_APP_ROUTING_DATA}" data-fieldname="APP_ROUTING_DATA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label APPLICATION APP_ROUTING_DATA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_ROUTING_DATA}
+			</div>
+			<div class="col-md-4" >
+				{$APP_ROUTING_DATA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_ROUTING_DATA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_ROUTING_DATA_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_class_name masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=class_name_id]:before {
+		content: "{$label dtb_class_name class_name_id}";
+	}
+	.bs-gridcell[data-field=creator_id]:before {
+		content: "{$label dtb_class_name creator_id}";
+	}
+	.bs-gridcell[data-field=name]:before {
+		content: "{$label dtb_class_name name}";
+	}
+	.bs-gridcell[data-field=rank]:before {
+		content: "{$label dtb_class_name rank}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_class_name create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_class_name update_date}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_class_name del_flg}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$class_name_id_class}">{$label dtb_class_name class_name_id}</th>
+			<th class="{$creator_id_class}">{$label dtb_class_name creator_id}</th>
+			<th class="{$name_class}">{$label dtb_class_name name}</th>
+			<th class="{$rank_class}">{$label dtb_class_name rank}</th>
+			<th class="{$create_date_class}">{$label dtb_class_name create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_class_name update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_class_name del_flg}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$class_name_id_class} bs-gridcell" data-field=class_name_id>{$class_name_id_mastervalue}</td>
+			<td class="{$creator_id_class} bs-gridcell" data-field=creator_id>{$creator_id_mastervalue}</td>
+			<td class="{$name_class} bs-gridcell" data-field=name>{$name_mastervalue}</td>
+			<td class="{$rank_class} bs-gridcell" data-field=rank>{$rank_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$del_flg_class} bs-gridcell" data-field=del_flg>{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

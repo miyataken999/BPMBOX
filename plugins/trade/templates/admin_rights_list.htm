@@ -1,0 +1,484 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-admin_rights_list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+		
+				
+				
+				
+				
+		
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN exitadminarea_link}
+				<li><a href="#" {$exitaalink_attrs}>管理エリアを退出する</a></li>
+		{END exitadminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_ugcontrols}
+<div {$ugcontrols_chiddenattr} data-pageid="{$pageid}" data-container="ugcontrols" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_save}
+<div {$save_chiddenattr} data-pageid="{$pageid}" data-container="save" class=" bottom-margin  col-md-6 "> 
+
+
+<span>
+<a href="#" class="btn btn-primary" {$savebutton_attrs}>保存</a>
+<a href="#" class="btn btn-default" {$resetbutton_attrs}>リセット</a>
+</span>
+
+
+
+
+</div>
+{END container_save}
+
+
+
+
+
+
+
+
+{BEGIN container_filter}
+<div {$filter_chiddenattr} data-pageid="{$pageid}" data-container="filter" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN savebuttons_block}
+<div {$ugrightbuttons_hiddenattr} data-pageid="{$pageid}" data-brick="ugrightbuttons">
+<span>
+Displaying
+	<span id=linkselectFilter class="btn-group">
+		<span class="btn btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">all tables</span>
+		<ul class="dropdown-menu">
+			<li data-value="all" ><a href="#">all tables</a></li>
+			<li data-value="modified" ><a href="#">modified tables</a></li>
+		</ul>
+	</span>
+	
+</span>
+&nbsp;&nbsp;&nbsp;
+<span>
+Ordering tables
+	<span id=linkselectOrder class="btn-group">
+		<span class="btn btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">as in menu</span>
+		<ul class="dropdown-menu">
+			<li data-value="menu" ><a href="#">as in menu</a></li>
+			<li data-value="alpha" ><a href="#">alphabetically</a></li>
+		</ul>
+	</span>
+</span>
+</div>
+{END savebuttons_block}
+
+
+
+</div>
+{END container_filter}
+
+
+
+
+
+
+</div>{END container_ugcontrols}
+
+
+
+{BEGIN container_grcontrols}
+<div {$grcontrols_chiddenattr} data-pageid="{$pageid}" data-container="grcontrols" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_groupcontrols}
+<div {$groupcontrols_chiddenattr} data-pageid="{$pageid}" data-container="groupcontrols" class=" bottom-margin text-right col-md-12 "> 
+
+
+<div {$bsugrights_groupbuttons_hiddenattr} data-pageid="{$pageid}" data-brick="bsugrights_groupbuttons">
+	<a href="#" class="btn-sm btn btn-primary" {$addgroup_attrs}>グループの追加</a>
+	<a href="#" class="btn-sm btn btn-default" {$delgroup_attrs}>グループの削除</a>
+	<a href="#" class="btn-sm btn btn-default" {$rengroup_attrs}>名称変更</a>
+	<a href="#" class="btn-sm btn btn-info" id=copyPermissions>パーミッションをコピーします...</a>
+</div>
+
+
+
+
+</div>
+{END container_groupcontrols}
+
+
+
+
+
+
+</div>{END container_grcontrols}
+
+
+
+{BEGIN container_uggroups}
+<div {$uggroups_chiddenattr} data-pageid="{$pageid}" data-container="uggroups" class="    "> 
+
+
+<ul {$bsugrightsgroups_hiddenattr} data-pageid="{$pageid}" data-brick="bsugrightsgroups" class="nav nav-tabs" >
+{BEGIN groups}
+  <li role="presentation" class="{$group_class}"> <a href="#" {$group_attrs}>{$groupname}</a> </li>
+{END groups}
+</ul>
+
+
+
+
+
+</div>
+{END container_uggroups}
+
+
+
+{BEGIN container_permgrid}
+<div {$permgrid_chiddenattr} data-pageid="{$pageid}" data-container="permgrid" class="    "> 
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rightsTable menuordered" cellpadding="0">
+		<tr class="bs-admin-header">
+			<th class="" style="min-width: 200px; text-align: left; font-size:110%; padding: 3px 10px;">
+				<div style="padding: 4px 0;" >
+					<input class="form-control" type=search id="tableRightsSearch"  placeholder="検索">			
+				</div>
+			</th>
+			<th class="" style="width:70px">
+				追加
+			</th>
+			<th class="" style="width:70px">
+				編集
+			</th>
+			<th class="" style="width:70px">
+				削除
+			</th>
+			<th class="" style="width:70px">
+				一覧/表示
+			</th>
+			<th class="" style="width:70px">
+				印刷/エクスポート
+			</th>
+			<th class="" style="width:70px">
+				インポート
+			</th>
+			<th class="" style="white-space:nowrap" style="width:70px" >
+				管理モード<br>(全てのレコードにアクセス)
+			</th>
+		</tr>
+		<tr  class="bs-admin-header ">
+			<td class="" style="text-align: left; font-size:110%; padding: 3px 10px;">
+				<div style="padding: 4px 0;" >
+					<a href="#" id="expandAll">全て広げる</a>
+				</div>
+			</td>
+			<td class="">
+				<span class="rnr-checkbox columnheader" {$A_headcheckbox}></span>
+			</td>
+			<td class="">
+				<span class="rnr-checkbox columnheader" {$E_headcheckbox}></span>
+			</td>
+			<td class="">
+				<span class="rnr-checkbox columnheader" {$D_headcheckbox}></span>
+			</td>
+			<td class="">
+				<span class="rnr-checkbox columnheader" {$S_headcheckbox}></span>
+			</td>
+			<td class="">
+				<span class="rnr-checkbox columnheader" {$P_headcheckbox}></span>
+			</td>
+			<td class="">
+				<span class="rnr-checkbox columnheader" {$I_headcheckbox}></span>
+			</td>
+			<td class="" style="white-space:nowrap">
+				<span class="rnr-checkbox columnheader" {$M_headcheckbox}></span>
+			</td>
+		</tr>
+		{BEGIN grid_row}
+		<tr  class="{$tblrowclass} rnr-row" {$tablerowattrs}>
+			<td class="rightscell {$tblcellclass}" style="white-space: nowrap;" data-col="table" {$tbl_cell}>
+				<span class="rnr-checkbox rowheader" {$tablecheckbox_attrs} align="absmiddle"></span>&nbsp;
+				{BEGIN groupControl}
+					<span data-group-expander class="menu-triangle glyphicon glyphicon-triangle-right"></span>
+				{END groupControl}
+				{$tablename}
+			</td>
+			<td class="rightscell  " data-col="A" {$A_cell}>
+			{BEGIN A_group}
+				<span class="rnr-checkbox" {$A_checkbox}></span>
+			{END A_group}
+			</td>
+			<td class="rightscell  " data-col="E" {$E_cell}>
+			{BEGIN E_group}
+				<span class="rnr-checkbox" {$E_checkbox}></span>
+			{END E_group}
+			</td>
+			<td class="rightscell  " data-col="D" {$D_cell}>
+			{BEGIN D_group}
+				<span class="rnr-checkbox" {$D_checkbox}></span>
+			{END D_group}
+			</td>
+			<td class="rightscell  " data-col="S" {$S_cell}>
+			{BEGIN S_group}
+				<span class="rnr-checkbox" {$S_checkbox}></span>
+			{END S_group}
+			</td>
+			<td class="rightscell  " data-col="P" {$P_cell}>
+			{BEGIN P_group}
+			   <span class="rnr-checkbox" {$P_checkbox}></span>
+			{END P_group}
+			</td>
+			<td class="rightscell  " data-col="I" {$I_cell}>
+			{BEGIN I_group}
+			   <span class="rnr-checkbox" {$I_checkbox}></span>
+			{END I_group}
+			</td>
+			<td class="rightscell" data-col="M" {$M_cell}>
+			{BEGIN M_group}
+			   <span class="rnr-checkbox" {$M_checkbox}></span>
+			{END M_group}
+			</td>
+		</tr>
+		{END grid_row}
+	</table>
+{END grid_block}
+
+
+
+
+
+</div>
+{END container_permgrid}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

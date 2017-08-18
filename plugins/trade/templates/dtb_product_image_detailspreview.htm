@@ -1,0 +1,55 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$product_image_id_class}">{$label dtb_product_image product_image_id}</th>
+			<th class="{$product_id_class}">{$label dtb_product_image product_id}</th>
+			<th class="{$creator_id_class}">{$label dtb_product_image creator_id}</th>
+			<th class="{$file_name_class}">{$label dtb_product_image file_name}</th>
+			<th class="{$rank_class}">{$label dtb_product_image rank}</th>
+			<th class="{$create_date_class}">{$label dtb_product_image create_date}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$product_image_id_class}">{$product_image_id_value}</td>
+			<td class="{$product_id_class}">{$product_id_value}</td>
+			<td class="{$creator_id_class}">{$creator_id_value}</td>
+			<td class="{$file_name_class}">{$file_name_value}</td>
+			<td class="{$rank_class}">{$rank_value}</td>
+			<td class="{$create_date_class}">{$create_date_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

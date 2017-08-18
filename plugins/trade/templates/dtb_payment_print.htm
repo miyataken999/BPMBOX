@@ -1,0 +1,287 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_payment print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN payment_id_fieldheadercolumn}
+			<th class="{$payment_id_class}" {$payment_id_style}  data-field="payment_id">
+				{$label dtb_payment payment_id}
+			</th>
+			{END payment_id_fieldheadercolumn}
+			{BEGIN creator_id_fieldheadercolumn}
+			<th class="{$creator_id_class}" {$creator_id_style}  data-field="creator_id">
+				{$label dtb_payment creator_id}
+			</th>
+			{END creator_id_fieldheadercolumn}
+			{BEGIN payment_method_fieldheadercolumn}
+			<th class="{$payment_method_class}" {$payment_method_style}  data-field="payment_method">
+				{$label dtb_payment payment_method}
+			</th>
+			{END payment_method_fieldheadercolumn}
+			{BEGIN charge_fieldheadercolumn}
+			<th class="{$charge_class}" {$charge_style}  data-field="charge">
+				{$label dtb_payment charge}
+			</th>
+			{END charge_fieldheadercolumn}
+			{BEGIN rule_max_fieldheadercolumn}
+			<th class="{$rule_max_class}" {$rule_max_style}  data-field="rule_max">
+				{$label dtb_payment rule_max}
+			</th>
+			{END rule_max_fieldheadercolumn}
+			{BEGIN rank_fieldheadercolumn}
+			<th class="{$rank_class}" {$rank_style}  data-field="rank">
+				{$label dtb_payment rank}
+			</th>
+			{END rank_fieldheadercolumn}
+			{BEGIN fix_flg_fieldheadercolumn}
+			<th class="{$fix_flg_class}" {$fix_flg_style}  data-field="fix_flg">
+				{$label dtb_payment fix_flg}
+			</th>
+			{END fix_flg_fieldheadercolumn}
+			{BEGIN del_flg_fieldheadercolumn}
+			<th class="{$del_flg_class}" {$del_flg_style}  data-field="del_flg">
+				{$label dtb_payment del_flg}
+			</th>
+			{END del_flg_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_payment create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_payment update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN payment_image_fieldheadercolumn}
+			<th class="{$payment_image_class}" {$payment_image_style}  data-field="payment_image">
+				{$label dtb_payment payment_image}
+			</th>
+			{END payment_image_fieldheadercolumn}
+			{BEGIN charge_flg_fieldheadercolumn}
+			<th class="{$charge_flg_class}" {$charge_flg_style}  data-field="charge_flg">
+				{$label dtb_payment charge_flg}
+			</th>
+			{END charge_flg_fieldheadercolumn}
+			{BEGIN rule_min_fieldheadercolumn}
+			<th class="{$rule_min_class}" {$rule_min_style}  data-field="rule_min">
+				{$label dtb_payment rule_min}
+			</th>
+			{END rule_min_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN payment_id_fieldcolumn}
+			<td  class="{$payment_id_class}" {$payment_id_style} {$recordattrs}>
+				{$payment_id_value}
+			</td>
+			{END payment_id_fieldcolumn}
+			{BEGIN creator_id_fieldcolumn}
+			<td  class="{$creator_id_class}" {$creator_id_style} {$recordattrs}>
+				{$creator_id_value}
+			</td>
+			{END creator_id_fieldcolumn}
+			{BEGIN payment_method_fieldcolumn}
+			<td  class="{$payment_method_class}" {$payment_method_style} {$recordattrs}>
+				{$payment_method_value}
+			</td>
+			{END payment_method_fieldcolumn}
+			{BEGIN charge_fieldcolumn}
+			<td  class="{$charge_class}" {$charge_style} {$recordattrs}>
+				{$charge_value}
+			</td>
+			{END charge_fieldcolumn}
+			{BEGIN rule_max_fieldcolumn}
+			<td  class="{$rule_max_class}" {$rule_max_style} {$recordattrs}>
+				{$rule_max_value}
+			</td>
+			{END rule_max_fieldcolumn}
+			{BEGIN rank_fieldcolumn}
+			<td  class="{$rank_class}" {$rank_style} {$recordattrs}>
+				{$rank_value}
+			</td>
+			{END rank_fieldcolumn}
+			{BEGIN fix_flg_fieldcolumn}
+			<td  class="{$fix_flg_class}" {$fix_flg_style} {$recordattrs}>
+				{$fix_flg_value}
+			</td>
+			{END fix_flg_fieldcolumn}
+			{BEGIN del_flg_fieldcolumn}
+			<td  class="{$del_flg_class}" {$del_flg_style} {$recordattrs}>
+				{$del_flg_value}
+			</td>
+			{END del_flg_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN payment_image_fieldcolumn}
+			<td  class="{$payment_image_class}" {$payment_image_style} {$recordattrs}>
+				{$payment_image_value}
+			</td>
+			{END payment_image_fieldcolumn}
+			{BEGIN charge_flg_fieldcolumn}
+			<td  class="{$charge_flg_class}" {$charge_flg_style} {$recordattrs}>
+				{$charge_flg_value}
+			</td>
+			{END charge_flg_fieldcolumn}
+			{BEGIN rule_min_fieldcolumn}
+			<td  class="{$rule_min_class}" {$rule_min_style} {$recordattrs}>
+				{$rule_min_value}
+			</td>
+			{END rule_min_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="14">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

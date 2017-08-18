@@ -1,0 +1,31 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterchartheader {$brickclass_masterchartheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_order_Chart masterchart}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+       {BEGIN chart_block}
+       <div id="chart_block{$id}">
+{$dtb_order_Chart_chart 500 320}
+        </div>
+        {END chart_block}
+
+
+
+
+{END container_mastergrid}
+
+</div>

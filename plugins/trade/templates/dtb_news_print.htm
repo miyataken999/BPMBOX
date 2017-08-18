@@ -1,0 +1,263 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_news print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN news_id_fieldheadercolumn}
+			<th class="{$news_id_class}" {$news_id_style}  data-field="news_id">
+				{$label dtb_news news_id}
+			</th>
+			{END news_id_fieldheadercolumn}
+			{BEGIN creator_id_fieldheadercolumn}
+			<th class="{$creator_id_class}" {$creator_id_style}  data-field="creator_id">
+				{$label dtb_news creator_id}
+			</th>
+			{END creator_id_fieldheadercolumn}
+			{BEGIN news_date_fieldheadercolumn}
+			<th class="{$news_date_class}" {$news_date_style}  data-field="news_date">
+				{$label dtb_news news_date}
+			</th>
+			{END news_date_fieldheadercolumn}
+			{BEGIN rank_fieldheadercolumn}
+			<th class="{$rank_class}" {$rank_style}  data-field="rank">
+				{$label dtb_news rank}
+			</th>
+			{END rank_fieldheadercolumn}
+			{BEGIN news_title_fieldheadercolumn}
+			<th class="{$news_title_class}" {$news_title_style}  data-field="news_title">
+				{$label dtb_news news_title}
+			</th>
+			{END news_title_fieldheadercolumn}
+			{BEGIN news_comment_fieldheadercolumn}
+			<th class="{$news_comment_class}" {$news_comment_style}  data-field="news_comment">
+				{$label dtb_news news_comment}
+			</th>
+			{END news_comment_fieldheadercolumn}
+			{BEGIN news_url_fieldheadercolumn}
+			<th class="{$news_url_class}" {$news_url_style}  data-field="news_url">
+				{$label dtb_news news_url}
+			</th>
+			{END news_url_fieldheadercolumn}
+			{BEGIN news_select_fieldheadercolumn}
+			<th class="{$news_select_class}" {$news_select_style}  data-field="news_select">
+				{$label dtb_news news_select}
+			</th>
+			{END news_select_fieldheadercolumn}
+			{BEGIN link_method_fieldheadercolumn}
+			<th class="{$link_method_class}" {$link_method_style}  data-field="link_method">
+				{$label dtb_news link_method}
+			</th>
+			{END link_method_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_news create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_news update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN del_flg_fieldheadercolumn}
+			<th class="{$del_flg_class}" {$del_flg_style}  data-field="del_flg">
+				{$label dtb_news del_flg}
+			</th>
+			{END del_flg_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN news_id_fieldcolumn}
+			<td  class="{$news_id_class}" {$news_id_style} {$recordattrs}>
+				{$news_id_value}
+			</td>
+			{END news_id_fieldcolumn}
+			{BEGIN creator_id_fieldcolumn}
+			<td  class="{$creator_id_class}" {$creator_id_style} {$recordattrs}>
+				{$creator_id_value}
+			</td>
+			{END creator_id_fieldcolumn}
+			{BEGIN news_date_fieldcolumn}
+			<td  class="{$news_date_class}" {$news_date_style} {$recordattrs}>
+				{$news_date_value}
+			</td>
+			{END news_date_fieldcolumn}
+			{BEGIN rank_fieldcolumn}
+			<td  class="{$rank_class}" {$rank_style} {$recordattrs}>
+				{$rank_value}
+			</td>
+			{END rank_fieldcolumn}
+			{BEGIN news_title_fieldcolumn}
+			<td  class="{$news_title_class}" {$news_title_style} {$recordattrs}>
+				{$news_title_value}
+			</td>
+			{END news_title_fieldcolumn}
+			{BEGIN news_comment_fieldcolumn}
+			<td  class="{$news_comment_class}" {$news_comment_style} {$recordattrs}>
+				{$news_comment_value}
+			</td>
+			{END news_comment_fieldcolumn}
+			{BEGIN news_url_fieldcolumn}
+			<td  class="{$news_url_class}" {$news_url_style} {$recordattrs}>
+				{$news_url_value}
+			</td>
+			{END news_url_fieldcolumn}
+			{BEGIN news_select_fieldcolumn}
+			<td  class="{$news_select_class}" {$news_select_style} {$recordattrs}>
+				{$news_select_value}
+			</td>
+			{END news_select_fieldcolumn}
+			{BEGIN link_method_fieldcolumn}
+			<td  class="{$link_method_class}" {$link_method_style} {$recordattrs}>
+				{$link_method_value}
+			</td>
+			{END link_method_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN del_flg_fieldcolumn}
+			<td  class="{$del_flg_class}" {$del_flg_style} {$recordattrs}>
+				{$del_flg_value}
+			</td>
+			{END del_flg_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

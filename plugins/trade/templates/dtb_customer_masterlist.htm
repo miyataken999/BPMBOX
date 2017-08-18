@@ -1,0 +1,225 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_customer masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=customer_id]:before {
+		content: "{$label dtb_customer customer_id}";
+	}
+	.bs-gridcell[data-field=status]:before {
+		content: "{$label dtb_customer status}";
+	}
+	.bs-gridcell[data-field=sex]:before {
+		content: "{$label dtb_customer sex}";
+	}
+	.bs-gridcell[data-field=job]:before {
+		content: "{$label dtb_customer job}";
+	}
+	.bs-gridcell[data-field=country_id]:before {
+		content: "{$label dtb_customer country_id}";
+	}
+	.bs-gridcell[data-field=pref]:before {
+		content: "{$label dtb_customer pref}";
+	}
+	.bs-gridcell[data-field=name01]:before {
+		content: "{$label dtb_customer name01}";
+	}
+	.bs-gridcell[data-field=name02]:before {
+		content: "{$label dtb_customer name02}";
+	}
+	.bs-gridcell[data-field=kana01]:before {
+		content: "{$label dtb_customer kana01}";
+	}
+	.bs-gridcell[data-field=kana02]:before {
+		content: "{$label dtb_customer kana02}";
+	}
+	.bs-gridcell[data-field=company_name]:before {
+		content: "{$label dtb_customer company_name}";
+	}
+	.bs-gridcell[data-field=zip01]:before {
+		content: "{$label dtb_customer zip01}";
+	}
+	.bs-gridcell[data-field=zip02]:before {
+		content: "{$label dtb_customer zip02}";
+	}
+	.bs-gridcell[data-field=zipcode]:before {
+		content: "{$label dtb_customer zipcode}";
+	}
+	.bs-gridcell[data-field=addr01]:before {
+		content: "{$label dtb_customer addr01}";
+	}
+	.bs-gridcell[data-field=addr02]:before {
+		content: "{$label dtb_customer addr02}";
+	}
+	.bs-gridcell[data-field=email]:before {
+		content: "{$label dtb_customer email}";
+	}
+	.bs-gridcell[data-field=tel01]:before {
+		content: "{$label dtb_customer tel01}";
+	}
+	.bs-gridcell[data-field=tel02]:before {
+		content: "{$label dtb_customer tel02}";
+	}
+	.bs-gridcell[data-field=tel03]:before {
+		content: "{$label dtb_customer tel03}";
+	}
+	.bs-gridcell[data-field=fax01]:before {
+		content: "{$label dtb_customer fax01}";
+	}
+	.bs-gridcell[data-field=fax02]:before {
+		content: "{$label dtb_customer fax02}";
+	}
+	.bs-gridcell[data-field=fax03]:before {
+		content: "{$label dtb_customer fax03}";
+	}
+	.bs-gridcell[data-field=birth]:before {
+		content: "{$label dtb_customer birth}";
+	}
+	.bs-gridcell[data-field=password]:before {
+		content: "{$label dtb_customer password}";
+	}
+	.bs-gridcell[data-field=salt]:before {
+		content: "{$label dtb_customer salt}";
+	}
+	.bs-gridcell[data-field=secret_key]:before {
+		content: "{$label dtb_customer secret_key}";
+	}
+	.bs-gridcell[data-field=first_buy_date]:before {
+		content: "{$label dtb_customer first_buy_date}";
+	}
+	.bs-gridcell[data-field=last_buy_date]:before {
+		content: "{$label dtb_customer last_buy_date}";
+	}
+	.bs-gridcell[data-field=buy_times]:before {
+		content: "{$label dtb_customer buy_times}";
+	}
+	.bs-gridcell[data-field=buy_total]:before {
+		content: "{$label dtb_customer buy_total}";
+	}
+	.bs-gridcell[data-field=note]:before {
+		content: "{$label dtb_customer note}";
+	}
+	.bs-gridcell[data-field=reset_key]:before {
+		content: "{$label dtb_customer reset_key}";
+	}
+	.bs-gridcell[data-field=reset_expire]:before {
+		content: "{$label dtb_customer reset_expire}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_customer create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_customer update_date}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_customer del_flg}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$customer_id_class}">{$label dtb_customer customer_id}</th>
+			<th class="{$status_class}">{$label dtb_customer status}</th>
+			<th class="{$sex_class}">{$label dtb_customer sex}</th>
+			<th class="{$job_class}">{$label dtb_customer job}</th>
+			<th class="{$country_id_class}">{$label dtb_customer country_id}</th>
+			<th class="{$pref_class}">{$label dtb_customer pref}</th>
+			<th class="{$name01_class}">{$label dtb_customer name01}</th>
+			<th class="{$name02_class}">{$label dtb_customer name02}</th>
+			<th class="{$kana01_class}">{$label dtb_customer kana01}</th>
+			<th class="{$kana02_class}">{$label dtb_customer kana02}</th>
+			<th class="{$company_name_class}">{$label dtb_customer company_name}</th>
+			<th class="{$zip01_class}">{$label dtb_customer zip01}</th>
+			<th class="{$zip02_class}">{$label dtb_customer zip02}</th>
+			<th class="{$zipcode_class}">{$label dtb_customer zipcode}</th>
+			<th class="{$addr01_class}">{$label dtb_customer addr01}</th>
+			<th class="{$addr02_class}">{$label dtb_customer addr02}</th>
+			<th class="{$email_class}">{$label dtb_customer email}</th>
+			<th class="{$tel01_class}">{$label dtb_customer tel01}</th>
+			<th class="{$tel02_class}">{$label dtb_customer tel02}</th>
+			<th class="{$tel03_class}">{$label dtb_customer tel03}</th>
+			<th class="{$fax01_class}">{$label dtb_customer fax01}</th>
+			<th class="{$fax02_class}">{$label dtb_customer fax02}</th>
+			<th class="{$fax03_class}">{$label dtb_customer fax03}</th>
+			<th class="{$birth_class}">{$label dtb_customer birth}</th>
+			<th class="{$password_class}">{$label dtb_customer password}</th>
+			<th class="{$salt_class}">{$label dtb_customer salt}</th>
+			<th class="{$secret_key_class}">{$label dtb_customer secret_key}</th>
+			<th class="{$first_buy_date_class}">{$label dtb_customer first_buy_date}</th>
+			<th class="{$last_buy_date_class}">{$label dtb_customer last_buy_date}</th>
+			<th class="{$buy_times_class}">{$label dtb_customer buy_times}</th>
+			<th class="{$buy_total_class}">{$label dtb_customer buy_total}</th>
+			<th class="{$note_class}">{$label dtb_customer note}</th>
+			<th class="{$reset_key_class}">{$label dtb_customer reset_key}</th>
+			<th class="{$reset_expire_class}">{$label dtb_customer reset_expire}</th>
+			<th class="{$create_date_class}">{$label dtb_customer create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_customer update_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_customer del_flg}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$customer_id_class} bs-gridcell" data-field=customer_id>{$customer_id_mastervalue}</td>
+			<td class="{$status_class} bs-gridcell" data-field=status>{$status_mastervalue}</td>
+			<td class="{$sex_class} bs-gridcell" data-field=sex>{$sex_mastervalue}</td>
+			<td class="{$job_class} bs-gridcell" data-field=job>{$job_mastervalue}</td>
+			<td class="{$country_id_class} bs-gridcell" data-field=country_id>{$country_id_mastervalue}</td>
+			<td class="{$pref_class} bs-gridcell" data-field=pref>{$pref_mastervalue}</td>
+			<td class="{$name01_class} bs-gridcell" data-field=name01>{$name01_mastervalue}</td>
+			<td class="{$name02_class} bs-gridcell" data-field=name02>{$name02_mastervalue}</td>
+			<td class="{$kana01_class} bs-gridcell" data-field=kana01>{$kana01_mastervalue}</td>
+			<td class="{$kana02_class} bs-gridcell" data-field=kana02>{$kana02_mastervalue}</td>
+			<td class="{$company_name_class} bs-gridcell" data-field=company_name>{$company_name_mastervalue}</td>
+			<td class="{$zip01_class} bs-gridcell" data-field=zip01>{$zip01_mastervalue}</td>
+			<td class="{$zip02_class} bs-gridcell" data-field=zip02>{$zip02_mastervalue}</td>
+			<td class="{$zipcode_class} bs-gridcell" data-field=zipcode>{$zipcode_mastervalue}</td>
+			<td class="{$addr01_class} bs-gridcell" data-field=addr01>{$addr01_mastervalue}</td>
+			<td class="{$addr02_class} bs-gridcell" data-field=addr02>{$addr02_mastervalue}</td>
+			<td class="{$email_class} bs-gridcell" data-field=email>{$email_mastervalue}</td>
+			<td class="{$tel01_class} bs-gridcell" data-field=tel01>{$tel01_mastervalue}</td>
+			<td class="{$tel02_class} bs-gridcell" data-field=tel02>{$tel02_mastervalue}</td>
+			<td class="{$tel03_class} bs-gridcell" data-field=tel03>{$tel03_mastervalue}</td>
+			<td class="{$fax01_class} bs-gridcell" data-field=fax01>{$fax01_mastervalue}</td>
+			<td class="{$fax02_class} bs-gridcell" data-field=fax02>{$fax02_mastervalue}</td>
+			<td class="{$fax03_class} bs-gridcell" data-field=fax03>{$fax03_mastervalue}</td>
+			<td class="{$birth_class} bs-gridcell" data-field=birth>{$birth_mastervalue}</td>
+			<td class="{$password_class} bs-gridcell" data-field=password>{$password_mastervalue}</td>
+			<td class="{$salt_class} bs-gridcell" data-field=salt>{$salt_mastervalue}</td>
+			<td class="{$secret_key_class} bs-gridcell" data-field=secret_key>{$secret_key_mastervalue}</td>
+			<td class="{$first_buy_date_class} bs-gridcell" data-field=first_buy_date>{$first_buy_date_mastervalue}</td>
+			<td class="{$last_buy_date_class} bs-gridcell" data-field=last_buy_date>{$last_buy_date_mastervalue}</td>
+			<td class="{$buy_times_class} bs-gridcell" data-field=buy_times>{$buy_times_mastervalue}</td>
+			<td class="{$buy_total_class} bs-gridcell" data-field=buy_total>{$buy_total_mastervalue}</td>
+			<td class="{$note_class} bs-gridcell" data-field=note>{$note_mastervalue}</td>
+			<td class="{$reset_key_class} bs-gridcell" data-field=reset_key>{$reset_key_mastervalue}</td>
+			<td class="{$reset_expire_class} bs-gridcell" data-field=reset_expire>{$reset_expire_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$del_flg_class} bs-gridcell" data-field=del_flg>{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

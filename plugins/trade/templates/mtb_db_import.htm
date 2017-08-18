@@ -1,0 +1,250 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-import" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_page}
+<div {$page_chiddenattr} data-pageid="{$pageid}" data-container="page" class=" bs-standalone-page   "> 
+
+
+
+
+{BEGIN container_panel}
+<div {$panel_chiddenattr} data-pageid="{$pageid}" data-container="panel" class=" bs-pagepanel bs-bigpanel panel panel-primary   "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class=" panel-heading   "> 
+
+
+<h3 {$importheader_hiddenattr} data-pageid="{$pageid}" data-brick="importheader" class="panel-title">インポート</h3>
+
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_body}
+<div {$body_chiddenattr} data-pageid="{$pageid}" data-container="body" class=" panel-body   "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+
+<div {$errormessage_hiddenattr} data-pageid="{$pageid}" data-brick="errormessage">{$error_message}</div>
+
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+
+{BEGIN container_import}
+<div {$import_chiddenattr} data-pageid="{$pageid}" data-container="import" class="   col-md-12 "> 
+
+
+<div {$importheader_text_hiddenattr} data-pageid="{$pageid}" data-brick="importheader_text" class="form-group">
+	ＣＳＶ(.csv)あるいはＥｘｃｅｌ(.xlsx)ファイルを貼り付ける
+</div>
+
+
+
+
+<div {$importfields_hiddenattr} data-pageid="{$pageid}" data-brick="importfields" class="form-group">
+	<div id="importUploadFallback{$id}" style="display: none;">
+	<table class="fieldGrid">
+		<tr>
+			<td>
+				ファイルを選択する。
+			</td>
+			<td>
+				<input type="File" id="importFile{$id}" name="importFile{$id}">
+			</td>
+		</tr>
+	</table>
+	</div>
+
+	<div class="rnr-import-settings">
+	<a href="#" class="btn btn-default" id="uploadImportFile{$id}"> 選択.. </a>
+	</div>
+
+	<div id="importDropzone{$id}" class="rnr-dragndrop-area" style="display: none;">
+		<div class="rnr-dragtext"> ファイルをここにドロップ </div>
+	</div>
+
+	<div class="rnr-import-settings">
+	<a id="switchToTextInsertion{$id}" href="#" class="btn btn-default"> テキストを貼り付ける </a>
+	</div>
+</div>
+
+
+
+
+
+<div {$import_rawtext_control_hiddenattr} data-pageid="{$pageid}" data-brick="import_rawtext_control" id="copyAndPasteText{$id}" class="form-group">
+	<div> ここにテキストデータを貼り付ける </div>
+	<textarea class="rnr-import-textarea" id="importText{$id}">
+	</textarea>
+</div>
+
+
+
+
+<div {$import_preview_hiddenattr} data-pageid="{$pageid}" data-brick="import_preview" class="form-group">
+	<div id="importSettings{$id}" class="rnr-import-settings form-group">
+		<div class="rnr-is-control checkbox">
+    		<label><input class="rnr-checkbox" checked="checked" id="columnsInFirstLine{$id}" name="columnsInFirstLine" type="checkbox"> 一行目が列のヘッダー</label>
+  		</div>
+
+		<ul id="delimiterSettings{$id}" style="display:none;" class="rnr-is-control list-inline">
+			<li class="radio"><label><input name="importDelimiter" class="importDelimiters" type="radio" value=",">コンマ</label></li>
+			<li class="radio"><label><input name="importDelimiter" class="importDelimiters" type="radio" value="&#9;">タブ</label></li>
+			<li class="radio"><label><input name="importDelimiter" class="importDelimiters" type="radio" value="other">その他</label> <input id="customDelimiter{$id}" value=";" type="text"></li>
+			
+		</ul>	
+			
+		<div id="dateFormatSettings{$id}" class="rnr-is-control" style="display:none;">
+			<label>データフォーマット</label>
+			<input id="importDateFormat{$id}" type="text">
+		</div>
+
+	</div>
+
+	<div id="importGridHead{$id}" class="rnr-import-head-preview">
+	</div>
+	<div id="importGridBody{$id}" class="rnr-import-body-preview form-group">
+		<table id="importPreviewBodyTable{$id}">
+		</table>
+	</div>
+
+	<div id="importErrorMessage{$id}" class="alert alert-danger" style="display:none;"></div>
+</div>
+
+
+
+
+<div {$import_process_hiddenattr} data-pageid="{$pageid}" data-brick="import_process" id="importProgress{$id}" class="rnr-import-progress form-group">
+</div>
+
+
+
+
+
+<div {$import_results_hiddenattr} data-pageid="{$pageid}" data-brick="import_results" id="reportText{$id}" class="rnr-import-report form-group">
+</div>
+
+
+
+
+
+<div {$importbuttons_hiddenattr} data-pageid="{$pageid}" data-brick="importbuttons">
+	<div class="rnr-buttons-right">
+		<a href="#" class="btn btn-default" id="backToList{$id}">一覧に戻る</a>
+		<a href="#" class="btn btn-default" id="newImport{$id}" style="display: none;">新規インポート</a>
+	</div>
+	<div class="rnr-buttons-left">
+		<a id="continueTextImport{$id}" href="#" class="btn btn-primary disabled" style="display: none;"> 進む </a>	
+		<a id="importButton{$id}" href="#" class="btn btn-primary" style="display: none;">インポートする</a>	
+		<a href="#" class="btn btn-default" id="backTo{$id}" style="display: none;">戻る</a>
+		
+		<a id="saveReport{$id}" href="#" class="btn btn-default" style="display: none;">リポートを保存</a>
+		<a id="saveUnprocessedData{$id}" href="#" class="btn btn-default errorReportButtons{$id}" style="display: none;">未処理のデータをダウンロードする</a>
+		<a id="saveErrorReport{$id}" href="#" class="btn btn-default errorReportButtons{$id}" style="display: none;">エラーログをダウンロードする</a>
+	</div>
+</div>
+
+
+
+
+
+</div>
+{END container_import}
+
+
+
+
+
+
+</div>
+{END container_body}
+
+
+
+
+
+
+</div>
+{END container_panel}
+
+
+
+
+
+
+</div>
+{END container_page}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

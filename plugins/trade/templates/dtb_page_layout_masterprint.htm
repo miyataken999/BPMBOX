@@ -1,0 +1,63 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_page_layout masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$page_id_class}">{$label dtb_page_layout page_id}</th>
+			<th class="{$device_type_id_class}">{$label dtb_page_layout device_type_id}</th>
+			<th class="{$page_name_class}">{$label dtb_page_layout page_name}</th>
+			<th class="{$url_class}">{$label dtb_page_layout url}</th>
+			<th class="{$file_name_class}">{$label dtb_page_layout file_name}</th>
+			<th class="{$edit_flg_class}">{$label dtb_page_layout edit_flg}</th>
+			<th class="{$author_class}">{$label dtb_page_layout author}</th>
+			<th class="{$description_class}">{$label dtb_page_layout description}</th>
+			<th class="{$keyword_class}">{$label dtb_page_layout keyword}</th>
+			<th class="{$update_url_class}">{$label dtb_page_layout update_url}</th>
+			<th class="{$create_date_class}">{$label dtb_page_layout create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_page_layout update_date}</th>
+			<th class="{$meta_robots_class}">{$label dtb_page_layout meta_robots}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$page_id_class}">{$page_id_mastervalue}</td>
+			<td class="{$device_type_id_class}">{$device_type_id_mastervalue}</td>
+			<td class="{$page_name_class}">{$page_name_mastervalue}</td>
+			<td class="{$url_class}">{$url_mastervalue}</td>
+			<td class="{$file_name_class}">{$file_name_mastervalue}</td>
+			<td class="{$edit_flg_class}">{$edit_flg_mastervalue}</td>
+			<td class="{$author_class}">{$author_mastervalue}</td>
+			<td class="{$description_class}">{$description_mastervalue}</td>
+			<td class="{$keyword_class}">{$keyword_mastervalue}</td>
+			<td class="{$update_url_class}">{$update_url_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$meta_robots_class}">{$meta_robots_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

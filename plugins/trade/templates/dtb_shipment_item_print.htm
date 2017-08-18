@@ -1,0 +1,273 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_shipment_item print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN item_id_fieldheadercolumn}
+			<th class="{$item_id_class}" {$item_id_style}  data-field="item_id">
+				{$label dtb_shipment_item item_id}
+			</th>
+			{END item_id_fieldheadercolumn}
+			{BEGIN order_id_fieldheadercolumn}
+			<th class="{$order_id_class}" {$order_id_style}  data-field="order_id">
+				{$label dtb_shipment_item order_id}
+			</th>
+			{END order_id_fieldheadercolumn}
+			{BEGIN product_id_fieldheadercolumn}
+			<th class="{$product_id_class}" {$product_id_style}  data-field="product_id">
+				{$label dtb_shipment_item product_id}
+			</th>
+			{END product_id_fieldheadercolumn}
+			{BEGIN product_class_id_fieldheadercolumn}
+			<th class="{$product_class_id_class}" {$product_class_id_style}  data-field="product_class_id">
+				{$label dtb_shipment_item product_class_id}
+			</th>
+			{END product_class_id_fieldheadercolumn}
+			{BEGIN shipping_id_fieldheadercolumn}
+			<th class="{$shipping_id_class}" {$shipping_id_style}  data-field="shipping_id">
+				{$label dtb_shipment_item shipping_id}
+			</th>
+			{END shipping_id_fieldheadercolumn}
+			{BEGIN product_name_fieldheadercolumn}
+			<th class="{$product_name_class}" {$product_name_style}  data-field="product_name">
+				{$label dtb_shipment_item product_name}
+			</th>
+			{END product_name_fieldheadercolumn}
+			{BEGIN product_code_fieldheadercolumn}
+			<th class="{$product_code_class}" {$product_code_style}  data-field="product_code">
+				{$label dtb_shipment_item product_code}
+			</th>
+			{END product_code_fieldheadercolumn}
+			{BEGIN class_name1_fieldheadercolumn}
+			<th class="{$class_name1_class}" {$class_name1_style}  data-field="class_name1">
+				{$label dtb_shipment_item class_name1}
+			</th>
+			{END class_name1_fieldheadercolumn}
+			{BEGIN class_name2_fieldheadercolumn}
+			<th class="{$class_name2_class}" {$class_name2_style}  data-field="class_name2">
+				{$label dtb_shipment_item class_name2}
+			</th>
+			{END class_name2_fieldheadercolumn}
+			{BEGIN class_category_name1_fieldheadercolumn}
+			<th class="{$class_category_name1_class}" {$class_category_name1_style}  data-field="class_category_name1">
+				{$label dtb_shipment_item class_category_name1}
+			</th>
+			{END class_category_name1_fieldheadercolumn}
+			{BEGIN class_category_name2_fieldheadercolumn}
+			<th class="{$class_category_name2_class}" {$class_category_name2_style}  data-field="class_category_name2">
+				{$label dtb_shipment_item class_category_name2}
+			</th>
+			{END class_category_name2_fieldheadercolumn}
+			{BEGIN price_fieldheadercolumn}
+			<th class="{$price_class}" {$price_style}  data-field="price">
+				{$label dtb_shipment_item price}
+			</th>
+			{END price_fieldheadercolumn}
+			{BEGIN quantity_fieldheadercolumn}
+			<th class="{$quantity_class}" {$quantity_style}  data-field="quantity">
+				{$label dtb_shipment_item quantity}
+			</th>
+			{END quantity_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN item_id_fieldcolumn}
+			<td  class="{$item_id_class}" {$item_id_style} {$recordattrs}>
+				{$item_id_value}
+			</td>
+			{END item_id_fieldcolumn}
+			{BEGIN order_id_fieldcolumn}
+			<td  class="{$order_id_class}" {$order_id_style} {$recordattrs}>
+				{$order_id_value}
+			</td>
+			{END order_id_fieldcolumn}
+			{BEGIN product_id_fieldcolumn}
+			<td  class="{$product_id_class}" {$product_id_style} {$recordattrs}>
+				{$product_id_value}
+			</td>
+			{END product_id_fieldcolumn}
+			{BEGIN product_class_id_fieldcolumn}
+			<td  class="{$product_class_id_class}" {$product_class_id_style} {$recordattrs}>
+				{$product_class_id_value}
+			</td>
+			{END product_class_id_fieldcolumn}
+			{BEGIN shipping_id_fieldcolumn}
+			<td  class="{$shipping_id_class}" {$shipping_id_style} {$recordattrs}>
+				{$shipping_id_value}
+			</td>
+			{END shipping_id_fieldcolumn}
+			{BEGIN product_name_fieldcolumn}
+			<td  class="{$product_name_class}" {$product_name_style} {$recordattrs}>
+				{$product_name_value}
+			</td>
+			{END product_name_fieldcolumn}
+			{BEGIN product_code_fieldcolumn}
+			<td  class="{$product_code_class}" {$product_code_style} {$recordattrs}>
+				{$product_code_value}
+			</td>
+			{END product_code_fieldcolumn}
+			{BEGIN class_name1_fieldcolumn}
+			<td  class="{$class_name1_class}" {$class_name1_style} {$recordattrs}>
+				{$class_name1_value}
+			</td>
+			{END class_name1_fieldcolumn}
+			{BEGIN class_name2_fieldcolumn}
+			<td  class="{$class_name2_class}" {$class_name2_style} {$recordattrs}>
+				{$class_name2_value}
+			</td>
+			{END class_name2_fieldcolumn}
+			{BEGIN class_category_name1_fieldcolumn}
+			<td  class="{$class_category_name1_class}" {$class_category_name1_style} {$recordattrs}>
+				{$class_category_name1_value}
+			</td>
+			{END class_category_name1_fieldcolumn}
+			{BEGIN class_category_name2_fieldcolumn}
+			<td  class="{$class_category_name2_class}" {$class_category_name2_style} {$recordattrs}>
+				{$class_category_name2_value}
+			</td>
+			{END class_category_name2_fieldcolumn}
+			{BEGIN price_fieldcolumn}
+			<td  class="{$price_class}" {$price_style} {$recordattrs}>
+				{$price_value}
+			</td>
+			{END price_fieldcolumn}
+			{BEGIN quantity_fieldcolumn}
+			<td  class="{$quantity_class}" {$quantity_style} {$recordattrs}>
+				{$quantity_value}
+			</td>
+			{END quantity_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

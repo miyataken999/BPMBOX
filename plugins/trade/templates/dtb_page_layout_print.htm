@@ -1,0 +1,287 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_page_layout print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN page_id_fieldheadercolumn}
+			<th class="{$page_id_class}" {$page_id_style}  data-field="page_id">
+				{$label dtb_page_layout page_id}
+			</th>
+			{END page_id_fieldheadercolumn}
+			{BEGIN device_type_id_fieldheadercolumn}
+			<th class="{$device_type_id_class}" {$device_type_id_style}  data-field="device_type_id">
+				{$label dtb_page_layout device_type_id}
+			</th>
+			{END device_type_id_fieldheadercolumn}
+			{BEGIN page_name_fieldheadercolumn}
+			<th class="{$page_name_class}" {$page_name_style}  data-field="page_name">
+				{$label dtb_page_layout page_name}
+			</th>
+			{END page_name_fieldheadercolumn}
+			{BEGIN url_fieldheadercolumn}
+			<th class="{$url_class}" {$url_style}  data-field="url">
+				{$label dtb_page_layout url}
+			</th>
+			{END url_fieldheadercolumn}
+			{BEGIN file_name_fieldheadercolumn}
+			<th class="{$file_name_class}" {$file_name_style}  data-field="file_name">
+				{$label dtb_page_layout file_name}
+			</th>
+			{END file_name_fieldheadercolumn}
+			{BEGIN edit_flg_fieldheadercolumn}
+			<th class="{$edit_flg_class}" {$edit_flg_style}  data-field="edit_flg">
+				{$label dtb_page_layout edit_flg}
+			</th>
+			{END edit_flg_fieldheadercolumn}
+			{BEGIN author_fieldheadercolumn}
+			<th class="{$author_class}" {$author_style}  data-field="author">
+				{$label dtb_page_layout author}
+			</th>
+			{END author_fieldheadercolumn}
+			{BEGIN description_fieldheadercolumn}
+			<th class="{$description_class}" {$description_style}  data-field="description">
+				{$label dtb_page_layout description}
+			</th>
+			{END description_fieldheadercolumn}
+			{BEGIN keyword_fieldheadercolumn}
+			<th class="{$keyword_class}" {$keyword_style}  data-field="keyword">
+				{$label dtb_page_layout keyword}
+			</th>
+			{END keyword_fieldheadercolumn}
+			{BEGIN update_url_fieldheadercolumn}
+			<th class="{$update_url_class}" {$update_url_style}  data-field="update_url">
+				{$label dtb_page_layout update_url}
+			</th>
+			{END update_url_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_page_layout create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_page_layout update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN meta_robots_fieldheadercolumn}
+			<th class="{$meta_robots_class}" {$meta_robots_style}  data-field="meta_robots">
+				{$label dtb_page_layout meta_robots}
+			</th>
+			{END meta_robots_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN page_id_fieldcolumn}
+			<td  class="{$page_id_class}" {$page_id_style} {$recordattrs}>
+				{$page_id_value}
+			</td>
+			{END page_id_fieldcolumn}
+			{BEGIN device_type_id_fieldcolumn}
+			<td  class="{$device_type_id_class}" {$device_type_id_style} {$recordattrs}>
+				{$device_type_id_value}
+			</td>
+			{END device_type_id_fieldcolumn}
+			{BEGIN page_name_fieldcolumn}
+			<td  class="{$page_name_class}" {$page_name_style} {$recordattrs}>
+				{$page_name_value}
+			</td>
+			{END page_name_fieldcolumn}
+			{BEGIN url_fieldcolumn}
+			<td  class="{$url_class}" {$url_style} {$recordattrs}>
+				{$url_value}
+			</td>
+			{END url_fieldcolumn}
+			{BEGIN file_name_fieldcolumn}
+			<td  class="{$file_name_class}" {$file_name_style} {$recordattrs}>
+				{$file_name_value}
+			</td>
+			{END file_name_fieldcolumn}
+			{BEGIN edit_flg_fieldcolumn}
+			<td  class="{$edit_flg_class}" {$edit_flg_style} {$recordattrs}>
+				{$edit_flg_value}
+			</td>
+			{END edit_flg_fieldcolumn}
+			{BEGIN author_fieldcolumn}
+			<td  class="{$author_class}" {$author_style} {$recordattrs}>
+				{$author_value}
+			</td>
+			{END author_fieldcolumn}
+			{BEGIN description_fieldcolumn}
+			<td  class="{$description_class}" {$description_style} {$recordattrs}>
+				{$description_value}
+			</td>
+			{END description_fieldcolumn}
+			{BEGIN keyword_fieldcolumn}
+			<td  class="{$keyword_class}" {$keyword_style} {$recordattrs}>
+				{$keyword_value}
+			</td>
+			{END keyword_fieldcolumn}
+			{BEGIN update_url_fieldcolumn}
+			<td  class="{$update_url_class}" {$update_url_style} {$recordattrs}>
+				{$update_url_value}
+			</td>
+			{END update_url_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN meta_robots_fieldcolumn}
+			<td  class="{$meta_robots_class}" {$meta_robots_style} {$recordattrs}>
+				{$meta_robots_value}
+			</td>
+			{END meta_robots_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="14">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,435 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_order1 masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=order_id]:before {
+		content: "{$label dtb_order1 order_id}";
+	}
+	.bs-gridcell[data-field=customer_id]:before {
+		content: "{$label dtb_order1 customer_id}";
+	}
+	.bs-gridcell[data-field=order_country_id]:before {
+		content: "{$label dtb_order1 order_country_id}";
+	}
+	.bs-gridcell[data-field=order_pref]:before {
+		content: "{$label dtb_order1 order_pref}";
+	}
+	.bs-gridcell[data-field=order_sex]:before {
+		content: "{$label dtb_order1 order_sex}";
+	}
+	.bs-gridcell[data-field=order_job]:before {
+		content: "{$label dtb_order1 order_job}";
+	}
+	.bs-gridcell[data-field=payment_id]:before {
+		content: "{$label dtb_order1 payment_id}";
+	}
+	.bs-gridcell[data-field=device_type_id]:before {
+		content: "{$label dtb_order1 device_type_id}";
+	}
+	.bs-gridcell[data-field=pre_order_id]:before {
+		content: "{$label dtb_order1 pre_order_id}";
+	}
+	.bs-gridcell[data-field=message]:before {
+		content: "{$label dtb_order1 message}";
+	}
+	.bs-gridcell[data-field=order_name01]:before {
+		content: "{$label dtb_order1 order_name01}";
+	}
+	.bs-gridcell[data-field=order_name02]:before {
+		content: "{$label dtb_order1 order_name02}";
+	}
+	.bs-gridcell[data-field=order_kana01]:before {
+		content: "{$label dtb_order1 order_kana01}";
+	}
+	.bs-gridcell[data-field=order_kana02]:before {
+		content: "{$label dtb_order1 order_kana02}";
+	}
+	.bs-gridcell[data-field=order_company_name]:before {
+		content: "{$label dtb_order1 order_company_name}";
+	}
+	.bs-gridcell[data-field=order_email]:before {
+		content: "{$label dtb_order1 order_email}";
+	}
+	.bs-gridcell[data-field=order_tel01]:before {
+		content: "{$label dtb_order1 order_tel01}";
+	}
+	.bs-gridcell[data-field=order_tel02]:before {
+		content: "{$label dtb_order1 order_tel02}";
+	}
+	.bs-gridcell[data-field=order_tel03]:before {
+		content: "{$label dtb_order1 order_tel03}";
+	}
+	.bs-gridcell[data-field=order_fax01]:before {
+		content: "{$label dtb_order1 order_fax01}";
+	}
+	.bs-gridcell[data-field=order_fax02]:before {
+		content: "{$label dtb_order1 order_fax02}";
+	}
+	.bs-gridcell[data-field=order_fax03]:before {
+		content: "{$label dtb_order1 order_fax03}";
+	}
+	.bs-gridcell[data-field=order_zip01]:before {
+		content: "{$label dtb_order1 order_zip01}";
+	}
+	.bs-gridcell[data-field=order_zip02]:before {
+		content: "{$label dtb_order1 order_zip02}";
+	}
+	.bs-gridcell[data-field=order_zipcode]:before {
+		content: "{$label dtb_order1 order_zipcode}";
+	}
+	.bs-gridcell[data-field=order_addr01]:before {
+		content: "{$label dtb_order1 order_addr01}";
+	}
+	.bs-gridcell[data-field=order_addr02]:before {
+		content: "{$label dtb_order1 order_addr02}";
+	}
+	.bs-gridcell[data-field=order_birth]:before {
+		content: "{$label dtb_order1 order_birth}";
+	}
+	.bs-gridcell[data-field=subtotal]:before {
+		content: "{$label dtb_order1 subtotal}";
+	}
+	.bs-gridcell[data-field=discount]:before {
+		content: "{$label dtb_order1 discount}";
+	}
+	.bs-gridcell[data-field=delivery_fee_total]:before {
+		content: "{$label dtb_order1 delivery_fee_total}";
+	}
+	.bs-gridcell[data-field=charge]:before {
+		content: "{$label dtb_order1 charge}";
+	}
+	.bs-gridcell[data-field=tax]:before {
+		content: "{$label dtb_order1 tax}";
+	}
+	.bs-gridcell[data-field=total]:before {
+		content: "{$label dtb_order1 total}";
+	}
+	.bs-gridcell[data-field=payment_total]:before {
+		content: "{$label dtb_order1 payment_total}";
+	}
+	.bs-gridcell[data-field=payment_method]:before {
+		content: "{$label dtb_order1 payment_method}";
+	}
+	.bs-gridcell[data-field=note]:before {
+		content: "{$label dtb_order1 note}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_order1 create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_order1 update_date}";
+	}
+	.bs-gridcell[data-field=order_date]:before {
+		content: "{$label dtb_order1 order_date}";
+	}
+	.bs-gridcell[data-field=commit_date]:before {
+		content: "{$label dtb_order1 commit_date}";
+	}
+	.bs-gridcell[data-field=payment_date]:before {
+		content: "{$label dtb_order1 payment_date}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_order1 del_flg}";
+	}
+	.bs-gridcell[data-field=status]:before {
+		content: "{$label dtb_order1 status}";
+	}
+	.bs-gridcell[data-field=JPN]:before {
+		content: "{$label dtb_order1 JPN}";
+	}
+	.bs-gridcell[data-field=APPLICATION]:before {
+		content: "{$label dtb_order1 APPLICATION}";
+	}
+	.bs-gridcell[data-field=APPLICATION_LABEL]:before {
+		content: "{$label dtb_order1 APPLICATION_LABEL}";
+	}
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label dtb_order1 APP_UID}";
+	}
+	.bs-gridcell[data-field=DEL_INDEX]:before {
+		content: "{$label dtb_order1 DEL_INDEX}";
+	}
+	.bs-gridcell[data-field=DEL_LAST_INDEX]:before {
+		content: "{$label dtb_order1 DEL_LAST_INDEX}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label dtb_order1 APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label dtb_order1 APP_STATUS}";
+	}
+	.bs-gridcell[data-field=USR_UID]:before {
+		content: "{$label dtb_order1 USR_UID}";
+	}
+	.bs-gridcell[data-field=PREVIOUS_USR_UID]:before {
+		content: "{$label dtb_order1 PREVIOUS_USR_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label dtb_order1 TAS_UID}";
+	}
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label dtb_order1 PRO_UID}";
+	}
+	.bs-gridcell[data-field=DEL_DELEGATE_DATE]:before {
+		content: "{$label dtb_order1 DEL_DELEGATE_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_INIT_DATE]:before {
+		content: "{$label dtb_order1 DEL_INIT_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_FINISH_DATE]:before {
+		content: "{$label dtb_order1 DEL_FINISH_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_TASK_DUE_DATE]:before {
+		content: "{$label dtb_order1 DEL_TASK_DUE_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_RISK_DATE]:before {
+		content: "{$label dtb_order1 DEL_RISK_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_THREAD_STATUS]:before {
+		content: "{$label dtb_order1 DEL_THREAD_STATUS}";
+	}
+	.bs-gridcell[data-field=APP_THREAD_STATUS]:before {
+		content: "{$label dtb_order1 APP_THREAD_STATUS}";
+	}
+	.bs-gridcell[data-field=APP_TITLE]:before {
+		content: "{$label dtb_order1 APP_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_PRO_TITLE]:before {
+		content: "{$label dtb_order1 APP_PRO_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_TAS_TITLE]:before {
+		content: "{$label dtb_order1 APP_TAS_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_CURRENT_USER]:before {
+		content: "{$label dtb_order1 APP_CURRENT_USER}";
+	}
+	.bs-gridcell[data-field=APP_DEL_PREVIOUS_USER]:before {
+		content: "{$label dtb_order1 APP_DEL_PREVIOUS_USER}";
+	}
+	.bs-gridcell[data-field=DEL_PRIORITY]:before {
+		content: "{$label dtb_order1 DEL_PRIORITY}";
+	}
+	.bs-gridcell[data-field=DEL_DURATION]:before {
+		content: "{$label dtb_order1 DEL_DURATION}";
+	}
+	.bs-gridcell[data-field=DEL_QUEUE_DURATION]:before {
+		content: "{$label dtb_order1 DEL_QUEUE_DURATION}";
+	}
+	.bs-gridcell[data-field=DEL_DELAY_DURATION]:before {
+		content: "{$label dtb_order1 DEL_DELAY_DURATION}";
+	}
+	.bs-gridcell[data-field=DEL_STARTED]:before {
+		content: "{$label dtb_order1 DEL_STARTED}";
+	}
+	.bs-gridcell[data-field=DEL_FINISHED]:before {
+		content: "{$label dtb_order1 DEL_FINISHED}";
+	}
+	.bs-gridcell[data-field=DEL_DELAYED]:before {
+		content: "{$label dtb_order1 DEL_DELAYED}";
+	}
+	.bs-gridcell[data-field=APP_CREATE_DATE]:before {
+		content: "{$label dtb_order1 APP_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=APP_FINISH_DATE]:before {
+		content: "{$label dtb_order1 APP_FINISH_DATE}";
+	}
+	.bs-gridcell[data-field=APP_UPDATE_DATE]:before {
+		content: "{$label dtb_order1 APP_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=APP_OVERDUE_PERCENTAGE]:before {
+		content: "{$label dtb_order1 APP_OVERDUE_PERCENTAGE}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$JPN_class}">{$label dtb_order1 JPN}</th>
+			<th class="{$APPLICATION_class}">{$label dtb_order1 APPLICATION}</th>
+			<th class="{$APPLICATION_LABEL_class}">{$label dtb_order1 APPLICATION_LABEL}</th>
+			<th class="{$APP_UID_class}">{$label dtb_order1 APP_UID}</th>
+			<th class="{$DEL_INDEX_class}">{$label dtb_order1 DEL_INDEX}</th>
+			<th class="{$DEL_LAST_INDEX_class}">{$label dtb_order1 DEL_LAST_INDEX}</th>
+			<th class="{$APP_NUMBER_class}">{$label dtb_order1 APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label dtb_order1 APP_STATUS}</th>
+			<th class="{$USR_UID_class}">{$label dtb_order1 USR_UID}</th>
+			<th class="{$PREVIOUS_USR_UID_class}">{$label dtb_order1 PREVIOUS_USR_UID}</th>
+			<th class="{$TAS_UID_class}">{$label dtb_order1 TAS_UID}</th>
+			<th class="{$PRO_UID_class}">{$label dtb_order1 PRO_UID}</th>
+			<th class="{$DEL_DELEGATE_DATE_class}">{$label dtb_order1 DEL_DELEGATE_DATE}</th>
+			<th class="{$DEL_INIT_DATE_class}">{$label dtb_order1 DEL_INIT_DATE}</th>
+			<th class="{$DEL_FINISH_DATE_class}">{$label dtb_order1 DEL_FINISH_DATE}</th>
+			<th class="{$DEL_TASK_DUE_DATE_class}">{$label dtb_order1 DEL_TASK_DUE_DATE}</th>
+			<th class="{$DEL_RISK_DATE_class}">{$label dtb_order1 DEL_RISK_DATE}</th>
+			<th class="{$DEL_THREAD_STATUS_class}">{$label dtb_order1 DEL_THREAD_STATUS}</th>
+			<th class="{$APP_THREAD_STATUS_class}">{$label dtb_order1 APP_THREAD_STATUS}</th>
+			<th class="{$APP_TITLE_class}">{$label dtb_order1 APP_TITLE}</th>
+			<th class="{$APP_PRO_TITLE_class}">{$label dtb_order1 APP_PRO_TITLE}</th>
+			<th class="{$APP_TAS_TITLE_class}">{$label dtb_order1 APP_TAS_TITLE}</th>
+			<th class="{$APP_CURRENT_USER_class}">{$label dtb_order1 APP_CURRENT_USER}</th>
+			<th class="{$APP_DEL_PREVIOUS_USER_class}">{$label dtb_order1 APP_DEL_PREVIOUS_USER}</th>
+			<th class="{$DEL_PRIORITY_class}">{$label dtb_order1 DEL_PRIORITY}</th>
+			<th class="{$DEL_DURATION_class}">{$label dtb_order1 DEL_DURATION}</th>
+			<th class="{$DEL_QUEUE_DURATION_class}">{$label dtb_order1 DEL_QUEUE_DURATION}</th>
+			<th class="{$DEL_DELAY_DURATION_class}">{$label dtb_order1 DEL_DELAY_DURATION}</th>
+			<th class="{$DEL_STARTED_class}">{$label dtb_order1 DEL_STARTED}</th>
+			<th class="{$DEL_FINISHED_class}">{$label dtb_order1 DEL_FINISHED}</th>
+			<th class="{$DEL_DELAYED_class}">{$label dtb_order1 DEL_DELAYED}</th>
+			<th class="{$APP_CREATE_DATE_class}">{$label dtb_order1 APP_CREATE_DATE}</th>
+			<th class="{$APP_FINISH_DATE_class}">{$label dtb_order1 APP_FINISH_DATE}</th>
+			<th class="{$APP_UPDATE_DATE_class}">{$label dtb_order1 APP_UPDATE_DATE}</th>
+			<th class="{$APP_OVERDUE_PERCENTAGE_class}">{$label dtb_order1 APP_OVERDUE_PERCENTAGE}</th>
+			<th class="{$order_id_class}">{$label dtb_order1 order_id}</th>
+			<th class="{$customer_id_class}">{$label dtb_order1 customer_id}</th>
+			<th class="{$status_class}">{$label dtb_order1 status}</th>
+			<th class="{$order_country_id_class}">{$label dtb_order1 order_country_id}</th>
+			<th class="{$order_pref_class}">{$label dtb_order1 order_pref}</th>
+			<th class="{$order_sex_class}">{$label dtb_order1 order_sex}</th>
+			<th class="{$order_job_class}">{$label dtb_order1 order_job}</th>
+			<th class="{$payment_id_class}">{$label dtb_order1 payment_id}</th>
+			<th class="{$device_type_id_class}">{$label dtb_order1 device_type_id}</th>
+			<th class="{$pre_order_id_class}">{$label dtb_order1 pre_order_id}</th>
+			<th class="{$message_class}">{$label dtb_order1 message}</th>
+			<th class="{$order_name01_class}">{$label dtb_order1 order_name01}</th>
+			<th class="{$order_name02_class}">{$label dtb_order1 order_name02}</th>
+			<th class="{$order_kana01_class}">{$label dtb_order1 order_kana01}</th>
+			<th class="{$order_kana02_class}">{$label dtb_order1 order_kana02}</th>
+			<th class="{$order_company_name_class}">{$label dtb_order1 order_company_name}</th>
+			<th class="{$order_email_class}">{$label dtb_order1 order_email}</th>
+			<th class="{$order_tel01_class}">{$label dtb_order1 order_tel01}</th>
+			<th class="{$order_tel02_class}">{$label dtb_order1 order_tel02}</th>
+			<th class="{$order_tel03_class}">{$label dtb_order1 order_tel03}</th>
+			<th class="{$order_fax01_class}">{$label dtb_order1 order_fax01}</th>
+			<th class="{$order_fax02_class}">{$label dtb_order1 order_fax02}</th>
+			<th class="{$order_fax03_class}">{$label dtb_order1 order_fax03}</th>
+			<th class="{$order_zip01_class}">{$label dtb_order1 order_zip01}</th>
+			<th class="{$order_zip02_class}">{$label dtb_order1 order_zip02}</th>
+			<th class="{$order_zipcode_class}">{$label dtb_order1 order_zipcode}</th>
+			<th class="{$order_addr01_class}">{$label dtb_order1 order_addr01}</th>
+			<th class="{$order_addr02_class}">{$label dtb_order1 order_addr02}</th>
+			<th class="{$order_birth_class}">{$label dtb_order1 order_birth}</th>
+			<th class="{$subtotal_class}">{$label dtb_order1 subtotal}</th>
+			<th class="{$discount_class}">{$label dtb_order1 discount}</th>
+			<th class="{$delivery_fee_total_class}">{$label dtb_order1 delivery_fee_total}</th>
+			<th class="{$charge_class}">{$label dtb_order1 charge}</th>
+			<th class="{$tax_class}">{$label dtb_order1 tax}</th>
+			<th class="{$total_class}">{$label dtb_order1 total}</th>
+			<th class="{$payment_total_class}">{$label dtb_order1 payment_total}</th>
+			<th class="{$payment_method_class}">{$label dtb_order1 payment_method}</th>
+			<th class="{$note_class}">{$label dtb_order1 note}</th>
+			<th class="{$create_date_class}">{$label dtb_order1 create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_order1 update_date}</th>
+			<th class="{$order_date_class}">{$label dtb_order1 order_date}</th>
+			<th class="{$commit_date_class}">{$label dtb_order1 commit_date}</th>
+			<th class="{$payment_date_class}">{$label dtb_order1 payment_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_order1 del_flg}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$JPN_class} bs-gridcell" data-field=JPN>{$JPN_mastervalue}</td>
+			<td class="{$APPLICATION_class} bs-gridcell" data-field=APPLICATION>{$APPLICATION_mastervalue}</td>
+			<td class="{$APPLICATION_LABEL_class} bs-gridcell" data-field=APPLICATION_LABEL>{$APPLICATION_LABEL_mastervalue}</td>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$DEL_INDEX_class} bs-gridcell" data-field=DEL_INDEX>{$DEL_INDEX_mastervalue}</td>
+			<td class="{$DEL_LAST_INDEX_class} bs-gridcell" data-field=DEL_LAST_INDEX>{$DEL_LAST_INDEX_mastervalue}</td>
+			<td class="{$APP_NUMBER_class} bs-gridcell" data-field=APP_NUMBER>{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_STATUS_class} bs-gridcell" data-field=APP_STATUS>{$APP_STATUS_mastervalue}</td>
+			<td class="{$USR_UID_class} bs-gridcell" data-field=USR_UID>{$USR_UID_mastervalue}</td>
+			<td class="{$PREVIOUS_USR_UID_class} bs-gridcell" data-field=PREVIOUS_USR_UID>{$PREVIOUS_USR_UID_mastervalue}</td>
+			<td class="{$TAS_UID_class} bs-gridcell" data-field=TAS_UID>{$TAS_UID_mastervalue}</td>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$DEL_DELEGATE_DATE_class} bs-gridcell" data-field=DEL_DELEGATE_DATE>{$DEL_DELEGATE_DATE_mastervalue}</td>
+			<td class="{$DEL_INIT_DATE_class} bs-gridcell" data-field=DEL_INIT_DATE>{$DEL_INIT_DATE_mastervalue}</td>
+			<td class="{$DEL_FINISH_DATE_class} bs-gridcell" data-field=DEL_FINISH_DATE>{$DEL_FINISH_DATE_mastervalue}</td>
+			<td class="{$DEL_TASK_DUE_DATE_class} bs-gridcell" data-field=DEL_TASK_DUE_DATE>{$DEL_TASK_DUE_DATE_mastervalue}</td>
+			<td class="{$DEL_RISK_DATE_class} bs-gridcell" data-field=DEL_RISK_DATE>{$DEL_RISK_DATE_mastervalue}</td>
+			<td class="{$DEL_THREAD_STATUS_class} bs-gridcell" data-field=DEL_THREAD_STATUS>{$DEL_THREAD_STATUS_mastervalue}</td>
+			<td class="{$APP_THREAD_STATUS_class} bs-gridcell" data-field=APP_THREAD_STATUS>{$APP_THREAD_STATUS_mastervalue}</td>
+			<td class="{$APP_TITLE_class} bs-gridcell" data-field=APP_TITLE>{$APP_TITLE_mastervalue}</td>
+			<td class="{$APP_PRO_TITLE_class} bs-gridcell" data-field=APP_PRO_TITLE>{$APP_PRO_TITLE_mastervalue}</td>
+			<td class="{$APP_TAS_TITLE_class} bs-gridcell" data-field=APP_TAS_TITLE>{$APP_TAS_TITLE_mastervalue}</td>
+			<td class="{$APP_CURRENT_USER_class} bs-gridcell" data-field=APP_CURRENT_USER>{$APP_CURRENT_USER_mastervalue}</td>
+			<td class="{$APP_DEL_PREVIOUS_USER_class} bs-gridcell" data-field=APP_DEL_PREVIOUS_USER>{$APP_DEL_PREVIOUS_USER_mastervalue}</td>
+			<td class="{$DEL_PRIORITY_class} bs-gridcell" data-field=DEL_PRIORITY>{$DEL_PRIORITY_mastervalue}</td>
+			<td class="{$DEL_DURATION_class} bs-gridcell" data-field=DEL_DURATION>{$DEL_DURATION_mastervalue}</td>
+			<td class="{$DEL_QUEUE_DURATION_class} bs-gridcell" data-field=DEL_QUEUE_DURATION>{$DEL_QUEUE_DURATION_mastervalue}</td>
+			<td class="{$DEL_DELAY_DURATION_class} bs-gridcell" data-field=DEL_DELAY_DURATION>{$DEL_DELAY_DURATION_mastervalue}</td>
+			<td class="{$DEL_STARTED_class} bs-gridcell" data-field=DEL_STARTED>{$DEL_STARTED_mastervalue}</td>
+			<td class="{$DEL_FINISHED_class} bs-gridcell" data-field=DEL_FINISHED>{$DEL_FINISHED_mastervalue}</td>
+			<td class="{$DEL_DELAYED_class} bs-gridcell" data-field=DEL_DELAYED>{$DEL_DELAYED_mastervalue}</td>
+			<td class="{$APP_CREATE_DATE_class} bs-gridcell" data-field=APP_CREATE_DATE>{$APP_CREATE_DATE_mastervalue}</td>
+			<td class="{$APP_FINISH_DATE_class} bs-gridcell" data-field=APP_FINISH_DATE>{$APP_FINISH_DATE_mastervalue}</td>
+			<td class="{$APP_UPDATE_DATE_class} bs-gridcell" data-field=APP_UPDATE_DATE>{$APP_UPDATE_DATE_mastervalue}</td>
+			<td class="{$APP_OVERDUE_PERCENTAGE_class} bs-gridcell" data-field=APP_OVERDUE_PERCENTAGE>{$APP_OVERDUE_PERCENTAGE_mastervalue}</td>
+			<td class="{$order_id_class} bs-gridcell" data-field=order_id>{$order_id_mastervalue}</td>
+			<td class="{$customer_id_class} bs-gridcell" data-field=customer_id>{$customer_id_mastervalue}</td>
+			<td class="{$status_class} bs-gridcell" data-field=status>{$status_mastervalue}</td>
+			<td class="{$order_country_id_class} bs-gridcell" data-field=order_country_id>{$order_country_id_mastervalue}</td>
+			<td class="{$order_pref_class} bs-gridcell" data-field=order_pref>{$order_pref_mastervalue}</td>
+			<td class="{$order_sex_class} bs-gridcell" data-field=order_sex>{$order_sex_mastervalue}</td>
+			<td class="{$order_job_class} bs-gridcell" data-field=order_job>{$order_job_mastervalue}</td>
+			<td class="{$payment_id_class} bs-gridcell" data-field=payment_id>{$payment_id_mastervalue}</td>
+			<td class="{$device_type_id_class} bs-gridcell" data-field=device_type_id>{$device_type_id_mastervalue}</td>
+			<td class="{$pre_order_id_class} bs-gridcell" data-field=pre_order_id>{$pre_order_id_mastervalue}</td>
+			<td class="{$message_class} bs-gridcell" data-field=message>{$message_mastervalue}</td>
+			<td class="{$order_name01_class} bs-gridcell" data-field=order_name01>{$order_name01_mastervalue}</td>
+			<td class="{$order_name02_class} bs-gridcell" data-field=order_name02>{$order_name02_mastervalue}</td>
+			<td class="{$order_kana01_class} bs-gridcell" data-field=order_kana01>{$order_kana01_mastervalue}</td>
+			<td class="{$order_kana02_class} bs-gridcell" data-field=order_kana02>{$order_kana02_mastervalue}</td>
+			<td class="{$order_company_name_class} bs-gridcell" data-field=order_company_name>{$order_company_name_mastervalue}</td>
+			<td class="{$order_email_class} bs-gridcell" data-field=order_email>{$order_email_mastervalue}</td>
+			<td class="{$order_tel01_class} bs-gridcell" data-field=order_tel01>{$order_tel01_mastervalue}</td>
+			<td class="{$order_tel02_class} bs-gridcell" data-field=order_tel02>{$order_tel02_mastervalue}</td>
+			<td class="{$order_tel03_class} bs-gridcell" data-field=order_tel03>{$order_tel03_mastervalue}</td>
+			<td class="{$order_fax01_class} bs-gridcell" data-field=order_fax01>{$order_fax01_mastervalue}</td>
+			<td class="{$order_fax02_class} bs-gridcell" data-field=order_fax02>{$order_fax02_mastervalue}</td>
+			<td class="{$order_fax03_class} bs-gridcell" data-field=order_fax03>{$order_fax03_mastervalue}</td>
+			<td class="{$order_zip01_class} bs-gridcell" data-field=order_zip01>{$order_zip01_mastervalue}</td>
+			<td class="{$order_zip02_class} bs-gridcell" data-field=order_zip02>{$order_zip02_mastervalue}</td>
+			<td class="{$order_zipcode_class} bs-gridcell" data-field=order_zipcode>{$order_zipcode_mastervalue}</td>
+			<td class="{$order_addr01_class} bs-gridcell" data-field=order_addr01>{$order_addr01_mastervalue}</td>
+			<td class="{$order_addr02_class} bs-gridcell" data-field=order_addr02>{$order_addr02_mastervalue}</td>
+			<td class="{$order_birth_class} bs-gridcell" data-field=order_birth>{$order_birth_mastervalue}</td>
+			<td class="{$subtotal_class} bs-gridcell" data-field=subtotal>{$subtotal_mastervalue}</td>
+			<td class="{$discount_class} bs-gridcell" data-field=discount>{$discount_mastervalue}</td>
+			<td class="{$delivery_fee_total_class} bs-gridcell" data-field=delivery_fee_total>{$delivery_fee_total_mastervalue}</td>
+			<td class="{$charge_class} bs-gridcell" data-field=charge>{$charge_mastervalue}</td>
+			<td class="{$tax_class} bs-gridcell" data-field=tax>{$tax_mastervalue}</td>
+			<td class="{$total_class} bs-gridcell" data-field=total>{$total_mastervalue}</td>
+			<td class="{$payment_total_class} bs-gridcell" data-field=payment_total>{$payment_total_mastervalue}</td>
+			<td class="{$payment_method_class} bs-gridcell" data-field=payment_method>{$payment_method_mastervalue}</td>
+			<td class="{$note_class} bs-gridcell" data-field=note>{$note_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$order_date_class} bs-gridcell" data-field=order_date>{$order_date_mastervalue}</td>
+			<td class="{$commit_date_class} bs-gridcell" data-field=commit_date>{$commit_date_mastervalue}</td>
+			<td class="{$payment_date_class} bs-gridcell" data-field=payment_date>{$payment_date_mastervalue}</td>
+			<td class="{$del_flg_class} bs-gridcell" data-field=del_flg>{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

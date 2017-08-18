@@ -1,0 +1,61 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_product masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$product_id_class}">{$label dtb_product product_id}</th>
+			<th class="{$creator_id_class}">{$label dtb_product creator_id}</th>
+			<th class="{$status_class}">{$label dtb_product status}</th>
+			<th class="{$name_class}">{$label dtb_product name}</th>
+			<th class="{$note_class}">{$label dtb_product note}</th>
+			<th class="{$description_list_class}">{$label dtb_product description_list}</th>
+			<th class="{$description_detail_class}">{$label dtb_product description_detail}</th>
+			<th class="{$search_word_class}">{$label dtb_product search_word}</th>
+			<th class="{$free_area_class}">{$label dtb_product free_area}</th>
+			<th class="{$del_flg_class}">{$label dtb_product del_flg}</th>
+			<th class="{$create_date_class}">{$label dtb_product create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_product update_date}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$product_id_class}">{$product_id_mastervalue}</td>
+			<td class="{$creator_id_class}">{$creator_id_mastervalue}</td>
+			<td class="{$status_class}">{$status_mastervalue}</td>
+			<td class="{$name_class}">{$name_mastervalue}</td>
+			<td class="{$note_class}">{$note_mastervalue}</td>
+			<td class="{$description_list_class}">{$description_list_mastervalue}</td>
+			<td class="{$description_detail_class}">{$description_detail_mastervalue}</td>
+			<td class="{$search_word_class}">{$search_word_mastervalue}</td>
+			<td class="{$free_area_class}">{$free_area_mastervalue}</td>
+			<td class="{$del_flg_class}">{$del_flg_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

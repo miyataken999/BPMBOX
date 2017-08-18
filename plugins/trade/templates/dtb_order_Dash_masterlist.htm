@@ -1,0 +1,256 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_order_Dash masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=order_id]:before {
+		content: "{$label dtb_order_Dash order_id}";
+	}
+	.bs-gridcell[data-field=customer_id]:before {
+		content: "{$label dtb_order_Dash customer_id}";
+	}
+	.bs-gridcell[data-field=order_country_id]:before {
+		content: "{$label dtb_order_Dash order_country_id}";
+	}
+	.bs-gridcell[data-field=order_pref]:before {
+		content: "{$label dtb_order_Dash order_pref}";
+	}
+	.bs-gridcell[data-field=order_sex]:before {
+		content: "{$label dtb_order_Dash order_sex}";
+	}
+	.bs-gridcell[data-field=order_job]:before {
+		content: "{$label dtb_order_Dash order_job}";
+	}
+	.bs-gridcell[data-field=payment_id]:before {
+		content: "{$label dtb_order_Dash payment_id}";
+	}
+	.bs-gridcell[data-field=device_type_id]:before {
+		content: "{$label dtb_order_Dash device_type_id}";
+	}
+	.bs-gridcell[data-field=pre_order_id]:before {
+		content: "{$label dtb_order_Dash pre_order_id}";
+	}
+	.bs-gridcell[data-field=message]:before {
+		content: "{$label dtb_order_Dash message}";
+	}
+	.bs-gridcell[data-field=order_name01]:before {
+		content: "{$label dtb_order_Dash order_name01}";
+	}
+	.bs-gridcell[data-field=order_name02]:before {
+		content: "{$label dtb_order_Dash order_name02}";
+	}
+	.bs-gridcell[data-field=order_kana01]:before {
+		content: "{$label dtb_order_Dash order_kana01}";
+	}
+	.bs-gridcell[data-field=order_kana02]:before {
+		content: "{$label dtb_order_Dash order_kana02}";
+	}
+	.bs-gridcell[data-field=order_company_name]:before {
+		content: "{$label dtb_order_Dash order_company_name}";
+	}
+	.bs-gridcell[data-field=order_email]:before {
+		content: "{$label dtb_order_Dash order_email}";
+	}
+	.bs-gridcell[data-field=order_tel01]:before {
+		content: "{$label dtb_order_Dash order_tel01}";
+	}
+	.bs-gridcell[data-field=order_tel02]:before {
+		content: "{$label dtb_order_Dash order_tel02}";
+	}
+	.bs-gridcell[data-field=order_tel03]:before {
+		content: "{$label dtb_order_Dash order_tel03}";
+	}
+	.bs-gridcell[data-field=order_fax01]:before {
+		content: "{$label dtb_order_Dash order_fax01}";
+	}
+	.bs-gridcell[data-field=order_fax02]:before {
+		content: "{$label dtb_order_Dash order_fax02}";
+	}
+	.bs-gridcell[data-field=order_fax03]:before {
+		content: "{$label dtb_order_Dash order_fax03}";
+	}
+	.bs-gridcell[data-field=order_zip01]:before {
+		content: "{$label dtb_order_Dash order_zip01}";
+	}
+	.bs-gridcell[data-field=order_zip02]:before {
+		content: "{$label dtb_order_Dash order_zip02}";
+	}
+	.bs-gridcell[data-field=order_zipcode]:before {
+		content: "{$label dtb_order_Dash order_zipcode}";
+	}
+	.bs-gridcell[data-field=order_addr01]:before {
+		content: "{$label dtb_order_Dash order_addr01}";
+	}
+	.bs-gridcell[data-field=order_addr02]:before {
+		content: "{$label dtb_order_Dash order_addr02}";
+	}
+	.bs-gridcell[data-field=order_birth]:before {
+		content: "{$label dtb_order_Dash order_birth}";
+	}
+	.bs-gridcell[data-field=subtotal]:before {
+		content: "{$label dtb_order_Dash subtotal}";
+	}
+	.bs-gridcell[data-field=discount]:before {
+		content: "{$label dtb_order_Dash discount}";
+	}
+	.bs-gridcell[data-field=delivery_fee_total]:before {
+		content: "{$label dtb_order_Dash delivery_fee_total}";
+	}
+	.bs-gridcell[data-field=charge]:before {
+		content: "{$label dtb_order_Dash charge}";
+	}
+	.bs-gridcell[data-field=tax]:before {
+		content: "{$label dtb_order_Dash tax}";
+	}
+	.bs-gridcell[data-field=total]:before {
+		content: "{$label dtb_order_Dash total}";
+	}
+	.bs-gridcell[data-field=payment_total]:before {
+		content: "{$label dtb_order_Dash payment_total}";
+	}
+	.bs-gridcell[data-field=payment_method]:before {
+		content: "{$label dtb_order_Dash payment_method}";
+	}
+	.bs-gridcell[data-field=note]:before {
+		content: "{$label dtb_order_Dash note}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_order_Dash create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_order_Dash update_date}";
+	}
+	.bs-gridcell[data-field=order_date]:before {
+		content: "{$label dtb_order_Dash order_date}";
+	}
+	.bs-gridcell[data-field=commit_date]:before {
+		content: "{$label dtb_order_Dash commit_date}";
+	}
+	.bs-gridcell[data-field=payment_date]:before {
+		content: "{$label dtb_order_Dash payment_date}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_order_Dash del_flg}";
+	}
+	.bs-gridcell[data-field=status]:before {
+		content: "{$label dtb_order_Dash status}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$order_id_class}">{$label dtb_order_Dash order_id}</th>
+			<th class="{$customer_id_class}">{$label dtb_order_Dash customer_id}</th>
+			<th class="{$order_country_id_class}">{$label dtb_order_Dash order_country_id}</th>
+			<th class="{$order_pref_class}">{$label dtb_order_Dash order_pref}</th>
+			<th class="{$order_sex_class}">{$label dtb_order_Dash order_sex}</th>
+			<th class="{$order_job_class}">{$label dtb_order_Dash order_job}</th>
+			<th class="{$payment_id_class}">{$label dtb_order_Dash payment_id}</th>
+			<th class="{$device_type_id_class}">{$label dtb_order_Dash device_type_id}</th>
+			<th class="{$pre_order_id_class}">{$label dtb_order_Dash pre_order_id}</th>
+			<th class="{$message_class}">{$label dtb_order_Dash message}</th>
+			<th class="{$order_name01_class}">{$label dtb_order_Dash order_name01}</th>
+			<th class="{$order_name02_class}">{$label dtb_order_Dash order_name02}</th>
+			<th class="{$order_kana01_class}">{$label dtb_order_Dash order_kana01}</th>
+			<th class="{$order_kana02_class}">{$label dtb_order_Dash order_kana02}</th>
+			<th class="{$order_company_name_class}">{$label dtb_order_Dash order_company_name}</th>
+			<th class="{$order_email_class}">{$label dtb_order_Dash order_email}</th>
+			<th class="{$order_tel01_class}">{$label dtb_order_Dash order_tel01}</th>
+			<th class="{$order_tel02_class}">{$label dtb_order_Dash order_tel02}</th>
+			<th class="{$order_tel03_class}">{$label dtb_order_Dash order_tel03}</th>
+			<th class="{$order_fax01_class}">{$label dtb_order_Dash order_fax01}</th>
+			<th class="{$order_fax02_class}">{$label dtb_order_Dash order_fax02}</th>
+			<th class="{$order_fax03_class}">{$label dtb_order_Dash order_fax03}</th>
+			<th class="{$order_zip01_class}">{$label dtb_order_Dash order_zip01}</th>
+			<th class="{$order_zip02_class}">{$label dtb_order_Dash order_zip02}</th>
+			<th class="{$order_zipcode_class}">{$label dtb_order_Dash order_zipcode}</th>
+			<th class="{$order_addr01_class}">{$label dtb_order_Dash order_addr01}</th>
+			<th class="{$order_addr02_class}">{$label dtb_order_Dash order_addr02}</th>
+			<th class="{$order_birth_class}">{$label dtb_order_Dash order_birth}</th>
+			<th class="{$subtotal_class}">{$label dtb_order_Dash subtotal}</th>
+			<th class="{$discount_class}">{$label dtb_order_Dash discount}</th>
+			<th class="{$delivery_fee_total_class}">{$label dtb_order_Dash delivery_fee_total}</th>
+			<th class="{$charge_class}">{$label dtb_order_Dash charge}</th>
+			<th class="{$tax_class}">{$label dtb_order_Dash tax}</th>
+			<th class="{$total_class}">{$label dtb_order_Dash total}</th>
+			<th class="{$payment_total_class}">{$label dtb_order_Dash payment_total}</th>
+			<th class="{$payment_method_class}">{$label dtb_order_Dash payment_method}</th>
+			<th class="{$note_class}">{$label dtb_order_Dash note}</th>
+			<th class="{$create_date_class}">{$label dtb_order_Dash create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_order_Dash update_date}</th>
+			<th class="{$order_date_class}">{$label dtb_order_Dash order_date}</th>
+			<th class="{$commit_date_class}">{$label dtb_order_Dash commit_date}</th>
+			<th class="{$payment_date_class}">{$label dtb_order_Dash payment_date}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$order_id_class} bs-gridcell" data-field=order_id>{$order_id_mastervalue}</td>
+			<td class="{$customer_id_class} bs-gridcell" data-field=customer_id>{$customer_id_mastervalue}</td>
+			<td class="{$order_country_id_class} bs-gridcell" data-field=order_country_id>{$order_country_id_mastervalue}</td>
+			<td class="{$order_pref_class} bs-gridcell" data-field=order_pref>{$order_pref_mastervalue}</td>
+			<td class="{$order_sex_class} bs-gridcell" data-field=order_sex>{$order_sex_mastervalue}</td>
+			<td class="{$order_job_class} bs-gridcell" data-field=order_job>{$order_job_mastervalue}</td>
+			<td class="{$payment_id_class} bs-gridcell" data-field=payment_id>{$payment_id_mastervalue}</td>
+			<td class="{$device_type_id_class} bs-gridcell" data-field=device_type_id>{$device_type_id_mastervalue}</td>
+			<td class="{$pre_order_id_class} bs-gridcell" data-field=pre_order_id>{$pre_order_id_mastervalue}</td>
+			<td class="{$message_class} bs-gridcell" data-field=message>{$message_mastervalue}</td>
+			<td class="{$order_name01_class} bs-gridcell" data-field=order_name01>{$order_name01_mastervalue}</td>
+			<td class="{$order_name02_class} bs-gridcell" data-field=order_name02>{$order_name02_mastervalue}</td>
+			<td class="{$order_kana01_class} bs-gridcell" data-field=order_kana01>{$order_kana01_mastervalue}</td>
+			<td class="{$order_kana02_class} bs-gridcell" data-field=order_kana02>{$order_kana02_mastervalue}</td>
+			<td class="{$order_company_name_class} bs-gridcell" data-field=order_company_name>{$order_company_name_mastervalue}</td>
+			<td class="{$order_email_class} bs-gridcell" data-field=order_email>{$order_email_mastervalue}</td>
+			<td class="{$order_tel01_class} bs-gridcell" data-field=order_tel01>{$order_tel01_mastervalue}</td>
+			<td class="{$order_tel02_class} bs-gridcell" data-field=order_tel02>{$order_tel02_mastervalue}</td>
+			<td class="{$order_tel03_class} bs-gridcell" data-field=order_tel03>{$order_tel03_mastervalue}</td>
+			<td class="{$order_fax01_class} bs-gridcell" data-field=order_fax01>{$order_fax01_mastervalue}</td>
+			<td class="{$order_fax02_class} bs-gridcell" data-field=order_fax02>{$order_fax02_mastervalue}</td>
+			<td class="{$order_fax03_class} bs-gridcell" data-field=order_fax03>{$order_fax03_mastervalue}</td>
+			<td class="{$order_zip01_class} bs-gridcell" data-field=order_zip01>{$order_zip01_mastervalue}</td>
+			<td class="{$order_zip02_class} bs-gridcell" data-field=order_zip02>{$order_zip02_mastervalue}</td>
+			<td class="{$order_zipcode_class} bs-gridcell" data-field=order_zipcode>{$order_zipcode_mastervalue}</td>
+			<td class="{$order_addr01_class} bs-gridcell" data-field=order_addr01>{$order_addr01_mastervalue}</td>
+			<td class="{$order_addr02_class} bs-gridcell" data-field=order_addr02>{$order_addr02_mastervalue}</td>
+			<td class="{$order_birth_class} bs-gridcell" data-field=order_birth>{$order_birth_mastervalue}</td>
+			<td class="{$subtotal_class} bs-gridcell" data-field=subtotal>{$subtotal_mastervalue}</td>
+			<td class="{$discount_class} bs-gridcell" data-field=discount>{$discount_mastervalue}</td>
+			<td class="{$delivery_fee_total_class} bs-gridcell" data-field=delivery_fee_total>{$delivery_fee_total_mastervalue}</td>
+			<td class="{$charge_class} bs-gridcell" data-field=charge>{$charge_mastervalue}</td>
+			<td class="{$tax_class} bs-gridcell" data-field=tax>{$tax_mastervalue}</td>
+			<td class="{$total_class} bs-gridcell" data-field=total>{$total_mastervalue}</td>
+			<td class="{$payment_total_class} bs-gridcell" data-field=payment_total>{$payment_total_mastervalue}</td>
+			<td class="{$payment_method_class} bs-gridcell" data-field=payment_method>{$payment_method_mastervalue}</td>
+			<td class="{$note_class} bs-gridcell" data-field=note>{$note_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+			<td class="{$order_date_class} bs-gridcell" data-field=order_date>{$order_date_mastervalue}</td>
+			<td class="{$commit_date_class} bs-gridcell" data-field=commit_date>{$commit_date_mastervalue}</td>
+			<td class="{$payment_date_class} bs-gridcell" data-field=payment_date>{$payment_date_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

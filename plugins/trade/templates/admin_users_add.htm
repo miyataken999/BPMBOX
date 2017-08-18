@@ -1,0 +1,507 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN exitadminarea_link}
+				<li><a href="#" {$exitaalink_attrs}>管理エリアを退出する</a></li>
+		{END exitadminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel admin_users add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN member_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_member_id}" data-fieldname="member_id" data-signal-error-for="member_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_member_id}">
+		{BEGIN member_id_label}{$label admin_users member_id}{END member_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$member_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="member_id">
+		<div class="text-muted" >
+		{$tooltip admin_users member_id}
+		</div>
+	</div>
+</div>
+</div>
+{END member_id_fieldblock}
+
+			{BEGIN work_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_work}" data-fieldname="work" data-signal-error-for="work{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_work}">
+		{BEGIN work_label}{$label admin_users work}{END work_label}
+	</label>
+	<div class="col-md-6" >
+		{$work_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="work">
+		<div class="text-muted" >
+		{$tooltip admin_users work}
+		</div>
+	</div>
+</div>
+</div>
+{END work_fieldblock}
+
+			{BEGIN authority_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_authority}" data-fieldname="authority" data-signal-error-for="authority{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_authority}">
+		{BEGIN authority_label}{$label admin_users authority}{END authority_label}
+	</label>
+	<div class="col-md-6" >
+		{$authority_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="authority">
+		<div class="text-muted" >
+		{$tooltip admin_users authority}
+		</div>
+	</div>
+</div>
+</div>
+{END authority_fieldblock}
+
+			{BEGIN creator_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_creator_id}" data-fieldname="creator_id" data-signal-error-for="creator_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_creator_id}">
+		{BEGIN creator_id_label}{$label admin_users creator_id}{END creator_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$creator_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="creator_id">
+		<div class="text-muted" >
+		{$tooltip admin_users creator_id}
+		</div>
+	</div>
+</div>
+</div>
+{END creator_id_fieldblock}
+
+			{BEGIN name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_name}" data-fieldname="name" data-signal-error-for="name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_name}">
+		{BEGIN name_label}{$label admin_users name}{END name_label}
+	</label>
+	<div class="col-md-6" >
+		{$name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="name">
+		<div class="text-muted" >
+		{$tooltip admin_users name}
+		</div>
+	</div>
+</div>
+</div>
+{END name_fieldblock}
+
+			{BEGIN department_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_department}" data-fieldname="department" data-signal-error-for="department{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_department}">
+		{BEGIN department_label}{$label admin_users department}{END department_label}
+	</label>
+	<div class="col-md-6" >
+		{$department_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="department">
+		<div class="text-muted" >
+		{$tooltip admin_users department}
+		</div>
+	</div>
+</div>
+</div>
+{END department_fieldblock}
+
+			{BEGIN login_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_login_id}" data-fieldname="login_id" data-signal-error-for="login_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_login_id}">
+		{BEGIN login_id_label}{$label admin_users login_id}{END login_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$login_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="login_id">
+		<div class="text-muted" >
+		{$tooltip admin_users login_id}
+		</div>
+	</div>
+</div>
+</div>
+{END login_id_fieldblock}
+
+			{BEGIN password_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_password}" data-fieldname="password" data-signal-error-for="password{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_password}">
+		{BEGIN password_label}{$label admin_users password}{END password_label}
+	</label>
+	<div class="col-md-6" >
+		{$password_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="password">
+		<div class="text-muted" >
+		{$tooltip admin_users password}
+		</div>
+	</div>
+</div>
+</div>
+{END password_fieldblock}
+
+			{BEGIN salt_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_salt}" data-fieldname="salt" data-signal-error-for="salt{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_salt}">
+		{BEGIN salt_label}{$label admin_users salt}{END salt_label}
+	</label>
+	<div class="col-md-6" >
+		{$salt_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="salt">
+		<div class="text-muted" >
+		{$tooltip admin_users salt}
+		</div>
+	</div>
+</div>
+</div>
+{END salt_fieldblock}
+
+			{BEGIN rank_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_rank}" data-fieldname="rank" data-signal-error-for="rank{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_rank}">
+		{BEGIN rank_label}{$label admin_users rank}{END rank_label}
+	</label>
+	<div class="col-md-6" >
+		{$rank_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="rank">
+		<div class="text-muted" >
+		{$tooltip admin_users rank}
+		</div>
+	</div>
+</div>
+</div>
+{END rank_fieldblock}
+
+			{BEGIN del_flg_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_del_flg}" data-fieldname="del_flg" data-signal-error-for="del_flg{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_del_flg}">
+		{BEGIN del_flg_label}{$label admin_users del_flg}{END del_flg_label}
+	</label>
+	<div class="col-md-6" >
+		{$del_flg_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="del_flg">
+		<div class="text-muted" >
+		{$tooltip admin_users del_flg}
+		</div>
+	</div>
+</div>
+</div>
+{END del_flg_fieldblock}
+
+			{BEGIN create_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_create_date}" data-fieldname="create_date" data-signal-error-for="create_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_create_date}">
+		{BEGIN create_date_label}{$label admin_users create_date}{END create_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$create_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="create_date">
+		<div class="text-muted" >
+		{$tooltip admin_users create_date}
+		</div>
+	</div>
+</div>
+</div>
+{END create_date_fieldblock}
+
+			{BEGIN update_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_update_date}" data-fieldname="update_date" data-signal-error-for="update_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_update_date}">
+		{BEGIN update_date_label}{$label admin_users update_date}{END update_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$update_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="update_date">
+		<div class="text-muted" >
+		{$tooltip admin_users update_date}
+		</div>
+	</div>
+</div>
+</div>
+{END update_date_fieldblock}
+
+			{BEGIN login_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_login_date}" data-fieldname="login_date" data-signal-error-for="login_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_login_date}">
+		{BEGIN login_date_label}{$label admin_users login_date}{END login_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$login_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="login_date">
+		<div class="text-muted" >
+		{$tooltip admin_users login_date}
+		</div>
+	</div>
+</div>
+</div>
+{END login_date_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

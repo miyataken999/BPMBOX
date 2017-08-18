@@ -1,0 +1,195 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel dtb_order masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$JPN_class}">{$label dtb_order JPN}</th>
+			<th class="{$APPLICATION_class}">{$label dtb_order APPLICATION}</th>
+			<th class="{$APPLICATION_LABEL_class}">{$label dtb_order APPLICATION_LABEL}</th>
+			<th class="{$APP_UID_class}">{$label dtb_order APP_UID}</th>
+			<th class="{$DEL_INDEX_class}">{$label dtb_order DEL_INDEX}</th>
+			<th class="{$DEL_LAST_INDEX_class}">{$label dtb_order DEL_LAST_INDEX}</th>
+			<th class="{$APP_NUMBER_class}">{$label dtb_order APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label dtb_order APP_STATUS}</th>
+			<th class="{$USR_UID_class}">{$label dtb_order USR_UID}</th>
+			<th class="{$PREVIOUS_USR_UID_class}">{$label dtb_order PREVIOUS_USR_UID}</th>
+			<th class="{$TAS_UID_class}">{$label dtb_order TAS_UID}</th>
+			<th class="{$PRO_UID_class}">{$label dtb_order PRO_UID}</th>
+			<th class="{$DEL_DELEGATE_DATE_class}">{$label dtb_order DEL_DELEGATE_DATE}</th>
+			<th class="{$DEL_INIT_DATE_class}">{$label dtb_order DEL_INIT_DATE}</th>
+			<th class="{$DEL_FINISH_DATE_class}">{$label dtb_order DEL_FINISH_DATE}</th>
+			<th class="{$DEL_TASK_DUE_DATE_class}">{$label dtb_order DEL_TASK_DUE_DATE}</th>
+			<th class="{$DEL_RISK_DATE_class}">{$label dtb_order DEL_RISK_DATE}</th>
+			<th class="{$DEL_THREAD_STATUS_class}">{$label dtb_order DEL_THREAD_STATUS}</th>
+			<th class="{$APP_THREAD_STATUS_class}">{$label dtb_order APP_THREAD_STATUS}</th>
+			<th class="{$APP_TITLE_class}">{$label dtb_order APP_TITLE}</th>
+			<th class="{$APP_PRO_TITLE_class}">{$label dtb_order APP_PRO_TITLE}</th>
+			<th class="{$APP_TAS_TITLE_class}">{$label dtb_order APP_TAS_TITLE}</th>
+			<th class="{$APP_CURRENT_USER_class}">{$label dtb_order APP_CURRENT_USER}</th>
+			<th class="{$APP_DEL_PREVIOUS_USER_class}">{$label dtb_order APP_DEL_PREVIOUS_USER}</th>
+			<th class="{$DEL_PRIORITY_class}">{$label dtb_order DEL_PRIORITY}</th>
+			<th class="{$DEL_DURATION_class}">{$label dtb_order DEL_DURATION}</th>
+			<th class="{$DEL_QUEUE_DURATION_class}">{$label dtb_order DEL_QUEUE_DURATION}</th>
+			<th class="{$DEL_DELAY_DURATION_class}">{$label dtb_order DEL_DELAY_DURATION}</th>
+			<th class="{$DEL_STARTED_class}">{$label dtb_order DEL_STARTED}</th>
+			<th class="{$DEL_FINISHED_class}">{$label dtb_order DEL_FINISHED}</th>
+			<th class="{$DEL_DELAYED_class}">{$label dtb_order DEL_DELAYED}</th>
+			<th class="{$APP_CREATE_DATE_class}">{$label dtb_order APP_CREATE_DATE}</th>
+			<th class="{$APP_FINISH_DATE_class}">{$label dtb_order APP_FINISH_DATE}</th>
+			<th class="{$APP_UPDATE_DATE_class}">{$label dtb_order APP_UPDATE_DATE}</th>
+			<th class="{$APP_OVERDUE_PERCENTAGE_class}">{$label dtb_order APP_OVERDUE_PERCENTAGE}</th>
+			<th class="{$order_id_class}">{$label dtb_order order_id}</th>
+			<th class="{$customer_id_class}">{$label dtb_order customer_id}</th>
+			<th class="{$status_class}">{$label dtb_order status}</th>
+			<th class="{$order_country_id_class}">{$label dtb_order order_country_id}</th>
+			<th class="{$order_pref_class}">{$label dtb_order order_pref}</th>
+			<th class="{$order_sex_class}">{$label dtb_order order_sex}</th>
+			<th class="{$order_job_class}">{$label dtb_order order_job}</th>
+			<th class="{$payment_id_class}">{$label dtb_order payment_id}</th>
+			<th class="{$device_type_id_class}">{$label dtb_order device_type_id}</th>
+			<th class="{$pre_order_id_class}">{$label dtb_order pre_order_id}</th>
+			<th class="{$message_class}">{$label dtb_order message}</th>
+			<th class="{$order_name01_class}">{$label dtb_order order_name01}</th>
+			<th class="{$order_name02_class}">{$label dtb_order order_name02}</th>
+			<th class="{$order_kana01_class}">{$label dtb_order order_kana01}</th>
+			<th class="{$order_kana02_class}">{$label dtb_order order_kana02}</th>
+			<th class="{$order_company_name_class}">{$label dtb_order order_company_name}</th>
+			<th class="{$order_email_class}">{$label dtb_order order_email}</th>
+			<th class="{$order_tel01_class}">{$label dtb_order order_tel01}</th>
+			<th class="{$order_tel02_class}">{$label dtb_order order_tel02}</th>
+			<th class="{$order_tel03_class}">{$label dtb_order order_tel03}</th>
+			<th class="{$order_fax01_class}">{$label dtb_order order_fax01}</th>
+			<th class="{$order_fax02_class}">{$label dtb_order order_fax02}</th>
+			<th class="{$order_fax03_class}">{$label dtb_order order_fax03}</th>
+			<th class="{$order_zip01_class}">{$label dtb_order order_zip01}</th>
+			<th class="{$order_zip02_class}">{$label dtb_order order_zip02}</th>
+			<th class="{$order_zipcode_class}">{$label dtb_order order_zipcode}</th>
+			<th class="{$order_addr01_class}">{$label dtb_order order_addr01}</th>
+			<th class="{$order_addr02_class}">{$label dtb_order order_addr02}</th>
+			<th class="{$order_birth_class}">{$label dtb_order order_birth}</th>
+			<th class="{$subtotal_class}">{$label dtb_order subtotal}</th>
+			<th class="{$discount_class}">{$label dtb_order discount}</th>
+			<th class="{$delivery_fee_total_class}">{$label dtb_order delivery_fee_total}</th>
+			<th class="{$charge_class}">{$label dtb_order charge}</th>
+			<th class="{$tax_class}">{$label dtb_order tax}</th>
+			<th class="{$total_class}">{$label dtb_order total}</th>
+			<th class="{$payment_total_class}">{$label dtb_order payment_total}</th>
+			<th class="{$payment_method_class}">{$label dtb_order payment_method}</th>
+			<th class="{$note_class}">{$label dtb_order note}</th>
+			<th class="{$create_date_class}">{$label dtb_order create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_order update_date}</th>
+			<th class="{$order_date_class}">{$label dtb_order order_date}</th>
+			<th class="{$commit_date_class}">{$label dtb_order commit_date}</th>
+			<th class="{$payment_date_class}">{$label dtb_order payment_date}</th>
+			<th class="{$del_flg_class}">{$label dtb_order del_flg}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$JPN_class}">{$JPN_mastervalue}</td>
+			<td class="{$APPLICATION_class}">{$APPLICATION_mastervalue}</td>
+			<td class="{$APPLICATION_LABEL_class}">{$APPLICATION_LABEL_mastervalue}</td>
+			<td class="{$APP_UID_class}">{$APP_UID_mastervalue}</td>
+			<td class="{$DEL_INDEX_class}">{$DEL_INDEX_mastervalue}</td>
+			<td class="{$DEL_LAST_INDEX_class}">{$DEL_LAST_INDEX_mastervalue}</td>
+			<td class="{$APP_NUMBER_class}">{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_STATUS_class}">{$APP_STATUS_mastervalue}</td>
+			<td class="{$USR_UID_class}">{$USR_UID_mastervalue}</td>
+			<td class="{$PREVIOUS_USR_UID_class}">{$PREVIOUS_USR_UID_mastervalue}</td>
+			<td class="{$TAS_UID_class}">{$TAS_UID_mastervalue}</td>
+			<td class="{$PRO_UID_class}">{$PRO_UID_mastervalue}</td>
+			<td class="{$DEL_DELEGATE_DATE_class}">{$DEL_DELEGATE_DATE_mastervalue}</td>
+			<td class="{$DEL_INIT_DATE_class}">{$DEL_INIT_DATE_mastervalue}</td>
+			<td class="{$DEL_FINISH_DATE_class}">{$DEL_FINISH_DATE_mastervalue}</td>
+			<td class="{$DEL_TASK_DUE_DATE_class}">{$DEL_TASK_DUE_DATE_mastervalue}</td>
+			<td class="{$DEL_RISK_DATE_class}">{$DEL_RISK_DATE_mastervalue}</td>
+			<td class="{$DEL_THREAD_STATUS_class}">{$DEL_THREAD_STATUS_mastervalue}</td>
+			<td class="{$APP_THREAD_STATUS_class}">{$APP_THREAD_STATUS_mastervalue}</td>
+			<td class="{$APP_TITLE_class}">{$APP_TITLE_mastervalue}</td>
+			<td class="{$APP_PRO_TITLE_class}">{$APP_PRO_TITLE_mastervalue}</td>
+			<td class="{$APP_TAS_TITLE_class}">{$APP_TAS_TITLE_mastervalue}</td>
+			<td class="{$APP_CURRENT_USER_class}">{$APP_CURRENT_USER_mastervalue}</td>
+			<td class="{$APP_DEL_PREVIOUS_USER_class}">{$APP_DEL_PREVIOUS_USER_mastervalue}</td>
+			<td class="{$DEL_PRIORITY_class}">{$DEL_PRIORITY_mastervalue}</td>
+			<td class="{$DEL_DURATION_class}">{$DEL_DURATION_mastervalue}</td>
+			<td class="{$DEL_QUEUE_DURATION_class}">{$DEL_QUEUE_DURATION_mastervalue}</td>
+			<td class="{$DEL_DELAY_DURATION_class}">{$DEL_DELAY_DURATION_mastervalue}</td>
+			<td class="{$DEL_STARTED_class}">{$DEL_STARTED_mastervalue}</td>
+			<td class="{$DEL_FINISHED_class}">{$DEL_FINISHED_mastervalue}</td>
+			<td class="{$DEL_DELAYED_class}">{$DEL_DELAYED_mastervalue}</td>
+			<td class="{$APP_CREATE_DATE_class}">{$APP_CREATE_DATE_mastervalue}</td>
+			<td class="{$APP_FINISH_DATE_class}">{$APP_FINISH_DATE_mastervalue}</td>
+			<td class="{$APP_UPDATE_DATE_class}">{$APP_UPDATE_DATE_mastervalue}</td>
+			<td class="{$APP_OVERDUE_PERCENTAGE_class}">{$APP_OVERDUE_PERCENTAGE_mastervalue}</td>
+			<td class="{$order_id_class}">{$order_id_mastervalue}</td>
+			<td class="{$customer_id_class}">{$customer_id_mastervalue}</td>
+			<td class="{$status_class}">{$status_mastervalue}</td>
+			<td class="{$order_country_id_class}">{$order_country_id_mastervalue}</td>
+			<td class="{$order_pref_class}">{$order_pref_mastervalue}</td>
+			<td class="{$order_sex_class}">{$order_sex_mastervalue}</td>
+			<td class="{$order_job_class}">{$order_job_mastervalue}</td>
+			<td class="{$payment_id_class}">{$payment_id_mastervalue}</td>
+			<td class="{$device_type_id_class}">{$device_type_id_mastervalue}</td>
+			<td class="{$pre_order_id_class}">{$pre_order_id_mastervalue}</td>
+			<td class="{$message_class}">{$message_mastervalue}</td>
+			<td class="{$order_name01_class}">{$order_name01_mastervalue}</td>
+			<td class="{$order_name02_class}">{$order_name02_mastervalue}</td>
+			<td class="{$order_kana01_class}">{$order_kana01_mastervalue}</td>
+			<td class="{$order_kana02_class}">{$order_kana02_mastervalue}</td>
+			<td class="{$order_company_name_class}">{$order_company_name_mastervalue}</td>
+			<td class="{$order_email_class}">{$order_email_mastervalue}</td>
+			<td class="{$order_tel01_class}">{$order_tel01_mastervalue}</td>
+			<td class="{$order_tel02_class}">{$order_tel02_mastervalue}</td>
+			<td class="{$order_tel03_class}">{$order_tel03_mastervalue}</td>
+			<td class="{$order_fax01_class}">{$order_fax01_mastervalue}</td>
+			<td class="{$order_fax02_class}">{$order_fax02_mastervalue}</td>
+			<td class="{$order_fax03_class}">{$order_fax03_mastervalue}</td>
+			<td class="{$order_zip01_class}">{$order_zip01_mastervalue}</td>
+			<td class="{$order_zip02_class}">{$order_zip02_mastervalue}</td>
+			<td class="{$order_zipcode_class}">{$order_zipcode_mastervalue}</td>
+			<td class="{$order_addr01_class}">{$order_addr01_mastervalue}</td>
+			<td class="{$order_addr02_class}">{$order_addr02_mastervalue}</td>
+			<td class="{$order_birth_class}">{$order_birth_mastervalue}</td>
+			<td class="{$subtotal_class}">{$subtotal_mastervalue}</td>
+			<td class="{$discount_class}">{$discount_mastervalue}</td>
+			<td class="{$delivery_fee_total_class}">{$delivery_fee_total_mastervalue}</td>
+			<td class="{$charge_class}">{$charge_mastervalue}</td>
+			<td class="{$tax_class}">{$tax_mastervalue}</td>
+			<td class="{$total_class}">{$total_mastervalue}</td>
+			<td class="{$payment_total_class}">{$payment_total_mastervalue}</td>
+			<td class="{$payment_method_class}">{$payment_method_mastervalue}</td>
+			<td class="{$note_class}">{$note_mastervalue}</td>
+			<td class="{$create_date_class}">{$create_date_mastervalue}</td>
+			<td class="{$update_date_class}">{$update_date_mastervalue}</td>
+			<td class="{$order_date_class}">{$order_date_mastervalue}</td>
+			<td class="{$commit_date_class}">{$commit_date_mastervalue}</td>
+			<td class="{$payment_date_class}">{$payment_date_mastervalue}</td>
+			<td class="{$del_flg_class}">{$del_flg_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

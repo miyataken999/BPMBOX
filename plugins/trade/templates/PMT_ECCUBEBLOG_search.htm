@@ -1,0 +1,1311 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel PMT_ECCUBEBLOG search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN APP_UID_fieldblock}		
+	<div class="container {$fielddispclass_APP_UID}" data-fieldname="APP_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG APP_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_UID}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_UID_fieldblock}
+	{BEGIN APP_NUMBER_fieldblock}		
+	<div class="container {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG APP_NUMBER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_NUMBER}
+			</div>
+			<div class="col-md-4" >
+				{$APP_NUMBER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_NUMBER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_NUMBER_fieldblock}
+	{BEGIN APP_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG APP_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APP_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$APP_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APP_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APP_STATUS_fieldblock}
+	{BEGIN BLOC_ID_fieldblock}		
+	<div class="container {$fielddispclass_BLOC_ID}" data-fieldname="BLOC_ID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG BLOC_ID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BLOC_ID}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BLOC_ID_fieldblock}
+	{BEGIN BLOC_ID_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_BLOC_ID_LABEL}" data-fieldname="BLOC_ID_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BLOC_ID_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_ID_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_ID_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BLOC_ID_LABEL_fieldblock}
+	{BEGIN BLOC_NAME_fieldblock}		
+	<div class="container {$fielddispclass_BLOC_NAME}" data-fieldname="BLOC_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG BLOC_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BLOC_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BLOC_NAME_fieldblock}
+	{BEGIN BLOC_NAME_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_BLOC_NAME_LABEL}" data-fieldname="BLOC_NAME_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BLOC_NAME_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_NAME_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BLOC_NAME_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BLOC_NAME_LABEL_fieldblock}
+	{BEGIN APPLICATION_fieldblock}		
+	<div class="container {$fielddispclass_APPLICATION}" data-fieldname="APPLICATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG APPLICATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APPLICATION}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APPLICATION_fieldblock}
+	{BEGIN APPLICATION_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_APPLICATION_LABEL}" data-fieldname="APPLICATION_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG APPLICATION_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_APPLICATION_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$APPLICATION_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END APPLICATION_LABEL_fieldblock}
+	{BEGIN PROCESS_fieldblock}		
+	<div class="container {$fielddispclass_PROCESS}" data-fieldname="PROCESS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG PROCESS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PROCESS}
+			</div>
+			<div class="col-md-4" >
+				{$PROCESS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PROCESS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PROCESS_fieldblock}
+	{BEGIN PROCESS_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_PROCESS_LABEL}" data-fieldname="PROCESS_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG PROCESS_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PROCESS_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$PROCESS_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PROCESS_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PROCESS_LABEL_fieldblock}
+	{BEGIN CHECKBOXVAR001_fieldblock}		
+	<div class="container {$fielddispclass_CHECKBOXVAR001}" data-fieldname="CHECKBOXVAR001">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG CHECKBOXVAR001}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHECKBOXVAR001}
+			</div>
+			<div class="col-md-4" >
+				{$CHECKBOXVAR001_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHECKBOXVAR001_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHECKBOXVAR001_fieldblock}
+	{BEGIN DATETIMEVAR001_fieldblock}		
+	<div class="container {$fielddispclass_DATETIMEVAR001}" data-fieldname="DATETIMEVAR001">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR001}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATETIMEVAR001}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR001_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR001_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATETIMEVAR001_fieldblock}
+	{BEGIN DATETIMEVAR001_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_DATETIMEVAR001_LABEL}" data-fieldname="DATETIMEVAR001_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATETIMEVAR001_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR001_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR001_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATETIMEVAR001_LABEL_fieldblock}
+	{BEGIN DATETIMEVAR002_fieldblock}		
+	<div class="container {$fielddispclass_DATETIMEVAR002}" data-fieldname="DATETIMEVAR002">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR002}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATETIMEVAR002}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR002_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR002_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATETIMEVAR002_fieldblock}
+	{BEGIN DATETIMEVAR002_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_DATETIMEVAR002_LABEL}" data-fieldname="DATETIMEVAR002_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATETIMEVAR002_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR002_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIMEVAR002_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATETIMEVAR002_LABEL_fieldblock}
+	{BEGIN DROPDOWNVAR001_fieldblock}		
+	<div class="container {$fielddispclass_DROPDOWNVAR001}" data-fieldname="DROPDOWNVAR001">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR001}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DROPDOWNVAR001}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR001_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR001_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DROPDOWNVAR001_fieldblock}
+	{BEGIN DROPDOWNVAR002_fieldblock}		
+	<div class="container {$fielddispclass_DROPDOWNVAR002}" data-fieldname="DROPDOWNVAR002">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR002}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DROPDOWNVAR002}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR002_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR002_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DROPDOWNVAR002_fieldblock}
+	{BEGIN DROPDOWNVAR003_fieldblock}		
+	<div class="container {$fielddispclass_DROPDOWNVAR003}" data-fieldname="DROPDOWNVAR003">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR003}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DROPDOWNVAR003}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR003_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR003_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DROPDOWNVAR003_fieldblock}
+	{BEGIN DROPDOWNVAR003_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_DROPDOWNVAR003_LABEL}" data-fieldname="DROPDOWNVAR003_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DROPDOWNVAR003_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR003_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DROPDOWNVAR003_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DROPDOWNVAR003_LABEL_fieldblock}
+	{BEGIN SATEI_fieldblock}		
+	<div class="container {$fielddispclass_SATEI}" data-fieldname="SATEI">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG SATEI}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SATEI}
+			</div>
+			<div class="col-md-4" >
+				{$SATEI_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SATEI_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SATEI_fieldblock}
+	{BEGIN SATEI_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_SATEI_LABEL}" data-fieldname="SATEI_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG SATEI_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SATEI_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$SATEI_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SATEI_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SATEI_LABEL_fieldblock}
+	{BEGIN TEXTVAR001_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR001}" data-fieldname="TEXTVAR001">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR001}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR001}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR001_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR001_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR001_fieldblock}
+	{BEGIN TEXTVAR001_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR001_LABEL}" data-fieldname="TEXTVAR001_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR001_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR001_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR001_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR001_LABEL_fieldblock}
+	{BEGIN TEXTVAR004_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR004}" data-fieldname="TEXTVAR004">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR004}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR004}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR004_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR004_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR004_fieldblock}
+	{BEGIN TEXTVAR004_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR004_LABEL}" data-fieldname="TEXTVAR004_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR004_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR004_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR004_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR004_LABEL_fieldblock}
+	{BEGIN TEXTVAR005_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR005}" data-fieldname="TEXTVAR005">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR005}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR005}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR005_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR005_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR005_fieldblock}
+	{BEGIN TEXTVAR006_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR006}" data-fieldname="TEXTVAR006">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR006}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR006}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR006_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR006_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR006_fieldblock}
+	{BEGIN TEXTVAR006_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR006_LABEL}" data-fieldname="TEXTVAR006_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR006_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR006_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR006_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR006_LABEL_fieldblock}
+	{BEGIN TEXTVAR007_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR007}" data-fieldname="TEXTVAR007">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR007}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR007}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR007_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR007_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR007_fieldblock}
+	{BEGIN TEXTVAR007_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR007_LABEL}" data-fieldname="TEXTVAR007_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR007_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR007_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR007_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR007_LABEL_fieldblock}
+	{BEGIN TEXTVAR008_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR008}" data-fieldname="TEXTVAR008">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR008}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR008}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR008_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR008_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR008_fieldblock}
+	{BEGIN TEXTVAR008_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR008_LABEL}" data-fieldname="TEXTVAR008_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR008_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR008_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR008_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR008_LABEL_fieldblock}
+	{BEGIN TEXTVAR009_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR009}" data-fieldname="TEXTVAR009">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR009}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR009}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR009_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR009_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR009_fieldblock}
+	{BEGIN TEXTVAR009_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR009_LABEL}" data-fieldname="TEXTVAR009_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR009_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR009_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR009_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR009_LABEL_fieldblock}
+	{BEGIN TEXTVAR010_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR010}" data-fieldname="TEXTVAR010">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR010}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR010}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR010_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR010_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR010_fieldblock}
+	{BEGIN TEXTVAR010_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR010_LABEL}" data-fieldname="TEXTVAR010_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR010_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR010_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR010_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR010_LABEL_fieldblock}
+	{BEGIN TEXTVAR011_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR011}" data-fieldname="TEXTVAR011">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR011}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR011}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR011_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR011_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR011_fieldblock}
+	{BEGIN TEXTVAR011_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR011_LABEL}" data-fieldname="TEXTVAR011_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR011_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR011_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR011_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR011_LABEL_fieldblock}
+	{BEGIN TEXTVAR012_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR012}" data-fieldname="TEXTVAR012">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR012}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR012}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR012_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR012_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR012_fieldblock}
+	{BEGIN TEXTVAR012_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR012_LABEL}" data-fieldname="TEXTVAR012_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR012_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR012_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR012_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR012_LABEL_fieldblock}
+	{BEGIN TEXTVAR013_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR013}" data-fieldname="TEXTVAR013">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR013}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR013}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR013_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR013_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR013_fieldblock}
+	{BEGIN TEXTVAR013_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR013_LABEL}" data-fieldname="TEXTVAR013_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR013_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR013_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR013_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR013_LABEL_fieldblock}
+	{BEGIN TEXTVAR014_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR014}" data-fieldname="TEXTVAR014">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR014}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR014}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR014_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR014_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR014_fieldblock}
+	{BEGIN TEXTVAR014_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR014_LABEL}" data-fieldname="TEXTVAR014_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR014_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR014_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR014_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR014_LABEL_fieldblock}
+	{BEGIN TEXTVAR015_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR015}" data-fieldname="TEXTVAR015">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR015}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR015}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR015_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR015_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR015_fieldblock}
+	{BEGIN TEXTVAR015_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTVAR015_LABEL}" data-fieldname="TEXTVAR015_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTVAR015_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR015_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTVAR015_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTVAR015_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR001_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR001}" data-fieldname="TEXTAREAVAR001">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR001}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR001}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR001_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR001_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR001_fieldblock}
+	{BEGIN TEXTAREAVAR002_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR002}" data-fieldname="TEXTAREAVAR002">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR002}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR002}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR002_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR002_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR002_fieldblock}
+	{BEGIN TEXTAREAVAR003_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR003}" data-fieldname="TEXTAREAVAR003">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR003}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR003}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR003_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR003_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR003_fieldblock}
+	{BEGIN TEXTAREAVAR003_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR003_LABEL}" data-fieldname="TEXTAREAVAR003_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR003_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR003_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR003_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR003_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR004_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR004}" data-fieldname="TEXTAREAVAR004">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR004}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR004}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR004_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR004_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR004_fieldblock}
+	{BEGIN TEXTAREAVAR004_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR004_LABEL}" data-fieldname="TEXTAREAVAR004_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR004_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR004_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR004_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR004_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR005_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR005}" data-fieldname="TEXTAREAVAR005">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR005}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR005}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR005_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR005_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR005_fieldblock}
+	{BEGIN TEXTAREAVAR005_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR005_LABEL}" data-fieldname="TEXTAREAVAR005_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR005_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR005_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR005_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR005_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR006_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR006}" data-fieldname="TEXTAREAVAR006">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR006}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR006}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR006_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR006_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR006_fieldblock}
+	{BEGIN TEXTAREAVAR006_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TEXTAREAVAR006_LABEL}" data-fieldname="TEXTAREAVAR006_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TEXTAREAVAR006_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR006_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TEXTAREAVAR006_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TEXTAREAVAR006_LABEL_fieldblock}
+	{BEGIN JPN_fieldblock}		
+	<div class="container {$fielddispclass_JPN}" data-fieldname="JPN">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG JPN}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_JPN}
+			</div>
+			<div class="col-md-4" >
+				{$JPN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$JPN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END JPN_fieldblock}
+	{BEGIN JPN_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_JPN_LABEL}" data-fieldname="JPN_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG JPN_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_JPN_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$JPN_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$JPN_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END JPN_LABEL_fieldblock}
+	{BEGIN TPL_PATH_fieldblock}		
+	<div class="container {$fielddispclass_TPL_PATH}" data-fieldname="TPL_PATH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TPL_PATH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPL_PATH}
+			</div>
+			<div class="col-md-4" >
+				{$TPL_PATH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPL_PATH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPL_PATH_fieldblock}
+	{BEGIN TPL_PATH_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_TPL_PATH_LABEL}" data-fieldname="TPL_PATH_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPL_PATH_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$TPL_PATH_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPL_PATH_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPL_PATH_LABEL_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,905 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel dtb_order edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN order_country_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_country_id}" data-fieldname="order_country_id" data-signal-error-for="order_country_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_country_id}">
+		{BEGIN order_country_id_label}{$label dtb_order order_country_id}{END order_country_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_country_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_country_id">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_country_id}
+		</div>
+	</div>
+</div>
+</div>
+{END order_country_id_fieldblock}
+
+			{BEGIN order_pref_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_pref}" data-fieldname="order_pref" data-signal-error-for="order_pref{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_pref}">
+		{BEGIN order_pref_label}{$label dtb_order order_pref}{END order_pref_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_pref_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_pref">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_pref}
+		</div>
+	</div>
+</div>
+</div>
+{END order_pref_fieldblock}
+
+			{BEGIN order_sex_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_sex}" data-fieldname="order_sex" data-signal-error-for="order_sex{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_sex}">
+		{BEGIN order_sex_label}{$label dtb_order order_sex}{END order_sex_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_sex_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_sex">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_sex}
+		</div>
+	</div>
+</div>
+</div>
+{END order_sex_fieldblock}
+
+			{BEGIN order_job_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_job}" data-fieldname="order_job" data-signal-error-for="order_job{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_job}">
+		{BEGIN order_job_label}{$label dtb_order order_job}{END order_job_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_job_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_job">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_job}
+		</div>
+	</div>
+</div>
+</div>
+{END order_job_fieldblock}
+
+			{BEGIN payment_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_payment_id}" data-fieldname="payment_id" data-signal-error-for="payment_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_payment_id}">
+		{BEGIN payment_id_label}{$label dtb_order payment_id}{END payment_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$payment_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="payment_id">
+		<div class="text-muted" >
+		{$tooltip dtb_order payment_id}
+		</div>
+	</div>
+</div>
+</div>
+{END payment_id_fieldblock}
+
+			{BEGIN device_type_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_device_type_id}" data-fieldname="device_type_id" data-signal-error-for="device_type_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_device_type_id}">
+		{BEGIN device_type_id_label}{$label dtb_order device_type_id}{END device_type_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$device_type_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="device_type_id">
+		<div class="text-muted" >
+		{$tooltip dtb_order device_type_id}
+		</div>
+	</div>
+</div>
+</div>
+{END device_type_id_fieldblock}
+
+			{BEGIN pre_order_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pre_order_id}" data-fieldname="pre_order_id" data-signal-error-for="pre_order_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pre_order_id}">
+		{BEGIN pre_order_id_label}{$label dtb_order pre_order_id}{END pre_order_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$pre_order_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pre_order_id">
+		<div class="text-muted" >
+		{$tooltip dtb_order pre_order_id}
+		</div>
+	</div>
+</div>
+</div>
+{END pre_order_id_fieldblock}
+
+			{BEGIN message_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_message}" data-fieldname="message" data-signal-error-for="message{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_message}">
+		{BEGIN message_label}{$label dtb_order message}{END message_label}
+	</label>
+	<div class="col-md-6" >
+		{$message_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="message">
+		<div class="text-muted" >
+		{$tooltip dtb_order message}
+		</div>
+	</div>
+</div>
+</div>
+{END message_fieldblock}
+
+		<div class="container">
+			<div class="panel panel-default form-section">
+		<div class="panel-heading" role="tab" {$section_New_section51_headattrs} data-toggle="collapse"   >
+		<!-- href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" -->
+		  <h4 class="panel-title">
+			<a role="button" >
+				{$section_New_section51_label}
+			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse {$section_New_section51_xtrclass}" role="tabpanel"  {$section_New_section51_attrs} >
+		<!-- id="collapseOne" aria-labelledby="headingOne" -->
+		  <div class="panel-body">
+			{$Section New_section51}
+		  </div>
+		</div>
+	</div>
+
+	</div>
+			{BEGIN order_company_name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_company_name}" data-fieldname="order_company_name" data-signal-error-for="order_company_name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_company_name}">
+		{BEGIN order_company_name_label}{$label dtb_order order_company_name}{END order_company_name_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_company_name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_company_name">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_company_name}
+		</div>
+	</div>
+</div>
+</div>
+{END order_company_name_fieldblock}
+
+		<div class="container">
+			<div class="panel panel-default form-section">
+		<div class="panel-heading" role="tab" {$section_New_section41_headattrs} data-toggle="collapse"   >
+		<!-- href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" -->
+		  <h4 class="panel-title">
+			<a role="button" >
+				{$section_New_section41_label}
+			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse {$section_New_section41_xtrclass}" role="tabpanel"  {$section_New_section41_attrs} >
+		<!-- id="collapseOne" aria-labelledby="headingOne" -->
+		  <div class="panel-body">
+			{$Section New_section41}
+		  </div>
+		</div>
+	</div>
+
+	</div>
+			{BEGIN order_birth_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_birth}" data-fieldname="order_birth" data-signal-error-for="order_birth{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_birth}">
+		{BEGIN order_birth_label}{$label dtb_order order_birth}{END order_birth_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_birth_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_birth">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_birth}
+		</div>
+	</div>
+</div>
+</div>
+{END order_birth_fieldblock}
+
+			{BEGIN subtotal_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_subtotal}" data-fieldname="subtotal" data-signal-error-for="subtotal{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_subtotal}">
+		{BEGIN subtotal_label}{$label dtb_order subtotal}{END subtotal_label}
+	</label>
+	<div class="col-md-6" >
+		{$subtotal_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="subtotal">
+		<div class="text-muted" >
+		{$tooltip dtb_order subtotal}
+		</div>
+	</div>
+</div>
+</div>
+{END subtotal_fieldblock}
+
+			{BEGIN discount_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_discount}" data-fieldname="discount" data-signal-error-for="discount{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_discount}">
+		{BEGIN discount_label}{$label dtb_order discount}{END discount_label}
+	</label>
+	<div class="col-md-6" >
+		{$discount_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="discount">
+		<div class="text-muted" >
+		{$tooltip dtb_order discount}
+		</div>
+	</div>
+</div>
+</div>
+{END discount_fieldblock}
+
+			{BEGIN delivery_fee_total_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_delivery_fee_total}" data-fieldname="delivery_fee_total" data-signal-error-for="delivery_fee_total{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_delivery_fee_total}">
+		{BEGIN delivery_fee_total_label}{$label dtb_order delivery_fee_total}{END delivery_fee_total_label}
+	</label>
+	<div class="col-md-6" >
+		{$delivery_fee_total_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="delivery_fee_total">
+		<div class="text-muted" >
+		{$tooltip dtb_order delivery_fee_total}
+		</div>
+	</div>
+</div>
+</div>
+{END delivery_fee_total_fieldblock}
+
+			{BEGIN charge_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_charge}" data-fieldname="charge" data-signal-error-for="charge{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_charge}">
+		{BEGIN charge_label}{$label dtb_order charge}{END charge_label}
+	</label>
+	<div class="col-md-6" >
+		{$charge_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="charge">
+		<div class="text-muted" >
+		{$tooltip dtb_order charge}
+		</div>
+	</div>
+</div>
+</div>
+{END charge_fieldblock}
+
+			{BEGIN tax_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tax}" data-fieldname="tax" data-signal-error-for="tax{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tax}">
+		{BEGIN tax_label}{$label dtb_order tax}{END tax_label}
+	</label>
+	<div class="col-md-6" >
+		{$tax_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tax">
+		<div class="text-muted" >
+		{$tooltip dtb_order tax}
+		</div>
+	</div>
+</div>
+</div>
+{END tax_fieldblock}
+
+			{BEGIN total_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_total}" data-fieldname="total" data-signal-error-for="total{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_total}">
+		{BEGIN total_label}{$label dtb_order total}{END total_label}
+	</label>
+	<div class="col-md-6" >
+		{$total_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="total">
+		<div class="text-muted" >
+		{$tooltip dtb_order total}
+		</div>
+	</div>
+</div>
+</div>
+{END total_fieldblock}
+
+			{BEGIN payment_total_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_payment_total}" data-fieldname="payment_total" data-signal-error-for="payment_total{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_payment_total}">
+		{BEGIN payment_total_label}{$label dtb_order payment_total}{END payment_total_label}
+	</label>
+	<div class="col-md-6" >
+		{$payment_total_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="payment_total">
+		<div class="text-muted" >
+		{$tooltip dtb_order payment_total}
+		</div>
+	</div>
+</div>
+</div>
+{END payment_total_fieldblock}
+
+			{BEGIN payment_method_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_payment_method}" data-fieldname="payment_method" data-signal-error-for="payment_method{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_payment_method}">
+		{BEGIN payment_method_label}{$label dtb_order payment_method}{END payment_method_label}
+	</label>
+	<div class="col-md-6" >
+		{$payment_method_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="payment_method">
+		<div class="text-muted" >
+		{$tooltip dtb_order payment_method}
+		</div>
+	</div>
+</div>
+</div>
+{END payment_method_fieldblock}
+
+			{BEGIN note_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_note}" data-fieldname="note" data-signal-error-for="note{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_note}">
+		{BEGIN note_label}{$label dtb_order note}{END note_label}
+	</label>
+	<div class="col-md-6" >
+		{$note_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="note">
+		<div class="text-muted" >
+		{$tooltip dtb_order note}
+		</div>
+	</div>
+</div>
+</div>
+{END note_fieldblock}
+
+			{BEGIN create_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_create_date}" data-fieldname="create_date" data-signal-error-for="create_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_create_date}">
+		{BEGIN create_date_label}{$label dtb_order create_date}{END create_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$create_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="create_date">
+		<div class="text-muted" >
+		{$tooltip dtb_order create_date}
+		</div>
+	</div>
+</div>
+</div>
+{END create_date_fieldblock}
+
+			{BEGIN update_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_update_date}" data-fieldname="update_date" data-signal-error-for="update_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_update_date}">
+		{BEGIN update_date_label}{$label dtb_order update_date}{END update_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$update_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="update_date">
+		<div class="text-muted" >
+		{$tooltip dtb_order update_date}
+		</div>
+	</div>
+</div>
+</div>
+{END update_date_fieldblock}
+
+			{BEGIN order_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_order_date}" data-fieldname="order_date" data-signal-error-for="order_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_order_date}">
+		{BEGIN order_date_label}{$label dtb_order order_date}{END order_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$order_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="order_date">
+		<div class="text-muted" >
+		{$tooltip dtb_order order_date}
+		</div>
+	</div>
+</div>
+</div>
+{END order_date_fieldblock}
+
+			{BEGIN commit_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_commit_date}" data-fieldname="commit_date" data-signal-error-for="commit_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_commit_date}">
+		{BEGIN commit_date_label}{$label dtb_order commit_date}{END commit_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$commit_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="commit_date">
+		<div class="text-muted" >
+		{$tooltip dtb_order commit_date}
+		</div>
+	</div>
+</div>
+</div>
+{END commit_date_fieldblock}
+
+			{BEGIN payment_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_payment_date}" data-fieldname="payment_date" data-signal-error-for="payment_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_payment_date}">
+		{BEGIN payment_date_label}{$label dtb_order payment_date}{END payment_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$payment_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="payment_date">
+		<div class="text-muted" >
+		{$tooltip dtb_order payment_date}
+		</div>
+	</div>
+</div>
+</div>
+{END payment_date_fieldblock}
+
+			{BEGIN del_flg_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_del_flg}" data-fieldname="del_flg" data-signal-error-for="del_flg{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_del_flg}">
+		{BEGIN del_flg_label}{$label dtb_order del_flg}{END del_flg_label}
+	</label>
+	<div class="col-md-6" >
+		{$del_flg_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="del_flg">
+		<div class="text-muted" >
+		{$tooltip dtb_order del_flg}
+		</div>
+	</div>
+</div>
+</div>
+{END del_flg_fieldblock}
+
+			{BEGIN status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_status}" data-fieldname="status" data-signal-error-for="status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_status}">
+		{BEGIN status_label}{$label dtb_order status}{END status_label}
+	</label>
+	<div class="col-md-6" >
+		{$status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="status">
+		<div class="text-muted" >
+		{$tooltip dtb_order status}
+		</div>
+	</div>
+</div>
+</div>
+{END status_fieldblock}
+
+			{BEGIN customer_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_customer_id}" data-fieldname="customer_id" data-signal-error-for="customer_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_customer_id}">
+		{BEGIN customer_id_label}{$label dtb_order customer_id}{END customer_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$customer_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="customer_id">
+		<div class="text-muted" >
+		{$tooltip dtb_order customer_id}
+		</div>
+	</div>
+</div>
+</div>
+{END customer_id_fieldblock}
+
+		<div class="container">
+			<div class="panel panel-default form-section">
+		<div class="panel-heading" role="tab" {$section_New_section1_headattrs} data-toggle="collapse"   >
+		<!-- href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" -->
+		  <h4 class="panel-title">
+			<a role="button" >
+				{$section_New_section1_label}
+			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse {$section_New_section1_xtrclass}" role="tabpanel"  {$section_New_section1_attrs} >
+		<!-- id="collapseOne" aria-labelledby="headingOne" -->
+		  <div class="panel-body">
+			{$Section New_section1}
+		  </div>
+		</div>
+	</div>
+
+	</div>
+		<div class="container">
+			<div class="panel panel-default form-section">
+		<div class="panel-heading" role="tab" {$section_New_section11_headattrs} data-toggle="collapse"   >
+		<!-- href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" -->
+		  <h4 class="panel-title">
+			<a role="button" >
+				{$section_New_section11_label}
+			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse {$section_New_section11_xtrclass}" role="tabpanel"  {$section_New_section11_attrs} >
+		<!-- id="collapseOne" aria-labelledby="headingOne" -->
+		  <div class="panel-body">
+			{$Section New_section11}
+		  </div>
+		</div>
+	</div>
+
+	</div>
+		<div class="container">
+			<div class="panel panel-default form-section">
+		<div class="panel-heading" role="tab" {$section_New_section21_headattrs} data-toggle="collapse"   >
+		<!-- href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" -->
+		  <h4 class="panel-title">
+			<a role="button" >
+				{$section_New_section21_label}
+			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse {$section_New_section21_xtrclass}" role="tabpanel"  {$section_New_section21_attrs} >
+		<!-- id="collapseOne" aria-labelledby="headingOne" -->
+		  <div class="panel-body">
+			{$Section New_section21}
+		  </div>
+		</div>
+	</div>
+
+	</div>
+		<div class="container">
+			<div class="panel panel-default form-section">
+		<div class="panel-heading" role="tab" {$section_New_section31_headattrs} data-toggle="collapse"   >
+		<!-- href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" -->
+		  <h4 class="panel-title">
+			<a role="button" >
+				{$section_New_section31_label}
+			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse {$section_New_section31_xtrclass}" role="tabpanel"  {$section_New_section31_attrs} >
+		<!-- id="collapseOne" aria-labelledby="headingOne" -->
+		  <div class="panel-body">
+			{$Section New_section31}
+		  </div>
+		</div>
+	</div>
+
+	</div>
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN updsel_button}
+	<button class="btn btn-primary" {$updselbutton_attrs}>{$update_selected}</button>
+	{END updsel_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

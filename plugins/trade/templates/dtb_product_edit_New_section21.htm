@@ -1,0 +1,49 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+{BEGIN description_list_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_description_list}" data-fieldname="description_list" data-signal-error-for="description_list{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_description_list}">
+			{BEGIN description_list_label}{$label dtb_product description_list}{END description_list_label}
+		</label>
+		<div class="col-md-6 " >
+			{$description_list_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="description_list">
+			<div class="text-muted" >
+			{$tooltip dtb_product description_list}
+			</div>
+		</div>
+	</div>
+</div>
+{END description_list_tabfieldblock}
+{BEGIN description_detail_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_description_detail}" data-fieldname="description_detail" data-signal-error-for="description_detail{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_description_detail}">
+			{BEGIN description_detail_label}{$label dtb_product description_detail}{END description_detail_label}
+		</label>
+		<div class="col-md-6 " >
+			{$description_detail_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="description_detail">
+			<div class="text-muted" >
+			{$tooltip dtb_product description_detail}
+			</div>
+		</div>
+	</div>
+</div>
+{END description_detail_tabfieldblock}
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

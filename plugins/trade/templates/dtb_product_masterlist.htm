@@ -1,0 +1,100 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel dtb_product masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=product_id]:before {
+		content: "{$label dtb_product product_id}";
+	}
+	.bs-gridcell[data-field=creator_id]:before {
+		content: "{$label dtb_product creator_id}";
+	}
+	.bs-gridcell[data-field=status]:before {
+		content: "{$label dtb_product status}";
+	}
+	.bs-gridcell[data-field=name]:before {
+		content: "{$label dtb_product name}";
+	}
+	.bs-gridcell[data-field=note]:before {
+		content: "{$label dtb_product note}";
+	}
+	.bs-gridcell[data-field=description_list]:before {
+		content: "{$label dtb_product description_list}";
+	}
+	.bs-gridcell[data-field=description_detail]:before {
+		content: "{$label dtb_product description_detail}";
+	}
+	.bs-gridcell[data-field=search_word]:before {
+		content: "{$label dtb_product search_word}";
+	}
+	.bs-gridcell[data-field=free_area]:before {
+		content: "{$label dtb_product free_area}";
+	}
+	.bs-gridcell[data-field=del_flg]:before {
+		content: "{$label dtb_product del_flg}";
+	}
+	.bs-gridcell[data-field=create_date]:before {
+		content: "{$label dtb_product create_date}";
+	}
+	.bs-gridcell[data-field=update_date]:before {
+		content: "{$label dtb_product update_date}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$product_id_class}">{$label dtb_product product_id}</th>
+			<th class="{$creator_id_class}">{$label dtb_product creator_id}</th>
+			<th class="{$status_class}">{$label dtb_product status}</th>
+			<th class="{$name_class}">{$label dtb_product name}</th>
+			<th class="{$note_class}">{$label dtb_product note}</th>
+			<th class="{$description_list_class}">{$label dtb_product description_list}</th>
+			<th class="{$description_detail_class}">{$label dtb_product description_detail}</th>
+			<th class="{$search_word_class}">{$label dtb_product search_word}</th>
+			<th class="{$free_area_class}">{$label dtb_product free_area}</th>
+			<th class="{$del_flg_class}">{$label dtb_product del_flg}</th>
+			<th class="{$create_date_class}">{$label dtb_product create_date}</th>
+			<th class="{$update_date_class}">{$label dtb_product update_date}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$product_id_class} bs-gridcell" data-field=product_id>{$product_id_mastervalue}</td>
+			<td class="{$creator_id_class} bs-gridcell" data-field=creator_id>{$creator_id_mastervalue}</td>
+			<td class="{$status_class} bs-gridcell" data-field=status>{$status_mastervalue}</td>
+			<td class="{$name_class} bs-gridcell" data-field=name>{$name_mastervalue}</td>
+			<td class="{$note_class} bs-gridcell" data-field=note>{$note_mastervalue}</td>
+			<td class="{$description_list_class} bs-gridcell" data-field=description_list>{$description_list_mastervalue}</td>
+			<td class="{$description_detail_class} bs-gridcell" data-field=description_detail>{$description_detail_mastervalue}</td>
+			<td class="{$search_word_class} bs-gridcell" data-field=search_word>{$search_word_mastervalue}</td>
+			<td class="{$free_area_class} bs-gridcell" data-field=free_area>{$free_area_mastervalue}</td>
+			<td class="{$del_flg_class} bs-gridcell" data-field=del_flg>{$del_flg_mastervalue}</td>
+			<td class="{$create_date_class} bs-gridcell" data-field=create_date>{$create_date_mastervalue}</td>
+			<td class="{$update_date_class} bs-gridcell" data-field=update_date>{$update_date_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

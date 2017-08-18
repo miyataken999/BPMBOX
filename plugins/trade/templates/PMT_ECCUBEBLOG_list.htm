@@ -1,0 +1,2708 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="PMT_ECCUBEBLOG_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="PMT_ECCUBEBLOG_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="PMT_ECCUBEBLOG_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="PMT_ECCUBEBLOG_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="PMT_ECCUBEBLOG_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_APP_CACHE_VIEW}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsAPP_CACHE_VIEW{$id}">
+									<input type="checkbox" value="APP_CACHE_VIEW" id="printDetailsAPP_CACHE_VIEW{$id}" checked>
+									業部ナビゲート
+								</label>
+							</div>
+					{END print_details_APP_CACHE_VIEW}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_UID" checked="checked" value="1" data-field="APP_UID">
+			  <span>{$label PMT_ECCUBEBLOG APP_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_NUMBER" checked="checked" value="1" data-field="APP_NUMBER">
+			  <span>{$label PMT_ECCUBEBLOG APP_NUMBER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_STATUS" checked="checked" value="1" data-field="APP_STATUS">
+			  <span>{$label PMT_ECCUBEBLOG APP_STATUS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BLOC_ID" checked="checked" value="1" data-field="BLOC_ID">
+			  <span>{$label PMT_ECCUBEBLOG BLOC_ID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BLOC_ID_LABEL" checked="checked" value="1" data-field="BLOC_ID_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BLOC_NAME" checked="checked" value="1" data-field="BLOC_NAME">
+			  <span>{$label PMT_ECCUBEBLOG BLOC_NAME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BLOC_NAME_LABEL" checked="checked" value="1" data-field="BLOC_NAME_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APPLICATION" checked="checked" value="1" data-field="APPLICATION">
+			  <span>{$label PMT_ECCUBEBLOG APPLICATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APPLICATION_LABEL" checked="checked" value="1" data-field="APPLICATION_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG APPLICATION_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PROCESS" checked="checked" value="1" data-field="PROCESS">
+			  <span>{$label PMT_ECCUBEBLOG PROCESS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PROCESS_LABEL" checked="checked" value="1" data-field="PROCESS_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG PROCESS_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_CHECKBOXVAR001" checked="checked" value="1" data-field="CHECKBOXVAR001">
+			  <span>{$label PMT_ECCUBEBLOG CHECKBOXVAR001}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DATETIMEVAR001" checked="checked" value="1" data-field="DATETIMEVAR001">
+			  <span>{$label PMT_ECCUBEBLOG DATETIMEVAR001}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DATETIMEVAR001_LABEL" checked="checked" value="1" data-field="DATETIMEVAR001_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DATETIMEVAR002" checked="checked" value="1" data-field="DATETIMEVAR002">
+			  <span>{$label PMT_ECCUBEBLOG DATETIMEVAR002}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DATETIMEVAR002_LABEL" checked="checked" value="1" data-field="DATETIMEVAR002_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DROPDOWNVAR001" checked="checked" value="1" data-field="DROPDOWNVAR001">
+			  <span>{$label PMT_ECCUBEBLOG DROPDOWNVAR001}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DROPDOWNVAR002" checked="checked" value="1" data-field="DROPDOWNVAR002">
+			  <span>{$label PMT_ECCUBEBLOG DROPDOWNVAR002}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DROPDOWNVAR003" checked="checked" value="1" data-field="DROPDOWNVAR003">
+			  <span>{$label PMT_ECCUBEBLOG DROPDOWNVAR003}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DROPDOWNVAR003_LABEL" checked="checked" value="1" data-field="DROPDOWNVAR003_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SATEI" checked="checked" value="1" data-field="SATEI">
+			  <span>{$label PMT_ECCUBEBLOG SATEI}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SATEI_LABEL" checked="checked" value="1" data-field="SATEI_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG SATEI_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR001" checked="checked" value="1" data-field="TEXTVAR001">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR001}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR001_LABEL" checked="checked" value="1" data-field="TEXTVAR001_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR004" checked="checked" value="1" data-field="TEXTVAR004">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR004}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR004_LABEL" checked="checked" value="1" data-field="TEXTVAR004_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR005" checked="checked" value="1" data-field="TEXTVAR005">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR005}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR006" checked="checked" value="1" data-field="TEXTVAR006">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR006}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR006_LABEL" checked="checked" value="1" data-field="TEXTVAR006_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR007" checked="checked" value="1" data-field="TEXTVAR007">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR007}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR007_LABEL" checked="checked" value="1" data-field="TEXTVAR007_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR008" checked="checked" value="1" data-field="TEXTVAR008">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR008}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR008_LABEL" checked="checked" value="1" data-field="TEXTVAR008_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR009" checked="checked" value="1" data-field="TEXTVAR009">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR009}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR009_LABEL" checked="checked" value="1" data-field="TEXTVAR009_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR010" checked="checked" value="1" data-field="TEXTVAR010">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR010}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR010_LABEL" checked="checked" value="1" data-field="TEXTVAR010_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR011" checked="checked" value="1" data-field="TEXTVAR011">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR011}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR011_LABEL" checked="checked" value="1" data-field="TEXTVAR011_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR012" checked="checked" value="1" data-field="TEXTVAR012">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR012}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR012_LABEL" checked="checked" value="1" data-field="TEXTVAR012_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR013" checked="checked" value="1" data-field="TEXTVAR013">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR013}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR013_LABEL" checked="checked" value="1" data-field="TEXTVAR013_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR014" checked="checked" value="1" data-field="TEXTVAR014">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR014}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR014_LABEL" checked="checked" value="1" data-field="TEXTVAR014_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR015" checked="checked" value="1" data-field="TEXTVAR015">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR015}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTVAR015_LABEL" checked="checked" value="1" data-field="TEXTVAR015_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR001" checked="checked" value="1" data-field="TEXTAREAVAR001">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR001}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR002" checked="checked" value="1" data-field="TEXTAREAVAR002">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR002}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR003" checked="checked" value="1" data-field="TEXTAREAVAR003">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR003}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR003_LABEL" checked="checked" value="1" data-field="TEXTAREAVAR003_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR004" checked="checked" value="1" data-field="TEXTAREAVAR004">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR004}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR004_LABEL" checked="checked" value="1" data-field="TEXTAREAVAR004_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR005" checked="checked" value="1" data-field="TEXTAREAVAR005">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR005}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR005_LABEL" checked="checked" value="1" data-field="TEXTAREAVAR005_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR006" checked="checked" value="1" data-field="TEXTAREAVAR006">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR006}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TEXTAREAVAR006_LABEL" checked="checked" value="1" data-field="TEXTAREAVAR006_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_JPN" checked="checked" value="1" data-field="JPN">
+			  <span>{$label PMT_ECCUBEBLOG JPN}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_JPN_LABEL" checked="checked" value="1" data-field="JPN_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG JPN_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TPL_PATH" checked="checked" value="1" data-field="TPL_PATH">
+			  <span>{$label PMT_ECCUBEBLOG TPL_PATH}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TPL_PATH_LABEL" checked="checked" value="1" data-field="TPL_PATH_LABEL">
+			  <span>{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label PMT_ECCUBEBLOG APP_UID}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label PMT_ECCUBEBLOG APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label PMT_ECCUBEBLOG APP_STATUS}";
+	}
+	.bs-gridcell[data-field=BLOC_ID]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_ID}";
+	}
+	.bs-gridcell[data-field=BLOC_ID_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}";
+	}
+	.bs-gridcell[data-field=BLOC_NAME]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_NAME}";
+	}
+	.bs-gridcell[data-field=BLOC_NAME_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}";
+	}
+	.bs-gridcell[data-field=APPLICATION]:before {
+		content: "{$label PMT_ECCUBEBLOG APPLICATION}";
+	}
+	.bs-gridcell[data-field=APPLICATION_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG APPLICATION_LABEL}";
+	}
+	.bs-gridcell[data-field=PROCESS]:before {
+		content: "{$label PMT_ECCUBEBLOG PROCESS}";
+	}
+	.bs-gridcell[data-field=PROCESS_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG PROCESS_LABEL}";
+	}
+	.bs-gridcell[data-field=CHECKBOXVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG CHECKBOXVAR001}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR001}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR001_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR002]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR002}";
+	}
+	.bs-gridcell[data-field=DATETIMEVAR002_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR001}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR002]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR002}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR003]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR003}";
+	}
+	.bs-gridcell[data-field=DROPDOWNVAR003_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}";
+	}
+	.bs-gridcell[data-field=SATEI]:before {
+		content: "{$label PMT_ECCUBEBLOG SATEI}";
+	}
+	.bs-gridcell[data-field=SATEI_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG SATEI_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR001}";
+	}
+	.bs-gridcell[data-field=TEXTVAR001_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR004]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR004}";
+	}
+	.bs-gridcell[data-field=TEXTVAR004_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR005]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR005}";
+	}
+	.bs-gridcell[data-field=TEXTVAR006]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR006}";
+	}
+	.bs-gridcell[data-field=TEXTVAR006_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR007]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR007}";
+	}
+	.bs-gridcell[data-field=TEXTVAR007_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR008]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR008}";
+	}
+	.bs-gridcell[data-field=TEXTVAR008_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR009]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR009}";
+	}
+	.bs-gridcell[data-field=TEXTVAR009_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR010]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR010}";
+	}
+	.bs-gridcell[data-field=TEXTVAR010_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR011]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR011}";
+	}
+	.bs-gridcell[data-field=TEXTVAR011_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR012]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR012}";
+	}
+	.bs-gridcell[data-field=TEXTVAR012_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR013]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR013}";
+	}
+	.bs-gridcell[data-field=TEXTVAR013_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR014]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR014}";
+	}
+	.bs-gridcell[data-field=TEXTVAR014_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTVAR015]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR015}";
+	}
+	.bs-gridcell[data-field=TEXTVAR015_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR001]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR001}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR002]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR002}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR003]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR003}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR003_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR004]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR004}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR004_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR005]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR005}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR005_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR006]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR006}";
+	}
+	.bs-gridcell[data-field=TEXTAREAVAR006_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}";
+	}
+	.bs-gridcell[data-field=JPN]:before {
+		content: "{$label PMT_ECCUBEBLOG JPN}";
+	}
+	.bs-gridcell[data-field=JPN_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG JPN_LABEL}";
+	}
+	.bs-gridcell[data-field=TPL_PATH]:before {
+		content: "{$label PMT_ECCUBEBLOG TPL_PATH}";
+	}
+	.bs-gridcell[data-field=TPL_PATH_LABEL]:before {
+		content: "{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN PMT_ECCUBEBLOG_dtable_column}
+									<th >&nbsp;</th>
+									{END PMT_ECCUBEBLOG_dtable_column}
+									
+									{BEGIN APP_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_UID_class}" data-field=APP_UID>
+									{BEGIN APP_UID_fieldheader}
+																				<span {$APP_UID_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG APP_UID}
+										</span>
+									{END APP_UID_fieldheader}
+									</th>
+									{END APP_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_NUMBER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_NUMBER_class}" data-field=APP_NUMBER>
+									{BEGIN APP_NUMBER_fieldheader}
+																				<span {$APP_NUMBER_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG APP_NUMBER}
+										</span>
+									{END APP_NUMBER_fieldheader}
+									</th>
+									{END APP_NUMBER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_STATUS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_STATUS_class}" data-field=APP_STATUS>
+									{BEGIN APP_STATUS_fieldheader}
+																				<span {$APP_STATUS_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG APP_STATUS}
+										</span>
+									{END APP_STATUS_fieldheader}
+									</th>
+									{END APP_STATUS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BLOC_ID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BLOC_ID_class}" data-field=BLOC_ID>
+									{BEGIN BLOC_ID_fieldheader}
+																				<span {$BLOC_ID_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG BLOC_ID}
+										</span>
+									{END BLOC_ID_fieldheader}
+									</th>
+									{END BLOC_ID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BLOC_ID_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BLOC_ID_LABEL_class}" data-field=BLOC_ID_LABEL>
+									{BEGIN BLOC_ID_LABEL_fieldheader}
+																				<span {$BLOC_ID_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}
+										</span>
+									{END BLOC_ID_LABEL_fieldheader}
+									</th>
+									{END BLOC_ID_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BLOC_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BLOC_NAME_class}" data-field=BLOC_NAME>
+									{BEGIN BLOC_NAME_fieldheader}
+																				<span {$BLOC_NAME_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG BLOC_NAME}
+										</span>
+									{END BLOC_NAME_fieldheader}
+									</th>
+									{END BLOC_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BLOC_NAME_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BLOC_NAME_LABEL_class}" data-field=BLOC_NAME_LABEL>
+									{BEGIN BLOC_NAME_LABEL_fieldheader}
+																				<span {$BLOC_NAME_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}
+										</span>
+									{END BLOC_NAME_LABEL_fieldheader}
+									</th>
+									{END BLOC_NAME_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APPLICATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APPLICATION_class}" data-field=APPLICATION>
+									{BEGIN APPLICATION_fieldheader}
+																				<span {$APPLICATION_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG APPLICATION}
+										</span>
+									{END APPLICATION_fieldheader}
+									</th>
+									{END APPLICATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APPLICATION_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APPLICATION_LABEL_class}" data-field=APPLICATION_LABEL>
+									{BEGIN APPLICATION_LABEL_fieldheader}
+																				<span {$APPLICATION_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG APPLICATION_LABEL}
+										</span>
+									{END APPLICATION_LABEL_fieldheader}
+									</th>
+									{END APPLICATION_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PROCESS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PROCESS_class}" data-field=PROCESS>
+									{BEGIN PROCESS_fieldheader}
+																				<span {$PROCESS_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG PROCESS}
+										</span>
+									{END PROCESS_fieldheader}
+									</th>
+									{END PROCESS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PROCESS_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PROCESS_LABEL_class}" data-field=PROCESS_LABEL>
+									{BEGIN PROCESS_LABEL_fieldheader}
+																				<span {$PROCESS_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG PROCESS_LABEL}
+										</span>
+									{END PROCESS_LABEL_fieldheader}
+									</th>
+									{END PROCESS_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHECKBOXVAR001_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHECKBOXVAR001_class}" data-field=CHECKBOXVAR001>
+									{BEGIN CHECKBOXVAR001_fieldheader}
+																				<span {$CHECKBOXVAR001_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG CHECKBOXVAR001}
+										</span>
+									{END CHECKBOXVAR001_fieldheader}
+									</th>
+									{END CHECKBOXVAR001_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATETIMEVAR001_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATETIMEVAR001_class}" data-field=DATETIMEVAR001>
+									{BEGIN DATETIMEVAR001_fieldheader}
+																				<span {$DATETIMEVAR001_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DATETIMEVAR001}
+										</span>
+									{END DATETIMEVAR001_fieldheader}
+									</th>
+									{END DATETIMEVAR001_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATETIMEVAR001_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATETIMEVAR001_LABEL_class}" data-field=DATETIMEVAR001_LABEL>
+									{BEGIN DATETIMEVAR001_LABEL_fieldheader}
+																				<span {$DATETIMEVAR001_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}
+										</span>
+									{END DATETIMEVAR001_LABEL_fieldheader}
+									</th>
+									{END DATETIMEVAR001_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATETIMEVAR002_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATETIMEVAR002_class}" data-field=DATETIMEVAR002>
+									{BEGIN DATETIMEVAR002_fieldheader}
+																				<span {$DATETIMEVAR002_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DATETIMEVAR002}
+										</span>
+									{END DATETIMEVAR002_fieldheader}
+									</th>
+									{END DATETIMEVAR002_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATETIMEVAR002_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATETIMEVAR002_LABEL_class}" data-field=DATETIMEVAR002_LABEL>
+									{BEGIN DATETIMEVAR002_LABEL_fieldheader}
+																				<span {$DATETIMEVAR002_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}
+										</span>
+									{END DATETIMEVAR002_LABEL_fieldheader}
+									</th>
+									{END DATETIMEVAR002_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DROPDOWNVAR001_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DROPDOWNVAR001_class}" data-field=DROPDOWNVAR001>
+									{BEGIN DROPDOWNVAR001_fieldheader}
+																				<span {$DROPDOWNVAR001_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DROPDOWNVAR001}
+										</span>
+									{END DROPDOWNVAR001_fieldheader}
+									</th>
+									{END DROPDOWNVAR001_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DROPDOWNVAR002_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DROPDOWNVAR002_class}" data-field=DROPDOWNVAR002>
+									{BEGIN DROPDOWNVAR002_fieldheader}
+																				<span {$DROPDOWNVAR002_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DROPDOWNVAR002}
+										</span>
+									{END DROPDOWNVAR002_fieldheader}
+									</th>
+									{END DROPDOWNVAR002_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DROPDOWNVAR003_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DROPDOWNVAR003_class}" data-field=DROPDOWNVAR003>
+									{BEGIN DROPDOWNVAR003_fieldheader}
+																				<span {$DROPDOWNVAR003_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DROPDOWNVAR003}
+										</span>
+									{END DROPDOWNVAR003_fieldheader}
+									</th>
+									{END DROPDOWNVAR003_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DROPDOWNVAR003_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DROPDOWNVAR003_LABEL_class}" data-field=DROPDOWNVAR003_LABEL>
+									{BEGIN DROPDOWNVAR003_LABEL_fieldheader}
+																				<span {$DROPDOWNVAR003_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}
+										</span>
+									{END DROPDOWNVAR003_LABEL_fieldheader}
+									</th>
+									{END DROPDOWNVAR003_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SATEI_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SATEI_class}" data-field=SATEI>
+									{BEGIN SATEI_fieldheader}
+																				<span {$SATEI_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG SATEI}
+										</span>
+									{END SATEI_fieldheader}
+									</th>
+									{END SATEI_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SATEI_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SATEI_LABEL_class}" data-field=SATEI_LABEL>
+									{BEGIN SATEI_LABEL_fieldheader}
+																				<span {$SATEI_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG SATEI_LABEL}
+										</span>
+									{END SATEI_LABEL_fieldheader}
+									</th>
+									{END SATEI_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR001_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR001_class}" data-field=TEXTVAR001>
+									{BEGIN TEXTVAR001_fieldheader}
+																				<span {$TEXTVAR001_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR001}
+										</span>
+									{END TEXTVAR001_fieldheader}
+									</th>
+									{END TEXTVAR001_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR001_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR001_LABEL_class}" data-field=TEXTVAR001_LABEL>
+									{BEGIN TEXTVAR001_LABEL_fieldheader}
+																				<span {$TEXTVAR001_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}
+										</span>
+									{END TEXTVAR001_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR001_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR004_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR004_class}" data-field=TEXTVAR004>
+									{BEGIN TEXTVAR004_fieldheader}
+																				<span {$TEXTVAR004_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR004}
+										</span>
+									{END TEXTVAR004_fieldheader}
+									</th>
+									{END TEXTVAR004_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR004_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR004_LABEL_class}" data-field=TEXTVAR004_LABEL>
+									{BEGIN TEXTVAR004_LABEL_fieldheader}
+																				<span {$TEXTVAR004_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}
+										</span>
+									{END TEXTVAR004_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR004_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR005_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR005_class}" data-field=TEXTVAR005>
+									{BEGIN TEXTVAR005_fieldheader}
+																				<span {$TEXTVAR005_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR005}
+										</span>
+									{END TEXTVAR005_fieldheader}
+									</th>
+									{END TEXTVAR005_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR006_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR006_class}" data-field=TEXTVAR006>
+									{BEGIN TEXTVAR006_fieldheader}
+																				<span {$TEXTVAR006_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR006}
+										</span>
+									{END TEXTVAR006_fieldheader}
+									</th>
+									{END TEXTVAR006_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR006_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR006_LABEL_class}" data-field=TEXTVAR006_LABEL>
+									{BEGIN TEXTVAR006_LABEL_fieldheader}
+																				<span {$TEXTVAR006_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}
+										</span>
+									{END TEXTVAR006_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR006_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR007_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR007_class}" data-field=TEXTVAR007>
+									{BEGIN TEXTVAR007_fieldheader}
+																				<span {$TEXTVAR007_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR007}
+										</span>
+									{END TEXTVAR007_fieldheader}
+									</th>
+									{END TEXTVAR007_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR007_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR007_LABEL_class}" data-field=TEXTVAR007_LABEL>
+									{BEGIN TEXTVAR007_LABEL_fieldheader}
+																				<span {$TEXTVAR007_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}
+										</span>
+									{END TEXTVAR007_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR007_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR008_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR008_class}" data-field=TEXTVAR008>
+									{BEGIN TEXTVAR008_fieldheader}
+																				<span {$TEXTVAR008_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR008}
+										</span>
+									{END TEXTVAR008_fieldheader}
+									</th>
+									{END TEXTVAR008_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR008_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR008_LABEL_class}" data-field=TEXTVAR008_LABEL>
+									{BEGIN TEXTVAR008_LABEL_fieldheader}
+																				<span {$TEXTVAR008_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}
+										</span>
+									{END TEXTVAR008_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR008_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR009_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR009_class}" data-field=TEXTVAR009>
+									{BEGIN TEXTVAR009_fieldheader}
+																				<span {$TEXTVAR009_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR009}
+										</span>
+									{END TEXTVAR009_fieldheader}
+									</th>
+									{END TEXTVAR009_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR009_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR009_LABEL_class}" data-field=TEXTVAR009_LABEL>
+									{BEGIN TEXTVAR009_LABEL_fieldheader}
+																				<span {$TEXTVAR009_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}
+										</span>
+									{END TEXTVAR009_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR009_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR010_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR010_class}" data-field=TEXTVAR010>
+									{BEGIN TEXTVAR010_fieldheader}
+																				<span {$TEXTVAR010_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR010}
+										</span>
+									{END TEXTVAR010_fieldheader}
+									</th>
+									{END TEXTVAR010_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR010_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR010_LABEL_class}" data-field=TEXTVAR010_LABEL>
+									{BEGIN TEXTVAR010_LABEL_fieldheader}
+																				<span {$TEXTVAR010_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}
+										</span>
+									{END TEXTVAR010_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR010_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR011_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR011_class}" data-field=TEXTVAR011>
+									{BEGIN TEXTVAR011_fieldheader}
+																				<span {$TEXTVAR011_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR011}
+										</span>
+									{END TEXTVAR011_fieldheader}
+									</th>
+									{END TEXTVAR011_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR011_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR011_LABEL_class}" data-field=TEXTVAR011_LABEL>
+									{BEGIN TEXTVAR011_LABEL_fieldheader}
+																				<span {$TEXTVAR011_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}
+										</span>
+									{END TEXTVAR011_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR011_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR012_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR012_class}" data-field=TEXTVAR012>
+									{BEGIN TEXTVAR012_fieldheader}
+																				<span {$TEXTVAR012_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR012}
+										</span>
+									{END TEXTVAR012_fieldheader}
+									</th>
+									{END TEXTVAR012_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR012_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR012_LABEL_class}" data-field=TEXTVAR012_LABEL>
+									{BEGIN TEXTVAR012_LABEL_fieldheader}
+																				<span {$TEXTVAR012_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}
+										</span>
+									{END TEXTVAR012_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR012_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR013_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR013_class}" data-field=TEXTVAR013>
+									{BEGIN TEXTVAR013_fieldheader}
+																				<span {$TEXTVAR013_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR013}
+										</span>
+									{END TEXTVAR013_fieldheader}
+									</th>
+									{END TEXTVAR013_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR013_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR013_LABEL_class}" data-field=TEXTVAR013_LABEL>
+									{BEGIN TEXTVAR013_LABEL_fieldheader}
+																				<span {$TEXTVAR013_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}
+										</span>
+									{END TEXTVAR013_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR013_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR014_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR014_class}" data-field=TEXTVAR014>
+									{BEGIN TEXTVAR014_fieldheader}
+																				<span {$TEXTVAR014_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR014}
+										</span>
+									{END TEXTVAR014_fieldheader}
+									</th>
+									{END TEXTVAR014_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR014_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR014_LABEL_class}" data-field=TEXTVAR014_LABEL>
+									{BEGIN TEXTVAR014_LABEL_fieldheader}
+																				<span {$TEXTVAR014_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}
+										</span>
+									{END TEXTVAR014_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR014_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR015_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR015_class}" data-field=TEXTVAR015>
+									{BEGIN TEXTVAR015_fieldheader}
+																				<span {$TEXTVAR015_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR015}
+										</span>
+									{END TEXTVAR015_fieldheader}
+									</th>
+									{END TEXTVAR015_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTVAR015_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTVAR015_LABEL_class}" data-field=TEXTVAR015_LABEL>
+									{BEGIN TEXTVAR015_LABEL_fieldheader}
+																				<span {$TEXTVAR015_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}
+										</span>
+									{END TEXTVAR015_LABEL_fieldheader}
+									</th>
+									{END TEXTVAR015_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR001_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR001_class}" data-field=TEXTAREAVAR001>
+									{BEGIN TEXTAREAVAR001_fieldheader}
+																				<span {$TEXTAREAVAR001_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR001}
+										</span>
+									{END TEXTAREAVAR001_fieldheader}
+									</th>
+									{END TEXTAREAVAR001_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR002_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR002_class}" data-field=TEXTAREAVAR002>
+									{BEGIN TEXTAREAVAR002_fieldheader}
+																				<span {$TEXTAREAVAR002_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR002}
+										</span>
+									{END TEXTAREAVAR002_fieldheader}
+									</th>
+									{END TEXTAREAVAR002_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR003_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR003_class}" data-field=TEXTAREAVAR003>
+									{BEGIN TEXTAREAVAR003_fieldheader}
+																				<span {$TEXTAREAVAR003_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR003}
+										</span>
+									{END TEXTAREAVAR003_fieldheader}
+									</th>
+									{END TEXTAREAVAR003_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR003_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR003_LABEL_class}" data-field=TEXTAREAVAR003_LABEL>
+									{BEGIN TEXTAREAVAR003_LABEL_fieldheader}
+																				<span {$TEXTAREAVAR003_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}
+										</span>
+									{END TEXTAREAVAR003_LABEL_fieldheader}
+									</th>
+									{END TEXTAREAVAR003_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR004_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR004_class}" data-field=TEXTAREAVAR004>
+									{BEGIN TEXTAREAVAR004_fieldheader}
+																				<span {$TEXTAREAVAR004_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR004}
+										</span>
+									{END TEXTAREAVAR004_fieldheader}
+									</th>
+									{END TEXTAREAVAR004_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR004_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR004_LABEL_class}" data-field=TEXTAREAVAR004_LABEL>
+									{BEGIN TEXTAREAVAR004_LABEL_fieldheader}
+																				<span {$TEXTAREAVAR004_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}
+										</span>
+									{END TEXTAREAVAR004_LABEL_fieldheader}
+									</th>
+									{END TEXTAREAVAR004_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR005_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR005_class}" data-field=TEXTAREAVAR005>
+									{BEGIN TEXTAREAVAR005_fieldheader}
+																				<span {$TEXTAREAVAR005_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR005}
+										</span>
+									{END TEXTAREAVAR005_fieldheader}
+									</th>
+									{END TEXTAREAVAR005_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR005_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR005_LABEL_class}" data-field=TEXTAREAVAR005_LABEL>
+									{BEGIN TEXTAREAVAR005_LABEL_fieldheader}
+																				<span {$TEXTAREAVAR005_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}
+										</span>
+									{END TEXTAREAVAR005_LABEL_fieldheader}
+									</th>
+									{END TEXTAREAVAR005_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR006_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR006_class}" data-field=TEXTAREAVAR006>
+									{BEGIN TEXTAREAVAR006_fieldheader}
+																				<span {$TEXTAREAVAR006_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR006}
+										</span>
+									{END TEXTAREAVAR006_fieldheader}
+									</th>
+									{END TEXTAREAVAR006_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TEXTAREAVAR006_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TEXTAREAVAR006_LABEL_class}" data-field=TEXTAREAVAR006_LABEL>
+									{BEGIN TEXTAREAVAR006_LABEL_fieldheader}
+																				<span {$TEXTAREAVAR006_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}
+										</span>
+									{END TEXTAREAVAR006_LABEL_fieldheader}
+									</th>
+									{END TEXTAREAVAR006_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN JPN_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$JPN_class}" data-field=JPN>
+									{BEGIN JPN_fieldheader}
+																				<span {$JPN_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG JPN}
+										</span>
+									{END JPN_fieldheader}
+									</th>
+									{END JPN_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN JPN_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$JPN_LABEL_class}" data-field=JPN_LABEL>
+									{BEGIN JPN_LABEL_fieldheader}
+																				<span {$JPN_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG JPN_LABEL}
+										</span>
+									{END JPN_LABEL_fieldheader}
+									</th>
+									{END JPN_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPL_PATH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPL_PATH_class}" data-field=TPL_PATH>
+									{BEGIN TPL_PATH_fieldheader}
+																				<span {$TPL_PATH_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TPL_PATH}
+										</span>
+									{END TPL_PATH_fieldheader}
+									</th>
+									{END TPL_PATH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPL_PATH_LABEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPL_PATH_LABEL_class}" data-field=TPL_PATH_LABEL>
+									{BEGIN TPL_PATH_LABEL_fieldheader}
+																				<span {$TPL_PATH_LABEL_orderlinkattrs}>
+											{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}
+										</span>
+									{END TPL_PATH_LABEL_fieldheader}
+									</th>
+									{END TPL_PATH_LABEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+	
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN PMT_ECCUBEBLOG_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+							
+				
+					<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge APP_CACHE_VIEW_badge" {$APP_CACHE_VIEW_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$APP_CACHE_VIEW_cntspan_class}" >{$APP_CACHE_VIEW_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
+	</td>
+	{END PMT_ECCUBEBLOG_dtable_column}
+
+
+	{BEGIN APP_UID_fieldcolumn}
+	<td class="bs-gridcell {$APP_UID_class}"  data-field=APP_UID {$rowstyle} {$recordattrs}>
+		{$APP_UID_value}
+	</td>
+{END APP_UID_fieldcolumn}
+
+
+	{BEGIN APP_NUMBER_fieldcolumn}
+	<td class="bs-gridcell {$APP_NUMBER_class}"  data-field=APP_NUMBER {$rowstyle} {$recordattrs}>
+		{$APP_NUMBER_value}
+	</td>
+{END APP_NUMBER_fieldcolumn}
+
+
+	{BEGIN APP_STATUS_fieldcolumn}
+	<td class="bs-gridcell {$APP_STATUS_class}"  data-field=APP_STATUS {$rowstyle} {$recordattrs}>
+		{$APP_STATUS_value}
+	</td>
+{END APP_STATUS_fieldcolumn}
+
+
+	{BEGIN BLOC_ID_fieldcolumn}
+	<td class="bs-gridcell {$BLOC_ID_class}"  data-field=BLOC_ID {$rowstyle} {$recordattrs}>
+		{$BLOC_ID_value}
+	</td>
+{END BLOC_ID_fieldcolumn}
+
+
+	{BEGIN BLOC_ID_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$BLOC_ID_LABEL_class}"  data-field=BLOC_ID_LABEL {$rowstyle} {$recordattrs}>
+		{$BLOC_ID_LABEL_value}
+	</td>
+{END BLOC_ID_LABEL_fieldcolumn}
+
+
+	{BEGIN BLOC_NAME_fieldcolumn}
+	<td class="bs-gridcell {$BLOC_NAME_class}"  data-field=BLOC_NAME {$rowstyle} {$recordattrs}>
+		{$BLOC_NAME_value}
+	</td>
+{END BLOC_NAME_fieldcolumn}
+
+
+	{BEGIN BLOC_NAME_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$BLOC_NAME_LABEL_class}"  data-field=BLOC_NAME_LABEL {$rowstyle} {$recordattrs}>
+		{$BLOC_NAME_LABEL_value}
+	</td>
+{END BLOC_NAME_LABEL_fieldcolumn}
+
+
+	{BEGIN APPLICATION_fieldcolumn}
+	<td class="bs-gridcell {$APPLICATION_class}"  data-field=APPLICATION {$rowstyle} {$recordattrs}>
+		{$APPLICATION_value}
+	</td>
+{END APPLICATION_fieldcolumn}
+
+
+	{BEGIN APPLICATION_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$APPLICATION_LABEL_class}"  data-field=APPLICATION_LABEL {$rowstyle} {$recordattrs}>
+		{$APPLICATION_LABEL_value}
+	</td>
+{END APPLICATION_LABEL_fieldcolumn}
+
+
+	{BEGIN PROCESS_fieldcolumn}
+	<td class="bs-gridcell {$PROCESS_class}"  data-field=PROCESS {$rowstyle} {$recordattrs}>
+		{$PROCESS_value}
+	</td>
+{END PROCESS_fieldcolumn}
+
+
+	{BEGIN PROCESS_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$PROCESS_LABEL_class}"  data-field=PROCESS_LABEL {$rowstyle} {$recordattrs}>
+		{$PROCESS_LABEL_value}
+	</td>
+{END PROCESS_LABEL_fieldcolumn}
+
+
+	{BEGIN CHECKBOXVAR001_fieldcolumn}
+	<td class="bs-gridcell {$CHECKBOXVAR001_class}"  data-field=CHECKBOXVAR001 {$rowstyle} {$recordattrs}>
+		{$CHECKBOXVAR001_value}
+	</td>
+{END CHECKBOXVAR001_fieldcolumn}
+
+
+	{BEGIN DATETIMEVAR001_fieldcolumn}
+	<td class="bs-gridcell {$DATETIMEVAR001_class}"  data-field=DATETIMEVAR001 {$rowstyle} {$recordattrs}>
+		{$DATETIMEVAR001_value}
+	</td>
+{END DATETIMEVAR001_fieldcolumn}
+
+
+	{BEGIN DATETIMEVAR001_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$DATETIMEVAR001_LABEL_class}"  data-field=DATETIMEVAR001_LABEL {$rowstyle} {$recordattrs}>
+		{$DATETIMEVAR001_LABEL_value}
+	</td>
+{END DATETIMEVAR001_LABEL_fieldcolumn}
+
+
+	{BEGIN DATETIMEVAR002_fieldcolumn}
+	<td class="bs-gridcell {$DATETIMEVAR002_class}"  data-field=DATETIMEVAR002 {$rowstyle} {$recordattrs}>
+		{$DATETIMEVAR002_value}
+	</td>
+{END DATETIMEVAR002_fieldcolumn}
+
+
+	{BEGIN DATETIMEVAR002_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$DATETIMEVAR002_LABEL_class}"  data-field=DATETIMEVAR002_LABEL {$rowstyle} {$recordattrs}>
+		{$DATETIMEVAR002_LABEL_value}
+	</td>
+{END DATETIMEVAR002_LABEL_fieldcolumn}
+
+
+	{BEGIN DROPDOWNVAR001_fieldcolumn}
+	<td class="bs-gridcell {$DROPDOWNVAR001_class}"  data-field=DROPDOWNVAR001 {$rowstyle} {$recordattrs}>
+		{$DROPDOWNVAR001_value}
+	</td>
+{END DROPDOWNVAR001_fieldcolumn}
+
+
+	{BEGIN DROPDOWNVAR002_fieldcolumn}
+	<td class="bs-gridcell {$DROPDOWNVAR002_class}"  data-field=DROPDOWNVAR002 {$rowstyle} {$recordattrs}>
+		{$DROPDOWNVAR002_value}
+	</td>
+{END DROPDOWNVAR002_fieldcolumn}
+
+
+	{BEGIN DROPDOWNVAR003_fieldcolumn}
+	<td class="bs-gridcell {$DROPDOWNVAR003_class}"  data-field=DROPDOWNVAR003 {$rowstyle} {$recordattrs}>
+		{$DROPDOWNVAR003_value}
+	</td>
+{END DROPDOWNVAR003_fieldcolumn}
+
+
+	{BEGIN DROPDOWNVAR003_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$DROPDOWNVAR003_LABEL_class}"  data-field=DROPDOWNVAR003_LABEL {$rowstyle} {$recordattrs}>
+		{$DROPDOWNVAR003_LABEL_value}
+	</td>
+{END DROPDOWNVAR003_LABEL_fieldcolumn}
+
+
+	{BEGIN SATEI_fieldcolumn}
+	<td class="bs-gridcell {$SATEI_class}"  data-field=SATEI {$rowstyle} {$recordattrs}>
+		{$SATEI_value}
+	</td>
+{END SATEI_fieldcolumn}
+
+
+	{BEGIN SATEI_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$SATEI_LABEL_class}"  data-field=SATEI_LABEL {$rowstyle} {$recordattrs}>
+		{$SATEI_LABEL_value}
+	</td>
+{END SATEI_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR001_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR001_class}"  data-field=TEXTVAR001 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR001_value}
+	</td>
+{END TEXTVAR001_fieldcolumn}
+
+
+	{BEGIN TEXTVAR001_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR001_LABEL_class}"  data-field=TEXTVAR001_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR001_LABEL_value}
+	</td>
+{END TEXTVAR001_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR004_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR004_class}"  data-field=TEXTVAR004 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR004_value}
+	</td>
+{END TEXTVAR004_fieldcolumn}
+
+
+	{BEGIN TEXTVAR004_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR004_LABEL_class}"  data-field=TEXTVAR004_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR004_LABEL_value}
+	</td>
+{END TEXTVAR004_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR005_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR005_class}"  data-field=TEXTVAR005 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR005_value}
+	</td>
+{END TEXTVAR005_fieldcolumn}
+
+
+	{BEGIN TEXTVAR006_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR006_class}"  data-field=TEXTVAR006 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR006_value}
+	</td>
+{END TEXTVAR006_fieldcolumn}
+
+
+	{BEGIN TEXTVAR006_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR006_LABEL_class}"  data-field=TEXTVAR006_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR006_LABEL_value}
+	</td>
+{END TEXTVAR006_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR007_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR007_class}"  data-field=TEXTVAR007 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR007_value}
+	</td>
+{END TEXTVAR007_fieldcolumn}
+
+
+	{BEGIN TEXTVAR007_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR007_LABEL_class}"  data-field=TEXTVAR007_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR007_LABEL_value}
+	</td>
+{END TEXTVAR007_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR008_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR008_class}"  data-field=TEXTVAR008 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR008_value}
+	</td>
+{END TEXTVAR008_fieldcolumn}
+
+
+	{BEGIN TEXTVAR008_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR008_LABEL_class}"  data-field=TEXTVAR008_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR008_LABEL_value}
+	</td>
+{END TEXTVAR008_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR009_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR009_class}"  data-field=TEXTVAR009 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR009_value}
+	</td>
+{END TEXTVAR009_fieldcolumn}
+
+
+	{BEGIN TEXTVAR009_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR009_LABEL_class}"  data-field=TEXTVAR009_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR009_LABEL_value}
+	</td>
+{END TEXTVAR009_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR010_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR010_class}"  data-field=TEXTVAR010 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR010_value}
+	</td>
+{END TEXTVAR010_fieldcolumn}
+
+
+	{BEGIN TEXTVAR010_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR010_LABEL_class}"  data-field=TEXTVAR010_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR010_LABEL_value}
+	</td>
+{END TEXTVAR010_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR011_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR011_class}"  data-field=TEXTVAR011 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR011_value}
+	</td>
+{END TEXTVAR011_fieldcolumn}
+
+
+	{BEGIN TEXTVAR011_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR011_LABEL_class}"  data-field=TEXTVAR011_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR011_LABEL_value}
+	</td>
+{END TEXTVAR011_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR012_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR012_class}"  data-field=TEXTVAR012 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR012_value}
+	</td>
+{END TEXTVAR012_fieldcolumn}
+
+
+	{BEGIN TEXTVAR012_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR012_LABEL_class}"  data-field=TEXTVAR012_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR012_LABEL_value}
+	</td>
+{END TEXTVAR012_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR013_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR013_class}"  data-field=TEXTVAR013 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR013_value}
+	</td>
+{END TEXTVAR013_fieldcolumn}
+
+
+	{BEGIN TEXTVAR013_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR013_LABEL_class}"  data-field=TEXTVAR013_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR013_LABEL_value}
+	</td>
+{END TEXTVAR013_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR014_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR014_class}"  data-field=TEXTVAR014 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR014_value}
+	</td>
+{END TEXTVAR014_fieldcolumn}
+
+
+	{BEGIN TEXTVAR014_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR014_LABEL_class}"  data-field=TEXTVAR014_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR014_LABEL_value}
+	</td>
+{END TEXTVAR014_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTVAR015_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR015_class}"  data-field=TEXTVAR015 {$rowstyle} {$recordattrs}>
+		{$TEXTVAR015_value}
+	</td>
+{END TEXTVAR015_fieldcolumn}
+
+
+	{BEGIN TEXTVAR015_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTVAR015_LABEL_class}"  data-field=TEXTVAR015_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTVAR015_LABEL_value}
+	</td>
+{END TEXTVAR015_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR001_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR001_class}"  data-field=TEXTAREAVAR001 {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR001_value}
+	</td>
+{END TEXTAREAVAR001_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR002_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR002_class}"  data-field=TEXTAREAVAR002 {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR002_value}
+	</td>
+{END TEXTAREAVAR002_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR003_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR003_class}"  data-field=TEXTAREAVAR003 {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR003_value}
+	</td>
+{END TEXTAREAVAR003_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR003_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR003_LABEL_class}"  data-field=TEXTAREAVAR003_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR003_LABEL_value}
+	</td>
+{END TEXTAREAVAR003_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR004_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR004_class}"  data-field=TEXTAREAVAR004 {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR004_value}
+	</td>
+{END TEXTAREAVAR004_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR004_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR004_LABEL_class}"  data-field=TEXTAREAVAR004_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR004_LABEL_value}
+	</td>
+{END TEXTAREAVAR004_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR005_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR005_class}"  data-field=TEXTAREAVAR005 {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR005_value}
+	</td>
+{END TEXTAREAVAR005_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR005_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR005_LABEL_class}"  data-field=TEXTAREAVAR005_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR005_LABEL_value}
+	</td>
+{END TEXTAREAVAR005_LABEL_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR006_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR006_class}"  data-field=TEXTAREAVAR006 {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR006_value}
+	</td>
+{END TEXTAREAVAR006_fieldcolumn}
+
+
+	{BEGIN TEXTAREAVAR006_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TEXTAREAVAR006_LABEL_class}"  data-field=TEXTAREAVAR006_LABEL {$rowstyle} {$recordattrs}>
+		{$TEXTAREAVAR006_LABEL_value}
+	</td>
+{END TEXTAREAVAR006_LABEL_fieldcolumn}
+
+
+	{BEGIN JPN_fieldcolumn}
+	<td class="bs-gridcell {$JPN_class}"  data-field=JPN {$rowstyle} {$recordattrs}>
+		{$JPN_value}
+	</td>
+{END JPN_fieldcolumn}
+
+
+	{BEGIN JPN_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$JPN_LABEL_class}"  data-field=JPN_LABEL {$rowstyle} {$recordattrs}>
+		{$JPN_LABEL_value}
+	</td>
+{END JPN_LABEL_fieldcolumn}
+
+
+	{BEGIN TPL_PATH_fieldcolumn}
+	<td class="bs-gridcell {$TPL_PATH_class}"  data-field=TPL_PATH {$rowstyle} {$recordattrs}>
+		{$TPL_PATH_value}
+	</td>
+{END TPL_PATH_fieldcolumn}
+
+
+	{BEGIN TPL_PATH_LABEL_fieldcolumn}
+	<td class="bs-gridcell {$TPL_PATH_LABEL_class}"  data-field=TPL_PATH_LABEL {$rowstyle} {$recordattrs}>
+		{$TPL_PATH_LABEL_value}
+	</td>
+{END TPL_PATH_LABEL_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

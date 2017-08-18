@@ -1,0 +1,363 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel APPLICATION print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label APPLICATION APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_TITLE_fieldheadercolumn}
+			<th class="{$APP_TITLE_class}" {$APP_TITLE_style}  data-field="APP_TITLE">
+				{$label APPLICATION APP_TITLE}
+			</th>
+			{END APP_TITLE_fieldheadercolumn}
+			{BEGIN APP_DESCRIPTION_fieldheadercolumn}
+			<th class="{$APP_DESCRIPTION_class}" {$APP_DESCRIPTION_style}  data-field="APP_DESCRIPTION">
+				{$label APPLICATION APP_DESCRIPTION}
+			</th>
+			{END APP_DESCRIPTION_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label APPLICATION APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_PARENT_fieldheadercolumn}
+			<th class="{$APP_PARENT_class}" {$APP_PARENT_style}  data-field="APP_PARENT">
+				{$label APPLICATION APP_PARENT}
+			</th>
+			{END APP_PARENT_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label APPLICATION APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label APPLICATION PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN APP_PROC_STATUS_fieldheadercolumn}
+			<th class="{$APP_PROC_STATUS_class}" {$APP_PROC_STATUS_style}  data-field="APP_PROC_STATUS">
+				{$label APPLICATION APP_PROC_STATUS}
+			</th>
+			{END APP_PROC_STATUS_fieldheadercolumn}
+			{BEGIN APP_PROC_CODE_fieldheadercolumn}
+			<th class="{$APP_PROC_CODE_class}" {$APP_PROC_CODE_style}  data-field="APP_PROC_CODE">
+				{$label APPLICATION APP_PROC_CODE}
+			</th>
+			{END APP_PROC_CODE_fieldheadercolumn}
+			{BEGIN APP_PARALLEL_fieldheadercolumn}
+			<th class="{$APP_PARALLEL_class}" {$APP_PARALLEL_style}  data-field="APP_PARALLEL">
+				{$label APPLICATION APP_PARALLEL}
+			</th>
+			{END APP_PARALLEL_fieldheadercolumn}
+			{BEGIN APP_INIT_USER_fieldheadercolumn}
+			<th class="{$APP_INIT_USER_class}" {$APP_INIT_USER_style}  data-field="APP_INIT_USER">
+				{$label APPLICATION APP_INIT_USER}
+			</th>
+			{END APP_INIT_USER_fieldheadercolumn}
+			{BEGIN APP_CUR_USER_fieldheadercolumn}
+			<th class="{$APP_CUR_USER_class}" {$APP_CUR_USER_style}  data-field="APP_CUR_USER">
+				{$label APPLICATION APP_CUR_USER}
+			</th>
+			{END APP_CUR_USER_fieldheadercolumn}
+			{BEGIN APP_CREATE_DATE_fieldheadercolumn}
+			<th class="{$APP_CREATE_DATE_class}" {$APP_CREATE_DATE_style}  data-field="APP_CREATE_DATE">
+				{$label APPLICATION APP_CREATE_DATE}
+			</th>
+			{END APP_CREATE_DATE_fieldheadercolumn}
+			{BEGIN APP_INIT_DATE_fieldheadercolumn}
+			<th class="{$APP_INIT_DATE_class}" {$APP_INIT_DATE_style}  data-field="APP_INIT_DATE">
+				{$label APPLICATION APP_INIT_DATE}
+			</th>
+			{END APP_INIT_DATE_fieldheadercolumn}
+			{BEGIN APP_FINISH_DATE_fieldheadercolumn}
+			<th class="{$APP_FINISH_DATE_class}" {$APP_FINISH_DATE_style}  data-field="APP_FINISH_DATE">
+				{$label APPLICATION APP_FINISH_DATE}
+			</th>
+			{END APP_FINISH_DATE_fieldheadercolumn}
+			{BEGIN APP_UPDATE_DATE_fieldheadercolumn}
+			<th class="{$APP_UPDATE_DATE_class}" {$APP_UPDATE_DATE_style}  data-field="APP_UPDATE_DATE">
+				{$label APPLICATION APP_UPDATE_DATE}
+			</th>
+			{END APP_UPDATE_DATE_fieldheadercolumn}
+			{BEGIN APP_DATA_fieldheadercolumn}
+			<th class="{$APP_DATA_class}" {$APP_DATA_style}  data-field="APP_DATA">
+				{$label APPLICATION APP_DATA}
+			</th>
+			{END APP_DATA_fieldheadercolumn}
+			{BEGIN APP_PIN_fieldheadercolumn}
+			<th class="{$APP_PIN_class}" {$APP_PIN_style}  data-field="APP_PIN">
+				{$label APPLICATION APP_PIN}
+			</th>
+			{END APP_PIN_fieldheadercolumn}
+			{BEGIN APP_DURATION_fieldheadercolumn}
+			<th class="{$APP_DURATION_class}" {$APP_DURATION_style}  data-field="APP_DURATION">
+				{$label APPLICATION APP_DURATION}
+			</th>
+			{END APP_DURATION_fieldheadercolumn}
+			{BEGIN APP_DELAY_DURATION_fieldheadercolumn}
+			<th class="{$APP_DELAY_DURATION_class}" {$APP_DELAY_DURATION_style}  data-field="APP_DELAY_DURATION">
+				{$label APPLICATION APP_DELAY_DURATION}
+			</th>
+			{END APP_DELAY_DURATION_fieldheadercolumn}
+			{BEGIN APP_DRIVE_FOLDER_UID_fieldheadercolumn}
+			<th class="{$APP_DRIVE_FOLDER_UID_class}" {$APP_DRIVE_FOLDER_UID_style}  data-field="APP_DRIVE_FOLDER_UID">
+				{$label APPLICATION APP_DRIVE_FOLDER_UID}
+			</th>
+			{END APP_DRIVE_FOLDER_UID_fieldheadercolumn}
+			{BEGIN APP_ROUTING_DATA_fieldheadercolumn}
+			<th class="{$APP_ROUTING_DATA_class}" {$APP_ROUTING_DATA_style}  data-field="APP_ROUTING_DATA">
+				{$label APPLICATION APP_ROUTING_DATA}
+			</th>
+			{END APP_ROUTING_DATA_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_TITLE_fieldcolumn}
+			<td  class="{$APP_TITLE_class}" {$APP_TITLE_style} {$recordattrs}>
+				{$APP_TITLE_value}
+			</td>
+			{END APP_TITLE_fieldcolumn}
+			{BEGIN APP_DESCRIPTION_fieldcolumn}
+			<td  class="{$APP_DESCRIPTION_class}" {$APP_DESCRIPTION_style} {$recordattrs}>
+				{$APP_DESCRIPTION_value}
+			</td>
+			{END APP_DESCRIPTION_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_PARENT_fieldcolumn}
+			<td  class="{$APP_PARENT_class}" {$APP_PARENT_style} {$recordattrs}>
+				{$APP_PARENT_value}
+			</td>
+			{END APP_PARENT_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN APP_PROC_STATUS_fieldcolumn}
+			<td  class="{$APP_PROC_STATUS_class}" {$APP_PROC_STATUS_style} {$recordattrs}>
+				{$APP_PROC_STATUS_value}
+			</td>
+			{END APP_PROC_STATUS_fieldcolumn}
+			{BEGIN APP_PROC_CODE_fieldcolumn}
+			<td  class="{$APP_PROC_CODE_class}" {$APP_PROC_CODE_style} {$recordattrs}>
+				{$APP_PROC_CODE_value}
+			</td>
+			{END APP_PROC_CODE_fieldcolumn}
+			{BEGIN APP_PARALLEL_fieldcolumn}
+			<td  class="{$APP_PARALLEL_class}" {$APP_PARALLEL_style} {$recordattrs}>
+				{$APP_PARALLEL_value}
+			</td>
+			{END APP_PARALLEL_fieldcolumn}
+			{BEGIN APP_INIT_USER_fieldcolumn}
+			<td  class="{$APP_INIT_USER_class}" {$APP_INIT_USER_style} {$recordattrs}>
+				{$APP_INIT_USER_value}
+			</td>
+			{END APP_INIT_USER_fieldcolumn}
+			{BEGIN APP_CUR_USER_fieldcolumn}
+			<td  class="{$APP_CUR_USER_class}" {$APP_CUR_USER_style} {$recordattrs}>
+				{$APP_CUR_USER_value}
+			</td>
+			{END APP_CUR_USER_fieldcolumn}
+			{BEGIN APP_CREATE_DATE_fieldcolumn}
+			<td  class="{$APP_CREATE_DATE_class}" {$APP_CREATE_DATE_style} {$recordattrs}>
+				{$APP_CREATE_DATE_value}
+			</td>
+			{END APP_CREATE_DATE_fieldcolumn}
+			{BEGIN APP_INIT_DATE_fieldcolumn}
+			<td  class="{$APP_INIT_DATE_class}" {$APP_INIT_DATE_style} {$recordattrs}>
+				{$APP_INIT_DATE_value}
+			</td>
+			{END APP_INIT_DATE_fieldcolumn}
+			{BEGIN APP_FINISH_DATE_fieldcolumn}
+			<td  class="{$APP_FINISH_DATE_class}" {$APP_FINISH_DATE_style} {$recordattrs}>
+				{$APP_FINISH_DATE_value}
+			</td>
+			{END APP_FINISH_DATE_fieldcolumn}
+			{BEGIN APP_UPDATE_DATE_fieldcolumn}
+			<td  class="{$APP_UPDATE_DATE_class}" {$APP_UPDATE_DATE_style} {$recordattrs}>
+				{$APP_UPDATE_DATE_value}
+			</td>
+			{END APP_UPDATE_DATE_fieldcolumn}
+			{BEGIN APP_DATA_fieldcolumn}
+			<td  class="{$APP_DATA_class}" {$APP_DATA_style} {$recordattrs}>
+				{$APP_DATA_value}
+			</td>
+			{END APP_DATA_fieldcolumn}
+			{BEGIN APP_PIN_fieldcolumn}
+			<td  class="{$APP_PIN_class}" {$APP_PIN_style} {$recordattrs}>
+				{$APP_PIN_value}
+			</td>
+			{END APP_PIN_fieldcolumn}
+			{BEGIN APP_DURATION_fieldcolumn}
+			<td  class="{$APP_DURATION_class}" {$APP_DURATION_style} {$recordattrs}>
+				{$APP_DURATION_value}
+			</td>
+			{END APP_DURATION_fieldcolumn}
+			{BEGIN APP_DELAY_DURATION_fieldcolumn}
+			<td  class="{$APP_DELAY_DURATION_class}" {$APP_DELAY_DURATION_style} {$recordattrs}>
+				{$APP_DELAY_DURATION_value}
+			</td>
+			{END APP_DELAY_DURATION_fieldcolumn}
+			{BEGIN APP_DRIVE_FOLDER_UID_fieldcolumn}
+			<td  class="{$APP_DRIVE_FOLDER_UID_class}" {$APP_DRIVE_FOLDER_UID_style} {$recordattrs}>
+				{$APP_DRIVE_FOLDER_UID_value}
+			</td>
+			{END APP_DRIVE_FOLDER_UID_fieldcolumn}
+			{BEGIN APP_ROUTING_DATA_fieldcolumn}
+			<td  class="{$APP_ROUTING_DATA_class}" {$APP_ROUTING_DATA_style} {$recordattrs}>
+				{$APP_ROUTING_DATA_value}
+			</td>
+			{END APP_ROUTING_DATA_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,878 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel APP_CACHE_VIEW edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN DEL_INDEX_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_INDEX}" data-fieldname="DEL_INDEX" data-signal-error-for="DEL_INDEX{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_INDEX}">
+		{BEGIN DEL_INDEX_label}{$label APP_CACHE_VIEW DEL_INDEX}{END DEL_INDEX_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_INDEX_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_INDEX">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_INDEX}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_INDEX_fieldblock}
+
+			{BEGIN DEL_LAST_INDEX_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_LAST_INDEX}" data-fieldname="DEL_LAST_INDEX" data-signal-error-for="DEL_LAST_INDEX{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_LAST_INDEX}">
+		{BEGIN DEL_LAST_INDEX_label}{$label APP_CACHE_VIEW DEL_LAST_INDEX}{END DEL_LAST_INDEX_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_LAST_INDEX_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_LAST_INDEX">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_LAST_INDEX}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_LAST_INDEX_fieldblock}
+
+			{BEGIN APP_NUMBER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER" data-signal-error-for="APP_NUMBER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_NUMBER}">
+		{BEGIN APP_NUMBER_label}{$label APP_CACHE_VIEW APP_NUMBER}{END APP_NUMBER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_NUMBER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_NUMBER">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_NUMBER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_NUMBER_fieldblock}
+
+			{BEGIN APP_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS" data-signal-error-for="APP_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_STATUS}">
+		{BEGIN APP_STATUS_label}{$label APP_CACHE_VIEW APP_STATUS}{END APP_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_STATUS">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_STATUS_fieldblock}
+
+			{BEGIN USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UID}" data-fieldname="USR_UID" data-signal-error-for="USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UID}">
+		{BEGIN USR_UID_label}{$label APP_CACHE_VIEW USR_UID}{END USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UID">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UID_fieldblock}
+
+			{BEGIN PREVIOUS_USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PREVIOUS_USR_UID}" data-fieldname="PREVIOUS_USR_UID" data-signal-error-for="PREVIOUS_USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PREVIOUS_USR_UID}">
+		{BEGIN PREVIOUS_USR_UID_label}{$label APP_CACHE_VIEW PREVIOUS_USR_UID}{END PREVIOUS_USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PREVIOUS_USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PREVIOUS_USR_UID">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW PREVIOUS_USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PREVIOUS_USR_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label APP_CACHE_VIEW TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label APP_CACHE_VIEW PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN DEL_DELEGATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_DELEGATE_DATE}" data-fieldname="DEL_DELEGATE_DATE" data-signal-error-for="DEL_DELEGATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_DELEGATE_DATE}">
+		{BEGIN DEL_DELEGATE_DATE_label}{$label APP_CACHE_VIEW DEL_DELEGATE_DATE}{END DEL_DELEGATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_DELEGATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_DELEGATE_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_DELEGATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_DELEGATE_DATE_fieldblock}
+
+			{BEGIN DEL_INIT_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_INIT_DATE}" data-fieldname="DEL_INIT_DATE" data-signal-error-for="DEL_INIT_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_INIT_DATE}">
+		{BEGIN DEL_INIT_DATE_label}{$label APP_CACHE_VIEW DEL_INIT_DATE}{END DEL_INIT_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_INIT_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_INIT_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_INIT_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_INIT_DATE_fieldblock}
+
+			{BEGIN DEL_FINISH_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_FINISH_DATE}" data-fieldname="DEL_FINISH_DATE" data-signal-error-for="DEL_FINISH_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_FINISH_DATE}">
+		{BEGIN DEL_FINISH_DATE_label}{$label APP_CACHE_VIEW DEL_FINISH_DATE}{END DEL_FINISH_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_FINISH_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_FINISH_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_FINISH_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_FINISH_DATE_fieldblock}
+
+			{BEGIN DEL_TASK_DUE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_TASK_DUE_DATE}" data-fieldname="DEL_TASK_DUE_DATE" data-signal-error-for="DEL_TASK_DUE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_TASK_DUE_DATE}">
+		{BEGIN DEL_TASK_DUE_DATE_label}{$label APP_CACHE_VIEW DEL_TASK_DUE_DATE}{END DEL_TASK_DUE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_TASK_DUE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_TASK_DUE_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_TASK_DUE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_TASK_DUE_DATE_fieldblock}
+
+			{BEGIN DEL_RISK_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_RISK_DATE}" data-fieldname="DEL_RISK_DATE" data-signal-error-for="DEL_RISK_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_RISK_DATE}">
+		{BEGIN DEL_RISK_DATE_label}{$label APP_CACHE_VIEW DEL_RISK_DATE}{END DEL_RISK_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_RISK_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_RISK_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_RISK_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_RISK_DATE_fieldblock}
+
+			{BEGIN DEL_THREAD_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_THREAD_STATUS}" data-fieldname="DEL_THREAD_STATUS" data-signal-error-for="DEL_THREAD_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_THREAD_STATUS}">
+		{BEGIN DEL_THREAD_STATUS_label}{$label APP_CACHE_VIEW DEL_THREAD_STATUS}{END DEL_THREAD_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_THREAD_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_THREAD_STATUS">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_THREAD_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_THREAD_STATUS_fieldblock}
+
+			{BEGIN APP_THREAD_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_THREAD_STATUS}" data-fieldname="APP_THREAD_STATUS" data-signal-error-for="APP_THREAD_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_THREAD_STATUS}">
+		{BEGIN APP_THREAD_STATUS_label}{$label APP_CACHE_VIEW APP_THREAD_STATUS}{END APP_THREAD_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_THREAD_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_THREAD_STATUS">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_THREAD_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_THREAD_STATUS_fieldblock}
+
+			{BEGIN APP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UID}" data-fieldname="APP_UID" data-signal-error-for="APP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UID}">
+		{BEGIN APP_UID_label}{$label APP_CACHE_VIEW APP_UID}{END APP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UID">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UID_fieldblock}
+
+			{BEGIN APP_PRO_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_PRO_TITLE}" data-fieldname="APP_PRO_TITLE" data-signal-error-for="APP_PRO_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_PRO_TITLE}">
+		{BEGIN APP_PRO_TITLE_label}{$label APP_CACHE_VIEW APP_PRO_TITLE}{END APP_PRO_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_PRO_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_PRO_TITLE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_PRO_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_PRO_TITLE_fieldblock}
+
+			{BEGIN APP_TAS_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_TAS_TITLE}" data-fieldname="APP_TAS_TITLE" data-signal-error-for="APP_TAS_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_TAS_TITLE}">
+		{BEGIN APP_TAS_TITLE_label}{$label APP_CACHE_VIEW APP_TAS_TITLE}{END APP_TAS_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_TAS_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_TAS_TITLE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_TAS_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_TAS_TITLE_fieldblock}
+
+			{BEGIN APP_CURRENT_USER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_CURRENT_USER}" data-fieldname="APP_CURRENT_USER" data-signal-error-for="APP_CURRENT_USER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_CURRENT_USER}">
+		{BEGIN APP_CURRENT_USER_label}{$label APP_CACHE_VIEW APP_CURRENT_USER}{END APP_CURRENT_USER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_CURRENT_USER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_CURRENT_USER">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_CURRENT_USER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_CURRENT_USER_fieldblock}
+
+			{BEGIN APP_DEL_PREVIOUS_USER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_DEL_PREVIOUS_USER}" data-fieldname="APP_DEL_PREVIOUS_USER" data-signal-error-for="APP_DEL_PREVIOUS_USER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_DEL_PREVIOUS_USER}">
+		{BEGIN APP_DEL_PREVIOUS_USER_label}{$label APP_CACHE_VIEW APP_DEL_PREVIOUS_USER}{END APP_DEL_PREVIOUS_USER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_DEL_PREVIOUS_USER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_DEL_PREVIOUS_USER">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_DEL_PREVIOUS_USER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_DEL_PREVIOUS_USER_fieldblock}
+
+			{BEGIN DEL_PRIORITY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_PRIORITY}" data-fieldname="DEL_PRIORITY" data-signal-error-for="DEL_PRIORITY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_PRIORITY}">
+		{BEGIN DEL_PRIORITY_label}{$label APP_CACHE_VIEW DEL_PRIORITY}{END DEL_PRIORITY_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_PRIORITY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_PRIORITY">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_PRIORITY}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_PRIORITY_fieldblock}
+
+			{BEGIN DEL_DURATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_DURATION}" data-fieldname="DEL_DURATION" data-signal-error-for="DEL_DURATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_DURATION}">
+		{BEGIN DEL_DURATION_label}{$label APP_CACHE_VIEW DEL_DURATION}{END DEL_DURATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_DURATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_DURATION">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_DURATION}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_DURATION_fieldblock}
+
+			{BEGIN DEL_QUEUE_DURATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_QUEUE_DURATION}" data-fieldname="DEL_QUEUE_DURATION" data-signal-error-for="DEL_QUEUE_DURATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_QUEUE_DURATION}">
+		{BEGIN DEL_QUEUE_DURATION_label}{$label APP_CACHE_VIEW DEL_QUEUE_DURATION}{END DEL_QUEUE_DURATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_QUEUE_DURATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_QUEUE_DURATION">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_QUEUE_DURATION}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_QUEUE_DURATION_fieldblock}
+
+			{BEGIN DEL_DELAY_DURATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_DELAY_DURATION}" data-fieldname="DEL_DELAY_DURATION" data-signal-error-for="DEL_DELAY_DURATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_DELAY_DURATION}">
+		{BEGIN DEL_DELAY_DURATION_label}{$label APP_CACHE_VIEW DEL_DELAY_DURATION}{END DEL_DELAY_DURATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_DELAY_DURATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_DELAY_DURATION">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_DELAY_DURATION}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_DELAY_DURATION_fieldblock}
+
+			{BEGIN DEL_STARTED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_STARTED}" data-fieldname="DEL_STARTED" data-signal-error-for="DEL_STARTED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_STARTED}">
+		{BEGIN DEL_STARTED_label}{$label APP_CACHE_VIEW DEL_STARTED}{END DEL_STARTED_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_STARTED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_STARTED">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_STARTED}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_STARTED_fieldblock}
+
+			{BEGIN DEL_FINISHED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_FINISHED}" data-fieldname="DEL_FINISHED" data-signal-error-for="DEL_FINISHED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_FINISHED}">
+		{BEGIN DEL_FINISHED_label}{$label APP_CACHE_VIEW DEL_FINISHED}{END DEL_FINISHED_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_FINISHED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_FINISHED">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_FINISHED}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_FINISHED_fieldblock}
+
+			{BEGIN DEL_DELAYED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_DELAYED}" data-fieldname="DEL_DELAYED" data-signal-error-for="DEL_DELAYED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_DELAYED}">
+		{BEGIN DEL_DELAYED_label}{$label APP_CACHE_VIEW DEL_DELAYED}{END DEL_DELAYED_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_DELAYED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_DELAYED">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW DEL_DELAYED}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_DELAYED_fieldblock}
+
+			{BEGIN APP_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_CREATE_DATE}" data-fieldname="APP_CREATE_DATE" data-signal-error-for="APP_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_CREATE_DATE}">
+		{BEGIN APP_CREATE_DATE_label}{$label APP_CACHE_VIEW APP_CREATE_DATE}{END APP_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_CREATE_DATE_fieldblock}
+
+			{BEGIN APP_FINISH_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_FINISH_DATE}" data-fieldname="APP_FINISH_DATE" data-signal-error-for="APP_FINISH_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_FINISH_DATE}">
+		{BEGIN APP_FINISH_DATE_label}{$label APP_CACHE_VIEW APP_FINISH_DATE}{END APP_FINISH_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_FINISH_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_FINISH_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_FINISH_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_FINISH_DATE_fieldblock}
+
+			{BEGIN APP_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UPDATE_DATE}" data-fieldname="APP_UPDATE_DATE" data-signal-error-for="APP_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UPDATE_DATE}">
+		{BEGIN APP_UPDATE_DATE_label}{$label APP_CACHE_VIEW APP_UPDATE_DATE}{END APP_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UPDATE_DATE_fieldblock}
+
+			{BEGIN APP_OVERDUE_PERCENTAGE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_OVERDUE_PERCENTAGE}" data-fieldname="APP_OVERDUE_PERCENTAGE" data-signal-error-for="APP_OVERDUE_PERCENTAGE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_OVERDUE_PERCENTAGE}">
+		{BEGIN APP_OVERDUE_PERCENTAGE_label}{$label APP_CACHE_VIEW APP_OVERDUE_PERCENTAGE}{END APP_OVERDUE_PERCENTAGE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_OVERDUE_PERCENTAGE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_OVERDUE_PERCENTAGE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_OVERDUE_PERCENTAGE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_OVERDUE_PERCENTAGE_fieldblock}
+
+			{BEGIN APP_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_TITLE}" data-fieldname="APP_TITLE" data-signal-error-for="APP_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_TITLE}">
+		{BEGIN APP_TITLE_label}{$label APP_CACHE_VIEW APP_TITLE}{END APP_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_TITLE">
+		<div class="text-muted" >
+		{$tooltip APP_CACHE_VIEW APP_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_TITLE_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

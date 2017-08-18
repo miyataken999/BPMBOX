@@ -1,0 +1,373 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel dtb_customer_address print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN customer_address_id_fieldheadercolumn}
+			<th class="{$customer_address_id_class}" {$customer_address_id_style}  data-field="customer_address_id">
+				{$label dtb_customer_address customer_address_id}
+			</th>
+			{END customer_address_id_fieldheadercolumn}
+			{BEGIN customer_id_fieldheadercolumn}
+			<th class="{$customer_id_class}" {$customer_id_style}  data-field="customer_id">
+				{$label dtb_customer_address customer_id}
+			</th>
+			{END customer_id_fieldheadercolumn}
+			{BEGIN country_id_fieldheadercolumn}
+			<th class="{$country_id_class}" {$country_id_style}  data-field="country_id">
+				{$label dtb_customer_address country_id}
+			</th>
+			{END country_id_fieldheadercolumn}
+			{BEGIN pref_fieldheadercolumn}
+			<th class="{$pref_class}" {$pref_style}  data-field="pref">
+				{$label dtb_customer_address pref}
+			</th>
+			{END pref_fieldheadercolumn}
+			{BEGIN name01_fieldheadercolumn}
+			<th class="{$name01_class}" {$name01_style}  data-field="name01">
+				{$label dtb_customer_address name01}
+			</th>
+			{END name01_fieldheadercolumn}
+			{BEGIN name02_fieldheadercolumn}
+			<th class="{$name02_class}" {$name02_style}  data-field="name02">
+				{$label dtb_customer_address name02}
+			</th>
+			{END name02_fieldheadercolumn}
+			{BEGIN kana01_fieldheadercolumn}
+			<th class="{$kana01_class}" {$kana01_style}  data-field="kana01">
+				{$label dtb_customer_address kana01}
+			</th>
+			{END kana01_fieldheadercolumn}
+			{BEGIN kana02_fieldheadercolumn}
+			<th class="{$kana02_class}" {$kana02_style}  data-field="kana02">
+				{$label dtb_customer_address kana02}
+			</th>
+			{END kana02_fieldheadercolumn}
+			{BEGIN company_name_fieldheadercolumn}
+			<th class="{$company_name_class}" {$company_name_style}  data-field="company_name">
+				{$label dtb_customer_address company_name}
+			</th>
+			{END company_name_fieldheadercolumn}
+			{BEGIN zip01_fieldheadercolumn}
+			<th class="{$zip01_class}" {$zip01_style}  data-field="zip01">
+				{$label dtb_customer_address zip01}
+			</th>
+			{END zip01_fieldheadercolumn}
+			{BEGIN zip02_fieldheadercolumn}
+			<th class="{$zip02_class}" {$zip02_style}  data-field="zip02">
+				{$label dtb_customer_address zip02}
+			</th>
+			{END zip02_fieldheadercolumn}
+			{BEGIN zipcode_fieldheadercolumn}
+			<th class="{$zipcode_class}" {$zipcode_style}  data-field="zipcode">
+				{$label dtb_customer_address zipcode}
+			</th>
+			{END zipcode_fieldheadercolumn}
+			{BEGIN addr01_fieldheadercolumn}
+			<th class="{$addr01_class}" {$addr01_style}  data-field="addr01">
+				{$label dtb_customer_address addr01}
+			</th>
+			{END addr01_fieldheadercolumn}
+			{BEGIN addr02_fieldheadercolumn}
+			<th class="{$addr02_class}" {$addr02_style}  data-field="addr02">
+				{$label dtb_customer_address addr02}
+			</th>
+			{END addr02_fieldheadercolumn}
+			{BEGIN tel01_fieldheadercolumn}
+			<th class="{$tel01_class}" {$tel01_style}  data-field="tel01">
+				{$label dtb_customer_address tel01}
+			</th>
+			{END tel01_fieldheadercolumn}
+			{BEGIN tel02_fieldheadercolumn}
+			<th class="{$tel02_class}" {$tel02_style}  data-field="tel02">
+				{$label dtb_customer_address tel02}
+			</th>
+			{END tel02_fieldheadercolumn}
+			{BEGIN tel03_fieldheadercolumn}
+			<th class="{$tel03_class}" {$tel03_style}  data-field="tel03">
+				{$label dtb_customer_address tel03}
+			</th>
+			{END tel03_fieldheadercolumn}
+			{BEGIN fax01_fieldheadercolumn}
+			<th class="{$fax01_class}" {$fax01_style}  data-field="fax01">
+				{$label dtb_customer_address fax01}
+			</th>
+			{END fax01_fieldheadercolumn}
+			{BEGIN fax02_fieldheadercolumn}
+			<th class="{$fax02_class}" {$fax02_style}  data-field="fax02">
+				{$label dtb_customer_address fax02}
+			</th>
+			{END fax02_fieldheadercolumn}
+			{BEGIN fax03_fieldheadercolumn}
+			<th class="{$fax03_class}" {$fax03_style}  data-field="fax03">
+				{$label dtb_customer_address fax03}
+			</th>
+			{END fax03_fieldheadercolumn}
+			{BEGIN create_date_fieldheadercolumn}
+			<th class="{$create_date_class}" {$create_date_style}  data-field="create_date">
+				{$label dtb_customer_address create_date}
+			</th>
+			{END create_date_fieldheadercolumn}
+			{BEGIN update_date_fieldheadercolumn}
+			<th class="{$update_date_class}" {$update_date_style}  data-field="update_date">
+				{$label dtb_customer_address update_date}
+			</th>
+			{END update_date_fieldheadercolumn}
+			{BEGIN del_flg_fieldheadercolumn}
+			<th class="{$del_flg_class}" {$del_flg_style}  data-field="del_flg">
+				{$label dtb_customer_address del_flg}
+			</th>
+			{END del_flg_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN customer_address_id_fieldcolumn}
+			<td  class="{$customer_address_id_class}" {$customer_address_id_style} {$recordattrs}>
+				{$customer_address_id_value}
+			</td>
+			{END customer_address_id_fieldcolumn}
+			{BEGIN customer_id_fieldcolumn}
+			<td  class="{$customer_id_class}" {$customer_id_style} {$recordattrs}>
+				{$customer_id_value}
+			</td>
+			{END customer_id_fieldcolumn}
+			{BEGIN country_id_fieldcolumn}
+			<td  class="{$country_id_class}" {$country_id_style} {$recordattrs}>
+				{$country_id_value}
+			</td>
+			{END country_id_fieldcolumn}
+			{BEGIN pref_fieldcolumn}
+			<td  class="{$pref_class}" {$pref_style} {$recordattrs}>
+				{$pref_value}
+			</td>
+			{END pref_fieldcolumn}
+			{BEGIN name01_fieldcolumn}
+			<td  class="{$name01_class}" {$name01_style} {$recordattrs}>
+				{$name01_value}
+			</td>
+			{END name01_fieldcolumn}
+			{BEGIN name02_fieldcolumn}
+			<td  class="{$name02_class}" {$name02_style} {$recordattrs}>
+				{$name02_value}
+			</td>
+			{END name02_fieldcolumn}
+			{BEGIN kana01_fieldcolumn}
+			<td  class="{$kana01_class}" {$kana01_style} {$recordattrs}>
+				{$kana01_value}
+			</td>
+			{END kana01_fieldcolumn}
+			{BEGIN kana02_fieldcolumn}
+			<td  class="{$kana02_class}" {$kana02_style} {$recordattrs}>
+				{$kana02_value}
+			</td>
+			{END kana02_fieldcolumn}
+			{BEGIN company_name_fieldcolumn}
+			<td  class="{$company_name_class}" {$company_name_style} {$recordattrs}>
+				{$company_name_value}
+			</td>
+			{END company_name_fieldcolumn}
+			{BEGIN zip01_fieldcolumn}
+			<td  class="{$zip01_class}" {$zip01_style} {$recordattrs}>
+				{$zip01_value}
+			</td>
+			{END zip01_fieldcolumn}
+			{BEGIN zip02_fieldcolumn}
+			<td  class="{$zip02_class}" {$zip02_style} {$recordattrs}>
+				{$zip02_value}
+			</td>
+			{END zip02_fieldcolumn}
+			{BEGIN zipcode_fieldcolumn}
+			<td  class="{$zipcode_class}" {$zipcode_style} {$recordattrs}>
+				{$zipcode_value}
+			</td>
+			{END zipcode_fieldcolumn}
+			{BEGIN addr01_fieldcolumn}
+			<td  class="{$addr01_class}" {$addr01_style} {$recordattrs}>
+				{$addr01_value}
+			</td>
+			{END addr01_fieldcolumn}
+			{BEGIN addr02_fieldcolumn}
+			<td  class="{$addr02_class}" {$addr02_style} {$recordattrs}>
+				{$addr02_value}
+			</td>
+			{END addr02_fieldcolumn}
+			{BEGIN tel01_fieldcolumn}
+			<td  class="{$tel01_class}" {$tel01_style} {$recordattrs}>
+				{$tel01_value}
+			</td>
+			{END tel01_fieldcolumn}
+			{BEGIN tel02_fieldcolumn}
+			<td  class="{$tel02_class}" {$tel02_style} {$recordattrs}>
+				{$tel02_value}
+			</td>
+			{END tel02_fieldcolumn}
+			{BEGIN tel03_fieldcolumn}
+			<td  class="{$tel03_class}" {$tel03_style} {$recordattrs}>
+				{$tel03_value}
+			</td>
+			{END tel03_fieldcolumn}
+			{BEGIN fax01_fieldcolumn}
+			<td  class="{$fax01_class}" {$fax01_style} {$recordattrs}>
+				{$fax01_value}
+			</td>
+			{END fax01_fieldcolumn}
+			{BEGIN fax02_fieldcolumn}
+			<td  class="{$fax02_class}" {$fax02_style} {$recordattrs}>
+				{$fax02_value}
+			</td>
+			{END fax02_fieldcolumn}
+			{BEGIN fax03_fieldcolumn}
+			<td  class="{$fax03_class}" {$fax03_style} {$recordattrs}>
+				{$fax03_value}
+			</td>
+			{END fax03_fieldcolumn}
+			{BEGIN create_date_fieldcolumn}
+			<td  class="{$create_date_class}" {$create_date_style} {$recordattrs}>
+				{$create_date_value}
+			</td>
+			{END create_date_fieldcolumn}
+			{BEGIN update_date_fieldcolumn}
+			<td  class="{$update_date_class}" {$update_date_style} {$recordattrs}>
+				{$update_date_value}
+			</td>
+			{END update_date_fieldcolumn}
+			{BEGIN del_flg_fieldcolumn}
+			<td  class="{$del_flg_class}" {$del_flg_style} {$recordattrs}>
+				{$del_flg_value}
+			</td>
+			{END del_flg_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
