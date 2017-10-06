@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3E');
+
+	var a = main_layout.cells('a');
+	var status_1 = a.attachStatusBar();
+	status_1.setText('');
+	var menu_1 = a.attachMenu();
+	menu_1.setIconsPath('./codebase/imgs/');
+	
+	menu_1.attachEvent('onClick', function(id, zoneId, casState){
+		alert('onClick');na.attachHTMLString('<div id=objId>Some text</div>');
+	});
+
+	menu_1.loadStruct('<menu><item type="item" id="menuitem_1" text="Menu Item" /><item type="item" id="menuitem_2" text="Menu Item" /></menu>');
+
+
+	var c = main_layout.cells('c');
+	var str = [
+		{ type:"settings" , labelWidth:80, inputWidth:250, position:"absolute"  },
+		{ type:"button" , name:"form_button_1", label:"Button", value:"Button", width:"250", inputLeft:102, inputTop:19  },
+		{ type:"calendar" , name:"form_calendar_1", label:"Calendar", labelWidth:250, labelLeft:103, labelTop:67, inputLeft:103, inputTop:88, dateFormat:"%m-%d-%Y"  }
+	];
+	var form_1 = c.attachForm(str);
+
+	form_1.attachEvent('onChange', function(id, value){
+		alert('onChange');
+	});
+
+
+	form_1.attachEvent('onButtonClick', function(name, command){
+		alert('onButtonClick');
+	});
+
+
+
+
+
+
+</script>
+</body>
+</html>

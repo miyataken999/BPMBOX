@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3J');
+
+	var a = main_layout.cells('a');
+	a.setText('<button>dock</button>');
+	a.setWidth('200');
+	var tabbar_3 = a.attachTabbar();
+	tabbar_3.addTab('imagedeploy','語句集');
+	var imagedeploy = tabbar_3.cells('imagedeploy');
+	imagedeploy.attachURL('https://docs.google.com/spreadsheets/d/1USCZn3MBcVixxxSh1-3wJ15l8K6ReioilSTgkl_eSd0/edit?usp=sharing');
+
+
+	tabbar_3.addTab('tab_11','ログ');
+	var tab_11 = tabbar_3.cells('tab_11');
+	tab_11.setActive();
+	tab_11.attachURL('https://docs.google.com/spreadsheets/d/1nmuqMuKMubaBIkVLSzO18eBXKJFXXoklSSxhTjD_6a4/edit?usp=sharing');
+
+
+
+
+
+
+	var b = main_layout.cells('b');
+	b.setText('<button>ssssssss</button>');
+	var toolbar_3 = b.attachToolbar();
+	toolbar_3.setIconsPath('./codebase/imgs/');
+	
+	var tabbar_2 = b.attachTabbar();
+	tabbar_2.addTab('WINDOWS','WINDOWS');
+	var WINDOWS = tabbar_2.cells('WINDOWS');
+	WINDOWS.attachURL('http://157.7.223.208:6081');
+
+
+	tabbar_2.addTab('BPM','BPM運用ツール');
+	var BPM = tabbar_2.cells('BPM');
+	BPM.setActive();
+	BPM.attachURL('http://157.7.223.208:6082');
+
+
+	tabbar_2.addTab('tab_6','サーバー一案');
+	var tab_6 = tabbar_2.cells('tab_6');
+	tab_6.attachURL('http://157.7.223.208:9000');
+
+
+	tabbar_2.addTab('LD1','WEBBALANCER');
+	var LD1 = tabbar_2.cells('LD1');
+	LD1.attachURL('http://157.7.223.208:6083');
+
+
+	tabbar_2.addTab('tab_13','WEB01');
+	var tab_13 = tabbar_2.cells('tab_13');
+	tab_13.attachURL('http://157.7.223.208:6084');
+
+
+	tabbar_2.addTab('tab_14','WEB02');
+	var tab_14 = tabbar_2.cells('tab_14');
+	tab_14.attachURL('http://157.7.223.208:6085');
+
+
+	tabbar_2.addTab('tab_15','DBBALANCER');
+	var tab_15 = tabbar_2.cells('tab_15');
+	tab_15.attachURL('http://157.7.223.208:6086');
+
+
+	tabbar_2.addTab('tab_16','DB1');
+	var tab_16 = tabbar_2.cells('tab_16');
+	tab_16.attachURL('http://157.7.223.208:6087');
+
+
+	tabbar_2.addTab('tab_17','DB2');
+	var tab_17 = tabbar_2.cells('tab_17');
+	tab_17.attachURL('http://157.7.223.208:6088');
+
+
+
+
+
+
+	var c = main_layout.cells('c');
+	var tabbar_1 = c.attachTabbar();
+	tabbar_1.addTab('tab_1','手順書');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('https://docs.google.com/presentation/d/1IT0PFLEVVzQ7kPspWcMQncfCaYfzTmG2zRuYaVvZoBk/edit#slide=id.g39f1f8079_011');
+
+
+	tabbar_1.addTab('tab_2','tab_2');
+	var tab_2 = tabbar_1.cells('tab_2');
+
+
+	tabbar_1.addTab('tab_3','tab_3');
+	var tab_3 = tabbar_1.cells('tab_3');
+
+
+	tabbar_1.addTab('tab_4','tab_4');
+	var tab_4 = tabbar_1.cells('tab_4');
+
+
+	tabbar_1.addTab('tab_5','tab_5');
+	var tab_5 = tabbar_1.cells('tab_5');
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '2U');
+
+	var a = main_layout.cells('a');
+	a.setWidth('300');
+	var tree_1 = a.attachTree();
+		tree_1.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+		tree_1.enableDragAndDrop('1', true);
+		tree_1.enableItemEditor(1);
+		tree_1.enableAutoSavingSelected(true);
+		tree_1.load('./data/tree.xml', 'xml');
+	
+	tree_1.attachEvent('onClick', function(id, prewid){
+		alert('onClick');
+	});
+
+
+
+	var b = main_layout.cells('b');
+	var layout_1 = b.attachLayout('3E');
+
+	var cell_1 = layout_1.cells('a');
+	cell_1.setHeight('150');
+	var str = [
+		{ type:"settings" , labelWidth:80, inputWidth:250, position:"absolute"  },
+		{ type:"input" , name:"form_input_3", label:"Input", labelWidth:250, labelLeft:5, labelTop:5, inputLeft:5, inputTop:21  },
+		{ type:"input" , name:"form_input_4", label:"Input", labelWidth:250, labelLeft:250, labelTop:5, inputLeft:250, inputTop:21  },
+		{ type:"input" , name:"form_input_5", label:"Input", labelWidth:250, labelLeft:5, labelTop:50, inputLeft:5, inputTop:71  },
+		{ type:"input" , name:"form_input_6", label:"Input", labelWidth:250, labelLeft:250, labelTop:50, inputLeft:250, inputTop:71  }
+	];
+	var form_2 = cell_1.attachForm(str);
+
+
+
+
+	var cell_2 = layout_1.cells('b');
+	var layout_2 = cell_2.attachLayout('2U');
+
+	var cell_4 = layout_2.cells('a');
+	cell_4.hideHeader();
+	var tree_2 = cell_4.attachTree();
+		tree_2.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+		tree_2.load('./data/tree.xml', 'xml');
+	
+
+
+	var cell_5 = layout_2.cells('b');
+	var str = [
+		{ type:"settings" , labelWidth:80, inputWidth:250, position:"absolute"  },
+		{ type:"input" , name:"form_input_1", label:"Input", labelWidth:500, inputWidth:500, labelLeft:5, labelTop:5, inputLeft:5, inputTop:21  },
+		{ type:"input" , name:"form_input_2", label:"Input", labelWidth:500, inputWidth:500, labelLeft:5, labelTop:50, inputLeft:5, inputTop:71  }
+	];
+	var form_1 = cell_5.attachForm(str);
+
+
+
+
+
+
+
+	var cell_3 = layout_1.cells('c');
+	var tabbar_1 = cell_3.attachTabbar();
+	tabbar_1.addTab('tab_1','tab_1');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	var grid_1 = tab_1.attachGrid();
+	grid_1.setIconsPath('./codebase/imgs/');
+	
+	grid_1.setHeader(["Column 1","Column 2"]);
+	grid_1.setColTypes("edn,ro");
+	
+	grid_1.setColSorting('str,str');
+	grid_1.enableCellIds(true);
+	grid_1.setColumnIds('column_1,column_2');
+	grid_1.setInitWidths('*,*');
+	grid_1.groupBy('0');
+	grid_1.enableColumnMove(true);
+	grid_1.enableAutoSaving();
+	grid_1.init();
+	grid_1.attachFooter(["<div id='grid_1_recinfoArea' style='width:100%;height:100%'></div>","#cspan"],['height:25px;text-align:left;background:transparent;border-color:white;padding:0px;']);
+	grid_1.enablePaging(true, 2,  3,'grid_1_recinfoArea');
+	grid_1.setPagingSkin('toolbar','dhx_skyblue');
+	grid_1.load('./data/grid_dates.xml', 'xml');
+	
+	grid_1.attachEvent('onRightClick', function(id, ind, obj){
+		alert('onRightClick');
+var newId = (new Date()).valueOf();
+grid_1.addRow(newId,"");
+	});
+
+	grid_1.enableDragAndDrop(true);
+
+
+	tabbar_1.addTab('tab_2','tab_2');
+	var tab_2 = tabbar_1.cells('tab_2');
+
+
+	tabbar_1.addTab('tab_3','tab_3');
+	var tab_3 = tabbar_1.cells('tab_3');
+
+
+	tabbar_1.addTab('tab_4','tab_4');
+	var tab_4 = tabbar_1.cells('tab_4');
+
+
+
+
+
+
+
+
+
+	var toolbar_1 = main_layout.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.loadStruct('./data/toolbar.xml', function() {});
+
+
+</script>
+</body>
+</html>

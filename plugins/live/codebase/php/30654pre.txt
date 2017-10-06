@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3W');
+
+	var a = main_layout.cells('a');
+	a.setText('クラスター設定');
+	a.setWidth('200');
+	var accordion_1 = a.attachAccordion();
+	var panel_1 = accordion_1.addItem('panel_1',' 文章クラスター');
+	panel_1.attachURL('http://157.7.212.158:80/wordpress/dhtmlx/samples/tree/05_save.html');
+	var toolbar_3 = panel_1.attachToolbar();
+	toolbar_3.setIconsPath('./codebase/imgs/');
+	
+	toolbar_3.loadStruct('./data/toolbar.xml', function() {});
+	var menu_2 = panel_1.attachMenu();
+	menu_2.setIconsPath('./codebase/imgs/');
+	
+	menu_2.loadStruct('<menu><item type="item" id="menuitem_4" text="Menu Item" /></menu>');
+	var status_2 = panel_1.attachStatusBar();
+	status_2.setText('');
+
+
+	var panel_2 = accordion_1.addItem('panel_2','');
+	var toolbar_2 = panel_2.attachToolbar();
+	toolbar_2.setIconsPath('./codebase/imgs/');
+	
+
+
+	var panel_3 = accordion_1.addItem('panel_3','');
+
+
+	var panel_4 = accordion_1.addItem('panel_4','');
+
+
+
+	panel_1.open();
+
+
+
+	var b = main_layout.cells('b');
+	b.setText('翻訳文章');
+	var tabbar_1 = b.attachTabbar();
+	tabbar_1.addTab('tab_1','自動翻訳');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('http://157.7.212.158:80/wordpress/dhtmlx/samples/grid/01_basic.html');
+
+
+	tabbar_1.addTab('tab_12','校正');
+	var tab_12 = tabbar_1.cells('tab_12');
+	tab_12.attachURL('http://157.7.131.112/simplepo/edit.html?cat_id=1');
+
+
+	tabbar_1.addTab('tab_3','ＧＯＯＧＬＥ校閲');
+	var tab_3 = tabbar_1.cells('tab_3');
+	tab_3.attachURL('https://docs.google.com/spreadsheets/d/1PO3pyTm0hCkfRx5oux7Y35gfcQTgkXSUFrcqAC58TFM/edit#gid=647006678');
+
+
+	tabbar_1.addTab('tab_2','システム開発');
+	var tab_2 = tabbar_1.cells('tab_2');
+	tab_2.attachURL('http://157.7.131.112:6082/vnc.html');
+
+
+	tabbar_1.addTab('tab_4','特実審査周辺システム概念設計書');
+	var tab_4 = tabbar_1.cells('tab_4');
+	tab_4.attachURL('https://www.jpo.go.jp/torikumi/system/pdf/tokujitsu_01.pdf');
+
+
+	tabbar_1.addTab('tab_5','予定管理及び資料');
+	var tab_5 = tabbar_1.cells('tab_5');
+	tab_5.attachURL('http://bpm999.com/bpm/map.htm');
+
+
+
+
+
+
+	var toolbar_1 = main_layout.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.attachEvent('onClick', function(id){
+		alert(id+'onClick');b.attachURL('http://wiki.processmaker.com/'); n  
+	});
+
+	toolbar_1.loadStruct('./data/toolbar.xml', function() {});
+	var menu_1 = main_layout.attachMenu();
+	menu_1.setIconsPath('./codebase/imgs/');
+	
+	menu_1.attachEvent('onClick', function(id, zoneId, casState){
+		alert('onClick');
+	});
+
+	menu_1.loadStruct('<menu><item type="item" id="menuitem_1" text="GOOGLEとＢＰＭによる業務分析システム" img="" ><item type="separator" id="menuitem_separator_1" /><item type="item" id="menuitem_6" text="Menu Item" /></item><item type="item" id="menuitem_3" text="BPM最大表示" img="" ><item type="separator" id="menuitem_separator_2" /><item type="item" id="menuitem_7" text="Menu Item" /></item><item type="separator" id="menuitem_separator_3" /><item type="item" id="menuitem_5" text="クラスター画面最大化" img="" /><item type="separator" id="menuitem_separator_4" /><item type="item" id="menuitem_8" text="自動翻訳画面最大化" imgdis="" /><item type="separator" id="menuitem_separator_5" /><item type="item" id="menuitem_9" text="ＢＰＭ画面最大化" img="" /></menu>');
+	var status_1 = main_layout.attachStatusBar();
+	status_1.setText('');
+	var cell_3 = main_layout.cells('c');
+	cell_3.setText('BPM');
+	var tabbar_2 = cell_3.attachTabbar();
+	tabbar_2.addTab('tab_7','BPM');
+	var tab_7 = tabbar_2.cells('tab_7');
+	tab_7.setActive();
+	tab_7.attachURL('http://157.7.131.112:6082/vnc_auto.html');
+
+
+	tabbar_2.addTab('tab_8','ESB');
+	var tab_8 = tabbar_2.cells('tab_8');
+
+
+	tabbar_2.addTab('tab_9','BRMS');
+	var tab_9 = tabbar_2.cells('tab_9');
+
+
+	tabbar_2.addTab('tab_10','ETL');
+	var tab_10 = tabbar_2.cells('tab_10');
+
+
+	tabbar_2.addTab('tab_11','BI');
+	var tab_11 = tabbar_2.cells('tab_11');
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

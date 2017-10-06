@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '2U');
+
+	var a = main_layout.cells('a');
+	var layout_1 = a.attachLayout('2E');
+
+	var cell_3 = layout_1.cells('a');
+	cell_3.attachURL('https://sites.google.com/site/project19991/home/docu-1');
+
+
+	var cell_4 = layout_1.cells('b');
+	var tabbar_1 = cell_4.attachTabbar();
+	tabbar_1.addTab('tab_1','tab_1');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('https://docs.google.com/spreadsheets/d/1D5nuOxvphbExVBZR7CSumZnWL_h3I-5uZPg-WRN2Gpg/pubhtml');
+
+
+
+
+
+
+
+
+
+	var b = main_layout.cells('b');
+	b.attachURL('http://157.7.131.112:82/sysworkflow/en/neoclassic/designer?prj_uid=44732823958441440932747042385647');
+
+
+	var toolbar_1 = main_layout.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.loadStruct('./data/toolbar.xml', function() {});
+
+	var windows = new dhtmlXWindows();
+	windows.setSkin('dhx_skyblue');
+
+	var window_1 = windows.createWindow('window_1', 1000, 0, 700, 700);
+	window_1.attachURL('http://157.7.131.112:6080/');
+
+	window_1.button('stick').show();
+	window_1.button('stick').enable();
+	window_1.button('minmax').show();
+	window_1.button('minmax').enable();
+
+
+</script>
+</body>
+</html>

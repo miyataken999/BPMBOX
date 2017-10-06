@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<script>
+	if(window.addEventListener){
+addEventListener("message", changeIframeSize, false);
+	}
+	else{
+		attachEvent("onmessage", changeIframeSize);
+	}
+
+function changeIframeSize(event){
+console.dir(event);
+alert(event.data.token);
+}</script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '1C');
+
+	var a = main_layout.cells('a');
+	a.attachURL('http://157.7.139.217/sysworkflow/en/neoclassic/designer?prj_uid=5634222795921ebd8884326071627847');
+
+
+
+
+</script>
+</body>
+</html>

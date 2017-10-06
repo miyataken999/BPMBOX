@@ -1,0 +1,31 @@
+{"config":"[{\"element\":\"fake\",\"id\":\"gui\",\"_text\":\"Main UI\",\"freeze\":true,\"open\":true,\"\$parent\":0,\"\$level\":1,\"\$count\":1},{\"element\":\"main_layout\",\"open\":true,\"id\":\"top\",\"name\":\"main_layout\",\"_text\":\"Layout : <span class='dhx_element_name'>main_layout</span>\",\"events\":{},\"freeze\":\"partially\",\"skin\":\"skyblue\",\"scheme\":\"3E\",\"\$parent\":\"gui\",\"\$level\":2,\"\$count\":3,\"\$selected\":false},{\"element\":\"cell\",\"id\":\"1\",\"cell_name\":\"a\",\"name\":\"a\",\"events\":{},\"_text\":\"Cell : <span class='dhx_element_name'>a</span>\",\"\$parent\":\"top\",\"\$level\":3,\"\$count\":1,\"\$selected\":false,\"open\":true,\"body\":\"tree\"},{\"element\":\"tree\",\"_text\":\"Tree : <span class='dhx_element_name'>tree_1</span>\",\"datasource\":\"New DataSource\",\"datatype\":\"xml\",\"icon_path\":\"./codebase/imgs/\",\"open_icon\":\"folderOpen.gif\",\"closed_icon\":\"folderClosed.gif\",\"leaf_icon\":\"leaf.gif\",\"images\":1,\"lines\":1,\"smartparsing\":0,\"events\":{\"onClick\":\"alert('onClick');\
+if(id==26){cell_1.attachURL('http://157.7.139.217/dhtmlxC/block/grid/BPMBOXEoc.php');}\
+if(id==27){cell_1.attachURL('https://docs.google.com/spreadsheets/d/1Nmo5DFyRhxlP1O8MWcxUNfayvNx9O3FJSNV3f0DaA5s/edit#gid=1667537317');}\
+if(id==28){cell_1.attachURL('https://docs.google.com/spreadsheets/d/1vrYoyUtLgjnl-DhAFhmULkTVMNVHRgL1Fp-9UXwh-2Y/edit#gid=1781121505');}\
+if(id==29){cell_1.attachURL('http://157.7.139.217/bpmbox/PMT_MENU_list.php');}\
+if(id==31){cell_1.attachURL('https://www.chatwork.com/#!rid68678236');}\
+if(id==32){cell_1.attachURL('https://docs.google.com/spreadsheets/d/1TX37BJ8jGFg4H_Bbtl8dcuZUa7RruxHhkvXJfAys0Vw/edit#gid=1856619256');}\
+\"},\"id\":1499513434660,\"\$count\":0,\"\$level\":4,\"\$parent\":\"1\",\"name\":\"tree_1\",\"\$selected\":true},{\"element\":\"cell\",\"id\":\"2\",\"cell_name\":\"b\",\"name\":\"b\",\"events\":{},\"_text\":\"Cell : <span class='dhx_element_name'>b</span>\",\"\$parent\":\"top\",\"\$level\":3,\"\$count\":0},{\"element\":\"cell\",\"id\":\"3\",\"cell_name\":\"c\",\"name\":\"c\",\"events\":{},\"_text\":\"Cell : <span class='dhx_element_name'>c</span>\",\"\$parent\":\"top\",\"\$level\":3,\"\$count\":0},{\"element\":\"windows\",\"id\":\"windows\",\"name\":\"windows\",\"_text\":\"Popups\",\"freeze\":\"partially\",\"\$parent\":0,\"\$level\":1,\"\$count\":0}]","initialize":"	window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3E');
+
+	var a = main_layout.cells('a');
+	var tree_1 = a.attachTree();
+		tree_1.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+		tree_1.load('http://157.7.139.217/dhtmlxC/block/tree/05_save_connector.php', 'xml');
+	
+	tree_1.attachEvent('onClick', function(id, prewid){
+		alert('onClick');
+if(id==26){cell_1.attachURL('http://157.7.139.217/dhtmlxC/block/grid/BPMBOXEoc.php');}
+if(id==27){cell_1.attachURL('https://docs.google.com/spreadsheets/d/1Nmo5DFyRhxlP1O8MWcxUNfayvNx9O3FJSNV3f0DaA5s/edit#gid=1667537317');}
+if(id==28){cell_1.attachURL('https://docs.google.com/spreadsheets/d/1vrYoyUtLgjnl-DhAFhmULkTVMNVHRgL1Fp-9UXwh-2Y/edit#gid=1781121505');}
+if(id==29){cell_1.attachURL('http://157.7.139.217/bpmbox/PMT_MENU_list.php');}
+if(id==31){cell_1.attachURL('https://www.chatwork.com/#!rid68678236');}
+if(id==32){cell_1.attachURL('https://docs.google.com/spreadsheets/d/1TX37BJ8jGFg4H_Bbtl8dcuZUa7RruxHhkvXJfAys0Vw/edit#gid=1856619256');}
+
+	});
+
+
+
+
+
+":"preview","skin":"skyblue"}

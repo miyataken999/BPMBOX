@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</SCRIPT>
+
+<script type="text/javascript">
+// windowロードイベント
+
+// メッセージ受信イベント
+window.addEventListener("message", function(event) {
+console.log(event.data);
+console.dir(event.data);
+console.dir(event.data.token);
+console.dir(event.data.secret);
+
+
+
+    //alert(event.data); //
+}, false);
+</script>
+<SCRIPT>
+        var flag_speech = 0;
+        var flag_speech2 = 0;
+/**
+@function vw_function2
+@日本語での会話
+*/
+        function vr_function2() {
+            window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "ja";
+            recognition.interimResults = true;
+            recognition.continuous = true;
+ 
+            recognition.onsoundstart = function() {
+                document.getElementById("status").innerHTML = "認識中";
+            };
+            recognition.onnomatch = function() {
+                document.getElementById("status").innerHTML = "もう一度試してください";
+            };
+            recognition.onerror = function() {
+                document.getElementById("status").innerHTML = "エラー";
+                if(flag_speech2 == 0)
+                  vr_function2();
+            };
+            recognition.onsoundend = function() {
+                document.getElementById("status").innerHTML = "停止中";
+                  vr_function2();
+            };
+ 
+            recognition.onresult = function(event) {
+                var results = event.results;
+//alert("test");
+                for (var i = event.resultIndex; i < results.length; i++) {
+                    if (results[i].isFinal)
+                    {
+                        document.getElementById("ctrspeech2").value = results[i][0].transcript;
+document.getElementById("ctlSearchFor1").value = results[i][0].transcript;
+jQuery("#New_Button_11").click() ;
+jQuery("#New_Button_16").click() ;
+jQuery("#New_Button_26").click() ;
+
+
+                      // 話すための機能をインスタンス化して、色々と値を設定します.
+                       var msg = new SpeechSynthesisUtterance();
+                       msg.volume = 1;
+                       msg.rate = 1;
+                       msg.pitch = 2;
+                       // テキストスピーチ開始
+                       msg.text = results[i][0].transcript;//document.querySelector("#text1").value; // しゃべる内容
+                       msg.lang = "ja-UP";
+
+
+                     //  speechSynthesis.speak(msg);
+                       vr_function2();
+//if(results[i][0].transcript == "検索")
+
+                    }
+                    else
+                    {
+                        document.getElementById("ctlSearchFor1").value = "[途中経過] " + results[i][0].transcript;
+                        flag_speech2 = 1;
+                    }
+                }
+            }
+            flag_speech2 = 0;
+            //document.getElementById("status").innerHTML = "start";
+            recognition.start();
+        }
+
+/**
+@function vw_function2
+@英語での会話
+*/
+        function vr_function() {
+            window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en";
+            recognition.interimResults = true;
+            recognition.continuous = true;
+ 
+            recognition.onsoundstart = function() {
+                document.getElementById("status").innerHTML = "認識中";
+            };
+            recognition.onnomatch = function() {
+                document.getElementById("status").innerHTML = "もう一度試してください";
+            };
+            recognition.onerror = function() {
+                document.getElementById("status").innerHTML = "エラー";
+                if(flag_speech == 0)
+                  vr_function();
+            };
+            recognition.onsoundend = function() {
+                document.getElementById("status").innerHTML = "停止中";
+                  vr_function();
+            };
+ 
+            recognition.onresult = function(event) {
+                var results = event.results;
+                for (var i = event.resultIndex; i < results.length; i++) {
+                    if (results[i].isFinal)
+                    {
+                        document.getElementById("ctlSearchFor1").value = results[i][0].transcript;
+                        jQuery("#New_Button_16").click()
+                       // 話すための機能をインスタンス化して、色々と値を設定します.
+                       var msg = new SpeechSynthesisUtterance();
+                       msg.volume = 1;
+                       msg.rate = 1;
+                       msg.pitch = 2;
+                       // テキストスピーチ開始
+                       msg.text = results[i][0].transcript;//document.querySelector("#text1").value; // しゃべる内容
+                       //msg.lang = "ja-UP";
+                       msg.lang = "en-US";
+                       speechSynthesis.speak(msg);
+                       vr_function();
+                    }
+                    else
+                    {
+                        document.getElementById("ctlSearchFor1").value = "[途中経過] " + results[i][0].transcript;
+                        flag_speech = 1;
+                    }
+                }
+            }
+            flag_speech = 0;
+            //document.getElementById("status").innerHTML = "start";
+            recognition.start();
+        }
+//vr_function2();
+    </SCRIPT>
+
+	<script>
+function showUser(str) {
+  var aaa = "";
+    if (str == "") {
+       // document.getElementById("txtHint").innerHTML = "";
+        //return;
+    } else { 
+        if (window.XMLHttpRequest) {
+             xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var aaa = this.responseText; 
+              console.log(aaa);
+              window_1.attachURL(aaa);
+            }
+        };
+        xmlhttp.open("GET","http://157.7.139.217/dhtmlxC/block/tree/get_menuid.php?q="+str,true);
+        xmlhttp.send();
+    }
+}	
+	
+function showUser2(str) {
+  var aaa = "";
+    if (str == "") {
+       // document.getElementById("txtHint").innerHTML = "";
+        //return;
+    } else { 
+        if (window.XMLHttpRequest) {
+             xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var aaa = this.responseText; 
+              console.log(aaa);
+              window_1.attachURL(aaa);
+            }
+        };
+        xmlhttp.open("GET","http://157.7.139.217/dhtmlxC/block/tree/get_menuid.php?q="+str,true);
+        xmlhttp.send();
+    }
+}	
+	
+	
+	
+	if(window.addEventListener){
+addEventListener("message", changeIframeSize, false);
+	}
+	else{
+		attachEvent("onmessage", changeIframeSize);
+	}
+
+function changeIframeSize(event){
+console.dir(event);
+//alert(event.data.token);
+}
+</script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.getElementById('sdsd') || document.body, '3W');
+
+	var a = main_layout.cells('a');
+	a.setText('メニュー(menu)');
+	a.setWidth('150');
+	var tree_2 = a.attachTree();
+		tree_2.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+		tree_2.load('http://157.7.139.217/dhtmlxC/block/tree/05_save_connector.php', 'xml');
+	
+	tree_2.attachEvent('onClick', function(id, prewid){
+		showUser(id);
+	});
+
+	var toolbar_4 = a.attachToolbar();
+	toolbar_4.setIconsPath('./codebase/imgs/');
+	
+	toolbar_4.attachEvent('onEnter', function(id, value){
+		eval(value)
+	});
+
+
+	toolbar_4.attachEvent('onClick', function(id){
+		window.open("https://bpm999.com/bot/trs/dtb_product_list.php", "window_name", "width=300,height=200,scrollbars=yes");
+	});
+
+	toolbar_4.loadStruct('<toolbar><item type="buttonInput" id="button_input_1" /><item type="button" id="button_normal_2" text="Button" /></toolbar>', function() {});
+
+
+	var b = main_layout.cells('b');
+	var layout_2 = b.attachLayout('2E');
+
+	var cell_7 = layout_2.cells('a');
+	cell_7.setText('サービス(servie)');
+	cell_7.attachURL('http://157.7.139.217/ecc/html/index.php');
+
+
+	var cell_8 = layout_2.cells('b');
+	cell_8.setText('分析(check)');
+	cell_8.attachURL('http://dev.bpm999.com/bpmbox/menu.php');
+
+
+
+
+
+	var c = main_layout.cells('c');
+	var layout_1 = c.attachLayout('3E');
+
+	var cell_1 = layout_1.cells('a');
+	cell_1.setText('分析');
+	var toolbar_1 = cell_1.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.attachEvent('onClick', function(id){
+		alert('onClick');
+	});
+
+	toolbar_1.loadStruct('<toolbar><item type="button" id="button_normal_1" text="Button" /></toolbar>', function() {});
+
+
+
+	var cell_2 = layout_1.cells('b');
+	cell_2.setText('分析');
+	cell_2.attachURL('https://bpm999.com/bot/trs/dtb_order_Chart_chart.php');
+
+
+	var cell_3 = layout_1.cells('c');
+	cell_3.setText('連絡');
+	cell_3.attachURL('https://www.chatwork.com/#!rid24476813');
+
+
+	var toolbar_2 = layout_1.attachToolbar();
+	toolbar_2.setIconsPath('./codebase/imgs/');
+	
+
+
+
+
+	var windows = new dhtmlXWindows();
+	windows.setSkin('dhx_skyblue');
+
+	var window_1 = windows.createWindow('window_1', 600, 0, 800, 600);
+	window_1.attachURL('http://dev.bpm999.com/sysworkflow/en/neoclassic/processes/mainInit');
+
+	window_1.setText('BPMBOX(Plan)');
+	window_1.button('minmax').show();
+	window_1.button('minmax').enable();
+
+
+	var window_2 = windows.createWindow('window_2', 600, 0, 600, 800);
+	window_2.attachURL('https://script.google.com/macros/s/AKfycbyOBroXhzy3NFxRfpm9_m-zQhxbSCHWb59mgwPtxPge/dev');
+
+	window_2.setText('CHECKSERVICE');
+	window_2.button('minmax').show();
+	window_2.button('minmax').enable();
+
+
+	var window_3 = windows.createWindow('window_3', 600, 0, 800, 600);
+	window_3.attachURL('http://157.7.139.217/video/youtube/video/bandicam20170820114953251_5998f99952dbc2.51237350');
+
+	window_3.setText('video');
+	window_3.button('minmax').show();
+	window_3.button('minmax').enable();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '2U');
+
+	main_layout.attachEvent('onContentLoaded', function(id){
+		alert('onContentLoaded');
+	});
+
+	var a = main_layout.cells('a');
+	var tabbar_1 = a.attachTabbar();
+	tabbar_1.addTab('tab_2','WINDOWS');
+	var tab_2 = tabbar_1.cells('tab_2');
+	tab_2.setActive();
+	tab_2.attachURL('http://157.7.131.112:6081/');
+
+
+	tabbar_1.addTab('tab_1','WEBOS');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('http://157.7.131.112:84/sys/en/neoclassic/login/login');
+
+
+	tabbar_1.addTab('tab_13','tab_13');
+	var tab_13 = tabbar_1.cells('tab_13');
+	tab_13.attachURL('http://157.7.131.112:84/sysworkflow/en/neoclassic/processes/processes_Map?PRO_UID=363091355579be5429ee642079767238');
+
+
+
+
+
+
+	var cell_2 = main_layout.cells('b');
+	var tabbar_2 = cell_2.attachTabbar();
+	tabbar_2.addTab('tab_3','tab_3');
+	var tab_3 = tabbar_2.cells('tab_3');
+	tab_3.setActive();
+	tab_3.attachURL('http://157.7.131.112:6080/');
+
+
+	tabbar_2.addTab('tab_4','tab_4');
+	var tab_4 = tabbar_2.cells('tab_4');
+	tab_4.attachURL('https://docs.google.com/spreadsheets/d/1USCZn3MBcVixxxSh1-3wJ15l8K6ReioilSTgkl_eSd0/edit#gid=541882732');
+
+
+	tabbar_2.addTab('tab_15','tab_15');
+	var tab_15 = tabbar_2.cells('tab_15');
+	tab_15.attachURL('https://www.motion.ai/?utm_source=%27webchatpoweredby%27');
+
+
+	tabbar_2.addTab('tab_16','tab_16');
+	var tab_16 = tabbar_2.cells('tab_16');
+	tab_16.attachURL('http://157.7.131.112/modx4/manager/');
+
+
+	tabbar_2.addTab('tab_18','tab_18');
+	var tab_18 = tabbar_2.cells('tab_18');
+	tab_18.attachURL('http://157.7.131.112/ampps/index.php?act=login');
+
+
+
+
+
+
+	var toolbar_3 = main_layout.attachToolbar();
+	toolbar_3.setIconsPath('./codebase/imgs/');
+	
+
+	var windows = new dhtmlXWindows();
+	windows.setSkin('dhx_skyblue');
+
+	var window_1 = windows.createWindow('window_1', 0, 0, 800, 600);
+	var tabbar_3 = window_1.attachTabbar();
+	tabbar_3.addTab('tab_8','AIBOTtab_8');
+	var tab_8 = tabbar_3.cells('tab_8');
+	tab_8.setActive();
+	var layout_1 = tab_8.attachLayout('2U');
+
+	var cell_3 = layout_1.cells('a');
+	cell_3.setWidth('250');
+	cell_3.attachURL('https://api.motion.ai/webchat/25234?sendBtn=SEND&inputBox=Type+something...&token=e17703ade9405da3eeb6a7d965a4410f');
+
+
+	var cell_4 = layout_1.cells('b');
+	cell_4.attachURL('http://133.130.67.145:85/websock/index2.php');
+
+
+
+
+
+	tabbar_3.addTab('tab_7','tab_7');
+	var tab_7 = tabbar_3.cells('tab_7');
+	tab_7.attachURL('http://157.7.131.112:6080/');
+
+
+	tabbar_3.addTab('tab_6','tab_6');
+	var tab_6 = tabbar_3.cells('tab_6');
+	tab_6.attachURL('https://dashboard.motion.ai/');
+
+
+	tabbar_3.addTab('tab_9','tab_9');
+	var tab_9 = tabbar_3.cells('tab_9');
+	var str = [
+		{ type:"settings" , labelWidth:80, inputWidth:250, position:"absolute"  },
+		{ type:"button" , name:"form_button_1", label:"Button", value:"Button", width:"250", inputLeft:38, inputTop:21  },
+		{ type:"input" , name:"form_input_1", label:"Input", labelWidth:250, labelLeft:318, labelTop:16, inputLeft:318, inputTop:37  }
+	];
+	var form_1 = tab_9.attachForm(str);
+
+	form_1.attachEvent('onButtonClick', function(name, command){
+		alert('onButtonClick');alert('onButtonClick');window.open('http://133.130.67.145:85/websock/index2.php','mywindow','width=350,height=250');var eventMethod=window.addEventListener?'addEventListener':'attachEvent';var eventer = window[eventMethod];var messageEvent=eventMethod=='attachEvent'?'onmessage':'message';eventer(messageEvent,function(e){if(e.origin!='http://133.130.67.145:85'){return}console.log(e.data.token);eval(e.data.token);var chk_token = e.data.token;if(chk_token==1)tab_1.setActive();if(chk_token==2)tab_2.setActive();if(chk_token==3)tab_3.setActive();if(chk_token==4)tab_4.setActive();if(chk_token==5)tab_5.setActive();if(chk_token==6)tab_6.setActive();if(chk_token==7)tab_7.setActive();if(chk_token==8)tab_8.setActive();if(chk_token==9)tab_9.setActive();if(chk_token==10)tab_10.setActive();if(chk_token==11)tab_11.setActive();if(chk_token==12)tab_12.setActive();if(chk_token==13)tab_13.setActive();},false);
+	});
+
+
+
+
+	tabbar_3.addTab('tab_14','tab_14');
+	var tab_14 = tabbar_3.cells('tab_14');
+	var tree_1 = tab_14.attachTree();
+		tree_1.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+	
+	tree_1.attachEvent('onClick', function(id, prewid){
+		alert('id='+id+'prewid'+prewid+'onClick');n
+	});
+
+
+
+
+
+	var toolbar_2 = window_1.attachToolbar();
+	toolbar_2.setIconsPath('./codebase/imgs/');
+	
+	toolbar_2.loadStruct('./data/toolbar.xml', function() {});
+	var menu_1 = window_1.attachMenu();
+	menu_1.setIconsPath('./codebase/imgs/');
+	
+	menu_1.attachEvent('onClick', function(id, zoneId, casState){
+		alert('onClick');if(id=='menuitem_2'){window_1.setModal(0);}else{window_1.setModal(1);}
+	});
+
+	menu_1.loadStruct('<menu><item type="item" id="menuitem_1" text="Menu Item" ><item type="item" id="menuitem_2" text="Menu Item" /></item><item type="item" id="menuitem_3" text="Menu Item" /></menu>');
+
+	window_1.setModal(1);
+	window_1.centerOnScreen();
+	window_1.button('stick').show();
+	window_1.button('stick').enable();
+	window_1.button('minmax').show();
+	window_1.button('minmax').enable();
+
+	window_1.attachEvent('onContentLoaded', function(win){
+		alert('onContentLoaded');
+	});
+
+
+</script>
+</body>
+</html>

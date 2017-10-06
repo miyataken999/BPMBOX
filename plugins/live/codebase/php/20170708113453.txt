@@ -1,0 +1,33 @@
+{"config":"[{\"element\":\"fake\",\"id\":\"gui\",\"_text\":\"Main UI\",\"freeze\":true,\"open\":true,\"\$parent\":0,\"\$level\":1,\"\$count\":1,\"\$selected\":false},{\"element\":\"main_layout\",\"open\":true,\"id\":\"top\",\"name\":\"main_layout\",\"_text\":\"Layout : <span class='dhx_element_name'>main_layout</span>\",\"events\":{},\"freeze\":\"partially\",\"skin\":\"skyblue\",\"scheme\":\"3E\",\"\$parent\":\"gui\",\"\$level\":2,\"\$count\":3,\"\$selected\":false},{\"element\":\"cell\",\"id\":\"1\",\"cell_name\":\"a\",\"name\":\"a\",\"events\":{},\"_text\":\"Cell : <span class='dhx_element_name'>a</span>\",\"\$parent\":\"top\",\"\$level\":3,\"\$count\":1,\"\$selected\":false,\"open\":true,\"body\":\"tree\"},{\"element\":\"tree\",\"_text\":\"Tree : <span class='dhx_element_name'>tree_1</span>\",\"datasource\":\"New DataSource\",\"datatype\":\"xml\",\"icon_path\":\"./codebase/imgs/\",\"open_icon\":\"folderOpen.gif\",\"closed_icon\":\"folderClosed.gif\",\"leaf_icon\":\"leaf.gif\",\"images\":1,\"lines\":1,\"smartparsing\":0,\"events\":{\"onClick\":\"alert('onClick');alert('onClick');\
+alert('onClick');nalert('onClick');nalert('onClick');nalert('onClick');n\"},\"id\":1499513627129,\"\$count\":0,\"\$level\":4,\"\$parent\":\"1\",\"name\":\"tree_1\",\"\$selected\":true},{\"element\":\"cell\",\"id\":\"2\",\"cell_name\":\"b\",\"name\":\"b\",\"events\":{},\"_text\":\"Cell : <span class='dhx_element_name'>b</span>\",\"\$parent\":\"top\",\"\$level\":3,\"\$count\":0,\"\$selected\":false},{\"element\":\"cell\",\"id\":\"3\",\"cell_name\":\"c\",\"name\":\"cell_1\",\"events\":{},\"_text\":\"Cell : <span class='dhx_element_name'>cell_1</span>\",\"\$parent\":\"top\",\"\$level\":3,\"\$count\":1,\"\$selected\":false,\"header\":\"\",\"open\":true,\"body\":\"chart\"},{\"element\":\"chart\",\"_text\":\"Chart : <span class='dhx_element_name'>chart_1</span>\",\"view\":\"pie\",\"value\":\"sales\",\"x_template\":\"#year#\",\"y_start\":\"0\",\"y_step\":\"2\",\"y_end\":\"10\",\"tooltip\":\"#sales#\",\"gradient\":0,\"shadow\":1,\"legend\":1,\"legend_template\":\"#year#\",\"legend_marker_type\":\"square\",\"legend_marker_width\":25,\"legend_marker_height\":15,\"datatype\":\"xml\",\"datasource\":\"DefaultChart\",\"item_color\":\"ff9600\",\"line_color\":\"3399ff\",\"color\":\"00ccff\",\"xValue\":\"sales_2\",\"cant\":0.5,\"events\":{},\"id\":1499513668682,\"\$count\":0,\"\$level\":4,\"\$parent\":\"3\",\"name\":\"chart_1\",\"\$selected\":false},{\"element\":\"windows\",\"id\":\"windows\",\"name\":\"windows\",\"_text\":\"Popups\",\"freeze\":\"partially\",\"\$parent\":0,\"\$level\":1,\"\$count\":0,\"\$selected\":false}]","initialize":"\twindow.dhx4.skin = 'dhx_skyblue';
+\tvar main_layout = new dhtmlXLayoutObject(document.body, '3E');
+
+\tvar a = main_layout.cells('a');
+\tvar tree_1 = a.attachTree();
+\t\ttree_1.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+\t\ttree_1.load('http://157.7.139.217/dhtmlxC/block/tree/05_save_connector.php', 'xml');
+\t
+\ttree_1.attachEvent('onClick', function(id, prewid){
+\t\talert('onClick');alert('onClick');
+alert('onClick');\nalert('onClick');\nalert('onClick');nalert('onClick');n
+\t});
+
+
+
+\tvar cell_1 = main_layout.cells('c');
+\tvar chart_1 = cell_1.attachChart({
+\t\tview: 'pie' ,
+\t\ttooltip:{
+\t\t\ttemplate:'#sales#'
+\t\t},
+\t\tlegend:{\"template\":\"#year#\",\"marker\":{\"type\":\"square\",\"width\":25,\"height\":15}},
+\t\tgradient: false,
+\t\tvalue:'#sales#'
+\t});
+
+
+
+
+
+
+":"preview","skin":"skyblue"}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3E');
+
+	var a = main_layout.cells('a');
+	var carousel_1 = a.attachCarousel({effect: 'slide', item_width: 'auto', item_height: 'auto', offset_left: '2', offset_top: '2', offset_item: '4', keys: 'true'});
+	carousel_1.addCell('carousel_item_1');
+	var carousel_item_1 = carousel_1.cells('carousel_item_1');
+	carousel_item_1.attachURL('http://157.7.131.112/dhtmlx/samples/dhtmlxGrid/01_cell_types/01_calendar_grid.html');
+
+
+	carousel_1.addCell('carousel_item_2');
+	var carousel_item_2 = carousel_1.cells('carousel_item_2');
+	var str = [
+		{ type:\"settings\" , labelWidth:80, inputWidth:250, position:\"absolute\"  },
+		{ type:\"checkbox\" , name:\"form_checkbox_1\", label:\"Checkbox\", labelWidth:100, labelLeft:146, labelTop:141, inputLeft:146, inputTop:162  }
+	];
+	var form_1 = carousel_item_2.attachForm(str);
+
+
+
+
+	carousel_1.addCell('carousel_item_3');
+	var carousel_item_3 = carousel_1.cells('carousel_item_3');
+	var chart_1 = carousel_item_3.attachChart({
+		view: 'pie' ,
+		tooltip:{
+			template:'#sales#'
+		},
+		legend:{\"template\":\"#year#\",\"marker\":{\"type\":\"square\",\"width\":25,\"height\":15}},
+		gradient: false,
+		value:'#sales#'
+	});
+
+	chart_1.load('./data/data.xml', 'xml');
+
+
+
+
+
+
+
+	var b = main_layout.cells('b');
+	var tree_1 = b.attachTree();
+		tree_1.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+		tree_1.enableDragAndDrop('1', true);
+		tree_1.enableMercyDrag(1);
+		tree_1.enableItemEditor(1);
+		tree_1.load('./data/tree.xml', 'xml');
+	
+	tree_1.attachEvent('onEdit', function(state, id, tree, value){
+		alert('onEdit');
+	});
+
+
+
+	var c = main_layout.cells('c');
+	var grid_1 = c.attachGrid();
+	grid_1.setIconsPath('./codebase/imgs/');
+	
+	grid_1.setHeader([\"dhxCalendar\",\"dhxCalendarA\"]);
+	grid_1.setColTypes(\"ed,ro\");
+	
+	grid_1.setColSorting('str,str');
+	grid_1.setInitWidths('*,*');
+	grid_1.init();
+	grid_1.load('./data/grid_dates.xml', 'xml');
+	
+
+
+	var toolbar_1 = main_layout.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.loadStruct('./data/toolbar.xml', function() {});
+	var menu_1 = main_layout.attachMenu();
+	menu_1.setIconsPath('./codebase/imgs/');
+	
+	menu_1.loadStruct('<menu><item type=\"item\" id=\"menuitem_1\" text=\"Menu Item\" /><item type=\"item\" id=\"menuitem_2\" text=\"Menu Item\" /></menu>');
+
+
+</script>
+</body>
+</html>

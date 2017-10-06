@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3W');
+
+	var a = main_layout.cells('a');
+	a.setText('質問サイト');
+	a.setWidth('200');
+	a.attachURL('http://bpm999.com/');
+
+
+	var b = main_layout.cells('b');
+	b.setText('BPM');
+	var tabbar_3 = b.attachTabbar();
+	tabbar_3.addTab('tab_14','BPM');
+	var tab_14 = tabbar_3.cells('tab_14');
+	tab_14.setActive();
+	tab_14.attachURL('http://133.130.67.145:89/sysofficeone/en/neoclassic/setup/main');
+
+
+	tabbar_3.addTab('tab_24','workspace2');
+	var tab_24 = tabbar_3.cells('tab_24');
+	tab_24.attachURL('http://133.130.67.145:89/sysofficetwo/en/neoclassic/processes/main');
+
+
+	tabbar_3.addTab('tab_15','ETL');
+	var tab_15 = tabbar_3.cells('tab_15');
+	tab_15.attachURL('http://133.130.74.73:6082');
+
+
+	tabbar_3.addTab('tab_16','ESB');
+	var tab_16 = tabbar_3.cells('tab_16');
+
+
+	tabbar_3.addTab('tab_17','BRMS');
+	var tab_17 = tabbar_3.cells('tab_17');
+
+
+	tabbar_3.addTab('tab_18','共有画面');
+	var tab_18 = tabbar_3.cells('tab_18');
+
+
+
+
+
+
+	var c = main_layout.cells('c');
+	var tabbar_1 = c.attachTabbar();
+	tabbar_1.addTab('tab_1','設計');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('http://133.130.74.73/feng1/index.php?c=access&a=index');
+
+
+	tabbar_1.addTab('tab_2','GOOGLESP');
+	var tab_2 = tabbar_1.cells('tab_2');
+	tab_2.attachURL('https://docs.google.com/spreadsheets/d/1D5nuOxvphbExVBZR7CSumZnWL_h3I-5uZPg-WRN2Gpg/edit?usp=sharing');
+
+
+	tabbar_1.addTab('tab_26','全体耕性案');
+	var tab_26 = tabbar_1.cells('tab_26');
+	tab_26.attachURL('http://bpm999.com/bpm/map.htm');
+
+
+	tabbar_1.addTab('tab_7','特許庁資料');
+	var tab_7 = tabbar_1.cells('tab_7');
+	var tabbar_2 = tab_7.attachTabbar();
+	tabbar_2.addTab('tab_8','特許庁資料');
+	var tab_8 = tabbar_2.cells('tab_8');
+	tab_8.setActive();
+	tab_8.attachURL('https://www.jpo.go.jp/torikumi/system/system_kaihatsukanren.htm');
+
+
+	tabbar_2.addTab('tab_9','用語集');
+	var tab_9 = tabbar_2.cells('tab_9');
+	tab_9.attachURL('https://www.jpo.go.jp/torikumi/system/pdf/1_yogo.pdf');
+
+
+	tabbar_2.addTab('tab_10','ルール規則');
+	var tab_10 = tabbar_2.cells('tab_10');
+	tab_10.attachURL('https://www.jpo.go.jp/torikumi/system/pdf/arch_1_03.pdf');
+
+
+	tabbar_2.addTab('tab_11','概念設計');
+	var tab_11 = tabbar_2.cells('tab_11');
+	tab_11.attachURL('https://www.jpo.go.jp/torikumi/system/pdf/koho_01.pdf');
+
+
+	tabbar_2.addTab('tab_12','tab_12');
+	var tab_12 = tabbar_2.cells('tab_12');
+
+
+
+
+
+
+	tabbar_1.addTab('tab_3','セレクター');
+	var tab_3 = tabbar_1.cells('tab_3');
+
+
+	tabbar_1.addTab('tab_4','翻訳');
+	var tab_4 = tabbar_1.cells('tab_4');
+
+
+	tabbar_1.addTab('tab_5','校閲');
+	var tab_5 = tabbar_1.cells('tab_5');
+
+
+	tabbar_1.addTab('tab_6','校正');
+	var tab_6 = tabbar_1.cells('tab_6');
+
+
+	tabbar_1.addTab('tab_13','金融庁');
+	var tab_13 = tabbar_1.cells('tab_13');
+	tab_13.attachURL('http://www.fsa.go.jp/common/law/guide/ins/index.html');
+
+
+
+
+
+
+	var toolbar_1 = main_layout.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.loadStruct('./data/toolbar.xml', function() {});
+
+
+</script>
+</body>
+</html>

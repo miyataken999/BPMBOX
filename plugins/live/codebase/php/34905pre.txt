@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<script>
+	if(window.addEventListener){
+addEventListener("message", changeIframeSize, false);
+	}
+	else{
+		attachEvent("onmessage", changeIframeSize);
+	}
+
+function changeIframeSize(event){
+console.dir(event);
+alert(event.data.token);
+}</script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3L');
+
+	main_layout.attachEvent('onContentLoaded', function(id){
+		alert('onContentLoaded');n
+	});
+
+	var a = main_layout.cells('a');
+	var tabbar_1 = a.attachTabbar();
+	tabbar_1.addTab('tab_1','ボックス');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('/newshop2/box/box_list.php');
+
+
+	tabbar_1.addTab('tab_2','商品バッチ');
+	var tab_2 = tabbar_1.cells('tab_2');
+	tab_2.attachURL('/newshop2/store_products_batch_list.php');
+
+
+	tabbar_1.addTab('tab_4','ユーザー一覧');
+	var tab_4 = tabbar_1.cells('tab_4');
+	tab_4.attachURL('/newshop2/admin_users_list.php?pagesize=50');
+
+
+	tabbar_1.addTab('tab_16','tab_16');
+	var tab_16 = tabbar_1.cells('tab_16');
+	var tree_1 = tab_16.attachTree();
+		tree_1.setImagePath('./codebase/imgs/dhxtree_'+dhx4.skin.replace(/^dhx_/,'')+'/');
+		tree_1.load('./data/tree.xml', 'xml');
+	
+
+
+
+
+
+
+	var b = main_layout.cells('b');
+	b.setText('システムログ');
+	var tabbar_3 = b.attachTabbar();
+	tabbar_3.addTab('tab_9','高速商品検索');
+	var tab_9 = tabbar_3.cells('tab_9');
+	tab_9.setActive();
+	tab_9.attachURL('/dhtmlxC/block/grid/store_products.php?dhxr1489987696887');
+
+
+	tabbar_3.addTab('tab_10','高速顧客一覧');
+	var tab_10 = tabbar_3.cells('tab_10');
+	tab_10.attachURL('/dhtmlxC/block/grid/store_products.php?dhxr1489987696887');
+
+
+	tabbar_3.addTab('tab_11','システムログ');
+	var tab_11 = tabbar_3.cells('tab_11');
+	tab_11.attachURL('/newshop2/box/tail.php');
+
+
+	tabbar_3.addTab('tab_12','BOX');
+	var tab_12 = tabbar_3.cells('tab_12');
+	tab_12.attachURL('/dhtmlxC/block/grid/box.php?dhxr1489987696887&dhxr1489998831986');
+
+
+	tabbar_3.addTab('tab_15','tab_15');
+	var tab_15 = tabbar_3.cells('tab_15');
+	tab_15.attachURL('https://script.google.com/macros/d/MJscm0tkeCAXK8m6MXwenTeIXr7I-CV9P/edit?mid=ACjPJvH1otfAHwQdzAoMzWzNbQdn0CNFC599lHC_ys3GG8D1FEQXtTJjvlugdVAz5IgCtQIoZvNYDFytqDqK1Ksqse_Ig-bSzpWU8eAVeMBbAUDrQWMYdiTrW5qm');
+
+
+
+
+
+
+	var toolbar_1 = main_layout.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	var cell_3 = main_layout.cells('c');
+	cell_3.setText('テスト結果');
+	var tabbar_2 = cell_3.attachTabbar();
+	tabbar_2.addTab('tab_7','テスト');
+	var tab_7 = tabbar_2.cells('tab_7');
+	tab_7.setActive();
+	tab_7.attachURL('https://docs.google.com/spreadsheets/d/1E1Zh-cG6m0Vh9M69kB9zVLaUx7no-lJ3AFgOX5ipOjE/edit');
+
+
+	tabbar_2.addTab('tab_8','仕様書');
+	var tab_8 = tabbar_2.cells('tab_8');
+	tab_8.attachURL('https://docs.google.com/spreadsheets/d/1YJCO8v35p0H1jyyRofYgbBN6mcD1bZ7PpeZZBYZmY4k/edit#gid=1675747193');
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

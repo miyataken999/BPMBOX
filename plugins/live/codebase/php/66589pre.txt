@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" href="./preview/codebase/dhtmlxscheduler.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="./preview/codebase/preview_skyblue.css" type="text/css" charset="utf-8">
+	<script src="./preview/codebase/preview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+	<script language="JavaScript" src="./preview/codebase/swfobject.js" type="text/javascript"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">window.dhx4.skin = 'dhx_skyblue';
+	var main_layout = new dhtmlXLayoutObject(document.body, '3W');
+
+	var a = main_layout.cells('a');
+	a.setText('MOTIONAI');
+	a.setWidth('300');
+
+	var ribbon_1 = a.attachRibbon({
+skin : "dhx_skyblue", icons_path : "./codebase/imgs/", items : [
+
+{id : "block_1", text : "block_1", text_pos : "buttom", type : "block", mode : "cols", list : [
+
+{id : "buttonCombo_1", text : "buttonCombo_1", type : "buttonCombo", width : 140}
+
+]},
+{id : "block_2", text : "block_2", text_pos : "buttom", type : "block", mode : "cols", list : [
+
+{id : "button_1", text : "button_1", type : "button"}
+
+]}
+
+]
+	});
+
+	var carousel_1 = a.attachCarousel({effect: 'slide', item_width: 'auto', item_height: 'auto', offset_left: '2', offset_top: '2', offset_item: '4', keys: 'true'});
+	carousel_1.addCell('carousel_item_1');
+	var carousel_item_1 = carousel_1.cells('carousel_item_1');
+	var accordion_1 = carousel_item_1.attachAccordion();
+	var panel_1 = accordion_1.addItem('panel_1','');
+	panel_1.attachURL('https://api.motion.ai/webchat/27511?sendBtn=SEND&inputBox=Type+something...&token=eb7736d5eb83e54ec9ce77b24f5cc105');
+
+
+	var panel_2 = accordion_1.addItem('panel_2','');
+
+
+
+
+
+
+	carousel_1.addCell('carousel_item_2');
+	var carousel_item_2 = carousel_1.cells('carousel_item_2');
+	carousel_item_2.attachURL('http://157.7.131.112/newshop3/dhtmlxConnector/samples/grid/01_basic.html');
+
+
+	carousel_1.addCell('carousel_item_3');
+	var carousel_item_3 = carousel_1.cells('carousel_item_3');
+
+
+
+
+
+
+	var b = main_layout.cells('b');
+	b.setText('BPMBOX');
+	b.attachURL('http://157.7.131.112:84/sysworkflow/en/neoclassic/cases/main');
+
+
+	var cell_1 = main_layout.cells('c');
+	cell_1.setText('NAVIGAGER');
+	cell_1.attachURL('http://157.7.131.112:6080/');
+	var toolbar_2 = cell_1.attachToolbar();
+	toolbar_2.setIconsPath('./codebase/imgs/');
+	
+	toolbar_2.attachEvent('onClick', function(id){
+		alert('onClick');
+	});
+
+
+	toolbar_2.attachEvent('onEnter', function(id, value){
+		alert('onEnter'+value);
+	});
+
+	toolbar_2.loadStruct('<toolbar><item type="button" id="button_normal_2" text="Button" /><item type="buttonInput" id="button_input_1" width="200" /><item type="buttonSelect" id="button_select_1" text="List" /><item type="buttonTwoState" id="button_2state_1" text="Two state" /></toolbar>', function() {});
+
+
+
+	var windows = new dhtmlXWindows();
+	windows.setSkin('dhx_skyblue');
+
+	var window_1 = windows.createWindow('window_1', 0, 0, 1200, 800);
+	var layout_1 = window_1.attachLayout('3W');
+
+	var cell_4 = layout_1.cells('a');
+	cell_4.setWidth('200');
+	cell_4.attachURL('https://api.motion.ai/webchat/27511?sendBtn=SEND&inputBox=Type+something...&token=eb7736d5eb83e54ec9ce77b24f5cc105');
+
+
+	var cell_5 = layout_1.cells('b');
+	var toolbar_1 = cell_5.attachToolbar();
+	toolbar_1.setIconsPath('./codebase/imgs/');
+	
+	toolbar_1.loadStruct('<toolbar><item type="button" id="button_normal_1" text="Button" /></toolbar>', function() {});
+	var tabbar_1 = cell_5.attachTabbar();
+	tabbar_1.addTab('tab_1','ECCUBE1');
+	var tab_1 = tabbar_1.cells('tab_1');
+	tab_1.setActive();
+	tab_1.attachURL('http://157.7.131.112/ecommers/eccube/html/');
+
+
+
+
+
+
+	var cell_6 = layout_1.cells('c');
+	cell_6.attachURL('http://157.7.131.112/ajaxchat/');
+
+
+
+
+	window_1.setText('BPMBOX');
+	window_1.centerOnScreen();
+	window_1.button('minmax').show();
+	window_1.button('minmax').enable();
+
+
+</script>
+</body>
+</html>
