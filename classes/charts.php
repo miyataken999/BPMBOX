@@ -709,6 +709,8 @@ class Chart
 			return true;
 		if("BPMBOXEoc2" == $this->chrt_array['tables'][0])
 			return true;
+		if("items" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

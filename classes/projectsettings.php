@@ -3009,6 +3009,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "Dashboard2" ] = "Dashboard2";
 	$projectEntities[ "BPMBOXEoc2" ] = array( "url" => "BPMBOXEoc2", "type" => 0 );
 	$projectEntitiesReverse[ "BPMBOXEoc2" ] = "BPMBOXEoc2";
+	$projectEntities[ "items" ] = array( "url" => "items", "type" => 0 );
+	$projectEntitiesReverse[ "items" ] = "items";
 }
 
 function findTable( $table ) {
