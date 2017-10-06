@@ -1,0 +1,890 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel Dashboard2 search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN modx_site_content_id_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_id}" data-fieldname="modx_site_content_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_id}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_id_fieldblock}
+	{BEGIN modx_site_content_url_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_url}" data-fieldname="modx_site_content_url">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_url}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_url}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_url_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_url_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_url_fieldblock}
+	{BEGIN modx_site_content_link_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_link}" data-fieldname="modx_site_content_link">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_link}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_link}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_link_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_link_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_link_fieldblock}
+	{BEGIN modx_site_content_type_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_type}" data-fieldname="modx_site_content_type">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_type}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_type}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_type_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_type_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_type_fieldblock}
+	{BEGIN modx_site_content_contentType_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_contentType}" data-fieldname="modx_site_content_contentType">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_contentType}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_contentType}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_contentType_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_contentType_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_contentType_fieldblock}
+	{BEGIN modx_site_content_pagetitle_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_pagetitle}" data-fieldname="modx_site_content_pagetitle">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_pagetitle}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_pagetitle}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_pagetitle_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_pagetitle_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_pagetitle_fieldblock}
+	{BEGIN modx_site_content_longtitle_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_longtitle}" data-fieldname="modx_site_content_longtitle">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_longtitle}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_longtitle}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_longtitle_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_longtitle_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_longtitle_fieldblock}
+	{BEGIN modx_site_content_description_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_description}" data-fieldname="modx_site_content_description">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_description}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_description}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_description_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_description_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_description_fieldblock}
+	{BEGIN modx_site_content_alias_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_alias}" data-fieldname="modx_site_content_alias">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_alias}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_alias}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_alias_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_alias_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_alias_fieldblock}
+	{BEGIN modx_site_content_link_attributes_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_link_attributes}" data-fieldname="modx_site_content_link_attributes">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_link_attributes}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_link_attributes}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_link_attributes_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_link_attributes_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_link_attributes_fieldblock}
+	{BEGIN modx_site_content_published_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_published}" data-fieldname="modx_site_content_published">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_published}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_published}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_published_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_published_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_published_fieldblock}
+	{BEGIN modx_site_content_pub_date_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_pub_date}" data-fieldname="modx_site_content_pub_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_pub_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_pub_date}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_pub_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_pub_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_pub_date_fieldblock}
+	{BEGIN modx_site_content_unpub_date_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_unpub_date}" data-fieldname="modx_site_content_unpub_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_unpub_date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_unpub_date}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_unpub_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_unpub_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_unpub_date_fieldblock}
+	{BEGIN modx_site_content_parent_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_parent}" data-fieldname="modx_site_content_parent">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_parent}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_parent}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_parent_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_parent_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_parent_fieldblock}
+	{BEGIN modx_site_content_isfolder_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_isfolder}" data-fieldname="modx_site_content_isfolder">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_isfolder}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_isfolder}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_isfolder_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_isfolder_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_isfolder_fieldblock}
+	{BEGIN modx_site_content_introtext_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_introtext}" data-fieldname="modx_site_content_introtext">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_introtext}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_introtext}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_introtext_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_introtext_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_introtext_fieldblock}
+	{BEGIN modx_site_content_content_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_content}" data-fieldname="modx_site_content_content">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_content}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_content}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_content_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_content_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_content_fieldblock}
+	{BEGIN modx_site_content_richtext_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_richtext}" data-fieldname="modx_site_content_richtext">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_richtext}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_richtext}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_richtext_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_richtext_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_richtext_fieldblock}
+	{BEGIN modx_site_content_template_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_template}" data-fieldname="modx_site_content_template">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_template}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_template}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_template_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_template_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_template_fieldblock}
+	{BEGIN modx_site_content_menuindex_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_menuindex}" data-fieldname="modx_site_content_menuindex">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_menuindex}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_menuindex}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_menuindex_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_menuindex_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_menuindex_fieldblock}
+	{BEGIN modx_site_content_searchable_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_searchable}" data-fieldname="modx_site_content_searchable">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_searchable}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_searchable}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_searchable_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_searchable_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_searchable_fieldblock}
+	{BEGIN modx_site_content_cacheable_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_cacheable}" data-fieldname="modx_site_content_cacheable">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_cacheable}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_cacheable}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_cacheable_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_cacheable_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_cacheable_fieldblock}
+	{BEGIN modx_site_content_createdby_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_createdby}" data-fieldname="modx_site_content_createdby">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_createdby}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_createdby}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_createdby_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_createdby_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_createdby_fieldblock}
+	{BEGIN modx_site_content_createdon_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_createdon}" data-fieldname="modx_site_content_createdon">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_createdon}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_createdon}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_createdon_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_createdon_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_createdon_fieldblock}
+	{BEGIN modx_site_content_editedby_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_editedby}" data-fieldname="modx_site_content_editedby">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_editedby}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_editedby}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_editedby_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_editedby_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_editedby_fieldblock}
+	{BEGIN modx_site_content_editedon_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_editedon}" data-fieldname="modx_site_content_editedon">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_editedon}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_editedon}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_editedon_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_editedon_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_editedon_fieldblock}
+	{BEGIN modx_site_content_deleted_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_deleted}" data-fieldname="modx_site_content_deleted">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_deleted}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_deleted}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_deleted_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_deleted_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_deleted_fieldblock}
+	{BEGIN modx_site_content_deletedon_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_deletedon}" data-fieldname="modx_site_content_deletedon">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_deletedon}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_deletedon}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_deletedon_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_deletedon_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_deletedon_fieldblock}
+	{BEGIN modx_site_content_deletedby_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_deletedby}" data-fieldname="modx_site_content_deletedby">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_deletedby}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_deletedby}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_deletedby_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_deletedby_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_deletedby_fieldblock}
+	{BEGIN modx_site_content_publishedon_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_publishedon}" data-fieldname="modx_site_content_publishedon">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_publishedon}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_publishedon}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_publishedon_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_publishedon_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_publishedon_fieldblock}
+	{BEGIN modx_site_content_publishedby_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_publishedby}" data-fieldname="modx_site_content_publishedby">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_publishedby}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_publishedby}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_publishedby_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_publishedby_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_publishedby_fieldblock}
+	{BEGIN modx_site_content_menutitle_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_menutitle}" data-fieldname="modx_site_content_menutitle">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_menutitle}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_menutitle}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_menutitle_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_menutitle_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_menutitle_fieldblock}
+	{BEGIN modx_site_content_donthit_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_donthit}" data-fieldname="modx_site_content_donthit">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_donthit}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_donthit}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_donthit_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_donthit_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_donthit_fieldblock}
+	{BEGIN modx_site_content_haskeywords_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_haskeywords}" data-fieldname="modx_site_content_haskeywords">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_haskeywords}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_haskeywords}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_haskeywords_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_haskeywords_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_haskeywords_fieldblock}
+	{BEGIN modx_site_content_hasmetatags_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_hasmetatags}" data-fieldname="modx_site_content_hasmetatags">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_hasmetatags}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_hasmetatags}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_hasmetatags_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_hasmetatags_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_hasmetatags_fieldblock}
+	{BEGIN modx_site_content_privateweb_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_privateweb}" data-fieldname="modx_site_content_privateweb">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_privateweb}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_privateweb}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_privateweb_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_privateweb_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_privateweb_fieldblock}
+	{BEGIN modx_site_content_privatemgr_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_privatemgr}" data-fieldname="modx_site_content_privatemgr">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_privatemgr}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_privatemgr}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_privatemgr_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_privatemgr_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_privatemgr_fieldblock}
+	{BEGIN modx_site_content_content_dispo_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_content_dispo}" data-fieldname="modx_site_content_content_dispo">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_content_dispo}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_content_dispo}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_content_dispo_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_content_dispo_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_content_dispo_fieldblock}
+	{BEGIN modx_site_content_hidemenu_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_hidemenu}" data-fieldname="modx_site_content_hidemenu">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_hidemenu}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_hidemenu}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_hidemenu_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_hidemenu_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_hidemenu_fieldblock}
+	{BEGIN modx_site_content_alias_visible_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_alias_visible}" data-fieldname="modx_site_content_alias_visible">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_alias_visible}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_alias_visible}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_alias_visible_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_alias_visible_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_alias_visible_fieldblock}
+	{BEGIN modx_site_content_modex_site_htmlsnippet_id_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_modex_site_htmlsnippet_id}" data-fieldname="modx_site_content_modex_site_htmlsnippet_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_modex_site_htmlsnippet_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_modex_site_htmlsnippet_id}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_modex_site_htmlsnippet_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_modex_site_htmlsnippet_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_modex_site_htmlsnippet_id_fieldblock}
+	{BEGIN modx_site_content_modx_site_snippet_id_fieldblock}		
+	<div class="container {$fielddispclass_modx_site_content_modx_site_snippet_id}" data-fieldname="modx_site_content_modx_site_snippet_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label Dashboard2 modx_site_content_modx_site_snippet_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_modx_site_content_modx_site_snippet_id}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_modx_site_snippet_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$modx_site_content_modx_site_snippet_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END modx_site_content_modx_site_snippet_id_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>ダッシュボードにもどる</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

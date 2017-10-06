@@ -1,0 +1,105 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel BPMN_PROJECT masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=PRJ_UID]:before {
+		content: "{$label BPMN_PROJECT PRJ_UID}";
+	}
+	.bs-gridcell[data-field=PRJ_NAME]:before {
+		content: "{$label BPMN_PROJECT PRJ_NAME}";
+	}
+	.bs-gridcell[data-field=PRJ_DESCRIPTION]:before {
+		content: "{$label BPMN_PROJECT PRJ_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=PRJ_TARGET_NAMESPACE]:before {
+		content: "{$label BPMN_PROJECT PRJ_TARGET_NAMESPACE}";
+	}
+	.bs-gridcell[data-field=PRJ_EXPRESION_LANGUAGE]:before {
+		content: "{$label BPMN_PROJECT PRJ_EXPRESION_LANGUAGE}";
+	}
+	.bs-gridcell[data-field=PRJ_TYPE_LANGUAGE]:before {
+		content: "{$label BPMN_PROJECT PRJ_TYPE_LANGUAGE}";
+	}
+	.bs-gridcell[data-field=PRJ_EXPORTER]:before {
+		content: "{$label BPMN_PROJECT PRJ_EXPORTER}";
+	}
+	.bs-gridcell[data-field=PRJ_EXPORTER_VERSION]:before {
+		content: "{$label BPMN_PROJECT PRJ_EXPORTER_VERSION}";
+	}
+	.bs-gridcell[data-field=PRJ_CREATE_DATE]:before {
+		content: "{$label BPMN_PROJECT PRJ_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=PRJ_UPDATE_DATE]:before {
+		content: "{$label BPMN_PROJECT PRJ_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=PRJ_AUTHOR]:before {
+		content: "{$label BPMN_PROJECT PRJ_AUTHOR}";
+	}
+	.bs-gridcell[data-field=PRJ_AUTHOR_VERSION]:before {
+		content: "{$label BPMN_PROJECT PRJ_AUTHOR_VERSION}";
+	}
+	.bs-gridcell[data-field=PRJ_ORIGINAL_SOURCE]:before {
+		content: "{$label BPMN_PROJECT PRJ_ORIGINAL_SOURCE}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$PRJ_UID_class}">{$label BPMN_PROJECT PRJ_UID}</th>
+			<th class="{$PRJ_NAME_class}">{$label BPMN_PROJECT PRJ_NAME}</th>
+			<th class="{$PRJ_DESCRIPTION_class}">{$label BPMN_PROJECT PRJ_DESCRIPTION}</th>
+			<th class="{$PRJ_TARGET_NAMESPACE_class}">{$label BPMN_PROJECT PRJ_TARGET_NAMESPACE}</th>
+			<th class="{$PRJ_EXPRESION_LANGUAGE_class}">{$label BPMN_PROJECT PRJ_EXPRESION_LANGUAGE}</th>
+			<th class="{$PRJ_TYPE_LANGUAGE_class}">{$label BPMN_PROJECT PRJ_TYPE_LANGUAGE}</th>
+			<th class="{$PRJ_EXPORTER_class}">{$label BPMN_PROJECT PRJ_EXPORTER}</th>
+			<th class="{$PRJ_EXPORTER_VERSION_class}">{$label BPMN_PROJECT PRJ_EXPORTER_VERSION}</th>
+			<th class="{$PRJ_CREATE_DATE_class}">{$label BPMN_PROJECT PRJ_CREATE_DATE}</th>
+			<th class="{$PRJ_UPDATE_DATE_class}">{$label BPMN_PROJECT PRJ_UPDATE_DATE}</th>
+			<th class="{$PRJ_AUTHOR_class}">{$label BPMN_PROJECT PRJ_AUTHOR}</th>
+			<th class="{$PRJ_AUTHOR_VERSION_class}">{$label BPMN_PROJECT PRJ_AUTHOR_VERSION}</th>
+			<th class="{$PRJ_ORIGINAL_SOURCE_class}">{$label BPMN_PROJECT PRJ_ORIGINAL_SOURCE}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$PRJ_UID_class} bs-gridcell" data-field=PRJ_UID>{$PRJ_UID_mastervalue}</td>
+			<td class="{$PRJ_NAME_class} bs-gridcell" data-field=PRJ_NAME>{$PRJ_NAME_mastervalue}</td>
+			<td class="{$PRJ_DESCRIPTION_class} bs-gridcell" data-field=PRJ_DESCRIPTION>{$PRJ_DESCRIPTION_mastervalue}</td>
+			<td class="{$PRJ_TARGET_NAMESPACE_class} bs-gridcell" data-field=PRJ_TARGET_NAMESPACE>{$PRJ_TARGET_NAMESPACE_mastervalue}</td>
+			<td class="{$PRJ_EXPRESION_LANGUAGE_class} bs-gridcell" data-field=PRJ_EXPRESION_LANGUAGE>{$PRJ_EXPRESION_LANGUAGE_mastervalue}</td>
+			<td class="{$PRJ_TYPE_LANGUAGE_class} bs-gridcell" data-field=PRJ_TYPE_LANGUAGE>{$PRJ_TYPE_LANGUAGE_mastervalue}</td>
+			<td class="{$PRJ_EXPORTER_class} bs-gridcell" data-field=PRJ_EXPORTER>{$PRJ_EXPORTER_mastervalue}</td>
+			<td class="{$PRJ_EXPORTER_VERSION_class} bs-gridcell" data-field=PRJ_EXPORTER_VERSION>{$PRJ_EXPORTER_VERSION_mastervalue}</td>
+			<td class="{$PRJ_CREATE_DATE_class} bs-gridcell" data-field=PRJ_CREATE_DATE>{$PRJ_CREATE_DATE_mastervalue}</td>
+			<td class="{$PRJ_UPDATE_DATE_class} bs-gridcell" data-field=PRJ_UPDATE_DATE>{$PRJ_UPDATE_DATE_mastervalue}</td>
+			<td class="{$PRJ_AUTHOR_class} bs-gridcell" data-field=PRJ_AUTHOR>{$PRJ_AUTHOR_mastervalue}</td>
+			<td class="{$PRJ_AUTHOR_VERSION_class} bs-gridcell" data-field=PRJ_AUTHOR_VERSION>{$PRJ_AUTHOR_VERSION_mastervalue}</td>
+			<td class="{$PRJ_ORIGINAL_SOURCE_class} bs-gridcell" data-field=PRJ_ORIGINAL_SOURCE>{$PRJ_ORIGINAL_SOURCE_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

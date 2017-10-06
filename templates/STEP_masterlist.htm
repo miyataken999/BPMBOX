@@ -1,0 +1,80 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel STEP masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=STEP_UID]:before {
+		content: "{$label STEP STEP_UID}";
+	}
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label STEP PRO_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label STEP TAS_UID}";
+	}
+	.bs-gridcell[data-field=STEP_TYPE_OBJ]:before {
+		content: "{$label STEP STEP_TYPE_OBJ}";
+	}
+	.bs-gridcell[data-field=STEP_UID_OBJ]:before {
+		content: "{$label STEP STEP_UID_OBJ}";
+	}
+	.bs-gridcell[data-field=STEP_CONDITION]:before {
+		content: "{$label STEP STEP_CONDITION}";
+	}
+	.bs-gridcell[data-field=STEP_POSITION]:before {
+		content: "{$label STEP STEP_POSITION}";
+	}
+	.bs-gridcell[data-field=STEP_MODE]:before {
+		content: "{$label STEP STEP_MODE}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$STEP_UID_class}">{$label STEP STEP_UID}</th>
+			<th class="{$PRO_UID_class}">{$label STEP PRO_UID}</th>
+			<th class="{$TAS_UID_class}">{$label STEP TAS_UID}</th>
+			<th class="{$STEP_TYPE_OBJ_class}">{$label STEP STEP_TYPE_OBJ}</th>
+			<th class="{$STEP_UID_OBJ_class}">{$label STEP STEP_UID_OBJ}</th>
+			<th class="{$STEP_CONDITION_class}">{$label STEP STEP_CONDITION}</th>
+			<th class="{$STEP_POSITION_class}">{$label STEP STEP_POSITION}</th>
+			<th class="{$STEP_MODE_class}">{$label STEP STEP_MODE}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$STEP_UID_class} bs-gridcell" data-field=STEP_UID>{$STEP_UID_mastervalue}</td>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$TAS_UID_class} bs-gridcell" data-field=TAS_UID>{$TAS_UID_mastervalue}</td>
+			<td class="{$STEP_TYPE_OBJ_class} bs-gridcell" data-field=STEP_TYPE_OBJ>{$STEP_TYPE_OBJ_mastervalue}</td>
+			<td class="{$STEP_UID_OBJ_class} bs-gridcell" data-field=STEP_UID_OBJ>{$STEP_UID_OBJ_mastervalue}</td>
+			<td class="{$STEP_CONDITION_class} bs-gridcell" data-field=STEP_CONDITION>{$STEP_CONDITION_mastervalue}</td>
+			<td class="{$STEP_POSITION_class} bs-gridcell" data-field=STEP_POSITION>{$STEP_POSITION_mastervalue}</td>
+			<td class="{$STEP_MODE_class} bs-gridcell" data-field=STEP_MODE>{$STEP_MODE_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,547 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PROCESS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label PROCESS PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN PRO_TITLE_fieldheadercolumn}
+			<th class="{$PRO_TITLE_class}" {$PRO_TITLE_style}  data-field="PRO_TITLE">
+				{$label PROCESS PRO_TITLE}
+			</th>
+			{END PRO_TITLE_fieldheadercolumn}
+			{BEGIN PRO_DESCRIPTION_fieldheadercolumn}
+			<th class="{$PRO_DESCRIPTION_class}" {$PRO_DESCRIPTION_style}  data-field="PRO_DESCRIPTION">
+				{$label PROCESS PRO_DESCRIPTION}
+			</th>
+			{END PRO_DESCRIPTION_fieldheadercolumn}
+			{BEGIN PRO_PARENT_fieldheadercolumn}
+			<th class="{$PRO_PARENT_class}" {$PRO_PARENT_style}  data-field="PRO_PARENT">
+				{$label PROCESS PRO_PARENT}
+			</th>
+			{END PRO_PARENT_fieldheadercolumn}
+			{BEGIN PRO_TIME_fieldheadercolumn}
+			<th class="{$PRO_TIME_class}" {$PRO_TIME_style}  data-field="PRO_TIME">
+				{$label PROCESS PRO_TIME}
+			</th>
+			{END PRO_TIME_fieldheadercolumn}
+			{BEGIN PRO_TIMEUNIT_fieldheadercolumn}
+			<th class="{$PRO_TIMEUNIT_class}" {$PRO_TIMEUNIT_style}  data-field="PRO_TIMEUNIT">
+				{$label PROCESS PRO_TIMEUNIT}
+			</th>
+			{END PRO_TIMEUNIT_fieldheadercolumn}
+			{BEGIN PRO_STATUS_fieldheadercolumn}
+			<th class="{$PRO_STATUS_class}" {$PRO_STATUS_style}  data-field="PRO_STATUS">
+				{$label PROCESS PRO_STATUS}
+			</th>
+			{END PRO_STATUS_fieldheadercolumn}
+			{BEGIN PRO_TYPE_DAY_fieldheadercolumn}
+			<th class="{$PRO_TYPE_DAY_class}" {$PRO_TYPE_DAY_style}  data-field="PRO_TYPE_DAY">
+				{$label PROCESS PRO_TYPE_DAY}
+			</th>
+			{END PRO_TYPE_DAY_fieldheadercolumn}
+			{BEGIN PRO_TYPE_fieldheadercolumn}
+			<th class="{$PRO_TYPE_class}" {$PRO_TYPE_style}  data-field="PRO_TYPE">
+				{$label PROCESS PRO_TYPE}
+			</th>
+			{END PRO_TYPE_fieldheadercolumn}
+			{BEGIN PRO_ASSIGNMENT_fieldheadercolumn}
+			<th class="{$PRO_ASSIGNMENT_class}" {$PRO_ASSIGNMENT_style}  data-field="PRO_ASSIGNMENT">
+				{$label PROCESS PRO_ASSIGNMENT}
+			</th>
+			{END PRO_ASSIGNMENT_fieldheadercolumn}
+			{BEGIN PRO_SHOW_MAP_fieldheadercolumn}
+			<th class="{$PRO_SHOW_MAP_class}" {$PRO_SHOW_MAP_style}  data-field="PRO_SHOW_MAP">
+				{$label PROCESS PRO_SHOW_MAP}
+			</th>
+			{END PRO_SHOW_MAP_fieldheadercolumn}
+			{BEGIN PRO_SHOW_MESSAGE_fieldheadercolumn}
+			<th class="{$PRO_SHOW_MESSAGE_class}" {$PRO_SHOW_MESSAGE_style}  data-field="PRO_SHOW_MESSAGE">
+				{$label PROCESS PRO_SHOW_MESSAGE}
+			</th>
+			{END PRO_SHOW_MESSAGE_fieldheadercolumn}
+			{BEGIN PRO_SUBPROCESS_fieldheadercolumn}
+			<th class="{$PRO_SUBPROCESS_class}" {$PRO_SUBPROCESS_style}  data-field="PRO_SUBPROCESS">
+				{$label PROCESS PRO_SUBPROCESS}
+			</th>
+			{END PRO_SUBPROCESS_fieldheadercolumn}
+			{BEGIN PRO_TRI_OPEN_fieldheadercolumn}
+			<th class="{$PRO_TRI_OPEN_class}" {$PRO_TRI_OPEN_style}  data-field="PRO_TRI_OPEN">
+				{$label PROCESS PRO_TRI_OPEN}
+			</th>
+			{END PRO_TRI_OPEN_fieldheadercolumn}
+			{BEGIN PRO_TRI_DELETED_fieldheadercolumn}
+			<th class="{$PRO_TRI_DELETED_class}" {$PRO_TRI_DELETED_style}  data-field="PRO_TRI_DELETED">
+				{$label PROCESS PRO_TRI_DELETED}
+			</th>
+			{END PRO_TRI_DELETED_fieldheadercolumn}
+			{BEGIN PRO_TRI_CANCELED_fieldheadercolumn}
+			<th class="{$PRO_TRI_CANCELED_class}" {$PRO_TRI_CANCELED_style}  data-field="PRO_TRI_CANCELED">
+				{$label PROCESS PRO_TRI_CANCELED}
+			</th>
+			{END PRO_TRI_CANCELED_fieldheadercolumn}
+			{BEGIN PRO_TRI_PAUSED_fieldheadercolumn}
+			<th class="{$PRO_TRI_PAUSED_class}" {$PRO_TRI_PAUSED_style}  data-field="PRO_TRI_PAUSED">
+				{$label PROCESS PRO_TRI_PAUSED}
+			</th>
+			{END PRO_TRI_PAUSED_fieldheadercolumn}
+			{BEGIN PRO_TRI_REASSIGNED_fieldheadercolumn}
+			<th class="{$PRO_TRI_REASSIGNED_class}" {$PRO_TRI_REASSIGNED_style}  data-field="PRO_TRI_REASSIGNED">
+				{$label PROCESS PRO_TRI_REASSIGNED}
+			</th>
+			{END PRO_TRI_REASSIGNED_fieldheadercolumn}
+			{BEGIN PRO_TRI_UNPAUSED_fieldheadercolumn}
+			<th class="{$PRO_TRI_UNPAUSED_class}" {$PRO_TRI_UNPAUSED_style}  data-field="PRO_TRI_UNPAUSED">
+				{$label PROCESS PRO_TRI_UNPAUSED}
+			</th>
+			{END PRO_TRI_UNPAUSED_fieldheadercolumn}
+			{BEGIN PRO_TYPE_PROCESS_fieldheadercolumn}
+			<th class="{$PRO_TYPE_PROCESS_class}" {$PRO_TYPE_PROCESS_style}  data-field="PRO_TYPE_PROCESS">
+				{$label PROCESS PRO_TYPE_PROCESS}
+			</th>
+			{END PRO_TYPE_PROCESS_fieldheadercolumn}
+			{BEGIN PRO_SHOW_DELEGATE_fieldheadercolumn}
+			<th class="{$PRO_SHOW_DELEGATE_class}" {$PRO_SHOW_DELEGATE_style}  data-field="PRO_SHOW_DELEGATE">
+				{$label PROCESS PRO_SHOW_DELEGATE}
+			</th>
+			{END PRO_SHOW_DELEGATE_fieldheadercolumn}
+			{BEGIN PRO_SHOW_DYNAFORM_fieldheadercolumn}
+			<th class="{$PRO_SHOW_DYNAFORM_class}" {$PRO_SHOW_DYNAFORM_style}  data-field="PRO_SHOW_DYNAFORM">
+				{$label PROCESS PRO_SHOW_DYNAFORM}
+			</th>
+			{END PRO_SHOW_DYNAFORM_fieldheadercolumn}
+			{BEGIN PRO_CATEGORY_fieldheadercolumn}
+			<th class="{$PRO_CATEGORY_class}" {$PRO_CATEGORY_style}  data-field="PRO_CATEGORY">
+				{$label PROCESS PRO_CATEGORY}
+			</th>
+			{END PRO_CATEGORY_fieldheadercolumn}
+			{BEGIN PRO_SUB_CATEGORY_fieldheadercolumn}
+			<th class="{$PRO_SUB_CATEGORY_class}" {$PRO_SUB_CATEGORY_style}  data-field="PRO_SUB_CATEGORY">
+				{$label PROCESS PRO_SUB_CATEGORY}
+			</th>
+			{END PRO_SUB_CATEGORY_fieldheadercolumn}
+			{BEGIN PRO_INDUSTRY_fieldheadercolumn}
+			<th class="{$PRO_INDUSTRY_class}" {$PRO_INDUSTRY_style}  data-field="PRO_INDUSTRY">
+				{$label PROCESS PRO_INDUSTRY}
+			</th>
+			{END PRO_INDUSTRY_fieldheadercolumn}
+			{BEGIN PRO_UPDATE_DATE_fieldheadercolumn}
+			<th class="{$PRO_UPDATE_DATE_class}" {$PRO_UPDATE_DATE_style}  data-field="PRO_UPDATE_DATE">
+				{$label PROCESS PRO_UPDATE_DATE}
+			</th>
+			{END PRO_UPDATE_DATE_fieldheadercolumn}
+			{BEGIN PRO_CREATE_DATE_fieldheadercolumn}
+			<th class="{$PRO_CREATE_DATE_class}" {$PRO_CREATE_DATE_style}  data-field="PRO_CREATE_DATE">
+				{$label PROCESS PRO_CREATE_DATE}
+			</th>
+			{END PRO_CREATE_DATE_fieldheadercolumn}
+			{BEGIN PRO_CREATE_USER_fieldheadercolumn}
+			<th class="{$PRO_CREATE_USER_class}" {$PRO_CREATE_USER_style}  data-field="PRO_CREATE_USER">
+				{$label PROCESS PRO_CREATE_USER}
+			</th>
+			{END PRO_CREATE_USER_fieldheadercolumn}
+			{BEGIN PRO_HEIGHT_fieldheadercolumn}
+			<th class="{$PRO_HEIGHT_class}" {$PRO_HEIGHT_style}  data-field="PRO_HEIGHT">
+				{$label PROCESS PRO_HEIGHT}
+			</th>
+			{END PRO_HEIGHT_fieldheadercolumn}
+			{BEGIN PRO_WIDTH_fieldheadercolumn}
+			<th class="{$PRO_WIDTH_class}" {$PRO_WIDTH_style}  data-field="PRO_WIDTH">
+				{$label PROCESS PRO_WIDTH}
+			</th>
+			{END PRO_WIDTH_fieldheadercolumn}
+			{BEGIN PRO_TITLE_X_fieldheadercolumn}
+			<th class="{$PRO_TITLE_X_class}" {$PRO_TITLE_X_style}  data-field="PRO_TITLE_X">
+				{$label PROCESS PRO_TITLE_X}
+			</th>
+			{END PRO_TITLE_X_fieldheadercolumn}
+			{BEGIN PRO_TITLE_Y_fieldheadercolumn}
+			<th class="{$PRO_TITLE_Y_class}" {$PRO_TITLE_Y_style}  data-field="PRO_TITLE_Y">
+				{$label PROCESS PRO_TITLE_Y}
+			</th>
+			{END PRO_TITLE_Y_fieldheadercolumn}
+			{BEGIN PRO_DEBUG_fieldheadercolumn}
+			<th class="{$PRO_DEBUG_class}" {$PRO_DEBUG_style}  data-field="PRO_DEBUG">
+				{$label PROCESS PRO_DEBUG}
+			</th>
+			{END PRO_DEBUG_fieldheadercolumn}
+			{BEGIN PRO_DYNAFORMS_fieldheadercolumn}
+			<th class="{$PRO_DYNAFORMS_class}" {$PRO_DYNAFORMS_style}  data-field="PRO_DYNAFORMS">
+				{$label PROCESS PRO_DYNAFORMS}
+			</th>
+			{END PRO_DYNAFORMS_fieldheadercolumn}
+			{BEGIN PRO_DERIVATION_SCREEN_TPL_fieldheadercolumn}
+			<th class="{$PRO_DERIVATION_SCREEN_TPL_class}" {$PRO_DERIVATION_SCREEN_TPL_style}  data-field="PRO_DERIVATION_SCREEN_TPL">
+				{$label PROCESS PRO_DERIVATION_SCREEN_TPL}
+			</th>
+			{END PRO_DERIVATION_SCREEN_TPL_fieldheadercolumn}
+			{BEGIN PRO_COST_fieldheadercolumn}
+			<th class="{$PRO_COST_class}" {$PRO_COST_style}  data-field="PRO_COST">
+				{$label PROCESS PRO_COST}
+			</th>
+			{END PRO_COST_fieldheadercolumn}
+			{BEGIN PRO_UNIT_COST_fieldheadercolumn}
+			<th class="{$PRO_UNIT_COST_class}" {$PRO_UNIT_COST_style}  data-field="PRO_UNIT_COST">
+				{$label PROCESS PRO_UNIT_COST}
+			</th>
+			{END PRO_UNIT_COST_fieldheadercolumn}
+			{BEGIN PRO_ITEE_fieldheadercolumn}
+			<th class="{$PRO_ITEE_class}" {$PRO_ITEE_style}  data-field="PRO_ITEE">
+				{$label PROCESS PRO_ITEE}
+			</th>
+			{END PRO_ITEE_fieldheadercolumn}
+			{BEGIN PRO_ACTION_DONE_fieldheadercolumn}
+			<th class="{$PRO_ACTION_DONE_class}" {$PRO_ACTION_DONE_style}  data-field="PRO_ACTION_DONE">
+				{$label PROCESS PRO_ACTION_DONE}
+			</th>
+			{END PRO_ACTION_DONE_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN PRO_TITLE_fieldcolumn}
+			<td  class="{$PRO_TITLE_class}" {$PRO_TITLE_style} {$recordattrs}>
+				{$PRO_TITLE_value}
+			</td>
+			{END PRO_TITLE_fieldcolumn}
+			{BEGIN PRO_DESCRIPTION_fieldcolumn}
+			<td  class="{$PRO_DESCRIPTION_class}" {$PRO_DESCRIPTION_style} {$recordattrs}>
+				{$PRO_DESCRIPTION_value}
+			</td>
+			{END PRO_DESCRIPTION_fieldcolumn}
+			{BEGIN PRO_PARENT_fieldcolumn}
+			<td  class="{$PRO_PARENT_class}" {$PRO_PARENT_style} {$recordattrs}>
+				{$PRO_PARENT_value}
+			</td>
+			{END PRO_PARENT_fieldcolumn}
+			{BEGIN PRO_TIME_fieldcolumn}
+			<td  class="{$PRO_TIME_class}" {$PRO_TIME_style} {$recordattrs}>
+				{$PRO_TIME_value}
+			</td>
+			{END PRO_TIME_fieldcolumn}
+			{BEGIN PRO_TIMEUNIT_fieldcolumn}
+			<td  class="{$PRO_TIMEUNIT_class}" {$PRO_TIMEUNIT_style} {$recordattrs}>
+				{$PRO_TIMEUNIT_value}
+			</td>
+			{END PRO_TIMEUNIT_fieldcolumn}
+			{BEGIN PRO_STATUS_fieldcolumn}
+			<td  class="{$PRO_STATUS_class}" {$PRO_STATUS_style} {$recordattrs}>
+				{$PRO_STATUS_value}
+			</td>
+			{END PRO_STATUS_fieldcolumn}
+			{BEGIN PRO_TYPE_DAY_fieldcolumn}
+			<td  class="{$PRO_TYPE_DAY_class}" {$PRO_TYPE_DAY_style} {$recordattrs}>
+				{$PRO_TYPE_DAY_value}
+			</td>
+			{END PRO_TYPE_DAY_fieldcolumn}
+			{BEGIN PRO_TYPE_fieldcolumn}
+			<td  class="{$PRO_TYPE_class}" {$PRO_TYPE_style} {$recordattrs}>
+				{$PRO_TYPE_value}
+			</td>
+			{END PRO_TYPE_fieldcolumn}
+			{BEGIN PRO_ASSIGNMENT_fieldcolumn}
+			<td  class="{$PRO_ASSIGNMENT_class}" {$PRO_ASSIGNMENT_style} {$recordattrs}>
+				{$PRO_ASSIGNMENT_value}
+			</td>
+			{END PRO_ASSIGNMENT_fieldcolumn}
+			{BEGIN PRO_SHOW_MAP_fieldcolumn}
+			<td  class="{$PRO_SHOW_MAP_class}" {$PRO_SHOW_MAP_style} {$recordattrs}>
+				{$PRO_SHOW_MAP_value}
+			</td>
+			{END PRO_SHOW_MAP_fieldcolumn}
+			{BEGIN PRO_SHOW_MESSAGE_fieldcolumn}
+			<td  class="{$PRO_SHOW_MESSAGE_class}" {$PRO_SHOW_MESSAGE_style} {$recordattrs}>
+				{$PRO_SHOW_MESSAGE_value}
+			</td>
+			{END PRO_SHOW_MESSAGE_fieldcolumn}
+			{BEGIN PRO_SUBPROCESS_fieldcolumn}
+			<td  class="{$PRO_SUBPROCESS_class}" {$PRO_SUBPROCESS_style} {$recordattrs}>
+				{$PRO_SUBPROCESS_value}
+			</td>
+			{END PRO_SUBPROCESS_fieldcolumn}
+			{BEGIN PRO_TRI_OPEN_fieldcolumn}
+			<td  class="{$PRO_TRI_OPEN_class}" {$PRO_TRI_OPEN_style} {$recordattrs}>
+				{$PRO_TRI_OPEN_value}
+			</td>
+			{END PRO_TRI_OPEN_fieldcolumn}
+			{BEGIN PRO_TRI_DELETED_fieldcolumn}
+			<td  class="{$PRO_TRI_DELETED_class}" {$PRO_TRI_DELETED_style} {$recordattrs}>
+				{$PRO_TRI_DELETED_value}
+			</td>
+			{END PRO_TRI_DELETED_fieldcolumn}
+			{BEGIN PRO_TRI_CANCELED_fieldcolumn}
+			<td  class="{$PRO_TRI_CANCELED_class}" {$PRO_TRI_CANCELED_style} {$recordattrs}>
+				{$PRO_TRI_CANCELED_value}
+			</td>
+			{END PRO_TRI_CANCELED_fieldcolumn}
+			{BEGIN PRO_TRI_PAUSED_fieldcolumn}
+			<td  class="{$PRO_TRI_PAUSED_class}" {$PRO_TRI_PAUSED_style} {$recordattrs}>
+				{$PRO_TRI_PAUSED_value}
+			</td>
+			{END PRO_TRI_PAUSED_fieldcolumn}
+			{BEGIN PRO_TRI_REASSIGNED_fieldcolumn}
+			<td  class="{$PRO_TRI_REASSIGNED_class}" {$PRO_TRI_REASSIGNED_style} {$recordattrs}>
+				{$PRO_TRI_REASSIGNED_value}
+			</td>
+			{END PRO_TRI_REASSIGNED_fieldcolumn}
+			{BEGIN PRO_TRI_UNPAUSED_fieldcolumn}
+			<td  class="{$PRO_TRI_UNPAUSED_class}" {$PRO_TRI_UNPAUSED_style} {$recordattrs}>
+				{$PRO_TRI_UNPAUSED_value}
+			</td>
+			{END PRO_TRI_UNPAUSED_fieldcolumn}
+			{BEGIN PRO_TYPE_PROCESS_fieldcolumn}
+			<td  class="{$PRO_TYPE_PROCESS_class}" {$PRO_TYPE_PROCESS_style} {$recordattrs}>
+				{$PRO_TYPE_PROCESS_value}
+			</td>
+			{END PRO_TYPE_PROCESS_fieldcolumn}
+			{BEGIN PRO_SHOW_DELEGATE_fieldcolumn}
+			<td  class="{$PRO_SHOW_DELEGATE_class}" {$PRO_SHOW_DELEGATE_style} {$recordattrs}>
+				{$PRO_SHOW_DELEGATE_value}
+			</td>
+			{END PRO_SHOW_DELEGATE_fieldcolumn}
+			{BEGIN PRO_SHOW_DYNAFORM_fieldcolumn}
+			<td  class="{$PRO_SHOW_DYNAFORM_class}" {$PRO_SHOW_DYNAFORM_style} {$recordattrs}>
+				{$PRO_SHOW_DYNAFORM_value}
+			</td>
+			{END PRO_SHOW_DYNAFORM_fieldcolumn}
+			{BEGIN PRO_CATEGORY_fieldcolumn}
+			<td  class="{$PRO_CATEGORY_class}" {$PRO_CATEGORY_style} {$recordattrs}>
+				{$PRO_CATEGORY_value}
+			</td>
+			{END PRO_CATEGORY_fieldcolumn}
+			{BEGIN PRO_SUB_CATEGORY_fieldcolumn}
+			<td  class="{$PRO_SUB_CATEGORY_class}" {$PRO_SUB_CATEGORY_style} {$recordattrs}>
+				{$PRO_SUB_CATEGORY_value}
+			</td>
+			{END PRO_SUB_CATEGORY_fieldcolumn}
+			{BEGIN PRO_INDUSTRY_fieldcolumn}
+			<td  class="{$PRO_INDUSTRY_class}" {$PRO_INDUSTRY_style} {$recordattrs}>
+				{$PRO_INDUSTRY_value}
+			</td>
+			{END PRO_INDUSTRY_fieldcolumn}
+			{BEGIN PRO_UPDATE_DATE_fieldcolumn}
+			<td  class="{$PRO_UPDATE_DATE_class}" {$PRO_UPDATE_DATE_style} {$recordattrs}>
+				{$PRO_UPDATE_DATE_value}
+			</td>
+			{END PRO_UPDATE_DATE_fieldcolumn}
+			{BEGIN PRO_CREATE_DATE_fieldcolumn}
+			<td  class="{$PRO_CREATE_DATE_class}" {$PRO_CREATE_DATE_style} {$recordattrs}>
+				{$PRO_CREATE_DATE_value}
+			</td>
+			{END PRO_CREATE_DATE_fieldcolumn}
+			{BEGIN PRO_CREATE_USER_fieldcolumn}
+			<td  class="{$PRO_CREATE_USER_class}" {$PRO_CREATE_USER_style} {$recordattrs}>
+				{$PRO_CREATE_USER_value}
+			</td>
+			{END PRO_CREATE_USER_fieldcolumn}
+			{BEGIN PRO_HEIGHT_fieldcolumn}
+			<td  class="{$PRO_HEIGHT_class}" {$PRO_HEIGHT_style} {$recordattrs}>
+				{$PRO_HEIGHT_value}
+			</td>
+			{END PRO_HEIGHT_fieldcolumn}
+			{BEGIN PRO_WIDTH_fieldcolumn}
+			<td  class="{$PRO_WIDTH_class}" {$PRO_WIDTH_style} {$recordattrs}>
+				{$PRO_WIDTH_value}
+			</td>
+			{END PRO_WIDTH_fieldcolumn}
+			{BEGIN PRO_TITLE_X_fieldcolumn}
+			<td  class="{$PRO_TITLE_X_class}" {$PRO_TITLE_X_style} {$recordattrs}>
+				{$PRO_TITLE_X_value}
+			</td>
+			{END PRO_TITLE_X_fieldcolumn}
+			{BEGIN PRO_TITLE_Y_fieldcolumn}
+			<td  class="{$PRO_TITLE_Y_class}" {$PRO_TITLE_Y_style} {$recordattrs}>
+				{$PRO_TITLE_Y_value}
+			</td>
+			{END PRO_TITLE_Y_fieldcolumn}
+			{BEGIN PRO_DEBUG_fieldcolumn}
+			<td  class="{$PRO_DEBUG_class}" {$PRO_DEBUG_style} {$recordattrs}>
+				{$PRO_DEBUG_value}
+			</td>
+			{END PRO_DEBUG_fieldcolumn}
+			{BEGIN PRO_DYNAFORMS_fieldcolumn}
+			<td  class="{$PRO_DYNAFORMS_class}" {$PRO_DYNAFORMS_style} {$recordattrs}>
+				{$PRO_DYNAFORMS_value}
+			</td>
+			{END PRO_DYNAFORMS_fieldcolumn}
+			{BEGIN PRO_DERIVATION_SCREEN_TPL_fieldcolumn}
+			<td  class="{$PRO_DERIVATION_SCREEN_TPL_class}" {$PRO_DERIVATION_SCREEN_TPL_style} {$recordattrs}>
+				{$PRO_DERIVATION_SCREEN_TPL_value}
+			</td>
+			{END PRO_DERIVATION_SCREEN_TPL_fieldcolumn}
+			{BEGIN PRO_COST_fieldcolumn}
+			<td  class="{$PRO_COST_class}" {$PRO_COST_style} {$recordattrs}>
+				{$PRO_COST_value}
+			</td>
+			{END PRO_COST_fieldcolumn}
+			{BEGIN PRO_UNIT_COST_fieldcolumn}
+			<td  class="{$PRO_UNIT_COST_class}" {$PRO_UNIT_COST_style} {$recordattrs}>
+				{$PRO_UNIT_COST_value}
+			</td>
+			{END PRO_UNIT_COST_fieldcolumn}
+			{BEGIN PRO_ITEE_fieldcolumn}
+			<td  class="{$PRO_ITEE_class}" {$PRO_ITEE_style} {$recordattrs}>
+				{$PRO_ITEE_value}
+			</td>
+			{END PRO_ITEE_fieldcolumn}
+			{BEGIN PRO_ACTION_DONE_fieldcolumn}
+			<td  class="{$PRO_ACTION_DONE_class}" {$PRO_ACTION_DONE_style} {$recordattrs}>
+				{$PRO_ACTION_DONE_value}
+			</td>
+			{END PRO_ACTION_DONE_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="40">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

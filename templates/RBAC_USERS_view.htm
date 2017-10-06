@@ -1,0 +1,342 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel RBAC_USERS view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN USR_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_UID} bs-viewform-group" data-fieldname="USR_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_UID}">
+			{$label RBAC_USERS USR_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_UID_fieldblock}
+	{BEGIN USR_USERNAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_USERNAME} bs-viewform-group" data-fieldname="USR_USERNAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_USERNAME}">
+			{$label RBAC_USERS USR_USERNAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_USERNAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_USERNAME_fieldblock}
+	{BEGIN USR_PASSWORD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_PASSWORD} bs-viewform-group" data-fieldname="USR_PASSWORD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_PASSWORD}">
+			{$label RBAC_USERS USR_PASSWORD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_PASSWORD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_PASSWORD_fieldblock}
+	{BEGIN USR_FIRSTNAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_FIRSTNAME} bs-viewform-group" data-fieldname="USR_FIRSTNAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_FIRSTNAME}">
+			{$label RBAC_USERS USR_FIRSTNAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_FIRSTNAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_FIRSTNAME_fieldblock}
+	{BEGIN USR_LASTNAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_LASTNAME} bs-viewform-group" data-fieldname="USR_LASTNAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_LASTNAME}">
+			{$label RBAC_USERS USR_LASTNAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_LASTNAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_LASTNAME_fieldblock}
+	{BEGIN USR_EMAIL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_EMAIL} bs-viewform-group" data-fieldname="USR_EMAIL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_EMAIL}">
+			{$label RBAC_USERS USR_EMAIL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_EMAIL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_EMAIL_fieldblock}
+	{BEGIN USR_DUE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_DUE_DATE} bs-viewform-group" data-fieldname="USR_DUE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_DUE_DATE}">
+			{$label RBAC_USERS USR_DUE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_DUE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_DUE_DATE_fieldblock}
+	{BEGIN USR_CREATE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_CREATE_DATE} bs-viewform-group" data-fieldname="USR_CREATE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_CREATE_DATE}">
+			{$label RBAC_USERS USR_CREATE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_CREATE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_CREATE_DATE_fieldblock}
+	{BEGIN USR_UPDATE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_UPDATE_DATE} bs-viewform-group" data-fieldname="USR_UPDATE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_UPDATE_DATE}">
+			{$label RBAC_USERS USR_UPDATE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_UPDATE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_UPDATE_DATE_fieldblock}
+	{BEGIN USR_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_STATUS} bs-viewform-group" data-fieldname="USR_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_STATUS}">
+			{$label RBAC_USERS USR_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_STATUS_fieldblock}
+	{BEGIN USR_AUTH_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_AUTH_TYPE} bs-viewform-group" data-fieldname="USR_AUTH_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_AUTH_TYPE}">
+			{$label RBAC_USERS USR_AUTH_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_AUTH_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_AUTH_TYPE_fieldblock}
+	{BEGIN UID_AUTH_SOURCE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_UID_AUTH_SOURCE} bs-viewform-group" data-fieldname="UID_AUTH_SOURCE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_UID_AUTH_SOURCE}">
+			{$label RBAC_USERS UID_AUTH_SOURCE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$UID_AUTH_SOURCE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END UID_AUTH_SOURCE_fieldblock}
+	{BEGIN USR_AUTH_USER_DN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_AUTH_USER_DN} bs-viewform-group" data-fieldname="USR_AUTH_USER_DN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_AUTH_USER_DN}">
+			{$label RBAC_USERS USR_AUTH_USER_DN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_AUTH_USER_DN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_AUTH_USER_DN_fieldblock}
+	{BEGIN USR_AUTH_SUPERVISOR_DN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_AUTH_SUPERVISOR_DN} bs-viewform-group" data-fieldname="USR_AUTH_SUPERVISOR_DN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_AUTH_SUPERVISOR_DN}">
+			{$label RBAC_USERS USR_AUTH_SUPERVISOR_DN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_AUTH_SUPERVISOR_DN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_AUTH_SUPERVISOR_DN_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

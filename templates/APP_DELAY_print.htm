@@ -1,0 +1,283 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel APP_DELAY print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_DELAY_UID_fieldheadercolumn}
+			<th class="{$APP_DELAY_UID_class}" {$APP_DELAY_UID_style}  data-field="APP_DELAY_UID">
+				{$label APP_DELAY APP_DELAY_UID}
+			</th>
+			{END APP_DELAY_UID_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label APP_DELAY PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label APP_DELAY APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_THREAD_INDEX_fieldheadercolumn}
+			<th class="{$APP_THREAD_INDEX_class}" {$APP_THREAD_INDEX_style}  data-field="APP_THREAD_INDEX">
+				{$label APP_DELAY APP_THREAD_INDEX}
+			</th>
+			{END APP_THREAD_INDEX_fieldheadercolumn}
+			{BEGIN APP_DEL_INDEX_fieldheadercolumn}
+			<th class="{$APP_DEL_INDEX_class}" {$APP_DEL_INDEX_style}  data-field="APP_DEL_INDEX">
+				{$label APP_DELAY APP_DEL_INDEX}
+			</th>
+			{END APP_DEL_INDEX_fieldheadercolumn}
+			{BEGIN APP_TYPE_fieldheadercolumn}
+			<th class="{$APP_TYPE_class}" {$APP_TYPE_style}  data-field="APP_TYPE">
+				{$label APP_DELAY APP_TYPE}
+			</th>
+			{END APP_TYPE_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label APP_DELAY APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN APP_NEXT_TASK_fieldheadercolumn}
+			<th class="{$APP_NEXT_TASK_class}" {$APP_NEXT_TASK_style}  data-field="APP_NEXT_TASK">
+				{$label APP_DELAY APP_NEXT_TASK}
+			</th>
+			{END APP_NEXT_TASK_fieldheadercolumn}
+			{BEGIN APP_DELEGATION_USER_fieldheadercolumn}
+			<th class="{$APP_DELEGATION_USER_class}" {$APP_DELEGATION_USER_style}  data-field="APP_DELEGATION_USER">
+				{$label APP_DELAY APP_DELEGATION_USER}
+			</th>
+			{END APP_DELEGATION_USER_fieldheadercolumn}
+			{BEGIN APP_ENABLE_ACTION_USER_fieldheadercolumn}
+			<th class="{$APP_ENABLE_ACTION_USER_class}" {$APP_ENABLE_ACTION_USER_style}  data-field="APP_ENABLE_ACTION_USER">
+				{$label APP_DELAY APP_ENABLE_ACTION_USER}
+			</th>
+			{END APP_ENABLE_ACTION_USER_fieldheadercolumn}
+			{BEGIN APP_ENABLE_ACTION_DATE_fieldheadercolumn}
+			<th class="{$APP_ENABLE_ACTION_DATE_class}" {$APP_ENABLE_ACTION_DATE_style}  data-field="APP_ENABLE_ACTION_DATE">
+				{$label APP_DELAY APP_ENABLE_ACTION_DATE}
+			</th>
+			{END APP_ENABLE_ACTION_DATE_fieldheadercolumn}
+			{BEGIN APP_DISABLE_ACTION_USER_fieldheadercolumn}
+			<th class="{$APP_DISABLE_ACTION_USER_class}" {$APP_DISABLE_ACTION_USER_style}  data-field="APP_DISABLE_ACTION_USER">
+				{$label APP_DELAY APP_DISABLE_ACTION_USER}
+			</th>
+			{END APP_DISABLE_ACTION_USER_fieldheadercolumn}
+			{BEGIN APP_DISABLE_ACTION_DATE_fieldheadercolumn}
+			<th class="{$APP_DISABLE_ACTION_DATE_class}" {$APP_DISABLE_ACTION_DATE_style}  data-field="APP_DISABLE_ACTION_DATE">
+				{$label APP_DELAY APP_DISABLE_ACTION_DATE}
+			</th>
+			{END APP_DISABLE_ACTION_DATE_fieldheadercolumn}
+			{BEGIN APP_AUTOMATIC_DISABLED_DATE_fieldheadercolumn}
+			<th class="{$APP_AUTOMATIC_DISABLED_DATE_class}" {$APP_AUTOMATIC_DISABLED_DATE_style}  data-field="APP_AUTOMATIC_DISABLED_DATE">
+				{$label APP_DELAY APP_AUTOMATIC_DISABLED_DATE}
+			</th>
+			{END APP_AUTOMATIC_DISABLED_DATE_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_DELAY_UID_fieldcolumn}
+			<td  class="{$APP_DELAY_UID_class}" {$APP_DELAY_UID_style} {$recordattrs}>
+				{$APP_DELAY_UID_value}
+			</td>
+			{END APP_DELAY_UID_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_THREAD_INDEX_fieldcolumn}
+			<td  class="{$APP_THREAD_INDEX_class}" {$APP_THREAD_INDEX_style} {$recordattrs}>
+				{$APP_THREAD_INDEX_value}
+			</td>
+			{END APP_THREAD_INDEX_fieldcolumn}
+			{BEGIN APP_DEL_INDEX_fieldcolumn}
+			<td  class="{$APP_DEL_INDEX_class}" {$APP_DEL_INDEX_style} {$recordattrs}>
+				{$APP_DEL_INDEX_value}
+			</td>
+			{END APP_DEL_INDEX_fieldcolumn}
+			{BEGIN APP_TYPE_fieldcolumn}
+			<td  class="{$APP_TYPE_class}" {$APP_TYPE_style} {$recordattrs}>
+				{$APP_TYPE_value}
+			</td>
+			{END APP_TYPE_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN APP_NEXT_TASK_fieldcolumn}
+			<td  class="{$APP_NEXT_TASK_class}" {$APP_NEXT_TASK_style} {$recordattrs}>
+				{$APP_NEXT_TASK_value}
+			</td>
+			{END APP_NEXT_TASK_fieldcolumn}
+			{BEGIN APP_DELEGATION_USER_fieldcolumn}
+			<td  class="{$APP_DELEGATION_USER_class}" {$APP_DELEGATION_USER_style} {$recordattrs}>
+				{$APP_DELEGATION_USER_value}
+			</td>
+			{END APP_DELEGATION_USER_fieldcolumn}
+			{BEGIN APP_ENABLE_ACTION_USER_fieldcolumn}
+			<td  class="{$APP_ENABLE_ACTION_USER_class}" {$APP_ENABLE_ACTION_USER_style} {$recordattrs}>
+				{$APP_ENABLE_ACTION_USER_value}
+			</td>
+			{END APP_ENABLE_ACTION_USER_fieldcolumn}
+			{BEGIN APP_ENABLE_ACTION_DATE_fieldcolumn}
+			<td  class="{$APP_ENABLE_ACTION_DATE_class}" {$APP_ENABLE_ACTION_DATE_style} {$recordattrs}>
+				{$APP_ENABLE_ACTION_DATE_value}
+			</td>
+			{END APP_ENABLE_ACTION_DATE_fieldcolumn}
+			{BEGIN APP_DISABLE_ACTION_USER_fieldcolumn}
+			<td  class="{$APP_DISABLE_ACTION_USER_class}" {$APP_DISABLE_ACTION_USER_style} {$recordattrs}>
+				{$APP_DISABLE_ACTION_USER_value}
+			</td>
+			{END APP_DISABLE_ACTION_USER_fieldcolumn}
+			{BEGIN APP_DISABLE_ACTION_DATE_fieldcolumn}
+			<td  class="{$APP_DISABLE_ACTION_DATE_class}" {$APP_DISABLE_ACTION_DATE_style} {$recordattrs}>
+				{$APP_DISABLE_ACTION_DATE_value}
+			</td>
+			{END APP_DISABLE_ACTION_DATE_fieldcolumn}
+			{BEGIN APP_AUTOMATIC_DISABLED_DATE_fieldcolumn}
+			<td  class="{$APP_AUTOMATIC_DISABLED_DATE_class}" {$APP_AUTOMATIC_DISABLED_DATE_style} {$recordattrs}>
+				{$APP_AUTOMATIC_DISABLED_DATE_value}
+			</td>
+			{END APP_AUTOMATIC_DISABLED_DATE_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

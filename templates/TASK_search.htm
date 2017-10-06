@@ -1,0 +1,1124 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel TASK search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}		
+	<div class="container {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_UID}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_UID_fieldblock}
+	{BEGIN TAS_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TITLE}" data-fieldname="TAS_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TITLE_fieldblock}
+	{BEGIN TAS_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DESCRIPTION}" data-fieldname="TAS_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DESCRIPTION_fieldblock}
+	{BEGIN TAS_DEF_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DEF_TITLE}" data-fieldname="TAS_DEF_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DEF_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DEF_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DEF_TITLE_fieldblock}
+	{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DEF_SUBJECT_MESSAGE}" data-fieldname="TAS_DEF_SUBJECT_MESSAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DEF_SUBJECT_MESSAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DEF_SUBJECT_MESSAGE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_SUBJECT_MESSAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_SUBJECT_MESSAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DEF_SUBJECT_MESSAGE_fieldblock}
+	{BEGIN TAS_DEF_PROC_CODE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DEF_PROC_CODE}" data-fieldname="TAS_DEF_PROC_CODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DEF_PROC_CODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DEF_PROC_CODE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_PROC_CODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_PROC_CODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DEF_PROC_CODE_fieldblock}
+	{BEGIN TAS_DEF_MESSAGE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DEF_MESSAGE}" data-fieldname="TAS_DEF_MESSAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DEF_MESSAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DEF_MESSAGE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_MESSAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_MESSAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DEF_MESSAGE_fieldblock}
+	{BEGIN TAS_DEF_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DEF_DESCRIPTION}" data-fieldname="TAS_DEF_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DEF_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DEF_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DEF_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DEF_DESCRIPTION_fieldblock}
+	{BEGIN TAS_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TYPE}" data-fieldname="TAS_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TYPE_fieldblock}
+	{BEGIN TAS_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DURATION}" data-fieldname="TAS_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DURATION_fieldblock}
+	{BEGIN TAS_DELAY_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DELAY_TYPE}" data-fieldname="TAS_DELAY_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DELAY_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DELAY_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DELAY_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DELAY_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DELAY_TYPE_fieldblock}
+	{BEGIN TAS_TEMPORIZER_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TEMPORIZER}" data-fieldname="TAS_TEMPORIZER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TEMPORIZER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TEMPORIZER}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TEMPORIZER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TEMPORIZER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TEMPORIZER_fieldblock}
+	{BEGIN TAS_TYPE_DAY_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TYPE_DAY}" data-fieldname="TAS_TYPE_DAY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TYPE_DAY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TYPE_DAY}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TYPE_DAY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TYPE_DAY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TYPE_DAY_fieldblock}
+	{BEGIN TAS_TIMEUNIT_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TIMEUNIT}" data-fieldname="TAS_TIMEUNIT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TIMEUNIT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TIMEUNIT}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TIMEUNIT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TIMEUNIT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TIMEUNIT_fieldblock}
+	{BEGIN TAS_ALERT_fieldblock}		
+	<div class="container {$fielddispclass_TAS_ALERT}" data-fieldname="TAS_ALERT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_ALERT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_ALERT}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ALERT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ALERT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_ALERT_fieldblock}
+	{BEGIN TAS_PRIORITY_VARIABLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_PRIORITY_VARIABLE}" data-fieldname="TAS_PRIORITY_VARIABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_PRIORITY_VARIABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_PRIORITY_VARIABLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_PRIORITY_VARIABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_PRIORITY_VARIABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_PRIORITY_VARIABLE_fieldblock}
+	{BEGIN TAS_ASSIGN_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_ASSIGN_TYPE}" data-fieldname="TAS_ASSIGN_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_ASSIGN_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_ASSIGN_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_ASSIGN_TYPE_fieldblock}
+	{BEGIN TAS_ASSIGN_VARIABLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_ASSIGN_VARIABLE}" data-fieldname="TAS_ASSIGN_VARIABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_ASSIGN_VARIABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_ASSIGN_VARIABLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_VARIABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_VARIABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_ASSIGN_VARIABLE_fieldblock}
+	{BEGIN TAS_GROUP_VARIABLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_GROUP_VARIABLE}" data-fieldname="TAS_GROUP_VARIABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_GROUP_VARIABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_GROUP_VARIABLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_GROUP_VARIABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_GROUP_VARIABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_GROUP_VARIABLE_fieldblock}
+	{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_MI_INSTANCE_VARIABLE}" data-fieldname="TAS_MI_INSTANCE_VARIABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_MI_INSTANCE_VARIABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_MI_INSTANCE_VARIABLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_MI_INSTANCE_VARIABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_MI_INSTANCE_VARIABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_MI_INSTANCE_VARIABLE_fieldblock}
+	{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_MI_COMPLETE_VARIABLE}" data-fieldname="TAS_MI_COMPLETE_VARIABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_MI_COMPLETE_VARIABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_MI_COMPLETE_VARIABLE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_MI_COMPLETE_VARIABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_MI_COMPLETE_VARIABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_MI_COMPLETE_VARIABLE_fieldblock}
+	{BEGIN TAS_ASSIGN_LOCATION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_ASSIGN_LOCATION}" data-fieldname="TAS_ASSIGN_LOCATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_ASSIGN_LOCATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_ASSIGN_LOCATION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_LOCATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_LOCATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_ASSIGN_LOCATION_fieldblock}
+	{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldblock}		
+	<div class="container {$fielddispclass_TAS_ASSIGN_LOCATION_ADHOC}" data-fieldname="TAS_ASSIGN_LOCATION_ADHOC">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_ASSIGN_LOCATION_ADHOC}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_ASSIGN_LOCATION_ADHOC}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_LOCATION_ADHOC_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_ASSIGN_LOCATION_ADHOC_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_ASSIGN_LOCATION_ADHOC_fieldblock}
+	{BEGIN TAS_TRANSFER_FLY_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TRANSFER_FLY}" data-fieldname="TAS_TRANSFER_FLY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TRANSFER_FLY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TRANSFER_FLY}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TRANSFER_FLY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TRANSFER_FLY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TRANSFER_FLY_fieldblock}
+	{BEGIN TAS_LAST_ASSIGNED_fieldblock}		
+	<div class="container {$fielddispclass_TAS_LAST_ASSIGNED}" data-fieldname="TAS_LAST_ASSIGNED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_LAST_ASSIGNED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_LAST_ASSIGNED}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_LAST_ASSIGNED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_LAST_ASSIGNED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_LAST_ASSIGNED_fieldblock}
+	{BEGIN TAS_USER_fieldblock}		
+	<div class="container {$fielddispclass_TAS_USER}" data-fieldname="TAS_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_USER}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_USER_fieldblock}
+	{BEGIN TAS_CAN_UPLOAD_fieldblock}		
+	<div class="container {$fielddispclass_TAS_CAN_UPLOAD}" data-fieldname="TAS_CAN_UPLOAD">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_CAN_UPLOAD}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_CAN_UPLOAD}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_UPLOAD_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_UPLOAD_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_CAN_UPLOAD_fieldblock}
+	{BEGIN TAS_VIEW_UPLOAD_fieldblock}		
+	<div class="container {$fielddispclass_TAS_VIEW_UPLOAD}" data-fieldname="TAS_VIEW_UPLOAD">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_VIEW_UPLOAD}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_VIEW_UPLOAD}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_VIEW_UPLOAD_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_VIEW_UPLOAD_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_VIEW_UPLOAD_fieldblock}
+	{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_VIEW_ADDITIONAL_DOCUMENTATION}" data-fieldname="TAS_VIEW_ADDITIONAL_DOCUMENTATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_VIEW_ADDITIONAL_DOCUMENTATION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldblock}
+	{BEGIN TAS_CAN_CANCEL_fieldblock}		
+	<div class="container {$fielddispclass_TAS_CAN_CANCEL}" data-fieldname="TAS_CAN_CANCEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_CAN_CANCEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_CAN_CANCEL}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_CANCEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_CANCEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_CAN_CANCEL_fieldblock}
+	{BEGIN TAS_OWNER_APP_fieldblock}		
+	<div class="container {$fielddispclass_TAS_OWNER_APP}" data-fieldname="TAS_OWNER_APP">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_OWNER_APP}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_OWNER_APP}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_OWNER_APP_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_OWNER_APP_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_OWNER_APP_fieldblock}
+	{BEGIN STG_UID_fieldblock}		
+	<div class="container {$fielddispclass_STG_UID}" data-fieldname="STG_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK STG_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_STG_UID}
+			</div>
+			<div class="col-md-4" >
+				{$STG_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$STG_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END STG_UID_fieldblock}
+	{BEGIN TAS_CAN_PAUSE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_CAN_PAUSE}" data-fieldname="TAS_CAN_PAUSE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_CAN_PAUSE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_CAN_PAUSE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_PAUSE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_PAUSE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_CAN_PAUSE_fieldblock}
+	{BEGIN TAS_CAN_SEND_MESSAGE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_CAN_SEND_MESSAGE}" data-fieldname="TAS_CAN_SEND_MESSAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_CAN_SEND_MESSAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_CAN_SEND_MESSAGE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_SEND_MESSAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_SEND_MESSAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_CAN_SEND_MESSAGE_fieldblock}
+	{BEGIN TAS_CAN_DELETE_DOCS_fieldblock}		
+	<div class="container {$fielddispclass_TAS_CAN_DELETE_DOCS}" data-fieldname="TAS_CAN_DELETE_DOCS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_CAN_DELETE_DOCS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_CAN_DELETE_DOCS}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_DELETE_DOCS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_CAN_DELETE_DOCS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_CAN_DELETE_DOCS_fieldblock}
+	{BEGIN TAS_SELF_SERVICE_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SELF_SERVICE}" data-fieldname="TAS_SELF_SERVICE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SELF_SERVICE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SELF_SERVICE}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELF_SERVICE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELF_SERVICE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SELF_SERVICE_fieldblock}
+	{BEGIN TAS_START_fieldblock}		
+	<div class="container {$fielddispclass_TAS_START}" data-fieldname="TAS_START">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_START}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_START}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_START_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_START_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_START_fieldblock}
+	{BEGIN TAS_TO_LAST_USER_fieldblock}		
+	<div class="container {$fielddispclass_TAS_TO_LAST_USER}" data-fieldname="TAS_TO_LAST_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_TO_LAST_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_TO_LAST_USER}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TO_LAST_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_TO_LAST_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_TO_LAST_USER_fieldblock}
+	{BEGIN TAS_SEND_LAST_EMAIL_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SEND_LAST_EMAIL}" data-fieldname="TAS_SEND_LAST_EMAIL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SEND_LAST_EMAIL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SEND_LAST_EMAIL}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SEND_LAST_EMAIL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SEND_LAST_EMAIL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SEND_LAST_EMAIL_fieldblock}
+	{BEGIN TAS_DERIVATION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DERIVATION}" data-fieldname="TAS_DERIVATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DERIVATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DERIVATION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DERIVATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DERIVATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DERIVATION_fieldblock}
+	{BEGIN TAS_POSX_fieldblock}		
+	<div class="container {$fielddispclass_TAS_POSX}" data-fieldname="TAS_POSX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_POSX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_POSX}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_POSX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_POSX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_POSX_fieldblock}
+	{BEGIN TAS_POSY_fieldblock}		
+	<div class="container {$fielddispclass_TAS_POSY}" data-fieldname="TAS_POSY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_POSY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_POSY}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_POSY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_POSY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_POSY_fieldblock}
+	{BEGIN TAS_WIDTH_fieldblock}		
+	<div class="container {$fielddispclass_TAS_WIDTH}" data-fieldname="TAS_WIDTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_WIDTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_WIDTH}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_WIDTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_WIDTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_WIDTH_fieldblock}
+	{BEGIN TAS_HEIGHT_fieldblock}		
+	<div class="container {$fielddispclass_TAS_HEIGHT}" data-fieldname="TAS_HEIGHT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_HEIGHT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_HEIGHT}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_HEIGHT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_HEIGHT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_HEIGHT_fieldblock}
+	{BEGIN TAS_COLOR_fieldblock}		
+	<div class="container {$fielddispclass_TAS_COLOR}" data-fieldname="TAS_COLOR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_COLOR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_COLOR}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_COLOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_COLOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_COLOR_fieldblock}
+	{BEGIN TAS_EVN_UID_fieldblock}		
+	<div class="container {$fielddispclass_TAS_EVN_UID}" data-fieldname="TAS_EVN_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_EVN_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_EVN_UID}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_EVN_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_EVN_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_EVN_UID_fieldblock}
+	{BEGIN TAS_BOUNDARY_fieldblock}		
+	<div class="container {$fielddispclass_TAS_BOUNDARY}" data-fieldname="TAS_BOUNDARY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_BOUNDARY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_BOUNDARY}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_BOUNDARY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_BOUNDARY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_BOUNDARY_fieldblock}
+	{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldblock}		
+	<div class="container {$fielddispclass_TAS_DERIVATION_SCREEN_TPL}" data-fieldname="TAS_DERIVATION_SCREEN_TPL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_DERIVATION_SCREEN_TPL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_DERIVATION_SCREEN_TPL}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DERIVATION_SCREEN_TPL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_DERIVATION_SCREEN_TPL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_DERIVATION_SCREEN_TPL_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SELFSERVICE_TIMEOUT}" data-fieldname="TAS_SELFSERVICE_TIMEOUT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SELFSERVICE_TIMEOUT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SELFSERVICE_TIMEOUT}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TIMEOUT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TIMEOUT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SELFSERVICE_TIMEOUT_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TIME_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SELFSERVICE_TIME}" data-fieldname="TAS_SELFSERVICE_TIME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SELFSERVICE_TIME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SELFSERVICE_TIME}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TIME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TIME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SELFSERVICE_TIME_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SELFSERVICE_TIME_UNIT}" data-fieldname="TAS_SELFSERVICE_TIME_UNIT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SELFSERVICE_TIME_UNIT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SELFSERVICE_TIME_UNIT}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TIME_UNIT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TIME_UNIT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SELFSERVICE_TIME_UNIT_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SELFSERVICE_TRIGGER_UID}" data-fieldname="TAS_SELFSERVICE_TRIGGER_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SELFSERVICE_TRIGGER_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SELFSERVICE_TRIGGER_UID}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TRIGGER_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_TRIGGER_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SELFSERVICE_TRIGGER_UID_fieldblock}
+	{BEGIN TAS_SELFSERVICE_EXECUTION_fieldblock}		
+	<div class="container {$fielddispclass_TAS_SELFSERVICE_EXECUTION}" data-fieldname="TAS_SELFSERVICE_EXECUTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_SELFSERVICE_EXECUTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_SELFSERVICE_EXECUTION}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_EXECUTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_SELFSERVICE_EXECUTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_SELFSERVICE_EXECUTION_fieldblock}
+	{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldblock}		
+	<div class="container {$fielddispclass_TAS_NOT_EMAIL_FROM_FORMAT}" data-fieldname="TAS_NOT_EMAIL_FROM_FORMAT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_NOT_EMAIL_FROM_FORMAT}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_NOT_EMAIL_FROM_FORMAT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_NOT_EMAIL_FROM_FORMAT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_NOT_EMAIL_FROM_FORMAT_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

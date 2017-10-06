@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel DIM_TIME_DELEGATE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN TIME_ID_fieldheadercolumn}
+			<th class="{$TIME_ID_class}" {$TIME_ID_style}  data-field="TIME_ID">
+				{$label DIM_TIME_DELEGATE TIME_ID}
+			</th>
+			{END TIME_ID_fieldheadercolumn}
+			{BEGIN MONTH_ID_fieldheadercolumn}
+			<th class="{$MONTH_ID_class}" {$MONTH_ID_style}  data-field="MONTH_ID">
+				{$label DIM_TIME_DELEGATE MONTH_ID}
+			</th>
+			{END MONTH_ID_fieldheadercolumn}
+			{BEGIN QTR_ID_fieldheadercolumn}
+			<th class="{$QTR_ID_class}" {$QTR_ID_style}  data-field="QTR_ID">
+				{$label DIM_TIME_DELEGATE QTR_ID}
+			</th>
+			{END QTR_ID_fieldheadercolumn}
+			{BEGIN YEAR_ID_fieldheadercolumn}
+			<th class="{$YEAR_ID_class}" {$YEAR_ID_style}  data-field="YEAR_ID">
+				{$label DIM_TIME_DELEGATE YEAR_ID}
+			</th>
+			{END YEAR_ID_fieldheadercolumn}
+			{BEGIN MONTH_NAME_fieldheadercolumn}
+			<th class="{$MONTH_NAME_class}" {$MONTH_NAME_style}  data-field="MONTH_NAME">
+				{$label DIM_TIME_DELEGATE MONTH_NAME}
+			</th>
+			{END MONTH_NAME_fieldheadercolumn}
+			{BEGIN MONTH_DESC_fieldheadercolumn}
+			<th class="{$MONTH_DESC_class}" {$MONTH_DESC_style}  data-field="MONTH_DESC">
+				{$label DIM_TIME_DELEGATE MONTH_DESC}
+			</th>
+			{END MONTH_DESC_fieldheadercolumn}
+			{BEGIN QTR_NAME_fieldheadercolumn}
+			<th class="{$QTR_NAME_class}" {$QTR_NAME_style}  data-field="QTR_NAME">
+				{$label DIM_TIME_DELEGATE QTR_NAME}
+			</th>
+			{END QTR_NAME_fieldheadercolumn}
+			{BEGIN QTR_DESC_fieldheadercolumn}
+			<th class="{$QTR_DESC_class}" {$QTR_DESC_style}  data-field="QTR_DESC">
+				{$label DIM_TIME_DELEGATE QTR_DESC}
+			</th>
+			{END QTR_DESC_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN TIME_ID_fieldcolumn}
+			<td  class="{$TIME_ID_class}" {$TIME_ID_style} {$recordattrs}>
+				{$TIME_ID_value}
+			</td>
+			{END TIME_ID_fieldcolumn}
+			{BEGIN MONTH_ID_fieldcolumn}
+			<td  class="{$MONTH_ID_class}" {$MONTH_ID_style} {$recordattrs}>
+				{$MONTH_ID_value}
+			</td>
+			{END MONTH_ID_fieldcolumn}
+			{BEGIN QTR_ID_fieldcolumn}
+			<td  class="{$QTR_ID_class}" {$QTR_ID_style} {$recordattrs}>
+				{$QTR_ID_value}
+			</td>
+			{END QTR_ID_fieldcolumn}
+			{BEGIN YEAR_ID_fieldcolumn}
+			<td  class="{$YEAR_ID_class}" {$YEAR_ID_style} {$recordattrs}>
+				{$YEAR_ID_value}
+			</td>
+			{END YEAR_ID_fieldcolumn}
+			{BEGIN MONTH_NAME_fieldcolumn}
+			<td  class="{$MONTH_NAME_class}" {$MONTH_NAME_style} {$recordattrs}>
+				{$MONTH_NAME_value}
+			</td>
+			{END MONTH_NAME_fieldcolumn}
+			{BEGIN MONTH_DESC_fieldcolumn}
+			<td  class="{$MONTH_DESC_class}" {$MONTH_DESC_style} {$recordattrs}>
+				{$MONTH_DESC_value}
+			</td>
+			{END MONTH_DESC_fieldcolumn}
+			{BEGIN QTR_NAME_fieldcolumn}
+			<td  class="{$QTR_NAME_class}" {$QTR_NAME_style} {$recordattrs}>
+				{$QTR_NAME_value}
+			</td>
+			{END QTR_NAME_fieldcolumn}
+			{BEGIN QTR_DESC_fieldcolumn}
+			<td  class="{$QTR_DESC_class}" {$QTR_DESC_style} {$recordattrs}>
+				{$QTR_DESC_value}
+			</td>
+			{END QTR_DESC_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,527 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel INPUT_DOCUMENT edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN INP_DOC_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_UID}" data-fieldname="INP_DOC_UID" data-signal-error-for="INP_DOC_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_UID}">
+		{BEGIN INP_DOC_UID_label}{$label INPUT_DOCUMENT INP_DOC_UID}{END INP_DOC_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_UID">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label INPUT_DOCUMENT PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN INP_DOC_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_TITLE}" data-fieldname="INP_DOC_TITLE" data-signal-error-for="INP_DOC_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_TITLE}">
+		{BEGIN INP_DOC_TITLE_label}{$label INPUT_DOCUMENT INP_DOC_TITLE}{END INP_DOC_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_TITLE">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_TITLE_fieldblock}
+
+			{BEGIN INP_DOC_DESCRIPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_DESCRIPTION}" data-fieldname="INP_DOC_DESCRIPTION" data-signal-error-for="INP_DOC_DESCRIPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_DESCRIPTION}">
+		{BEGIN INP_DOC_DESCRIPTION_label}{$label INPUT_DOCUMENT INP_DOC_DESCRIPTION}{END INP_DOC_DESCRIPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_DESCRIPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_DESCRIPTION">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_DESCRIPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_DESCRIPTION_fieldblock}
+
+			{BEGIN INP_DOC_FORM_NEEDED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_FORM_NEEDED}" data-fieldname="INP_DOC_FORM_NEEDED" data-signal-error-for="INP_DOC_FORM_NEEDED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_FORM_NEEDED}">
+		{BEGIN INP_DOC_FORM_NEEDED_label}{$label INPUT_DOCUMENT INP_DOC_FORM_NEEDED}{END INP_DOC_FORM_NEEDED_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_FORM_NEEDED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_FORM_NEEDED">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_FORM_NEEDED}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_FORM_NEEDED_fieldblock}
+
+			{BEGIN INP_DOC_ORIGINAL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_ORIGINAL}" data-fieldname="INP_DOC_ORIGINAL" data-signal-error-for="INP_DOC_ORIGINAL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_ORIGINAL}">
+		{BEGIN INP_DOC_ORIGINAL_label}{$label INPUT_DOCUMENT INP_DOC_ORIGINAL}{END INP_DOC_ORIGINAL_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_ORIGINAL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_ORIGINAL">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_ORIGINAL}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_ORIGINAL_fieldblock}
+
+			{BEGIN INP_DOC_PUBLISHED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_PUBLISHED}" data-fieldname="INP_DOC_PUBLISHED" data-signal-error-for="INP_DOC_PUBLISHED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_PUBLISHED}">
+		{BEGIN INP_DOC_PUBLISHED_label}{$label INPUT_DOCUMENT INP_DOC_PUBLISHED}{END INP_DOC_PUBLISHED_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_PUBLISHED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_PUBLISHED">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_PUBLISHED}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_PUBLISHED_fieldblock}
+
+			{BEGIN INP_DOC_VERSIONING_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_VERSIONING}" data-fieldname="INP_DOC_VERSIONING" data-signal-error-for="INP_DOC_VERSIONING{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_VERSIONING}">
+		{BEGIN INP_DOC_VERSIONING_label}{$label INPUT_DOCUMENT INP_DOC_VERSIONING}{END INP_DOC_VERSIONING_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_VERSIONING_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_VERSIONING">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_VERSIONING}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_VERSIONING_fieldblock}
+
+			{BEGIN INP_DOC_DESTINATION_PATH_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_DESTINATION_PATH}" data-fieldname="INP_DOC_DESTINATION_PATH" data-signal-error-for="INP_DOC_DESTINATION_PATH{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_DESTINATION_PATH}">
+		{BEGIN INP_DOC_DESTINATION_PATH_label}{$label INPUT_DOCUMENT INP_DOC_DESTINATION_PATH}{END INP_DOC_DESTINATION_PATH_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_DESTINATION_PATH_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_DESTINATION_PATH">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_DESTINATION_PATH}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_DESTINATION_PATH_fieldblock}
+
+			{BEGIN INP_DOC_TAGS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_TAGS}" data-fieldname="INP_DOC_TAGS" data-signal-error-for="INP_DOC_TAGS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_TAGS}">
+		{BEGIN INP_DOC_TAGS_label}{$label INPUT_DOCUMENT INP_DOC_TAGS}{END INP_DOC_TAGS_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_TAGS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_TAGS">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_TAGS}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_TAGS_fieldblock}
+
+			{BEGIN INP_DOC_TYPE_FILE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_TYPE_FILE}" data-fieldname="INP_DOC_TYPE_FILE" data-signal-error-for="INP_DOC_TYPE_FILE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_TYPE_FILE}">
+		{BEGIN INP_DOC_TYPE_FILE_label}{$label INPUT_DOCUMENT INP_DOC_TYPE_FILE}{END INP_DOC_TYPE_FILE_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_TYPE_FILE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_TYPE_FILE">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_TYPE_FILE}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_TYPE_FILE_fieldblock}
+
+			{BEGIN INP_DOC_MAX_FILESIZE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_MAX_FILESIZE}" data-fieldname="INP_DOC_MAX_FILESIZE" data-signal-error-for="INP_DOC_MAX_FILESIZE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_MAX_FILESIZE}">
+		{BEGIN INP_DOC_MAX_FILESIZE_label}{$label INPUT_DOCUMENT INP_DOC_MAX_FILESIZE}{END INP_DOC_MAX_FILESIZE_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_MAX_FILESIZE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_MAX_FILESIZE">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_MAX_FILESIZE}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_MAX_FILESIZE_fieldblock}
+
+			{BEGIN INP_DOC_MAX_FILESIZE_UNIT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_INP_DOC_MAX_FILESIZE_UNIT}" data-fieldname="INP_DOC_MAX_FILESIZE_UNIT" data-signal-error-for="INP_DOC_MAX_FILESIZE_UNIT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_INP_DOC_MAX_FILESIZE_UNIT}">
+		{BEGIN INP_DOC_MAX_FILESIZE_UNIT_label}{$label INPUT_DOCUMENT INP_DOC_MAX_FILESIZE_UNIT}{END INP_DOC_MAX_FILESIZE_UNIT_label}
+	</label>
+	<div class="col-md-6" >
+		{$INP_DOC_MAX_FILESIZE_UNIT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="INP_DOC_MAX_FILESIZE_UNIT">
+		<div class="text-muted" >
+		{$tooltip INPUT_DOCUMENT INP_DOC_MAX_FILESIZE_UNIT}
+		</div>
+	</div>
+</div>
+</div>
+{END INP_DOC_MAX_FILESIZE_UNIT_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

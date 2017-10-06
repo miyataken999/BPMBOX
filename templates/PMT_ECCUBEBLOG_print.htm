@@ -1,0 +1,732 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_ECCUBEBLOG print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_ECCUBEBLOG APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label PMT_ECCUBEBLOG APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label PMT_ECCUBEBLOG APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN BLOC_ID_fieldheadercolumn}
+			<th class="{$BLOC_ID_class}" {$BLOC_ID_style}  data-field="BLOC_ID">
+				{$label PMT_ECCUBEBLOG BLOC_ID}
+			</th>
+			{END BLOC_ID_fieldheadercolumn}
+			{BEGIN BLOC_ID_LABEL_fieldheadercolumn}
+			<th class="{$BLOC_ID_LABEL_class}" {$BLOC_ID_LABEL_style}  data-field="BLOC_ID_LABEL">
+				{$label PMT_ECCUBEBLOG BLOC_ID_LABEL}
+			</th>
+			{END BLOC_ID_LABEL_fieldheadercolumn}
+			{BEGIN BLOC_NAME_fieldheadercolumn}
+			<th class="{$BLOC_NAME_class}" {$BLOC_NAME_style}  data-field="BLOC_NAME">
+				{$label PMT_ECCUBEBLOG BLOC_NAME}
+			</th>
+			{END BLOC_NAME_fieldheadercolumn}
+			{BEGIN BLOC_NAME_LABEL_fieldheadercolumn}
+			<th class="{$BLOC_NAME_LABEL_class}" {$BLOC_NAME_LABEL_style}  data-field="BLOC_NAME_LABEL">
+				{$label PMT_ECCUBEBLOG BLOC_NAME_LABEL}
+			</th>
+			{END BLOC_NAME_LABEL_fieldheadercolumn}
+			{BEGIN APPLICATION_fieldheadercolumn}
+			<th class="{$APPLICATION_class}" {$APPLICATION_style}  data-field="APPLICATION">
+				{$label PMT_ECCUBEBLOG APPLICATION}
+			</th>
+			{END APPLICATION_fieldheadercolumn}
+			{BEGIN APPLICATION_LABEL_fieldheadercolumn}
+			<th class="{$APPLICATION_LABEL_class}" {$APPLICATION_LABEL_style}  data-field="APPLICATION_LABEL">
+				{$label PMT_ECCUBEBLOG APPLICATION_LABEL}
+			</th>
+			{END APPLICATION_LABEL_fieldheadercolumn}
+			{BEGIN PROCESS_fieldheadercolumn}
+			<th class="{$PROCESS_class}" {$PROCESS_style}  data-field="PROCESS">
+				{$label PMT_ECCUBEBLOG PROCESS}
+			</th>
+			{END PROCESS_fieldheadercolumn}
+			{BEGIN PROCESS_LABEL_fieldheadercolumn}
+			<th class="{$PROCESS_LABEL_class}" {$PROCESS_LABEL_style}  data-field="PROCESS_LABEL">
+				{$label PMT_ECCUBEBLOG PROCESS_LABEL}
+			</th>
+			{END PROCESS_LABEL_fieldheadercolumn}
+			{BEGIN CHECKBOXVAR001_fieldheadercolumn}
+			<th class="{$CHECKBOXVAR001_class}" {$CHECKBOXVAR001_style}  data-field="CHECKBOXVAR001">
+				{$label PMT_ECCUBEBLOG CHECKBOXVAR001}
+			</th>
+			{END CHECKBOXVAR001_fieldheadercolumn}
+			{BEGIN DATETIMEVAR001_fieldheadercolumn}
+			<th class="{$DATETIMEVAR001_class}" {$DATETIMEVAR001_style}  data-field="DATETIMEVAR001">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR001}
+			</th>
+			{END DATETIMEVAR001_fieldheadercolumn}
+			{BEGIN DATETIMEVAR001_LABEL_fieldheadercolumn}
+			<th class="{$DATETIMEVAR001_LABEL_class}" {$DATETIMEVAR001_LABEL_style}  data-field="DATETIMEVAR001_LABEL">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR001_LABEL}
+			</th>
+			{END DATETIMEVAR001_LABEL_fieldheadercolumn}
+			{BEGIN DATETIMEVAR002_fieldheadercolumn}
+			<th class="{$DATETIMEVAR002_class}" {$DATETIMEVAR002_style}  data-field="DATETIMEVAR002">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR002}
+			</th>
+			{END DATETIMEVAR002_fieldheadercolumn}
+			{BEGIN DATETIMEVAR002_LABEL_fieldheadercolumn}
+			<th class="{$DATETIMEVAR002_LABEL_class}" {$DATETIMEVAR002_LABEL_style}  data-field="DATETIMEVAR002_LABEL">
+				{$label PMT_ECCUBEBLOG DATETIMEVAR002_LABEL}
+			</th>
+			{END DATETIMEVAR002_LABEL_fieldheadercolumn}
+			{BEGIN DROPDOWNVAR001_fieldheadercolumn}
+			<th class="{$DROPDOWNVAR001_class}" {$DROPDOWNVAR001_style}  data-field="DROPDOWNVAR001">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR001}
+			</th>
+			{END DROPDOWNVAR001_fieldheadercolumn}
+			{BEGIN DROPDOWNVAR002_fieldheadercolumn}
+			<th class="{$DROPDOWNVAR002_class}" {$DROPDOWNVAR002_style}  data-field="DROPDOWNVAR002">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR002}
+			</th>
+			{END DROPDOWNVAR002_fieldheadercolumn}
+			{BEGIN DROPDOWNVAR003_fieldheadercolumn}
+			<th class="{$DROPDOWNVAR003_class}" {$DROPDOWNVAR003_style}  data-field="DROPDOWNVAR003">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR003}
+			</th>
+			{END DROPDOWNVAR003_fieldheadercolumn}
+			{BEGIN DROPDOWNVAR003_LABEL_fieldheadercolumn}
+			<th class="{$DROPDOWNVAR003_LABEL_class}" {$DROPDOWNVAR003_LABEL_style}  data-field="DROPDOWNVAR003_LABEL">
+				{$label PMT_ECCUBEBLOG DROPDOWNVAR003_LABEL}
+			</th>
+			{END DROPDOWNVAR003_LABEL_fieldheadercolumn}
+			{BEGIN SATEI_fieldheadercolumn}
+			<th class="{$SATEI_class}" {$SATEI_style}  data-field="SATEI">
+				{$label PMT_ECCUBEBLOG SATEI}
+			</th>
+			{END SATEI_fieldheadercolumn}
+			{BEGIN SATEI_LABEL_fieldheadercolumn}
+			<th class="{$SATEI_LABEL_class}" {$SATEI_LABEL_style}  data-field="SATEI_LABEL">
+				{$label PMT_ECCUBEBLOG SATEI_LABEL}
+			</th>
+			{END SATEI_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR001_fieldheadercolumn}
+			<th class="{$TEXTVAR001_class}" {$TEXTVAR001_style}  data-field="TEXTVAR001">
+				{$label PMT_ECCUBEBLOG TEXTVAR001}
+			</th>
+			{END TEXTVAR001_fieldheadercolumn}
+			{BEGIN TEXTVAR001_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR001_LABEL_class}" {$TEXTVAR001_LABEL_style}  data-field="TEXTVAR001_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR001_LABEL}
+			</th>
+			{END TEXTVAR001_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR004_fieldheadercolumn}
+			<th class="{$TEXTVAR004_class}" {$TEXTVAR004_style}  data-field="TEXTVAR004">
+				{$label PMT_ECCUBEBLOG TEXTVAR004}
+			</th>
+			{END TEXTVAR004_fieldheadercolumn}
+			{BEGIN TEXTVAR004_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR004_LABEL_class}" {$TEXTVAR004_LABEL_style}  data-field="TEXTVAR004_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR004_LABEL}
+			</th>
+			{END TEXTVAR004_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR005_fieldheadercolumn}
+			<th class="{$TEXTVAR005_class}" {$TEXTVAR005_style}  data-field="TEXTVAR005">
+				{$label PMT_ECCUBEBLOG TEXTVAR005}
+			</th>
+			{END TEXTVAR005_fieldheadercolumn}
+			{BEGIN TEXTVAR006_fieldheadercolumn}
+			<th class="{$TEXTVAR006_class}" {$TEXTVAR006_style}  data-field="TEXTVAR006">
+				{$label PMT_ECCUBEBLOG TEXTVAR006}
+			</th>
+			{END TEXTVAR006_fieldheadercolumn}
+			{BEGIN TEXTVAR006_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR006_LABEL_class}" {$TEXTVAR006_LABEL_style}  data-field="TEXTVAR006_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR006_LABEL}
+			</th>
+			{END TEXTVAR006_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR007_fieldheadercolumn}
+			<th class="{$TEXTVAR007_class}" {$TEXTVAR007_style}  data-field="TEXTVAR007">
+				{$label PMT_ECCUBEBLOG TEXTVAR007}
+			</th>
+			{END TEXTVAR007_fieldheadercolumn}
+			{BEGIN TEXTVAR007_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR007_LABEL_class}" {$TEXTVAR007_LABEL_style}  data-field="TEXTVAR007_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR007_LABEL}
+			</th>
+			{END TEXTVAR007_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR008_fieldheadercolumn}
+			<th class="{$TEXTVAR008_class}" {$TEXTVAR008_style}  data-field="TEXTVAR008">
+				{$label PMT_ECCUBEBLOG TEXTVAR008}
+			</th>
+			{END TEXTVAR008_fieldheadercolumn}
+			{BEGIN TEXTVAR008_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR008_LABEL_class}" {$TEXTVAR008_LABEL_style}  data-field="TEXTVAR008_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR008_LABEL}
+			</th>
+			{END TEXTVAR008_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR009_fieldheadercolumn}
+			<th class="{$TEXTVAR009_class}" {$TEXTVAR009_style}  data-field="TEXTVAR009">
+				{$label PMT_ECCUBEBLOG TEXTVAR009}
+			</th>
+			{END TEXTVAR009_fieldheadercolumn}
+			{BEGIN TEXTVAR009_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR009_LABEL_class}" {$TEXTVAR009_LABEL_style}  data-field="TEXTVAR009_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR009_LABEL}
+			</th>
+			{END TEXTVAR009_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR010_fieldheadercolumn}
+			<th class="{$TEXTVAR010_class}" {$TEXTVAR010_style}  data-field="TEXTVAR010">
+				{$label PMT_ECCUBEBLOG TEXTVAR010}
+			</th>
+			{END TEXTVAR010_fieldheadercolumn}
+			{BEGIN TEXTVAR010_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR010_LABEL_class}" {$TEXTVAR010_LABEL_style}  data-field="TEXTVAR010_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR010_LABEL}
+			</th>
+			{END TEXTVAR010_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR011_fieldheadercolumn}
+			<th class="{$TEXTVAR011_class}" {$TEXTVAR011_style}  data-field="TEXTVAR011">
+				{$label PMT_ECCUBEBLOG TEXTVAR011}
+			</th>
+			{END TEXTVAR011_fieldheadercolumn}
+			{BEGIN TEXTVAR011_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR011_LABEL_class}" {$TEXTVAR011_LABEL_style}  data-field="TEXTVAR011_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR011_LABEL}
+			</th>
+			{END TEXTVAR011_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR012_fieldheadercolumn}
+			<th class="{$TEXTVAR012_class}" {$TEXTVAR012_style}  data-field="TEXTVAR012">
+				{$label PMT_ECCUBEBLOG TEXTVAR012}
+			</th>
+			{END TEXTVAR012_fieldheadercolumn}
+			{BEGIN TEXTVAR012_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR012_LABEL_class}" {$TEXTVAR012_LABEL_style}  data-field="TEXTVAR012_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR012_LABEL}
+			</th>
+			{END TEXTVAR012_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR013_fieldheadercolumn}
+			<th class="{$TEXTVAR013_class}" {$TEXTVAR013_style}  data-field="TEXTVAR013">
+				{$label PMT_ECCUBEBLOG TEXTVAR013}
+			</th>
+			{END TEXTVAR013_fieldheadercolumn}
+			{BEGIN TEXTVAR013_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR013_LABEL_class}" {$TEXTVAR013_LABEL_style}  data-field="TEXTVAR013_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR013_LABEL}
+			</th>
+			{END TEXTVAR013_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR014_fieldheadercolumn}
+			<th class="{$TEXTVAR014_class}" {$TEXTVAR014_style}  data-field="TEXTVAR014">
+				{$label PMT_ECCUBEBLOG TEXTVAR014}
+			</th>
+			{END TEXTVAR014_fieldheadercolumn}
+			{BEGIN TEXTVAR014_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR014_LABEL_class}" {$TEXTVAR014_LABEL_style}  data-field="TEXTVAR014_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR014_LABEL}
+			</th>
+			{END TEXTVAR014_LABEL_fieldheadercolumn}
+			{BEGIN TEXTVAR015_fieldheadercolumn}
+			<th class="{$TEXTVAR015_class}" {$TEXTVAR015_style}  data-field="TEXTVAR015">
+				{$label PMT_ECCUBEBLOG TEXTVAR015}
+			</th>
+			{END TEXTVAR015_fieldheadercolumn}
+			{BEGIN TEXTVAR015_LABEL_fieldheadercolumn}
+			<th class="{$TEXTVAR015_LABEL_class}" {$TEXTVAR015_LABEL_style}  data-field="TEXTVAR015_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTVAR015_LABEL}
+			</th>
+			{END TEXTVAR015_LABEL_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR001_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR001_class}" {$TEXTAREAVAR001_style}  data-field="TEXTAREAVAR001">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR001}
+			</th>
+			{END TEXTAREAVAR001_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR002_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR002_class}" {$TEXTAREAVAR002_style}  data-field="TEXTAREAVAR002">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR002}
+			</th>
+			{END TEXTAREAVAR002_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR003_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR003_class}" {$TEXTAREAVAR003_style}  data-field="TEXTAREAVAR003">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR003}
+			</th>
+			{END TEXTAREAVAR003_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR003_LABEL_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR003_LABEL_class}" {$TEXTAREAVAR003_LABEL_style}  data-field="TEXTAREAVAR003_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR003_LABEL}
+			</th>
+			{END TEXTAREAVAR003_LABEL_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR004_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR004_class}" {$TEXTAREAVAR004_style}  data-field="TEXTAREAVAR004">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR004}
+			</th>
+			{END TEXTAREAVAR004_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR004_LABEL_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR004_LABEL_class}" {$TEXTAREAVAR004_LABEL_style}  data-field="TEXTAREAVAR004_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR004_LABEL}
+			</th>
+			{END TEXTAREAVAR004_LABEL_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR005_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR005_class}" {$TEXTAREAVAR005_style}  data-field="TEXTAREAVAR005">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR005}
+			</th>
+			{END TEXTAREAVAR005_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR005_LABEL_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR005_LABEL_class}" {$TEXTAREAVAR005_LABEL_style}  data-field="TEXTAREAVAR005_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR005_LABEL}
+			</th>
+			{END TEXTAREAVAR005_LABEL_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR006_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR006_class}" {$TEXTAREAVAR006_style}  data-field="TEXTAREAVAR006">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR006}
+			</th>
+			{END TEXTAREAVAR006_fieldheadercolumn}
+			{BEGIN TEXTAREAVAR006_LABEL_fieldheadercolumn}
+			<th class="{$TEXTAREAVAR006_LABEL_class}" {$TEXTAREAVAR006_LABEL_style}  data-field="TEXTAREAVAR006_LABEL">
+				{$label PMT_ECCUBEBLOG TEXTAREAVAR006_LABEL}
+			</th>
+			{END TEXTAREAVAR006_LABEL_fieldheadercolumn}
+			{BEGIN JPN_fieldheadercolumn}
+			<th class="{$JPN_class}" {$JPN_style}  data-field="JPN">
+				{$label PMT_ECCUBEBLOG JPN}
+			</th>
+			{END JPN_fieldheadercolumn}
+			{BEGIN JPN_LABEL_fieldheadercolumn}
+			<th class="{$JPN_LABEL_class}" {$JPN_LABEL_style}  data-field="JPN_LABEL">
+				{$label PMT_ECCUBEBLOG JPN_LABEL}
+			</th>
+			{END JPN_LABEL_fieldheadercolumn}
+			{BEGIN TPL_PATH_fieldheadercolumn}
+			<th class="{$TPL_PATH_class}" {$TPL_PATH_style}  data-field="TPL_PATH">
+				{$label PMT_ECCUBEBLOG TPL_PATH}
+			</th>
+			{END TPL_PATH_fieldheadercolumn}
+			{BEGIN TPL_PATH_LABEL_fieldheadercolumn}
+			<th class="{$TPL_PATH_LABEL_class}" {$TPL_PATH_LABEL_style}  data-field="TPL_PATH_LABEL">
+				{$label PMT_ECCUBEBLOG TPL_PATH_LABEL}
+			</th>
+			{END TPL_PATH_LABEL_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN BLOC_ID_fieldcolumn}
+			<td  class="{$BLOC_ID_class}" {$BLOC_ID_style} {$recordattrs}>
+				{$BLOC_ID_value}
+			</td>
+			{END BLOC_ID_fieldcolumn}
+			{BEGIN BLOC_ID_LABEL_fieldcolumn}
+			<td  class="{$BLOC_ID_LABEL_class}" {$BLOC_ID_LABEL_style} {$recordattrs}>
+				{$BLOC_ID_LABEL_value}
+			</td>
+			{END BLOC_ID_LABEL_fieldcolumn}
+			{BEGIN BLOC_NAME_fieldcolumn}
+			<td  class="{$BLOC_NAME_class}" {$BLOC_NAME_style} {$recordattrs}>
+				{$BLOC_NAME_value}
+			</td>
+			{END BLOC_NAME_fieldcolumn}
+			{BEGIN BLOC_NAME_LABEL_fieldcolumn}
+			<td  class="{$BLOC_NAME_LABEL_class}" {$BLOC_NAME_LABEL_style} {$recordattrs}>
+				{$BLOC_NAME_LABEL_value}
+			</td>
+			{END BLOC_NAME_LABEL_fieldcolumn}
+			{BEGIN APPLICATION_fieldcolumn}
+			<td  class="{$APPLICATION_class}" {$APPLICATION_style} {$recordattrs}>
+				{$APPLICATION_value}
+			</td>
+			{END APPLICATION_fieldcolumn}
+			{BEGIN APPLICATION_LABEL_fieldcolumn}
+			<td  class="{$APPLICATION_LABEL_class}" {$APPLICATION_LABEL_style} {$recordattrs}>
+				{$APPLICATION_LABEL_value}
+			</td>
+			{END APPLICATION_LABEL_fieldcolumn}
+			{BEGIN PROCESS_fieldcolumn}
+			<td  class="{$PROCESS_class}" {$PROCESS_style} {$recordattrs}>
+				{$PROCESS_value}
+			</td>
+			{END PROCESS_fieldcolumn}
+			{BEGIN PROCESS_LABEL_fieldcolumn}
+			<td  class="{$PROCESS_LABEL_class}" {$PROCESS_LABEL_style} {$recordattrs}>
+				{$PROCESS_LABEL_value}
+			</td>
+			{END PROCESS_LABEL_fieldcolumn}
+			{BEGIN CHECKBOXVAR001_fieldcolumn}
+			<td  class="{$CHECKBOXVAR001_class}" {$CHECKBOXVAR001_style} {$recordattrs}>
+				{$CHECKBOXVAR001_value}
+			</td>
+			{END CHECKBOXVAR001_fieldcolumn}
+			{BEGIN DATETIMEVAR001_fieldcolumn}
+			<td  class="{$DATETIMEVAR001_class}" {$DATETIMEVAR001_style} {$recordattrs}>
+				{$DATETIMEVAR001_value}
+			</td>
+			{END DATETIMEVAR001_fieldcolumn}
+			{BEGIN DATETIMEVAR001_LABEL_fieldcolumn}
+			<td  class="{$DATETIMEVAR001_LABEL_class}" {$DATETIMEVAR001_LABEL_style} {$recordattrs}>
+				{$DATETIMEVAR001_LABEL_value}
+			</td>
+			{END DATETIMEVAR001_LABEL_fieldcolumn}
+			{BEGIN DATETIMEVAR002_fieldcolumn}
+			<td  class="{$DATETIMEVAR002_class}" {$DATETIMEVAR002_style} {$recordattrs}>
+				{$DATETIMEVAR002_value}
+			</td>
+			{END DATETIMEVAR002_fieldcolumn}
+			{BEGIN DATETIMEVAR002_LABEL_fieldcolumn}
+			<td  class="{$DATETIMEVAR002_LABEL_class}" {$DATETIMEVAR002_LABEL_style} {$recordattrs}>
+				{$DATETIMEVAR002_LABEL_value}
+			</td>
+			{END DATETIMEVAR002_LABEL_fieldcolumn}
+			{BEGIN DROPDOWNVAR001_fieldcolumn}
+			<td  class="{$DROPDOWNVAR001_class}" {$DROPDOWNVAR001_style} {$recordattrs}>
+				{$DROPDOWNVAR001_value}
+			</td>
+			{END DROPDOWNVAR001_fieldcolumn}
+			{BEGIN DROPDOWNVAR002_fieldcolumn}
+			<td  class="{$DROPDOWNVAR002_class}" {$DROPDOWNVAR002_style} {$recordattrs}>
+				{$DROPDOWNVAR002_value}
+			</td>
+			{END DROPDOWNVAR002_fieldcolumn}
+			{BEGIN DROPDOWNVAR003_fieldcolumn}
+			<td  class="{$DROPDOWNVAR003_class}" {$DROPDOWNVAR003_style} {$recordattrs}>
+				{$DROPDOWNVAR003_value}
+			</td>
+			{END DROPDOWNVAR003_fieldcolumn}
+			{BEGIN DROPDOWNVAR003_LABEL_fieldcolumn}
+			<td  class="{$DROPDOWNVAR003_LABEL_class}" {$DROPDOWNVAR003_LABEL_style} {$recordattrs}>
+				{$DROPDOWNVAR003_LABEL_value}
+			</td>
+			{END DROPDOWNVAR003_LABEL_fieldcolumn}
+			{BEGIN SATEI_fieldcolumn}
+			<td  class="{$SATEI_class}" {$SATEI_style} {$recordattrs}>
+				{$SATEI_value}
+			</td>
+			{END SATEI_fieldcolumn}
+			{BEGIN SATEI_LABEL_fieldcolumn}
+			<td  class="{$SATEI_LABEL_class}" {$SATEI_LABEL_style} {$recordattrs}>
+				{$SATEI_LABEL_value}
+			</td>
+			{END SATEI_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR001_fieldcolumn}
+			<td  class="{$TEXTVAR001_class}" {$TEXTVAR001_style} {$recordattrs}>
+				{$TEXTVAR001_value}
+			</td>
+			{END TEXTVAR001_fieldcolumn}
+			{BEGIN TEXTVAR001_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR001_LABEL_class}" {$TEXTVAR001_LABEL_style} {$recordattrs}>
+				{$TEXTVAR001_LABEL_value}
+			</td>
+			{END TEXTVAR001_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR004_fieldcolumn}
+			<td  class="{$TEXTVAR004_class}" {$TEXTVAR004_style} {$recordattrs}>
+				{$TEXTVAR004_value}
+			</td>
+			{END TEXTVAR004_fieldcolumn}
+			{BEGIN TEXTVAR004_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR004_LABEL_class}" {$TEXTVAR004_LABEL_style} {$recordattrs}>
+				{$TEXTVAR004_LABEL_value}
+			</td>
+			{END TEXTVAR004_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR005_fieldcolumn}
+			<td  class="{$TEXTVAR005_class}" {$TEXTVAR005_style} {$recordattrs}>
+				{$TEXTVAR005_value}
+			</td>
+			{END TEXTVAR005_fieldcolumn}
+			{BEGIN TEXTVAR006_fieldcolumn}
+			<td  class="{$TEXTVAR006_class}" {$TEXTVAR006_style} {$recordattrs}>
+				{$TEXTVAR006_value}
+			</td>
+			{END TEXTVAR006_fieldcolumn}
+			{BEGIN TEXTVAR006_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR006_LABEL_class}" {$TEXTVAR006_LABEL_style} {$recordattrs}>
+				{$TEXTVAR006_LABEL_value}
+			</td>
+			{END TEXTVAR006_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR007_fieldcolumn}
+			<td  class="{$TEXTVAR007_class}" {$TEXTVAR007_style} {$recordattrs}>
+				{$TEXTVAR007_value}
+			</td>
+			{END TEXTVAR007_fieldcolumn}
+			{BEGIN TEXTVAR007_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR007_LABEL_class}" {$TEXTVAR007_LABEL_style} {$recordattrs}>
+				{$TEXTVAR007_LABEL_value}
+			</td>
+			{END TEXTVAR007_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR008_fieldcolumn}
+			<td  class="{$TEXTVAR008_class}" {$TEXTVAR008_style} {$recordattrs}>
+				{$TEXTVAR008_value}
+			</td>
+			{END TEXTVAR008_fieldcolumn}
+			{BEGIN TEXTVAR008_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR008_LABEL_class}" {$TEXTVAR008_LABEL_style} {$recordattrs}>
+				{$TEXTVAR008_LABEL_value}
+			</td>
+			{END TEXTVAR008_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR009_fieldcolumn}
+			<td  class="{$TEXTVAR009_class}" {$TEXTVAR009_style} {$recordattrs}>
+				{$TEXTVAR009_value}
+			</td>
+			{END TEXTVAR009_fieldcolumn}
+			{BEGIN TEXTVAR009_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR009_LABEL_class}" {$TEXTVAR009_LABEL_style} {$recordattrs}>
+				{$TEXTVAR009_LABEL_value}
+			</td>
+			{END TEXTVAR009_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR010_fieldcolumn}
+			<td  class="{$TEXTVAR010_class}" {$TEXTVAR010_style} {$recordattrs}>
+				{$TEXTVAR010_value}
+			</td>
+			{END TEXTVAR010_fieldcolumn}
+			{BEGIN TEXTVAR010_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR010_LABEL_class}" {$TEXTVAR010_LABEL_style} {$recordattrs}>
+				{$TEXTVAR010_LABEL_value}
+			</td>
+			{END TEXTVAR010_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR011_fieldcolumn}
+			<td  class="{$TEXTVAR011_class}" {$TEXTVAR011_style} {$recordattrs}>
+				{$TEXTVAR011_value}
+			</td>
+			{END TEXTVAR011_fieldcolumn}
+			{BEGIN TEXTVAR011_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR011_LABEL_class}" {$TEXTVAR011_LABEL_style} {$recordattrs}>
+				{$TEXTVAR011_LABEL_value}
+			</td>
+			{END TEXTVAR011_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR012_fieldcolumn}
+			<td  class="{$TEXTVAR012_class}" {$TEXTVAR012_style} {$recordattrs}>
+				{$TEXTVAR012_value}
+			</td>
+			{END TEXTVAR012_fieldcolumn}
+			{BEGIN TEXTVAR012_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR012_LABEL_class}" {$TEXTVAR012_LABEL_style} {$recordattrs}>
+				{$TEXTVAR012_LABEL_value}
+			</td>
+			{END TEXTVAR012_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR013_fieldcolumn}
+			<td  class="{$TEXTVAR013_class}" {$TEXTVAR013_style} {$recordattrs}>
+				{$TEXTVAR013_value}
+			</td>
+			{END TEXTVAR013_fieldcolumn}
+			{BEGIN TEXTVAR013_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR013_LABEL_class}" {$TEXTVAR013_LABEL_style} {$recordattrs}>
+				{$TEXTVAR013_LABEL_value}
+			</td>
+			{END TEXTVAR013_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR014_fieldcolumn}
+			<td  class="{$TEXTVAR014_class}" {$TEXTVAR014_style} {$recordattrs}>
+				{$TEXTVAR014_value}
+			</td>
+			{END TEXTVAR014_fieldcolumn}
+			{BEGIN TEXTVAR014_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR014_LABEL_class}" {$TEXTVAR014_LABEL_style} {$recordattrs}>
+				{$TEXTVAR014_LABEL_value}
+			</td>
+			{END TEXTVAR014_LABEL_fieldcolumn}
+			{BEGIN TEXTVAR015_fieldcolumn}
+			<td  class="{$TEXTVAR015_class}" {$TEXTVAR015_style} {$recordattrs}>
+				{$TEXTVAR015_value}
+			</td>
+			{END TEXTVAR015_fieldcolumn}
+			{BEGIN TEXTVAR015_LABEL_fieldcolumn}
+			<td  class="{$TEXTVAR015_LABEL_class}" {$TEXTVAR015_LABEL_style} {$recordattrs}>
+				{$TEXTVAR015_LABEL_value}
+			</td>
+			{END TEXTVAR015_LABEL_fieldcolumn}
+			{BEGIN TEXTAREAVAR001_fieldcolumn}
+			<td  class="{$TEXTAREAVAR001_class}" {$TEXTAREAVAR001_style} {$recordattrs}>
+				{$TEXTAREAVAR001_value}
+			</td>
+			{END TEXTAREAVAR001_fieldcolumn}
+			{BEGIN TEXTAREAVAR002_fieldcolumn}
+			<td  class="{$TEXTAREAVAR002_class}" {$TEXTAREAVAR002_style} {$recordattrs}>
+				{$TEXTAREAVAR002_value}
+			</td>
+			{END TEXTAREAVAR002_fieldcolumn}
+			{BEGIN TEXTAREAVAR003_fieldcolumn}
+			<td  class="{$TEXTAREAVAR003_class}" {$TEXTAREAVAR003_style} {$recordattrs}>
+				{$TEXTAREAVAR003_value}
+			</td>
+			{END TEXTAREAVAR003_fieldcolumn}
+			{BEGIN TEXTAREAVAR003_LABEL_fieldcolumn}
+			<td  class="{$TEXTAREAVAR003_LABEL_class}" {$TEXTAREAVAR003_LABEL_style} {$recordattrs}>
+				{$TEXTAREAVAR003_LABEL_value}
+			</td>
+			{END TEXTAREAVAR003_LABEL_fieldcolumn}
+			{BEGIN TEXTAREAVAR004_fieldcolumn}
+			<td  class="{$TEXTAREAVAR004_class}" {$TEXTAREAVAR004_style} {$recordattrs}>
+				{$TEXTAREAVAR004_value}
+			</td>
+			{END TEXTAREAVAR004_fieldcolumn}
+			{BEGIN TEXTAREAVAR004_LABEL_fieldcolumn}
+			<td  class="{$TEXTAREAVAR004_LABEL_class}" {$TEXTAREAVAR004_LABEL_style} {$recordattrs}>
+				{$TEXTAREAVAR004_LABEL_value}
+			</td>
+			{END TEXTAREAVAR004_LABEL_fieldcolumn}
+			{BEGIN TEXTAREAVAR005_fieldcolumn}
+			<td  class="{$TEXTAREAVAR005_class}" {$TEXTAREAVAR005_style} {$recordattrs}>
+				{$TEXTAREAVAR005_value}
+			</td>
+			{END TEXTAREAVAR005_fieldcolumn}
+			{BEGIN TEXTAREAVAR005_LABEL_fieldcolumn}
+			<td  class="{$TEXTAREAVAR005_LABEL_class}" {$TEXTAREAVAR005_LABEL_style} {$recordattrs}>
+				{$TEXTAREAVAR005_LABEL_value}
+			</td>
+			{END TEXTAREAVAR005_LABEL_fieldcolumn}
+			{BEGIN TEXTAREAVAR006_fieldcolumn}
+			<td  class="{$TEXTAREAVAR006_class}" {$TEXTAREAVAR006_style} {$recordattrs}>
+				{$TEXTAREAVAR006_value}
+			</td>
+			{END TEXTAREAVAR006_fieldcolumn}
+			{BEGIN TEXTAREAVAR006_LABEL_fieldcolumn}
+			<td  class="{$TEXTAREAVAR006_LABEL_class}" {$TEXTAREAVAR006_LABEL_style} {$recordattrs}>
+				{$TEXTAREAVAR006_LABEL_value}
+			</td>
+			{END TEXTAREAVAR006_LABEL_fieldcolumn}
+			{BEGIN JPN_fieldcolumn}
+			<td  class="{$JPN_class}" {$JPN_style} {$recordattrs}>
+				{$JPN_value}
+			</td>
+			{END JPN_fieldcolumn}
+			{BEGIN JPN_LABEL_fieldcolumn}
+			<td  class="{$JPN_LABEL_class}" {$JPN_LABEL_style} {$recordattrs}>
+				{$JPN_LABEL_value}
+			</td>
+			{END JPN_LABEL_fieldcolumn}
+			{BEGIN TPL_PATH_fieldcolumn}
+			<td  class="{$TPL_PATH_class}" {$TPL_PATH_style} {$recordattrs}>
+				{$TPL_PATH_value}
+			</td>
+			{END TPL_PATH_fieldcolumn}
+			{BEGIN TPL_PATH_LABEL_fieldcolumn}
+			<td  class="{$TPL_PATH_LABEL_class}" {$TPL_PATH_LABEL_style} {$recordattrs}>
+				{$TPL_PATH_LABEL_value}
+			</td>
+			{END TPL_PATH_LABEL_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

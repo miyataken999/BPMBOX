@@ -1,0 +1,91 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$APP_UID_class}">{$label APP_DELEGATION APP_UID}</th>
+			<th class="{$DEL_INDEX_class}">{$label APP_DELEGATION DEL_INDEX}</th>
+			<th class="{$DEL_PREVIOUS_class}">{$label APP_DELEGATION DEL_PREVIOUS}</th>
+			<th class="{$DEL_LAST_INDEX_class}">{$label APP_DELEGATION DEL_LAST_INDEX}</th>
+			<th class="{$PRO_UID_class}">{$label APP_DELEGATION PRO_UID}</th>
+			<th class="{$TAS_UID_class}">{$label APP_DELEGATION TAS_UID}</th>
+			<th class="{$USR_UID_class}">{$label APP_DELEGATION USR_UID}</th>
+			<th class="{$DEL_TYPE_class}">{$label APP_DELEGATION DEL_TYPE}</th>
+			<th class="{$DEL_THREAD_class}">{$label APP_DELEGATION DEL_THREAD}</th>
+			<th class="{$DEL_THREAD_STATUS_class}">{$label APP_DELEGATION DEL_THREAD_STATUS}</th>
+			<th class="{$DEL_PRIORITY_class}">{$label APP_DELEGATION DEL_PRIORITY}</th>
+			<th class="{$DEL_DELEGATE_DATE_class}">{$label APP_DELEGATION DEL_DELEGATE_DATE}</th>
+			<th class="{$DEL_INIT_DATE_class}">{$label APP_DELEGATION DEL_INIT_DATE}</th>
+			<th class="{$DEL_FINISH_DATE_class}">{$label APP_DELEGATION DEL_FINISH_DATE}</th>
+			<th class="{$DEL_TASK_DUE_DATE_class}">{$label APP_DELEGATION DEL_TASK_DUE_DATE}</th>
+			<th class="{$DEL_RISK_DATE_class}">{$label APP_DELEGATION DEL_RISK_DATE}</th>
+			<th class="{$DEL_DURATION_class}">{$label APP_DELEGATION DEL_DURATION}</th>
+			<th class="{$DEL_QUEUE_DURATION_class}">{$label APP_DELEGATION DEL_QUEUE_DURATION}</th>
+			<th class="{$DEL_DELAY_DURATION_class}">{$label APP_DELEGATION DEL_DELAY_DURATION}</th>
+			<th class="{$DEL_STARTED_class}">{$label APP_DELEGATION DEL_STARTED}</th>
+			<th class="{$DEL_FINISHED_class}">{$label APP_DELEGATION DEL_FINISHED}</th>
+			<th class="{$DEL_DELAYED_class}">{$label APP_DELEGATION DEL_DELAYED}</th>
+			<th class="{$DEL_DATA_class}">{$label APP_DELEGATION DEL_DATA}</th>
+			<th class="{$APP_OVERDUE_PERCENTAGE_class}">{$label APP_DELEGATION APP_OVERDUE_PERCENTAGE}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$APP_UID_class}">{$APP_UID_value}</td>
+			<td class="{$DEL_INDEX_class}">{$DEL_INDEX_value}</td>
+			<td class="{$DEL_PREVIOUS_class}">{$DEL_PREVIOUS_value}</td>
+			<td class="{$DEL_LAST_INDEX_class}">{$DEL_LAST_INDEX_value}</td>
+			<td class="{$PRO_UID_class}">{$PRO_UID_value}</td>
+			<td class="{$TAS_UID_class}">{$TAS_UID_value}</td>
+			<td class="{$USR_UID_class}">{$USR_UID_value}</td>
+			<td class="{$DEL_TYPE_class}">{$DEL_TYPE_value}</td>
+			<td class="{$DEL_THREAD_class}">{$DEL_THREAD_value}</td>
+			<td class="{$DEL_THREAD_STATUS_class}">{$DEL_THREAD_STATUS_value}</td>
+			<td class="{$DEL_PRIORITY_class}">{$DEL_PRIORITY_value}</td>
+			<td class="{$DEL_DELEGATE_DATE_class}">{$DEL_DELEGATE_DATE_value}</td>
+			<td class="{$DEL_INIT_DATE_class}">{$DEL_INIT_DATE_value}</td>
+			<td class="{$DEL_FINISH_DATE_class}">{$DEL_FINISH_DATE_value}</td>
+			<td class="{$DEL_TASK_DUE_DATE_class}">{$DEL_TASK_DUE_DATE_value}</td>
+			<td class="{$DEL_RISK_DATE_class}">{$DEL_RISK_DATE_value}</td>
+			<td class="{$DEL_DURATION_class}">{$DEL_DURATION_value}</td>
+			<td class="{$DEL_QUEUE_DURATION_class}">{$DEL_QUEUE_DURATION_value}</td>
+			<td class="{$DEL_DELAY_DURATION_class}">{$DEL_DELAY_DURATION_value}</td>
+			<td class="{$DEL_STARTED_class}">{$DEL_STARTED_value}</td>
+			<td class="{$DEL_FINISHED_class}">{$DEL_FINISHED_value}</td>
+			<td class="{$DEL_DELAYED_class}">{$DEL_DELAYED_value}</td>
+			<td class="{$DEL_DATA_class}">{$DEL_DATA_value}</td>
+			<td class="{$APP_OVERDUE_PERCENTAGE_class}">{$APP_OVERDUE_PERCENTAGE_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

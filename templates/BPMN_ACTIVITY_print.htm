@@ -1,0 +1,443 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel BPMN_ACTIVITY print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN ACT_UID_fieldheadercolumn}
+			<th class="{$ACT_UID_class}" {$ACT_UID_style}  data-field="ACT_UID">
+				{$label BPMN_ACTIVITY ACT_UID}
+			</th>
+			{END ACT_UID_fieldheadercolumn}
+			{BEGIN PRJ_UID_fieldheadercolumn}
+			<th class="{$PRJ_UID_class}" {$PRJ_UID_style}  data-field="PRJ_UID">
+				{$label BPMN_ACTIVITY PRJ_UID}
+			</th>
+			{END PRJ_UID_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label BPMN_ACTIVITY PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN ACT_NAME_fieldheadercolumn}
+			<th class="{$ACT_NAME_class}" {$ACT_NAME_style}  data-field="ACT_NAME">
+				{$label BPMN_ACTIVITY ACT_NAME}
+			</th>
+			{END ACT_NAME_fieldheadercolumn}
+			{BEGIN ACT_TYPE_fieldheadercolumn}
+			<th class="{$ACT_TYPE_class}" {$ACT_TYPE_style}  data-field="ACT_TYPE">
+				{$label BPMN_ACTIVITY ACT_TYPE}
+			</th>
+			{END ACT_TYPE_fieldheadercolumn}
+			{BEGIN ACT_IS_FOR_COMPENSATION_fieldheadercolumn}
+			<th class="{$ACT_IS_FOR_COMPENSATION_class}" {$ACT_IS_FOR_COMPENSATION_style}  data-field="ACT_IS_FOR_COMPENSATION">
+				{$label BPMN_ACTIVITY ACT_IS_FOR_COMPENSATION}
+			</th>
+			{END ACT_IS_FOR_COMPENSATION_fieldheadercolumn}
+			{BEGIN ACT_START_QUANTITY_fieldheadercolumn}
+			<th class="{$ACT_START_QUANTITY_class}" {$ACT_START_QUANTITY_style}  data-field="ACT_START_QUANTITY">
+				{$label BPMN_ACTIVITY ACT_START_QUANTITY}
+			</th>
+			{END ACT_START_QUANTITY_fieldheadercolumn}
+			{BEGIN ACT_COMPLETION_QUANTITY_fieldheadercolumn}
+			<th class="{$ACT_COMPLETION_QUANTITY_class}" {$ACT_COMPLETION_QUANTITY_style}  data-field="ACT_COMPLETION_QUANTITY">
+				{$label BPMN_ACTIVITY ACT_COMPLETION_QUANTITY}
+			</th>
+			{END ACT_COMPLETION_QUANTITY_fieldheadercolumn}
+			{BEGIN ACT_TASK_TYPE_fieldheadercolumn}
+			<th class="{$ACT_TASK_TYPE_class}" {$ACT_TASK_TYPE_style}  data-field="ACT_TASK_TYPE">
+				{$label BPMN_ACTIVITY ACT_TASK_TYPE}
+			</th>
+			{END ACT_TASK_TYPE_fieldheadercolumn}
+			{BEGIN ACT_IMPLEMENTATION_fieldheadercolumn}
+			<th class="{$ACT_IMPLEMENTATION_class}" {$ACT_IMPLEMENTATION_style}  data-field="ACT_IMPLEMENTATION">
+				{$label BPMN_ACTIVITY ACT_IMPLEMENTATION}
+			</th>
+			{END ACT_IMPLEMENTATION_fieldheadercolumn}
+			{BEGIN ACT_INSTANTIATE_fieldheadercolumn}
+			<th class="{$ACT_INSTANTIATE_class}" {$ACT_INSTANTIATE_style}  data-field="ACT_INSTANTIATE">
+				{$label BPMN_ACTIVITY ACT_INSTANTIATE}
+			</th>
+			{END ACT_INSTANTIATE_fieldheadercolumn}
+			{BEGIN ACT_SCRIPT_TYPE_fieldheadercolumn}
+			<th class="{$ACT_SCRIPT_TYPE_class}" {$ACT_SCRIPT_TYPE_style}  data-field="ACT_SCRIPT_TYPE">
+				{$label BPMN_ACTIVITY ACT_SCRIPT_TYPE}
+			</th>
+			{END ACT_SCRIPT_TYPE_fieldheadercolumn}
+			{BEGIN ACT_SCRIPT_fieldheadercolumn}
+			<th class="{$ACT_SCRIPT_class}" {$ACT_SCRIPT_style}  data-field="ACT_SCRIPT">
+				{$label BPMN_ACTIVITY ACT_SCRIPT}
+			</th>
+			{END ACT_SCRIPT_fieldheadercolumn}
+			{BEGIN ACT_LOOP_TYPE_fieldheadercolumn}
+			<th class="{$ACT_LOOP_TYPE_class}" {$ACT_LOOP_TYPE_style}  data-field="ACT_LOOP_TYPE">
+				{$label BPMN_ACTIVITY ACT_LOOP_TYPE}
+			</th>
+			{END ACT_LOOP_TYPE_fieldheadercolumn}
+			{BEGIN ACT_TEST_BEFORE_fieldheadercolumn}
+			<th class="{$ACT_TEST_BEFORE_class}" {$ACT_TEST_BEFORE_style}  data-field="ACT_TEST_BEFORE">
+				{$label BPMN_ACTIVITY ACT_TEST_BEFORE}
+			</th>
+			{END ACT_TEST_BEFORE_fieldheadercolumn}
+			{BEGIN ACT_LOOP_MAXIMUM_fieldheadercolumn}
+			<th class="{$ACT_LOOP_MAXIMUM_class}" {$ACT_LOOP_MAXIMUM_style}  data-field="ACT_LOOP_MAXIMUM">
+				{$label BPMN_ACTIVITY ACT_LOOP_MAXIMUM}
+			</th>
+			{END ACT_LOOP_MAXIMUM_fieldheadercolumn}
+			{BEGIN ACT_LOOP_CONDITION_fieldheadercolumn}
+			<th class="{$ACT_LOOP_CONDITION_class}" {$ACT_LOOP_CONDITION_style}  data-field="ACT_LOOP_CONDITION">
+				{$label BPMN_ACTIVITY ACT_LOOP_CONDITION}
+			</th>
+			{END ACT_LOOP_CONDITION_fieldheadercolumn}
+			{BEGIN ACT_LOOP_CARDINALITY_fieldheadercolumn}
+			<th class="{$ACT_LOOP_CARDINALITY_class}" {$ACT_LOOP_CARDINALITY_style}  data-field="ACT_LOOP_CARDINALITY">
+				{$label BPMN_ACTIVITY ACT_LOOP_CARDINALITY}
+			</th>
+			{END ACT_LOOP_CARDINALITY_fieldheadercolumn}
+			{BEGIN ACT_LOOP_BEHAVIOR_fieldheadercolumn}
+			<th class="{$ACT_LOOP_BEHAVIOR_class}" {$ACT_LOOP_BEHAVIOR_style}  data-field="ACT_LOOP_BEHAVIOR">
+				{$label BPMN_ACTIVITY ACT_LOOP_BEHAVIOR}
+			</th>
+			{END ACT_LOOP_BEHAVIOR_fieldheadercolumn}
+			{BEGIN ACT_IS_ADHOC_fieldheadercolumn}
+			<th class="{$ACT_IS_ADHOC_class}" {$ACT_IS_ADHOC_style}  data-field="ACT_IS_ADHOC">
+				{$label BPMN_ACTIVITY ACT_IS_ADHOC}
+			</th>
+			{END ACT_IS_ADHOC_fieldheadercolumn}
+			{BEGIN ACT_IS_COLLAPSED_fieldheadercolumn}
+			<th class="{$ACT_IS_COLLAPSED_class}" {$ACT_IS_COLLAPSED_style}  data-field="ACT_IS_COLLAPSED">
+				{$label BPMN_ACTIVITY ACT_IS_COLLAPSED}
+			</th>
+			{END ACT_IS_COLLAPSED_fieldheadercolumn}
+			{BEGIN ACT_COMPLETION_CONDITION_fieldheadercolumn}
+			<th class="{$ACT_COMPLETION_CONDITION_class}" {$ACT_COMPLETION_CONDITION_style}  data-field="ACT_COMPLETION_CONDITION">
+				{$label BPMN_ACTIVITY ACT_COMPLETION_CONDITION}
+			</th>
+			{END ACT_COMPLETION_CONDITION_fieldheadercolumn}
+			{BEGIN ACT_ORDERING_fieldheadercolumn}
+			<th class="{$ACT_ORDERING_class}" {$ACT_ORDERING_style}  data-field="ACT_ORDERING">
+				{$label BPMN_ACTIVITY ACT_ORDERING}
+			</th>
+			{END ACT_ORDERING_fieldheadercolumn}
+			{BEGIN ACT_CANCEL_REMAINING_INSTANCES_fieldheadercolumn}
+			<th class="{$ACT_CANCEL_REMAINING_INSTANCES_class}" {$ACT_CANCEL_REMAINING_INSTANCES_style}  data-field="ACT_CANCEL_REMAINING_INSTANCES">
+				{$label BPMN_ACTIVITY ACT_CANCEL_REMAINING_INSTANCES}
+			</th>
+			{END ACT_CANCEL_REMAINING_INSTANCES_fieldheadercolumn}
+			{BEGIN ACT_PROTOCOL_fieldheadercolumn}
+			<th class="{$ACT_PROTOCOL_class}" {$ACT_PROTOCOL_style}  data-field="ACT_PROTOCOL">
+				{$label BPMN_ACTIVITY ACT_PROTOCOL}
+			</th>
+			{END ACT_PROTOCOL_fieldheadercolumn}
+			{BEGIN ACT_METHOD_fieldheadercolumn}
+			<th class="{$ACT_METHOD_class}" {$ACT_METHOD_style}  data-field="ACT_METHOD">
+				{$label BPMN_ACTIVITY ACT_METHOD}
+			</th>
+			{END ACT_METHOD_fieldheadercolumn}
+			{BEGIN ACT_IS_GLOBAL_fieldheadercolumn}
+			<th class="{$ACT_IS_GLOBAL_class}" {$ACT_IS_GLOBAL_style}  data-field="ACT_IS_GLOBAL">
+				{$label BPMN_ACTIVITY ACT_IS_GLOBAL}
+			</th>
+			{END ACT_IS_GLOBAL_fieldheadercolumn}
+			{BEGIN ACT_REFERER_fieldheadercolumn}
+			<th class="{$ACT_REFERER_class}" {$ACT_REFERER_style}  data-field="ACT_REFERER">
+				{$label BPMN_ACTIVITY ACT_REFERER}
+			</th>
+			{END ACT_REFERER_fieldheadercolumn}
+			{BEGIN ACT_DEFAULT_FLOW_fieldheadercolumn}
+			<th class="{$ACT_DEFAULT_FLOW_class}" {$ACT_DEFAULT_FLOW_style}  data-field="ACT_DEFAULT_FLOW">
+				{$label BPMN_ACTIVITY ACT_DEFAULT_FLOW}
+			</th>
+			{END ACT_DEFAULT_FLOW_fieldheadercolumn}
+			{BEGIN ACT_MASTER_DIAGRAM_fieldheadercolumn}
+			<th class="{$ACT_MASTER_DIAGRAM_class}" {$ACT_MASTER_DIAGRAM_style}  data-field="ACT_MASTER_DIAGRAM">
+				{$label BPMN_ACTIVITY ACT_MASTER_DIAGRAM}
+			</th>
+			{END ACT_MASTER_DIAGRAM_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN ACT_UID_fieldcolumn}
+			<td  class="{$ACT_UID_class}" {$ACT_UID_style} {$recordattrs}>
+				{$ACT_UID_value}
+			</td>
+			{END ACT_UID_fieldcolumn}
+			{BEGIN PRJ_UID_fieldcolumn}
+			<td  class="{$PRJ_UID_class}" {$PRJ_UID_style} {$recordattrs}>
+				{$PRJ_UID_value}
+			</td>
+			{END PRJ_UID_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN ACT_NAME_fieldcolumn}
+			<td  class="{$ACT_NAME_class}" {$ACT_NAME_style} {$recordattrs}>
+				{$ACT_NAME_value}
+			</td>
+			{END ACT_NAME_fieldcolumn}
+			{BEGIN ACT_TYPE_fieldcolumn}
+			<td  class="{$ACT_TYPE_class}" {$ACT_TYPE_style} {$recordattrs}>
+				{$ACT_TYPE_value}
+			</td>
+			{END ACT_TYPE_fieldcolumn}
+			{BEGIN ACT_IS_FOR_COMPENSATION_fieldcolumn}
+			<td  class="{$ACT_IS_FOR_COMPENSATION_class}" {$ACT_IS_FOR_COMPENSATION_style} {$recordattrs}>
+				{$ACT_IS_FOR_COMPENSATION_value}
+			</td>
+			{END ACT_IS_FOR_COMPENSATION_fieldcolumn}
+			{BEGIN ACT_START_QUANTITY_fieldcolumn}
+			<td  class="{$ACT_START_QUANTITY_class}" {$ACT_START_QUANTITY_style} {$recordattrs}>
+				{$ACT_START_QUANTITY_value}
+			</td>
+			{END ACT_START_QUANTITY_fieldcolumn}
+			{BEGIN ACT_COMPLETION_QUANTITY_fieldcolumn}
+			<td  class="{$ACT_COMPLETION_QUANTITY_class}" {$ACT_COMPLETION_QUANTITY_style} {$recordattrs}>
+				{$ACT_COMPLETION_QUANTITY_value}
+			</td>
+			{END ACT_COMPLETION_QUANTITY_fieldcolumn}
+			{BEGIN ACT_TASK_TYPE_fieldcolumn}
+			<td  class="{$ACT_TASK_TYPE_class}" {$ACT_TASK_TYPE_style} {$recordattrs}>
+				{$ACT_TASK_TYPE_value}
+			</td>
+			{END ACT_TASK_TYPE_fieldcolumn}
+			{BEGIN ACT_IMPLEMENTATION_fieldcolumn}
+			<td  class="{$ACT_IMPLEMENTATION_class}" {$ACT_IMPLEMENTATION_style} {$recordattrs}>
+				{$ACT_IMPLEMENTATION_value}
+			</td>
+			{END ACT_IMPLEMENTATION_fieldcolumn}
+			{BEGIN ACT_INSTANTIATE_fieldcolumn}
+			<td  class="{$ACT_INSTANTIATE_class}" {$ACT_INSTANTIATE_style} {$recordattrs}>
+				{$ACT_INSTANTIATE_value}
+			</td>
+			{END ACT_INSTANTIATE_fieldcolumn}
+			{BEGIN ACT_SCRIPT_TYPE_fieldcolumn}
+			<td  class="{$ACT_SCRIPT_TYPE_class}" {$ACT_SCRIPT_TYPE_style} {$recordattrs}>
+				{$ACT_SCRIPT_TYPE_value}
+			</td>
+			{END ACT_SCRIPT_TYPE_fieldcolumn}
+			{BEGIN ACT_SCRIPT_fieldcolumn}
+			<td  class="{$ACT_SCRIPT_class}" {$ACT_SCRIPT_style} {$recordattrs}>
+				{$ACT_SCRIPT_value}
+			</td>
+			{END ACT_SCRIPT_fieldcolumn}
+			{BEGIN ACT_LOOP_TYPE_fieldcolumn}
+			<td  class="{$ACT_LOOP_TYPE_class}" {$ACT_LOOP_TYPE_style} {$recordattrs}>
+				{$ACT_LOOP_TYPE_value}
+			</td>
+			{END ACT_LOOP_TYPE_fieldcolumn}
+			{BEGIN ACT_TEST_BEFORE_fieldcolumn}
+			<td  class="{$ACT_TEST_BEFORE_class}" {$ACT_TEST_BEFORE_style} {$recordattrs}>
+				{$ACT_TEST_BEFORE_value}
+			</td>
+			{END ACT_TEST_BEFORE_fieldcolumn}
+			{BEGIN ACT_LOOP_MAXIMUM_fieldcolumn}
+			<td  class="{$ACT_LOOP_MAXIMUM_class}" {$ACT_LOOP_MAXIMUM_style} {$recordattrs}>
+				{$ACT_LOOP_MAXIMUM_value}
+			</td>
+			{END ACT_LOOP_MAXIMUM_fieldcolumn}
+			{BEGIN ACT_LOOP_CONDITION_fieldcolumn}
+			<td  class="{$ACT_LOOP_CONDITION_class}" {$ACT_LOOP_CONDITION_style} {$recordattrs}>
+				{$ACT_LOOP_CONDITION_value}
+			</td>
+			{END ACT_LOOP_CONDITION_fieldcolumn}
+			{BEGIN ACT_LOOP_CARDINALITY_fieldcolumn}
+			<td  class="{$ACT_LOOP_CARDINALITY_class}" {$ACT_LOOP_CARDINALITY_style} {$recordattrs}>
+				{$ACT_LOOP_CARDINALITY_value}
+			</td>
+			{END ACT_LOOP_CARDINALITY_fieldcolumn}
+			{BEGIN ACT_LOOP_BEHAVIOR_fieldcolumn}
+			<td  class="{$ACT_LOOP_BEHAVIOR_class}" {$ACT_LOOP_BEHAVIOR_style} {$recordattrs}>
+				{$ACT_LOOP_BEHAVIOR_value}
+			</td>
+			{END ACT_LOOP_BEHAVIOR_fieldcolumn}
+			{BEGIN ACT_IS_ADHOC_fieldcolumn}
+			<td  class="{$ACT_IS_ADHOC_class}" {$ACT_IS_ADHOC_style} {$recordattrs}>
+				{$ACT_IS_ADHOC_value}
+			</td>
+			{END ACT_IS_ADHOC_fieldcolumn}
+			{BEGIN ACT_IS_COLLAPSED_fieldcolumn}
+			<td  class="{$ACT_IS_COLLAPSED_class}" {$ACT_IS_COLLAPSED_style} {$recordattrs}>
+				{$ACT_IS_COLLAPSED_value}
+			</td>
+			{END ACT_IS_COLLAPSED_fieldcolumn}
+			{BEGIN ACT_COMPLETION_CONDITION_fieldcolumn}
+			<td  class="{$ACT_COMPLETION_CONDITION_class}" {$ACT_COMPLETION_CONDITION_style} {$recordattrs}>
+				{$ACT_COMPLETION_CONDITION_value}
+			</td>
+			{END ACT_COMPLETION_CONDITION_fieldcolumn}
+			{BEGIN ACT_ORDERING_fieldcolumn}
+			<td  class="{$ACT_ORDERING_class}" {$ACT_ORDERING_style} {$recordattrs}>
+				{$ACT_ORDERING_value}
+			</td>
+			{END ACT_ORDERING_fieldcolumn}
+			{BEGIN ACT_CANCEL_REMAINING_INSTANCES_fieldcolumn}
+			<td  class="{$ACT_CANCEL_REMAINING_INSTANCES_class}" {$ACT_CANCEL_REMAINING_INSTANCES_style} {$recordattrs}>
+				{$ACT_CANCEL_REMAINING_INSTANCES_value}
+			</td>
+			{END ACT_CANCEL_REMAINING_INSTANCES_fieldcolumn}
+			{BEGIN ACT_PROTOCOL_fieldcolumn}
+			<td  class="{$ACT_PROTOCOL_class}" {$ACT_PROTOCOL_style} {$recordattrs}>
+				{$ACT_PROTOCOL_value}
+			</td>
+			{END ACT_PROTOCOL_fieldcolumn}
+			{BEGIN ACT_METHOD_fieldcolumn}
+			<td  class="{$ACT_METHOD_class}" {$ACT_METHOD_style} {$recordattrs}>
+				{$ACT_METHOD_value}
+			</td>
+			{END ACT_METHOD_fieldcolumn}
+			{BEGIN ACT_IS_GLOBAL_fieldcolumn}
+			<td  class="{$ACT_IS_GLOBAL_class}" {$ACT_IS_GLOBAL_style} {$recordattrs}>
+				{$ACT_IS_GLOBAL_value}
+			</td>
+			{END ACT_IS_GLOBAL_fieldcolumn}
+			{BEGIN ACT_REFERER_fieldcolumn}
+			<td  class="{$ACT_REFERER_class}" {$ACT_REFERER_style} {$recordattrs}>
+				{$ACT_REFERER_value}
+			</td>
+			{END ACT_REFERER_fieldcolumn}
+			{BEGIN ACT_DEFAULT_FLOW_fieldcolumn}
+			<td  class="{$ACT_DEFAULT_FLOW_class}" {$ACT_DEFAULT_FLOW_style} {$recordattrs}>
+				{$ACT_DEFAULT_FLOW_value}
+			</td>
+			{END ACT_DEFAULT_FLOW_fieldcolumn}
+			{BEGIN ACT_MASTER_DIAGRAM_fieldcolumn}
+			<td  class="{$ACT_MASTER_DIAGRAM_class}" {$ACT_MASTER_DIAGRAM_style} {$recordattrs}>
+				{$ACT_MASTER_DIAGRAM_value}
+			</td>
+			{END ACT_MASTER_DIAGRAM_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

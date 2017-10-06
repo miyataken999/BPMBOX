@@ -1,0 +1,378 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel USR_REPORTING view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN USR_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_UID} bs-viewform-group" data-fieldname="USR_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_UID}">
+			{$label USR_REPORTING USR_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_UID} bs-viewform-group" data-fieldname="TAS_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_UID}">
+			{$label USR_REPORTING TAS_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label USR_REPORTING PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN MONTH_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_MONTH} bs-viewform-group" data-fieldname="MONTH">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_MONTH}">
+			{$label USR_REPORTING MONTH}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$MONTH_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END MONTH_fieldblock}
+	{BEGIN YEAR_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_YEAR} bs-viewform-group" data-fieldname="YEAR">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_YEAR}">
+			{$label USR_REPORTING YEAR}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$YEAR_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END YEAR_fieldblock}
+	{BEGIN TOTAL_QUEUE_TIME_BY_TASK_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TOTAL_QUEUE_TIME_BY_TASK} bs-viewform-group" data-fieldname="TOTAL_QUEUE_TIME_BY_TASK">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TOTAL_QUEUE_TIME_BY_TASK}">
+			{$label USR_REPORTING TOTAL_QUEUE_TIME_BY_TASK}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TOTAL_QUEUE_TIME_BY_TASK_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TOTAL_QUEUE_TIME_BY_TASK_fieldblock}
+	{BEGIN TOTAL_TIME_BY_TASK_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TOTAL_TIME_BY_TASK} bs-viewform-group" data-fieldname="TOTAL_TIME_BY_TASK">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TOTAL_TIME_BY_TASK}">
+			{$label USR_REPORTING TOTAL_TIME_BY_TASK}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TOTAL_TIME_BY_TASK_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TOTAL_TIME_BY_TASK_fieldblock}
+	{BEGIN TOTAL_CASES_IN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TOTAL_CASES_IN} bs-viewform-group" data-fieldname="TOTAL_CASES_IN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TOTAL_CASES_IN}">
+			{$label USR_REPORTING TOTAL_CASES_IN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TOTAL_CASES_IN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TOTAL_CASES_IN_fieldblock}
+	{BEGIN TOTAL_CASES_OUT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TOTAL_CASES_OUT} bs-viewform-group" data-fieldname="TOTAL_CASES_OUT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TOTAL_CASES_OUT}">
+			{$label USR_REPORTING TOTAL_CASES_OUT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TOTAL_CASES_OUT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TOTAL_CASES_OUT_fieldblock}
+	{BEGIN USER_HOUR_COST_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USER_HOUR_COST} bs-viewform-group" data-fieldname="USER_HOUR_COST">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USER_HOUR_COST}">
+			{$label USR_REPORTING USER_HOUR_COST}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USER_HOUR_COST_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USER_HOUR_COST_fieldblock}
+	{BEGIN AVG_TIME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AVG_TIME} bs-viewform-group" data-fieldname="AVG_TIME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AVG_TIME}">
+			{$label USR_REPORTING AVG_TIME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AVG_TIME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AVG_TIME_fieldblock}
+	{BEGIN SDV_TIME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_SDV_TIME} bs-viewform-group" data-fieldname="SDV_TIME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_SDV_TIME}">
+			{$label USR_REPORTING SDV_TIME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$SDV_TIME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END SDV_TIME_fieldblock}
+	{BEGIN CONFIGURED_TASK_TIME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CONFIGURED_TASK_TIME} bs-viewform-group" data-fieldname="CONFIGURED_TASK_TIME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CONFIGURED_TASK_TIME}">
+			{$label USR_REPORTING CONFIGURED_TASK_TIME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CONFIGURED_TASK_TIME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CONFIGURED_TASK_TIME_fieldblock}
+	{BEGIN TOTAL_CASES_OVERDUE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TOTAL_CASES_OVERDUE} bs-viewform-group" data-fieldname="TOTAL_CASES_OVERDUE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TOTAL_CASES_OVERDUE}">
+			{$label USR_REPORTING TOTAL_CASES_OVERDUE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TOTAL_CASES_OVERDUE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TOTAL_CASES_OVERDUE_fieldblock}
+	{BEGIN TOTAL_CASES_ON_TIME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TOTAL_CASES_ON_TIME} bs-viewform-group" data-fieldname="TOTAL_CASES_ON_TIME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TOTAL_CASES_ON_TIME}">
+			{$label USR_REPORTING TOTAL_CASES_ON_TIME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TOTAL_CASES_ON_TIME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TOTAL_CASES_ON_TIME_fieldblock}
+	{BEGIN PRO_COST_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_COST} bs-viewform-group" data-fieldname="PRO_COST">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_COST}">
+			{$label USR_REPORTING PRO_COST}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_COST_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_COST_fieldblock}
+	{BEGIN PRO_UNIT_COST_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UNIT_COST} bs-viewform-group" data-fieldname="PRO_UNIT_COST">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UNIT_COST}">
+			{$label USR_REPORTING PRO_UNIT_COST}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UNIT_COST_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UNIT_COST_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

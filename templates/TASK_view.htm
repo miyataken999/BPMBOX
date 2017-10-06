@@ -1,0 +1,866 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel TASK view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label TASK PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_UID} bs-viewform-group" data-fieldname="TAS_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_UID}">
+			{$label TASK TAS_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_UID_fieldblock}
+	{BEGIN TAS_TITLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TITLE} bs-viewform-group" data-fieldname="TAS_TITLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TITLE}">
+			{$label TASK TAS_TITLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TITLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TITLE_fieldblock}
+	{BEGIN TAS_DESCRIPTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DESCRIPTION} bs-viewform-group" data-fieldname="TAS_DESCRIPTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DESCRIPTION}">
+			{$label TASK TAS_DESCRIPTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DESCRIPTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DESCRIPTION_fieldblock}
+	{BEGIN TAS_DEF_TITLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DEF_TITLE} bs-viewform-group" data-fieldname="TAS_DEF_TITLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DEF_TITLE}">
+			{$label TASK TAS_DEF_TITLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DEF_TITLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DEF_TITLE_fieldblock}
+	{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DEF_SUBJECT_MESSAGE} bs-viewform-group" data-fieldname="TAS_DEF_SUBJECT_MESSAGE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DEF_SUBJECT_MESSAGE}">
+			{$label TASK TAS_DEF_SUBJECT_MESSAGE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DEF_SUBJECT_MESSAGE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DEF_SUBJECT_MESSAGE_fieldblock}
+	{BEGIN TAS_DEF_PROC_CODE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DEF_PROC_CODE} bs-viewform-group" data-fieldname="TAS_DEF_PROC_CODE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DEF_PROC_CODE}">
+			{$label TASK TAS_DEF_PROC_CODE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DEF_PROC_CODE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DEF_PROC_CODE_fieldblock}
+	{BEGIN TAS_DEF_MESSAGE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DEF_MESSAGE} bs-viewform-group" data-fieldname="TAS_DEF_MESSAGE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DEF_MESSAGE}">
+			{$label TASK TAS_DEF_MESSAGE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DEF_MESSAGE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DEF_MESSAGE_fieldblock}
+	{BEGIN TAS_DEF_DESCRIPTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DEF_DESCRIPTION} bs-viewform-group" data-fieldname="TAS_DEF_DESCRIPTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DEF_DESCRIPTION}">
+			{$label TASK TAS_DEF_DESCRIPTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DEF_DESCRIPTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DEF_DESCRIPTION_fieldblock}
+	{BEGIN TAS_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TYPE} bs-viewform-group" data-fieldname="TAS_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TYPE}">
+			{$label TASK TAS_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TYPE_fieldblock}
+	{BEGIN TAS_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DURATION} bs-viewform-group" data-fieldname="TAS_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DURATION}">
+			{$label TASK TAS_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DURATION_fieldblock}
+	{BEGIN TAS_DELAY_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DELAY_TYPE} bs-viewform-group" data-fieldname="TAS_DELAY_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DELAY_TYPE}">
+			{$label TASK TAS_DELAY_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DELAY_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DELAY_TYPE_fieldblock}
+	{BEGIN TAS_TEMPORIZER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TEMPORIZER} bs-viewform-group" data-fieldname="TAS_TEMPORIZER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TEMPORIZER}">
+			{$label TASK TAS_TEMPORIZER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TEMPORIZER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TEMPORIZER_fieldblock}
+	{BEGIN TAS_TYPE_DAY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TYPE_DAY} bs-viewform-group" data-fieldname="TAS_TYPE_DAY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TYPE_DAY}">
+			{$label TASK TAS_TYPE_DAY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TYPE_DAY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TYPE_DAY_fieldblock}
+	{BEGIN TAS_TIMEUNIT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TIMEUNIT} bs-viewform-group" data-fieldname="TAS_TIMEUNIT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TIMEUNIT}">
+			{$label TASK TAS_TIMEUNIT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TIMEUNIT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TIMEUNIT_fieldblock}
+	{BEGIN TAS_ALERT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_ALERT} bs-viewform-group" data-fieldname="TAS_ALERT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_ALERT}">
+			{$label TASK TAS_ALERT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_ALERT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_ALERT_fieldblock}
+	{BEGIN TAS_PRIORITY_VARIABLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_PRIORITY_VARIABLE} bs-viewform-group" data-fieldname="TAS_PRIORITY_VARIABLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_PRIORITY_VARIABLE}">
+			{$label TASK TAS_PRIORITY_VARIABLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_PRIORITY_VARIABLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_PRIORITY_VARIABLE_fieldblock}
+	{BEGIN TAS_ASSIGN_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_ASSIGN_TYPE} bs-viewform-group" data-fieldname="TAS_ASSIGN_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_ASSIGN_TYPE}">
+			{$label TASK TAS_ASSIGN_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_ASSIGN_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_ASSIGN_TYPE_fieldblock}
+	{BEGIN TAS_ASSIGN_VARIABLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_ASSIGN_VARIABLE} bs-viewform-group" data-fieldname="TAS_ASSIGN_VARIABLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_ASSIGN_VARIABLE}">
+			{$label TASK TAS_ASSIGN_VARIABLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_ASSIGN_VARIABLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_ASSIGN_VARIABLE_fieldblock}
+	{BEGIN TAS_GROUP_VARIABLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_GROUP_VARIABLE} bs-viewform-group" data-fieldname="TAS_GROUP_VARIABLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_GROUP_VARIABLE}">
+			{$label TASK TAS_GROUP_VARIABLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_GROUP_VARIABLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_GROUP_VARIABLE_fieldblock}
+	{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_MI_INSTANCE_VARIABLE} bs-viewform-group" data-fieldname="TAS_MI_INSTANCE_VARIABLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_MI_INSTANCE_VARIABLE}">
+			{$label TASK TAS_MI_INSTANCE_VARIABLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_MI_INSTANCE_VARIABLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_MI_INSTANCE_VARIABLE_fieldblock}
+	{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_MI_COMPLETE_VARIABLE} bs-viewform-group" data-fieldname="TAS_MI_COMPLETE_VARIABLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_MI_COMPLETE_VARIABLE}">
+			{$label TASK TAS_MI_COMPLETE_VARIABLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_MI_COMPLETE_VARIABLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_MI_COMPLETE_VARIABLE_fieldblock}
+	{BEGIN TAS_ASSIGN_LOCATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_ASSIGN_LOCATION} bs-viewform-group" data-fieldname="TAS_ASSIGN_LOCATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_ASSIGN_LOCATION}">
+			{$label TASK TAS_ASSIGN_LOCATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_ASSIGN_LOCATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_ASSIGN_LOCATION_fieldblock}
+	{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_ASSIGN_LOCATION_ADHOC} bs-viewform-group" data-fieldname="TAS_ASSIGN_LOCATION_ADHOC">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_ASSIGN_LOCATION_ADHOC}">
+			{$label TASK TAS_ASSIGN_LOCATION_ADHOC}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_ASSIGN_LOCATION_ADHOC_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_ASSIGN_LOCATION_ADHOC_fieldblock}
+	{BEGIN TAS_TRANSFER_FLY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TRANSFER_FLY} bs-viewform-group" data-fieldname="TAS_TRANSFER_FLY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TRANSFER_FLY}">
+			{$label TASK TAS_TRANSFER_FLY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TRANSFER_FLY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TRANSFER_FLY_fieldblock}
+	{BEGIN TAS_LAST_ASSIGNED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_LAST_ASSIGNED} bs-viewform-group" data-fieldname="TAS_LAST_ASSIGNED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_LAST_ASSIGNED}">
+			{$label TASK TAS_LAST_ASSIGNED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_LAST_ASSIGNED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_LAST_ASSIGNED_fieldblock}
+	{BEGIN TAS_USER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_USER} bs-viewform-group" data-fieldname="TAS_USER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_USER}">
+			{$label TASK TAS_USER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_USER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_USER_fieldblock}
+	{BEGIN TAS_CAN_UPLOAD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_CAN_UPLOAD} bs-viewform-group" data-fieldname="TAS_CAN_UPLOAD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_CAN_UPLOAD}">
+			{$label TASK TAS_CAN_UPLOAD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_CAN_UPLOAD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_CAN_UPLOAD_fieldblock}
+	{BEGIN TAS_VIEW_UPLOAD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_VIEW_UPLOAD} bs-viewform-group" data-fieldname="TAS_VIEW_UPLOAD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_VIEW_UPLOAD}">
+			{$label TASK TAS_VIEW_UPLOAD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_VIEW_UPLOAD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_VIEW_UPLOAD_fieldblock}
+	{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_VIEW_ADDITIONAL_DOCUMENTATION} bs-viewform-group" data-fieldname="TAS_VIEW_ADDITIONAL_DOCUMENTATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_VIEW_ADDITIONAL_DOCUMENTATION}">
+			{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldblock}
+	{BEGIN TAS_CAN_CANCEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_CAN_CANCEL} bs-viewform-group" data-fieldname="TAS_CAN_CANCEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_CAN_CANCEL}">
+			{$label TASK TAS_CAN_CANCEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_CAN_CANCEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_CAN_CANCEL_fieldblock}
+	{BEGIN TAS_OWNER_APP_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_OWNER_APP} bs-viewform-group" data-fieldname="TAS_OWNER_APP">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_OWNER_APP}">
+			{$label TASK TAS_OWNER_APP}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_OWNER_APP_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_OWNER_APP_fieldblock}
+	{BEGIN STG_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_STG_UID} bs-viewform-group" data-fieldname="STG_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_STG_UID}">
+			{$label TASK STG_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$STG_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END STG_UID_fieldblock}
+	{BEGIN TAS_CAN_PAUSE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_CAN_PAUSE} bs-viewform-group" data-fieldname="TAS_CAN_PAUSE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_CAN_PAUSE}">
+			{$label TASK TAS_CAN_PAUSE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_CAN_PAUSE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_CAN_PAUSE_fieldblock}
+	{BEGIN TAS_CAN_SEND_MESSAGE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_CAN_SEND_MESSAGE} bs-viewform-group" data-fieldname="TAS_CAN_SEND_MESSAGE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_CAN_SEND_MESSAGE}">
+			{$label TASK TAS_CAN_SEND_MESSAGE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_CAN_SEND_MESSAGE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_CAN_SEND_MESSAGE_fieldblock}
+	{BEGIN TAS_CAN_DELETE_DOCS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_CAN_DELETE_DOCS} bs-viewform-group" data-fieldname="TAS_CAN_DELETE_DOCS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_CAN_DELETE_DOCS}">
+			{$label TASK TAS_CAN_DELETE_DOCS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_CAN_DELETE_DOCS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_CAN_DELETE_DOCS_fieldblock}
+	{BEGIN TAS_SELF_SERVICE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SELF_SERVICE} bs-viewform-group" data-fieldname="TAS_SELF_SERVICE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SELF_SERVICE}">
+			{$label TASK TAS_SELF_SERVICE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SELF_SERVICE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SELF_SERVICE_fieldblock}
+	{BEGIN TAS_START_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_START} bs-viewform-group" data-fieldname="TAS_START">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_START}">
+			{$label TASK TAS_START}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_START_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_START_fieldblock}
+	{BEGIN TAS_TO_LAST_USER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_TO_LAST_USER} bs-viewform-group" data-fieldname="TAS_TO_LAST_USER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_TO_LAST_USER}">
+			{$label TASK TAS_TO_LAST_USER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_TO_LAST_USER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_TO_LAST_USER_fieldblock}
+	{BEGIN TAS_SEND_LAST_EMAIL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SEND_LAST_EMAIL} bs-viewform-group" data-fieldname="TAS_SEND_LAST_EMAIL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SEND_LAST_EMAIL}">
+			{$label TASK TAS_SEND_LAST_EMAIL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SEND_LAST_EMAIL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SEND_LAST_EMAIL_fieldblock}
+	{BEGIN TAS_DERIVATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DERIVATION} bs-viewform-group" data-fieldname="TAS_DERIVATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DERIVATION}">
+			{$label TASK TAS_DERIVATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DERIVATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DERIVATION_fieldblock}
+	{BEGIN TAS_POSX_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_POSX} bs-viewform-group" data-fieldname="TAS_POSX">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_POSX}">
+			{$label TASK TAS_POSX}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_POSX_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_POSX_fieldblock}
+	{BEGIN TAS_POSY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_POSY} bs-viewform-group" data-fieldname="TAS_POSY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_POSY}">
+			{$label TASK TAS_POSY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_POSY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_POSY_fieldblock}
+	{BEGIN TAS_WIDTH_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_WIDTH} bs-viewform-group" data-fieldname="TAS_WIDTH">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_WIDTH}">
+			{$label TASK TAS_WIDTH}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_WIDTH_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_WIDTH_fieldblock}
+	{BEGIN TAS_HEIGHT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_HEIGHT} bs-viewform-group" data-fieldname="TAS_HEIGHT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_HEIGHT}">
+			{$label TASK TAS_HEIGHT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_HEIGHT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_HEIGHT_fieldblock}
+	{BEGIN TAS_COLOR_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_COLOR} bs-viewform-group" data-fieldname="TAS_COLOR">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_COLOR}">
+			{$label TASK TAS_COLOR}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_COLOR_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_COLOR_fieldblock}
+	{BEGIN TAS_EVN_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_EVN_UID} bs-viewform-group" data-fieldname="TAS_EVN_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_EVN_UID}">
+			{$label TASK TAS_EVN_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_EVN_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_EVN_UID_fieldblock}
+	{BEGIN TAS_BOUNDARY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_BOUNDARY} bs-viewform-group" data-fieldname="TAS_BOUNDARY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_BOUNDARY}">
+			{$label TASK TAS_BOUNDARY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_BOUNDARY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_BOUNDARY_fieldblock}
+	{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_DERIVATION_SCREEN_TPL} bs-viewform-group" data-fieldname="TAS_DERIVATION_SCREEN_TPL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_DERIVATION_SCREEN_TPL}">
+			{$label TASK TAS_DERIVATION_SCREEN_TPL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_DERIVATION_SCREEN_TPL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_DERIVATION_SCREEN_TPL_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SELFSERVICE_TIMEOUT} bs-viewform-group" data-fieldname="TAS_SELFSERVICE_TIMEOUT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SELFSERVICE_TIMEOUT}">
+			{$label TASK TAS_SELFSERVICE_TIMEOUT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SELFSERVICE_TIMEOUT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SELFSERVICE_TIMEOUT_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TIME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SELFSERVICE_TIME} bs-viewform-group" data-fieldname="TAS_SELFSERVICE_TIME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SELFSERVICE_TIME}">
+			{$label TASK TAS_SELFSERVICE_TIME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SELFSERVICE_TIME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SELFSERVICE_TIME_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SELFSERVICE_TIME_UNIT} bs-viewform-group" data-fieldname="TAS_SELFSERVICE_TIME_UNIT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SELFSERVICE_TIME_UNIT}">
+			{$label TASK TAS_SELFSERVICE_TIME_UNIT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SELFSERVICE_TIME_UNIT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SELFSERVICE_TIME_UNIT_fieldblock}
+	{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SELFSERVICE_TRIGGER_UID} bs-viewform-group" data-fieldname="TAS_SELFSERVICE_TRIGGER_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SELFSERVICE_TRIGGER_UID}">
+			{$label TASK TAS_SELFSERVICE_TRIGGER_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SELFSERVICE_TRIGGER_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SELFSERVICE_TRIGGER_UID_fieldblock}
+	{BEGIN TAS_SELFSERVICE_EXECUTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_SELFSERVICE_EXECUTION} bs-viewform-group" data-fieldname="TAS_SELFSERVICE_EXECUTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_SELFSERVICE_EXECUTION}">
+			{$label TASK TAS_SELFSERVICE_EXECUTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_SELFSERVICE_EXECUTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_SELFSERVICE_EXECUTION_fieldblock}
+	{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_NOT_EMAIL_FROM_FORMAT} bs-viewform-group" data-fieldname="TAS_NOT_EMAIL_FROM_FORMAT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_NOT_EMAIL_FROM_FORMAT}">
+			{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_NOT_EMAIL_FROM_FORMAT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_NOT_EMAIL_FROM_FORMAT_fieldblock}
+	
+	
+
+{BEGIN details_APP_CACHE_VIEW}
+<div data-pageid="1" data-container="detailscontainer" class=" bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">履歴一覧</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_APP_CACHE_VIEW}
+		</div>
+	</div>
+</div>
+{END details_APP_CACHE_VIEW}
+		
+	
+	
+
+{BEGIN details_STEP_TRIGGER}
+<div data-pageid="1" data-container="detailscontainer" class=" bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">ステップトリガ</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_STEP_TRIGGER}
+		</div>
+	</div>
+</div>
+{END details_STEP_TRIGGER}
+		
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

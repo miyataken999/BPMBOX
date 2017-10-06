@@ -1,0 +1,121 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$PRO_UID_class}">{$label PROCESS PRO_UID}</th>
+			<th class="{$PRO_TITLE_class}">{$label PROCESS PRO_TITLE}</th>
+			<th class="{$PRO_DESCRIPTION_class}">{$label PROCESS PRO_DESCRIPTION}</th>
+			<th class="{$PRO_PARENT_class}">{$label PROCESS PRO_PARENT}</th>
+			<th class="{$PRO_TIME_class}">{$label PROCESS PRO_TIME}</th>
+			<th class="{$PRO_TIMEUNIT_class}">{$label PROCESS PRO_TIMEUNIT}</th>
+			<th class="{$PRO_STATUS_class}">{$label PROCESS PRO_STATUS}</th>
+			<th class="{$PRO_TYPE_DAY_class}">{$label PROCESS PRO_TYPE_DAY}</th>
+			<th class="{$PRO_TYPE_class}">{$label PROCESS PRO_TYPE}</th>
+			<th class="{$PRO_ASSIGNMENT_class}">{$label PROCESS PRO_ASSIGNMENT}</th>
+			<th class="{$PRO_SHOW_MAP_class}">{$label PROCESS PRO_SHOW_MAP}</th>
+			<th class="{$PRO_SHOW_MESSAGE_class}">{$label PROCESS PRO_SHOW_MESSAGE}</th>
+			<th class="{$PRO_SUBPROCESS_class}">{$label PROCESS PRO_SUBPROCESS}</th>
+			<th class="{$PRO_TRI_OPEN_class}">{$label PROCESS PRO_TRI_OPEN}</th>
+			<th class="{$PRO_TRI_DELETED_class}">{$label PROCESS PRO_TRI_DELETED}</th>
+			<th class="{$PRO_TRI_CANCELED_class}">{$label PROCESS PRO_TRI_CANCELED}</th>
+			<th class="{$PRO_TRI_PAUSED_class}">{$label PROCESS PRO_TRI_PAUSED}</th>
+			<th class="{$PRO_TRI_REASSIGNED_class}">{$label PROCESS PRO_TRI_REASSIGNED}</th>
+			<th class="{$PRO_TRI_UNPAUSED_class}">{$label PROCESS PRO_TRI_UNPAUSED}</th>
+			<th class="{$PRO_TYPE_PROCESS_class}">{$label PROCESS PRO_TYPE_PROCESS}</th>
+			<th class="{$PRO_SHOW_DELEGATE_class}">{$label PROCESS PRO_SHOW_DELEGATE}</th>
+			<th class="{$PRO_SHOW_DYNAFORM_class}">{$label PROCESS PRO_SHOW_DYNAFORM}</th>
+			<th class="{$PRO_CATEGORY_class}">{$label PROCESS PRO_CATEGORY}</th>
+			<th class="{$PRO_SUB_CATEGORY_class}">{$label PROCESS PRO_SUB_CATEGORY}</th>
+			<th class="{$PRO_INDUSTRY_class}">{$label PROCESS PRO_INDUSTRY}</th>
+			<th class="{$PRO_UPDATE_DATE_class}">{$label PROCESS PRO_UPDATE_DATE}</th>
+			<th class="{$PRO_CREATE_DATE_class}">{$label PROCESS PRO_CREATE_DATE}</th>
+			<th class="{$PRO_CREATE_USER_class}">{$label PROCESS PRO_CREATE_USER}</th>
+			<th class="{$PRO_HEIGHT_class}">{$label PROCESS PRO_HEIGHT}</th>
+			<th class="{$PRO_WIDTH_class}">{$label PROCESS PRO_WIDTH}</th>
+			<th class="{$PRO_TITLE_X_class}">{$label PROCESS PRO_TITLE_X}</th>
+			<th class="{$PRO_TITLE_Y_class}">{$label PROCESS PRO_TITLE_Y}</th>
+			<th class="{$PRO_DEBUG_class}">{$label PROCESS PRO_DEBUG}</th>
+			<th class="{$PRO_DYNAFORMS_class}">{$label PROCESS PRO_DYNAFORMS}</th>
+			<th class="{$PRO_DERIVATION_SCREEN_TPL_class}">{$label PROCESS PRO_DERIVATION_SCREEN_TPL}</th>
+			<th class="{$PRO_COST_class}">{$label PROCESS PRO_COST}</th>
+			<th class="{$PRO_UNIT_COST_class}">{$label PROCESS PRO_UNIT_COST}</th>
+			<th class="{$PRO_ITEE_class}">{$label PROCESS PRO_ITEE}</th>
+			<th class="{$PRO_ACTION_DONE_class}">{$label PROCESS PRO_ACTION_DONE}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$PRO_UID_class}">{$PRO_UID_value}</td>
+			<td class="{$PRO_TITLE_class}">{$PRO_TITLE_value}</td>
+			<td class="{$PRO_DESCRIPTION_class}">{$PRO_DESCRIPTION_value}</td>
+			<td class="{$PRO_PARENT_class}">{$PRO_PARENT_value}</td>
+			<td class="{$PRO_TIME_class}">{$PRO_TIME_value}</td>
+			<td class="{$PRO_TIMEUNIT_class}">{$PRO_TIMEUNIT_value}</td>
+			<td class="{$PRO_STATUS_class}">{$PRO_STATUS_value}</td>
+			<td class="{$PRO_TYPE_DAY_class}">{$PRO_TYPE_DAY_value}</td>
+			<td class="{$PRO_TYPE_class}">{$PRO_TYPE_value}</td>
+			<td class="{$PRO_ASSIGNMENT_class}">{$PRO_ASSIGNMENT_value}</td>
+			<td class="{$PRO_SHOW_MAP_class}">{$PRO_SHOW_MAP_value}</td>
+			<td class="{$PRO_SHOW_MESSAGE_class}">{$PRO_SHOW_MESSAGE_value}</td>
+			<td class="{$PRO_SUBPROCESS_class}">{$PRO_SUBPROCESS_value}</td>
+			<td class="{$PRO_TRI_OPEN_class}">{$PRO_TRI_OPEN_value}</td>
+			<td class="{$PRO_TRI_DELETED_class}">{$PRO_TRI_DELETED_value}</td>
+			<td class="{$PRO_TRI_CANCELED_class}">{$PRO_TRI_CANCELED_value}</td>
+			<td class="{$PRO_TRI_PAUSED_class}">{$PRO_TRI_PAUSED_value}</td>
+			<td class="{$PRO_TRI_REASSIGNED_class}">{$PRO_TRI_REASSIGNED_value}</td>
+			<td class="{$PRO_TRI_UNPAUSED_class}">{$PRO_TRI_UNPAUSED_value}</td>
+			<td class="{$PRO_TYPE_PROCESS_class}">{$PRO_TYPE_PROCESS_value}</td>
+			<td class="{$PRO_SHOW_DELEGATE_class}">{$PRO_SHOW_DELEGATE_value}</td>
+			<td class="{$PRO_SHOW_DYNAFORM_class}">{$PRO_SHOW_DYNAFORM_value}</td>
+			<td class="{$PRO_CATEGORY_class}">{$PRO_CATEGORY_value}</td>
+			<td class="{$PRO_SUB_CATEGORY_class}">{$PRO_SUB_CATEGORY_value}</td>
+			<td class="{$PRO_INDUSTRY_class}">{$PRO_INDUSTRY_value}</td>
+			<td class="{$PRO_UPDATE_DATE_class}">{$PRO_UPDATE_DATE_value}</td>
+			<td class="{$PRO_CREATE_DATE_class}">{$PRO_CREATE_DATE_value}</td>
+			<td class="{$PRO_CREATE_USER_class}">{$PRO_CREATE_USER_value}</td>
+			<td class="{$PRO_HEIGHT_class}">{$PRO_HEIGHT_value}</td>
+			<td class="{$PRO_WIDTH_class}">{$PRO_WIDTH_value}</td>
+			<td class="{$PRO_TITLE_X_class}">{$PRO_TITLE_X_value}</td>
+			<td class="{$PRO_TITLE_Y_class}">{$PRO_TITLE_Y_value}</td>
+			<td class="{$PRO_DEBUG_class}">{$PRO_DEBUG_value}</td>
+			<td class="{$PRO_DYNAFORMS_class}">{$PRO_DYNAFORMS_value}</td>
+			<td class="{$PRO_DERIVATION_SCREEN_TPL_class}">{$PRO_DERIVATION_SCREEN_TPL_value}</td>
+			<td class="{$PRO_COST_class}">{$PRO_COST_value}</td>
+			<td class="{$PRO_UNIT_COST_class}">{$PRO_UNIT_COST_value}</td>
+			<td class="{$PRO_ITEE_class}">{$PRO_ITEE_value}</td>
+			<td class="{$PRO_ACTION_DONE_class}">{$PRO_ACTION_DONE_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

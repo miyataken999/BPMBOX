@@ -1,0 +1,387 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel STEP add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN STEP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_UID}" data-fieldname="STEP_UID" data-signal-error-for="STEP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_UID}">
+		{BEGIN STEP_UID_label}{$label STEP STEP_UID}{END STEP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_UID">
+		<div class="text-muted" >
+		{$tooltip STEP STEP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label STEP PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip STEP PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label STEP TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip STEP TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN STEP_TYPE_OBJ_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_TYPE_OBJ}" data-fieldname="STEP_TYPE_OBJ" data-signal-error-for="STEP_TYPE_OBJ{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_TYPE_OBJ}">
+		{BEGIN STEP_TYPE_OBJ_label}{$label STEP STEP_TYPE_OBJ}{END STEP_TYPE_OBJ_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_TYPE_OBJ_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_TYPE_OBJ">
+		<div class="text-muted" >
+		{$tooltip STEP STEP_TYPE_OBJ}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_TYPE_OBJ_fieldblock}
+
+			{BEGIN STEP_UID_OBJ_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_UID_OBJ}" data-fieldname="STEP_UID_OBJ" data-signal-error-for="STEP_UID_OBJ{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_UID_OBJ}">
+		{BEGIN STEP_UID_OBJ_label}{$label STEP STEP_UID_OBJ}{END STEP_UID_OBJ_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_UID_OBJ_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_UID_OBJ">
+		<div class="text-muted" >
+		{$tooltip STEP STEP_UID_OBJ}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_UID_OBJ_fieldblock}
+
+			{BEGIN STEP_CONDITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_CONDITION}" data-fieldname="STEP_CONDITION" data-signal-error-for="STEP_CONDITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_CONDITION}">
+		{BEGIN STEP_CONDITION_label}{$label STEP STEP_CONDITION}{END STEP_CONDITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_CONDITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_CONDITION">
+		<div class="text-muted" >
+		{$tooltip STEP STEP_CONDITION}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_CONDITION_fieldblock}
+
+			{BEGIN STEP_POSITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_POSITION}" data-fieldname="STEP_POSITION" data-signal-error-for="STEP_POSITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_POSITION}">
+		{BEGIN STEP_POSITION_label}{$label STEP STEP_POSITION}{END STEP_POSITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_POSITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_POSITION">
+		<div class="text-muted" >
+		{$tooltip STEP STEP_POSITION}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_POSITION_fieldblock}
+
+			{BEGIN STEP_MODE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_MODE}" data-fieldname="STEP_MODE" data-signal-error-for="STEP_MODE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_MODE}">
+		{BEGIN STEP_MODE_label}{$label STEP STEP_MODE}{END STEP_MODE_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_MODE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_MODE">
+		<div class="text-muted" >
+		{$tooltip STEP STEP_MODE}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_MODE_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_STEP_TRIGGER}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">ステップトリガ
+		<span>
+{BEGIN details_inlineadd_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_STEP_TRIGGER_attrs}>インライン追加</button>
+{END details_inlineadd_STEP_TRIGGER_link}		
+{BEGIN details_add_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_STEP_TRIGGER_attrs}>追加</button>
+{END details_add_STEP_TRIGGER_link}
+{BEGIN details_edit_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_STEP_TRIGGER_attrs}>編集</button>
+{END details_edit_STEP_TRIGGER_link}
+{BEGIN details_updateselected_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_STEP_TRIGGER_attrs}>Update selected</button>
+{END details_updateselected_STEP_TRIGGER_link}
+
+
+{BEGIN details_delete_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_STEP_TRIGGER_attrs}>削除</button>
+{END details_delete_STEP_TRIGGER_link}
+
+{BEGIN saveall_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_STEP_TRIGGER_attrs} {$savealllink_STEP_TRIGGER_span}>全て保存</button>
+{END saveall_STEP_TRIGGER_link}
+{BEGIN cancelall_STEP_TRIGGER_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_STEP_TRIGGER_attrs} {$cancelalllink_STEP_TRIGGER_span}>キャンセル</button>
+{END cancelall_STEP_TRIGGER_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_STEP_TRIGGER}
+</div>
+</div>
+</div>
+{END details_STEP_TRIGGER}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

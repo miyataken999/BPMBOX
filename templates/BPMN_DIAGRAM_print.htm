@@ -1,0 +1,197 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel BPMN_DIAGRAM print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN DIA_UID_fieldheadercolumn}
+			<th class="{$DIA_UID_class}" {$DIA_UID_style}  data-field="DIA_UID">
+				{$label BPMN_DIAGRAM DIA_UID}
+			</th>
+			{END DIA_UID_fieldheadercolumn}
+			{BEGIN PRJ_UID_fieldheadercolumn}
+			<th class="{$PRJ_UID_class}" {$PRJ_UID_style}  data-field="PRJ_UID">
+				{$label BPMN_DIAGRAM PRJ_UID}
+			</th>
+			{END PRJ_UID_fieldheadercolumn}
+			{BEGIN DIA_NAME_fieldheadercolumn}
+			<th class="{$DIA_NAME_class}" {$DIA_NAME_style}  data-field="DIA_NAME">
+				{$label BPMN_DIAGRAM DIA_NAME}
+			</th>
+			{END DIA_NAME_fieldheadercolumn}
+			{BEGIN DIA_IS_CLOSABLE_fieldheadercolumn}
+			<th class="{$DIA_IS_CLOSABLE_class}" {$DIA_IS_CLOSABLE_style}  data-field="DIA_IS_CLOSABLE">
+				{$label BPMN_DIAGRAM DIA_IS_CLOSABLE}
+			</th>
+			{END DIA_IS_CLOSABLE_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN DIA_UID_fieldcolumn}
+			<td  class="{$DIA_UID_class}" {$DIA_UID_style} {$recordattrs}>
+				{$DIA_UID_value}
+			</td>
+			{END DIA_UID_fieldcolumn}
+			{BEGIN PRJ_UID_fieldcolumn}
+			<td  class="{$PRJ_UID_class}" {$PRJ_UID_style} {$recordattrs}>
+				{$PRJ_UID_value}
+			</td>
+			{END PRJ_UID_fieldcolumn}
+			{BEGIN DIA_NAME_fieldcolumn}
+			<td  class="{$DIA_NAME_class}" {$DIA_NAME_style} {$recordattrs}>
+				{$DIA_NAME_value}
+			</td>
+			{END DIA_NAME_fieldcolumn}
+			{BEGIN DIA_IS_CLOSABLE_fieldcolumn}
+			<td  class="{$DIA_IS_CLOSABLE_class}" {$DIA_IS_CLOSABLE_style} {$recordattrs}>
+				{$DIA_IS_CLOSABLE_value}
+			</td>
+			{END DIA_IS_CLOSABLE_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="5">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel ABE_CONFIGURATION add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN ABE_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_UID}" data-fieldname="ABE_UID" data-signal-error-for="ABE_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_UID}">
+		{BEGIN ABE_UID_label}{$label ABE_CONFIGURATION ABE_UID}{END ABE_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_UID">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label ABE_CONFIGURATION PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label ABE_CONFIGURATION TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN ABE_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_TYPE}" data-fieldname="ABE_TYPE" data-signal-error-for="ABE_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_TYPE}">
+		{BEGIN ABE_TYPE_label}{$label ABE_CONFIGURATION ABE_TYPE}{END ABE_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_TYPE">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_TYPE_fieldblock}
+
+			{BEGIN ABE_TEMPLATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_TEMPLATE}" data-fieldname="ABE_TEMPLATE" data-signal-error-for="ABE_TEMPLATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_TEMPLATE}">
+		{BEGIN ABE_TEMPLATE_label}{$label ABE_CONFIGURATION ABE_TEMPLATE}{END ABE_TEMPLATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_TEMPLATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_TEMPLATE">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_TEMPLATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_TEMPLATE_fieldblock}
+
+			{BEGIN ABE_DYN_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_DYN_TYPE}" data-fieldname="ABE_DYN_TYPE" data-signal-error-for="ABE_DYN_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_DYN_TYPE}">
+		{BEGIN ABE_DYN_TYPE_label}{$label ABE_CONFIGURATION ABE_DYN_TYPE}{END ABE_DYN_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_DYN_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_DYN_TYPE">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_DYN_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_DYN_TYPE_fieldblock}
+
+			{BEGIN DYN_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_UID}" data-fieldname="DYN_UID" data-signal-error-for="DYN_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_UID}">
+		{BEGIN DYN_UID_label}{$label ABE_CONFIGURATION DYN_UID}{END DYN_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_UID">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION DYN_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_UID_fieldblock}
+
+			{BEGIN ABE_EMAIL_FIELD_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_EMAIL_FIELD}" data-fieldname="ABE_EMAIL_FIELD" data-signal-error-for="ABE_EMAIL_FIELD{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_EMAIL_FIELD}">
+		{BEGIN ABE_EMAIL_FIELD_label}{$label ABE_CONFIGURATION ABE_EMAIL_FIELD}{END ABE_EMAIL_FIELD_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_EMAIL_FIELD_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_EMAIL_FIELD">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_EMAIL_FIELD}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_EMAIL_FIELD_fieldblock}
+
+			{BEGIN ABE_CASE_NOTE_IN_RESPONSE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_CASE_NOTE_IN_RESPONSE}" data-fieldname="ABE_CASE_NOTE_IN_RESPONSE" data-signal-error-for="ABE_CASE_NOTE_IN_RESPONSE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_CASE_NOTE_IN_RESPONSE}">
+		{BEGIN ABE_CASE_NOTE_IN_RESPONSE_label}{$label ABE_CONFIGURATION ABE_CASE_NOTE_IN_RESPONSE}{END ABE_CASE_NOTE_IN_RESPONSE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_CASE_NOTE_IN_RESPONSE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_CASE_NOTE_IN_RESPONSE">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_CASE_NOTE_IN_RESPONSE}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_CASE_NOTE_IN_RESPONSE_fieldblock}
+
+			{BEGIN ABE_FORCE_LOGIN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_FORCE_LOGIN}" data-fieldname="ABE_FORCE_LOGIN" data-signal-error-for="ABE_FORCE_LOGIN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_FORCE_LOGIN}">
+		{BEGIN ABE_FORCE_LOGIN_label}{$label ABE_CONFIGURATION ABE_FORCE_LOGIN}{END ABE_FORCE_LOGIN_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_FORCE_LOGIN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_FORCE_LOGIN">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_FORCE_LOGIN}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_FORCE_LOGIN_fieldblock}
+
+			{BEGIN ABE_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_CREATE_DATE}" data-fieldname="ABE_CREATE_DATE" data-signal-error-for="ABE_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_CREATE_DATE}">
+		{BEGIN ABE_CREATE_DATE_label}{$label ABE_CONFIGURATION ABE_CREATE_DATE}{END ABE_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_CREATE_DATE_fieldblock}
+
+			{BEGIN ABE_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_UPDATE_DATE}" data-fieldname="ABE_UPDATE_DATE" data-signal-error-for="ABE_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_UPDATE_DATE}">
+		{BEGIN ABE_UPDATE_DATE_label}{$label ABE_CONFIGURATION ABE_UPDATE_DATE}{END ABE_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_UPDATE_DATE_fieldblock}
+
+			{BEGIN ABE_SUBJECT_FIELD_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_SUBJECT_FIELD}" data-fieldname="ABE_SUBJECT_FIELD" data-signal-error-for="ABE_SUBJECT_FIELD{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_SUBJECT_FIELD}">
+		{BEGIN ABE_SUBJECT_FIELD_label}{$label ABE_CONFIGURATION ABE_SUBJECT_FIELD}{END ABE_SUBJECT_FIELD_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_SUBJECT_FIELD_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_SUBJECT_FIELD">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_SUBJECT_FIELD}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_SUBJECT_FIELD_fieldblock}
+
+			{BEGIN ABE_MAILSERVER_OR_MAILCURRENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_MAILSERVER_OR_MAILCURRENT}" data-fieldname="ABE_MAILSERVER_OR_MAILCURRENT" data-signal-error-for="ABE_MAILSERVER_OR_MAILCURRENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_MAILSERVER_OR_MAILCURRENT}">
+		{BEGIN ABE_MAILSERVER_OR_MAILCURRENT_label}{$label ABE_CONFIGURATION ABE_MAILSERVER_OR_MAILCURRENT}{END ABE_MAILSERVER_OR_MAILCURRENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_MAILSERVER_OR_MAILCURRENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_MAILSERVER_OR_MAILCURRENT">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_MAILSERVER_OR_MAILCURRENT}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_MAILSERVER_OR_MAILCURRENT_fieldblock}
+
+			{BEGIN ABE_CUSTOM_GRID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ABE_CUSTOM_GRID}" data-fieldname="ABE_CUSTOM_GRID" data-signal-error-for="ABE_CUSTOM_GRID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ABE_CUSTOM_GRID}">
+		{BEGIN ABE_CUSTOM_GRID_label}{$label ABE_CONFIGURATION ABE_CUSTOM_GRID}{END ABE_CUSTOM_GRID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ABE_CUSTOM_GRID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ABE_CUSTOM_GRID">
+		<div class="text-muted" >
+		{$tooltip ABE_CONFIGURATION ABE_CUSTOM_GRID}
+		</div>
+	</div>
+</div>
+</div>
+{END ABE_CUSTOM_GRID_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,1265 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+				{BEGIN asearch_link}
+		<li><a href="ROUTINES_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="ROUTINES_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="ROUTINES_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+	
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+			</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="ROUTINES_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="ROUTINES_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+							</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=SPECIFIC_NAME]:before {
+		content: "{$label ROUTINES SPECIFIC_NAME}";
+	}
+	.bs-gridcell[data-field=ROUTINE_CATALOG]:before {
+		content: "{$label ROUTINES ROUTINE_CATALOG}";
+	}
+	.bs-gridcell[data-field=ROUTINE_SCHEMA]:before {
+		content: "{$label ROUTINES ROUTINE_SCHEMA}";
+	}
+	.bs-gridcell[data-field=ROUTINE_NAME]:before {
+		content: "{$label ROUTINES ROUTINE_NAME}";
+	}
+	.bs-gridcell[data-field=ROUTINE_TYPE]:before {
+		content: "{$label ROUTINES ROUTINE_TYPE}";
+	}
+	.bs-gridcell[data-field=DATA_TYPE]:before {
+		content: "{$label ROUTINES DATA_TYPE}";
+	}
+	.bs-gridcell[data-field=CHARACTER_MAXIMUM_LENGTH]:before {
+		content: "{$label ROUTINES CHARACTER_MAXIMUM_LENGTH}";
+	}
+	.bs-gridcell[data-field=CHARACTER_OCTET_LENGTH]:before {
+		content: "{$label ROUTINES CHARACTER_OCTET_LENGTH}";
+	}
+	.bs-gridcell[data-field=NUMERIC_PRECISION]:before {
+		content: "{$label ROUTINES NUMERIC_PRECISION}";
+	}
+	.bs-gridcell[data-field=NUMERIC_SCALE]:before {
+		content: "{$label ROUTINES NUMERIC_SCALE}";
+	}
+	.bs-gridcell[data-field=DATETIME_PRECISION]:before {
+		content: "{$label ROUTINES DATETIME_PRECISION}";
+	}
+	.bs-gridcell[data-field=CHARACTER_SET_NAME]:before {
+		content: "{$label ROUTINES CHARACTER_SET_NAME}";
+	}
+	.bs-gridcell[data-field=COLLATION_NAME]:before {
+		content: "{$label ROUTINES COLLATION_NAME}";
+	}
+	.bs-gridcell[data-field=DTD_IDENTIFIER]:before {
+		content: "{$label ROUTINES DTD_IDENTIFIER}";
+	}
+	.bs-gridcell[data-field=ROUTINE_BODY]:before {
+		content: "{$label ROUTINES ROUTINE_BODY}";
+	}
+	.bs-gridcell[data-field=ROUTINE_DEFINITION]:before {
+		content: "{$label ROUTINES ROUTINE_DEFINITION}";
+	}
+	.bs-gridcell[data-field=EXTERNAL_NAME]:before {
+		content: "{$label ROUTINES EXTERNAL_NAME}";
+	}
+	.bs-gridcell[data-field=EXTERNAL_LANGUAGE]:before {
+		content: "{$label ROUTINES EXTERNAL_LANGUAGE}";
+	}
+	.bs-gridcell[data-field=PARAMETER_STYLE]:before {
+		content: "{$label ROUTINES PARAMETER_STYLE}";
+	}
+	.bs-gridcell[data-field=IS_DETERMINISTIC]:before {
+		content: "{$label ROUTINES IS_DETERMINISTIC}";
+	}
+	.bs-gridcell[data-field=SQL_DATA_ACCESS]:before {
+		content: "{$label ROUTINES SQL_DATA_ACCESS}";
+	}
+	.bs-gridcell[data-field=SQL_PATH]:before {
+		content: "{$label ROUTINES SQL_PATH}";
+	}
+	.bs-gridcell[data-field=SECURITY_TYPE]:before {
+		content: "{$label ROUTINES SECURITY_TYPE}";
+	}
+	.bs-gridcell[data-field=CREATED]:before {
+		content: "{$label ROUTINES CREATED}";
+	}
+	.bs-gridcell[data-field=LAST_ALTERED]:before {
+		content: "{$label ROUTINES LAST_ALTERED}";
+	}
+	.bs-gridcell[data-field=SQL_MODE]:before {
+		content: "{$label ROUTINES SQL_MODE}";
+	}
+	.bs-gridcell[data-field=ROUTINE_COMMENT]:before {
+		content: "{$label ROUTINES ROUTINE_COMMENT}";
+	}
+	.bs-gridcell[data-field=DEFINER]:before {
+		content: "{$label ROUTINES DEFINER}";
+	}
+	.bs-gridcell[data-field=CHARACTER_SET_CLIENT]:before {
+		content: "{$label ROUTINES CHARACTER_SET_CLIENT}";
+	}
+	.bs-gridcell[data-field=COLLATION_CONNECTION]:before {
+		content: "{$label ROUTINES COLLATION_CONNECTION}";
+	}
+	.bs-gridcell[data-field=DATABASE_COLLATION]:before {
+		content: "{$label ROUTINES DATABASE_COLLATION}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+									
+																		
+									{BEGIN SPECIFIC_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SPECIFIC_NAME_class}" data-field=SPECIFIC_NAME>
+									{BEGIN SPECIFIC_NAME_fieldheader}
+																				<span {$SPECIFIC_NAME_orderlinkattrs}>
+											{$label ROUTINES SPECIFIC_NAME}
+										</span>
+									{END SPECIFIC_NAME_fieldheader}
+									</th>
+									{END SPECIFIC_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_CATALOG_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_CATALOG_class}" data-field=ROUTINE_CATALOG>
+									{BEGIN ROUTINE_CATALOG_fieldheader}
+																				<span {$ROUTINE_CATALOG_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_CATALOG}
+										</span>
+									{END ROUTINE_CATALOG_fieldheader}
+									</th>
+									{END ROUTINE_CATALOG_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_SCHEMA_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_SCHEMA_class}" data-field=ROUTINE_SCHEMA>
+									{BEGIN ROUTINE_SCHEMA_fieldheader}
+																				<span {$ROUTINE_SCHEMA_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_SCHEMA}
+										</span>
+									{END ROUTINE_SCHEMA_fieldheader}
+									</th>
+									{END ROUTINE_SCHEMA_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_NAME_class}" data-field=ROUTINE_NAME>
+									{BEGIN ROUTINE_NAME_fieldheader}
+																				<span {$ROUTINE_NAME_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_NAME}
+										</span>
+									{END ROUTINE_NAME_fieldheader}
+									</th>
+									{END ROUTINE_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_TYPE_class}" data-field=ROUTINE_TYPE>
+									{BEGIN ROUTINE_TYPE_fieldheader}
+																				<span {$ROUTINE_TYPE_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_TYPE}
+										</span>
+									{END ROUTINE_TYPE_fieldheader}
+									</th>
+									{END ROUTINE_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATA_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATA_TYPE_class}" data-field=DATA_TYPE>
+									{BEGIN DATA_TYPE_fieldheader}
+																				<span {$DATA_TYPE_orderlinkattrs}>
+											{$label ROUTINES DATA_TYPE}
+										</span>
+									{END DATA_TYPE_fieldheader}
+									</th>
+									{END DATA_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHARACTER_MAXIMUM_LENGTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHARACTER_MAXIMUM_LENGTH_class}" data-field=CHARACTER_MAXIMUM_LENGTH>
+									{BEGIN CHARACTER_MAXIMUM_LENGTH_fieldheader}
+																				<span {$CHARACTER_MAXIMUM_LENGTH_orderlinkattrs}>
+											{$label ROUTINES CHARACTER_MAXIMUM_LENGTH}
+										</span>
+									{END CHARACTER_MAXIMUM_LENGTH_fieldheader}
+									</th>
+									{END CHARACTER_MAXIMUM_LENGTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHARACTER_OCTET_LENGTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHARACTER_OCTET_LENGTH_class}" data-field=CHARACTER_OCTET_LENGTH>
+									{BEGIN CHARACTER_OCTET_LENGTH_fieldheader}
+																				<span {$CHARACTER_OCTET_LENGTH_orderlinkattrs}>
+											{$label ROUTINES CHARACTER_OCTET_LENGTH}
+										</span>
+									{END CHARACTER_OCTET_LENGTH_fieldheader}
+									</th>
+									{END CHARACTER_OCTET_LENGTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN NUMERIC_PRECISION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$NUMERIC_PRECISION_class}" data-field=NUMERIC_PRECISION>
+									{BEGIN NUMERIC_PRECISION_fieldheader}
+																				<span {$NUMERIC_PRECISION_orderlinkattrs}>
+											{$label ROUTINES NUMERIC_PRECISION}
+										</span>
+									{END NUMERIC_PRECISION_fieldheader}
+									</th>
+									{END NUMERIC_PRECISION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN NUMERIC_SCALE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$NUMERIC_SCALE_class}" data-field=NUMERIC_SCALE>
+									{BEGIN NUMERIC_SCALE_fieldheader}
+																				<span {$NUMERIC_SCALE_orderlinkattrs}>
+											{$label ROUTINES NUMERIC_SCALE}
+										</span>
+									{END NUMERIC_SCALE_fieldheader}
+									</th>
+									{END NUMERIC_SCALE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATETIME_PRECISION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATETIME_PRECISION_class}" data-field=DATETIME_PRECISION>
+									{BEGIN DATETIME_PRECISION_fieldheader}
+																				<span {$DATETIME_PRECISION_orderlinkattrs}>
+											{$label ROUTINES DATETIME_PRECISION}
+										</span>
+									{END DATETIME_PRECISION_fieldheader}
+									</th>
+									{END DATETIME_PRECISION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHARACTER_SET_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHARACTER_SET_NAME_class}" data-field=CHARACTER_SET_NAME>
+									{BEGIN CHARACTER_SET_NAME_fieldheader}
+																				<span {$CHARACTER_SET_NAME_orderlinkattrs}>
+											{$label ROUTINES CHARACTER_SET_NAME}
+										</span>
+									{END CHARACTER_SET_NAME_fieldheader}
+									</th>
+									{END CHARACTER_SET_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN COLLATION_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$COLLATION_NAME_class}" data-field=COLLATION_NAME>
+									{BEGIN COLLATION_NAME_fieldheader}
+																				<span {$COLLATION_NAME_orderlinkattrs}>
+											{$label ROUTINES COLLATION_NAME}
+										</span>
+									{END COLLATION_NAME_fieldheader}
+									</th>
+									{END COLLATION_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DTD_IDENTIFIER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DTD_IDENTIFIER_class}" data-field=DTD_IDENTIFIER>
+									{BEGIN DTD_IDENTIFIER_fieldheader}
+																				<span {$DTD_IDENTIFIER_orderlinkattrs}>
+											{$label ROUTINES DTD_IDENTIFIER}
+										</span>
+									{END DTD_IDENTIFIER_fieldheader}
+									</th>
+									{END DTD_IDENTIFIER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_BODY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_BODY_class}" data-field=ROUTINE_BODY>
+									{BEGIN ROUTINE_BODY_fieldheader}
+																				<span {$ROUTINE_BODY_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_BODY}
+										</span>
+									{END ROUTINE_BODY_fieldheader}
+									</th>
+									{END ROUTINE_BODY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_DEFINITION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_DEFINITION_class}" data-field=ROUTINE_DEFINITION>
+									{BEGIN ROUTINE_DEFINITION_fieldheader}
+																				<span {$ROUTINE_DEFINITION_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_DEFINITION}
+										</span>
+									{END ROUTINE_DEFINITION_fieldheader}
+									</th>
+									{END ROUTINE_DEFINITION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN EXTERNAL_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$EXTERNAL_NAME_class}" data-field=EXTERNAL_NAME>
+									{BEGIN EXTERNAL_NAME_fieldheader}
+																				<span {$EXTERNAL_NAME_orderlinkattrs}>
+											{$label ROUTINES EXTERNAL_NAME}
+										</span>
+									{END EXTERNAL_NAME_fieldheader}
+									</th>
+									{END EXTERNAL_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN EXTERNAL_LANGUAGE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$EXTERNAL_LANGUAGE_class}" data-field=EXTERNAL_LANGUAGE>
+									{BEGIN EXTERNAL_LANGUAGE_fieldheader}
+																				<span {$EXTERNAL_LANGUAGE_orderlinkattrs}>
+											{$label ROUTINES EXTERNAL_LANGUAGE}
+										</span>
+									{END EXTERNAL_LANGUAGE_fieldheader}
+									</th>
+									{END EXTERNAL_LANGUAGE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PARAMETER_STYLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PARAMETER_STYLE_class}" data-field=PARAMETER_STYLE>
+									{BEGIN PARAMETER_STYLE_fieldheader}
+																				<span {$PARAMETER_STYLE_orderlinkattrs}>
+											{$label ROUTINES PARAMETER_STYLE}
+										</span>
+									{END PARAMETER_STYLE_fieldheader}
+									</th>
+									{END PARAMETER_STYLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN IS_DETERMINISTIC_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$IS_DETERMINISTIC_class}" data-field=IS_DETERMINISTIC>
+									{BEGIN IS_DETERMINISTIC_fieldheader}
+																				<span {$IS_DETERMINISTIC_orderlinkattrs}>
+											{$label ROUTINES IS_DETERMINISTIC}
+										</span>
+									{END IS_DETERMINISTIC_fieldheader}
+									</th>
+									{END IS_DETERMINISTIC_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SQL_DATA_ACCESS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SQL_DATA_ACCESS_class}" data-field=SQL_DATA_ACCESS>
+									{BEGIN SQL_DATA_ACCESS_fieldheader}
+																				<span {$SQL_DATA_ACCESS_orderlinkattrs}>
+											{$label ROUTINES SQL_DATA_ACCESS}
+										</span>
+									{END SQL_DATA_ACCESS_fieldheader}
+									</th>
+									{END SQL_DATA_ACCESS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SQL_PATH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SQL_PATH_class}" data-field=SQL_PATH>
+									{BEGIN SQL_PATH_fieldheader}
+																				<span {$SQL_PATH_orderlinkattrs}>
+											{$label ROUTINES SQL_PATH}
+										</span>
+									{END SQL_PATH_fieldheader}
+									</th>
+									{END SQL_PATH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SECURITY_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SECURITY_TYPE_class}" data-field=SECURITY_TYPE>
+									{BEGIN SECURITY_TYPE_fieldheader}
+																				<span {$SECURITY_TYPE_orderlinkattrs}>
+											{$label ROUTINES SECURITY_TYPE}
+										</span>
+									{END SECURITY_TYPE_fieldheader}
+									</th>
+									{END SECURITY_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CREATED_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CREATED_class}" data-field=CREATED>
+									{BEGIN CREATED_fieldheader}
+																				<span {$CREATED_orderlinkattrs}>
+											{$label ROUTINES CREATED}
+										</span>
+									{END CREATED_fieldheader}
+									</th>
+									{END CREATED_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN LAST_ALTERED_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LAST_ALTERED_class}" data-field=LAST_ALTERED>
+									{BEGIN LAST_ALTERED_fieldheader}
+																				<span {$LAST_ALTERED_orderlinkattrs}>
+											{$label ROUTINES LAST_ALTERED}
+										</span>
+									{END LAST_ALTERED_fieldheader}
+									</th>
+									{END LAST_ALTERED_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SQL_MODE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SQL_MODE_class}" data-field=SQL_MODE>
+									{BEGIN SQL_MODE_fieldheader}
+																				<span {$SQL_MODE_orderlinkattrs}>
+											{$label ROUTINES SQL_MODE}
+										</span>
+									{END SQL_MODE_fieldheader}
+									</th>
+									{END SQL_MODE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROUTINE_COMMENT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROUTINE_COMMENT_class}" data-field=ROUTINE_COMMENT>
+									{BEGIN ROUTINE_COMMENT_fieldheader}
+																				<span {$ROUTINE_COMMENT_orderlinkattrs}>
+											{$label ROUTINES ROUTINE_COMMENT}
+										</span>
+									{END ROUTINE_COMMENT_fieldheader}
+									</th>
+									{END ROUTINE_COMMENT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEFINER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEFINER_class}" data-field=DEFINER>
+									{BEGIN DEFINER_fieldheader}
+																				<span {$DEFINER_orderlinkattrs}>
+											{$label ROUTINES DEFINER}
+										</span>
+									{END DEFINER_fieldheader}
+									</th>
+									{END DEFINER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHARACTER_SET_CLIENT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHARACTER_SET_CLIENT_class}" data-field=CHARACTER_SET_CLIENT>
+									{BEGIN CHARACTER_SET_CLIENT_fieldheader}
+																				<span {$CHARACTER_SET_CLIENT_orderlinkattrs}>
+											{$label ROUTINES CHARACTER_SET_CLIENT}
+										</span>
+									{END CHARACTER_SET_CLIENT_fieldheader}
+									</th>
+									{END CHARACTER_SET_CLIENT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN COLLATION_CONNECTION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$COLLATION_CONNECTION_class}" data-field=COLLATION_CONNECTION>
+									{BEGIN COLLATION_CONNECTION_fieldheader}
+																				<span {$COLLATION_CONNECTION_orderlinkattrs}>
+											{$label ROUTINES COLLATION_CONNECTION}
+										</span>
+									{END COLLATION_CONNECTION_fieldheader}
+									</th>
+									{END COLLATION_CONNECTION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATABASE_COLLATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATABASE_COLLATION_class}" data-field=DATABASE_COLLATION>
+									{BEGIN DATABASE_COLLATION_fieldheader}
+																				<span {$DATABASE_COLLATION_orderlinkattrs}>
+											{$label ROUTINES DATABASE_COLLATION}
+										</span>
+									{END DATABASE_COLLATION_fieldheader}
+									</th>
+									{END DATABASE_COLLATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+	
+	
+	
+		</td>	
+	{END listIcons_column}	
+
+	
+	
+
+	{BEGIN SPECIFIC_NAME_fieldcolumn}
+	<td class="bs-gridcell {$SPECIFIC_NAME_class}"  data-field=SPECIFIC_NAME {$rowstyle} {$recordattrs}>
+		{$SPECIFIC_NAME_value}
+	</td>
+{END SPECIFIC_NAME_fieldcolumn}
+
+
+	{BEGIN ROUTINE_CATALOG_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_CATALOG_class}"  data-field=ROUTINE_CATALOG {$rowstyle} {$recordattrs}>
+		{$ROUTINE_CATALOG_value}
+	</td>
+{END ROUTINE_CATALOG_fieldcolumn}
+
+
+	{BEGIN ROUTINE_SCHEMA_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_SCHEMA_class}"  data-field=ROUTINE_SCHEMA {$rowstyle} {$recordattrs}>
+		{$ROUTINE_SCHEMA_value}
+	</td>
+{END ROUTINE_SCHEMA_fieldcolumn}
+
+
+	{BEGIN ROUTINE_NAME_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_NAME_class}"  data-field=ROUTINE_NAME {$rowstyle} {$recordattrs}>
+		{$ROUTINE_NAME_value}
+	</td>
+{END ROUTINE_NAME_fieldcolumn}
+
+
+	{BEGIN ROUTINE_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_TYPE_class}"  data-field=ROUTINE_TYPE {$rowstyle} {$recordattrs}>
+		{$ROUTINE_TYPE_value}
+	</td>
+{END ROUTINE_TYPE_fieldcolumn}
+
+
+	{BEGIN DATA_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$DATA_TYPE_class}"  data-field=DATA_TYPE {$rowstyle} {$recordattrs}>
+		{$DATA_TYPE_value}
+	</td>
+{END DATA_TYPE_fieldcolumn}
+
+
+	{BEGIN CHARACTER_MAXIMUM_LENGTH_fieldcolumn}
+	<td class="bs-gridcell {$CHARACTER_MAXIMUM_LENGTH_class}"  data-field=CHARACTER_MAXIMUM_LENGTH {$rowstyle} {$recordattrs}>
+		{$CHARACTER_MAXIMUM_LENGTH_value}
+	</td>
+{END CHARACTER_MAXIMUM_LENGTH_fieldcolumn}
+
+
+	{BEGIN CHARACTER_OCTET_LENGTH_fieldcolumn}
+	<td class="bs-gridcell {$CHARACTER_OCTET_LENGTH_class}"  data-field=CHARACTER_OCTET_LENGTH {$rowstyle} {$recordattrs}>
+		{$CHARACTER_OCTET_LENGTH_value}
+	</td>
+{END CHARACTER_OCTET_LENGTH_fieldcolumn}
+
+
+	{BEGIN NUMERIC_PRECISION_fieldcolumn}
+	<td class="bs-gridcell {$NUMERIC_PRECISION_class}"  data-field=NUMERIC_PRECISION {$rowstyle} {$recordattrs}>
+		{$NUMERIC_PRECISION_value}
+	</td>
+{END NUMERIC_PRECISION_fieldcolumn}
+
+
+	{BEGIN NUMERIC_SCALE_fieldcolumn}
+	<td class="bs-gridcell {$NUMERIC_SCALE_class}"  data-field=NUMERIC_SCALE {$rowstyle} {$recordattrs}>
+		{$NUMERIC_SCALE_value}
+	</td>
+{END NUMERIC_SCALE_fieldcolumn}
+
+
+	{BEGIN DATETIME_PRECISION_fieldcolumn}
+	<td class="bs-gridcell {$DATETIME_PRECISION_class}"  data-field=DATETIME_PRECISION {$rowstyle} {$recordattrs}>
+		{$DATETIME_PRECISION_value}
+	</td>
+{END DATETIME_PRECISION_fieldcolumn}
+
+
+	{BEGIN CHARACTER_SET_NAME_fieldcolumn}
+	<td class="bs-gridcell {$CHARACTER_SET_NAME_class}"  data-field=CHARACTER_SET_NAME {$rowstyle} {$recordattrs}>
+		{$CHARACTER_SET_NAME_value}
+	</td>
+{END CHARACTER_SET_NAME_fieldcolumn}
+
+
+	{BEGIN COLLATION_NAME_fieldcolumn}
+	<td class="bs-gridcell {$COLLATION_NAME_class}"  data-field=COLLATION_NAME {$rowstyle} {$recordattrs}>
+		{$COLLATION_NAME_value}
+	</td>
+{END COLLATION_NAME_fieldcolumn}
+
+
+	{BEGIN DTD_IDENTIFIER_fieldcolumn}
+	<td class="bs-gridcell {$DTD_IDENTIFIER_class}"  data-field=DTD_IDENTIFIER {$rowstyle} {$recordattrs}>
+		{$DTD_IDENTIFIER_value}
+	</td>
+{END DTD_IDENTIFIER_fieldcolumn}
+
+
+	{BEGIN ROUTINE_BODY_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_BODY_class}"  data-field=ROUTINE_BODY {$rowstyle} {$recordattrs}>
+		{$ROUTINE_BODY_value}
+	</td>
+{END ROUTINE_BODY_fieldcolumn}
+
+
+	{BEGIN ROUTINE_DEFINITION_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_DEFINITION_class}"  data-field=ROUTINE_DEFINITION {$rowstyle} {$recordattrs}>
+		{$ROUTINE_DEFINITION_value}
+	</td>
+{END ROUTINE_DEFINITION_fieldcolumn}
+
+
+	{BEGIN EXTERNAL_NAME_fieldcolumn}
+	<td class="bs-gridcell {$EXTERNAL_NAME_class}"  data-field=EXTERNAL_NAME {$rowstyle} {$recordattrs}>
+		{$EXTERNAL_NAME_value}
+	</td>
+{END EXTERNAL_NAME_fieldcolumn}
+
+
+	{BEGIN EXTERNAL_LANGUAGE_fieldcolumn}
+	<td class="bs-gridcell {$EXTERNAL_LANGUAGE_class}"  data-field=EXTERNAL_LANGUAGE {$rowstyle} {$recordattrs}>
+		{$EXTERNAL_LANGUAGE_value}
+	</td>
+{END EXTERNAL_LANGUAGE_fieldcolumn}
+
+
+	{BEGIN PARAMETER_STYLE_fieldcolumn}
+	<td class="bs-gridcell {$PARAMETER_STYLE_class}"  data-field=PARAMETER_STYLE {$rowstyle} {$recordattrs}>
+		{$PARAMETER_STYLE_value}
+	</td>
+{END PARAMETER_STYLE_fieldcolumn}
+
+
+	{BEGIN IS_DETERMINISTIC_fieldcolumn}
+	<td class="bs-gridcell {$IS_DETERMINISTIC_class}"  data-field=IS_DETERMINISTIC {$rowstyle} {$recordattrs}>
+		{$IS_DETERMINISTIC_value}
+	</td>
+{END IS_DETERMINISTIC_fieldcolumn}
+
+
+	{BEGIN SQL_DATA_ACCESS_fieldcolumn}
+	<td class="bs-gridcell {$SQL_DATA_ACCESS_class}"  data-field=SQL_DATA_ACCESS {$rowstyle} {$recordattrs}>
+		{$SQL_DATA_ACCESS_value}
+	</td>
+{END SQL_DATA_ACCESS_fieldcolumn}
+
+
+	{BEGIN SQL_PATH_fieldcolumn}
+	<td class="bs-gridcell {$SQL_PATH_class}"  data-field=SQL_PATH {$rowstyle} {$recordattrs}>
+		{$SQL_PATH_value}
+	</td>
+{END SQL_PATH_fieldcolumn}
+
+
+	{BEGIN SECURITY_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$SECURITY_TYPE_class}"  data-field=SECURITY_TYPE {$rowstyle} {$recordattrs}>
+		{$SECURITY_TYPE_value}
+	</td>
+{END SECURITY_TYPE_fieldcolumn}
+
+
+	{BEGIN CREATED_fieldcolumn}
+	<td class="bs-gridcell {$CREATED_class}"  data-field=CREATED {$rowstyle} {$recordattrs}>
+		{$CREATED_value}
+	</td>
+{END CREATED_fieldcolumn}
+
+
+	{BEGIN LAST_ALTERED_fieldcolumn}
+	<td class="bs-gridcell {$LAST_ALTERED_class}"  data-field=LAST_ALTERED {$rowstyle} {$recordattrs}>
+		{$LAST_ALTERED_value}
+	</td>
+{END LAST_ALTERED_fieldcolumn}
+
+
+	{BEGIN SQL_MODE_fieldcolumn}
+	<td class="bs-gridcell {$SQL_MODE_class}"  data-field=SQL_MODE {$rowstyle} {$recordattrs}>
+		{$SQL_MODE_value}
+	</td>
+{END SQL_MODE_fieldcolumn}
+
+
+	{BEGIN ROUTINE_COMMENT_fieldcolumn}
+	<td class="bs-gridcell {$ROUTINE_COMMENT_class}"  data-field=ROUTINE_COMMENT {$rowstyle} {$recordattrs}>
+		{$ROUTINE_COMMENT_value}
+	</td>
+{END ROUTINE_COMMENT_fieldcolumn}
+
+
+	{BEGIN DEFINER_fieldcolumn}
+	<td class="bs-gridcell {$DEFINER_class}"  data-field=DEFINER {$rowstyle} {$recordattrs}>
+		{$DEFINER_value}
+	</td>
+{END DEFINER_fieldcolumn}
+
+
+	{BEGIN CHARACTER_SET_CLIENT_fieldcolumn}
+	<td class="bs-gridcell {$CHARACTER_SET_CLIENT_class}"  data-field=CHARACTER_SET_CLIENT {$rowstyle} {$recordattrs}>
+		{$CHARACTER_SET_CLIENT_value}
+	</td>
+{END CHARACTER_SET_CLIENT_fieldcolumn}
+
+
+	{BEGIN COLLATION_CONNECTION_fieldcolumn}
+	<td class="bs-gridcell {$COLLATION_CONNECTION_class}"  data-field=COLLATION_CONNECTION {$rowstyle} {$recordattrs}>
+		{$COLLATION_CONNECTION_value}
+	</td>
+{END COLLATION_CONNECTION_fieldcolumn}
+
+
+	{BEGIN DATABASE_COLLATION_fieldcolumn}
+	<td class="bs-gridcell {$DATABASE_COLLATION_class}"  data-field=DATABASE_COLLATION {$rowstyle} {$recordattrs}>
+		{$DATABASE_COLLATION_value}
+	</td>
+{END DATABASE_COLLATION_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

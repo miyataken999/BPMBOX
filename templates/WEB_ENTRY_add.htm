@@ -1,0 +1,396 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel WEB_ENTRY add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN WE_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_UID}" data-fieldname="WE_UID" data-signal-error-for="WE_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_UID}">
+		{BEGIN WE_UID_label}{$label WEB_ENTRY WE_UID}{END WE_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label WEB_ENTRY PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label WEB_ENTRY TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN DYN_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_UID}" data-fieldname="DYN_UID" data-signal-error-for="DYN_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_UID}">
+		{BEGIN DYN_UID_label}{$label WEB_ENTRY DYN_UID}{END DYN_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY DYN_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_UID_fieldblock}
+
+			{BEGIN USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UID}" data-fieldname="USR_UID" data-signal-error-for="USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UID}">
+		{BEGIN USR_UID_label}{$label WEB_ENTRY USR_UID}{END USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UID_fieldblock}
+
+			{BEGIN WE_METHOD_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_METHOD}" data-fieldname="WE_METHOD" data-signal-error-for="WE_METHOD{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_METHOD}">
+		{BEGIN WE_METHOD_label}{$label WEB_ENTRY WE_METHOD}{END WE_METHOD_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_METHOD_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_METHOD">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_METHOD}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_METHOD_fieldblock}
+
+			{BEGIN WE_INPUT_DOCUMENT_ACCESS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_INPUT_DOCUMENT_ACCESS}" data-fieldname="WE_INPUT_DOCUMENT_ACCESS" data-signal-error-for="WE_INPUT_DOCUMENT_ACCESS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_INPUT_DOCUMENT_ACCESS}">
+		{BEGIN WE_INPUT_DOCUMENT_ACCESS_label}{$label WEB_ENTRY WE_INPUT_DOCUMENT_ACCESS}{END WE_INPUT_DOCUMENT_ACCESS_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_INPUT_DOCUMENT_ACCESS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_INPUT_DOCUMENT_ACCESS">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_INPUT_DOCUMENT_ACCESS}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_INPUT_DOCUMENT_ACCESS_fieldblock}
+
+			{BEGIN WE_DATA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_DATA}" data-fieldname="WE_DATA" data-signal-error-for="WE_DATA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_DATA}">
+		{BEGIN WE_DATA_label}{$label WEB_ENTRY WE_DATA}{END WE_DATA_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_DATA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_DATA">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_DATA}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_DATA_fieldblock}
+
+			{BEGIN WE_CREATE_USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_CREATE_USR_UID}" data-fieldname="WE_CREATE_USR_UID" data-signal-error-for="WE_CREATE_USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_CREATE_USR_UID}">
+		{BEGIN WE_CREATE_USR_UID_label}{$label WEB_ENTRY WE_CREATE_USR_UID}{END WE_CREATE_USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_CREATE_USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_CREATE_USR_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_CREATE_USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_CREATE_USR_UID_fieldblock}
+
+			{BEGIN WE_UPDATE_USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_UPDATE_USR_UID}" data-fieldname="WE_UPDATE_USR_UID" data-signal-error-for="WE_UPDATE_USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_UPDATE_USR_UID}">
+		{BEGIN WE_UPDATE_USR_UID_label}{$label WEB_ENTRY WE_UPDATE_USR_UID}{END WE_UPDATE_USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_UPDATE_USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_UPDATE_USR_UID">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_UPDATE_USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_UPDATE_USR_UID_fieldblock}
+
+			{BEGIN WE_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_CREATE_DATE}" data-fieldname="WE_CREATE_DATE" data-signal-error-for="WE_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_CREATE_DATE}">
+		{BEGIN WE_CREATE_DATE_label}{$label WEB_ENTRY WE_CREATE_DATE}{END WE_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_CREATE_DATE_fieldblock}
+
+			{BEGIN WE_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WE_UPDATE_DATE}" data-fieldname="WE_UPDATE_DATE" data-signal-error-for="WE_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WE_UPDATE_DATE}">
+		{BEGIN WE_UPDATE_DATE_label}{$label WEB_ENTRY WE_UPDATE_DATE}{END WE_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$WE_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WE_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip WEB_ENTRY WE_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END WE_UPDATE_DATE_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

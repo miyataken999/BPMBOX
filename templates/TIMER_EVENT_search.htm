@@ -1,0 +1,386 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel TIMER_EVENT search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN TMREVN_UID_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_UID}" data-fieldname="TMREVN_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_UID}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_UID_fieldblock}
+	{BEGIN PRJ_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT PRJ_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRJ_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRJ_UID_fieldblock}
+	{BEGIN EVN_UID_fieldblock}		
+	<div class="container {$fielddispclass_EVN_UID}" data-fieldname="EVN_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT EVN_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_UID}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_UID_fieldblock}
+	{BEGIN TMREVN_OPTION_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_OPTION}" data-fieldname="TMREVN_OPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_OPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_OPTION}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_OPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_OPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_OPTION_fieldblock}
+	{BEGIN TMREVN_START_DATE_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_START_DATE}" data-fieldname="TMREVN_START_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_START_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_START_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_START_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_START_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_START_DATE_fieldblock}
+	{BEGIN TMREVN_END_DATE_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_END_DATE}" data-fieldname="TMREVN_END_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_END_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_END_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_END_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_END_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_END_DATE_fieldblock}
+	{BEGIN TMREVN_DAY_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_DAY}" data-fieldname="TMREVN_DAY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_DAY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_DAY}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_DAY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_DAY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_DAY_fieldblock}
+	{BEGIN TMREVN_HOUR_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_HOUR}" data-fieldname="TMREVN_HOUR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_HOUR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_HOUR}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_HOUR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_HOUR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_HOUR_fieldblock}
+	{BEGIN TMREVN_MINUTE_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_MINUTE}" data-fieldname="TMREVN_MINUTE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_MINUTE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_MINUTE}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_MINUTE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_MINUTE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_MINUTE_fieldblock}
+	{BEGIN TMREVN_CONFIGURATION_DATA_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_CONFIGURATION_DATA}" data-fieldname="TMREVN_CONFIGURATION_DATA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_CONFIGURATION_DATA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_CONFIGURATION_DATA}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_CONFIGURATION_DATA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_CONFIGURATION_DATA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_CONFIGURATION_DATA_fieldblock}
+	{BEGIN TMREVN_NEXT_RUN_DATE_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_NEXT_RUN_DATE}" data-fieldname="TMREVN_NEXT_RUN_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_NEXT_RUN_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_NEXT_RUN_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_NEXT_RUN_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_NEXT_RUN_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_NEXT_RUN_DATE_fieldblock}
+	{BEGIN TMREVN_LAST_RUN_DATE_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_LAST_RUN_DATE}" data-fieldname="TMREVN_LAST_RUN_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_LAST_RUN_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_LAST_RUN_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_LAST_RUN_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_LAST_RUN_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_LAST_RUN_DATE_fieldblock}
+	{BEGIN TMREVN_LAST_EXECUTION_DATE_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_LAST_EXECUTION_DATE}" data-fieldname="TMREVN_LAST_EXECUTION_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_LAST_EXECUTION_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_LAST_EXECUTION_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_LAST_EXECUTION_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_LAST_EXECUTION_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_LAST_EXECUTION_DATE_fieldblock}
+	{BEGIN TMREVN_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_TMREVN_STATUS}" data-fieldname="TMREVN_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TIMER_EVENT TMREVN_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TMREVN_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TMREVN_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TMREVN_STATUS_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

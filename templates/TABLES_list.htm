@@ -1,0 +1,1175 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+{BEGIN filterPanel}
+<div {$filterpanel_hiddenattr} data-pageid="{$pageid}" data-brick="filterpanel">
+<button  type="button" class="bs-hidden-xs bs-navcontrolled btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
+	<span class="glyphicon glyphicon-filter"><span> Filter	
+</button>
+<div  class="bs-hidden-xs filterPanelContainer  {$filterPanelStateClass}">
+
+
+	
+	
+
+
+
+	
+	
+	
+		
+{BEGIN filter_control_TABLE_NAME}
+	<div class="panel panel-info filter-field filter-TABLE_NAME-container">
+		<div class="panel-heading filter-expander">
+			<span class="filter-indicator glyphicon 
+							glyphicon-triangle-top
+			">
+			</span>
+						{$label TABLES TABLE_NAME}
+			{BEGIN clearLink_TABLE_NAME}
+			<a href="#" class="filter-clear filter-clear-TABLE_NAME">解除</a>
+			{END clearLink_TABLE_NAME}
+		</div>
+		<ul class="list-group">
+		{BEGIN filterCtrlBlock_TABLE_NAME}
+		<li class="list-group-item filter-values filter-values-TABLE_NAME {$collapsedClass_TABLE_NAME} {$visibilityClass_TABLE_NAME}">
+			{$TABLE_NAME_filter}	
+		</li>
+		{END filterCtrlBlock_TABLE_NAME}
+				{BEGIN filter_button_showmore_TABLE_NAME}
+		<li class="list-group-item filter-show-more {$collapsedClass_TABLE_NAME} {$showMoreBtnClass_TABLE_NAME}">
+			<a class="filter-show-more-link filterShowMore_TABLE_NAME" href="#">{$show_n_more_TABLE_NAME}</a>
+		</li>
+		{END filter_button_showmore_TABLE_NAME}
+		
+				
+			</ul>
+	</div>
+{END filter_control_TABLE_NAME}
+</div>
+</div>
+{END filterPanel}
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+				{BEGIN asearch_link}
+		<li><a href="TABLES_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="TABLES_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="TABLES_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+	
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+				{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="TABLES_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="TABLES_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+							</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_COLUMNS}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsCOLUMNS{$id}">
+									<input type="checkbox" value="COLUMNS" id="printDetailsCOLUMNS{$id}" checked>
+									カラム
+								</label>
+							</div>
+					{END print_details_COLUMNS}
+					{BEGIN print_details_TRIGGERS1}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsTRIGGERS1{$id}">
+									<input type="checkbox" value="TRIGGERS1" id="printDetailsTRIGGERS1{$id}" checked>
+									トリガー
+								</label>
+							</div>
+					{END print_details_TRIGGERS1}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=TABLE_CATALOG]:before {
+		content: "{$label TABLES TABLE_CATALOG}";
+	}
+	.bs-gridcell[data-field=TABLE_SCHEMA]:before {
+		content: "{$label TABLES TABLE_SCHEMA}";
+	}
+	.bs-gridcell[data-field=TABLE_NAME]:before {
+		content: "{$label TABLES TABLE_NAME}";
+	}
+	.bs-gridcell[data-field=TABLE_TYPE]:before {
+		content: "{$label TABLES TABLE_TYPE}";
+	}
+	.bs-gridcell[data-field=ENGINE]:before {
+		content: "{$label TABLES ENGINE}";
+	}
+	.bs-gridcell[data-field=VERSION]:before {
+		content: "{$label TABLES VERSION}";
+	}
+	.bs-gridcell[data-field=ROW_FORMAT]:before {
+		content: "{$label TABLES ROW_FORMAT}";
+	}
+	.bs-gridcell[data-field=TABLE_ROWS]:before {
+		content: "{$label TABLES TABLE_ROWS}";
+	}
+	.bs-gridcell[data-field=AVG_ROW_LENGTH]:before {
+		content: "{$label TABLES AVG_ROW_LENGTH}";
+	}
+	.bs-gridcell[data-field=DATA_LENGTH]:before {
+		content: "{$label TABLES DATA_LENGTH}";
+	}
+	.bs-gridcell[data-field=MAX_DATA_LENGTH]:before {
+		content: "{$label TABLES MAX_DATA_LENGTH}";
+	}
+	.bs-gridcell[data-field=INDEX_LENGTH]:before {
+		content: "{$label TABLES INDEX_LENGTH}";
+	}
+	.bs-gridcell[data-field=DATA_FREE]:before {
+		content: "{$label TABLES DATA_FREE}";
+	}
+	.bs-gridcell[data-field=AUTO_INCREMENT]:before {
+		content: "{$label TABLES AUTO_INCREMENT}";
+	}
+	.bs-gridcell[data-field=CREATE_TIME]:before {
+		content: "{$label TABLES CREATE_TIME}";
+	}
+	.bs-gridcell[data-field=UPDATE_TIME]:before {
+		content: "{$label TABLES UPDATE_TIME}";
+	}
+	.bs-gridcell[data-field=CHECK_TIME]:before {
+		content: "{$label TABLES CHECK_TIME}";
+	}
+	.bs-gridcell[data-field=TABLE_COLLATION]:before {
+		content: "{$label TABLES TABLE_COLLATION}";
+	}
+	.bs-gridcell[data-field=CHECKSUM]:before {
+		content: "{$label TABLES CHECKSUM}";
+	}
+	.bs-gridcell[data-field=CREATE_OPTIONS]:before {
+		content: "{$label TABLES CREATE_OPTIONS}";
+	}
+	.bs-gridcell[data-field=TABLE_COMMENT]:before {
+		content: "{$label TABLES TABLE_COMMENT}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+									
+																		{BEGIN TABLES_dtable_column}
+									<th >&nbsp;</th>
+									{END TABLES_dtable_column}
+									
+									{BEGIN TABLE_CATALOG_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_CATALOG_class}" data-field=TABLE_CATALOG>
+									{BEGIN TABLE_CATALOG_fieldheader}
+																				<span {$TABLE_CATALOG_orderlinkattrs}>
+											{$label TABLES TABLE_CATALOG}
+										</span>
+									{END TABLE_CATALOG_fieldheader}
+									</th>
+									{END TABLE_CATALOG_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TABLE_SCHEMA_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_SCHEMA_class}" data-field=TABLE_SCHEMA>
+									{BEGIN TABLE_SCHEMA_fieldheader}
+																				<span {$TABLE_SCHEMA_orderlinkattrs}>
+											{$label TABLES TABLE_SCHEMA}
+										</span>
+									{END TABLE_SCHEMA_fieldheader}
+									</th>
+									{END TABLE_SCHEMA_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TABLE_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_NAME_class}" data-field=TABLE_NAME>
+									{BEGIN TABLE_NAME_fieldheader}
+																				<span {$TABLE_NAME_orderlinkattrs}>
+											{$label TABLES TABLE_NAME}
+										</span>
+									{END TABLE_NAME_fieldheader}
+									</th>
+									{END TABLE_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TABLE_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_TYPE_class}" data-field=TABLE_TYPE>
+									{BEGIN TABLE_TYPE_fieldheader}
+																				<span {$TABLE_TYPE_orderlinkattrs}>
+											{$label TABLES TABLE_TYPE}
+										</span>
+									{END TABLE_TYPE_fieldheader}
+									</th>
+									{END TABLE_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ENGINE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ENGINE_class}" data-field=ENGINE>
+									{BEGIN ENGINE_fieldheader}
+																				<span {$ENGINE_orderlinkattrs}>
+											{$label TABLES ENGINE}
+										</span>
+									{END ENGINE_fieldheader}
+									</th>
+									{END ENGINE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN VERSION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$VERSION_class}" data-field=VERSION>
+									{BEGIN VERSION_fieldheader}
+																				<span {$VERSION_orderlinkattrs}>
+											{$label TABLES VERSION}
+										</span>
+									{END VERSION_fieldheader}
+									</th>
+									{END VERSION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROW_FORMAT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROW_FORMAT_class}" data-field=ROW_FORMAT>
+									{BEGIN ROW_FORMAT_fieldheader}
+																				<span {$ROW_FORMAT_orderlinkattrs}>
+											{$label TABLES ROW_FORMAT}
+										</span>
+									{END ROW_FORMAT_fieldheader}
+									</th>
+									{END ROW_FORMAT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TABLE_ROWS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_ROWS_class}" data-field=TABLE_ROWS>
+									{BEGIN TABLE_ROWS_fieldheader}
+																				<span {$TABLE_ROWS_orderlinkattrs}>
+											{$label TABLES TABLE_ROWS}
+										</span>
+									{END TABLE_ROWS_fieldheader}
+									</th>
+									{END TABLE_ROWS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN AVG_ROW_LENGTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$AVG_ROW_LENGTH_class}" data-field=AVG_ROW_LENGTH>
+									{BEGIN AVG_ROW_LENGTH_fieldheader}
+																				<span {$AVG_ROW_LENGTH_orderlinkattrs}>
+											{$label TABLES AVG_ROW_LENGTH}
+										</span>
+									{END AVG_ROW_LENGTH_fieldheader}
+									</th>
+									{END AVG_ROW_LENGTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATA_LENGTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATA_LENGTH_class}" data-field=DATA_LENGTH>
+									{BEGIN DATA_LENGTH_fieldheader}
+																				<span {$DATA_LENGTH_orderlinkattrs}>
+											{$label TABLES DATA_LENGTH}
+										</span>
+									{END DATA_LENGTH_fieldheader}
+									</th>
+									{END DATA_LENGTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN MAX_DATA_LENGTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$MAX_DATA_LENGTH_class}" data-field=MAX_DATA_LENGTH>
+									{BEGIN MAX_DATA_LENGTH_fieldheader}
+																				<span {$MAX_DATA_LENGTH_orderlinkattrs}>
+											{$label TABLES MAX_DATA_LENGTH}
+										</span>
+									{END MAX_DATA_LENGTH_fieldheader}
+									</th>
+									{END MAX_DATA_LENGTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN INDEX_LENGTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$INDEX_LENGTH_class}" data-field=INDEX_LENGTH>
+									{BEGIN INDEX_LENGTH_fieldheader}
+																				<span {$INDEX_LENGTH_orderlinkattrs}>
+											{$label TABLES INDEX_LENGTH}
+										</span>
+									{END INDEX_LENGTH_fieldheader}
+									</th>
+									{END INDEX_LENGTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DATA_FREE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DATA_FREE_class}" data-field=DATA_FREE>
+									{BEGIN DATA_FREE_fieldheader}
+																				<span {$DATA_FREE_orderlinkattrs}>
+											{$label TABLES DATA_FREE}
+										</span>
+									{END DATA_FREE_fieldheader}
+									</th>
+									{END DATA_FREE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN AUTO_INCREMENT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$AUTO_INCREMENT_class}" data-field=AUTO_INCREMENT>
+									{BEGIN AUTO_INCREMENT_fieldheader}
+																				<span {$AUTO_INCREMENT_orderlinkattrs}>
+											{$label TABLES AUTO_INCREMENT}
+										</span>
+									{END AUTO_INCREMENT_fieldheader}
+									</th>
+									{END AUTO_INCREMENT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CREATE_TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CREATE_TIME_class}" data-field=CREATE_TIME>
+									{BEGIN CREATE_TIME_fieldheader}
+																				<span {$CREATE_TIME_orderlinkattrs}>
+											{$label TABLES CREATE_TIME}
+										</span>
+									{END CREATE_TIME_fieldheader}
+									</th>
+									{END CREATE_TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN UPDATE_TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$UPDATE_TIME_class}" data-field=UPDATE_TIME>
+									{BEGIN UPDATE_TIME_fieldheader}
+																				<span {$UPDATE_TIME_orderlinkattrs}>
+											{$label TABLES UPDATE_TIME}
+										</span>
+									{END UPDATE_TIME_fieldheader}
+									</th>
+									{END UPDATE_TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHECK_TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHECK_TIME_class}" data-field=CHECK_TIME>
+									{BEGIN CHECK_TIME_fieldheader}
+																				<span {$CHECK_TIME_orderlinkattrs}>
+											{$label TABLES CHECK_TIME}
+										</span>
+									{END CHECK_TIME_fieldheader}
+									</th>
+									{END CHECK_TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TABLE_COLLATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_COLLATION_class}" data-field=TABLE_COLLATION>
+									{BEGIN TABLE_COLLATION_fieldheader}
+																				<span {$TABLE_COLLATION_orderlinkattrs}>
+											{$label TABLES TABLE_COLLATION}
+										</span>
+									{END TABLE_COLLATION_fieldheader}
+									</th>
+									{END TABLE_COLLATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CHECKSUM_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CHECKSUM_class}" data-field=CHECKSUM>
+									{BEGIN CHECKSUM_fieldheader}
+																				<span {$CHECKSUM_orderlinkattrs}>
+											{$label TABLES CHECKSUM}
+										</span>
+									{END CHECKSUM_fieldheader}
+									</th>
+									{END CHECKSUM_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CREATE_OPTIONS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CREATE_OPTIONS_class}" data-field=CREATE_OPTIONS>
+									{BEGIN CREATE_OPTIONS_fieldheader}
+																				<span {$CREATE_OPTIONS_orderlinkattrs}>
+											{$label TABLES CREATE_OPTIONS}
+										</span>
+									{END CREATE_OPTIONS_fieldheader}
+									</th>
+									{END CREATE_OPTIONS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TABLE_COMMENT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TABLE_COMMENT_class}" data-field=TABLE_COMMENT>
+									{BEGIN TABLE_COMMENT_fieldheader}
+																				<span {$TABLE_COMMENT_orderlinkattrs}>
+											{$label TABLES TABLE_COMMENT}
+										</span>
+									{END TABLE_COMMENT_fieldheader}
+									</th>
+									{END TABLE_COMMENT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+	
+	
+	
+		</td>	
+	{END listIcons_column}	
+
+	
+		{BEGIN TABLES_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+							
+				
+							
+				
+				<a {$dtables_link_attrs} class="glyphicon glyphicon-th-list {$dtables_link_class}" title="Show details"></a>
+								{BEGIN COLUMNS_childcount}
+				<a {$COLUMNS_link_attrs} class="{$COLUMNS_dlink_class}" title="カラム">
+					<span class="details-badge badge COLUMNS_badge" {$COLUMNS_childnumber_attr}>
+						{$COLUMNS_childnumber}
+					</span></a>
+				{END COLUMNS_childcount}
+								{BEGIN TRIGGERS1_childcount}
+				<a {$TRIGGERS1_link_attrs} class="{$TRIGGERS1_dlink_class}" title="トリガー">
+					<span class="details-badge badge TRIGGERS1_badge" {$TRIGGERS1_childnumber_attr}>
+						{$TRIGGERS1_childnumber}
+					</span></a>
+				{END TRIGGERS1_childcount}
+		{END dtables_link}
+	
+	
+	</td>
+	{END TABLES_dtable_column}
+
+
+	{BEGIN TABLE_CATALOG_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_CATALOG_class}"  data-field=TABLE_CATALOG {$rowstyle} {$recordattrs}>
+		{$TABLE_CATALOG_value}
+	</td>
+{END TABLE_CATALOG_fieldcolumn}
+
+
+	{BEGIN TABLE_SCHEMA_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_SCHEMA_class}"  data-field=TABLE_SCHEMA {$rowstyle} {$recordattrs}>
+		{$TABLE_SCHEMA_value}
+	</td>
+{END TABLE_SCHEMA_fieldcolumn}
+
+
+	{BEGIN TABLE_NAME_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_NAME_class}"  data-field=TABLE_NAME {$rowstyle} {$recordattrs}>
+		{$TABLE_NAME_value}
+	</td>
+{END TABLE_NAME_fieldcolumn}
+
+
+	{BEGIN TABLE_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_TYPE_class}"  data-field=TABLE_TYPE {$rowstyle} {$recordattrs}>
+		{$TABLE_TYPE_value}
+	</td>
+{END TABLE_TYPE_fieldcolumn}
+
+
+	{BEGIN ENGINE_fieldcolumn}
+	<td class="bs-gridcell {$ENGINE_class}"  data-field=ENGINE {$rowstyle} {$recordattrs}>
+		{$ENGINE_value}
+	</td>
+{END ENGINE_fieldcolumn}
+
+
+	{BEGIN VERSION_fieldcolumn}
+	<td class="bs-gridcell {$VERSION_class}"  data-field=VERSION {$rowstyle} {$recordattrs}>
+		{$VERSION_value}
+	</td>
+{END VERSION_fieldcolumn}
+
+
+	{BEGIN ROW_FORMAT_fieldcolumn}
+	<td class="bs-gridcell {$ROW_FORMAT_class}"  data-field=ROW_FORMAT {$rowstyle} {$recordattrs}>
+		{$ROW_FORMAT_value}
+	</td>
+{END ROW_FORMAT_fieldcolumn}
+
+
+	{BEGIN TABLE_ROWS_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_ROWS_class}"  data-field=TABLE_ROWS {$rowstyle} {$recordattrs}>
+		{$TABLE_ROWS_value}
+	</td>
+{END TABLE_ROWS_fieldcolumn}
+
+
+	{BEGIN AVG_ROW_LENGTH_fieldcolumn}
+	<td class="bs-gridcell {$AVG_ROW_LENGTH_class}"  data-field=AVG_ROW_LENGTH {$rowstyle} {$recordattrs}>
+		{$AVG_ROW_LENGTH_value}
+	</td>
+{END AVG_ROW_LENGTH_fieldcolumn}
+
+
+	{BEGIN DATA_LENGTH_fieldcolumn}
+	<td class="bs-gridcell {$DATA_LENGTH_class}"  data-field=DATA_LENGTH {$rowstyle} {$recordattrs}>
+		{$DATA_LENGTH_value}
+	</td>
+{END DATA_LENGTH_fieldcolumn}
+
+
+	{BEGIN MAX_DATA_LENGTH_fieldcolumn}
+	<td class="bs-gridcell {$MAX_DATA_LENGTH_class}"  data-field=MAX_DATA_LENGTH {$rowstyle} {$recordattrs}>
+		{$MAX_DATA_LENGTH_value}
+	</td>
+{END MAX_DATA_LENGTH_fieldcolumn}
+
+
+	{BEGIN INDEX_LENGTH_fieldcolumn}
+	<td class="bs-gridcell {$INDEX_LENGTH_class}"  data-field=INDEX_LENGTH {$rowstyle} {$recordattrs}>
+		{$INDEX_LENGTH_value}
+	</td>
+{END INDEX_LENGTH_fieldcolumn}
+
+
+	{BEGIN DATA_FREE_fieldcolumn}
+	<td class="bs-gridcell {$DATA_FREE_class}"  data-field=DATA_FREE {$rowstyle} {$recordattrs}>
+		{$DATA_FREE_value}
+	</td>
+{END DATA_FREE_fieldcolumn}
+
+
+	{BEGIN AUTO_INCREMENT_fieldcolumn}
+	<td class="bs-gridcell {$AUTO_INCREMENT_class}"  data-field=AUTO_INCREMENT {$rowstyle} {$recordattrs}>
+		{$AUTO_INCREMENT_value}
+	</td>
+{END AUTO_INCREMENT_fieldcolumn}
+
+
+	{BEGIN CREATE_TIME_fieldcolumn}
+	<td class="bs-gridcell {$CREATE_TIME_class}"  data-field=CREATE_TIME {$rowstyle} {$recordattrs}>
+		{$CREATE_TIME_value}
+	</td>
+{END CREATE_TIME_fieldcolumn}
+
+
+	{BEGIN UPDATE_TIME_fieldcolumn}
+	<td class="bs-gridcell {$UPDATE_TIME_class}"  data-field=UPDATE_TIME {$rowstyle} {$recordattrs}>
+		{$UPDATE_TIME_value}
+	</td>
+{END UPDATE_TIME_fieldcolumn}
+
+
+	{BEGIN CHECK_TIME_fieldcolumn}
+	<td class="bs-gridcell {$CHECK_TIME_class}"  data-field=CHECK_TIME {$rowstyle} {$recordattrs}>
+		{$CHECK_TIME_value}
+	</td>
+{END CHECK_TIME_fieldcolumn}
+
+
+	{BEGIN TABLE_COLLATION_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_COLLATION_class}"  data-field=TABLE_COLLATION {$rowstyle} {$recordattrs}>
+		{$TABLE_COLLATION_value}
+	</td>
+{END TABLE_COLLATION_fieldcolumn}
+
+
+	{BEGIN CHECKSUM_fieldcolumn}
+	<td class="bs-gridcell {$CHECKSUM_class}"  data-field=CHECKSUM {$rowstyle} {$recordattrs}>
+		{$CHECKSUM_value}
+	</td>
+{END CHECKSUM_fieldcolumn}
+
+
+	{BEGIN CREATE_OPTIONS_fieldcolumn}
+	<td class="bs-gridcell {$CREATE_OPTIONS_class}"  data-field=CREATE_OPTIONS {$rowstyle} {$recordattrs}>
+		{$CREATE_OPTIONS_value}
+	</td>
+{END CREATE_OPTIONS_fieldcolumn}
+
+
+	{BEGIN TABLE_COMMENT_fieldcolumn}
+	<td class="bs-gridcell {$TABLE_COMMENT_class}"  data-field=TABLE_COMMENT {$rowstyle} {$recordattrs}>
+		{$TABLE_COMMENT_value}
+	</td>
+{END TABLE_COMMENT_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

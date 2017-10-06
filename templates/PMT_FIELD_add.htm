@@ -1,0 +1,540 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PMT_FIELD add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN APP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UID}" data-fieldname="APP_UID" data-signal-error-for="APP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UID}">
+		{BEGIN APP_UID_label}{$label PMT_FIELD APP_UID}{END APP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UID">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD APP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UID_fieldblock}
+
+			{BEGIN APP_NUMBER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER" data-signal-error-for="APP_NUMBER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_NUMBER}">
+		{BEGIN APP_NUMBER_label}{$label PMT_FIELD APP_NUMBER}{END APP_NUMBER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_NUMBER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_NUMBER">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD APP_NUMBER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_NUMBER_fieldblock}
+
+			{BEGIN APP_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS" data-signal-error-for="APP_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_STATUS}">
+		{BEGIN APP_STATUS_label}{$label PMT_FIELD APP_STATUS}{END APP_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_STATUS">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD APP_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_STATUS_fieldblock}
+
+			{BEGIN ROW_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ROW}" data-fieldname="ROW" data-signal-error-for="ROW{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ROW}">
+		{BEGIN ROW_label}{$label PMT_FIELD ROW}{END ROW_label}
+	</label>
+	<div class="col-md-6" >
+		{$ROW_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ROW">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD ROW}
+		</div>
+	</div>
+</div>
+</div>
+{END ROW_fieldblock}
+
+			{BEGIN CHECKBOX0000000001_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000001}" data-fieldname="CHECKBOX0000000001" data-signal-error-for="CHECKBOX0000000001{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000001}">
+		{BEGIN CHECKBOX0000000001_label}{$label PMT_FIELD CHECKBOX0000000001}{END CHECKBOX0000000001_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000001_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000001">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000001}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000001_fieldblock}
+
+			{BEGIN CHECKBOX0000000002_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000002}" data-fieldname="CHECKBOX0000000002" data-signal-error-for="CHECKBOX0000000002{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000002}">
+		{BEGIN CHECKBOX0000000002_label}{$label PMT_FIELD CHECKBOX0000000002}{END CHECKBOX0000000002_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000002_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000002">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000002}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000002_fieldblock}
+
+			{BEGIN CHECKBOX0000000003_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000003}" data-fieldname="CHECKBOX0000000003" data-signal-error-for="CHECKBOX0000000003{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000003}">
+		{BEGIN CHECKBOX0000000003_label}{$label PMT_FIELD CHECKBOX0000000003}{END CHECKBOX0000000003_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000003_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000003">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000003}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000003_fieldblock}
+
+			{BEGIN CHECKBOX0000000004_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000004}" data-fieldname="CHECKBOX0000000004" data-signal-error-for="CHECKBOX0000000004{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000004}">
+		{BEGIN CHECKBOX0000000004_label}{$label PMT_FIELD CHECKBOX0000000004}{END CHECKBOX0000000004_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000004_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000004">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000004}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000004_fieldblock}
+
+			{BEGIN CHECKBOX0000000005_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000005}" data-fieldname="CHECKBOX0000000005" data-signal-error-for="CHECKBOX0000000005{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000005}">
+		{BEGIN CHECKBOX0000000005_label}{$label PMT_FIELD CHECKBOX0000000005}{END CHECKBOX0000000005_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000005_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000005">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000005}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000005_fieldblock}
+
+			{BEGIN CHECKBOX0000000006_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000006}" data-fieldname="CHECKBOX0000000006" data-signal-error-for="CHECKBOX0000000006{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000006}">
+		{BEGIN CHECKBOX0000000006_label}{$label PMT_FIELD CHECKBOX0000000006}{END CHECKBOX0000000006_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000006_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000006">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000006}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000006_fieldblock}
+
+			{BEGIN CHECKBOX0000000007_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000007}" data-fieldname="CHECKBOX0000000007" data-signal-error-for="CHECKBOX0000000007{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000007}">
+		{BEGIN CHECKBOX0000000007_label}{$label PMT_FIELD CHECKBOX0000000007}{END CHECKBOX0000000007_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000007_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000007">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000007}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000007_fieldblock}
+
+			{BEGIN CHECKBOX0000000008_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000008}" data-fieldname="CHECKBOX0000000008" data-signal-error-for="CHECKBOX0000000008{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000008}">
+		{BEGIN CHECKBOX0000000008_label}{$label PMT_FIELD CHECKBOX0000000008}{END CHECKBOX0000000008_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000008_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000008">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000008}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000008_fieldblock}
+
+			{BEGIN CHECKBOX0000000009_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000009}" data-fieldname="CHECKBOX0000000009" data-signal-error-for="CHECKBOX0000000009{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000009}">
+		{BEGIN CHECKBOX0000000009_label}{$label PMT_FIELD CHECKBOX0000000009}{END CHECKBOX0000000009_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000009_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000009">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000009}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000009_fieldblock}
+
+			{BEGIN CHECKBOX0000000010_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000010}" data-fieldname="CHECKBOX0000000010" data-signal-error-for="CHECKBOX0000000010{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000010}">
+		{BEGIN CHECKBOX0000000010_label}{$label PMT_FIELD CHECKBOX0000000010}{END CHECKBOX0000000010_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000010_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000010">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000010}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000010_fieldblock}
+
+			{BEGIN CHECKBOX0000000011_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000011}" data-fieldname="CHECKBOX0000000011" data-signal-error-for="CHECKBOX0000000011{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000011}">
+		{BEGIN CHECKBOX0000000011_label}{$label PMT_FIELD CHECKBOX0000000011}{END CHECKBOX0000000011_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000011_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000011">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000011}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000011_fieldblock}
+
+			{BEGIN CHECKBOX0000000012_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CHECKBOX0000000012}" data-fieldname="CHECKBOX0000000012" data-signal-error-for="CHECKBOX0000000012{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CHECKBOX0000000012}">
+		{BEGIN CHECKBOX0000000012_label}{$label PMT_FIELD CHECKBOX0000000012}{END CHECKBOX0000000012_label}
+	</label>
+	<div class="col-md-6" >
+		{$CHECKBOX0000000012_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CHECKBOX0000000012">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD CHECKBOX0000000012}
+		</div>
+	</div>
+</div>
+</div>
+{END CHECKBOX0000000012_fieldblock}
+
+			{BEGIN DROPDOWN0000000003_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DROPDOWN0000000003}" data-fieldname="DROPDOWN0000000003" data-signal-error-for="DROPDOWN0000000003{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DROPDOWN0000000003}">
+		{BEGIN DROPDOWN0000000003_label}{$label PMT_FIELD DROPDOWN0000000003}{END DROPDOWN0000000003_label}
+	</label>
+	<div class="col-md-6" >
+		{$DROPDOWN0000000003_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DROPDOWN0000000003">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD DROPDOWN0000000003}
+		</div>
+	</div>
+</div>
+</div>
+{END DROPDOWN0000000003_fieldblock}
+
+			{BEGIN DROPDOWN0000000003_LABEL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DROPDOWN0000000003_LABEL}" data-fieldname="DROPDOWN0000000003_LABEL" data-signal-error-for="DROPDOWN0000000003_LABEL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DROPDOWN0000000003_LABEL}">
+		{BEGIN DROPDOWN0000000003_LABEL_label}{$label PMT_FIELD DROPDOWN0000000003_LABEL}{END DROPDOWN0000000003_LABEL_label}
+	</label>
+	<div class="col-md-6" >
+		{$DROPDOWN0000000003_LABEL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DROPDOWN0000000003_LABEL">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD DROPDOWN0000000003_LABEL}
+		</div>
+	</div>
+</div>
+</div>
+{END DROPDOWN0000000003_LABEL_fieldblock}
+
+			{BEGIN TEXT0000000005_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TEXT0000000005}" data-fieldname="TEXT0000000005" data-signal-error-for="TEXT0000000005{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TEXT0000000005}">
+		{BEGIN TEXT0000000005_label}{$label PMT_FIELD TEXT0000000005}{END TEXT0000000005_label}
+	</label>
+	<div class="col-md-6" >
+		{$TEXT0000000005_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TEXT0000000005">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD TEXT0000000005}
+		</div>
+	</div>
+</div>
+</div>
+{END TEXT0000000005_fieldblock}
+
+			{BEGIN TEXT0000000006_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TEXT0000000006}" data-fieldname="TEXT0000000006" data-signal-error-for="TEXT0000000006{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TEXT0000000006}">
+		{BEGIN TEXT0000000006_label}{$label PMT_FIELD TEXT0000000006}{END TEXT0000000006_label}
+	</label>
+	<div class="col-md-6" >
+		{$TEXT0000000006_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TEXT0000000006">
+		<div class="text-muted" >
+		{$tooltip PMT_FIELD TEXT0000000006}
+		</div>
+	</div>
+</div>
+</div>
+{END TEXT0000000006_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

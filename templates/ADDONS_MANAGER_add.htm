@@ -1,0 +1,504 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel ADDONS_MANAGER add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN ADDON_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_ID}" data-fieldname="ADDON_ID" data-signal-error-for="ADDON_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_ID}">
+		{BEGIN ADDON_ID_label}{$label ADDONS_MANAGER ADDON_ID}{END ADDON_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_ID">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_ID_fieldblock}
+
+			{BEGIN STORE_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STORE_ID}" data-fieldname="STORE_ID" data-signal-error-for="STORE_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STORE_ID}">
+		{BEGIN STORE_ID_label}{$label ADDONS_MANAGER STORE_ID}{END STORE_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$STORE_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STORE_ID">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER STORE_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END STORE_ID_fieldblock}
+
+			{BEGIN ADDON_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_NAME}" data-fieldname="ADDON_NAME" data-signal-error-for="ADDON_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_NAME}">
+		{BEGIN ADDON_NAME_label}{$label ADDONS_MANAGER ADDON_NAME}{END ADDON_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_NAME">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_NAME_fieldblock}
+
+			{BEGIN ADDON_NICK_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_NICK}" data-fieldname="ADDON_NICK" data-signal-error-for="ADDON_NICK{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_NICK}">
+		{BEGIN ADDON_NICK_label}{$label ADDONS_MANAGER ADDON_NICK}{END ADDON_NICK_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_NICK_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_NICK">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_NICK}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_NICK_fieldblock}
+
+			{BEGIN ADDON_DOWNLOAD_FILENAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_DOWNLOAD_FILENAME}" data-fieldname="ADDON_DOWNLOAD_FILENAME" data-signal-error-for="ADDON_DOWNLOAD_FILENAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_DOWNLOAD_FILENAME}">
+		{BEGIN ADDON_DOWNLOAD_FILENAME_label}{$label ADDONS_MANAGER ADDON_DOWNLOAD_FILENAME}{END ADDON_DOWNLOAD_FILENAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_DOWNLOAD_FILENAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_DOWNLOAD_FILENAME">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_DOWNLOAD_FILENAME}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_DOWNLOAD_FILENAME_fieldblock}
+
+			{BEGIN ADDON_DESCRIPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_DESCRIPTION}" data-fieldname="ADDON_DESCRIPTION" data-signal-error-for="ADDON_DESCRIPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_DESCRIPTION}">
+		{BEGIN ADDON_DESCRIPTION_label}{$label ADDONS_MANAGER ADDON_DESCRIPTION}{END ADDON_DESCRIPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_DESCRIPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_DESCRIPTION">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_DESCRIPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_DESCRIPTION_fieldblock}
+
+			{BEGIN ADDON_STATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_STATE}" data-fieldname="ADDON_STATE" data-signal-error-for="ADDON_STATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_STATE}">
+		{BEGIN ADDON_STATE_label}{$label ADDONS_MANAGER ADDON_STATE}{END ADDON_STATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_STATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_STATE">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_STATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_STATE_fieldblock}
+
+			{BEGIN ADDON_STATE_CHANGED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_STATE_CHANGED}" data-fieldname="ADDON_STATE_CHANGED" data-signal-error-for="ADDON_STATE_CHANGED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_STATE_CHANGED}">
+		{BEGIN ADDON_STATE_CHANGED_label}{$label ADDONS_MANAGER ADDON_STATE_CHANGED}{END ADDON_STATE_CHANGED_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_STATE_CHANGED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_STATE_CHANGED">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_STATE_CHANGED}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_STATE_CHANGED_fieldblock}
+
+			{BEGIN ADDON_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_STATUS}" data-fieldname="ADDON_STATUS" data-signal-error-for="ADDON_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_STATUS}">
+		{BEGIN ADDON_STATUS_label}{$label ADDONS_MANAGER ADDON_STATUS}{END ADDON_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_STATUS">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_STATUS_fieldblock}
+
+			{BEGIN ADDON_VERSION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_VERSION}" data-fieldname="ADDON_VERSION" data-signal-error-for="ADDON_VERSION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_VERSION}">
+		{BEGIN ADDON_VERSION_label}{$label ADDONS_MANAGER ADDON_VERSION}{END ADDON_VERSION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_VERSION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_VERSION">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_VERSION}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_VERSION_fieldblock}
+
+			{BEGIN ADDON_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_TYPE}" data-fieldname="ADDON_TYPE" data-signal-error-for="ADDON_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_TYPE}">
+		{BEGIN ADDON_TYPE_label}{$label ADDONS_MANAGER ADDON_TYPE}{END ADDON_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_TYPE">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_TYPE_fieldblock}
+
+			{BEGIN ADDON_PUBLISHER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_PUBLISHER}" data-fieldname="ADDON_PUBLISHER" data-signal-error-for="ADDON_PUBLISHER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_PUBLISHER}">
+		{BEGIN ADDON_PUBLISHER_label}{$label ADDONS_MANAGER ADDON_PUBLISHER}{END ADDON_PUBLISHER_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_PUBLISHER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_PUBLISHER">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_PUBLISHER}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_PUBLISHER_fieldblock}
+
+			{BEGIN ADDON_RELEASE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_RELEASE_DATE}" data-fieldname="ADDON_RELEASE_DATE" data-signal-error-for="ADDON_RELEASE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_RELEASE_DATE}">
+		{BEGIN ADDON_RELEASE_DATE_label}{$label ADDONS_MANAGER ADDON_RELEASE_DATE}{END ADDON_RELEASE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_RELEASE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_RELEASE_DATE">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_RELEASE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_RELEASE_DATE_fieldblock}
+
+			{BEGIN ADDON_RELEASE_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_RELEASE_TYPE}" data-fieldname="ADDON_RELEASE_TYPE" data-signal-error-for="ADDON_RELEASE_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_RELEASE_TYPE}">
+		{BEGIN ADDON_RELEASE_TYPE_label}{$label ADDONS_MANAGER ADDON_RELEASE_TYPE}{END ADDON_RELEASE_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_RELEASE_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_RELEASE_TYPE">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_RELEASE_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_RELEASE_TYPE_fieldblock}
+
+			{BEGIN ADDON_RELEASE_NOTES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_RELEASE_NOTES}" data-fieldname="ADDON_RELEASE_NOTES" data-signal-error-for="ADDON_RELEASE_NOTES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_RELEASE_NOTES}">
+		{BEGIN ADDON_RELEASE_NOTES_label}{$label ADDONS_MANAGER ADDON_RELEASE_NOTES}{END ADDON_RELEASE_NOTES_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_RELEASE_NOTES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_RELEASE_NOTES">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_RELEASE_NOTES}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_RELEASE_NOTES_fieldblock}
+
+			{BEGIN ADDON_DOWNLOAD_URL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_DOWNLOAD_URL}" data-fieldname="ADDON_DOWNLOAD_URL" data-signal-error-for="ADDON_DOWNLOAD_URL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_DOWNLOAD_URL}">
+		{BEGIN ADDON_DOWNLOAD_URL_label}{$label ADDONS_MANAGER ADDON_DOWNLOAD_URL}{END ADDON_DOWNLOAD_URL_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_DOWNLOAD_URL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_DOWNLOAD_URL">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_DOWNLOAD_URL}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_DOWNLOAD_URL_fieldblock}
+
+			{BEGIN ADDON_DOWNLOAD_PROGRESS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_DOWNLOAD_PROGRESS}" data-fieldname="ADDON_DOWNLOAD_PROGRESS" data-signal-error-for="ADDON_DOWNLOAD_PROGRESS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_DOWNLOAD_PROGRESS}">
+		{BEGIN ADDON_DOWNLOAD_PROGRESS_label}{$label ADDONS_MANAGER ADDON_DOWNLOAD_PROGRESS}{END ADDON_DOWNLOAD_PROGRESS_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_DOWNLOAD_PROGRESS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_DOWNLOAD_PROGRESS">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_DOWNLOAD_PROGRESS}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_DOWNLOAD_PROGRESS_fieldblock}
+
+			{BEGIN ADDON_DOWNLOAD_MD5_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADDON_DOWNLOAD_MD5}" data-fieldname="ADDON_DOWNLOAD_MD5" data-signal-error-for="ADDON_DOWNLOAD_MD5{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADDON_DOWNLOAD_MD5}">
+		{BEGIN ADDON_DOWNLOAD_MD5_label}{$label ADDONS_MANAGER ADDON_DOWNLOAD_MD5}{END ADDON_DOWNLOAD_MD5_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADDON_DOWNLOAD_MD5_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADDON_DOWNLOAD_MD5">
+		<div class="text-muted" >
+		{$tooltip ADDONS_MANAGER ADDON_DOWNLOAD_MD5}
+		</div>
+	</div>
+</div>
+</div>
+{END ADDON_DOWNLOAD_MD5_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

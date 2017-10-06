@@ -1,0 +1,1091 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel APPLICATION edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN APP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UID}" data-fieldname="APP_UID" data-signal-error-for="APP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UID}">
+		{BEGIN APP_UID_label}{$label APPLICATION APP_UID}{END APP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UID">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UID_fieldblock}
+
+			{BEGIN APP_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_TITLE}" data-fieldname="APP_TITLE" data-signal-error-for="APP_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_TITLE}">
+		{BEGIN APP_TITLE_label}{$label APPLICATION APP_TITLE}{END APP_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_TITLE">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_TITLE_fieldblock}
+
+			{BEGIN APP_DESCRIPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_DESCRIPTION}" data-fieldname="APP_DESCRIPTION" data-signal-error-for="APP_DESCRIPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_DESCRIPTION}">
+		{BEGIN APP_DESCRIPTION_label}{$label APPLICATION APP_DESCRIPTION}{END APP_DESCRIPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_DESCRIPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_DESCRIPTION">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_DESCRIPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_DESCRIPTION_fieldblock}
+
+			{BEGIN APP_NUMBER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER" data-signal-error-for="APP_NUMBER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_NUMBER}">
+		{BEGIN APP_NUMBER_label}{$label APPLICATION APP_NUMBER}{END APP_NUMBER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_NUMBER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_NUMBER">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_NUMBER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_NUMBER_fieldblock}
+
+			{BEGIN APP_PARENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_PARENT}" data-fieldname="APP_PARENT" data-signal-error-for="APP_PARENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_PARENT}">
+		{BEGIN APP_PARENT_label}{$label APPLICATION APP_PARENT}{END APP_PARENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_PARENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_PARENT">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_PARENT}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_PARENT_fieldblock}
+
+			{BEGIN APP_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS" data-signal-error-for="APP_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_STATUS}">
+		{BEGIN APP_STATUS_label}{$label APPLICATION APP_STATUS}{END APP_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_STATUS">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_STATUS_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label APPLICATION PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip APPLICATION PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN APP_PROC_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_PROC_STATUS}" data-fieldname="APP_PROC_STATUS" data-signal-error-for="APP_PROC_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_PROC_STATUS}">
+		{BEGIN APP_PROC_STATUS_label}{$label APPLICATION APP_PROC_STATUS}{END APP_PROC_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_PROC_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_PROC_STATUS">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_PROC_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_PROC_STATUS_fieldblock}
+
+			{BEGIN APP_PROC_CODE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_PROC_CODE}" data-fieldname="APP_PROC_CODE" data-signal-error-for="APP_PROC_CODE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_PROC_CODE}">
+		{BEGIN APP_PROC_CODE_label}{$label APPLICATION APP_PROC_CODE}{END APP_PROC_CODE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_PROC_CODE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_PROC_CODE">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_PROC_CODE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_PROC_CODE_fieldblock}
+
+			{BEGIN APP_PARALLEL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_PARALLEL}" data-fieldname="APP_PARALLEL" data-signal-error-for="APP_PARALLEL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_PARALLEL}">
+		{BEGIN APP_PARALLEL_label}{$label APPLICATION APP_PARALLEL}{END APP_PARALLEL_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_PARALLEL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_PARALLEL">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_PARALLEL}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_PARALLEL_fieldblock}
+
+			{BEGIN APP_INIT_USER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_INIT_USER}" data-fieldname="APP_INIT_USER" data-signal-error-for="APP_INIT_USER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_INIT_USER}">
+		{BEGIN APP_INIT_USER_label}{$label APPLICATION APP_INIT_USER}{END APP_INIT_USER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_INIT_USER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_INIT_USER">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_INIT_USER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_INIT_USER_fieldblock}
+
+			{BEGIN APP_CUR_USER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_CUR_USER}" data-fieldname="APP_CUR_USER" data-signal-error-for="APP_CUR_USER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_CUR_USER}">
+		{BEGIN APP_CUR_USER_label}{$label APPLICATION APP_CUR_USER}{END APP_CUR_USER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_CUR_USER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_CUR_USER">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_CUR_USER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_CUR_USER_fieldblock}
+
+			{BEGIN APP_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_CREATE_DATE}" data-fieldname="APP_CREATE_DATE" data-signal-error-for="APP_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_CREATE_DATE}">
+		{BEGIN APP_CREATE_DATE_label}{$label APPLICATION APP_CREATE_DATE}{END APP_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_CREATE_DATE_fieldblock}
+
+			{BEGIN APP_INIT_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_INIT_DATE}" data-fieldname="APP_INIT_DATE" data-signal-error-for="APP_INIT_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_INIT_DATE}">
+		{BEGIN APP_INIT_DATE_label}{$label APPLICATION APP_INIT_DATE}{END APP_INIT_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_INIT_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_INIT_DATE">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_INIT_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_INIT_DATE_fieldblock}
+
+			{BEGIN APP_FINISH_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_FINISH_DATE}" data-fieldname="APP_FINISH_DATE" data-signal-error-for="APP_FINISH_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_FINISH_DATE}">
+		{BEGIN APP_FINISH_DATE_label}{$label APPLICATION APP_FINISH_DATE}{END APP_FINISH_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_FINISH_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_FINISH_DATE">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_FINISH_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_FINISH_DATE_fieldblock}
+
+			{BEGIN APP_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UPDATE_DATE}" data-fieldname="APP_UPDATE_DATE" data-signal-error-for="APP_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UPDATE_DATE}">
+		{BEGIN APP_UPDATE_DATE_label}{$label APPLICATION APP_UPDATE_DATE}{END APP_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UPDATE_DATE_fieldblock}
+
+			{BEGIN APP_DATA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_DATA}" data-fieldname="APP_DATA" data-signal-error-for="APP_DATA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_DATA}">
+		{BEGIN APP_DATA_label}{$label APPLICATION APP_DATA}{END APP_DATA_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_DATA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_DATA">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_DATA}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_DATA_fieldblock}
+
+			{BEGIN APP_PIN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_PIN}" data-fieldname="APP_PIN" data-signal-error-for="APP_PIN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_PIN}">
+		{BEGIN APP_PIN_label}{$label APPLICATION APP_PIN}{END APP_PIN_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_PIN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_PIN">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_PIN}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_PIN_fieldblock}
+
+			{BEGIN APP_DURATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_DURATION}" data-fieldname="APP_DURATION" data-signal-error-for="APP_DURATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_DURATION}">
+		{BEGIN APP_DURATION_label}{$label APPLICATION APP_DURATION}{END APP_DURATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_DURATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_DURATION">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_DURATION}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_DURATION_fieldblock}
+
+			{BEGIN APP_DELAY_DURATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_DELAY_DURATION}" data-fieldname="APP_DELAY_DURATION" data-signal-error-for="APP_DELAY_DURATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_DELAY_DURATION}">
+		{BEGIN APP_DELAY_DURATION_label}{$label APPLICATION APP_DELAY_DURATION}{END APP_DELAY_DURATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_DELAY_DURATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_DELAY_DURATION">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_DELAY_DURATION}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_DELAY_DURATION_fieldblock}
+
+			{BEGIN APP_DRIVE_FOLDER_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_DRIVE_FOLDER_UID}" data-fieldname="APP_DRIVE_FOLDER_UID" data-signal-error-for="APP_DRIVE_FOLDER_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_DRIVE_FOLDER_UID}">
+		{BEGIN APP_DRIVE_FOLDER_UID_label}{$label APPLICATION APP_DRIVE_FOLDER_UID}{END APP_DRIVE_FOLDER_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_DRIVE_FOLDER_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_DRIVE_FOLDER_UID">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_DRIVE_FOLDER_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_DRIVE_FOLDER_UID_fieldblock}
+
+			{BEGIN APP_ROUTING_DATA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_ROUTING_DATA}" data-fieldname="APP_ROUTING_DATA" data-signal-error-for="APP_ROUTING_DATA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_ROUTING_DATA}">
+		{BEGIN APP_ROUTING_DATA_label}{$label APPLICATION APP_ROUTING_DATA}{END APP_ROUTING_DATA_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_ROUTING_DATA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_ROUTING_DATA">
+		<div class="text-muted" >
+		{$tooltip APPLICATION APP_ROUTING_DATA}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_ROUTING_DATA_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_CACHE_VIEW}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">履歴一覧
+		<span>
+{BEGIN details_inlineadd_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_CACHE_VIEW_attrs}>インライン追加</button>
+{END details_inlineadd_APP_CACHE_VIEW_link}		
+{BEGIN details_add_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_CACHE_VIEW_attrs}>追加</button>
+{END details_add_APP_CACHE_VIEW_link}
+{BEGIN details_edit_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_CACHE_VIEW_attrs}>編集</button>
+{END details_edit_APP_CACHE_VIEW_link}
+{BEGIN details_updateselected_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_CACHE_VIEW_attrs}>Update selected</button>
+{END details_updateselected_APP_CACHE_VIEW_link}
+
+
+{BEGIN details_delete_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_CACHE_VIEW_attrs}>削除</button>
+{END details_delete_APP_CACHE_VIEW_link}
+
+{BEGIN saveall_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_APP_CACHE_VIEW_attrs} {$savealllink_APP_CACHE_VIEW_span}>全て保存</button>
+{END saveall_APP_CACHE_VIEW_link}
+{BEGIN cancelall_APP_CACHE_VIEW_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_APP_CACHE_VIEW_attrs} {$cancelalllink_APP_CACHE_VIEW_span}>キャンセル</button>
+{END cancelall_APP_CACHE_VIEW_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_CACHE_VIEW}
+</div>
+</div>
+</div>
+{END details_APP_CACHE_VIEW}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_DELAY}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">遅延
+		<span>
+{BEGIN details_inlineadd_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_DELAY_attrs}>インライン追加</button>
+{END details_inlineadd_APP_DELAY_link}		
+{BEGIN details_add_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_DELAY_attrs}>追加</button>
+{END details_add_APP_DELAY_link}
+{BEGIN details_edit_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_DELAY_attrs}>編集</button>
+{END details_edit_APP_DELAY_link}
+{BEGIN details_updateselected_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_DELAY_attrs}>Update selected</button>
+{END details_updateselected_APP_DELAY_link}
+
+
+{BEGIN details_delete_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_DELAY_attrs}>削除</button>
+{END details_delete_APP_DELAY_link}
+
+{BEGIN saveall_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_APP_DELAY_attrs} {$savealllink_APP_DELAY_span}>全て保存</button>
+{END saveall_APP_DELAY_link}
+{BEGIN cancelall_APP_DELAY_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_APP_DELAY_attrs} {$cancelalllink_APP_DELAY_span}>キャンセル</button>
+{END cancelall_APP_DELAY_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_DELAY}
+</div>
+</div>
+</div>
+{END details_APP_DELAY}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_DELEGATION}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">委任
+		<span>
+{BEGIN details_inlineadd_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_DELEGATION_attrs}>インライン追加</button>
+{END details_inlineadd_APP_DELEGATION_link}		
+{BEGIN details_add_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_DELEGATION_attrs}>追加</button>
+{END details_add_APP_DELEGATION_link}
+{BEGIN details_edit_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_DELEGATION_attrs}>編集</button>
+{END details_edit_APP_DELEGATION_link}
+{BEGIN details_updateselected_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_DELEGATION_attrs}>Update selected</button>
+{END details_updateselected_APP_DELEGATION_link}
+
+
+{BEGIN details_delete_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_DELEGATION_attrs}>削除</button>
+{END details_delete_APP_DELEGATION_link}
+
+{BEGIN saveall_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_APP_DELEGATION_attrs} {$savealllink_APP_DELEGATION_span}>全て保存</button>
+{END saveall_APP_DELEGATION_link}
+{BEGIN cancelall_APP_DELEGATION_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_APP_DELEGATION_attrs} {$cancelalllink_APP_DELEGATION_span}>キャンセル</button>
+{END cancelall_APP_DELEGATION_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_DELEGATION}
+</div>
+</div>
+</div>
+{END details_APP_DELEGATION}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_HISTORY}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">履歴
+		<span>
+{BEGIN details_inlineadd_APP_HISTORY_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_HISTORY_attrs}>インライン追加</button>
+{END details_inlineadd_APP_HISTORY_link}		
+{BEGIN details_add_APP_HISTORY_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_HISTORY_attrs}>追加</button>
+{END details_add_APP_HISTORY_link}
+{BEGIN details_edit_APP_HISTORY_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_HISTORY_attrs}>編集</button>
+{END details_edit_APP_HISTORY_link}
+{BEGIN details_updateselected_APP_HISTORY_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_HISTORY_attrs}>Update selected</button>
+{END details_updateselected_APP_HISTORY_link}
+
+
+{BEGIN details_delete_APP_HISTORY_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_HISTORY_attrs}>削除</button>
+{END details_delete_APP_HISTORY_link}
+
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_HISTORY}
+</div>
+</div>
+</div>
+{END details_APP_HISTORY}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_NOTES}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">ノート
+		<span>
+{BEGIN details_inlineadd_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_NOTES_attrs}>インライン追加</button>
+{END details_inlineadd_APP_NOTES_link}		
+{BEGIN details_add_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_NOTES_attrs}>追加</button>
+{END details_add_APP_NOTES_link}
+{BEGIN details_edit_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_NOTES_attrs}>編集</button>
+{END details_edit_APP_NOTES_link}
+{BEGIN details_updateselected_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_NOTES_attrs}>Update selected</button>
+{END details_updateselected_APP_NOTES_link}
+
+
+{BEGIN details_delete_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_NOTES_attrs}>削除</button>
+{END details_delete_APP_NOTES_link}
+
+{BEGIN saveall_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_APP_NOTES_attrs} {$savealllink_APP_NOTES_span}>全て保存</button>
+{END saveall_APP_NOTES_link}
+{BEGIN cancelall_APP_NOTES_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_APP_NOTES_attrs} {$cancelalllink_APP_NOTES_span}>キャンセル</button>
+{END cancelall_APP_NOTES_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_NOTES}
+</div>
+</div>
+</div>
+{END details_APP_NOTES}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_MESSAGE}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">メッセージ
+		<span>
+{BEGIN details_inlineadd_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_MESSAGE_attrs}>インライン追加</button>
+{END details_inlineadd_APP_MESSAGE_link}		
+{BEGIN details_add_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_MESSAGE_attrs}>追加</button>
+{END details_add_APP_MESSAGE_link}
+{BEGIN details_edit_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_MESSAGE_attrs}>編集</button>
+{END details_edit_APP_MESSAGE_link}
+{BEGIN details_updateselected_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_MESSAGE_attrs}>Update selected</button>
+{END details_updateselected_APP_MESSAGE_link}
+
+
+{BEGIN details_delete_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_MESSAGE_attrs}>削除</button>
+{END details_delete_APP_MESSAGE_link}
+
+{BEGIN saveall_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_APP_MESSAGE_attrs} {$savealllink_APP_MESSAGE_span}>全て保存</button>
+{END saveall_APP_MESSAGE_link}
+{BEGIN cancelall_APP_MESSAGE_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_APP_MESSAGE_attrs} {$cancelalllink_APP_MESSAGE_span}>キャンセル</button>
+{END cancelall_APP_MESSAGE_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_MESSAGE}
+</div>
+</div>
+</div>
+{END details_APP_MESSAGE}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_APP_CACHE_VIEW_INDEX}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">作業中
+		<span>
+{BEGIN details_inlineadd_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_APP_CACHE_VIEW_INDEX_attrs}>インライン追加</button>
+{END details_inlineadd_APP_CACHE_VIEW_INDEX_link}		
+{BEGIN details_add_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_APP_CACHE_VIEW_INDEX_attrs}>追加</button>
+{END details_add_APP_CACHE_VIEW_INDEX_link}
+{BEGIN details_edit_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_APP_CACHE_VIEW_INDEX_attrs}>編集</button>
+{END details_edit_APP_CACHE_VIEW_INDEX_link}
+{BEGIN details_updateselected_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_APP_CACHE_VIEW_INDEX_attrs}>Update selected</button>
+{END details_updateselected_APP_CACHE_VIEW_INDEX_link}
+
+
+{BEGIN details_delete_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_APP_CACHE_VIEW_INDEX_attrs}>削除</button>
+{END details_delete_APP_CACHE_VIEW_INDEX_link}
+
+{BEGIN saveall_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_APP_CACHE_VIEW_INDEX_attrs} {$savealllink_APP_CACHE_VIEW_INDEX_span}>全て保存</button>
+{END saveall_APP_CACHE_VIEW_INDEX_link}
+{BEGIN cancelall_APP_CACHE_VIEW_INDEX_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_APP_CACHE_VIEW_INDEX_attrs} {$cancelalllink_APP_CACHE_VIEW_INDEX_span}>キャンセル</button>
+{END cancelall_APP_CACHE_VIEW_INDEX_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_APP_CACHE_VIEW_INDEX}
+</div>
+</div>
+</div>
+{END details_APP_CACHE_VIEW_INDEX}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_PMT_ECCUBE}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">PMT ECCUBE
+		<span>
+{BEGIN details_inlineadd_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PMT_ECCUBE_attrs}>インライン追加</button>
+{END details_inlineadd_PMT_ECCUBE_link}		
+{BEGIN details_add_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PMT_ECCUBE_attrs}>追加</button>
+{END details_add_PMT_ECCUBE_link}
+{BEGIN details_edit_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PMT_ECCUBE_attrs}>編集</button>
+{END details_edit_PMT_ECCUBE_link}
+{BEGIN details_updateselected_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PMT_ECCUBE_attrs}>Update selected</button>
+{END details_updateselected_PMT_ECCUBE_link}
+
+
+{BEGIN details_delete_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PMT_ECCUBE_attrs}>削除</button>
+{END details_delete_PMT_ECCUBE_link}
+
+{BEGIN saveall_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PMT_ECCUBE_attrs} {$savealllink_PMT_ECCUBE_span}>全て保存</button>
+{END saveall_PMT_ECCUBE_link}
+{BEGIN cancelall_PMT_ECCUBE_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PMT_ECCUBE_attrs} {$cancelalllink_PMT_ECCUBE_span}>キャンセル</button>
+{END cancelall_PMT_ECCUBE_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PMT_ECCUBE}
+</div>
+</div>
+</div>
+{END details_PMT_ECCUBE}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

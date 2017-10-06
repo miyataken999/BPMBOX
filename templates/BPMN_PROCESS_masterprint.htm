@@ -1,0 +1,53 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel BPMN_PROCESS masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$PRO_UID_class}">{$label BPMN_PROCESS PRO_UID}</th>
+			<th class="{$PRJ_UID_class}">{$label BPMN_PROCESS PRJ_UID}</th>
+			<th class="{$DIA_UID_class}">{$label BPMN_PROCESS DIA_UID}</th>
+			<th class="{$PRO_NAME_class}">{$label BPMN_PROCESS PRO_NAME}</th>
+			<th class="{$PRO_TYPE_class}">{$label BPMN_PROCESS PRO_TYPE}</th>
+			<th class="{$PRO_IS_EXECUTABLE_class}">{$label BPMN_PROCESS PRO_IS_EXECUTABLE}</th>
+			<th class="{$PRO_IS_CLOSED_class}">{$label BPMN_PROCESS PRO_IS_CLOSED}</th>
+			<th class="{$PRO_IS_SUBPROCESS_class}">{$label BPMN_PROCESS PRO_IS_SUBPROCESS}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$PRO_UID_class}">{$PRO_UID_mastervalue}</td>
+			<td class="{$PRJ_UID_class}">{$PRJ_UID_mastervalue}</td>
+			<td class="{$DIA_UID_class}">{$DIA_UID_mastervalue}</td>
+			<td class="{$PRO_NAME_class}">{$PRO_NAME_mastervalue}</td>
+			<td class="{$PRO_TYPE_class}">{$PRO_TYPE_mastervalue}</td>
+			<td class="{$PRO_IS_EXECUTABLE_class}">{$PRO_IS_EXECUTABLE_mastervalue}</td>
+			<td class="{$PRO_IS_CLOSED_class}">{$PRO_IS_CLOSED_mastervalue}</td>
+			<td class="{$PRO_IS_SUBPROCESS_class}">{$PRO_IS_SUBPROCESS_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

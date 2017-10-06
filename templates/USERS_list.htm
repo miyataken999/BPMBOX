@@ -1,0 +1,1705 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+		
+				
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="USERS_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="USERS_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+		{BEGIN updateselected_link}
+		<button type="button" class="btn btn-default" {$updateselectedlink_attrs} disabled>Update selected</button>
+	{END updateselected_link}
+		{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="USERS_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="USERS_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_USERS_PROPERTIES}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsUSERS_PROPERTIES{$id}">
+									<input type="checkbox" value="USERS_PROPERTIES" id="printDetailsUSERS_PROPERTIES{$id}" checked>
+									ユーザーのプロパティ
+								</label>
+							</div>
+					{END print_details_USERS_PROPERTIES}
+					{BEGIN print_details_RBAC_USERS_ROLES}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsRBAC_USERS_ROLES{$id}">
+									<input type="checkbox" value="RBAC_USERS_ROLES" id="printDetailsRBAC_USERS_ROLES{$id}" checked>
+									RBACユーザーの役割
+								</label>
+							</div>
+					{END print_details_RBAC_USERS_ROLES}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_UID" checked="checked" value="1" data-field="USR_UID">
+			  <span>{$label USERS USR_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_USERNAME" checked="checked" value="1" data-field="USR_USERNAME">
+			  <span>{$label USERS USR_USERNAME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_PASSWORD" checked="checked" value="1" data-field="USR_PASSWORD">
+			  <span>{$label USERS USR_PASSWORD}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_FIRSTNAME" checked="checked" value="1" data-field="USR_FIRSTNAME">
+			  <span>{$label USERS USR_FIRSTNAME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_LASTNAME" checked="checked" value="1" data-field="USR_LASTNAME">
+			  <span>{$label USERS USR_LASTNAME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_EMAIL" checked="checked" value="1" data-field="USR_EMAIL">
+			  <span>{$label USERS USR_EMAIL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_DUE_DATE" checked="checked" value="1" data-field="USR_DUE_DATE">
+			  <span>{$label USERS USR_DUE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_CREATE_DATE" checked="checked" value="1" data-field="USR_CREATE_DATE">
+			  <span>{$label USERS USR_CREATE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_UPDATE_DATE" checked="checked" value="1" data-field="USR_UPDATE_DATE">
+			  <span>{$label USERS USR_UPDATE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_STATUS" checked="checked" value="1" data-field="USR_STATUS">
+			  <span>{$label USERS USR_STATUS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_COUNTRY" checked="checked" value="1" data-field="USR_COUNTRY">
+			  <span>{$label USERS USR_COUNTRY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_CITY" checked="checked" value="1" data-field="USR_CITY">
+			  <span>{$label USERS USR_CITY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_LOCATION" checked="checked" value="1" data-field="USR_LOCATION">
+			  <span>{$label USERS USR_LOCATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_ADDRESS" checked="checked" value="1" data-field="USR_ADDRESS">
+			  <span>{$label USERS USR_ADDRESS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_PHONE" checked="checked" value="1" data-field="USR_PHONE">
+			  <span>{$label USERS USR_PHONE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_FAX" checked="checked" value="1" data-field="USR_FAX">
+			  <span>{$label USERS USR_FAX}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_CELLULAR" checked="checked" value="1" data-field="USR_CELLULAR">
+			  <span>{$label USERS USR_CELLULAR}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_ZIP_CODE" checked="checked" value="1" data-field="USR_ZIP_CODE">
+			  <span>{$label USERS USR_ZIP_CODE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEP_UID" checked="checked" value="1" data-field="DEP_UID">
+			  <span>{$label USERS DEP_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_POSITION" checked="checked" value="1" data-field="USR_POSITION">
+			  <span>{$label USERS USR_POSITION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_RESUME" checked="checked" value="1" data-field="USR_RESUME">
+			  <span>{$label USERS USR_RESUME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_BIRTHDAY" checked="checked" value="1" data-field="USR_BIRTHDAY">
+			  <span>{$label USERS USR_BIRTHDAY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_ROLE" checked="checked" value="1" data-field="USR_ROLE">
+			  <span>{$label USERS USR_ROLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_REPORTS_TO" checked="checked" value="1" data-field="USR_REPORTS_TO">
+			  <span>{$label USERS USR_REPORTS_TO}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_REPLACED_BY" checked="checked" value="1" data-field="USR_REPLACED_BY">
+			  <span>{$label USERS USR_REPLACED_BY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_UX" checked="checked" value="1" data-field="USR_UX">
+			  <span>{$label USERS USR_UX}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_COST_BY_HOUR" checked="checked" value="1" data-field="USR_COST_BY_HOUR">
+			  <span>{$label USERS USR_COST_BY_HOUR}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_UNIT_COST" checked="checked" value="1" data-field="USR_UNIT_COST">
+			  <span>{$label USERS USR_UNIT_COST}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_PMDRIVE_FOLDER_UID" checked="checked" value="1" data-field="USR_PMDRIVE_FOLDER_UID">
+			  <span>{$label USERS USR_PMDRIVE_FOLDER_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_BOOKMARK_START_CASES" checked="checked" value="1" data-field="USR_BOOKMARK_START_CASES">
+			  <span>{$label USERS USR_BOOKMARK_START_CASES}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_TIME_ZONE" checked="checked" value="1" data-field="USR_TIME_ZONE">
+			  <span>{$label USERS USR_TIME_ZONE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_DEFAULT_LANG" checked="checked" value="1" data-field="USR_DEFAULT_LANG">
+			  <span>{$label USERS USR_DEFAULT_LANG}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_LAST_LOGIN" checked="checked" value="1" data-field="USR_LAST_LOGIN">
+			  <span>{$label USERS USR_LAST_LOGIN}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=USR_UID]:before {
+		content: "{$label USERS USR_UID}";
+	}
+	.bs-gridcell[data-field=USR_USERNAME]:before {
+		content: "{$label USERS USR_USERNAME}";
+	}
+	.bs-gridcell[data-field=USR_PASSWORD]:before {
+		content: "{$label USERS USR_PASSWORD}";
+	}
+	.bs-gridcell[data-field=USR_FIRSTNAME]:before {
+		content: "{$label USERS USR_FIRSTNAME}";
+	}
+	.bs-gridcell[data-field=USR_LASTNAME]:before {
+		content: "{$label USERS USR_LASTNAME}";
+	}
+	.bs-gridcell[data-field=USR_EMAIL]:before {
+		content: "{$label USERS USR_EMAIL}";
+	}
+	.bs-gridcell[data-field=USR_DUE_DATE]:before {
+		content: "{$label USERS USR_DUE_DATE}";
+	}
+	.bs-gridcell[data-field=USR_CREATE_DATE]:before {
+		content: "{$label USERS USR_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=USR_UPDATE_DATE]:before {
+		content: "{$label USERS USR_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=USR_STATUS]:before {
+		content: "{$label USERS USR_STATUS}";
+	}
+	.bs-gridcell[data-field=USR_COUNTRY]:before {
+		content: "{$label USERS USR_COUNTRY}";
+	}
+	.bs-gridcell[data-field=USR_CITY]:before {
+		content: "{$label USERS USR_CITY}";
+	}
+	.bs-gridcell[data-field=USR_LOCATION]:before {
+		content: "{$label USERS USR_LOCATION}";
+	}
+	.bs-gridcell[data-field=USR_ADDRESS]:before {
+		content: "{$label USERS USR_ADDRESS}";
+	}
+	.bs-gridcell[data-field=USR_PHONE]:before {
+		content: "{$label USERS USR_PHONE}";
+	}
+	.bs-gridcell[data-field=USR_FAX]:before {
+		content: "{$label USERS USR_FAX}";
+	}
+	.bs-gridcell[data-field=USR_CELLULAR]:before {
+		content: "{$label USERS USR_CELLULAR}";
+	}
+	.bs-gridcell[data-field=USR_ZIP_CODE]:before {
+		content: "{$label USERS USR_ZIP_CODE}";
+	}
+	.bs-gridcell[data-field=DEP_UID]:before {
+		content: "{$label USERS DEP_UID}";
+	}
+	.bs-gridcell[data-field=USR_POSITION]:before {
+		content: "{$label USERS USR_POSITION}";
+	}
+	.bs-gridcell[data-field=USR_RESUME]:before {
+		content: "{$label USERS USR_RESUME}";
+	}
+	.bs-gridcell[data-field=USR_BIRTHDAY]:before {
+		content: "{$label USERS USR_BIRTHDAY}";
+	}
+	.bs-gridcell[data-field=USR_ROLE]:before {
+		content: "{$label USERS USR_ROLE}";
+	}
+	.bs-gridcell[data-field=USR_REPORTS_TO]:before {
+		content: "{$label USERS USR_REPORTS_TO}";
+	}
+	.bs-gridcell[data-field=USR_REPLACED_BY]:before {
+		content: "{$label USERS USR_REPLACED_BY}";
+	}
+	.bs-gridcell[data-field=USR_UX]:before {
+		content: "{$label USERS USR_UX}";
+	}
+	.bs-gridcell[data-field=USR_COST_BY_HOUR]:before {
+		content: "{$label USERS USR_COST_BY_HOUR}";
+	}
+	.bs-gridcell[data-field=USR_UNIT_COST]:before {
+		content: "{$label USERS USR_UNIT_COST}";
+	}
+	.bs-gridcell[data-field=USR_PMDRIVE_FOLDER_UID]:before {
+		content: "{$label USERS USR_PMDRIVE_FOLDER_UID}";
+	}
+	.bs-gridcell[data-field=USR_BOOKMARK_START_CASES]:before {
+		content: "{$label USERS USR_BOOKMARK_START_CASES}";
+	}
+	.bs-gridcell[data-field=USR_TIME_ZONE]:before {
+		content: "{$label USERS USR_TIME_ZONE}";
+	}
+	.bs-gridcell[data-field=USR_DEFAULT_LANG]:before {
+		content: "{$label USERS USR_DEFAULT_LANG}";
+	}
+	.bs-gridcell[data-field=USR_LAST_LOGIN]:before {
+		content: "{$label USERS USR_LAST_LOGIN}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN USERS_dtable_column}
+									<th >&nbsp;</th>
+									{END USERS_dtable_column}
+									
+									{BEGIN USR_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_UID_class}" data-field=USR_UID>
+									{BEGIN USR_UID_fieldheader}
+																				<span {$USR_UID_orderlinkattrs}>
+											{$label USERS USR_UID}
+										</span>
+									{END USR_UID_fieldheader}
+									</th>
+									{END USR_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_USERNAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_USERNAME_class}" data-field=USR_USERNAME>
+									{BEGIN USR_USERNAME_fieldheader}
+																				<span {$USR_USERNAME_orderlinkattrs}>
+											{$label USERS USR_USERNAME}
+										</span>
+									{END USR_USERNAME_fieldheader}
+									</th>
+									{END USR_USERNAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_PASSWORD_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_PASSWORD_class}" data-field=USR_PASSWORD>
+									{BEGIN USR_PASSWORD_fieldheader}
+																				<span {$USR_PASSWORD_orderlinkattrs}>
+											{$label USERS USR_PASSWORD}
+										</span>
+									{END USR_PASSWORD_fieldheader}
+									</th>
+									{END USR_PASSWORD_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_FIRSTNAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_FIRSTNAME_class}" data-field=USR_FIRSTNAME>
+									{BEGIN USR_FIRSTNAME_fieldheader}
+																				<span {$USR_FIRSTNAME_orderlinkattrs}>
+											{$label USERS USR_FIRSTNAME}
+										</span>
+									{END USR_FIRSTNAME_fieldheader}
+									</th>
+									{END USR_FIRSTNAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_LASTNAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_LASTNAME_class}" data-field=USR_LASTNAME>
+									{BEGIN USR_LASTNAME_fieldheader}
+																				<span {$USR_LASTNAME_orderlinkattrs}>
+											{$label USERS USR_LASTNAME}
+										</span>
+									{END USR_LASTNAME_fieldheader}
+									</th>
+									{END USR_LASTNAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_EMAIL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_EMAIL_class}" data-field=USR_EMAIL>
+									{BEGIN USR_EMAIL_fieldheader}
+																				<span {$USR_EMAIL_orderlinkattrs}>
+											{$label USERS USR_EMAIL}
+										</span>
+									{END USR_EMAIL_fieldheader}
+									</th>
+									{END USR_EMAIL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_DUE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_DUE_DATE_class}" data-field=USR_DUE_DATE>
+									{BEGIN USR_DUE_DATE_fieldheader}
+																				<span {$USR_DUE_DATE_orderlinkattrs}>
+											{$label USERS USR_DUE_DATE}
+										</span>
+									{END USR_DUE_DATE_fieldheader}
+									</th>
+									{END USR_DUE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_CREATE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_CREATE_DATE_class}" data-field=USR_CREATE_DATE>
+									{BEGIN USR_CREATE_DATE_fieldheader}
+																				<span {$USR_CREATE_DATE_orderlinkattrs}>
+											{$label USERS USR_CREATE_DATE}
+										</span>
+									{END USR_CREATE_DATE_fieldheader}
+									</th>
+									{END USR_CREATE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_UPDATE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_UPDATE_DATE_class}" data-field=USR_UPDATE_DATE>
+									{BEGIN USR_UPDATE_DATE_fieldheader}
+																				<span {$USR_UPDATE_DATE_orderlinkattrs}>
+											{$label USERS USR_UPDATE_DATE}
+										</span>
+									{END USR_UPDATE_DATE_fieldheader}
+									</th>
+									{END USR_UPDATE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_STATUS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_STATUS_class}" data-field=USR_STATUS>
+									{BEGIN USR_STATUS_fieldheader}
+																				<span {$USR_STATUS_orderlinkattrs}>
+											{$label USERS USR_STATUS}
+										</span>
+									{END USR_STATUS_fieldheader}
+									</th>
+									{END USR_STATUS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_COUNTRY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_COUNTRY_class}" data-field=USR_COUNTRY>
+									{BEGIN USR_COUNTRY_fieldheader}
+																				<span {$USR_COUNTRY_orderlinkattrs}>
+											{$label USERS USR_COUNTRY}
+										</span>
+									{END USR_COUNTRY_fieldheader}
+									</th>
+									{END USR_COUNTRY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_CITY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_CITY_class}" data-field=USR_CITY>
+									{BEGIN USR_CITY_fieldheader}
+																				<span {$USR_CITY_orderlinkattrs}>
+											{$label USERS USR_CITY}
+										</span>
+									{END USR_CITY_fieldheader}
+									</th>
+									{END USR_CITY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_LOCATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_LOCATION_class}" data-field=USR_LOCATION>
+									{BEGIN USR_LOCATION_fieldheader}
+																				<span {$USR_LOCATION_orderlinkattrs}>
+											{$label USERS USR_LOCATION}
+										</span>
+									{END USR_LOCATION_fieldheader}
+									</th>
+									{END USR_LOCATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_ADDRESS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_ADDRESS_class}" data-field=USR_ADDRESS>
+									{BEGIN USR_ADDRESS_fieldheader}
+																				<span {$USR_ADDRESS_orderlinkattrs}>
+											{$label USERS USR_ADDRESS}
+										</span>
+									{END USR_ADDRESS_fieldheader}
+									</th>
+									{END USR_ADDRESS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_PHONE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_PHONE_class}" data-field=USR_PHONE>
+									{BEGIN USR_PHONE_fieldheader}
+																				<span {$USR_PHONE_orderlinkattrs}>
+											{$label USERS USR_PHONE}
+										</span>
+									{END USR_PHONE_fieldheader}
+									</th>
+									{END USR_PHONE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_FAX_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_FAX_class}" data-field=USR_FAX>
+									{BEGIN USR_FAX_fieldheader}
+																				<span {$USR_FAX_orderlinkattrs}>
+											{$label USERS USR_FAX}
+										</span>
+									{END USR_FAX_fieldheader}
+									</th>
+									{END USR_FAX_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_CELLULAR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_CELLULAR_class}" data-field=USR_CELLULAR>
+									{BEGIN USR_CELLULAR_fieldheader}
+																				<span {$USR_CELLULAR_orderlinkattrs}>
+											{$label USERS USR_CELLULAR}
+										</span>
+									{END USR_CELLULAR_fieldheader}
+									</th>
+									{END USR_CELLULAR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_ZIP_CODE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_ZIP_CODE_class}" data-field=USR_ZIP_CODE>
+									{BEGIN USR_ZIP_CODE_fieldheader}
+																				<span {$USR_ZIP_CODE_orderlinkattrs}>
+											{$label USERS USR_ZIP_CODE}
+										</span>
+									{END USR_ZIP_CODE_fieldheader}
+									</th>
+									{END USR_ZIP_CODE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEP_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEP_UID_class}" data-field=DEP_UID>
+									{BEGIN DEP_UID_fieldheader}
+																				<span {$DEP_UID_orderlinkattrs}>
+											{$label USERS DEP_UID}
+										</span>
+									{END DEP_UID_fieldheader}
+									</th>
+									{END DEP_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_POSITION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_POSITION_class}" data-field=USR_POSITION>
+									{BEGIN USR_POSITION_fieldheader}
+																				<span {$USR_POSITION_orderlinkattrs}>
+											{$label USERS USR_POSITION}
+										</span>
+									{END USR_POSITION_fieldheader}
+									</th>
+									{END USR_POSITION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_RESUME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_RESUME_class}" data-field=USR_RESUME>
+									{BEGIN USR_RESUME_fieldheader}
+																				<span {$USR_RESUME_orderlinkattrs}>
+											{$label USERS USR_RESUME}
+										</span>
+									{END USR_RESUME_fieldheader}
+									</th>
+									{END USR_RESUME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_BIRTHDAY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_BIRTHDAY_class}" data-field=USR_BIRTHDAY>
+									{BEGIN USR_BIRTHDAY_fieldheader}
+																				<span {$USR_BIRTHDAY_orderlinkattrs}>
+											{$label USERS USR_BIRTHDAY}
+										</span>
+									{END USR_BIRTHDAY_fieldheader}
+									</th>
+									{END USR_BIRTHDAY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_ROLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_ROLE_class}" data-field=USR_ROLE>
+									{BEGIN USR_ROLE_fieldheader}
+																				<span {$USR_ROLE_orderlinkattrs}>
+											{$label USERS USR_ROLE}
+										</span>
+									{END USR_ROLE_fieldheader}
+									</th>
+									{END USR_ROLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_REPORTS_TO_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_REPORTS_TO_class}" data-field=USR_REPORTS_TO>
+									{BEGIN USR_REPORTS_TO_fieldheader}
+																				<span {$USR_REPORTS_TO_orderlinkattrs}>
+											{$label USERS USR_REPORTS_TO}
+										</span>
+									{END USR_REPORTS_TO_fieldheader}
+									</th>
+									{END USR_REPORTS_TO_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_REPLACED_BY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_REPLACED_BY_class}" data-field=USR_REPLACED_BY>
+									{BEGIN USR_REPLACED_BY_fieldheader}
+																				<span {$USR_REPLACED_BY_orderlinkattrs}>
+											{$label USERS USR_REPLACED_BY}
+										</span>
+									{END USR_REPLACED_BY_fieldheader}
+									</th>
+									{END USR_REPLACED_BY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_UX_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_UX_class}" data-field=USR_UX>
+									{BEGIN USR_UX_fieldheader}
+																				<span {$USR_UX_orderlinkattrs}>
+											{$label USERS USR_UX}
+										</span>
+									{END USR_UX_fieldheader}
+									</th>
+									{END USR_UX_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_COST_BY_HOUR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_COST_BY_HOUR_class}" data-field=USR_COST_BY_HOUR>
+									{BEGIN USR_COST_BY_HOUR_fieldheader}
+																				<span {$USR_COST_BY_HOUR_orderlinkattrs}>
+											{$label USERS USR_COST_BY_HOUR}
+										</span>
+									{END USR_COST_BY_HOUR_fieldheader}
+									</th>
+									{END USR_COST_BY_HOUR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_UNIT_COST_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_UNIT_COST_class}" data-field=USR_UNIT_COST>
+									{BEGIN USR_UNIT_COST_fieldheader}
+																				<span {$USR_UNIT_COST_orderlinkattrs}>
+											{$label USERS USR_UNIT_COST}
+										</span>
+									{END USR_UNIT_COST_fieldheader}
+									</th>
+									{END USR_UNIT_COST_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_PMDRIVE_FOLDER_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_PMDRIVE_FOLDER_UID_class}" data-field=USR_PMDRIVE_FOLDER_UID>
+									{BEGIN USR_PMDRIVE_FOLDER_UID_fieldheader}
+																				<span {$USR_PMDRIVE_FOLDER_UID_orderlinkattrs}>
+											{$label USERS USR_PMDRIVE_FOLDER_UID}
+										</span>
+									{END USR_PMDRIVE_FOLDER_UID_fieldheader}
+									</th>
+									{END USR_PMDRIVE_FOLDER_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_BOOKMARK_START_CASES_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_BOOKMARK_START_CASES_class}" data-field=USR_BOOKMARK_START_CASES>
+									{BEGIN USR_BOOKMARK_START_CASES_fieldheader}
+																				<span {$USR_BOOKMARK_START_CASES_orderlinkattrs}>
+											{$label USERS USR_BOOKMARK_START_CASES}
+										</span>
+									{END USR_BOOKMARK_START_CASES_fieldheader}
+									</th>
+									{END USR_BOOKMARK_START_CASES_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_TIME_ZONE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_TIME_ZONE_class}" data-field=USR_TIME_ZONE>
+									{BEGIN USR_TIME_ZONE_fieldheader}
+																				<span {$USR_TIME_ZONE_orderlinkattrs}>
+											{$label USERS USR_TIME_ZONE}
+										</span>
+									{END USR_TIME_ZONE_fieldheader}
+									</th>
+									{END USR_TIME_ZONE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_DEFAULT_LANG_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_DEFAULT_LANG_class}" data-field=USR_DEFAULT_LANG>
+									{BEGIN USR_DEFAULT_LANG_fieldheader}
+																				<span {$USR_DEFAULT_LANG_orderlinkattrs}>
+											{$label USERS USR_DEFAULT_LANG}
+										</span>
+									{END USR_DEFAULT_LANG_fieldheader}
+									</th>
+									{END USR_DEFAULT_LANG_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_LAST_LOGIN_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_LAST_LOGIN_class}" data-field=USR_LAST_LOGIN>
+									{BEGIN USR_LAST_LOGIN_fieldheader}
+																				<span {$USR_LAST_LOGIN_orderlinkattrs}>
+											{$label USERS USR_LAST_LOGIN}
+										</span>
+									{END USR_LAST_LOGIN_fieldheader}
+									</th>
+									{END USR_LAST_LOGIN_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+		{BEGIN copy_column}
+	{BEGIN copy_link}
+			<a class="glyphicon glyphicon-duplicate" {$copylink_attrs} title="コピー"></a>
+	{END copy_link}
+	{END copy_column}
+
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN USERS_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+							
+				
+								<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge USERS_PROPERTIES_badge" {$USERS_PROPERTIES_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$USERS_PROPERTIES_cntspan_class}" >{$USERS_PROPERTIES_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
+	</td>
+	{END USERS_dtable_column}
+
+
+	{BEGIN USR_UID_fieldcolumn}
+	<td class="bs-gridcell {$USR_UID_class}"  data-field=USR_UID {$rowstyle} {$recordattrs}>
+		{$USR_UID_value}
+	</td>
+{END USR_UID_fieldcolumn}
+
+
+	{BEGIN USR_USERNAME_fieldcolumn}
+	<td class="bs-gridcell {$USR_USERNAME_class}"  data-field=USR_USERNAME {$rowstyle} {$recordattrs}>
+		{$USR_USERNAME_value}
+	</td>
+{END USR_USERNAME_fieldcolumn}
+
+
+	{BEGIN USR_PASSWORD_fieldcolumn}
+	<td class="bs-gridcell {$USR_PASSWORD_class}"  data-field=USR_PASSWORD {$rowstyle} {$recordattrs}>
+		{$USR_PASSWORD_value}
+	</td>
+{END USR_PASSWORD_fieldcolumn}
+
+
+	{BEGIN USR_FIRSTNAME_fieldcolumn}
+	<td class="bs-gridcell {$USR_FIRSTNAME_class}"  data-field=USR_FIRSTNAME {$rowstyle} {$recordattrs}>
+		{$USR_FIRSTNAME_value}
+	</td>
+{END USR_FIRSTNAME_fieldcolumn}
+
+
+	{BEGIN USR_LASTNAME_fieldcolumn}
+	<td class="bs-gridcell {$USR_LASTNAME_class}"  data-field=USR_LASTNAME {$rowstyle} {$recordattrs}>
+		{$USR_LASTNAME_value}
+	</td>
+{END USR_LASTNAME_fieldcolumn}
+
+
+	{BEGIN USR_EMAIL_fieldcolumn}
+	<td class="bs-gridcell {$USR_EMAIL_class}"  data-field=USR_EMAIL {$rowstyle} {$recordattrs}>
+		{$USR_EMAIL_value}
+	</td>
+{END USR_EMAIL_fieldcolumn}
+
+
+	{BEGIN USR_DUE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$USR_DUE_DATE_class}"  data-field=USR_DUE_DATE {$rowstyle} {$recordattrs}>
+		{$USR_DUE_DATE_value}
+	</td>
+{END USR_DUE_DATE_fieldcolumn}
+
+
+	{BEGIN USR_CREATE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$USR_CREATE_DATE_class}"  data-field=USR_CREATE_DATE {$rowstyle} {$recordattrs}>
+		{$USR_CREATE_DATE_value}
+	</td>
+{END USR_CREATE_DATE_fieldcolumn}
+
+
+	{BEGIN USR_UPDATE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$USR_UPDATE_DATE_class}"  data-field=USR_UPDATE_DATE {$rowstyle} {$recordattrs}>
+		{$USR_UPDATE_DATE_value}
+	</td>
+{END USR_UPDATE_DATE_fieldcolumn}
+
+
+	{BEGIN USR_STATUS_fieldcolumn}
+	<td class="bs-gridcell {$USR_STATUS_class}"  data-field=USR_STATUS {$rowstyle} {$recordattrs}>
+		{$USR_STATUS_value}
+	</td>
+{END USR_STATUS_fieldcolumn}
+
+
+	{BEGIN USR_COUNTRY_fieldcolumn}
+	<td class="bs-gridcell {$USR_COUNTRY_class}"  data-field=USR_COUNTRY {$rowstyle} {$recordattrs}>
+		{$USR_COUNTRY_value}
+	</td>
+{END USR_COUNTRY_fieldcolumn}
+
+
+	{BEGIN USR_CITY_fieldcolumn}
+	<td class="bs-gridcell {$USR_CITY_class}"  data-field=USR_CITY {$rowstyle} {$recordattrs}>
+		{$USR_CITY_value}
+	</td>
+{END USR_CITY_fieldcolumn}
+
+
+	{BEGIN USR_LOCATION_fieldcolumn}
+	<td class="bs-gridcell {$USR_LOCATION_class}"  data-field=USR_LOCATION {$rowstyle} {$recordattrs}>
+		{$USR_LOCATION_value}
+	</td>
+{END USR_LOCATION_fieldcolumn}
+
+
+	{BEGIN USR_ADDRESS_fieldcolumn}
+	<td class="bs-gridcell {$USR_ADDRESS_class}"  data-field=USR_ADDRESS {$rowstyle} {$recordattrs}>
+		{$USR_ADDRESS_value}
+	</td>
+{END USR_ADDRESS_fieldcolumn}
+
+
+	{BEGIN USR_PHONE_fieldcolumn}
+	<td class="bs-gridcell {$USR_PHONE_class}"  data-field=USR_PHONE {$rowstyle} {$recordattrs}>
+		{$USR_PHONE_value}
+	</td>
+{END USR_PHONE_fieldcolumn}
+
+
+	{BEGIN USR_FAX_fieldcolumn}
+	<td class="bs-gridcell {$USR_FAX_class}"  data-field=USR_FAX {$rowstyle} {$recordattrs}>
+		{$USR_FAX_value}
+	</td>
+{END USR_FAX_fieldcolumn}
+
+
+	{BEGIN USR_CELLULAR_fieldcolumn}
+	<td class="bs-gridcell {$USR_CELLULAR_class}"  data-field=USR_CELLULAR {$rowstyle} {$recordattrs}>
+		{$USR_CELLULAR_value}
+	</td>
+{END USR_CELLULAR_fieldcolumn}
+
+
+	{BEGIN USR_ZIP_CODE_fieldcolumn}
+	<td class="bs-gridcell {$USR_ZIP_CODE_class}"  data-field=USR_ZIP_CODE {$rowstyle} {$recordattrs}>
+		{$USR_ZIP_CODE_value}
+	</td>
+{END USR_ZIP_CODE_fieldcolumn}
+
+
+	{BEGIN DEP_UID_fieldcolumn}
+	<td class="bs-gridcell {$DEP_UID_class}"  data-field=DEP_UID {$rowstyle} {$recordattrs}>
+		{$DEP_UID_value}
+	</td>
+{END DEP_UID_fieldcolumn}
+
+
+	{BEGIN USR_POSITION_fieldcolumn}
+	<td class="bs-gridcell {$USR_POSITION_class}"  data-field=USR_POSITION {$rowstyle} {$recordattrs}>
+		{$USR_POSITION_value}
+	</td>
+{END USR_POSITION_fieldcolumn}
+
+
+	{BEGIN USR_RESUME_fieldcolumn}
+	<td class="bs-gridcell {$USR_RESUME_class}"  data-field=USR_RESUME {$rowstyle} {$recordattrs}>
+		{$USR_RESUME_value}
+	</td>
+{END USR_RESUME_fieldcolumn}
+
+
+	{BEGIN USR_BIRTHDAY_fieldcolumn}
+	<td class="bs-gridcell {$USR_BIRTHDAY_class}"  data-field=USR_BIRTHDAY {$rowstyle} {$recordattrs}>
+		{$USR_BIRTHDAY_value}
+	</td>
+{END USR_BIRTHDAY_fieldcolumn}
+
+
+	{BEGIN USR_ROLE_fieldcolumn}
+	<td class="bs-gridcell {$USR_ROLE_class}"  data-field=USR_ROLE {$rowstyle} {$recordattrs}>
+		{$USR_ROLE_value}
+	</td>
+{END USR_ROLE_fieldcolumn}
+
+
+	{BEGIN USR_REPORTS_TO_fieldcolumn}
+	<td class="bs-gridcell {$USR_REPORTS_TO_class}"  data-field=USR_REPORTS_TO {$rowstyle} {$recordattrs}>
+		{$USR_REPORTS_TO_value}
+	</td>
+{END USR_REPORTS_TO_fieldcolumn}
+
+
+	{BEGIN USR_REPLACED_BY_fieldcolumn}
+	<td class="bs-gridcell {$USR_REPLACED_BY_class}"  data-field=USR_REPLACED_BY {$rowstyle} {$recordattrs}>
+		{$USR_REPLACED_BY_value}
+	</td>
+{END USR_REPLACED_BY_fieldcolumn}
+
+
+	{BEGIN USR_UX_fieldcolumn}
+	<td class="bs-gridcell {$USR_UX_class}"  data-field=USR_UX {$rowstyle} {$recordattrs}>
+		{$USR_UX_value}
+	</td>
+{END USR_UX_fieldcolumn}
+
+
+	{BEGIN USR_COST_BY_HOUR_fieldcolumn}
+	<td class="bs-gridcell {$USR_COST_BY_HOUR_class}"  data-field=USR_COST_BY_HOUR {$rowstyle} {$recordattrs}>
+		{$USR_COST_BY_HOUR_value}
+	</td>
+{END USR_COST_BY_HOUR_fieldcolumn}
+
+
+	{BEGIN USR_UNIT_COST_fieldcolumn}
+	<td class="bs-gridcell {$USR_UNIT_COST_class}"  data-field=USR_UNIT_COST {$rowstyle} {$recordattrs}>
+		{$USR_UNIT_COST_value}
+	</td>
+{END USR_UNIT_COST_fieldcolumn}
+
+
+	{BEGIN USR_PMDRIVE_FOLDER_UID_fieldcolumn}
+	<td class="bs-gridcell {$USR_PMDRIVE_FOLDER_UID_class}"  data-field=USR_PMDRIVE_FOLDER_UID {$rowstyle} {$recordattrs}>
+		{$USR_PMDRIVE_FOLDER_UID_value}
+	</td>
+{END USR_PMDRIVE_FOLDER_UID_fieldcolumn}
+
+
+	{BEGIN USR_BOOKMARK_START_CASES_fieldcolumn}
+	<td class="bs-gridcell {$USR_BOOKMARK_START_CASES_class}"  data-field=USR_BOOKMARK_START_CASES {$rowstyle} {$recordattrs}>
+		{$USR_BOOKMARK_START_CASES_value}
+	</td>
+{END USR_BOOKMARK_START_CASES_fieldcolumn}
+
+
+	{BEGIN USR_TIME_ZONE_fieldcolumn}
+	<td class="bs-gridcell {$USR_TIME_ZONE_class}"  data-field=USR_TIME_ZONE {$rowstyle} {$recordattrs}>
+		{$USR_TIME_ZONE_value}
+	</td>
+{END USR_TIME_ZONE_fieldcolumn}
+
+
+	{BEGIN USR_DEFAULT_LANG_fieldcolumn}
+	<td class="bs-gridcell {$USR_DEFAULT_LANG_class}"  data-field=USR_DEFAULT_LANG {$rowstyle} {$recordattrs}>
+		{$USR_DEFAULT_LANG_value}
+	</td>
+{END USR_DEFAULT_LANG_fieldcolumn}
+
+
+	{BEGIN USR_LAST_LOGIN_fieldcolumn}
+	<td class="bs-gridcell {$USR_LAST_LOGIN_class}"  data-field=USR_LAST_LOGIN {$rowstyle} {$recordattrs}>
+		{$USR_LAST_LOGIN_value}
+	</td>
+{END USR_LAST_LOGIN_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

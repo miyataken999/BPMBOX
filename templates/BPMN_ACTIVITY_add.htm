@@ -1,0 +1,720 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel BPMN_ACTIVITY add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN ACT_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_UID}" data-fieldname="ACT_UID" data-signal-error-for="ACT_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_UID}">
+		{BEGIN ACT_UID_label}{$label BPMN_ACTIVITY ACT_UID}{END ACT_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_UID_fieldblock}
+
+			{BEGIN PRJ_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID" data-signal-error-for="PRJ_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_UID}">
+		{BEGIN PRJ_UID_label}{$label BPMN_ACTIVITY PRJ_UID}{END PRJ_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY PRJ_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label BPMN_ACTIVITY PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN ACT_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_NAME}" data-fieldname="ACT_NAME" data-signal-error-for="ACT_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_NAME}">
+		{BEGIN ACT_NAME_label}{$label BPMN_ACTIVITY ACT_NAME}{END ACT_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_NAME">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_NAME_fieldblock}
+
+			{BEGIN ACT_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_TYPE}" data-fieldname="ACT_TYPE" data-signal-error-for="ACT_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_TYPE}">
+		{BEGIN ACT_TYPE_label}{$label BPMN_ACTIVITY ACT_TYPE}{END ACT_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_TYPE">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_TYPE_fieldblock}
+
+			{BEGIN ACT_IS_FOR_COMPENSATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_IS_FOR_COMPENSATION}" data-fieldname="ACT_IS_FOR_COMPENSATION" data-signal-error-for="ACT_IS_FOR_COMPENSATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_IS_FOR_COMPENSATION}">
+		{BEGIN ACT_IS_FOR_COMPENSATION_label}{$label BPMN_ACTIVITY ACT_IS_FOR_COMPENSATION}{END ACT_IS_FOR_COMPENSATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_IS_FOR_COMPENSATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_IS_FOR_COMPENSATION">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_IS_FOR_COMPENSATION}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_IS_FOR_COMPENSATION_fieldblock}
+
+			{BEGIN ACT_START_QUANTITY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_START_QUANTITY}" data-fieldname="ACT_START_QUANTITY" data-signal-error-for="ACT_START_QUANTITY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_START_QUANTITY}">
+		{BEGIN ACT_START_QUANTITY_label}{$label BPMN_ACTIVITY ACT_START_QUANTITY}{END ACT_START_QUANTITY_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_START_QUANTITY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_START_QUANTITY">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_START_QUANTITY}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_START_QUANTITY_fieldblock}
+
+			{BEGIN ACT_COMPLETION_QUANTITY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_COMPLETION_QUANTITY}" data-fieldname="ACT_COMPLETION_QUANTITY" data-signal-error-for="ACT_COMPLETION_QUANTITY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_COMPLETION_QUANTITY}">
+		{BEGIN ACT_COMPLETION_QUANTITY_label}{$label BPMN_ACTIVITY ACT_COMPLETION_QUANTITY}{END ACT_COMPLETION_QUANTITY_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_COMPLETION_QUANTITY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_COMPLETION_QUANTITY">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_COMPLETION_QUANTITY}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_COMPLETION_QUANTITY_fieldblock}
+
+			{BEGIN ACT_TASK_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_TASK_TYPE}" data-fieldname="ACT_TASK_TYPE" data-signal-error-for="ACT_TASK_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_TASK_TYPE}">
+		{BEGIN ACT_TASK_TYPE_label}{$label BPMN_ACTIVITY ACT_TASK_TYPE}{END ACT_TASK_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_TASK_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_TASK_TYPE">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_TASK_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_TASK_TYPE_fieldblock}
+
+			{BEGIN ACT_IMPLEMENTATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_IMPLEMENTATION}" data-fieldname="ACT_IMPLEMENTATION" data-signal-error-for="ACT_IMPLEMENTATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_IMPLEMENTATION}">
+		{BEGIN ACT_IMPLEMENTATION_label}{$label BPMN_ACTIVITY ACT_IMPLEMENTATION}{END ACT_IMPLEMENTATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_IMPLEMENTATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_IMPLEMENTATION">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_IMPLEMENTATION}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_IMPLEMENTATION_fieldblock}
+
+			{BEGIN ACT_INSTANTIATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_INSTANTIATE}" data-fieldname="ACT_INSTANTIATE" data-signal-error-for="ACT_INSTANTIATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_INSTANTIATE}">
+		{BEGIN ACT_INSTANTIATE_label}{$label BPMN_ACTIVITY ACT_INSTANTIATE}{END ACT_INSTANTIATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_INSTANTIATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_INSTANTIATE">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_INSTANTIATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_INSTANTIATE_fieldblock}
+
+			{BEGIN ACT_SCRIPT_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_SCRIPT_TYPE}" data-fieldname="ACT_SCRIPT_TYPE" data-signal-error-for="ACT_SCRIPT_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_SCRIPT_TYPE}">
+		{BEGIN ACT_SCRIPT_TYPE_label}{$label BPMN_ACTIVITY ACT_SCRIPT_TYPE}{END ACT_SCRIPT_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_SCRIPT_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_SCRIPT_TYPE">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_SCRIPT_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_SCRIPT_TYPE_fieldblock}
+
+			{BEGIN ACT_SCRIPT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_SCRIPT}" data-fieldname="ACT_SCRIPT" data-signal-error-for="ACT_SCRIPT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_SCRIPT}">
+		{BEGIN ACT_SCRIPT_label}{$label BPMN_ACTIVITY ACT_SCRIPT}{END ACT_SCRIPT_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_SCRIPT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_SCRIPT">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_SCRIPT}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_SCRIPT_fieldblock}
+
+			{BEGIN ACT_LOOP_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_LOOP_TYPE}" data-fieldname="ACT_LOOP_TYPE" data-signal-error-for="ACT_LOOP_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_LOOP_TYPE}">
+		{BEGIN ACT_LOOP_TYPE_label}{$label BPMN_ACTIVITY ACT_LOOP_TYPE}{END ACT_LOOP_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_LOOP_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_LOOP_TYPE">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_LOOP_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_LOOP_TYPE_fieldblock}
+
+			{BEGIN ACT_TEST_BEFORE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_TEST_BEFORE}" data-fieldname="ACT_TEST_BEFORE" data-signal-error-for="ACT_TEST_BEFORE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_TEST_BEFORE}">
+		{BEGIN ACT_TEST_BEFORE_label}{$label BPMN_ACTIVITY ACT_TEST_BEFORE}{END ACT_TEST_BEFORE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_TEST_BEFORE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_TEST_BEFORE">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_TEST_BEFORE}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_TEST_BEFORE_fieldblock}
+
+			{BEGIN ACT_LOOP_MAXIMUM_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_LOOP_MAXIMUM}" data-fieldname="ACT_LOOP_MAXIMUM" data-signal-error-for="ACT_LOOP_MAXIMUM{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_LOOP_MAXIMUM}">
+		{BEGIN ACT_LOOP_MAXIMUM_label}{$label BPMN_ACTIVITY ACT_LOOP_MAXIMUM}{END ACT_LOOP_MAXIMUM_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_LOOP_MAXIMUM_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_LOOP_MAXIMUM">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_LOOP_MAXIMUM}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_LOOP_MAXIMUM_fieldblock}
+
+			{BEGIN ACT_LOOP_CONDITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_LOOP_CONDITION}" data-fieldname="ACT_LOOP_CONDITION" data-signal-error-for="ACT_LOOP_CONDITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_LOOP_CONDITION}">
+		{BEGIN ACT_LOOP_CONDITION_label}{$label BPMN_ACTIVITY ACT_LOOP_CONDITION}{END ACT_LOOP_CONDITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_LOOP_CONDITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_LOOP_CONDITION">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_LOOP_CONDITION}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_LOOP_CONDITION_fieldblock}
+
+			{BEGIN ACT_LOOP_CARDINALITY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_LOOP_CARDINALITY}" data-fieldname="ACT_LOOP_CARDINALITY" data-signal-error-for="ACT_LOOP_CARDINALITY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_LOOP_CARDINALITY}">
+		{BEGIN ACT_LOOP_CARDINALITY_label}{$label BPMN_ACTIVITY ACT_LOOP_CARDINALITY}{END ACT_LOOP_CARDINALITY_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_LOOP_CARDINALITY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_LOOP_CARDINALITY">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_LOOP_CARDINALITY}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_LOOP_CARDINALITY_fieldblock}
+
+			{BEGIN ACT_LOOP_BEHAVIOR_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_LOOP_BEHAVIOR}" data-fieldname="ACT_LOOP_BEHAVIOR" data-signal-error-for="ACT_LOOP_BEHAVIOR{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_LOOP_BEHAVIOR}">
+		{BEGIN ACT_LOOP_BEHAVIOR_label}{$label BPMN_ACTIVITY ACT_LOOP_BEHAVIOR}{END ACT_LOOP_BEHAVIOR_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_LOOP_BEHAVIOR_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_LOOP_BEHAVIOR">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_LOOP_BEHAVIOR}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_LOOP_BEHAVIOR_fieldblock}
+
+			{BEGIN ACT_IS_ADHOC_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_IS_ADHOC}" data-fieldname="ACT_IS_ADHOC" data-signal-error-for="ACT_IS_ADHOC{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_IS_ADHOC}">
+		{BEGIN ACT_IS_ADHOC_label}{$label BPMN_ACTIVITY ACT_IS_ADHOC}{END ACT_IS_ADHOC_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_IS_ADHOC_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_IS_ADHOC">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_IS_ADHOC}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_IS_ADHOC_fieldblock}
+
+			{BEGIN ACT_IS_COLLAPSED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_IS_COLLAPSED}" data-fieldname="ACT_IS_COLLAPSED" data-signal-error-for="ACT_IS_COLLAPSED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_IS_COLLAPSED}">
+		{BEGIN ACT_IS_COLLAPSED_label}{$label BPMN_ACTIVITY ACT_IS_COLLAPSED}{END ACT_IS_COLLAPSED_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_IS_COLLAPSED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_IS_COLLAPSED">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_IS_COLLAPSED}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_IS_COLLAPSED_fieldblock}
+
+			{BEGIN ACT_COMPLETION_CONDITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_COMPLETION_CONDITION}" data-fieldname="ACT_COMPLETION_CONDITION" data-signal-error-for="ACT_COMPLETION_CONDITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_COMPLETION_CONDITION}">
+		{BEGIN ACT_COMPLETION_CONDITION_label}{$label BPMN_ACTIVITY ACT_COMPLETION_CONDITION}{END ACT_COMPLETION_CONDITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_COMPLETION_CONDITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_COMPLETION_CONDITION">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_COMPLETION_CONDITION}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_COMPLETION_CONDITION_fieldblock}
+
+			{BEGIN ACT_ORDERING_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_ORDERING}" data-fieldname="ACT_ORDERING" data-signal-error-for="ACT_ORDERING{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_ORDERING}">
+		{BEGIN ACT_ORDERING_label}{$label BPMN_ACTIVITY ACT_ORDERING}{END ACT_ORDERING_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_ORDERING_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_ORDERING">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_ORDERING}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_ORDERING_fieldblock}
+
+			{BEGIN ACT_CANCEL_REMAINING_INSTANCES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_CANCEL_REMAINING_INSTANCES}" data-fieldname="ACT_CANCEL_REMAINING_INSTANCES" data-signal-error-for="ACT_CANCEL_REMAINING_INSTANCES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_CANCEL_REMAINING_INSTANCES}">
+		{BEGIN ACT_CANCEL_REMAINING_INSTANCES_label}{$label BPMN_ACTIVITY ACT_CANCEL_REMAINING_INSTANCES}{END ACT_CANCEL_REMAINING_INSTANCES_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_CANCEL_REMAINING_INSTANCES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_CANCEL_REMAINING_INSTANCES">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_CANCEL_REMAINING_INSTANCES}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_CANCEL_REMAINING_INSTANCES_fieldblock}
+
+			{BEGIN ACT_PROTOCOL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_PROTOCOL}" data-fieldname="ACT_PROTOCOL" data-signal-error-for="ACT_PROTOCOL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_PROTOCOL}">
+		{BEGIN ACT_PROTOCOL_label}{$label BPMN_ACTIVITY ACT_PROTOCOL}{END ACT_PROTOCOL_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_PROTOCOL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_PROTOCOL">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_PROTOCOL}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_PROTOCOL_fieldblock}
+
+			{BEGIN ACT_METHOD_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_METHOD}" data-fieldname="ACT_METHOD" data-signal-error-for="ACT_METHOD{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_METHOD}">
+		{BEGIN ACT_METHOD_label}{$label BPMN_ACTIVITY ACT_METHOD}{END ACT_METHOD_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_METHOD_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_METHOD">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_METHOD}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_METHOD_fieldblock}
+
+			{BEGIN ACT_IS_GLOBAL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_IS_GLOBAL}" data-fieldname="ACT_IS_GLOBAL" data-signal-error-for="ACT_IS_GLOBAL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_IS_GLOBAL}">
+		{BEGIN ACT_IS_GLOBAL_label}{$label BPMN_ACTIVITY ACT_IS_GLOBAL}{END ACT_IS_GLOBAL_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_IS_GLOBAL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_IS_GLOBAL">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_IS_GLOBAL}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_IS_GLOBAL_fieldblock}
+
+			{BEGIN ACT_REFERER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_REFERER}" data-fieldname="ACT_REFERER" data-signal-error-for="ACT_REFERER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_REFERER}">
+		{BEGIN ACT_REFERER_label}{$label BPMN_ACTIVITY ACT_REFERER}{END ACT_REFERER_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_REFERER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_REFERER">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_REFERER}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_REFERER_fieldblock}
+
+			{BEGIN ACT_DEFAULT_FLOW_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_DEFAULT_FLOW}" data-fieldname="ACT_DEFAULT_FLOW" data-signal-error-for="ACT_DEFAULT_FLOW{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_DEFAULT_FLOW}">
+		{BEGIN ACT_DEFAULT_FLOW_label}{$label BPMN_ACTIVITY ACT_DEFAULT_FLOW}{END ACT_DEFAULT_FLOW_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_DEFAULT_FLOW_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_DEFAULT_FLOW">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_DEFAULT_FLOW}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_DEFAULT_FLOW_fieldblock}
+
+			{BEGIN ACT_MASTER_DIAGRAM_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ACT_MASTER_DIAGRAM}" data-fieldname="ACT_MASTER_DIAGRAM" data-signal-error-for="ACT_MASTER_DIAGRAM{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ACT_MASTER_DIAGRAM}">
+		{BEGIN ACT_MASTER_DIAGRAM_label}{$label BPMN_ACTIVITY ACT_MASTER_DIAGRAM}{END ACT_MASTER_DIAGRAM_label}
+	</label>
+	<div class="col-md-6" >
+		{$ACT_MASTER_DIAGRAM_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ACT_MASTER_DIAGRAM">
+		<div class="text-muted" >
+		{$tooltip BPMN_ACTIVITY ACT_MASTER_DIAGRAM}
+		</div>
+	</div>
+</div>
+</div>
+{END ACT_MASTER_DIAGRAM_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

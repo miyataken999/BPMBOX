@@ -1,0 +1,707 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel TASK print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label TASK PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN TAS_UID_fieldheadercolumn}
+			<th class="{$TAS_UID_class}" {$TAS_UID_style}  data-field="TAS_UID">
+				{$label TASK TAS_UID}
+			</th>
+			{END TAS_UID_fieldheadercolumn}
+			{BEGIN TAS_TITLE_fieldheadercolumn}
+			<th class="{$TAS_TITLE_class}" {$TAS_TITLE_style}  data-field="TAS_TITLE">
+				{$label TASK TAS_TITLE}
+			</th>
+			{END TAS_TITLE_fieldheadercolumn}
+			{BEGIN TAS_DESCRIPTION_fieldheadercolumn}
+			<th class="{$TAS_DESCRIPTION_class}" {$TAS_DESCRIPTION_style}  data-field="TAS_DESCRIPTION">
+				{$label TASK TAS_DESCRIPTION}
+			</th>
+			{END TAS_DESCRIPTION_fieldheadercolumn}
+			{BEGIN TAS_DEF_TITLE_fieldheadercolumn}
+			<th class="{$TAS_DEF_TITLE_class}" {$TAS_DEF_TITLE_style}  data-field="TAS_DEF_TITLE">
+				{$label TASK TAS_DEF_TITLE}
+			</th>
+			{END TAS_DEF_TITLE_fieldheadercolumn}
+			{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldheadercolumn}
+			<th class="{$TAS_DEF_SUBJECT_MESSAGE_class}" {$TAS_DEF_SUBJECT_MESSAGE_style}  data-field="TAS_DEF_SUBJECT_MESSAGE">
+				{$label TASK TAS_DEF_SUBJECT_MESSAGE}
+			</th>
+			{END TAS_DEF_SUBJECT_MESSAGE_fieldheadercolumn}
+			{BEGIN TAS_DEF_PROC_CODE_fieldheadercolumn}
+			<th class="{$TAS_DEF_PROC_CODE_class}" {$TAS_DEF_PROC_CODE_style}  data-field="TAS_DEF_PROC_CODE">
+				{$label TASK TAS_DEF_PROC_CODE}
+			</th>
+			{END TAS_DEF_PROC_CODE_fieldheadercolumn}
+			{BEGIN TAS_DEF_MESSAGE_fieldheadercolumn}
+			<th class="{$TAS_DEF_MESSAGE_class}" {$TAS_DEF_MESSAGE_style}  data-field="TAS_DEF_MESSAGE">
+				{$label TASK TAS_DEF_MESSAGE}
+			</th>
+			{END TAS_DEF_MESSAGE_fieldheadercolumn}
+			{BEGIN TAS_DEF_DESCRIPTION_fieldheadercolumn}
+			<th class="{$TAS_DEF_DESCRIPTION_class}" {$TAS_DEF_DESCRIPTION_style}  data-field="TAS_DEF_DESCRIPTION">
+				{$label TASK TAS_DEF_DESCRIPTION}
+			</th>
+			{END TAS_DEF_DESCRIPTION_fieldheadercolumn}
+			{BEGIN TAS_TYPE_fieldheadercolumn}
+			<th class="{$TAS_TYPE_class}" {$TAS_TYPE_style}  data-field="TAS_TYPE">
+				{$label TASK TAS_TYPE}
+			</th>
+			{END TAS_TYPE_fieldheadercolumn}
+			{BEGIN TAS_DURATION_fieldheadercolumn}
+			<th class="{$TAS_DURATION_class}" {$TAS_DURATION_style}  data-field="TAS_DURATION">
+				{$label TASK TAS_DURATION}
+			</th>
+			{END TAS_DURATION_fieldheadercolumn}
+			{BEGIN TAS_DELAY_TYPE_fieldheadercolumn}
+			<th class="{$TAS_DELAY_TYPE_class}" {$TAS_DELAY_TYPE_style}  data-field="TAS_DELAY_TYPE">
+				{$label TASK TAS_DELAY_TYPE}
+			</th>
+			{END TAS_DELAY_TYPE_fieldheadercolumn}
+			{BEGIN TAS_TEMPORIZER_fieldheadercolumn}
+			<th class="{$TAS_TEMPORIZER_class}" {$TAS_TEMPORIZER_style}  data-field="TAS_TEMPORIZER">
+				{$label TASK TAS_TEMPORIZER}
+			</th>
+			{END TAS_TEMPORIZER_fieldheadercolumn}
+			{BEGIN TAS_TYPE_DAY_fieldheadercolumn}
+			<th class="{$TAS_TYPE_DAY_class}" {$TAS_TYPE_DAY_style}  data-field="TAS_TYPE_DAY">
+				{$label TASK TAS_TYPE_DAY}
+			</th>
+			{END TAS_TYPE_DAY_fieldheadercolumn}
+			{BEGIN TAS_TIMEUNIT_fieldheadercolumn}
+			<th class="{$TAS_TIMEUNIT_class}" {$TAS_TIMEUNIT_style}  data-field="TAS_TIMEUNIT">
+				{$label TASK TAS_TIMEUNIT}
+			</th>
+			{END TAS_TIMEUNIT_fieldheadercolumn}
+			{BEGIN TAS_ALERT_fieldheadercolumn}
+			<th class="{$TAS_ALERT_class}" {$TAS_ALERT_style}  data-field="TAS_ALERT">
+				{$label TASK TAS_ALERT}
+			</th>
+			{END TAS_ALERT_fieldheadercolumn}
+			{BEGIN TAS_PRIORITY_VARIABLE_fieldheadercolumn}
+			<th class="{$TAS_PRIORITY_VARIABLE_class}" {$TAS_PRIORITY_VARIABLE_style}  data-field="TAS_PRIORITY_VARIABLE">
+				{$label TASK TAS_PRIORITY_VARIABLE}
+			</th>
+			{END TAS_PRIORITY_VARIABLE_fieldheadercolumn}
+			{BEGIN TAS_ASSIGN_TYPE_fieldheadercolumn}
+			<th class="{$TAS_ASSIGN_TYPE_class}" {$TAS_ASSIGN_TYPE_style}  data-field="TAS_ASSIGN_TYPE">
+				{$label TASK TAS_ASSIGN_TYPE}
+			</th>
+			{END TAS_ASSIGN_TYPE_fieldheadercolumn}
+			{BEGIN TAS_ASSIGN_VARIABLE_fieldheadercolumn}
+			<th class="{$TAS_ASSIGN_VARIABLE_class}" {$TAS_ASSIGN_VARIABLE_style}  data-field="TAS_ASSIGN_VARIABLE">
+				{$label TASK TAS_ASSIGN_VARIABLE}
+			</th>
+			{END TAS_ASSIGN_VARIABLE_fieldheadercolumn}
+			{BEGIN TAS_GROUP_VARIABLE_fieldheadercolumn}
+			<th class="{$TAS_GROUP_VARIABLE_class}" {$TAS_GROUP_VARIABLE_style}  data-field="TAS_GROUP_VARIABLE">
+				{$label TASK TAS_GROUP_VARIABLE}
+			</th>
+			{END TAS_GROUP_VARIABLE_fieldheadercolumn}
+			{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldheadercolumn}
+			<th class="{$TAS_MI_INSTANCE_VARIABLE_class}" {$TAS_MI_INSTANCE_VARIABLE_style}  data-field="TAS_MI_INSTANCE_VARIABLE">
+				{$label TASK TAS_MI_INSTANCE_VARIABLE}
+			</th>
+			{END TAS_MI_INSTANCE_VARIABLE_fieldheadercolumn}
+			{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldheadercolumn}
+			<th class="{$TAS_MI_COMPLETE_VARIABLE_class}" {$TAS_MI_COMPLETE_VARIABLE_style}  data-field="TAS_MI_COMPLETE_VARIABLE">
+				{$label TASK TAS_MI_COMPLETE_VARIABLE}
+			</th>
+			{END TAS_MI_COMPLETE_VARIABLE_fieldheadercolumn}
+			{BEGIN TAS_ASSIGN_LOCATION_fieldheadercolumn}
+			<th class="{$TAS_ASSIGN_LOCATION_class}" {$TAS_ASSIGN_LOCATION_style}  data-field="TAS_ASSIGN_LOCATION">
+				{$label TASK TAS_ASSIGN_LOCATION}
+			</th>
+			{END TAS_ASSIGN_LOCATION_fieldheadercolumn}
+			{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldheadercolumn}
+			<th class="{$TAS_ASSIGN_LOCATION_ADHOC_class}" {$TAS_ASSIGN_LOCATION_ADHOC_style}  data-field="TAS_ASSIGN_LOCATION_ADHOC">
+				{$label TASK TAS_ASSIGN_LOCATION_ADHOC}
+			</th>
+			{END TAS_ASSIGN_LOCATION_ADHOC_fieldheadercolumn}
+			{BEGIN TAS_TRANSFER_FLY_fieldheadercolumn}
+			<th class="{$TAS_TRANSFER_FLY_class}" {$TAS_TRANSFER_FLY_style}  data-field="TAS_TRANSFER_FLY">
+				{$label TASK TAS_TRANSFER_FLY}
+			</th>
+			{END TAS_TRANSFER_FLY_fieldheadercolumn}
+			{BEGIN TAS_LAST_ASSIGNED_fieldheadercolumn}
+			<th class="{$TAS_LAST_ASSIGNED_class}" {$TAS_LAST_ASSIGNED_style}  data-field="TAS_LAST_ASSIGNED">
+				{$label TASK TAS_LAST_ASSIGNED}
+			</th>
+			{END TAS_LAST_ASSIGNED_fieldheadercolumn}
+			{BEGIN TAS_USER_fieldheadercolumn}
+			<th class="{$TAS_USER_class}" {$TAS_USER_style}  data-field="TAS_USER">
+				{$label TASK TAS_USER}
+			</th>
+			{END TAS_USER_fieldheadercolumn}
+			{BEGIN TAS_CAN_UPLOAD_fieldheadercolumn}
+			<th class="{$TAS_CAN_UPLOAD_class}" {$TAS_CAN_UPLOAD_style}  data-field="TAS_CAN_UPLOAD">
+				{$label TASK TAS_CAN_UPLOAD}
+			</th>
+			{END TAS_CAN_UPLOAD_fieldheadercolumn}
+			{BEGIN TAS_VIEW_UPLOAD_fieldheadercolumn}
+			<th class="{$TAS_VIEW_UPLOAD_class}" {$TAS_VIEW_UPLOAD_style}  data-field="TAS_VIEW_UPLOAD">
+				{$label TASK TAS_VIEW_UPLOAD}
+			</th>
+			{END TAS_VIEW_UPLOAD_fieldheadercolumn}
+			{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldheadercolumn}
+			<th class="{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_class}" {$TAS_VIEW_ADDITIONAL_DOCUMENTATION_style}  data-field="TAS_VIEW_ADDITIONAL_DOCUMENTATION">
+				{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}
+			</th>
+			{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldheadercolumn}
+			{BEGIN TAS_CAN_CANCEL_fieldheadercolumn}
+			<th class="{$TAS_CAN_CANCEL_class}" {$TAS_CAN_CANCEL_style}  data-field="TAS_CAN_CANCEL">
+				{$label TASK TAS_CAN_CANCEL}
+			</th>
+			{END TAS_CAN_CANCEL_fieldheadercolumn}
+			{BEGIN TAS_OWNER_APP_fieldheadercolumn}
+			<th class="{$TAS_OWNER_APP_class}" {$TAS_OWNER_APP_style}  data-field="TAS_OWNER_APP">
+				{$label TASK TAS_OWNER_APP}
+			</th>
+			{END TAS_OWNER_APP_fieldheadercolumn}
+			{BEGIN STG_UID_fieldheadercolumn}
+			<th class="{$STG_UID_class}" {$STG_UID_style}  data-field="STG_UID">
+				{$label TASK STG_UID}
+			</th>
+			{END STG_UID_fieldheadercolumn}
+			{BEGIN TAS_CAN_PAUSE_fieldheadercolumn}
+			<th class="{$TAS_CAN_PAUSE_class}" {$TAS_CAN_PAUSE_style}  data-field="TAS_CAN_PAUSE">
+				{$label TASK TAS_CAN_PAUSE}
+			</th>
+			{END TAS_CAN_PAUSE_fieldheadercolumn}
+			{BEGIN TAS_CAN_SEND_MESSAGE_fieldheadercolumn}
+			<th class="{$TAS_CAN_SEND_MESSAGE_class}" {$TAS_CAN_SEND_MESSAGE_style}  data-field="TAS_CAN_SEND_MESSAGE">
+				{$label TASK TAS_CAN_SEND_MESSAGE}
+			</th>
+			{END TAS_CAN_SEND_MESSAGE_fieldheadercolumn}
+			{BEGIN TAS_CAN_DELETE_DOCS_fieldheadercolumn}
+			<th class="{$TAS_CAN_DELETE_DOCS_class}" {$TAS_CAN_DELETE_DOCS_style}  data-field="TAS_CAN_DELETE_DOCS">
+				{$label TASK TAS_CAN_DELETE_DOCS}
+			</th>
+			{END TAS_CAN_DELETE_DOCS_fieldheadercolumn}
+			{BEGIN TAS_SELF_SERVICE_fieldheadercolumn}
+			<th class="{$TAS_SELF_SERVICE_class}" {$TAS_SELF_SERVICE_style}  data-field="TAS_SELF_SERVICE">
+				{$label TASK TAS_SELF_SERVICE}
+			</th>
+			{END TAS_SELF_SERVICE_fieldheadercolumn}
+			{BEGIN TAS_START_fieldheadercolumn}
+			<th class="{$TAS_START_class}" {$TAS_START_style}  data-field="TAS_START">
+				{$label TASK TAS_START}
+			</th>
+			{END TAS_START_fieldheadercolumn}
+			{BEGIN TAS_TO_LAST_USER_fieldheadercolumn}
+			<th class="{$TAS_TO_LAST_USER_class}" {$TAS_TO_LAST_USER_style}  data-field="TAS_TO_LAST_USER">
+				{$label TASK TAS_TO_LAST_USER}
+			</th>
+			{END TAS_TO_LAST_USER_fieldheadercolumn}
+			{BEGIN TAS_SEND_LAST_EMAIL_fieldheadercolumn}
+			<th class="{$TAS_SEND_LAST_EMAIL_class}" {$TAS_SEND_LAST_EMAIL_style}  data-field="TAS_SEND_LAST_EMAIL">
+				{$label TASK TAS_SEND_LAST_EMAIL}
+			</th>
+			{END TAS_SEND_LAST_EMAIL_fieldheadercolumn}
+			{BEGIN TAS_DERIVATION_fieldheadercolumn}
+			<th class="{$TAS_DERIVATION_class}" {$TAS_DERIVATION_style}  data-field="TAS_DERIVATION">
+				{$label TASK TAS_DERIVATION}
+			</th>
+			{END TAS_DERIVATION_fieldheadercolumn}
+			{BEGIN TAS_POSX_fieldheadercolumn}
+			<th class="{$TAS_POSX_class}" {$TAS_POSX_style}  data-field="TAS_POSX">
+				{$label TASK TAS_POSX}
+			</th>
+			{END TAS_POSX_fieldheadercolumn}
+			{BEGIN TAS_POSY_fieldheadercolumn}
+			<th class="{$TAS_POSY_class}" {$TAS_POSY_style}  data-field="TAS_POSY">
+				{$label TASK TAS_POSY}
+			</th>
+			{END TAS_POSY_fieldheadercolumn}
+			{BEGIN TAS_WIDTH_fieldheadercolumn}
+			<th class="{$TAS_WIDTH_class}" {$TAS_WIDTH_style}  data-field="TAS_WIDTH">
+				{$label TASK TAS_WIDTH}
+			</th>
+			{END TAS_WIDTH_fieldheadercolumn}
+			{BEGIN TAS_HEIGHT_fieldheadercolumn}
+			<th class="{$TAS_HEIGHT_class}" {$TAS_HEIGHT_style}  data-field="TAS_HEIGHT">
+				{$label TASK TAS_HEIGHT}
+			</th>
+			{END TAS_HEIGHT_fieldheadercolumn}
+			{BEGIN TAS_COLOR_fieldheadercolumn}
+			<th class="{$TAS_COLOR_class}" {$TAS_COLOR_style}  data-field="TAS_COLOR">
+				{$label TASK TAS_COLOR}
+			</th>
+			{END TAS_COLOR_fieldheadercolumn}
+			{BEGIN TAS_EVN_UID_fieldheadercolumn}
+			<th class="{$TAS_EVN_UID_class}" {$TAS_EVN_UID_style}  data-field="TAS_EVN_UID">
+				{$label TASK TAS_EVN_UID}
+			</th>
+			{END TAS_EVN_UID_fieldheadercolumn}
+			{BEGIN TAS_BOUNDARY_fieldheadercolumn}
+			<th class="{$TAS_BOUNDARY_class}" {$TAS_BOUNDARY_style}  data-field="TAS_BOUNDARY">
+				{$label TASK TAS_BOUNDARY}
+			</th>
+			{END TAS_BOUNDARY_fieldheadercolumn}
+			{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldheadercolumn}
+			<th class="{$TAS_DERIVATION_SCREEN_TPL_class}" {$TAS_DERIVATION_SCREEN_TPL_style}  data-field="TAS_DERIVATION_SCREEN_TPL">
+				{$label TASK TAS_DERIVATION_SCREEN_TPL}
+			</th>
+			{END TAS_DERIVATION_SCREEN_TPL_fieldheadercolumn}
+			{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldheadercolumn}
+			<th class="{$TAS_SELFSERVICE_TIMEOUT_class}" {$TAS_SELFSERVICE_TIMEOUT_style}  data-field="TAS_SELFSERVICE_TIMEOUT">
+				{$label TASK TAS_SELFSERVICE_TIMEOUT}
+			</th>
+			{END TAS_SELFSERVICE_TIMEOUT_fieldheadercolumn}
+			{BEGIN TAS_SELFSERVICE_TIME_fieldheadercolumn}
+			<th class="{$TAS_SELFSERVICE_TIME_class}" {$TAS_SELFSERVICE_TIME_style}  data-field="TAS_SELFSERVICE_TIME">
+				{$label TASK TAS_SELFSERVICE_TIME}
+			</th>
+			{END TAS_SELFSERVICE_TIME_fieldheadercolumn}
+			{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldheadercolumn}
+			<th class="{$TAS_SELFSERVICE_TIME_UNIT_class}" {$TAS_SELFSERVICE_TIME_UNIT_style}  data-field="TAS_SELFSERVICE_TIME_UNIT">
+				{$label TASK TAS_SELFSERVICE_TIME_UNIT}
+			</th>
+			{END TAS_SELFSERVICE_TIME_UNIT_fieldheadercolumn}
+			{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldheadercolumn}
+			<th class="{$TAS_SELFSERVICE_TRIGGER_UID_class}" {$TAS_SELFSERVICE_TRIGGER_UID_style}  data-field="TAS_SELFSERVICE_TRIGGER_UID">
+				{$label TASK TAS_SELFSERVICE_TRIGGER_UID}
+			</th>
+			{END TAS_SELFSERVICE_TRIGGER_UID_fieldheadercolumn}
+			{BEGIN TAS_SELFSERVICE_EXECUTION_fieldheadercolumn}
+			<th class="{$TAS_SELFSERVICE_EXECUTION_class}" {$TAS_SELFSERVICE_EXECUTION_style}  data-field="TAS_SELFSERVICE_EXECUTION">
+				{$label TASK TAS_SELFSERVICE_EXECUTION}
+			</th>
+			{END TAS_SELFSERVICE_EXECUTION_fieldheadercolumn}
+			{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldheadercolumn}
+			<th class="{$TAS_NOT_EMAIL_FROM_FORMAT_class}" {$TAS_NOT_EMAIL_FROM_FORMAT_style}  data-field="TAS_NOT_EMAIL_FROM_FORMAT">
+				{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}
+			</th>
+			{END TAS_NOT_EMAIL_FROM_FORMAT_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN TAS_UID_fieldcolumn}
+			<td  class="{$TAS_UID_class}" {$TAS_UID_style} {$recordattrs}>
+				{$TAS_UID_value}
+			</td>
+			{END TAS_UID_fieldcolumn}
+			{BEGIN TAS_TITLE_fieldcolumn}
+			<td  class="{$TAS_TITLE_class}" {$TAS_TITLE_style} {$recordattrs}>
+				{$TAS_TITLE_value}
+			</td>
+			{END TAS_TITLE_fieldcolumn}
+			{BEGIN TAS_DESCRIPTION_fieldcolumn}
+			<td  class="{$TAS_DESCRIPTION_class}" {$TAS_DESCRIPTION_style} {$recordattrs}>
+				{$TAS_DESCRIPTION_value}
+			</td>
+			{END TAS_DESCRIPTION_fieldcolumn}
+			{BEGIN TAS_DEF_TITLE_fieldcolumn}
+			<td  class="{$TAS_DEF_TITLE_class}" {$TAS_DEF_TITLE_style} {$recordattrs}>
+				{$TAS_DEF_TITLE_value}
+			</td>
+			{END TAS_DEF_TITLE_fieldcolumn}
+			{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldcolumn}
+			<td  class="{$TAS_DEF_SUBJECT_MESSAGE_class}" {$TAS_DEF_SUBJECT_MESSAGE_style} {$recordattrs}>
+				{$TAS_DEF_SUBJECT_MESSAGE_value}
+			</td>
+			{END TAS_DEF_SUBJECT_MESSAGE_fieldcolumn}
+			{BEGIN TAS_DEF_PROC_CODE_fieldcolumn}
+			<td  class="{$TAS_DEF_PROC_CODE_class}" {$TAS_DEF_PROC_CODE_style} {$recordattrs}>
+				{$TAS_DEF_PROC_CODE_value}
+			</td>
+			{END TAS_DEF_PROC_CODE_fieldcolumn}
+			{BEGIN TAS_DEF_MESSAGE_fieldcolumn}
+			<td  class="{$TAS_DEF_MESSAGE_class}" {$TAS_DEF_MESSAGE_style} {$recordattrs}>
+				{$TAS_DEF_MESSAGE_value}
+			</td>
+			{END TAS_DEF_MESSAGE_fieldcolumn}
+			{BEGIN TAS_DEF_DESCRIPTION_fieldcolumn}
+			<td  class="{$TAS_DEF_DESCRIPTION_class}" {$TAS_DEF_DESCRIPTION_style} {$recordattrs}>
+				{$TAS_DEF_DESCRIPTION_value}
+			</td>
+			{END TAS_DEF_DESCRIPTION_fieldcolumn}
+			{BEGIN TAS_TYPE_fieldcolumn}
+			<td  class="{$TAS_TYPE_class}" {$TAS_TYPE_style} {$recordattrs}>
+				{$TAS_TYPE_value}
+			</td>
+			{END TAS_TYPE_fieldcolumn}
+			{BEGIN TAS_DURATION_fieldcolumn}
+			<td  class="{$TAS_DURATION_class}" {$TAS_DURATION_style} {$recordattrs}>
+				{$TAS_DURATION_value}
+			</td>
+			{END TAS_DURATION_fieldcolumn}
+			{BEGIN TAS_DELAY_TYPE_fieldcolumn}
+			<td  class="{$TAS_DELAY_TYPE_class}" {$TAS_DELAY_TYPE_style} {$recordattrs}>
+				{$TAS_DELAY_TYPE_value}
+			</td>
+			{END TAS_DELAY_TYPE_fieldcolumn}
+			{BEGIN TAS_TEMPORIZER_fieldcolumn}
+			<td  class="{$TAS_TEMPORIZER_class}" {$TAS_TEMPORIZER_style} {$recordattrs}>
+				{$TAS_TEMPORIZER_value}
+			</td>
+			{END TAS_TEMPORIZER_fieldcolumn}
+			{BEGIN TAS_TYPE_DAY_fieldcolumn}
+			<td  class="{$TAS_TYPE_DAY_class}" {$TAS_TYPE_DAY_style} {$recordattrs}>
+				{$TAS_TYPE_DAY_value}
+			</td>
+			{END TAS_TYPE_DAY_fieldcolumn}
+			{BEGIN TAS_TIMEUNIT_fieldcolumn}
+			<td  class="{$TAS_TIMEUNIT_class}" {$TAS_TIMEUNIT_style} {$recordattrs}>
+				{$TAS_TIMEUNIT_value}
+			</td>
+			{END TAS_TIMEUNIT_fieldcolumn}
+			{BEGIN TAS_ALERT_fieldcolumn}
+			<td  class="{$TAS_ALERT_class}" {$TAS_ALERT_style} {$recordattrs}>
+				{$TAS_ALERT_value}
+			</td>
+			{END TAS_ALERT_fieldcolumn}
+			{BEGIN TAS_PRIORITY_VARIABLE_fieldcolumn}
+			<td  class="{$TAS_PRIORITY_VARIABLE_class}" {$TAS_PRIORITY_VARIABLE_style} {$recordattrs}>
+				{$TAS_PRIORITY_VARIABLE_value}
+			</td>
+			{END TAS_PRIORITY_VARIABLE_fieldcolumn}
+			{BEGIN TAS_ASSIGN_TYPE_fieldcolumn}
+			<td  class="{$TAS_ASSIGN_TYPE_class}" {$TAS_ASSIGN_TYPE_style} {$recordattrs}>
+				{$TAS_ASSIGN_TYPE_value}
+			</td>
+			{END TAS_ASSIGN_TYPE_fieldcolumn}
+			{BEGIN TAS_ASSIGN_VARIABLE_fieldcolumn}
+			<td  class="{$TAS_ASSIGN_VARIABLE_class}" {$TAS_ASSIGN_VARIABLE_style} {$recordattrs}>
+				{$TAS_ASSIGN_VARIABLE_value}
+			</td>
+			{END TAS_ASSIGN_VARIABLE_fieldcolumn}
+			{BEGIN TAS_GROUP_VARIABLE_fieldcolumn}
+			<td  class="{$TAS_GROUP_VARIABLE_class}" {$TAS_GROUP_VARIABLE_style} {$recordattrs}>
+				{$TAS_GROUP_VARIABLE_value}
+			</td>
+			{END TAS_GROUP_VARIABLE_fieldcolumn}
+			{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldcolumn}
+			<td  class="{$TAS_MI_INSTANCE_VARIABLE_class}" {$TAS_MI_INSTANCE_VARIABLE_style} {$recordattrs}>
+				{$TAS_MI_INSTANCE_VARIABLE_value}
+			</td>
+			{END TAS_MI_INSTANCE_VARIABLE_fieldcolumn}
+			{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldcolumn}
+			<td  class="{$TAS_MI_COMPLETE_VARIABLE_class}" {$TAS_MI_COMPLETE_VARIABLE_style} {$recordattrs}>
+				{$TAS_MI_COMPLETE_VARIABLE_value}
+			</td>
+			{END TAS_MI_COMPLETE_VARIABLE_fieldcolumn}
+			{BEGIN TAS_ASSIGN_LOCATION_fieldcolumn}
+			<td  class="{$TAS_ASSIGN_LOCATION_class}" {$TAS_ASSIGN_LOCATION_style} {$recordattrs}>
+				{$TAS_ASSIGN_LOCATION_value}
+			</td>
+			{END TAS_ASSIGN_LOCATION_fieldcolumn}
+			{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldcolumn}
+			<td  class="{$TAS_ASSIGN_LOCATION_ADHOC_class}" {$TAS_ASSIGN_LOCATION_ADHOC_style} {$recordattrs}>
+				{$TAS_ASSIGN_LOCATION_ADHOC_value}
+			</td>
+			{END TAS_ASSIGN_LOCATION_ADHOC_fieldcolumn}
+			{BEGIN TAS_TRANSFER_FLY_fieldcolumn}
+			<td  class="{$TAS_TRANSFER_FLY_class}" {$TAS_TRANSFER_FLY_style} {$recordattrs}>
+				{$TAS_TRANSFER_FLY_value}
+			</td>
+			{END TAS_TRANSFER_FLY_fieldcolumn}
+			{BEGIN TAS_LAST_ASSIGNED_fieldcolumn}
+			<td  class="{$TAS_LAST_ASSIGNED_class}" {$TAS_LAST_ASSIGNED_style} {$recordattrs}>
+				{$TAS_LAST_ASSIGNED_value}
+			</td>
+			{END TAS_LAST_ASSIGNED_fieldcolumn}
+			{BEGIN TAS_USER_fieldcolumn}
+			<td  class="{$TAS_USER_class}" {$TAS_USER_style} {$recordattrs}>
+				{$TAS_USER_value}
+			</td>
+			{END TAS_USER_fieldcolumn}
+			{BEGIN TAS_CAN_UPLOAD_fieldcolumn}
+			<td  class="{$TAS_CAN_UPLOAD_class}" {$TAS_CAN_UPLOAD_style} {$recordattrs}>
+				{$TAS_CAN_UPLOAD_value}
+			</td>
+			{END TAS_CAN_UPLOAD_fieldcolumn}
+			{BEGIN TAS_VIEW_UPLOAD_fieldcolumn}
+			<td  class="{$TAS_VIEW_UPLOAD_class}" {$TAS_VIEW_UPLOAD_style} {$recordattrs}>
+				{$TAS_VIEW_UPLOAD_value}
+			</td>
+			{END TAS_VIEW_UPLOAD_fieldcolumn}
+			{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldcolumn}
+			<td  class="{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_class}" {$TAS_VIEW_ADDITIONAL_DOCUMENTATION_style} {$recordattrs}>
+				{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_value}
+			</td>
+			{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldcolumn}
+			{BEGIN TAS_CAN_CANCEL_fieldcolumn}
+			<td  class="{$TAS_CAN_CANCEL_class}" {$TAS_CAN_CANCEL_style} {$recordattrs}>
+				{$TAS_CAN_CANCEL_value}
+			</td>
+			{END TAS_CAN_CANCEL_fieldcolumn}
+			{BEGIN TAS_OWNER_APP_fieldcolumn}
+			<td  class="{$TAS_OWNER_APP_class}" {$TAS_OWNER_APP_style} {$recordattrs}>
+				{$TAS_OWNER_APP_value}
+			</td>
+			{END TAS_OWNER_APP_fieldcolumn}
+			{BEGIN STG_UID_fieldcolumn}
+			<td  class="{$STG_UID_class}" {$STG_UID_style} {$recordattrs}>
+				{$STG_UID_value}
+			</td>
+			{END STG_UID_fieldcolumn}
+			{BEGIN TAS_CAN_PAUSE_fieldcolumn}
+			<td  class="{$TAS_CAN_PAUSE_class}" {$TAS_CAN_PAUSE_style} {$recordattrs}>
+				{$TAS_CAN_PAUSE_value}
+			</td>
+			{END TAS_CAN_PAUSE_fieldcolumn}
+			{BEGIN TAS_CAN_SEND_MESSAGE_fieldcolumn}
+			<td  class="{$TAS_CAN_SEND_MESSAGE_class}" {$TAS_CAN_SEND_MESSAGE_style} {$recordattrs}>
+				{$TAS_CAN_SEND_MESSAGE_value}
+			</td>
+			{END TAS_CAN_SEND_MESSAGE_fieldcolumn}
+			{BEGIN TAS_CAN_DELETE_DOCS_fieldcolumn}
+			<td  class="{$TAS_CAN_DELETE_DOCS_class}" {$TAS_CAN_DELETE_DOCS_style} {$recordattrs}>
+				{$TAS_CAN_DELETE_DOCS_value}
+			</td>
+			{END TAS_CAN_DELETE_DOCS_fieldcolumn}
+			{BEGIN TAS_SELF_SERVICE_fieldcolumn}
+			<td  class="{$TAS_SELF_SERVICE_class}" {$TAS_SELF_SERVICE_style} {$recordattrs}>
+				{$TAS_SELF_SERVICE_value}
+			</td>
+			{END TAS_SELF_SERVICE_fieldcolumn}
+			{BEGIN TAS_START_fieldcolumn}
+			<td  class="{$TAS_START_class}" {$TAS_START_style} {$recordattrs}>
+				{$TAS_START_value}
+			</td>
+			{END TAS_START_fieldcolumn}
+			{BEGIN TAS_TO_LAST_USER_fieldcolumn}
+			<td  class="{$TAS_TO_LAST_USER_class}" {$TAS_TO_LAST_USER_style} {$recordattrs}>
+				{$TAS_TO_LAST_USER_value}
+			</td>
+			{END TAS_TO_LAST_USER_fieldcolumn}
+			{BEGIN TAS_SEND_LAST_EMAIL_fieldcolumn}
+			<td  class="{$TAS_SEND_LAST_EMAIL_class}" {$TAS_SEND_LAST_EMAIL_style} {$recordattrs}>
+				{$TAS_SEND_LAST_EMAIL_value}
+			</td>
+			{END TAS_SEND_LAST_EMAIL_fieldcolumn}
+			{BEGIN TAS_DERIVATION_fieldcolumn}
+			<td  class="{$TAS_DERIVATION_class}" {$TAS_DERIVATION_style} {$recordattrs}>
+				{$TAS_DERIVATION_value}
+			</td>
+			{END TAS_DERIVATION_fieldcolumn}
+			{BEGIN TAS_POSX_fieldcolumn}
+			<td  class="{$TAS_POSX_class}" {$TAS_POSX_style} {$recordattrs}>
+				{$TAS_POSX_value}
+			</td>
+			{END TAS_POSX_fieldcolumn}
+			{BEGIN TAS_POSY_fieldcolumn}
+			<td  class="{$TAS_POSY_class}" {$TAS_POSY_style} {$recordattrs}>
+				{$TAS_POSY_value}
+			</td>
+			{END TAS_POSY_fieldcolumn}
+			{BEGIN TAS_WIDTH_fieldcolumn}
+			<td  class="{$TAS_WIDTH_class}" {$TAS_WIDTH_style} {$recordattrs}>
+				{$TAS_WIDTH_value}
+			</td>
+			{END TAS_WIDTH_fieldcolumn}
+			{BEGIN TAS_HEIGHT_fieldcolumn}
+			<td  class="{$TAS_HEIGHT_class}" {$TAS_HEIGHT_style} {$recordattrs}>
+				{$TAS_HEIGHT_value}
+			</td>
+			{END TAS_HEIGHT_fieldcolumn}
+			{BEGIN TAS_COLOR_fieldcolumn}
+			<td  class="{$TAS_COLOR_class}" {$TAS_COLOR_style} {$recordattrs}>
+				{$TAS_COLOR_value}
+			</td>
+			{END TAS_COLOR_fieldcolumn}
+			{BEGIN TAS_EVN_UID_fieldcolumn}
+			<td  class="{$TAS_EVN_UID_class}" {$TAS_EVN_UID_style} {$recordattrs}>
+				{$TAS_EVN_UID_value}
+			</td>
+			{END TAS_EVN_UID_fieldcolumn}
+			{BEGIN TAS_BOUNDARY_fieldcolumn}
+			<td  class="{$TAS_BOUNDARY_class}" {$TAS_BOUNDARY_style} {$recordattrs}>
+				{$TAS_BOUNDARY_value}
+			</td>
+			{END TAS_BOUNDARY_fieldcolumn}
+			{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldcolumn}
+			<td  class="{$TAS_DERIVATION_SCREEN_TPL_class}" {$TAS_DERIVATION_SCREEN_TPL_style} {$recordattrs}>
+				{$TAS_DERIVATION_SCREEN_TPL_value}
+			</td>
+			{END TAS_DERIVATION_SCREEN_TPL_fieldcolumn}
+			{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldcolumn}
+			<td  class="{$TAS_SELFSERVICE_TIMEOUT_class}" {$TAS_SELFSERVICE_TIMEOUT_style} {$recordattrs}>
+				{$TAS_SELFSERVICE_TIMEOUT_value}
+			</td>
+			{END TAS_SELFSERVICE_TIMEOUT_fieldcolumn}
+			{BEGIN TAS_SELFSERVICE_TIME_fieldcolumn}
+			<td  class="{$TAS_SELFSERVICE_TIME_class}" {$TAS_SELFSERVICE_TIME_style} {$recordattrs}>
+				{$TAS_SELFSERVICE_TIME_value}
+			</td>
+			{END TAS_SELFSERVICE_TIME_fieldcolumn}
+			{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldcolumn}
+			<td  class="{$TAS_SELFSERVICE_TIME_UNIT_class}" {$TAS_SELFSERVICE_TIME_UNIT_style} {$recordattrs}>
+				{$TAS_SELFSERVICE_TIME_UNIT_value}
+			</td>
+			{END TAS_SELFSERVICE_TIME_UNIT_fieldcolumn}
+			{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldcolumn}
+			<td  class="{$TAS_SELFSERVICE_TRIGGER_UID_class}" {$TAS_SELFSERVICE_TRIGGER_UID_style} {$recordattrs}>
+				{$TAS_SELFSERVICE_TRIGGER_UID_value}
+			</td>
+			{END TAS_SELFSERVICE_TRIGGER_UID_fieldcolumn}
+			{BEGIN TAS_SELFSERVICE_EXECUTION_fieldcolumn}
+			<td  class="{$TAS_SELFSERVICE_EXECUTION_class}" {$TAS_SELFSERVICE_EXECUTION_style} {$recordattrs}>
+				{$TAS_SELFSERVICE_EXECUTION_value}
+			</td>
+			{END TAS_SELFSERVICE_EXECUTION_fieldcolumn}
+			{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldcolumn}
+			<td  class="{$TAS_NOT_EMAIL_FROM_FORMAT_class}" {$TAS_NOT_EMAIL_FROM_FORMAT_style} {$recordattrs}>
+				{$TAS_NOT_EMAIL_FROM_FORMAT_value}
+			</td>
+			{END TAS_NOT_EMAIL_FROM_FORMAT_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="56">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

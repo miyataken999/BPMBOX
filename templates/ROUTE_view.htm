@@ -1,0 +1,390 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel ROUTE view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN ROU_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_UID} bs-viewform-group" data-fieldname="ROU_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_UID}">
+			{$label ROUTE ROU_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_UID_fieldblock}
+	{BEGIN ROU_PARENT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_PARENT} bs-viewform-group" data-fieldname="ROU_PARENT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_PARENT}">
+			{$label ROUTE ROU_PARENT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_PARENT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_PARENT_fieldblock}
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label ROUTE PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_UID} bs-viewform-group" data-fieldname="TAS_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_UID}">
+			{$label ROUTE TAS_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_UID_fieldblock}
+	{BEGIN ROU_NEXT_TASK_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_NEXT_TASK} bs-viewform-group" data-fieldname="ROU_NEXT_TASK">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_NEXT_TASK}">
+			{$label ROUTE ROU_NEXT_TASK}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_NEXT_TASK_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_NEXT_TASK_fieldblock}
+	{BEGIN ROU_CASE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_CASE} bs-viewform-group" data-fieldname="ROU_CASE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_CASE}">
+			{$label ROUTE ROU_CASE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_CASE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_CASE_fieldblock}
+	{BEGIN ROU_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_TYPE} bs-viewform-group" data-fieldname="ROU_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_TYPE}">
+			{$label ROUTE ROU_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_TYPE_fieldblock}
+	{BEGIN ROU_DEFAULT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_DEFAULT} bs-viewform-group" data-fieldname="ROU_DEFAULT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_DEFAULT}">
+			{$label ROUTE ROU_DEFAULT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_DEFAULT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_DEFAULT_fieldblock}
+	{BEGIN ROU_CONDITION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_CONDITION} bs-viewform-group" data-fieldname="ROU_CONDITION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_CONDITION}">
+			{$label ROUTE ROU_CONDITION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_CONDITION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_CONDITION_fieldblock}
+	{BEGIN ROU_TO_LAST_USER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_TO_LAST_USER} bs-viewform-group" data-fieldname="ROU_TO_LAST_USER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_TO_LAST_USER}">
+			{$label ROUTE ROU_TO_LAST_USER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_TO_LAST_USER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_TO_LAST_USER_fieldblock}
+	{BEGIN ROU_OPTIONAL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_OPTIONAL} bs-viewform-group" data-fieldname="ROU_OPTIONAL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_OPTIONAL}">
+			{$label ROUTE ROU_OPTIONAL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_OPTIONAL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_OPTIONAL_fieldblock}
+	{BEGIN ROU_SEND_EMAIL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_SEND_EMAIL} bs-viewform-group" data-fieldname="ROU_SEND_EMAIL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_SEND_EMAIL}">
+			{$label ROUTE ROU_SEND_EMAIL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_SEND_EMAIL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_SEND_EMAIL_fieldblock}
+	{BEGIN ROU_SOURCEANCHOR_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_SOURCEANCHOR} bs-viewform-group" data-fieldname="ROU_SOURCEANCHOR">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_SOURCEANCHOR}">
+			{$label ROUTE ROU_SOURCEANCHOR}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_SOURCEANCHOR_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_SOURCEANCHOR_fieldblock}
+	{BEGIN ROU_TARGETANCHOR_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_TARGETANCHOR} bs-viewform-group" data-fieldname="ROU_TARGETANCHOR">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_TARGETANCHOR}">
+			{$label ROUTE ROU_TARGETANCHOR}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_TARGETANCHOR_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_TARGETANCHOR_fieldblock}
+	{BEGIN ROU_TO_PORT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_TO_PORT} bs-viewform-group" data-fieldname="ROU_TO_PORT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_TO_PORT}">
+			{$label ROUTE ROU_TO_PORT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_TO_PORT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_TO_PORT_fieldblock}
+	{BEGIN ROU_FROM_PORT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_FROM_PORT} bs-viewform-group" data-fieldname="ROU_FROM_PORT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_FROM_PORT}">
+			{$label ROUTE ROU_FROM_PORT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_FROM_PORT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_FROM_PORT_fieldblock}
+	{BEGIN ROU_EVN_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROU_EVN_UID} bs-viewform-group" data-fieldname="ROU_EVN_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROU_EVN_UID}">
+			{$label ROUTE ROU_EVN_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROU_EVN_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROU_EVN_UID_fieldblock}
+	{BEGIN GAT_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_GAT_UID} bs-viewform-group" data-fieldname="GAT_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_GAT_UID}">
+			{$label ROUTE GAT_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$GAT_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END GAT_UID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

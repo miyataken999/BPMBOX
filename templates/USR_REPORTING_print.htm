@@ -1,0 +1,292 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel USR_REPORTING print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN USR_UID_fieldheadercolumn}
+			<th class="{$USR_UID_class}" {$USR_UID_style}  data-field="USR_UID">
+				{$label USR_REPORTING USR_UID}
+			</th>
+			{END USR_UID_fieldheadercolumn}
+			{BEGIN TAS_UID_fieldheadercolumn}
+			<th class="{$TAS_UID_class}" {$TAS_UID_style}  data-field="TAS_UID">
+				{$label USR_REPORTING TAS_UID}
+			</th>
+			{END TAS_UID_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label USR_REPORTING PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN MONTH_fieldheadercolumn}
+			<th class="{$MONTH_class}" {$MONTH_style}  data-field="MONTH">
+				{$label USR_REPORTING MONTH}
+			</th>
+			{END MONTH_fieldheadercolumn}
+			{BEGIN YEAR_fieldheadercolumn}
+			<th class="{$YEAR_class}" {$YEAR_style}  data-field="YEAR">
+				{$label USR_REPORTING YEAR}
+			</th>
+			{END YEAR_fieldheadercolumn}
+			{BEGIN TOTAL_QUEUE_TIME_BY_TASK_fieldheadercolumn}
+			<th class="{$TOTAL_QUEUE_TIME_BY_TASK_class}" {$TOTAL_QUEUE_TIME_BY_TASK_style}  data-field="TOTAL_QUEUE_TIME_BY_TASK">
+				{$label USR_REPORTING TOTAL_QUEUE_TIME_BY_TASK}
+			</th>
+			{END TOTAL_QUEUE_TIME_BY_TASK_fieldheadercolumn}
+			{BEGIN TOTAL_TIME_BY_TASK_fieldheadercolumn}
+			<th class="{$TOTAL_TIME_BY_TASK_class}" {$TOTAL_TIME_BY_TASK_style}  data-field="TOTAL_TIME_BY_TASK">
+				{$label USR_REPORTING TOTAL_TIME_BY_TASK}
+			</th>
+			{END TOTAL_TIME_BY_TASK_fieldheadercolumn}
+			{BEGIN TOTAL_CASES_IN_fieldheadercolumn}
+			<th class="{$TOTAL_CASES_IN_class}" {$TOTAL_CASES_IN_style}  data-field="TOTAL_CASES_IN">
+				{$label USR_REPORTING TOTAL_CASES_IN}
+			</th>
+			{END TOTAL_CASES_IN_fieldheadercolumn}
+			{BEGIN TOTAL_CASES_OUT_fieldheadercolumn}
+			<th class="{$TOTAL_CASES_OUT_class}" {$TOTAL_CASES_OUT_style}  data-field="TOTAL_CASES_OUT">
+				{$label USR_REPORTING TOTAL_CASES_OUT}
+			</th>
+			{END TOTAL_CASES_OUT_fieldheadercolumn}
+			{BEGIN USER_HOUR_COST_fieldheadercolumn}
+			<th class="{$USER_HOUR_COST_class}" {$USER_HOUR_COST_style}  data-field="USER_HOUR_COST">
+				{$label USR_REPORTING USER_HOUR_COST}
+			</th>
+			{END USER_HOUR_COST_fieldheadercolumn}
+			{BEGIN AVG_TIME_fieldheadercolumn}
+			<th class="{$AVG_TIME_class}" {$AVG_TIME_style}  data-field="AVG_TIME">
+				{$label USR_REPORTING AVG_TIME}
+			</th>
+			{END AVG_TIME_fieldheadercolumn}
+			{BEGIN SDV_TIME_fieldheadercolumn}
+			<th class="{$SDV_TIME_class}" {$SDV_TIME_style}  data-field="SDV_TIME">
+				{$label USR_REPORTING SDV_TIME}
+			</th>
+			{END SDV_TIME_fieldheadercolumn}
+			{BEGIN CONFIGURED_TASK_TIME_fieldheadercolumn}
+			<th class="{$CONFIGURED_TASK_TIME_class}" {$CONFIGURED_TASK_TIME_style}  data-field="CONFIGURED_TASK_TIME">
+				{$label USR_REPORTING CONFIGURED_TASK_TIME}
+			</th>
+			{END CONFIGURED_TASK_TIME_fieldheadercolumn}
+			{BEGIN TOTAL_CASES_OVERDUE_fieldheadercolumn}
+			<th class="{$TOTAL_CASES_OVERDUE_class}" {$TOTAL_CASES_OVERDUE_style}  data-field="TOTAL_CASES_OVERDUE">
+				{$label USR_REPORTING TOTAL_CASES_OVERDUE}
+			</th>
+			{END TOTAL_CASES_OVERDUE_fieldheadercolumn}
+			{BEGIN TOTAL_CASES_ON_TIME_fieldheadercolumn}
+			<th class="{$TOTAL_CASES_ON_TIME_class}" {$TOTAL_CASES_ON_TIME_style}  data-field="TOTAL_CASES_ON_TIME">
+				{$label USR_REPORTING TOTAL_CASES_ON_TIME}
+			</th>
+			{END TOTAL_CASES_ON_TIME_fieldheadercolumn}
+			{BEGIN PRO_COST_fieldheadercolumn}
+			<th class="{$PRO_COST_class}" {$PRO_COST_style}  data-field="PRO_COST">
+				{$label USR_REPORTING PRO_COST}
+			</th>
+			{END PRO_COST_fieldheadercolumn}
+			{BEGIN PRO_UNIT_COST_fieldheadercolumn}
+			<th class="{$PRO_UNIT_COST_class}" {$PRO_UNIT_COST_style}  data-field="PRO_UNIT_COST">
+				{$label USR_REPORTING PRO_UNIT_COST}
+			</th>
+			{END PRO_UNIT_COST_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN USR_UID_fieldcolumn}
+			<td  class="{$USR_UID_class}" {$USR_UID_style} {$recordattrs}>
+				{$USR_UID_value}
+			</td>
+			{END USR_UID_fieldcolumn}
+			{BEGIN TAS_UID_fieldcolumn}
+			<td  class="{$TAS_UID_class}" {$TAS_UID_style} {$recordattrs}>
+				{$TAS_UID_value}
+			</td>
+			{END TAS_UID_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN MONTH_fieldcolumn}
+			<td  class="{$MONTH_class}" {$MONTH_style} {$recordattrs}>
+				{$MONTH_value}
+			</td>
+			{END MONTH_fieldcolumn}
+			{BEGIN YEAR_fieldcolumn}
+			<td  class="{$YEAR_class}" {$YEAR_style} {$recordattrs}>
+				{$YEAR_value}
+			</td>
+			{END YEAR_fieldcolumn}
+			{BEGIN TOTAL_QUEUE_TIME_BY_TASK_fieldcolumn}
+			<td  class="{$TOTAL_QUEUE_TIME_BY_TASK_class}" {$TOTAL_QUEUE_TIME_BY_TASK_style} {$recordattrs}>
+				{$TOTAL_QUEUE_TIME_BY_TASK_value}
+			</td>
+			{END TOTAL_QUEUE_TIME_BY_TASK_fieldcolumn}
+			{BEGIN TOTAL_TIME_BY_TASK_fieldcolumn}
+			<td  class="{$TOTAL_TIME_BY_TASK_class}" {$TOTAL_TIME_BY_TASK_style} {$recordattrs}>
+				{$TOTAL_TIME_BY_TASK_value}
+			</td>
+			{END TOTAL_TIME_BY_TASK_fieldcolumn}
+			{BEGIN TOTAL_CASES_IN_fieldcolumn}
+			<td  class="{$TOTAL_CASES_IN_class}" {$TOTAL_CASES_IN_style} {$recordattrs}>
+				{$TOTAL_CASES_IN_value}
+			</td>
+			{END TOTAL_CASES_IN_fieldcolumn}
+			{BEGIN TOTAL_CASES_OUT_fieldcolumn}
+			<td  class="{$TOTAL_CASES_OUT_class}" {$TOTAL_CASES_OUT_style} {$recordattrs}>
+				{$TOTAL_CASES_OUT_value}
+			</td>
+			{END TOTAL_CASES_OUT_fieldcolumn}
+			{BEGIN USER_HOUR_COST_fieldcolumn}
+			<td  class="{$USER_HOUR_COST_class}" {$USER_HOUR_COST_style} {$recordattrs}>
+				{$USER_HOUR_COST_value}
+			</td>
+			{END USER_HOUR_COST_fieldcolumn}
+			{BEGIN AVG_TIME_fieldcolumn}
+			<td  class="{$AVG_TIME_class}" {$AVG_TIME_style} {$recordattrs}>
+				{$AVG_TIME_value}
+			</td>
+			{END AVG_TIME_fieldcolumn}
+			{BEGIN SDV_TIME_fieldcolumn}
+			<td  class="{$SDV_TIME_class}" {$SDV_TIME_style} {$recordattrs}>
+				{$SDV_TIME_value}
+			</td>
+			{END SDV_TIME_fieldcolumn}
+			{BEGIN CONFIGURED_TASK_TIME_fieldcolumn}
+			<td  class="{$CONFIGURED_TASK_TIME_class}" {$CONFIGURED_TASK_TIME_style} {$recordattrs}>
+				{$CONFIGURED_TASK_TIME_value}
+			</td>
+			{END CONFIGURED_TASK_TIME_fieldcolumn}
+			{BEGIN TOTAL_CASES_OVERDUE_fieldcolumn}
+			<td  class="{$TOTAL_CASES_OVERDUE_class}" {$TOTAL_CASES_OVERDUE_style} {$recordattrs}>
+				{$TOTAL_CASES_OVERDUE_value}
+			</td>
+			{END TOTAL_CASES_OVERDUE_fieldcolumn}
+			{BEGIN TOTAL_CASES_ON_TIME_fieldcolumn}
+			<td  class="{$TOTAL_CASES_ON_TIME_class}" {$TOTAL_CASES_ON_TIME_style} {$recordattrs}>
+				{$TOTAL_CASES_ON_TIME_value}
+			</td>
+			{END TOTAL_CASES_ON_TIME_fieldcolumn}
+			{BEGIN PRO_COST_fieldcolumn}
+			<td  class="{$PRO_COST_class}" {$PRO_COST_style} {$recordattrs}>
+				{$PRO_COST_value}
+			</td>
+			{END PRO_COST_fieldcolumn}
+			{BEGIN PRO_UNIT_COST_fieldcolumn}
+			<td  class="{$PRO_UNIT_COST_class}" {$PRO_UNIT_COST_style} {$recordattrs}>
+				{$PRO_UNIT_COST_value}
+			</td>
+			{END PRO_UNIT_COST_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel DYNAFORM add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN DYN_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_UID}" data-fieldname="DYN_UID" data-signal-error-for="DYN_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_UID}">
+		{BEGIN DYN_UID_label}{$label DYNAFORM DYN_UID}{END DYN_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_UID">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label DYNAFORM PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN DYN_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_TYPE}" data-fieldname="DYN_TYPE" data-signal-error-for="DYN_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_TYPE}">
+		{BEGIN DYN_TYPE_label}{$label DYNAFORM DYN_TYPE}{END DYN_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_TYPE">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_TYPE_fieldblock}
+
+			{BEGIN DYN_FILENAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_FILENAME}" data-fieldname="DYN_FILENAME" data-signal-error-for="DYN_FILENAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_FILENAME}">
+		{BEGIN DYN_FILENAME_label}{$label DYNAFORM DYN_FILENAME}{END DYN_FILENAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_FILENAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_FILENAME">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_FILENAME}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_FILENAME_fieldblock}
+
+			{BEGIN DYN_CONTENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_CONTENT}" data-fieldname="DYN_CONTENT" data-signal-error-for="DYN_CONTENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_CONTENT}">
+		{BEGIN DYN_CONTENT_label}{$label DYNAFORM DYN_CONTENT}{END DYN_CONTENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_CONTENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_CONTENT">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_CONTENT}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_CONTENT_fieldblock}
+
+			{BEGIN DYN_LABEL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_LABEL}" data-fieldname="DYN_LABEL" data-signal-error-for="DYN_LABEL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_LABEL}">
+		{BEGIN DYN_LABEL_label}{$label DYNAFORM DYN_LABEL}{END DYN_LABEL_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_LABEL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_LABEL">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_LABEL}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_LABEL_fieldblock}
+
+			{BEGIN DYN_VERSION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_VERSION}" data-fieldname="DYN_VERSION" data-signal-error-for="DYN_VERSION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_VERSION}">
+		{BEGIN DYN_VERSION_label}{$label DYNAFORM DYN_VERSION}{END DYN_VERSION_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_VERSION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_VERSION">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_VERSION}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_VERSION_fieldblock}
+
+			{BEGIN DYN_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DYN_UPDATE_DATE}" data-fieldname="DYN_UPDATE_DATE" data-signal-error-for="DYN_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DYN_UPDATE_DATE}">
+		{BEGIN DYN_UPDATE_DATE_label}{$label DYNAFORM DYN_UPDATE_DATE}{END DYN_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DYN_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DYN_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip DYNAFORM DYN_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DYN_UPDATE_DATE_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

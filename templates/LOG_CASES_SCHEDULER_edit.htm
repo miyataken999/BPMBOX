@@ -1,0 +1,473 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel LOG_CASES_SCHEDULER edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN LOG_CASE_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_CASE_UID}" data-fieldname="LOG_CASE_UID" data-signal-error-for="LOG_CASE_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_CASE_UID}">
+		{BEGIN LOG_CASE_UID_label}{$label LOG_CASES_SCHEDULER LOG_CASE_UID}{END LOG_CASE_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_CASE_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_CASE_UID">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER LOG_CASE_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_CASE_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label LOG_CASES_SCHEDULER PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label LOG_CASES_SCHEDULER TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN USR_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_NAME}" data-fieldname="USR_NAME" data-signal-error-for="USR_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_NAME}">
+		{BEGIN USR_NAME_label}{$label LOG_CASES_SCHEDULER USR_NAME}{END USR_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_NAME">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER USR_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_NAME_fieldblock}
+
+			{BEGIN EXEC_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_EXEC_DATE}" data-fieldname="EXEC_DATE" data-signal-error-for="EXEC_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_EXEC_DATE}">
+		{BEGIN EXEC_DATE_label}{$label LOG_CASES_SCHEDULER EXEC_DATE}{END EXEC_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$EXEC_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="EXEC_DATE">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER EXEC_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END EXEC_DATE_fieldblock}
+
+			{BEGIN EXEC_HOUR_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_EXEC_HOUR}" data-fieldname="EXEC_HOUR" data-signal-error-for="EXEC_HOUR{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_EXEC_HOUR}">
+		{BEGIN EXEC_HOUR_label}{$label LOG_CASES_SCHEDULER EXEC_HOUR}{END EXEC_HOUR_label}
+	</label>
+	<div class="col-md-6" >
+		{$EXEC_HOUR_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="EXEC_HOUR">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER EXEC_HOUR}
+		</div>
+	</div>
+</div>
+</div>
+{END EXEC_HOUR_fieldblock}
+
+			{BEGIN RESULT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_RESULT}" data-fieldname="RESULT" data-signal-error-for="RESULT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_RESULT}">
+		{BEGIN RESULT_label}{$label LOG_CASES_SCHEDULER RESULT}{END RESULT_label}
+	</label>
+	<div class="col-md-6" >
+		{$RESULT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="RESULT">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER RESULT}
+		</div>
+	</div>
+</div>
+</div>
+{END RESULT_fieldblock}
+
+			{BEGIN SCH_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_UID}" data-fieldname="SCH_UID" data-signal-error-for="SCH_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_UID}">
+		{BEGIN SCH_UID_label}{$label LOG_CASES_SCHEDULER SCH_UID}{END SCH_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_UID">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER SCH_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_UID_fieldblock}
+
+			{BEGIN WS_CREATE_CASE_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WS_CREATE_CASE_STATUS}" data-fieldname="WS_CREATE_CASE_STATUS" data-signal-error-for="WS_CREATE_CASE_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WS_CREATE_CASE_STATUS}">
+		{BEGIN WS_CREATE_CASE_STATUS_label}{$label LOG_CASES_SCHEDULER WS_CREATE_CASE_STATUS}{END WS_CREATE_CASE_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$WS_CREATE_CASE_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WS_CREATE_CASE_STATUS">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER WS_CREATE_CASE_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END WS_CREATE_CASE_STATUS_fieldblock}
+
+			{BEGIN WS_ROUTE_CASE_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_WS_ROUTE_CASE_STATUS}" data-fieldname="WS_ROUTE_CASE_STATUS" data-signal-error-for="WS_ROUTE_CASE_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_WS_ROUTE_CASE_STATUS}">
+		{BEGIN WS_ROUTE_CASE_STATUS_label}{$label LOG_CASES_SCHEDULER WS_ROUTE_CASE_STATUS}{END WS_ROUTE_CASE_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$WS_ROUTE_CASE_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="WS_ROUTE_CASE_STATUS">
+		<div class="text-muted" >
+		{$tooltip LOG_CASES_SCHEDULER WS_ROUTE_CASE_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END WS_ROUTE_CASE_STATUS_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

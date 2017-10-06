@@ -1,0 +1,282 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel FIELDS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN FLD_UID_fieldheadercolumn}
+			<th class="{$FLD_UID_class}" {$FLD_UID_style}  data-field="FLD_UID">
+				{$label FIELDS FLD_UID}
+			</th>
+			{END FLD_UID_fieldheadercolumn}
+			{BEGIN ADD_TAB_UID_fieldheadercolumn}
+			<th class="{$ADD_TAB_UID_class}" {$ADD_TAB_UID_style}  data-field="ADD_TAB_UID">
+				{$label FIELDS ADD_TAB_UID}
+			</th>
+			{END ADD_TAB_UID_fieldheadercolumn}
+			{BEGIN FLD_INDEX_fieldheadercolumn}
+			<th class="{$FLD_INDEX_class}" {$FLD_INDEX_style}  data-field="FLD_INDEX">
+				{$label FIELDS FLD_INDEX}
+			</th>
+			{END FLD_INDEX_fieldheadercolumn}
+			{BEGIN FLD_NAME_fieldheadercolumn}
+			<th class="{$FLD_NAME_class}" {$FLD_NAME_style}  data-field="FLD_NAME">
+				{$label FIELDS FLD_NAME}
+			</th>
+			{END FLD_NAME_fieldheadercolumn}
+			{BEGIN FLD_DESCRIPTION_fieldheadercolumn}
+			<th class="{$FLD_DESCRIPTION_class}" {$FLD_DESCRIPTION_style}  data-field="FLD_DESCRIPTION">
+				{$label FIELDS FLD_DESCRIPTION}
+			</th>
+			{END FLD_DESCRIPTION_fieldheadercolumn}
+			{BEGIN FLD_TYPE_fieldheadercolumn}
+			<th class="{$FLD_TYPE_class}" {$FLD_TYPE_style}  data-field="FLD_TYPE">
+				{$label FIELDS FLD_TYPE}
+			</th>
+			{END FLD_TYPE_fieldheadercolumn}
+			{BEGIN FLD_SIZE_fieldheadercolumn}
+			<th class="{$FLD_SIZE_class}" {$FLD_SIZE_style}  data-field="FLD_SIZE">
+				{$label FIELDS FLD_SIZE}
+			</th>
+			{END FLD_SIZE_fieldheadercolumn}
+			{BEGIN FLD_NULL_fieldheadercolumn}
+			<th class="{$FLD_NULL_class}" {$FLD_NULL_style}  data-field="FLD_NULL">
+				{$label FIELDS FLD_NULL}
+			</th>
+			{END FLD_NULL_fieldheadercolumn}
+			{BEGIN FLD_AUTO_INCREMENT_fieldheadercolumn}
+			<th class="{$FLD_AUTO_INCREMENT_class}" {$FLD_AUTO_INCREMENT_style}  data-field="FLD_AUTO_INCREMENT">
+				{$label FIELDS FLD_AUTO_INCREMENT}
+			</th>
+			{END FLD_AUTO_INCREMENT_fieldheadercolumn}
+			{BEGIN FLD_KEY_fieldheadercolumn}
+			<th class="{$FLD_KEY_class}" {$FLD_KEY_style}  data-field="FLD_KEY">
+				{$label FIELDS FLD_KEY}
+			</th>
+			{END FLD_KEY_fieldheadercolumn}
+			{BEGIN FLD_TABLE_INDEX_fieldheadercolumn}
+			<th class="{$FLD_TABLE_INDEX_class}" {$FLD_TABLE_INDEX_style}  data-field="FLD_TABLE_INDEX">
+				{$label FIELDS FLD_TABLE_INDEX}
+			</th>
+			{END FLD_TABLE_INDEX_fieldheadercolumn}
+			{BEGIN FLD_FOREIGN_KEY_fieldheadercolumn}
+			<th class="{$FLD_FOREIGN_KEY_class}" {$FLD_FOREIGN_KEY_style}  data-field="FLD_FOREIGN_KEY">
+				{$label FIELDS FLD_FOREIGN_KEY}
+			</th>
+			{END FLD_FOREIGN_KEY_fieldheadercolumn}
+			{BEGIN FLD_FOREIGN_KEY_TABLE_fieldheadercolumn}
+			<th class="{$FLD_FOREIGN_KEY_TABLE_class}" {$FLD_FOREIGN_KEY_TABLE_style}  data-field="FLD_FOREIGN_KEY_TABLE">
+				{$label FIELDS FLD_FOREIGN_KEY_TABLE}
+			</th>
+			{END FLD_FOREIGN_KEY_TABLE_fieldheadercolumn}
+			{BEGIN FLD_DYN_NAME_fieldheadercolumn}
+			<th class="{$FLD_DYN_NAME_class}" {$FLD_DYN_NAME_style}  data-field="FLD_DYN_NAME">
+				{$label FIELDS FLD_DYN_NAME}
+			</th>
+			{END FLD_DYN_NAME_fieldheadercolumn}
+			{BEGIN FLD_DYN_UID_fieldheadercolumn}
+			<th class="{$FLD_DYN_UID_class}" {$FLD_DYN_UID_style}  data-field="FLD_DYN_UID">
+				{$label FIELDS FLD_DYN_UID}
+			</th>
+			{END FLD_DYN_UID_fieldheadercolumn}
+			{BEGIN FLD_FILTER_fieldheadercolumn}
+			<th class="{$FLD_FILTER_class}" {$FLD_FILTER_style}  data-field="FLD_FILTER">
+				{$label FIELDS FLD_FILTER}
+			</th>
+			{END FLD_FILTER_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN FLD_UID_fieldcolumn}
+			<td  class="{$FLD_UID_class}" {$FLD_UID_style} {$recordattrs}>
+				{$FLD_UID_value}
+			</td>
+			{END FLD_UID_fieldcolumn}
+			{BEGIN ADD_TAB_UID_fieldcolumn}
+			<td  class="{$ADD_TAB_UID_class}" {$ADD_TAB_UID_style} {$recordattrs}>
+				{$ADD_TAB_UID_value}
+			</td>
+			{END ADD_TAB_UID_fieldcolumn}
+			{BEGIN FLD_INDEX_fieldcolumn}
+			<td  class="{$FLD_INDEX_class}" {$FLD_INDEX_style} {$recordattrs}>
+				{$FLD_INDEX_value}
+			</td>
+			{END FLD_INDEX_fieldcolumn}
+			{BEGIN FLD_NAME_fieldcolumn}
+			<td  class="{$FLD_NAME_class}" {$FLD_NAME_style} {$recordattrs}>
+				{$FLD_NAME_value}
+			</td>
+			{END FLD_NAME_fieldcolumn}
+			{BEGIN FLD_DESCRIPTION_fieldcolumn}
+			<td  class="{$FLD_DESCRIPTION_class}" {$FLD_DESCRIPTION_style} {$recordattrs}>
+				{$FLD_DESCRIPTION_value}
+			</td>
+			{END FLD_DESCRIPTION_fieldcolumn}
+			{BEGIN FLD_TYPE_fieldcolumn}
+			<td  class="{$FLD_TYPE_class}" {$FLD_TYPE_style} {$recordattrs}>
+				{$FLD_TYPE_value}
+			</td>
+			{END FLD_TYPE_fieldcolumn}
+			{BEGIN FLD_SIZE_fieldcolumn}
+			<td  class="{$FLD_SIZE_class}" {$FLD_SIZE_style} {$recordattrs}>
+				{$FLD_SIZE_value}
+			</td>
+			{END FLD_SIZE_fieldcolumn}
+			{BEGIN FLD_NULL_fieldcolumn}
+			<td  class="{$FLD_NULL_class}" {$FLD_NULL_style} {$recordattrs}>
+				{$FLD_NULL_value}
+			</td>
+			{END FLD_NULL_fieldcolumn}
+			{BEGIN FLD_AUTO_INCREMENT_fieldcolumn}
+			<td  class="{$FLD_AUTO_INCREMENT_class}" {$FLD_AUTO_INCREMENT_style} {$recordattrs}>
+				{$FLD_AUTO_INCREMENT_value}
+			</td>
+			{END FLD_AUTO_INCREMENT_fieldcolumn}
+			{BEGIN FLD_KEY_fieldcolumn}
+			<td  class="{$FLD_KEY_class}" {$FLD_KEY_style} {$recordattrs}>
+				{$FLD_KEY_value}
+			</td>
+			{END FLD_KEY_fieldcolumn}
+			{BEGIN FLD_TABLE_INDEX_fieldcolumn}
+			<td  class="{$FLD_TABLE_INDEX_class}" {$FLD_TABLE_INDEX_style} {$recordattrs}>
+				{$FLD_TABLE_INDEX_value}
+			</td>
+			{END FLD_TABLE_INDEX_fieldcolumn}
+			{BEGIN FLD_FOREIGN_KEY_fieldcolumn}
+			<td  class="{$FLD_FOREIGN_KEY_class}" {$FLD_FOREIGN_KEY_style} {$recordattrs}>
+				{$FLD_FOREIGN_KEY_value}
+			</td>
+			{END FLD_FOREIGN_KEY_fieldcolumn}
+			{BEGIN FLD_FOREIGN_KEY_TABLE_fieldcolumn}
+			<td  class="{$FLD_FOREIGN_KEY_TABLE_class}" {$FLD_FOREIGN_KEY_TABLE_style} {$recordattrs}>
+				{$FLD_FOREIGN_KEY_TABLE_value}
+			</td>
+			{END FLD_FOREIGN_KEY_TABLE_fieldcolumn}
+			{BEGIN FLD_DYN_NAME_fieldcolumn}
+			<td  class="{$FLD_DYN_NAME_class}" {$FLD_DYN_NAME_style} {$recordattrs}>
+				{$FLD_DYN_NAME_value}
+			</td>
+			{END FLD_DYN_NAME_fieldcolumn}
+			{BEGIN FLD_DYN_UID_fieldcolumn}
+			<td  class="{$FLD_DYN_UID_class}" {$FLD_DYN_UID_style} {$recordattrs}>
+				{$FLD_DYN_UID_value}
+			</td>
+			{END FLD_DYN_UID_fieldcolumn}
+			{BEGIN FLD_FILTER_fieldcolumn}
+			<td  class="{$FLD_FILTER_class}" {$FLD_FILTER_style} {$recordattrs}>
+				{$FLD_FILTER_value}
+			</td>
+			{END FLD_FILTER_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

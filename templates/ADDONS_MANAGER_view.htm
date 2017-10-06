@@ -1,0 +1,390 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel ADDONS_MANAGER view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN ADDON_ID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_ID} bs-viewform-group" data-fieldname="ADDON_ID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_ID}">
+			{$label ADDONS_MANAGER ADDON_ID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_ID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_ID_fieldblock}
+	{BEGIN STORE_ID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_STORE_ID} bs-viewform-group" data-fieldname="STORE_ID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_STORE_ID}">
+			{$label ADDONS_MANAGER STORE_ID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$STORE_ID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END STORE_ID_fieldblock}
+	{BEGIN ADDON_NAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_NAME} bs-viewform-group" data-fieldname="ADDON_NAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_NAME}">
+			{$label ADDONS_MANAGER ADDON_NAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_NAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_NAME_fieldblock}
+	{BEGIN ADDON_NICK_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_NICK} bs-viewform-group" data-fieldname="ADDON_NICK">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_NICK}">
+			{$label ADDONS_MANAGER ADDON_NICK}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_NICK_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_NICK_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_FILENAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_DOWNLOAD_FILENAME} bs-viewform-group" data-fieldname="ADDON_DOWNLOAD_FILENAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_DOWNLOAD_FILENAME}">
+			{$label ADDONS_MANAGER ADDON_DOWNLOAD_FILENAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_DOWNLOAD_FILENAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_DOWNLOAD_FILENAME_fieldblock}
+	{BEGIN ADDON_DESCRIPTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_DESCRIPTION} bs-viewform-group" data-fieldname="ADDON_DESCRIPTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_DESCRIPTION}">
+			{$label ADDONS_MANAGER ADDON_DESCRIPTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_DESCRIPTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_DESCRIPTION_fieldblock}
+	{BEGIN ADDON_STATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_STATE} bs-viewform-group" data-fieldname="ADDON_STATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_STATE}">
+			{$label ADDONS_MANAGER ADDON_STATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_STATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_STATE_fieldblock}
+	{BEGIN ADDON_STATE_CHANGED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_STATE_CHANGED} bs-viewform-group" data-fieldname="ADDON_STATE_CHANGED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_STATE_CHANGED}">
+			{$label ADDONS_MANAGER ADDON_STATE_CHANGED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_STATE_CHANGED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_STATE_CHANGED_fieldblock}
+	{BEGIN ADDON_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_STATUS} bs-viewform-group" data-fieldname="ADDON_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_STATUS}">
+			{$label ADDONS_MANAGER ADDON_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_STATUS_fieldblock}
+	{BEGIN ADDON_VERSION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_VERSION} bs-viewform-group" data-fieldname="ADDON_VERSION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_VERSION}">
+			{$label ADDONS_MANAGER ADDON_VERSION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_VERSION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_VERSION_fieldblock}
+	{BEGIN ADDON_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_TYPE} bs-viewform-group" data-fieldname="ADDON_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_TYPE}">
+			{$label ADDONS_MANAGER ADDON_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_TYPE_fieldblock}
+	{BEGIN ADDON_PUBLISHER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_PUBLISHER} bs-viewform-group" data-fieldname="ADDON_PUBLISHER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_PUBLISHER}">
+			{$label ADDONS_MANAGER ADDON_PUBLISHER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_PUBLISHER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_PUBLISHER_fieldblock}
+	{BEGIN ADDON_RELEASE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_RELEASE_DATE} bs-viewform-group" data-fieldname="ADDON_RELEASE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_RELEASE_DATE}">
+			{$label ADDONS_MANAGER ADDON_RELEASE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_RELEASE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_RELEASE_DATE_fieldblock}
+	{BEGIN ADDON_RELEASE_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_RELEASE_TYPE} bs-viewform-group" data-fieldname="ADDON_RELEASE_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_RELEASE_TYPE}">
+			{$label ADDONS_MANAGER ADDON_RELEASE_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_RELEASE_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_RELEASE_TYPE_fieldblock}
+	{BEGIN ADDON_RELEASE_NOTES_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_RELEASE_NOTES} bs-viewform-group" data-fieldname="ADDON_RELEASE_NOTES">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_RELEASE_NOTES}">
+			{$label ADDONS_MANAGER ADDON_RELEASE_NOTES}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_RELEASE_NOTES_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_RELEASE_NOTES_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_URL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_DOWNLOAD_URL} bs-viewform-group" data-fieldname="ADDON_DOWNLOAD_URL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_DOWNLOAD_URL}">
+			{$label ADDONS_MANAGER ADDON_DOWNLOAD_URL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_DOWNLOAD_URL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_DOWNLOAD_URL_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_PROGRESS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_DOWNLOAD_PROGRESS} bs-viewform-group" data-fieldname="ADDON_DOWNLOAD_PROGRESS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_DOWNLOAD_PROGRESS}">
+			{$label ADDONS_MANAGER ADDON_DOWNLOAD_PROGRESS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_DOWNLOAD_PROGRESS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_DOWNLOAD_PROGRESS_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_MD5_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADDON_DOWNLOAD_MD5} bs-viewform-group" data-fieldname="ADDON_DOWNLOAD_MD5">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADDON_DOWNLOAD_MD5}">
+			{$label ADDONS_MANAGER ADDON_DOWNLOAD_MD5}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADDON_DOWNLOAD_MD5_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADDON_DOWNLOAD_MD5_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

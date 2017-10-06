@@ -1,0 +1,382 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel CASE_SCHEDULER print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN SCH_UID_fieldheadercolumn}
+			<th class="{$SCH_UID_class}" {$SCH_UID_style}  data-field="SCH_UID">
+				{$label CASE_SCHEDULER SCH_UID}
+			</th>
+			{END SCH_UID_fieldheadercolumn}
+			{BEGIN SCH_DEL_USER_NAME_fieldheadercolumn}
+			<th class="{$SCH_DEL_USER_NAME_class}" {$SCH_DEL_USER_NAME_style}  data-field="SCH_DEL_USER_NAME">
+				{$label CASE_SCHEDULER SCH_DEL_USER_NAME}
+			</th>
+			{END SCH_DEL_USER_NAME_fieldheadercolumn}
+			{BEGIN SCH_DEL_USER_PASS_fieldheadercolumn}
+			<th class="{$SCH_DEL_USER_PASS_class}" {$SCH_DEL_USER_PASS_style}  data-field="SCH_DEL_USER_PASS">
+				{$label CASE_SCHEDULER SCH_DEL_USER_PASS}
+			</th>
+			{END SCH_DEL_USER_PASS_fieldheadercolumn}
+			{BEGIN SCH_DEL_USER_UID_fieldheadercolumn}
+			<th class="{$SCH_DEL_USER_UID_class}" {$SCH_DEL_USER_UID_style}  data-field="SCH_DEL_USER_UID">
+				{$label CASE_SCHEDULER SCH_DEL_USER_UID}
+			</th>
+			{END SCH_DEL_USER_UID_fieldheadercolumn}
+			{BEGIN SCH_NAME_fieldheadercolumn}
+			<th class="{$SCH_NAME_class}" {$SCH_NAME_style}  data-field="SCH_NAME">
+				{$label CASE_SCHEDULER SCH_NAME}
+			</th>
+			{END SCH_NAME_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label CASE_SCHEDULER PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN TAS_UID_fieldheadercolumn}
+			<th class="{$TAS_UID_class}" {$TAS_UID_style}  data-field="TAS_UID">
+				{$label CASE_SCHEDULER TAS_UID}
+			</th>
+			{END TAS_UID_fieldheadercolumn}
+			{BEGIN SCH_TIME_NEXT_RUN_fieldheadercolumn}
+			<th class="{$SCH_TIME_NEXT_RUN_class}" {$SCH_TIME_NEXT_RUN_style}  data-field="SCH_TIME_NEXT_RUN">
+				{$label CASE_SCHEDULER SCH_TIME_NEXT_RUN}
+			</th>
+			{END SCH_TIME_NEXT_RUN_fieldheadercolumn}
+			{BEGIN SCH_LAST_RUN_TIME_fieldheadercolumn}
+			<th class="{$SCH_LAST_RUN_TIME_class}" {$SCH_LAST_RUN_TIME_style}  data-field="SCH_LAST_RUN_TIME">
+				{$label CASE_SCHEDULER SCH_LAST_RUN_TIME}
+			</th>
+			{END SCH_LAST_RUN_TIME_fieldheadercolumn}
+			{BEGIN SCH_STATE_fieldheadercolumn}
+			<th class="{$SCH_STATE_class}" {$SCH_STATE_style}  data-field="SCH_STATE">
+				{$label CASE_SCHEDULER SCH_STATE}
+			</th>
+			{END SCH_STATE_fieldheadercolumn}
+			{BEGIN SCH_LAST_STATE_fieldheadercolumn}
+			<th class="{$SCH_LAST_STATE_class}" {$SCH_LAST_STATE_style}  data-field="SCH_LAST_STATE">
+				{$label CASE_SCHEDULER SCH_LAST_STATE}
+			</th>
+			{END SCH_LAST_STATE_fieldheadercolumn}
+			{BEGIN USR_UID_fieldheadercolumn}
+			<th class="{$USR_UID_class}" {$USR_UID_style}  data-field="USR_UID">
+				{$label CASE_SCHEDULER USR_UID}
+			</th>
+			{END USR_UID_fieldheadercolumn}
+			{BEGIN SCH_OPTION_fieldheadercolumn}
+			<th class="{$SCH_OPTION_class}" {$SCH_OPTION_style}  data-field="SCH_OPTION">
+				{$label CASE_SCHEDULER SCH_OPTION}
+			</th>
+			{END SCH_OPTION_fieldheadercolumn}
+			{BEGIN SCH_START_TIME_fieldheadercolumn}
+			<th class="{$SCH_START_TIME_class}" {$SCH_START_TIME_style}  data-field="SCH_START_TIME">
+				{$label CASE_SCHEDULER SCH_START_TIME}
+			</th>
+			{END SCH_START_TIME_fieldheadercolumn}
+			{BEGIN SCH_START_DATE_fieldheadercolumn}
+			<th class="{$SCH_START_DATE_class}" {$SCH_START_DATE_style}  data-field="SCH_START_DATE">
+				{$label CASE_SCHEDULER SCH_START_DATE}
+			</th>
+			{END SCH_START_DATE_fieldheadercolumn}
+			{BEGIN SCH_DAYS_PERFORM_TASK_fieldheadercolumn}
+			<th class="{$SCH_DAYS_PERFORM_TASK_class}" {$SCH_DAYS_PERFORM_TASK_style}  data-field="SCH_DAYS_PERFORM_TASK">
+				{$label CASE_SCHEDULER SCH_DAYS_PERFORM_TASK}
+			</th>
+			{END SCH_DAYS_PERFORM_TASK_fieldheadercolumn}
+			{BEGIN SCH_EVERY_DAYS_fieldheadercolumn}
+			<th class="{$SCH_EVERY_DAYS_class}" {$SCH_EVERY_DAYS_style}  data-field="SCH_EVERY_DAYS">
+				{$label CASE_SCHEDULER SCH_EVERY_DAYS}
+			</th>
+			{END SCH_EVERY_DAYS_fieldheadercolumn}
+			{BEGIN SCH_WEEK_DAYS_fieldheadercolumn}
+			<th class="{$SCH_WEEK_DAYS_class}" {$SCH_WEEK_DAYS_style}  data-field="SCH_WEEK_DAYS">
+				{$label CASE_SCHEDULER SCH_WEEK_DAYS}
+			</th>
+			{END SCH_WEEK_DAYS_fieldheadercolumn}
+			{BEGIN SCH_START_DAY_fieldheadercolumn}
+			<th class="{$SCH_START_DAY_class}" {$SCH_START_DAY_style}  data-field="SCH_START_DAY">
+				{$label CASE_SCHEDULER SCH_START_DAY}
+			</th>
+			{END SCH_START_DAY_fieldheadercolumn}
+			{BEGIN SCH_MONTHS_fieldheadercolumn}
+			<th class="{$SCH_MONTHS_class}" {$SCH_MONTHS_style}  data-field="SCH_MONTHS">
+				{$label CASE_SCHEDULER SCH_MONTHS}
+			</th>
+			{END SCH_MONTHS_fieldheadercolumn}
+			{BEGIN SCH_END_DATE_fieldheadercolumn}
+			<th class="{$SCH_END_DATE_class}" {$SCH_END_DATE_style}  data-field="SCH_END_DATE">
+				{$label CASE_SCHEDULER SCH_END_DATE}
+			</th>
+			{END SCH_END_DATE_fieldheadercolumn}
+			{BEGIN SCH_REPEAT_EVERY_fieldheadercolumn}
+			<th class="{$SCH_REPEAT_EVERY_class}" {$SCH_REPEAT_EVERY_style}  data-field="SCH_REPEAT_EVERY">
+				{$label CASE_SCHEDULER SCH_REPEAT_EVERY}
+			</th>
+			{END SCH_REPEAT_EVERY_fieldheadercolumn}
+			{BEGIN SCH_REPEAT_UNTIL_fieldheadercolumn}
+			<th class="{$SCH_REPEAT_UNTIL_class}" {$SCH_REPEAT_UNTIL_style}  data-field="SCH_REPEAT_UNTIL">
+				{$label CASE_SCHEDULER SCH_REPEAT_UNTIL}
+			</th>
+			{END SCH_REPEAT_UNTIL_fieldheadercolumn}
+			{BEGIN SCH_REPEAT_STOP_IF_RUNNING_fieldheadercolumn}
+			<th class="{$SCH_REPEAT_STOP_IF_RUNNING_class}" {$SCH_REPEAT_STOP_IF_RUNNING_style}  data-field="SCH_REPEAT_STOP_IF_RUNNING">
+				{$label CASE_SCHEDULER SCH_REPEAT_STOP_IF_RUNNING}
+			</th>
+			{END SCH_REPEAT_STOP_IF_RUNNING_fieldheadercolumn}
+			{BEGIN SCH_EXECUTION_DATE_fieldheadercolumn}
+			<th class="{$SCH_EXECUTION_DATE_class}" {$SCH_EXECUTION_DATE_style}  data-field="SCH_EXECUTION_DATE">
+				{$label CASE_SCHEDULER SCH_EXECUTION_DATE}
+			</th>
+			{END SCH_EXECUTION_DATE_fieldheadercolumn}
+			{BEGIN CASE_SH_PLUGIN_UID_fieldheadercolumn}
+			<th class="{$CASE_SH_PLUGIN_UID_class}" {$CASE_SH_PLUGIN_UID_style}  data-field="CASE_SH_PLUGIN_UID">
+				{$label CASE_SCHEDULER CASE_SH_PLUGIN_UID}
+			</th>
+			{END CASE_SH_PLUGIN_UID_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN SCH_UID_fieldcolumn}
+			<td  class="{$SCH_UID_class}" {$SCH_UID_style} {$recordattrs}>
+				{$SCH_UID_value}
+			</td>
+			{END SCH_UID_fieldcolumn}
+			{BEGIN SCH_DEL_USER_NAME_fieldcolumn}
+			<td  class="{$SCH_DEL_USER_NAME_class}" {$SCH_DEL_USER_NAME_style} {$recordattrs}>
+				{$SCH_DEL_USER_NAME_value}
+			</td>
+			{END SCH_DEL_USER_NAME_fieldcolumn}
+			{BEGIN SCH_DEL_USER_PASS_fieldcolumn}
+			<td  class="{$SCH_DEL_USER_PASS_class}" {$SCH_DEL_USER_PASS_style} {$recordattrs}>
+				{$SCH_DEL_USER_PASS_value}
+			</td>
+			{END SCH_DEL_USER_PASS_fieldcolumn}
+			{BEGIN SCH_DEL_USER_UID_fieldcolumn}
+			<td  class="{$SCH_DEL_USER_UID_class}" {$SCH_DEL_USER_UID_style} {$recordattrs}>
+				{$SCH_DEL_USER_UID_value}
+			</td>
+			{END SCH_DEL_USER_UID_fieldcolumn}
+			{BEGIN SCH_NAME_fieldcolumn}
+			<td  class="{$SCH_NAME_class}" {$SCH_NAME_style} {$recordattrs}>
+				{$SCH_NAME_value}
+			</td>
+			{END SCH_NAME_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN TAS_UID_fieldcolumn}
+			<td  class="{$TAS_UID_class}" {$TAS_UID_style} {$recordattrs}>
+				{$TAS_UID_value}
+			</td>
+			{END TAS_UID_fieldcolumn}
+			{BEGIN SCH_TIME_NEXT_RUN_fieldcolumn}
+			<td  class="{$SCH_TIME_NEXT_RUN_class}" {$SCH_TIME_NEXT_RUN_style} {$recordattrs}>
+				{$SCH_TIME_NEXT_RUN_value}
+			</td>
+			{END SCH_TIME_NEXT_RUN_fieldcolumn}
+			{BEGIN SCH_LAST_RUN_TIME_fieldcolumn}
+			<td  class="{$SCH_LAST_RUN_TIME_class}" {$SCH_LAST_RUN_TIME_style} {$recordattrs}>
+				{$SCH_LAST_RUN_TIME_value}
+			</td>
+			{END SCH_LAST_RUN_TIME_fieldcolumn}
+			{BEGIN SCH_STATE_fieldcolumn}
+			<td  class="{$SCH_STATE_class}" {$SCH_STATE_style} {$recordattrs}>
+				{$SCH_STATE_value}
+			</td>
+			{END SCH_STATE_fieldcolumn}
+			{BEGIN SCH_LAST_STATE_fieldcolumn}
+			<td  class="{$SCH_LAST_STATE_class}" {$SCH_LAST_STATE_style} {$recordattrs}>
+				{$SCH_LAST_STATE_value}
+			</td>
+			{END SCH_LAST_STATE_fieldcolumn}
+			{BEGIN USR_UID_fieldcolumn}
+			<td  class="{$USR_UID_class}" {$USR_UID_style} {$recordattrs}>
+				{$USR_UID_value}
+			</td>
+			{END USR_UID_fieldcolumn}
+			{BEGIN SCH_OPTION_fieldcolumn}
+			<td  class="{$SCH_OPTION_class}" {$SCH_OPTION_style} {$recordattrs}>
+				{$SCH_OPTION_value}
+			</td>
+			{END SCH_OPTION_fieldcolumn}
+			{BEGIN SCH_START_TIME_fieldcolumn}
+			<td  class="{$SCH_START_TIME_class}" {$SCH_START_TIME_style} {$recordattrs}>
+				{$SCH_START_TIME_value}
+			</td>
+			{END SCH_START_TIME_fieldcolumn}
+			{BEGIN SCH_START_DATE_fieldcolumn}
+			<td  class="{$SCH_START_DATE_class}" {$SCH_START_DATE_style} {$recordattrs}>
+				{$SCH_START_DATE_value}
+			</td>
+			{END SCH_START_DATE_fieldcolumn}
+			{BEGIN SCH_DAYS_PERFORM_TASK_fieldcolumn}
+			<td  class="{$SCH_DAYS_PERFORM_TASK_class}" {$SCH_DAYS_PERFORM_TASK_style} {$recordattrs}>
+				{$SCH_DAYS_PERFORM_TASK_value}
+			</td>
+			{END SCH_DAYS_PERFORM_TASK_fieldcolumn}
+			{BEGIN SCH_EVERY_DAYS_fieldcolumn}
+			<td  class="{$SCH_EVERY_DAYS_class}" {$SCH_EVERY_DAYS_style} {$recordattrs}>
+				{$SCH_EVERY_DAYS_value}
+			</td>
+			{END SCH_EVERY_DAYS_fieldcolumn}
+			{BEGIN SCH_WEEK_DAYS_fieldcolumn}
+			<td  class="{$SCH_WEEK_DAYS_class}" {$SCH_WEEK_DAYS_style} {$recordattrs}>
+				{$SCH_WEEK_DAYS_value}
+			</td>
+			{END SCH_WEEK_DAYS_fieldcolumn}
+			{BEGIN SCH_START_DAY_fieldcolumn}
+			<td  class="{$SCH_START_DAY_class}" {$SCH_START_DAY_style} {$recordattrs}>
+				{$SCH_START_DAY_value}
+			</td>
+			{END SCH_START_DAY_fieldcolumn}
+			{BEGIN SCH_MONTHS_fieldcolumn}
+			<td  class="{$SCH_MONTHS_class}" {$SCH_MONTHS_style} {$recordattrs}>
+				{$SCH_MONTHS_value}
+			</td>
+			{END SCH_MONTHS_fieldcolumn}
+			{BEGIN SCH_END_DATE_fieldcolumn}
+			<td  class="{$SCH_END_DATE_class}" {$SCH_END_DATE_style} {$recordattrs}>
+				{$SCH_END_DATE_value}
+			</td>
+			{END SCH_END_DATE_fieldcolumn}
+			{BEGIN SCH_REPEAT_EVERY_fieldcolumn}
+			<td  class="{$SCH_REPEAT_EVERY_class}" {$SCH_REPEAT_EVERY_style} {$recordattrs}>
+				{$SCH_REPEAT_EVERY_value}
+			</td>
+			{END SCH_REPEAT_EVERY_fieldcolumn}
+			{BEGIN SCH_REPEAT_UNTIL_fieldcolumn}
+			<td  class="{$SCH_REPEAT_UNTIL_class}" {$SCH_REPEAT_UNTIL_style} {$recordattrs}>
+				{$SCH_REPEAT_UNTIL_value}
+			</td>
+			{END SCH_REPEAT_UNTIL_fieldcolumn}
+			{BEGIN SCH_REPEAT_STOP_IF_RUNNING_fieldcolumn}
+			<td  class="{$SCH_REPEAT_STOP_IF_RUNNING_class}" {$SCH_REPEAT_STOP_IF_RUNNING_style} {$recordattrs}>
+				{$SCH_REPEAT_STOP_IF_RUNNING_value}
+			</td>
+			{END SCH_REPEAT_STOP_IF_RUNNING_fieldcolumn}
+			{BEGIN SCH_EXECUTION_DATE_fieldcolumn}
+			<td  class="{$SCH_EXECUTION_DATE_class}" {$SCH_EXECUTION_DATE_style} {$recordattrs}>
+				{$SCH_EXECUTION_DATE_value}
+			</td>
+			{END SCH_EXECUTION_DATE_fieldcolumn}
+			{BEGIN CASE_SH_PLUGIN_UID_fieldcolumn}
+			<td  class="{$CASE_SH_PLUGIN_UID_class}" {$CASE_SH_PLUGIN_UID_style} {$recordattrs}>
+				{$CASE_SH_PLUGIN_UID_value}
+			</td>
+			{END CASE_SH_PLUGIN_UID_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

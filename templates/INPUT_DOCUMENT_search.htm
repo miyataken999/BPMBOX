@@ -1,0 +1,368 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel INPUT_DOCUMENT search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN INP_DOC_UID_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_UID}" data-fieldname="INP_DOC_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_UID}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN INP_DOC_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_TITLE}" data-fieldname="INP_DOC_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_TITLE_fieldblock}
+	{BEGIN INP_DOC_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_DESCRIPTION}" data-fieldname="INP_DOC_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_DESCRIPTION_fieldblock}
+	{BEGIN INP_DOC_FORM_NEEDED_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_FORM_NEEDED}" data-fieldname="INP_DOC_FORM_NEEDED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_FORM_NEEDED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_FORM_NEEDED}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_FORM_NEEDED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_FORM_NEEDED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_FORM_NEEDED_fieldblock}
+	{BEGIN INP_DOC_ORIGINAL_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_ORIGINAL}" data-fieldname="INP_DOC_ORIGINAL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_ORIGINAL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_ORIGINAL}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_ORIGINAL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_ORIGINAL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_ORIGINAL_fieldblock}
+	{BEGIN INP_DOC_PUBLISHED_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_PUBLISHED}" data-fieldname="INP_DOC_PUBLISHED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_PUBLISHED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_PUBLISHED}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_PUBLISHED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_PUBLISHED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_PUBLISHED_fieldblock}
+	{BEGIN INP_DOC_VERSIONING_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_VERSIONING}" data-fieldname="INP_DOC_VERSIONING">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_VERSIONING}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_VERSIONING}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_VERSIONING_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_VERSIONING_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_VERSIONING_fieldblock}
+	{BEGIN INP_DOC_DESTINATION_PATH_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_DESTINATION_PATH}" data-fieldname="INP_DOC_DESTINATION_PATH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_DESTINATION_PATH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_DESTINATION_PATH}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_DESTINATION_PATH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_DESTINATION_PATH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_DESTINATION_PATH_fieldblock}
+	{BEGIN INP_DOC_TAGS_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_TAGS}" data-fieldname="INP_DOC_TAGS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_TAGS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_TAGS}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_TAGS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_TAGS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_TAGS_fieldblock}
+	{BEGIN INP_DOC_TYPE_FILE_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_TYPE_FILE}" data-fieldname="INP_DOC_TYPE_FILE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_TYPE_FILE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_TYPE_FILE}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_TYPE_FILE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_TYPE_FILE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_TYPE_FILE_fieldblock}
+	{BEGIN INP_DOC_MAX_FILESIZE_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_MAX_FILESIZE}" data-fieldname="INP_DOC_MAX_FILESIZE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_MAX_FILESIZE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_MAX_FILESIZE}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_MAX_FILESIZE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_MAX_FILESIZE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_MAX_FILESIZE_fieldblock}
+	{BEGIN INP_DOC_MAX_FILESIZE_UNIT_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_MAX_FILESIZE_UNIT}" data-fieldname="INP_DOC_MAX_FILESIZE_UNIT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label INPUT_DOCUMENT INP_DOC_MAX_FILESIZE_UNIT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_MAX_FILESIZE_UNIT}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_MAX_FILESIZE_UNIT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_MAX_FILESIZE_UNIT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_MAX_FILESIZE_UNIT_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

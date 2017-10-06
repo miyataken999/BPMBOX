@@ -1,0 +1,115 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel modx_site_content_dash masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label modx_site_content_dash id}";
+	}
+	.bs-gridcell[data-field=url]:before {
+		content: "{$label modx_site_content_dash url}";
+	}
+	.bs-gridcell[data-field=link]:before {
+		content: "{$label modx_site_content_dash link}";
+	}
+	.bs-gridcell[data-field=type]:before {
+		content: "{$label modx_site_content_dash type}";
+	}
+	.bs-gridcell[data-field=contentType]:before {
+		content: "{$label modx_site_content_dash contentType}";
+	}
+	.bs-gridcell[data-field=pagetitle]:before {
+		content: "{$label modx_site_content_dash pagetitle}";
+	}
+	.bs-gridcell[data-field=longtitle]:before {
+		content: "{$label modx_site_content_dash longtitle}";
+	}
+	.bs-gridcell[data-field=description]:before {
+		content: "{$label modx_site_content_dash description}";
+	}
+	.bs-gridcell[data-field=link_attributes]:before {
+		content: "{$label modx_site_content_dash link_attributes}";
+	}
+	.bs-gridcell[data-field=published]:before {
+		content: "{$label modx_site_content_dash published}";
+	}
+	.bs-gridcell[data-field=pub_date]:before {
+		content: "{$label modx_site_content_dash pub_date}";
+	}
+	.bs-gridcell[data-field=unpub_date]:before {
+		content: "{$label modx_site_content_dash unpub_date}";
+	}
+	.bs-gridcell[data-field=modex_site_htmlsnippet_id]:before {
+		content: "{$label modx_site_content_dash modex_site_htmlsnippet_id}";
+	}
+	.bs-gridcell[data-field=modx_site_snippet_id]:before {
+		content: "{$label modx_site_content_dash modx_site_snippet_id}";
+	}
+	.bs-gridcell[data-field=content]:before {
+		content: "{$label modx_site_content_dash content}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$link_class}">{$label modx_site_content_dash link}</th>
+			<th class="{$id_class}">{$label modx_site_content_dash id}</th>
+			<th class="{$url_class}">{$label modx_site_content_dash url}</th>
+			<th class="{$content_class}">{$label modx_site_content_dash content}</th>
+			<th class="{$modx_site_snippet_id_class}">{$label modx_site_content_dash modx_site_snippet_id}</th>
+			<th class="{$modex_site_htmlsnippet_id_class}">{$label modx_site_content_dash modex_site_htmlsnippet_id}</th>
+			<th class="{$type_class}">{$label modx_site_content_dash type}</th>
+			<th class="{$contentType_class}">{$label modx_site_content_dash contentType}</th>
+			<th class="{$pagetitle_class}">{$label modx_site_content_dash pagetitle}</th>
+			<th class="{$longtitle_class}">{$label modx_site_content_dash longtitle}</th>
+			<th class="{$description_class}">{$label modx_site_content_dash description}</th>
+			<th class="{$link_attributes_class}">{$label modx_site_content_dash link_attributes}</th>
+			<th class="{$published_class}">{$label modx_site_content_dash published}</th>
+			<th class="{$pub_date_class}">{$label modx_site_content_dash pub_date}</th>
+			<th class="{$unpub_date_class}">{$label modx_site_content_dash unpub_date}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$link_class} bs-gridcell" data-field=link>{$link_mastervalue}</td>
+			<td class="{$id_class} bs-gridcell" data-field=id>{$id_mastervalue}</td>
+			<td class="{$url_class} bs-gridcell" data-field=url>{$url_mastervalue}</td>
+			<td class="{$content_class} bs-gridcell" data-field=content>{$content_mastervalue}</td>
+			<td class="{$modx_site_snippet_id_class} bs-gridcell" data-field=modx_site_snippet_id>{$modx_site_snippet_id_mastervalue}</td>
+			<td class="{$modex_site_htmlsnippet_id_class} bs-gridcell" data-field=modex_site_htmlsnippet_id>{$modex_site_htmlsnippet_id_mastervalue}</td>
+			<td class="{$type_class} bs-gridcell" data-field=type>{$type_mastervalue}</td>
+			<td class="{$contentType_class} bs-gridcell" data-field=contentType>{$contentType_mastervalue}</td>
+			<td class="{$pagetitle_class} bs-gridcell" data-field=pagetitle>{$pagetitle_mastervalue}</td>
+			<td class="{$longtitle_class} bs-gridcell" data-field=longtitle>{$longtitle_mastervalue}</td>
+			<td class="{$description_class} bs-gridcell" data-field=description>{$description_mastervalue}</td>
+			<td class="{$link_attributes_class} bs-gridcell" data-field=link_attributes>{$link_attributes_mastervalue}</td>
+			<td class="{$published_class} bs-gridcell" data-field=published>{$published_mastervalue}</td>
+			<td class="{$pub_date_class} bs-gridcell" data-field=pub_date>{$pub_date_mastervalue}</td>
+			<td class="{$unpub_date_class} bs-gridcell" data-field=unpub_date>{$unpub_date_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

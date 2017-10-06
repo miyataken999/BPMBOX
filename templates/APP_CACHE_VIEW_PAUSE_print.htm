@@ -1,0 +1,442 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel APP_CACHE_VIEW_PAUSE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label APP_CACHE_VIEW_PAUSE APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN DEL_INDEX_fieldheadercolumn}
+			<th class="{$DEL_INDEX_class}" {$DEL_INDEX_style}  data-field="DEL_INDEX">
+				{$label APP_CACHE_VIEW_PAUSE DEL_INDEX}
+			</th>
+			{END DEL_INDEX_fieldheadercolumn}
+			{BEGIN DEL_LAST_INDEX_fieldheadercolumn}
+			<th class="{$DEL_LAST_INDEX_class}" {$DEL_LAST_INDEX_style}  data-field="DEL_LAST_INDEX">
+				{$label APP_CACHE_VIEW_PAUSE DEL_LAST_INDEX}
+			</th>
+			{END DEL_LAST_INDEX_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label APP_CACHE_VIEW_PAUSE APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label APP_CACHE_VIEW_PAUSE APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN USR_UID_fieldheadercolumn}
+			<th class="{$USR_UID_class}" {$USR_UID_style}  data-field="USR_UID">
+				{$label APP_CACHE_VIEW_PAUSE USR_UID}
+			</th>
+			{END USR_UID_fieldheadercolumn}
+			{BEGIN PREVIOUS_USR_UID_fieldheadercolumn}
+			<th class="{$PREVIOUS_USR_UID_class}" {$PREVIOUS_USR_UID_style}  data-field="PREVIOUS_USR_UID">
+				{$label APP_CACHE_VIEW_PAUSE PREVIOUS_USR_UID}
+			</th>
+			{END PREVIOUS_USR_UID_fieldheadercolumn}
+			{BEGIN TAS_UID_fieldheadercolumn}
+			<th class="{$TAS_UID_class}" {$TAS_UID_style}  data-field="TAS_UID">
+				{$label APP_CACHE_VIEW_PAUSE TAS_UID}
+			</th>
+			{END TAS_UID_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label APP_CACHE_VIEW_PAUSE PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN DEL_DELEGATE_DATE_fieldheadercolumn}
+			<th class="{$DEL_DELEGATE_DATE_class}" {$DEL_DELEGATE_DATE_style}  data-field="DEL_DELEGATE_DATE">
+				{$label APP_CACHE_VIEW_PAUSE DEL_DELEGATE_DATE}
+			</th>
+			{END DEL_DELEGATE_DATE_fieldheadercolumn}
+			{BEGIN DEL_INIT_DATE_fieldheadercolumn}
+			<th class="{$DEL_INIT_DATE_class}" {$DEL_INIT_DATE_style}  data-field="DEL_INIT_DATE">
+				{$label APP_CACHE_VIEW_PAUSE DEL_INIT_DATE}
+			</th>
+			{END DEL_INIT_DATE_fieldheadercolumn}
+			{BEGIN DEL_FINISH_DATE_fieldheadercolumn}
+			<th class="{$DEL_FINISH_DATE_class}" {$DEL_FINISH_DATE_style}  data-field="DEL_FINISH_DATE">
+				{$label APP_CACHE_VIEW_PAUSE DEL_FINISH_DATE}
+			</th>
+			{END DEL_FINISH_DATE_fieldheadercolumn}
+			{BEGIN DEL_TASK_DUE_DATE_fieldheadercolumn}
+			<th class="{$DEL_TASK_DUE_DATE_class}" {$DEL_TASK_DUE_DATE_style}  data-field="DEL_TASK_DUE_DATE">
+				{$label APP_CACHE_VIEW_PAUSE DEL_TASK_DUE_DATE}
+			</th>
+			{END DEL_TASK_DUE_DATE_fieldheadercolumn}
+			{BEGIN DEL_RISK_DATE_fieldheadercolumn}
+			<th class="{$DEL_RISK_DATE_class}" {$DEL_RISK_DATE_style}  data-field="DEL_RISK_DATE">
+				{$label APP_CACHE_VIEW_PAUSE DEL_RISK_DATE}
+			</th>
+			{END DEL_RISK_DATE_fieldheadercolumn}
+			{BEGIN DEL_THREAD_STATUS_fieldheadercolumn}
+			<th class="{$DEL_THREAD_STATUS_class}" {$DEL_THREAD_STATUS_style}  data-field="DEL_THREAD_STATUS">
+				{$label APP_CACHE_VIEW_PAUSE DEL_THREAD_STATUS}
+			</th>
+			{END DEL_THREAD_STATUS_fieldheadercolumn}
+			{BEGIN APP_THREAD_STATUS_fieldheadercolumn}
+			<th class="{$APP_THREAD_STATUS_class}" {$APP_THREAD_STATUS_style}  data-field="APP_THREAD_STATUS">
+				{$label APP_CACHE_VIEW_PAUSE APP_THREAD_STATUS}
+			</th>
+			{END APP_THREAD_STATUS_fieldheadercolumn}
+			{BEGIN APP_TITLE_fieldheadercolumn}
+			<th class="{$APP_TITLE_class}" {$APP_TITLE_style}  data-field="APP_TITLE">
+				{$label APP_CACHE_VIEW_PAUSE APP_TITLE}
+			</th>
+			{END APP_TITLE_fieldheadercolumn}
+			{BEGIN APP_PRO_TITLE_fieldheadercolumn}
+			<th class="{$APP_PRO_TITLE_class}" {$APP_PRO_TITLE_style}  data-field="APP_PRO_TITLE">
+				{$label APP_CACHE_VIEW_PAUSE APP_PRO_TITLE}
+			</th>
+			{END APP_PRO_TITLE_fieldheadercolumn}
+			{BEGIN APP_TAS_TITLE_fieldheadercolumn}
+			<th class="{$APP_TAS_TITLE_class}" {$APP_TAS_TITLE_style}  data-field="APP_TAS_TITLE">
+				{$label APP_CACHE_VIEW_PAUSE APP_TAS_TITLE}
+			</th>
+			{END APP_TAS_TITLE_fieldheadercolumn}
+			{BEGIN APP_CURRENT_USER_fieldheadercolumn}
+			<th class="{$APP_CURRENT_USER_class}" {$APP_CURRENT_USER_style}  data-field="APP_CURRENT_USER">
+				{$label APP_CACHE_VIEW_PAUSE APP_CURRENT_USER}
+			</th>
+			{END APP_CURRENT_USER_fieldheadercolumn}
+			{BEGIN APP_DEL_PREVIOUS_USER_fieldheadercolumn}
+			<th class="{$APP_DEL_PREVIOUS_USER_class}" {$APP_DEL_PREVIOUS_USER_style}  data-field="APP_DEL_PREVIOUS_USER">
+				{$label APP_CACHE_VIEW_PAUSE APP_DEL_PREVIOUS_USER}
+			</th>
+			{END APP_DEL_PREVIOUS_USER_fieldheadercolumn}
+			{BEGIN DEL_PRIORITY_fieldheadercolumn}
+			<th class="{$DEL_PRIORITY_class}" {$DEL_PRIORITY_style}  data-field="DEL_PRIORITY">
+				{$label APP_CACHE_VIEW_PAUSE DEL_PRIORITY}
+			</th>
+			{END DEL_PRIORITY_fieldheadercolumn}
+			{BEGIN DEL_DURATION_fieldheadercolumn}
+			<th class="{$DEL_DURATION_class}" {$DEL_DURATION_style}  data-field="DEL_DURATION">
+				{$label APP_CACHE_VIEW_PAUSE DEL_DURATION}
+			</th>
+			{END DEL_DURATION_fieldheadercolumn}
+			{BEGIN DEL_QUEUE_DURATION_fieldheadercolumn}
+			<th class="{$DEL_QUEUE_DURATION_class}" {$DEL_QUEUE_DURATION_style}  data-field="DEL_QUEUE_DURATION">
+				{$label APP_CACHE_VIEW_PAUSE DEL_QUEUE_DURATION}
+			</th>
+			{END DEL_QUEUE_DURATION_fieldheadercolumn}
+			{BEGIN DEL_DELAY_DURATION_fieldheadercolumn}
+			<th class="{$DEL_DELAY_DURATION_class}" {$DEL_DELAY_DURATION_style}  data-field="DEL_DELAY_DURATION">
+				{$label APP_CACHE_VIEW_PAUSE DEL_DELAY_DURATION}
+			</th>
+			{END DEL_DELAY_DURATION_fieldheadercolumn}
+			{BEGIN DEL_STARTED_fieldheadercolumn}
+			<th class="{$DEL_STARTED_class}" {$DEL_STARTED_style}  data-field="DEL_STARTED">
+				{$label APP_CACHE_VIEW_PAUSE DEL_STARTED}
+			</th>
+			{END DEL_STARTED_fieldheadercolumn}
+			{BEGIN DEL_FINISHED_fieldheadercolumn}
+			<th class="{$DEL_FINISHED_class}" {$DEL_FINISHED_style}  data-field="DEL_FINISHED">
+				{$label APP_CACHE_VIEW_PAUSE DEL_FINISHED}
+			</th>
+			{END DEL_FINISHED_fieldheadercolumn}
+			{BEGIN DEL_DELAYED_fieldheadercolumn}
+			<th class="{$DEL_DELAYED_class}" {$DEL_DELAYED_style}  data-field="DEL_DELAYED">
+				{$label APP_CACHE_VIEW_PAUSE DEL_DELAYED}
+			</th>
+			{END DEL_DELAYED_fieldheadercolumn}
+			{BEGIN APP_CREATE_DATE_fieldheadercolumn}
+			<th class="{$APP_CREATE_DATE_class}" {$APP_CREATE_DATE_style}  data-field="APP_CREATE_DATE">
+				{$label APP_CACHE_VIEW_PAUSE APP_CREATE_DATE}
+			</th>
+			{END APP_CREATE_DATE_fieldheadercolumn}
+			{BEGIN APP_FINISH_DATE_fieldheadercolumn}
+			<th class="{$APP_FINISH_DATE_class}" {$APP_FINISH_DATE_style}  data-field="APP_FINISH_DATE">
+				{$label APP_CACHE_VIEW_PAUSE APP_FINISH_DATE}
+			</th>
+			{END APP_FINISH_DATE_fieldheadercolumn}
+			{BEGIN APP_UPDATE_DATE_fieldheadercolumn}
+			<th class="{$APP_UPDATE_DATE_class}" {$APP_UPDATE_DATE_style}  data-field="APP_UPDATE_DATE">
+				{$label APP_CACHE_VIEW_PAUSE APP_UPDATE_DATE}
+			</th>
+			{END APP_UPDATE_DATE_fieldheadercolumn}
+			{BEGIN APP_OVERDUE_PERCENTAGE_fieldheadercolumn}
+			<th class="{$APP_OVERDUE_PERCENTAGE_class}" {$APP_OVERDUE_PERCENTAGE_style}  data-field="APP_OVERDUE_PERCENTAGE">
+				{$label APP_CACHE_VIEW_PAUSE APP_OVERDUE_PERCENTAGE}
+			</th>
+			{END APP_OVERDUE_PERCENTAGE_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN DEL_INDEX_fieldcolumn}
+			<td  class="{$DEL_INDEX_class}" {$DEL_INDEX_style} {$recordattrs}>
+				{$DEL_INDEX_value}
+			</td>
+			{END DEL_INDEX_fieldcolumn}
+			{BEGIN DEL_LAST_INDEX_fieldcolumn}
+			<td  class="{$DEL_LAST_INDEX_class}" {$DEL_LAST_INDEX_style} {$recordattrs}>
+				{$DEL_LAST_INDEX_value}
+			</td>
+			{END DEL_LAST_INDEX_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN USR_UID_fieldcolumn}
+			<td  class="{$USR_UID_class}" {$USR_UID_style} {$recordattrs}>
+				{$USR_UID_value}
+			</td>
+			{END USR_UID_fieldcolumn}
+			{BEGIN PREVIOUS_USR_UID_fieldcolumn}
+			<td  class="{$PREVIOUS_USR_UID_class}" {$PREVIOUS_USR_UID_style} {$recordattrs}>
+				{$PREVIOUS_USR_UID_value}
+			</td>
+			{END PREVIOUS_USR_UID_fieldcolumn}
+			{BEGIN TAS_UID_fieldcolumn}
+			<td  class="{$TAS_UID_class}" {$TAS_UID_style} {$recordattrs}>
+				{$TAS_UID_value}
+			</td>
+			{END TAS_UID_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN DEL_DELEGATE_DATE_fieldcolumn}
+			<td  class="{$DEL_DELEGATE_DATE_class}" {$DEL_DELEGATE_DATE_style} {$recordattrs}>
+				{$DEL_DELEGATE_DATE_value}
+			</td>
+			{END DEL_DELEGATE_DATE_fieldcolumn}
+			{BEGIN DEL_INIT_DATE_fieldcolumn}
+			<td  class="{$DEL_INIT_DATE_class}" {$DEL_INIT_DATE_style} {$recordattrs}>
+				{$DEL_INIT_DATE_value}
+			</td>
+			{END DEL_INIT_DATE_fieldcolumn}
+			{BEGIN DEL_FINISH_DATE_fieldcolumn}
+			<td  class="{$DEL_FINISH_DATE_class}" {$DEL_FINISH_DATE_style} {$recordattrs}>
+				{$DEL_FINISH_DATE_value}
+			</td>
+			{END DEL_FINISH_DATE_fieldcolumn}
+			{BEGIN DEL_TASK_DUE_DATE_fieldcolumn}
+			<td  class="{$DEL_TASK_DUE_DATE_class}" {$DEL_TASK_DUE_DATE_style} {$recordattrs}>
+				{$DEL_TASK_DUE_DATE_value}
+			</td>
+			{END DEL_TASK_DUE_DATE_fieldcolumn}
+			{BEGIN DEL_RISK_DATE_fieldcolumn}
+			<td  class="{$DEL_RISK_DATE_class}" {$DEL_RISK_DATE_style} {$recordattrs}>
+				{$DEL_RISK_DATE_value}
+			</td>
+			{END DEL_RISK_DATE_fieldcolumn}
+			{BEGIN DEL_THREAD_STATUS_fieldcolumn}
+			<td  class="{$DEL_THREAD_STATUS_class}" {$DEL_THREAD_STATUS_style} {$recordattrs}>
+				{$DEL_THREAD_STATUS_value}
+			</td>
+			{END DEL_THREAD_STATUS_fieldcolumn}
+			{BEGIN APP_THREAD_STATUS_fieldcolumn}
+			<td  class="{$APP_THREAD_STATUS_class}" {$APP_THREAD_STATUS_style} {$recordattrs}>
+				{$APP_THREAD_STATUS_value}
+			</td>
+			{END APP_THREAD_STATUS_fieldcolumn}
+			{BEGIN APP_TITLE_fieldcolumn}
+			<td  class="{$APP_TITLE_class}" {$APP_TITLE_style} {$recordattrs}>
+				{$APP_TITLE_value}
+			</td>
+			{END APP_TITLE_fieldcolumn}
+			{BEGIN APP_PRO_TITLE_fieldcolumn}
+			<td  class="{$APP_PRO_TITLE_class}" {$APP_PRO_TITLE_style} {$recordattrs}>
+				{$APP_PRO_TITLE_value}
+			</td>
+			{END APP_PRO_TITLE_fieldcolumn}
+			{BEGIN APP_TAS_TITLE_fieldcolumn}
+			<td  class="{$APP_TAS_TITLE_class}" {$APP_TAS_TITLE_style} {$recordattrs}>
+				{$APP_TAS_TITLE_value}
+			</td>
+			{END APP_TAS_TITLE_fieldcolumn}
+			{BEGIN APP_CURRENT_USER_fieldcolumn}
+			<td  class="{$APP_CURRENT_USER_class}" {$APP_CURRENT_USER_style} {$recordattrs}>
+				{$APP_CURRENT_USER_value}
+			</td>
+			{END APP_CURRENT_USER_fieldcolumn}
+			{BEGIN APP_DEL_PREVIOUS_USER_fieldcolumn}
+			<td  class="{$APP_DEL_PREVIOUS_USER_class}" {$APP_DEL_PREVIOUS_USER_style} {$recordattrs}>
+				{$APP_DEL_PREVIOUS_USER_value}
+			</td>
+			{END APP_DEL_PREVIOUS_USER_fieldcolumn}
+			{BEGIN DEL_PRIORITY_fieldcolumn}
+			<td  class="{$DEL_PRIORITY_class}" {$DEL_PRIORITY_style} {$recordattrs}>
+				{$DEL_PRIORITY_value}
+			</td>
+			{END DEL_PRIORITY_fieldcolumn}
+			{BEGIN DEL_DURATION_fieldcolumn}
+			<td  class="{$DEL_DURATION_class}" {$DEL_DURATION_style} {$recordattrs}>
+				{$DEL_DURATION_value}
+			</td>
+			{END DEL_DURATION_fieldcolumn}
+			{BEGIN DEL_QUEUE_DURATION_fieldcolumn}
+			<td  class="{$DEL_QUEUE_DURATION_class}" {$DEL_QUEUE_DURATION_style} {$recordattrs}>
+				{$DEL_QUEUE_DURATION_value}
+			</td>
+			{END DEL_QUEUE_DURATION_fieldcolumn}
+			{BEGIN DEL_DELAY_DURATION_fieldcolumn}
+			<td  class="{$DEL_DELAY_DURATION_class}" {$DEL_DELAY_DURATION_style} {$recordattrs}>
+				{$DEL_DELAY_DURATION_value}
+			</td>
+			{END DEL_DELAY_DURATION_fieldcolumn}
+			{BEGIN DEL_STARTED_fieldcolumn}
+			<td  class="{$DEL_STARTED_class}" {$DEL_STARTED_style} {$recordattrs}>
+				{$DEL_STARTED_value}
+			</td>
+			{END DEL_STARTED_fieldcolumn}
+			{BEGIN DEL_FINISHED_fieldcolumn}
+			<td  class="{$DEL_FINISHED_class}" {$DEL_FINISHED_style} {$recordattrs}>
+				{$DEL_FINISHED_value}
+			</td>
+			{END DEL_FINISHED_fieldcolumn}
+			{BEGIN DEL_DELAYED_fieldcolumn}
+			<td  class="{$DEL_DELAYED_class}" {$DEL_DELAYED_style} {$recordattrs}>
+				{$DEL_DELAYED_value}
+			</td>
+			{END DEL_DELAYED_fieldcolumn}
+			{BEGIN APP_CREATE_DATE_fieldcolumn}
+			<td  class="{$APP_CREATE_DATE_class}" {$APP_CREATE_DATE_style} {$recordattrs}>
+				{$APP_CREATE_DATE_value}
+			</td>
+			{END APP_CREATE_DATE_fieldcolumn}
+			{BEGIN APP_FINISH_DATE_fieldcolumn}
+			<td  class="{$APP_FINISH_DATE_class}" {$APP_FINISH_DATE_style} {$recordattrs}>
+				{$APP_FINISH_DATE_value}
+			</td>
+			{END APP_FINISH_DATE_fieldcolumn}
+			{BEGIN APP_UPDATE_DATE_fieldcolumn}
+			<td  class="{$APP_UPDATE_DATE_class}" {$APP_UPDATE_DATE_style} {$recordattrs}>
+				{$APP_UPDATE_DATE_value}
+			</td>
+			{END APP_UPDATE_DATE_fieldcolumn}
+			{BEGIN APP_OVERDUE_PERCENTAGE_fieldcolumn}
+			<td  class="{$APP_OVERDUE_PERCENTAGE_class}" {$APP_OVERDUE_PERCENTAGE_style} {$recordattrs}>
+				{$APP_OVERDUE_PERCENTAGE_value}
+			</td>
+			{END APP_OVERDUE_PERCENTAGE_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

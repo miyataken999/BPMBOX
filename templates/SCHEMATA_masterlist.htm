@@ -1,0 +1,65 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel SCHEMATA masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=CATALOG_NAME]:before {
+		content: "{$label SCHEMATA CATALOG_NAME}";
+	}
+	.bs-gridcell[data-field=SCHEMA_NAME]:before {
+		content: "{$label SCHEMATA SCHEMA_NAME}";
+	}
+	.bs-gridcell[data-field=DEFAULT_CHARACTER_SET_NAME]:before {
+		content: "{$label SCHEMATA DEFAULT_CHARACTER_SET_NAME}";
+	}
+	.bs-gridcell[data-field=DEFAULT_COLLATION_NAME]:before {
+		content: "{$label SCHEMATA DEFAULT_COLLATION_NAME}";
+	}
+	.bs-gridcell[data-field=SQL_PATH]:before {
+		content: "{$label SCHEMATA SQL_PATH}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$CATALOG_NAME_class}">{$label SCHEMATA CATALOG_NAME}</th>
+			<th class="{$SCHEMA_NAME_class}">{$label SCHEMATA SCHEMA_NAME}</th>
+			<th class="{$DEFAULT_CHARACTER_SET_NAME_class}">{$label SCHEMATA DEFAULT_CHARACTER_SET_NAME}</th>
+			<th class="{$DEFAULT_COLLATION_NAME_class}">{$label SCHEMATA DEFAULT_COLLATION_NAME}</th>
+			<th class="{$SQL_PATH_class}">{$label SCHEMATA SQL_PATH}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$CATALOG_NAME_class} bs-gridcell" data-field=CATALOG_NAME>{$CATALOG_NAME_mastervalue}</td>
+			<td class="{$SCHEMA_NAME_class} bs-gridcell" data-field=SCHEMA_NAME>{$SCHEMA_NAME_mastervalue}</td>
+			<td class="{$DEFAULT_CHARACTER_SET_NAME_class} bs-gridcell" data-field=DEFAULT_CHARACTER_SET_NAME>{$DEFAULT_CHARACTER_SET_NAME_mastervalue}</td>
+			<td class="{$DEFAULT_COLLATION_NAME_class} bs-gridcell" data-field=DEFAULT_COLLATION_NAME>{$DEFAULT_COLLATION_NAME_mastervalue}</td>
+			<td class="{$SQL_PATH_class} bs-gridcell" data-field=SQL_PATH>{$SQL_PATH_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

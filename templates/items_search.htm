@@ -1,0 +1,350 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel items search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN item_id_fieldblock}		
+	<div class="container {$fielddispclass_item_id}" data-fieldname="item_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items item_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_item_id}
+			</div>
+			<div class="col-md-4" >
+				{$item_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$item_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END item_id_fieldblock}
+	{BEGIN name_fieldblock}		
+	<div class="container {$fielddispclass_name}" data-fieldname="name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_name}
+			</div>
+			<div class="col-md-4" >
+				{$name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END name_fieldblock}
+	{BEGIN price_fieldblock}		
+	<div class="container {$fielddispclass_price}" data-fieldname="price">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items price}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_price}
+			</div>
+			<div class="col-md-4" >
+				{$price_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$price_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END price_fieldblock}
+	{BEGIN discription_fieldblock}		
+	<div class="container {$fielddispclass_discription}" data-fieldname="discription">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items discription}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_discription}
+			</div>
+			<div class="col-md-4" >
+				{$discription_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$discription_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END discription_fieldblock}
+	{BEGIN abstruct_fieldblock}		
+	<div class="container {$fielddispclass_abstruct}" data-fieldname="abstruct">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items abstruct}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_abstruct}
+			</div>
+			<div class="col-md-4" >
+				{$abstruct_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$abstruct_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END abstruct_fieldblock}
+	{BEGIN claim_fieldblock}		
+	<div class="container {$fielddispclass_claim}" data-fieldname="claim">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items claim}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_claim}
+			</div>
+			<div class="col-md-4" >
+				{$claim_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$claim_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END claim_fieldblock}
+	{BEGIN url_fieldblock}		
+	<div class="container {$fielddispclass_url}" data-fieldname="url">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items url}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_url}
+			</div>
+			<div class="col-md-4" >
+				{$url_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$url_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END url_fieldblock}
+	{BEGIN japanase_fieldblock}		
+	<div class="container {$fielddispclass_japanase}" data-fieldname="japanase">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items japanase}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_japanase}
+			</div>
+			<div class="col-md-4" >
+				{$japanase_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$japanase_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END japanase_fieldblock}
+	{BEGIN count_fieldblock}		
+	<div class="container {$fielddispclass_count}" data-fieldname="count">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items count}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_count}
+			</div>
+			<div class="col-md-4" >
+				{$count_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$count_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END count_fieldblock}
+	{BEGIN parent_fieldblock}		
+	<div class="container {$fielddispclass_parent}" data-fieldname="parent">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items parent}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_parent}
+			</div>
+			<div class="col-md-4" >
+				{$parent_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$parent_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END parent_fieldblock}
+	{BEGIN svm_fieldblock}		
+	<div class="container {$fielddispclass_svm}" data-fieldname="svm">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items svm}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_svm}
+			</div>
+			<div class="col-md-4" >
+				{$svm_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$svm_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END svm_fieldblock}
+	{BEGIN document_fieldblock}		
+	<div class="container {$fielddispclass_document}" data-fieldname="document">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label items document}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_document}
+			</div>
+			<div class="col-md-4" >
+				{$document_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$document_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END document_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

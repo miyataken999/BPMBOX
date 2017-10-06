@@ -1,0 +1,323 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel APP_MESSAGE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_MSG_UID_fieldheadercolumn}
+			<th class="{$APP_MSG_UID_class}" {$APP_MSG_UID_style}  data-field="APP_MSG_UID">
+				{$label APP_MESSAGE APP_MSG_UID}
+			</th>
+			{END APP_MSG_UID_fieldheadercolumn}
+			{BEGIN MSG_UID_fieldheadercolumn}
+			<th class="{$MSG_UID_class}" {$MSG_UID_style}  data-field="MSG_UID">
+				{$label APP_MESSAGE MSG_UID}
+			</th>
+			{END MSG_UID_fieldheadercolumn}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label APP_MESSAGE APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN DEL_INDEX_fieldheadercolumn}
+			<th class="{$DEL_INDEX_class}" {$DEL_INDEX_style}  data-field="DEL_INDEX">
+				{$label APP_MESSAGE DEL_INDEX}
+			</th>
+			{END DEL_INDEX_fieldheadercolumn}
+			{BEGIN APP_MSG_TYPE_fieldheadercolumn}
+			<th class="{$APP_MSG_TYPE_class}" {$APP_MSG_TYPE_style}  data-field="APP_MSG_TYPE">
+				{$label APP_MESSAGE APP_MSG_TYPE}
+			</th>
+			{END APP_MSG_TYPE_fieldheadercolumn}
+			{BEGIN APP_MSG_SUBJECT_fieldheadercolumn}
+			<th class="{$APP_MSG_SUBJECT_class}" {$APP_MSG_SUBJECT_style}  data-field="APP_MSG_SUBJECT">
+				{$label APP_MESSAGE APP_MSG_SUBJECT}
+			</th>
+			{END APP_MSG_SUBJECT_fieldheadercolumn}
+			{BEGIN APP_MSG_FROM_fieldheadercolumn}
+			<th class="{$APP_MSG_FROM_class}" {$APP_MSG_FROM_style}  data-field="APP_MSG_FROM">
+				{$label APP_MESSAGE APP_MSG_FROM}
+			</th>
+			{END APP_MSG_FROM_fieldheadercolumn}
+			{BEGIN APP_MSG_TO_fieldheadercolumn}
+			<th class="{$APP_MSG_TO_class}" {$APP_MSG_TO_style}  data-field="APP_MSG_TO">
+				{$label APP_MESSAGE APP_MSG_TO}
+			</th>
+			{END APP_MSG_TO_fieldheadercolumn}
+			{BEGIN APP_MSG_BODY_fieldheadercolumn}
+			<th class="{$APP_MSG_BODY_class}" {$APP_MSG_BODY_style}  data-field="APP_MSG_BODY">
+				{$label APP_MESSAGE APP_MSG_BODY}
+			</th>
+			{END APP_MSG_BODY_fieldheadercolumn}
+			{BEGIN APP_MSG_DATE_fieldheadercolumn}
+			<th class="{$APP_MSG_DATE_class}" {$APP_MSG_DATE_style}  data-field="APP_MSG_DATE">
+				{$label APP_MESSAGE APP_MSG_DATE}
+			</th>
+			{END APP_MSG_DATE_fieldheadercolumn}
+			{BEGIN APP_MSG_CC_fieldheadercolumn}
+			<th class="{$APP_MSG_CC_class}" {$APP_MSG_CC_style}  data-field="APP_MSG_CC">
+				{$label APP_MESSAGE APP_MSG_CC}
+			</th>
+			{END APP_MSG_CC_fieldheadercolumn}
+			{BEGIN APP_MSG_BCC_fieldheadercolumn}
+			<th class="{$APP_MSG_BCC_class}" {$APP_MSG_BCC_style}  data-field="APP_MSG_BCC">
+				{$label APP_MESSAGE APP_MSG_BCC}
+			</th>
+			{END APP_MSG_BCC_fieldheadercolumn}
+			{BEGIN APP_MSG_TEMPLATE_fieldheadercolumn}
+			<th class="{$APP_MSG_TEMPLATE_class}" {$APP_MSG_TEMPLATE_style}  data-field="APP_MSG_TEMPLATE">
+				{$label APP_MESSAGE APP_MSG_TEMPLATE}
+			</th>
+			{END APP_MSG_TEMPLATE_fieldheadercolumn}
+			{BEGIN APP_MSG_STATUS_fieldheadercolumn}
+			<th class="{$APP_MSG_STATUS_class}" {$APP_MSG_STATUS_style}  data-field="APP_MSG_STATUS">
+				{$label APP_MESSAGE APP_MSG_STATUS}
+			</th>
+			{END APP_MSG_STATUS_fieldheadercolumn}
+			{BEGIN APP_MSG_ATTACH_fieldheadercolumn}
+			<th class="{$APP_MSG_ATTACH_class}" {$APP_MSG_ATTACH_style}  data-field="APP_MSG_ATTACH">
+				{$label APP_MESSAGE APP_MSG_ATTACH}
+			</th>
+			{END APP_MSG_ATTACH_fieldheadercolumn}
+			{BEGIN APP_MSG_SEND_DATE_fieldheadercolumn}
+			<th class="{$APP_MSG_SEND_DATE_class}" {$APP_MSG_SEND_DATE_style}  data-field="APP_MSG_SEND_DATE">
+				{$label APP_MESSAGE APP_MSG_SEND_DATE}
+			</th>
+			{END APP_MSG_SEND_DATE_fieldheadercolumn}
+			{BEGIN APP_MSG_SHOW_MESSAGE_fieldheadercolumn}
+			<th class="{$APP_MSG_SHOW_MESSAGE_class}" {$APP_MSG_SHOW_MESSAGE_style}  data-field="APP_MSG_SHOW_MESSAGE">
+				{$label APP_MESSAGE APP_MSG_SHOW_MESSAGE}
+			</th>
+			{END APP_MSG_SHOW_MESSAGE_fieldheadercolumn}
+			{BEGIN APP_MSG_ERROR_fieldheadercolumn}
+			<th class="{$APP_MSG_ERROR_class}" {$APP_MSG_ERROR_style}  data-field="APP_MSG_ERROR">
+				{$label APP_MESSAGE APP_MSG_ERROR}
+			</th>
+			{END APP_MSG_ERROR_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_MSG_UID_fieldcolumn}
+			<td  class="{$APP_MSG_UID_class}" {$APP_MSG_UID_style} {$recordattrs}>
+				{$APP_MSG_UID_value}
+			</td>
+			{END APP_MSG_UID_fieldcolumn}
+			{BEGIN MSG_UID_fieldcolumn}
+			<td  class="{$MSG_UID_class}" {$MSG_UID_style} {$recordattrs}>
+				{$MSG_UID_value}
+			</td>
+			{END MSG_UID_fieldcolumn}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN DEL_INDEX_fieldcolumn}
+			<td  class="{$DEL_INDEX_class}" {$DEL_INDEX_style} {$recordattrs}>
+				{$DEL_INDEX_value}
+			</td>
+			{END DEL_INDEX_fieldcolumn}
+			{BEGIN APP_MSG_TYPE_fieldcolumn}
+			<td  class="{$APP_MSG_TYPE_class}" {$APP_MSG_TYPE_style} {$recordattrs}>
+				{$APP_MSG_TYPE_value}
+			</td>
+			{END APP_MSG_TYPE_fieldcolumn}
+			{BEGIN APP_MSG_SUBJECT_fieldcolumn}
+			<td  class="{$APP_MSG_SUBJECT_class}" {$APP_MSG_SUBJECT_style} {$recordattrs}>
+				{$APP_MSG_SUBJECT_value}
+			</td>
+			{END APP_MSG_SUBJECT_fieldcolumn}
+			{BEGIN APP_MSG_FROM_fieldcolumn}
+			<td  class="{$APP_MSG_FROM_class}" {$APP_MSG_FROM_style} {$recordattrs}>
+				{$APP_MSG_FROM_value}
+			</td>
+			{END APP_MSG_FROM_fieldcolumn}
+			{BEGIN APP_MSG_TO_fieldcolumn}
+			<td  class="{$APP_MSG_TO_class}" {$APP_MSG_TO_style} {$recordattrs}>
+				{$APP_MSG_TO_value}
+			</td>
+			{END APP_MSG_TO_fieldcolumn}
+			{BEGIN APP_MSG_BODY_fieldcolumn}
+			<td  class="{$APP_MSG_BODY_class}" {$APP_MSG_BODY_style} {$recordattrs}>
+				{$APP_MSG_BODY_value}
+			</td>
+			{END APP_MSG_BODY_fieldcolumn}
+			{BEGIN APP_MSG_DATE_fieldcolumn}
+			<td  class="{$APP_MSG_DATE_class}" {$APP_MSG_DATE_style} {$recordattrs}>
+				{$APP_MSG_DATE_value}
+			</td>
+			{END APP_MSG_DATE_fieldcolumn}
+			{BEGIN APP_MSG_CC_fieldcolumn}
+			<td  class="{$APP_MSG_CC_class}" {$APP_MSG_CC_style} {$recordattrs}>
+				{$APP_MSG_CC_value}
+			</td>
+			{END APP_MSG_CC_fieldcolumn}
+			{BEGIN APP_MSG_BCC_fieldcolumn}
+			<td  class="{$APP_MSG_BCC_class}" {$APP_MSG_BCC_style} {$recordattrs}>
+				{$APP_MSG_BCC_value}
+			</td>
+			{END APP_MSG_BCC_fieldcolumn}
+			{BEGIN APP_MSG_TEMPLATE_fieldcolumn}
+			<td  class="{$APP_MSG_TEMPLATE_class}" {$APP_MSG_TEMPLATE_style} {$recordattrs}>
+				{$APP_MSG_TEMPLATE_value}
+			</td>
+			{END APP_MSG_TEMPLATE_fieldcolumn}
+			{BEGIN APP_MSG_STATUS_fieldcolumn}
+			<td  class="{$APP_MSG_STATUS_class}" {$APP_MSG_STATUS_style} {$recordattrs}>
+				{$APP_MSG_STATUS_value}
+			</td>
+			{END APP_MSG_STATUS_fieldcolumn}
+			{BEGIN APP_MSG_ATTACH_fieldcolumn}
+			<td  class="{$APP_MSG_ATTACH_class}" {$APP_MSG_ATTACH_style} {$recordattrs}>
+				{$APP_MSG_ATTACH_value}
+			</td>
+			{END APP_MSG_ATTACH_fieldcolumn}
+			{BEGIN APP_MSG_SEND_DATE_fieldcolumn}
+			<td  class="{$APP_MSG_SEND_DATE_class}" {$APP_MSG_SEND_DATE_style} {$recordattrs}>
+				{$APP_MSG_SEND_DATE_value}
+			</td>
+			{END APP_MSG_SEND_DATE_fieldcolumn}
+			{BEGIN APP_MSG_SHOW_MESSAGE_fieldcolumn}
+			<td  class="{$APP_MSG_SHOW_MESSAGE_class}" {$APP_MSG_SHOW_MESSAGE_style} {$recordattrs}>
+				{$APP_MSG_SHOW_MESSAGE_value}
+			</td>
+			{END APP_MSG_SHOW_MESSAGE_fieldcolumn}
+			{BEGIN APP_MSG_ERROR_fieldcolumn}
+			<td  class="{$APP_MSG_ERROR_class}" {$APP_MSG_ERROR_style} {$recordattrs}>
+				{$APP_MSG_ERROR_value}
+			</td>
+			{END APP_MSG_ERROR_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

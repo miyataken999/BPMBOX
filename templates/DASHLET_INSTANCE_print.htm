@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel DASHLET_INSTANCE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN DAS_INS_UID_fieldheadercolumn}
+			<th class="{$DAS_INS_UID_class}" {$DAS_INS_UID_style}  data-field="DAS_INS_UID">
+				{$label DASHLET_INSTANCE DAS_INS_UID}
+			</th>
+			{END DAS_INS_UID_fieldheadercolumn}
+			{BEGIN DAS_UID_fieldheadercolumn}
+			<th class="{$DAS_UID_class}" {$DAS_UID_style}  data-field="DAS_UID">
+				{$label DASHLET_INSTANCE DAS_UID}
+			</th>
+			{END DAS_UID_fieldheadercolumn}
+			{BEGIN DAS_INS_OWNER_TYPE_fieldheadercolumn}
+			<th class="{$DAS_INS_OWNER_TYPE_class}" {$DAS_INS_OWNER_TYPE_style}  data-field="DAS_INS_OWNER_TYPE">
+				{$label DASHLET_INSTANCE DAS_INS_OWNER_TYPE}
+			</th>
+			{END DAS_INS_OWNER_TYPE_fieldheadercolumn}
+			{BEGIN DAS_INS_OWNER_UID_fieldheadercolumn}
+			<th class="{$DAS_INS_OWNER_UID_class}" {$DAS_INS_OWNER_UID_style}  data-field="DAS_INS_OWNER_UID">
+				{$label DASHLET_INSTANCE DAS_INS_OWNER_UID}
+			</th>
+			{END DAS_INS_OWNER_UID_fieldheadercolumn}
+			{BEGIN DAS_INS_ADDITIONAL_PROPERTIES_fieldheadercolumn}
+			<th class="{$DAS_INS_ADDITIONAL_PROPERTIES_class}" {$DAS_INS_ADDITIONAL_PROPERTIES_style}  data-field="DAS_INS_ADDITIONAL_PROPERTIES">
+				{$label DASHLET_INSTANCE DAS_INS_ADDITIONAL_PROPERTIES}
+			</th>
+			{END DAS_INS_ADDITIONAL_PROPERTIES_fieldheadercolumn}
+			{BEGIN DAS_INS_CREATE_DATE_fieldheadercolumn}
+			<th class="{$DAS_INS_CREATE_DATE_class}" {$DAS_INS_CREATE_DATE_style}  data-field="DAS_INS_CREATE_DATE">
+				{$label DASHLET_INSTANCE DAS_INS_CREATE_DATE}
+			</th>
+			{END DAS_INS_CREATE_DATE_fieldheadercolumn}
+			{BEGIN DAS_INS_UPDATE_DATE_fieldheadercolumn}
+			<th class="{$DAS_INS_UPDATE_DATE_class}" {$DAS_INS_UPDATE_DATE_style}  data-field="DAS_INS_UPDATE_DATE">
+				{$label DASHLET_INSTANCE DAS_INS_UPDATE_DATE}
+			</th>
+			{END DAS_INS_UPDATE_DATE_fieldheadercolumn}
+			{BEGIN DAS_INS_STATUS_fieldheadercolumn}
+			<th class="{$DAS_INS_STATUS_class}" {$DAS_INS_STATUS_style}  data-field="DAS_INS_STATUS">
+				{$label DASHLET_INSTANCE DAS_INS_STATUS}
+			</th>
+			{END DAS_INS_STATUS_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN DAS_INS_UID_fieldcolumn}
+			<td  class="{$DAS_INS_UID_class}" {$DAS_INS_UID_style} {$recordattrs}>
+				{$DAS_INS_UID_value}
+			</td>
+			{END DAS_INS_UID_fieldcolumn}
+			{BEGIN DAS_UID_fieldcolumn}
+			<td  class="{$DAS_UID_class}" {$DAS_UID_style} {$recordattrs}>
+				{$DAS_UID_value}
+			</td>
+			{END DAS_UID_fieldcolumn}
+			{BEGIN DAS_INS_OWNER_TYPE_fieldcolumn}
+			<td  class="{$DAS_INS_OWNER_TYPE_class}" {$DAS_INS_OWNER_TYPE_style} {$recordattrs}>
+				{$DAS_INS_OWNER_TYPE_value}
+			</td>
+			{END DAS_INS_OWNER_TYPE_fieldcolumn}
+			{BEGIN DAS_INS_OWNER_UID_fieldcolumn}
+			<td  class="{$DAS_INS_OWNER_UID_class}" {$DAS_INS_OWNER_UID_style} {$recordattrs}>
+				{$DAS_INS_OWNER_UID_value}
+			</td>
+			{END DAS_INS_OWNER_UID_fieldcolumn}
+			{BEGIN DAS_INS_ADDITIONAL_PROPERTIES_fieldcolumn}
+			<td  class="{$DAS_INS_ADDITIONAL_PROPERTIES_class}" {$DAS_INS_ADDITIONAL_PROPERTIES_style} {$recordattrs}>
+				{$DAS_INS_ADDITIONAL_PROPERTIES_value}
+			</td>
+			{END DAS_INS_ADDITIONAL_PROPERTIES_fieldcolumn}
+			{BEGIN DAS_INS_CREATE_DATE_fieldcolumn}
+			<td  class="{$DAS_INS_CREATE_DATE_class}" {$DAS_INS_CREATE_DATE_style} {$recordattrs}>
+				{$DAS_INS_CREATE_DATE_value}
+			</td>
+			{END DAS_INS_CREATE_DATE_fieldcolumn}
+			{BEGIN DAS_INS_UPDATE_DATE_fieldcolumn}
+			<td  class="{$DAS_INS_UPDATE_DATE_class}" {$DAS_INS_UPDATE_DATE_style} {$recordattrs}>
+				{$DAS_INS_UPDATE_DATE_value}
+			</td>
+			{END DAS_INS_UPDATE_DATE_fieldcolumn}
+			{BEGIN DAS_INS_STATUS_fieldcolumn}
+			<td  class="{$DAS_INS_STATUS_class}" {$DAS_INS_STATUS_style} {$recordattrs}>
+				{$DAS_INS_STATUS_value}
+			</td>
+			{END DAS_INS_STATUS_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

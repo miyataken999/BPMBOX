@@ -1,0 +1,582 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel PMT_ECCUBE view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN APP_NUMBER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_NUMBER} bs-viewform-group" data-fieldname="APP_NUMBER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_NUMBER}">
+			{$label PMT_ECCUBE APP_NUMBER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_NUMBER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_NUMBER_fieldblock}
+	{BEGIN APP_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_STATUS} bs-viewform-group" data-fieldname="APP_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_STATUS}">
+			{$label PMT_ECCUBE APP_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_STATUS_fieldblock}
+	{BEGIN APPLICATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APPLICATION} bs-viewform-group" data-fieldname="APPLICATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APPLICATION}">
+			{$label PMT_ECCUBE APPLICATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APPLICATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APPLICATION_fieldblock}
+	{BEGIN APPLICATION_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APPLICATION_LABEL} bs-viewform-group" data-fieldname="APPLICATION_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APPLICATION_LABEL}">
+			{$label PMT_ECCUBE APPLICATION_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APPLICATION_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APPLICATION_LABEL_fieldblock}
+	{BEGIN ECCTEXTAREAVAR007_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ECCTEXTAREAVAR007} bs-viewform-group" data-fieldname="ECCTEXTAREAVAR007">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ECCTEXTAREAVAR007}">
+			{$label PMT_ECCUBE ECCTEXTAREAVAR007}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ECCTEXTAREAVAR007_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ECCTEXTAREAVAR007_fieldblock}
+	{BEGIN JPN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_JPN} bs-viewform-group" data-fieldname="JPN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_JPN}">
+			{$label PMT_ECCUBE JPN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$JPN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END JPN_fieldblock}
+	{BEGIN JPN_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_JPN_LABEL} bs-viewform-group" data-fieldname="JPN_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_JPN_LABEL}">
+			{$label PMT_ECCUBE JPN_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$JPN_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END JPN_LABEL_fieldblock}
+	{BEGIN PROCESS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PROCESS} bs-viewform-group" data-fieldname="PROCESS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PROCESS}">
+			{$label PMT_ECCUBE PROCESS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PROCESS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PROCESS_fieldblock}
+	{BEGIN PROCESS_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PROCESS_LABEL} bs-viewform-group" data-fieldname="PROCESS_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PROCESS_LABEL}">
+			{$label PMT_ECCUBE PROCESS_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PROCESS_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PROCESS_LABEL_fieldblock}
+	{BEGIN DATETIMEVAR001_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DATETIMEVAR001} bs-viewform-group" data-fieldname="DATETIMEVAR001">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DATETIMEVAR001}">
+			{$label PMT_ECCUBE DATETIMEVAR001}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DATETIMEVAR001_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DATETIMEVAR001_fieldblock}
+	{BEGIN DATETIMEVAR001_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DATETIMEVAR001_LABEL} bs-viewform-group" data-fieldname="DATETIMEVAR001_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DATETIMEVAR001_LABEL}">
+			{$label PMT_ECCUBE DATETIMEVAR001_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DATETIMEVAR001_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DATETIMEVAR001_LABEL_fieldblock}
+	{BEGIN DATETIMEVAR002_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DATETIMEVAR002} bs-viewform-group" data-fieldname="DATETIMEVAR002">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DATETIMEVAR002}">
+			{$label PMT_ECCUBE DATETIMEVAR002}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DATETIMEVAR002_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DATETIMEVAR002_fieldblock}
+	{BEGIN DATETIMEVAR002_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DATETIMEVAR002_LABEL} bs-viewform-group" data-fieldname="DATETIMEVAR002_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DATETIMEVAR002_LABEL}">
+			{$label PMT_ECCUBE DATETIMEVAR002_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DATETIMEVAR002_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DATETIMEVAR002_LABEL_fieldblock}
+	{BEGIN SATEI_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_SATEI} bs-viewform-group" data-fieldname="SATEI">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_SATEI}">
+			{$label PMT_ECCUBE SATEI}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$SATEI_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END SATEI_fieldblock}
+	{BEGIN SATEI_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_SATEI_LABEL} bs-viewform-group" data-fieldname="SATEI_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_SATEI_LABEL}">
+			{$label PMT_ECCUBE SATEI_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$SATEI_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END SATEI_LABEL_fieldblock}
+	{BEGIN TEXTVAR004_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR004} bs-viewform-group" data-fieldname="TEXTVAR004">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR004}">
+			{$label PMT_ECCUBE TEXTVAR004}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR004_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR004_fieldblock}
+	{BEGIN APP_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_UID} bs-viewform-group" data-fieldname="APP_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_UID}">
+			{$label PMT_ECCUBE APP_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_UID_fieldblock}
+	{BEGIN TEXTVAR009_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR009} bs-viewform-group" data-fieldname="TEXTVAR009">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR009}">
+			{$label PMT_ECCUBE TEXTVAR009}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR009_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR009_fieldblock}
+	{BEGIN TEXTVAR009_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR009_LABEL} bs-viewform-group" data-fieldname="TEXTVAR009_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR009_LABEL}">
+			{$label PMT_ECCUBE TEXTVAR009_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR009_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR009_LABEL_fieldblock}
+	{BEGIN TEXTVAR011_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR011} bs-viewform-group" data-fieldname="TEXTVAR011">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR011}">
+			{$label PMT_ECCUBE TEXTVAR011}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR011_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR011_fieldblock}
+	{BEGIN TEXTVAR011_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR011_LABEL} bs-viewform-group" data-fieldname="TEXTVAR011_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR011_LABEL}">
+			{$label PMT_ECCUBE TEXTVAR011_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR011_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR011_LABEL_fieldblock}
+	{BEGIN TEXTVAR012_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR012} bs-viewform-group" data-fieldname="TEXTVAR012">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR012}">
+			{$label PMT_ECCUBE TEXTVAR012}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR012_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR012_fieldblock}
+	{BEGIN TEXTVAR012_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR012_LABEL} bs-viewform-group" data-fieldname="TEXTVAR012_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR012_LABEL}">
+			{$label PMT_ECCUBE TEXTVAR012_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR012_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR012_LABEL_fieldblock}
+	{BEGIN TEXTVAR013_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR013} bs-viewform-group" data-fieldname="TEXTVAR013">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR013}">
+			{$label PMT_ECCUBE TEXTVAR013}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR013_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR013_fieldblock}
+	{BEGIN TEXTVAR013_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR013_LABEL} bs-viewform-group" data-fieldname="TEXTVAR013_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR013_LABEL}">
+			{$label PMT_ECCUBE TEXTVAR013_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR013_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR013_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR003_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR003} bs-viewform-group" data-fieldname="TEXTAREAVAR003">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR003}">
+			{$label PMT_ECCUBE TEXTAREAVAR003}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR003_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR003_fieldblock}
+	{BEGIN TEXTAREAVAR003_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR003_LABEL} bs-viewform-group" data-fieldname="TEXTAREAVAR003_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR003_LABEL}">
+			{$label PMT_ECCUBE TEXTAREAVAR003_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR003_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR003_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR004_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR004} bs-viewform-group" data-fieldname="TEXTAREAVAR004">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR004}">
+			{$label PMT_ECCUBE TEXTAREAVAR004}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR004_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR004_fieldblock}
+	{BEGIN TEXTAREAVAR004_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR004_LABEL} bs-viewform-group" data-fieldname="TEXTAREAVAR004_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR004_LABEL}">
+			{$label PMT_ECCUBE TEXTAREAVAR004_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR004_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR004_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR005_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR005} bs-viewform-group" data-fieldname="TEXTAREAVAR005">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR005}">
+			{$label PMT_ECCUBE TEXTAREAVAR005}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR005_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR005_fieldblock}
+	{BEGIN TEXTAREAVAR005_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR005_LABEL} bs-viewform-group" data-fieldname="TEXTAREAVAR005_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR005_LABEL}">
+			{$label PMT_ECCUBE TEXTAREAVAR005_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR005_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR005_LABEL_fieldblock}
+	{BEGIN TEXTAREAVAR006_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR006} bs-viewform-group" data-fieldname="TEXTAREAVAR006">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR006}">
+			{$label PMT_ECCUBE TEXTAREAVAR006}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR006_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR006_fieldblock}
+	{BEGIN TEXTAREAVAR006_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTAREAVAR006_LABEL} bs-viewform-group" data-fieldname="TEXTAREAVAR006_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTAREAVAR006_LABEL}">
+			{$label PMT_ECCUBE TEXTAREAVAR006_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTAREAVAR006_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTAREAVAR006_LABEL_fieldblock}
+	{BEGIN TEXTVAR004_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXTVAR004_LABEL} bs-viewform-group" data-fieldname="TEXTVAR004_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXTVAR004_LABEL}">
+			{$label PMT_ECCUBE TEXTVAR004_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXTVAR004_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXTVAR004_LABEL_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

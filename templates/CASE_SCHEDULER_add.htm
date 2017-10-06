@@ -1,0 +1,648 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel CASE_SCHEDULER add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN SCH_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_UID}" data-fieldname="SCH_UID" data-signal-error-for="SCH_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_UID}">
+		{BEGIN SCH_UID_label}{$label CASE_SCHEDULER SCH_UID}{END SCH_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_UID">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_UID_fieldblock}
+
+			{BEGIN SCH_DEL_USER_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_DEL_USER_NAME}" data-fieldname="SCH_DEL_USER_NAME" data-signal-error-for="SCH_DEL_USER_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_DEL_USER_NAME}">
+		{BEGIN SCH_DEL_USER_NAME_label}{$label CASE_SCHEDULER SCH_DEL_USER_NAME}{END SCH_DEL_USER_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_DEL_USER_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_DEL_USER_NAME">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_DEL_USER_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_DEL_USER_NAME_fieldblock}
+
+			{BEGIN SCH_DEL_USER_PASS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_DEL_USER_PASS}" data-fieldname="SCH_DEL_USER_PASS" data-signal-error-for="SCH_DEL_USER_PASS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_DEL_USER_PASS}">
+		{BEGIN SCH_DEL_USER_PASS_label}{$label CASE_SCHEDULER SCH_DEL_USER_PASS}{END SCH_DEL_USER_PASS_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_DEL_USER_PASS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_DEL_USER_PASS">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_DEL_USER_PASS}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_DEL_USER_PASS_fieldblock}
+
+			{BEGIN SCH_DEL_USER_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_DEL_USER_UID}" data-fieldname="SCH_DEL_USER_UID" data-signal-error-for="SCH_DEL_USER_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_DEL_USER_UID}">
+		{BEGIN SCH_DEL_USER_UID_label}{$label CASE_SCHEDULER SCH_DEL_USER_UID}{END SCH_DEL_USER_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_DEL_USER_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_DEL_USER_UID">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_DEL_USER_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_DEL_USER_UID_fieldblock}
+
+			{BEGIN SCH_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_NAME}" data-fieldname="SCH_NAME" data-signal-error-for="SCH_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_NAME}">
+		{BEGIN SCH_NAME_label}{$label CASE_SCHEDULER SCH_NAME}{END SCH_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_NAME">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_NAME_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label CASE_SCHEDULER PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label CASE_SCHEDULER TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN SCH_TIME_NEXT_RUN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_TIME_NEXT_RUN}" data-fieldname="SCH_TIME_NEXT_RUN" data-signal-error-for="SCH_TIME_NEXT_RUN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_TIME_NEXT_RUN}">
+		{BEGIN SCH_TIME_NEXT_RUN_label}{$label CASE_SCHEDULER SCH_TIME_NEXT_RUN}{END SCH_TIME_NEXT_RUN_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_TIME_NEXT_RUN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_TIME_NEXT_RUN">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_TIME_NEXT_RUN}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_TIME_NEXT_RUN_fieldblock}
+
+			{BEGIN SCH_LAST_RUN_TIME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_LAST_RUN_TIME}" data-fieldname="SCH_LAST_RUN_TIME" data-signal-error-for="SCH_LAST_RUN_TIME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_LAST_RUN_TIME}">
+		{BEGIN SCH_LAST_RUN_TIME_label}{$label CASE_SCHEDULER SCH_LAST_RUN_TIME}{END SCH_LAST_RUN_TIME_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_LAST_RUN_TIME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_LAST_RUN_TIME">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_LAST_RUN_TIME}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_LAST_RUN_TIME_fieldblock}
+
+			{BEGIN SCH_STATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_STATE}" data-fieldname="SCH_STATE" data-signal-error-for="SCH_STATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_STATE}">
+		{BEGIN SCH_STATE_label}{$label CASE_SCHEDULER SCH_STATE}{END SCH_STATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_STATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_STATE">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_STATE}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_STATE_fieldblock}
+
+			{BEGIN SCH_LAST_STATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_LAST_STATE}" data-fieldname="SCH_LAST_STATE" data-signal-error-for="SCH_LAST_STATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_LAST_STATE}">
+		{BEGIN SCH_LAST_STATE_label}{$label CASE_SCHEDULER SCH_LAST_STATE}{END SCH_LAST_STATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_LAST_STATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_LAST_STATE">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_LAST_STATE}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_LAST_STATE_fieldblock}
+
+			{BEGIN USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UID}" data-fieldname="USR_UID" data-signal-error-for="USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UID}">
+		{BEGIN USR_UID_label}{$label CASE_SCHEDULER USR_UID}{END USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UID">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UID_fieldblock}
+
+			{BEGIN SCH_OPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_OPTION}" data-fieldname="SCH_OPTION" data-signal-error-for="SCH_OPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_OPTION}">
+		{BEGIN SCH_OPTION_label}{$label CASE_SCHEDULER SCH_OPTION}{END SCH_OPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_OPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_OPTION">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_OPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_OPTION_fieldblock}
+
+			{BEGIN SCH_START_TIME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_START_TIME}" data-fieldname="SCH_START_TIME" data-signal-error-for="SCH_START_TIME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_START_TIME}">
+		{BEGIN SCH_START_TIME_label}{$label CASE_SCHEDULER SCH_START_TIME}{END SCH_START_TIME_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_START_TIME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_START_TIME">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_START_TIME}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_START_TIME_fieldblock}
+
+			{BEGIN SCH_START_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_START_DATE}" data-fieldname="SCH_START_DATE" data-signal-error-for="SCH_START_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_START_DATE}">
+		{BEGIN SCH_START_DATE_label}{$label CASE_SCHEDULER SCH_START_DATE}{END SCH_START_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_START_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_START_DATE">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_START_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_START_DATE_fieldblock}
+
+			{BEGIN SCH_DAYS_PERFORM_TASK_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_DAYS_PERFORM_TASK}" data-fieldname="SCH_DAYS_PERFORM_TASK" data-signal-error-for="SCH_DAYS_PERFORM_TASK{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_DAYS_PERFORM_TASK}">
+		{BEGIN SCH_DAYS_PERFORM_TASK_label}{$label CASE_SCHEDULER SCH_DAYS_PERFORM_TASK}{END SCH_DAYS_PERFORM_TASK_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_DAYS_PERFORM_TASK_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_DAYS_PERFORM_TASK">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_DAYS_PERFORM_TASK}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_DAYS_PERFORM_TASK_fieldblock}
+
+			{BEGIN SCH_EVERY_DAYS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_EVERY_DAYS}" data-fieldname="SCH_EVERY_DAYS" data-signal-error-for="SCH_EVERY_DAYS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_EVERY_DAYS}">
+		{BEGIN SCH_EVERY_DAYS_label}{$label CASE_SCHEDULER SCH_EVERY_DAYS}{END SCH_EVERY_DAYS_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_EVERY_DAYS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_EVERY_DAYS">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_EVERY_DAYS}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_EVERY_DAYS_fieldblock}
+
+			{BEGIN SCH_WEEK_DAYS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_WEEK_DAYS}" data-fieldname="SCH_WEEK_DAYS" data-signal-error-for="SCH_WEEK_DAYS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_WEEK_DAYS}">
+		{BEGIN SCH_WEEK_DAYS_label}{$label CASE_SCHEDULER SCH_WEEK_DAYS}{END SCH_WEEK_DAYS_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_WEEK_DAYS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_WEEK_DAYS">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_WEEK_DAYS}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_WEEK_DAYS_fieldblock}
+
+			{BEGIN SCH_START_DAY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_START_DAY}" data-fieldname="SCH_START_DAY" data-signal-error-for="SCH_START_DAY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_START_DAY}">
+		{BEGIN SCH_START_DAY_label}{$label CASE_SCHEDULER SCH_START_DAY}{END SCH_START_DAY_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_START_DAY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_START_DAY">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_START_DAY}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_START_DAY_fieldblock}
+
+			{BEGIN SCH_MONTHS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_MONTHS}" data-fieldname="SCH_MONTHS" data-signal-error-for="SCH_MONTHS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_MONTHS}">
+		{BEGIN SCH_MONTHS_label}{$label CASE_SCHEDULER SCH_MONTHS}{END SCH_MONTHS_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_MONTHS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_MONTHS">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_MONTHS}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_MONTHS_fieldblock}
+
+			{BEGIN SCH_END_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_END_DATE}" data-fieldname="SCH_END_DATE" data-signal-error-for="SCH_END_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_END_DATE}">
+		{BEGIN SCH_END_DATE_label}{$label CASE_SCHEDULER SCH_END_DATE}{END SCH_END_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_END_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_END_DATE">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_END_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_END_DATE_fieldblock}
+
+			{BEGIN SCH_REPEAT_EVERY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_REPEAT_EVERY}" data-fieldname="SCH_REPEAT_EVERY" data-signal-error-for="SCH_REPEAT_EVERY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_REPEAT_EVERY}">
+		{BEGIN SCH_REPEAT_EVERY_label}{$label CASE_SCHEDULER SCH_REPEAT_EVERY}{END SCH_REPEAT_EVERY_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_REPEAT_EVERY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_REPEAT_EVERY">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_REPEAT_EVERY}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_REPEAT_EVERY_fieldblock}
+
+			{BEGIN SCH_REPEAT_UNTIL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_REPEAT_UNTIL}" data-fieldname="SCH_REPEAT_UNTIL" data-signal-error-for="SCH_REPEAT_UNTIL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_REPEAT_UNTIL}">
+		{BEGIN SCH_REPEAT_UNTIL_label}{$label CASE_SCHEDULER SCH_REPEAT_UNTIL}{END SCH_REPEAT_UNTIL_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_REPEAT_UNTIL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_REPEAT_UNTIL">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_REPEAT_UNTIL}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_REPEAT_UNTIL_fieldblock}
+
+			{BEGIN SCH_REPEAT_STOP_IF_RUNNING_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_REPEAT_STOP_IF_RUNNING}" data-fieldname="SCH_REPEAT_STOP_IF_RUNNING" data-signal-error-for="SCH_REPEAT_STOP_IF_RUNNING{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_REPEAT_STOP_IF_RUNNING}">
+		{BEGIN SCH_REPEAT_STOP_IF_RUNNING_label}{$label CASE_SCHEDULER SCH_REPEAT_STOP_IF_RUNNING}{END SCH_REPEAT_STOP_IF_RUNNING_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_REPEAT_STOP_IF_RUNNING_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_REPEAT_STOP_IF_RUNNING">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_REPEAT_STOP_IF_RUNNING}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_REPEAT_STOP_IF_RUNNING_fieldblock}
+
+			{BEGIN SCH_EXECUTION_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SCH_EXECUTION_DATE}" data-fieldname="SCH_EXECUTION_DATE" data-signal-error-for="SCH_EXECUTION_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SCH_EXECUTION_DATE}">
+		{BEGIN SCH_EXECUTION_DATE_label}{$label CASE_SCHEDULER SCH_EXECUTION_DATE}{END SCH_EXECUTION_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$SCH_EXECUTION_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SCH_EXECUTION_DATE">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER SCH_EXECUTION_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END SCH_EXECUTION_DATE_fieldblock}
+
+			{BEGIN CASE_SH_PLUGIN_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CASE_SH_PLUGIN_UID}" data-fieldname="CASE_SH_PLUGIN_UID" data-signal-error-for="CASE_SH_PLUGIN_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CASE_SH_PLUGIN_UID}">
+		{BEGIN CASE_SH_PLUGIN_UID_label}{$label CASE_SCHEDULER CASE_SH_PLUGIN_UID}{END CASE_SH_PLUGIN_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$CASE_SH_PLUGIN_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CASE_SH_PLUGIN_UID">
+		<div class="text-muted" >
+		{$tooltip CASE_SCHEDULER CASE_SH_PLUGIN_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END CASE_SH_PLUGIN_UID_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

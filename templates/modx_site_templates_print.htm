@@ -1,0 +1,243 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel modx_site_templates print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN id_fieldheadercolumn}
+			<th class="{$id_class}" {$id_style}  data-field="id">
+				{$label modx_site_templates id}
+			</th>
+			{END id_fieldheadercolumn}
+			{BEGIN templatename_fieldheadercolumn}
+			<th class="{$templatename_class}" {$templatename_style}  data-field="templatename">
+				{$label modx_site_templates templatename}
+			</th>
+			{END templatename_fieldheadercolumn}
+			{BEGIN description_fieldheadercolumn}
+			<th class="{$description_class}" {$description_style}  data-field="description">
+				{$label modx_site_templates description}
+			</th>
+			{END description_fieldheadercolumn}
+			{BEGIN editor_type_fieldheadercolumn}
+			<th class="{$editor_type_class}" {$editor_type_style}  data-field="editor_type">
+				{$label modx_site_templates editor_type}
+			</th>
+			{END editor_type_fieldheadercolumn}
+			{BEGIN category_fieldheadercolumn}
+			<th class="{$category_class}" {$category_style}  data-field="category">
+				{$label modx_site_templates category}
+			</th>
+			{END category_fieldheadercolumn}
+			{BEGIN icon_fieldheadercolumn}
+			<th class="{$icon_class}" {$icon_style}  data-field="icon">
+				{$label modx_site_templates icon}
+			</th>
+			{END icon_fieldheadercolumn}
+			{BEGIN template_type_fieldheadercolumn}
+			<th class="{$template_type_class}" {$template_type_style}  data-field="template_type">
+				{$label modx_site_templates template_type}
+			</th>
+			{END template_type_fieldheadercolumn}
+			{BEGIN content_fieldheadercolumn}
+			<th class="{$content_class}" {$content_style}  data-field="content">
+				{$label modx_site_templates content}
+			</th>
+			{END content_fieldheadercolumn}
+			{BEGIN parent_fieldheadercolumn}
+			<th class="{$parent_class}" {$parent_style}  data-field="parent">
+				{$label modx_site_templates parent}
+			</th>
+			{END parent_fieldheadercolumn}
+			{BEGIN locked_fieldheadercolumn}
+			<th class="{$locked_class}" {$locked_style}  data-field="locked">
+				{$label modx_site_templates locked}
+			</th>
+			{END locked_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN id_fieldcolumn}
+			<td  class="{$id_class}" {$id_style} {$recordattrs}>
+				{$id_value}
+			</td>
+			{END id_fieldcolumn}
+			{BEGIN templatename_fieldcolumn}
+			<td  class="{$templatename_class}" {$templatename_style} {$recordattrs}>
+				{$templatename_value}
+			</td>
+			{END templatename_fieldcolumn}
+			{BEGIN description_fieldcolumn}
+			<td  class="{$description_class}" {$description_style} {$recordattrs}>
+				{$description_value}
+			</td>
+			{END description_fieldcolumn}
+			{BEGIN editor_type_fieldcolumn}
+			<td  class="{$editor_type_class}" {$editor_type_style} {$recordattrs}>
+				{$editor_type_value}
+			</td>
+			{END editor_type_fieldcolumn}
+			{BEGIN category_fieldcolumn}
+			<td  class="{$category_class}" {$category_style} {$recordattrs}>
+				{$category_value}
+			</td>
+			{END category_fieldcolumn}
+			{BEGIN icon_fieldcolumn}
+			<td  class="{$icon_class}" {$icon_style} {$recordattrs}>
+				{$icon_value}
+			</td>
+			{END icon_fieldcolumn}
+			{BEGIN template_type_fieldcolumn}
+			<td  class="{$template_type_class}" {$template_type_style} {$recordattrs}>
+				{$template_type_value}
+			</td>
+			{END template_type_fieldcolumn}
+			{BEGIN content_fieldcolumn}
+			<td  class="{$content_class}" {$content_style} {$recordattrs}>
+				{$content_value}
+			</td>
+			{END content_fieldcolumn}
+			{BEGIN parent_fieldcolumn}
+			<td  class="{$parent_class}" {$parent_style} {$recordattrs}>
+				{$parent_value}
+			</td>
+			{END parent_fieldcolumn}
+			{BEGIN locked_fieldcolumn}
+			<td  class="{$locked_class}" {$locked_style} {$recordattrs}>
+				{$locked_value}
+			</td>
+			{END locked_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

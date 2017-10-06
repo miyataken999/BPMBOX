@@ -1,0 +1,390 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel modx_site_htmlsnippets add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_name}" data-fieldname="name" data-signal-error-for="name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_name}">
+		{BEGIN name_label}{$label modx_site_htmlsnippets name}{END name_label}
+	</label>
+	<div class="col-md-6" >
+		{$name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="name">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets name}
+		</div>
+	</div>
+</div>
+</div>
+{END name_fieldblock}
+
+			{BEGIN description_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_description}" data-fieldname="description" data-signal-error-for="description{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_description}">
+		{BEGIN description_label}{$label modx_site_htmlsnippets description}{END description_label}
+	</label>
+	<div class="col-md-6" >
+		{$description_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="description">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets description}
+		</div>
+	</div>
+</div>
+</div>
+{END description_fieldblock}
+
+			{BEGIN published_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_published}" data-fieldname="published" data-signal-error-for="published{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_published}">
+		{BEGIN published_label}{$label modx_site_htmlsnippets published}{END published_label}
+	</label>
+	<div class="col-md-6" >
+		{$published_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="published">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets published}
+		</div>
+	</div>
+</div>
+</div>
+{END published_fieldblock}
+
+			{BEGIN pub_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pub_date}" data-fieldname="pub_date" data-signal-error-for="pub_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pub_date}">
+		{BEGIN pub_date_label}{$label modx_site_htmlsnippets pub_date}{END pub_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$pub_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pub_date">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets pub_date}
+		</div>
+	</div>
+</div>
+</div>
+{END pub_date_fieldblock}
+
+			{BEGIN unpub_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_unpub_date}" data-fieldname="unpub_date" data-signal-error-for="unpub_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_unpub_date}">
+		{BEGIN unpub_date_label}{$label modx_site_htmlsnippets unpub_date}{END unpub_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$unpub_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="unpub_date">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets unpub_date}
+		</div>
+	</div>
+</div>
+</div>
+{END unpub_date_fieldblock}
+
+			{BEGIN editor_type_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_editor_type}" data-fieldname="editor_type" data-signal-error-for="editor_type{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_editor_type}">
+		{BEGIN editor_type_label}{$label modx_site_htmlsnippets editor_type}{END editor_type_label}
+	</label>
+	<div class="col-md-6" >
+		{$editor_type_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="editor_type">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets editor_type}
+		</div>
+	</div>
+</div>
+</div>
+{END editor_type_fieldblock}
+
+			{BEGIN category_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_category}" data-fieldname="category" data-signal-error-for="category{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_category}">
+		{BEGIN category_label}{$label modx_site_htmlsnippets category}{END category_label}
+	</label>
+	<div class="col-md-6" >
+		{$category_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="category">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets category}
+		</div>
+	</div>
+</div>
+</div>
+{END category_fieldblock}
+
+			{BEGIN cache_type_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_cache_type}" data-fieldname="cache_type" data-signal-error-for="cache_type{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_cache_type}">
+		{BEGIN cache_type_label}{$label modx_site_htmlsnippets cache_type}{END cache_type_label}
+	</label>
+	<div class="col-md-6" >
+		{$cache_type_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="cache_type">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets cache_type}
+		</div>
+	</div>
+</div>
+</div>
+{END cache_type_fieldblock}
+
+			{BEGIN snippet_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_snippet}" data-fieldname="snippet" data-signal-error-for="snippet{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_snippet}">
+		{BEGIN snippet_label}{$label modx_site_htmlsnippets snippet}{END snippet_label}
+	</label>
+	<div class="col-md-6" >
+		{$snippet_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="snippet">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets snippet}
+		</div>
+	</div>
+</div>
+</div>
+{END snippet_fieldblock}
+
+			{BEGIN locked_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_locked}" data-fieldname="locked" data-signal-error-for="locked{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_locked}">
+		{BEGIN locked_label}{$label modx_site_htmlsnippets locked}{END locked_label}
+	</label>
+	<div class="col-md-6" >
+		{$locked_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="locked">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets locked}
+		</div>
+	</div>
+</div>
+</div>
+{END locked_fieldblock}
+
+			{BEGIN modx_site_content_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_modx_site_content_id}" data-fieldname="modx_site_content_id" data-signal-error-for="modx_site_content_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_modx_site_content_id}">
+		{BEGIN modx_site_content_id_label}{$label modx_site_htmlsnippets modx_site_content_id}{END modx_site_content_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$modx_site_content_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="modx_site_content_id">
+		<div class="text-muted" >
+		{$tooltip modx_site_htmlsnippets modx_site_content_id}
+		</div>
+	</div>
+</div>
+</div>
+{END modx_site_content_id_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

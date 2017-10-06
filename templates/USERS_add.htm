@@ -1,0 +1,876 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel USERS add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UID}" data-fieldname="USR_UID" data-signal-error-for="USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UID}">
+		{BEGIN USR_UID_label}{$label USERS USR_UID}{END USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UID">
+		<div class="text-muted" >
+		{$tooltip USERS USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UID_fieldblock}
+
+			{BEGIN USR_USERNAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_USERNAME}" data-fieldname="USR_USERNAME" data-signal-error-for="USR_USERNAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_USERNAME}">
+		{BEGIN USR_USERNAME_label}{$label USERS USR_USERNAME}{END USR_USERNAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_USERNAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_USERNAME">
+		<div class="text-muted" >
+		{$tooltip USERS USR_USERNAME}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_USERNAME_fieldblock}
+
+			{BEGIN USR_PASSWORD_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_PASSWORD}" data-fieldname="USR_PASSWORD" data-signal-error-for="USR_PASSWORD{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_PASSWORD}">
+		{BEGIN USR_PASSWORD_label}{$label USERS USR_PASSWORD}{END USR_PASSWORD_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_PASSWORD_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_PASSWORD">
+		<div class="text-muted" >
+		{$tooltip USERS USR_PASSWORD}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_PASSWORD_fieldblock}
+
+			{BEGIN USR_FIRSTNAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_FIRSTNAME}" data-fieldname="USR_FIRSTNAME" data-signal-error-for="USR_FIRSTNAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_FIRSTNAME}">
+		{BEGIN USR_FIRSTNAME_label}{$label USERS USR_FIRSTNAME}{END USR_FIRSTNAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_FIRSTNAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_FIRSTNAME">
+		<div class="text-muted" >
+		{$tooltip USERS USR_FIRSTNAME}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_FIRSTNAME_fieldblock}
+
+			{BEGIN USR_LASTNAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_LASTNAME}" data-fieldname="USR_LASTNAME" data-signal-error-for="USR_LASTNAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_LASTNAME}">
+		{BEGIN USR_LASTNAME_label}{$label USERS USR_LASTNAME}{END USR_LASTNAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_LASTNAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_LASTNAME">
+		<div class="text-muted" >
+		{$tooltip USERS USR_LASTNAME}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_LASTNAME_fieldblock}
+
+			{BEGIN USR_EMAIL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_EMAIL}" data-fieldname="USR_EMAIL" data-signal-error-for="USR_EMAIL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_EMAIL}">
+		{BEGIN USR_EMAIL_label}{$label USERS USR_EMAIL}{END USR_EMAIL_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_EMAIL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_EMAIL">
+		<div class="text-muted" >
+		{$tooltip USERS USR_EMAIL}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_EMAIL_fieldblock}
+
+			{BEGIN USR_DUE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_DUE_DATE}" data-fieldname="USR_DUE_DATE" data-signal-error-for="USR_DUE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_DUE_DATE}">
+		{BEGIN USR_DUE_DATE_label}{$label USERS USR_DUE_DATE}{END USR_DUE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_DUE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_DUE_DATE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_DUE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_DUE_DATE_fieldblock}
+
+			{BEGIN USR_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_CREATE_DATE}" data-fieldname="USR_CREATE_DATE" data-signal-error-for="USR_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_CREATE_DATE}">
+		{BEGIN USR_CREATE_DATE_label}{$label USERS USR_CREATE_DATE}{END USR_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_CREATE_DATE_fieldblock}
+
+			{BEGIN USR_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UPDATE_DATE}" data-fieldname="USR_UPDATE_DATE" data-signal-error-for="USR_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UPDATE_DATE}">
+		{BEGIN USR_UPDATE_DATE_label}{$label USERS USR_UPDATE_DATE}{END USR_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UPDATE_DATE_fieldblock}
+
+			{BEGIN USR_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_STATUS}" data-fieldname="USR_STATUS" data-signal-error-for="USR_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_STATUS}">
+		{BEGIN USR_STATUS_label}{$label USERS USR_STATUS}{END USR_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_STATUS">
+		<div class="text-muted" >
+		{$tooltip USERS USR_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_STATUS_fieldblock}
+
+			{BEGIN USR_COUNTRY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_COUNTRY}" data-fieldname="USR_COUNTRY" data-signal-error-for="USR_COUNTRY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_COUNTRY}">
+		{BEGIN USR_COUNTRY_label}{$label USERS USR_COUNTRY}{END USR_COUNTRY_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_COUNTRY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_COUNTRY">
+		<div class="text-muted" >
+		{$tooltip USERS USR_COUNTRY}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_COUNTRY_fieldblock}
+
+			{BEGIN USR_CITY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_CITY}" data-fieldname="USR_CITY" data-signal-error-for="USR_CITY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_CITY}">
+		{BEGIN USR_CITY_label}{$label USERS USR_CITY}{END USR_CITY_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_CITY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_CITY">
+		<div class="text-muted" >
+		{$tooltip USERS USR_CITY}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_CITY_fieldblock}
+
+			{BEGIN USR_LOCATION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_LOCATION}" data-fieldname="USR_LOCATION" data-signal-error-for="USR_LOCATION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_LOCATION}">
+		{BEGIN USR_LOCATION_label}{$label USERS USR_LOCATION}{END USR_LOCATION_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_LOCATION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_LOCATION">
+		<div class="text-muted" >
+		{$tooltip USERS USR_LOCATION}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_LOCATION_fieldblock}
+
+			{BEGIN USR_ADDRESS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_ADDRESS}" data-fieldname="USR_ADDRESS" data-signal-error-for="USR_ADDRESS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_ADDRESS}">
+		{BEGIN USR_ADDRESS_label}{$label USERS USR_ADDRESS}{END USR_ADDRESS_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_ADDRESS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_ADDRESS">
+		<div class="text-muted" >
+		{$tooltip USERS USR_ADDRESS}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_ADDRESS_fieldblock}
+
+			{BEGIN USR_PHONE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_PHONE}" data-fieldname="USR_PHONE" data-signal-error-for="USR_PHONE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_PHONE}">
+		{BEGIN USR_PHONE_label}{$label USERS USR_PHONE}{END USR_PHONE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_PHONE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_PHONE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_PHONE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_PHONE_fieldblock}
+
+			{BEGIN USR_FAX_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_FAX}" data-fieldname="USR_FAX" data-signal-error-for="USR_FAX{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_FAX}">
+		{BEGIN USR_FAX_label}{$label USERS USR_FAX}{END USR_FAX_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_FAX_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_FAX">
+		<div class="text-muted" >
+		{$tooltip USERS USR_FAX}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_FAX_fieldblock}
+
+			{BEGIN USR_CELLULAR_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_CELLULAR}" data-fieldname="USR_CELLULAR" data-signal-error-for="USR_CELLULAR{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_CELLULAR}">
+		{BEGIN USR_CELLULAR_label}{$label USERS USR_CELLULAR}{END USR_CELLULAR_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_CELLULAR_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_CELLULAR">
+		<div class="text-muted" >
+		{$tooltip USERS USR_CELLULAR}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_CELLULAR_fieldblock}
+
+			{BEGIN USR_ZIP_CODE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_ZIP_CODE}" data-fieldname="USR_ZIP_CODE" data-signal-error-for="USR_ZIP_CODE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_ZIP_CODE}">
+		{BEGIN USR_ZIP_CODE_label}{$label USERS USR_ZIP_CODE}{END USR_ZIP_CODE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_ZIP_CODE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_ZIP_CODE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_ZIP_CODE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_ZIP_CODE_fieldblock}
+
+			{BEGIN DEP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEP_UID}" data-fieldname="DEP_UID" data-signal-error-for="DEP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEP_UID}">
+		{BEGIN DEP_UID_label}{$label USERS DEP_UID}{END DEP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEP_UID">
+		<div class="text-muted" >
+		{$tooltip USERS DEP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DEP_UID_fieldblock}
+
+			{BEGIN USR_POSITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_POSITION}" data-fieldname="USR_POSITION" data-signal-error-for="USR_POSITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_POSITION}">
+		{BEGIN USR_POSITION_label}{$label USERS USR_POSITION}{END USR_POSITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_POSITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_POSITION">
+		<div class="text-muted" >
+		{$tooltip USERS USR_POSITION}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_POSITION_fieldblock}
+
+			{BEGIN USR_RESUME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_RESUME}" data-fieldname="USR_RESUME" data-signal-error-for="USR_RESUME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_RESUME}">
+		{BEGIN USR_RESUME_label}{$label USERS USR_RESUME}{END USR_RESUME_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_RESUME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_RESUME">
+		<div class="text-muted" >
+		{$tooltip USERS USR_RESUME}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_RESUME_fieldblock}
+
+			{BEGIN USR_BIRTHDAY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_BIRTHDAY}" data-fieldname="USR_BIRTHDAY" data-signal-error-for="USR_BIRTHDAY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_BIRTHDAY}">
+		{BEGIN USR_BIRTHDAY_label}{$label USERS USR_BIRTHDAY}{END USR_BIRTHDAY_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_BIRTHDAY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_BIRTHDAY">
+		<div class="text-muted" >
+		{$tooltip USERS USR_BIRTHDAY}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_BIRTHDAY_fieldblock}
+
+			{BEGIN USR_ROLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_ROLE}" data-fieldname="USR_ROLE" data-signal-error-for="USR_ROLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_ROLE}">
+		{BEGIN USR_ROLE_label}{$label USERS USR_ROLE}{END USR_ROLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_ROLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_ROLE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_ROLE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_ROLE_fieldblock}
+
+			{BEGIN USR_REPORTS_TO_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_REPORTS_TO}" data-fieldname="USR_REPORTS_TO" data-signal-error-for="USR_REPORTS_TO{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_REPORTS_TO}">
+		{BEGIN USR_REPORTS_TO_label}{$label USERS USR_REPORTS_TO}{END USR_REPORTS_TO_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_REPORTS_TO_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_REPORTS_TO">
+		<div class="text-muted" >
+		{$tooltip USERS USR_REPORTS_TO}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_REPORTS_TO_fieldblock}
+
+			{BEGIN USR_REPLACED_BY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_REPLACED_BY}" data-fieldname="USR_REPLACED_BY" data-signal-error-for="USR_REPLACED_BY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_REPLACED_BY}">
+		{BEGIN USR_REPLACED_BY_label}{$label USERS USR_REPLACED_BY}{END USR_REPLACED_BY_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_REPLACED_BY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_REPLACED_BY">
+		<div class="text-muted" >
+		{$tooltip USERS USR_REPLACED_BY}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_REPLACED_BY_fieldblock}
+
+			{BEGIN USR_UX_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UX}" data-fieldname="USR_UX" data-signal-error-for="USR_UX{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UX}">
+		{BEGIN USR_UX_label}{$label USERS USR_UX}{END USR_UX_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UX_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UX">
+		<div class="text-muted" >
+		{$tooltip USERS USR_UX}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UX_fieldblock}
+
+			{BEGIN USR_COST_BY_HOUR_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_COST_BY_HOUR}" data-fieldname="USR_COST_BY_HOUR" data-signal-error-for="USR_COST_BY_HOUR{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_COST_BY_HOUR}">
+		{BEGIN USR_COST_BY_HOUR_label}{$label USERS USR_COST_BY_HOUR}{END USR_COST_BY_HOUR_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_COST_BY_HOUR_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_COST_BY_HOUR">
+		<div class="text-muted" >
+		{$tooltip USERS USR_COST_BY_HOUR}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_COST_BY_HOUR_fieldblock}
+
+			{BEGIN USR_UNIT_COST_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UNIT_COST}" data-fieldname="USR_UNIT_COST" data-signal-error-for="USR_UNIT_COST{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UNIT_COST}">
+		{BEGIN USR_UNIT_COST_label}{$label USERS USR_UNIT_COST}{END USR_UNIT_COST_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UNIT_COST_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UNIT_COST">
+		<div class="text-muted" >
+		{$tooltip USERS USR_UNIT_COST}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UNIT_COST_fieldblock}
+
+			{BEGIN USR_PMDRIVE_FOLDER_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_PMDRIVE_FOLDER_UID}" data-fieldname="USR_PMDRIVE_FOLDER_UID" data-signal-error-for="USR_PMDRIVE_FOLDER_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_PMDRIVE_FOLDER_UID}">
+		{BEGIN USR_PMDRIVE_FOLDER_UID_label}{$label USERS USR_PMDRIVE_FOLDER_UID}{END USR_PMDRIVE_FOLDER_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_PMDRIVE_FOLDER_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_PMDRIVE_FOLDER_UID">
+		<div class="text-muted" >
+		{$tooltip USERS USR_PMDRIVE_FOLDER_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_PMDRIVE_FOLDER_UID_fieldblock}
+
+			{BEGIN USR_BOOKMARK_START_CASES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_BOOKMARK_START_CASES}" data-fieldname="USR_BOOKMARK_START_CASES" data-signal-error-for="USR_BOOKMARK_START_CASES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_BOOKMARK_START_CASES}">
+		{BEGIN USR_BOOKMARK_START_CASES_label}{$label USERS USR_BOOKMARK_START_CASES}{END USR_BOOKMARK_START_CASES_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_BOOKMARK_START_CASES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_BOOKMARK_START_CASES">
+		<div class="text-muted" >
+		{$tooltip USERS USR_BOOKMARK_START_CASES}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_BOOKMARK_START_CASES_fieldblock}
+
+			{BEGIN USR_TIME_ZONE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_TIME_ZONE}" data-fieldname="USR_TIME_ZONE" data-signal-error-for="USR_TIME_ZONE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_TIME_ZONE}">
+		{BEGIN USR_TIME_ZONE_label}{$label USERS USR_TIME_ZONE}{END USR_TIME_ZONE_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_TIME_ZONE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_TIME_ZONE">
+		<div class="text-muted" >
+		{$tooltip USERS USR_TIME_ZONE}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_TIME_ZONE_fieldblock}
+
+			{BEGIN USR_DEFAULT_LANG_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_DEFAULT_LANG}" data-fieldname="USR_DEFAULT_LANG" data-signal-error-for="USR_DEFAULT_LANG{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_DEFAULT_LANG}">
+		{BEGIN USR_DEFAULT_LANG_label}{$label USERS USR_DEFAULT_LANG}{END USR_DEFAULT_LANG_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_DEFAULT_LANG_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_DEFAULT_LANG">
+		<div class="text-muted" >
+		{$tooltip USERS USR_DEFAULT_LANG}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_DEFAULT_LANG_fieldblock}
+
+			{BEGIN USR_LAST_LOGIN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_LAST_LOGIN}" data-fieldname="USR_LAST_LOGIN" data-signal-error-for="USR_LAST_LOGIN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_LAST_LOGIN}">
+		{BEGIN USR_LAST_LOGIN_label}{$label USERS USR_LAST_LOGIN}{END USR_LAST_LOGIN_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_LAST_LOGIN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_LAST_LOGIN">
+		<div class="text-muted" >
+		{$tooltip USERS USR_LAST_LOGIN}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_LAST_LOGIN_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_USERS_PROPERTIES}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">ユーザーのプロパティ
+		<span>
+{BEGIN details_inlineadd_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_USERS_PROPERTIES_attrs}>インライン追加</button>
+{END details_inlineadd_USERS_PROPERTIES_link}		
+{BEGIN details_add_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_USERS_PROPERTIES_attrs}>追加</button>
+{END details_add_USERS_PROPERTIES_link}
+{BEGIN details_edit_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_USERS_PROPERTIES_attrs}>編集</button>
+{END details_edit_USERS_PROPERTIES_link}
+{BEGIN details_updateselected_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_USERS_PROPERTIES_attrs}>Update selected</button>
+{END details_updateselected_USERS_PROPERTIES_link}
+
+
+{BEGIN details_delete_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_USERS_PROPERTIES_attrs}>削除</button>
+{END details_delete_USERS_PROPERTIES_link}
+
+{BEGIN saveall_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_USERS_PROPERTIES_attrs} {$savealllink_USERS_PROPERTIES_span}>全て保存</button>
+{END saveall_USERS_PROPERTIES_link}
+{BEGIN cancelall_USERS_PROPERTIES_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_USERS_PROPERTIES_attrs} {$cancelalllink_USERS_PROPERTIES_span}>キャンセル</button>
+{END cancelall_USERS_PROPERTIES_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_USERS_PROPERTIES}
+</div>
+</div>
+</div>
+{END details_USERS_PROPERTIES}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_RBAC_USERS_ROLES}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">RBACユーザーの役割
+		<span>
+{BEGIN details_inlineadd_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_RBAC_USERS_ROLES_attrs}>インライン追加</button>
+{END details_inlineadd_RBAC_USERS_ROLES_link}		
+{BEGIN details_add_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_RBAC_USERS_ROLES_attrs}>追加</button>
+{END details_add_RBAC_USERS_ROLES_link}
+{BEGIN details_edit_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_RBAC_USERS_ROLES_attrs}>編集</button>
+{END details_edit_RBAC_USERS_ROLES_link}
+{BEGIN details_updateselected_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_RBAC_USERS_ROLES_attrs}>Update selected</button>
+{END details_updateselected_RBAC_USERS_ROLES_link}
+
+
+{BEGIN details_delete_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_RBAC_USERS_ROLES_attrs}>削除</button>
+{END details_delete_RBAC_USERS_ROLES_link}
+
+{BEGIN saveall_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_RBAC_USERS_ROLES_attrs} {$savealllink_RBAC_USERS_ROLES_span}>全て保存</button>
+{END saveall_RBAC_USERS_ROLES_link}
+{BEGIN cancelall_RBAC_USERS_ROLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_RBAC_USERS_ROLES_attrs} {$cancelalllink_RBAC_USERS_ROLES_span}>キャンセル</button>
+{END cancelall_RBAC_USERS_ROLES_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_RBAC_USERS_ROLES}
+</div>
+</div>
+</div>
+{END details_RBAC_USERS_ROLES}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

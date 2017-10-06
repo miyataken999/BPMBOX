@@ -1,0 +1,260 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel SESSION search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN SES_UID_fieldblock}		
+	<div class="container {$fielddispclass_SES_UID}" data-fieldname="SES_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION SES_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SES_UID}
+			</div>
+			<div class="col-md-4" >
+				{$SES_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SES_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SES_UID_fieldblock}
+	{BEGIN SES_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_SES_STATUS}" data-fieldname="SES_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION SES_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SES_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$SES_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SES_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SES_STATUS_fieldblock}
+	{BEGIN USR_UID_fieldblock}		
+	<div class="container {$fielddispclass_USR_UID}" data-fieldname="USR_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION USR_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_UID}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_UID_fieldblock}
+	{BEGIN SES_REMOTE_IP_fieldblock}		
+	<div class="container {$fielddispclass_SES_REMOTE_IP}" data-fieldname="SES_REMOTE_IP">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION SES_REMOTE_IP}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SES_REMOTE_IP}
+			</div>
+			<div class="col-md-4" >
+				{$SES_REMOTE_IP_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SES_REMOTE_IP_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SES_REMOTE_IP_fieldblock}
+	{BEGIN SES_INIT_DATE_fieldblock}		
+	<div class="container {$fielddispclass_SES_INIT_DATE}" data-fieldname="SES_INIT_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION SES_INIT_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SES_INIT_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$SES_INIT_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SES_INIT_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SES_INIT_DATE_fieldblock}
+	{BEGIN SES_DUE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_SES_DUE_DATE}" data-fieldname="SES_DUE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION SES_DUE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SES_DUE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$SES_DUE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SES_DUE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SES_DUE_DATE_fieldblock}
+	{BEGIN SES_END_DATE_fieldblock}		
+	<div class="container {$fielddispclass_SES_END_DATE}" data-fieldname="SES_END_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label SESSION SES_END_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SES_END_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$SES_END_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SES_END_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SES_END_DATE_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

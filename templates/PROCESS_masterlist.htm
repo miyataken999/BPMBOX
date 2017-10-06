@@ -1,0 +1,235 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel PROCESS masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label PROCESS PRO_UID}";
+	}
+	.bs-gridcell[data-field=PRO_TITLE]:before {
+		content: "{$label PROCESS PRO_TITLE}";
+	}
+	.bs-gridcell[data-field=PRO_DESCRIPTION]:before {
+		content: "{$label PROCESS PRO_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=PRO_PARENT]:before {
+		content: "{$label PROCESS PRO_PARENT}";
+	}
+	.bs-gridcell[data-field=PRO_TIME]:before {
+		content: "{$label PROCESS PRO_TIME}";
+	}
+	.bs-gridcell[data-field=PRO_TIMEUNIT]:before {
+		content: "{$label PROCESS PRO_TIMEUNIT}";
+	}
+	.bs-gridcell[data-field=PRO_STATUS]:before {
+		content: "{$label PROCESS PRO_STATUS}";
+	}
+	.bs-gridcell[data-field=PRO_TYPE_DAY]:before {
+		content: "{$label PROCESS PRO_TYPE_DAY}";
+	}
+	.bs-gridcell[data-field=PRO_TYPE]:before {
+		content: "{$label PROCESS PRO_TYPE}";
+	}
+	.bs-gridcell[data-field=PRO_ASSIGNMENT]:before {
+		content: "{$label PROCESS PRO_ASSIGNMENT}";
+	}
+	.bs-gridcell[data-field=PRO_SHOW_MAP]:before {
+		content: "{$label PROCESS PRO_SHOW_MAP}";
+	}
+	.bs-gridcell[data-field=PRO_SHOW_MESSAGE]:before {
+		content: "{$label PROCESS PRO_SHOW_MESSAGE}";
+	}
+	.bs-gridcell[data-field=PRO_SUBPROCESS]:before {
+		content: "{$label PROCESS PRO_SUBPROCESS}";
+	}
+	.bs-gridcell[data-field=PRO_TRI_OPEN]:before {
+		content: "{$label PROCESS PRO_TRI_OPEN}";
+	}
+	.bs-gridcell[data-field=PRO_TRI_DELETED]:before {
+		content: "{$label PROCESS PRO_TRI_DELETED}";
+	}
+	.bs-gridcell[data-field=PRO_TRI_CANCELED]:before {
+		content: "{$label PROCESS PRO_TRI_CANCELED}";
+	}
+	.bs-gridcell[data-field=PRO_TRI_PAUSED]:before {
+		content: "{$label PROCESS PRO_TRI_PAUSED}";
+	}
+	.bs-gridcell[data-field=PRO_TRI_REASSIGNED]:before {
+		content: "{$label PROCESS PRO_TRI_REASSIGNED}";
+	}
+	.bs-gridcell[data-field=PRO_TRI_UNPAUSED]:before {
+		content: "{$label PROCESS PRO_TRI_UNPAUSED}";
+	}
+	.bs-gridcell[data-field=PRO_TYPE_PROCESS]:before {
+		content: "{$label PROCESS PRO_TYPE_PROCESS}";
+	}
+	.bs-gridcell[data-field=PRO_SHOW_DELEGATE]:before {
+		content: "{$label PROCESS PRO_SHOW_DELEGATE}";
+	}
+	.bs-gridcell[data-field=PRO_SHOW_DYNAFORM]:before {
+		content: "{$label PROCESS PRO_SHOW_DYNAFORM}";
+	}
+	.bs-gridcell[data-field=PRO_CATEGORY]:before {
+		content: "{$label PROCESS PRO_CATEGORY}";
+	}
+	.bs-gridcell[data-field=PRO_SUB_CATEGORY]:before {
+		content: "{$label PROCESS PRO_SUB_CATEGORY}";
+	}
+	.bs-gridcell[data-field=PRO_INDUSTRY]:before {
+		content: "{$label PROCESS PRO_INDUSTRY}";
+	}
+	.bs-gridcell[data-field=PRO_UPDATE_DATE]:before {
+		content: "{$label PROCESS PRO_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=PRO_CREATE_DATE]:before {
+		content: "{$label PROCESS PRO_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=PRO_CREATE_USER]:before {
+		content: "{$label PROCESS PRO_CREATE_USER}";
+	}
+	.bs-gridcell[data-field=PRO_HEIGHT]:before {
+		content: "{$label PROCESS PRO_HEIGHT}";
+	}
+	.bs-gridcell[data-field=PRO_WIDTH]:before {
+		content: "{$label PROCESS PRO_WIDTH}";
+	}
+	.bs-gridcell[data-field=PRO_TITLE_X]:before {
+		content: "{$label PROCESS PRO_TITLE_X}";
+	}
+	.bs-gridcell[data-field=PRO_TITLE_Y]:before {
+		content: "{$label PROCESS PRO_TITLE_Y}";
+	}
+	.bs-gridcell[data-field=PRO_DEBUG]:before {
+		content: "{$label PROCESS PRO_DEBUG}";
+	}
+	.bs-gridcell[data-field=PRO_DYNAFORMS]:before {
+		content: "{$label PROCESS PRO_DYNAFORMS}";
+	}
+	.bs-gridcell[data-field=PRO_DERIVATION_SCREEN_TPL]:before {
+		content: "{$label PROCESS PRO_DERIVATION_SCREEN_TPL}";
+	}
+	.bs-gridcell[data-field=PRO_COST]:before {
+		content: "{$label PROCESS PRO_COST}";
+	}
+	.bs-gridcell[data-field=PRO_UNIT_COST]:before {
+		content: "{$label PROCESS PRO_UNIT_COST}";
+	}
+	.bs-gridcell[data-field=PRO_ITEE]:before {
+		content: "{$label PROCESS PRO_ITEE}";
+	}
+	.bs-gridcell[data-field=PRO_ACTION_DONE]:before {
+		content: "{$label PROCESS PRO_ACTION_DONE}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$PRO_UID_class}">{$label PROCESS PRO_UID}</th>
+			<th class="{$PRO_TITLE_class}">{$label PROCESS PRO_TITLE}</th>
+			<th class="{$PRO_DESCRIPTION_class}">{$label PROCESS PRO_DESCRIPTION}</th>
+			<th class="{$PRO_PARENT_class}">{$label PROCESS PRO_PARENT}</th>
+			<th class="{$PRO_TIME_class}">{$label PROCESS PRO_TIME}</th>
+			<th class="{$PRO_TIMEUNIT_class}">{$label PROCESS PRO_TIMEUNIT}</th>
+			<th class="{$PRO_STATUS_class}">{$label PROCESS PRO_STATUS}</th>
+			<th class="{$PRO_TYPE_DAY_class}">{$label PROCESS PRO_TYPE_DAY}</th>
+			<th class="{$PRO_TYPE_class}">{$label PROCESS PRO_TYPE}</th>
+			<th class="{$PRO_ASSIGNMENT_class}">{$label PROCESS PRO_ASSIGNMENT}</th>
+			<th class="{$PRO_SHOW_MAP_class}">{$label PROCESS PRO_SHOW_MAP}</th>
+			<th class="{$PRO_SHOW_MESSAGE_class}">{$label PROCESS PRO_SHOW_MESSAGE}</th>
+			<th class="{$PRO_SUBPROCESS_class}">{$label PROCESS PRO_SUBPROCESS}</th>
+			<th class="{$PRO_TRI_OPEN_class}">{$label PROCESS PRO_TRI_OPEN}</th>
+			<th class="{$PRO_TRI_DELETED_class}">{$label PROCESS PRO_TRI_DELETED}</th>
+			<th class="{$PRO_TRI_CANCELED_class}">{$label PROCESS PRO_TRI_CANCELED}</th>
+			<th class="{$PRO_TRI_PAUSED_class}">{$label PROCESS PRO_TRI_PAUSED}</th>
+			<th class="{$PRO_TRI_REASSIGNED_class}">{$label PROCESS PRO_TRI_REASSIGNED}</th>
+			<th class="{$PRO_TRI_UNPAUSED_class}">{$label PROCESS PRO_TRI_UNPAUSED}</th>
+			<th class="{$PRO_TYPE_PROCESS_class}">{$label PROCESS PRO_TYPE_PROCESS}</th>
+			<th class="{$PRO_SHOW_DELEGATE_class}">{$label PROCESS PRO_SHOW_DELEGATE}</th>
+			<th class="{$PRO_SHOW_DYNAFORM_class}">{$label PROCESS PRO_SHOW_DYNAFORM}</th>
+			<th class="{$PRO_CATEGORY_class}">{$label PROCESS PRO_CATEGORY}</th>
+			<th class="{$PRO_SUB_CATEGORY_class}">{$label PROCESS PRO_SUB_CATEGORY}</th>
+			<th class="{$PRO_INDUSTRY_class}">{$label PROCESS PRO_INDUSTRY}</th>
+			<th class="{$PRO_UPDATE_DATE_class}">{$label PROCESS PRO_UPDATE_DATE}</th>
+			<th class="{$PRO_CREATE_DATE_class}">{$label PROCESS PRO_CREATE_DATE}</th>
+			<th class="{$PRO_CREATE_USER_class}">{$label PROCESS PRO_CREATE_USER}</th>
+			<th class="{$PRO_HEIGHT_class}">{$label PROCESS PRO_HEIGHT}</th>
+			<th class="{$PRO_WIDTH_class}">{$label PROCESS PRO_WIDTH}</th>
+			<th class="{$PRO_TITLE_X_class}">{$label PROCESS PRO_TITLE_X}</th>
+			<th class="{$PRO_TITLE_Y_class}">{$label PROCESS PRO_TITLE_Y}</th>
+			<th class="{$PRO_DEBUG_class}">{$label PROCESS PRO_DEBUG}</th>
+			<th class="{$PRO_DYNAFORMS_class}">{$label PROCESS PRO_DYNAFORMS}</th>
+			<th class="{$PRO_DERIVATION_SCREEN_TPL_class}">{$label PROCESS PRO_DERIVATION_SCREEN_TPL}</th>
+			<th class="{$PRO_COST_class}">{$label PROCESS PRO_COST}</th>
+			<th class="{$PRO_UNIT_COST_class}">{$label PROCESS PRO_UNIT_COST}</th>
+			<th class="{$PRO_ITEE_class}">{$label PROCESS PRO_ITEE}</th>
+			<th class="{$PRO_ACTION_DONE_class}">{$label PROCESS PRO_ACTION_DONE}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$PRO_TITLE_class} bs-gridcell" data-field=PRO_TITLE>{$PRO_TITLE_mastervalue}</td>
+			<td class="{$PRO_DESCRIPTION_class} bs-gridcell" data-field=PRO_DESCRIPTION>{$PRO_DESCRIPTION_mastervalue}</td>
+			<td class="{$PRO_PARENT_class} bs-gridcell" data-field=PRO_PARENT>{$PRO_PARENT_mastervalue}</td>
+			<td class="{$PRO_TIME_class} bs-gridcell" data-field=PRO_TIME>{$PRO_TIME_mastervalue}</td>
+			<td class="{$PRO_TIMEUNIT_class} bs-gridcell" data-field=PRO_TIMEUNIT>{$PRO_TIMEUNIT_mastervalue}</td>
+			<td class="{$PRO_STATUS_class} bs-gridcell" data-field=PRO_STATUS>{$PRO_STATUS_mastervalue}</td>
+			<td class="{$PRO_TYPE_DAY_class} bs-gridcell" data-field=PRO_TYPE_DAY>{$PRO_TYPE_DAY_mastervalue}</td>
+			<td class="{$PRO_TYPE_class} bs-gridcell" data-field=PRO_TYPE>{$PRO_TYPE_mastervalue}</td>
+			<td class="{$PRO_ASSIGNMENT_class} bs-gridcell" data-field=PRO_ASSIGNMENT>{$PRO_ASSIGNMENT_mastervalue}</td>
+			<td class="{$PRO_SHOW_MAP_class} bs-gridcell" data-field=PRO_SHOW_MAP>{$PRO_SHOW_MAP_mastervalue}</td>
+			<td class="{$PRO_SHOW_MESSAGE_class} bs-gridcell" data-field=PRO_SHOW_MESSAGE>{$PRO_SHOW_MESSAGE_mastervalue}</td>
+			<td class="{$PRO_SUBPROCESS_class} bs-gridcell" data-field=PRO_SUBPROCESS>{$PRO_SUBPROCESS_mastervalue}</td>
+			<td class="{$PRO_TRI_OPEN_class} bs-gridcell" data-field=PRO_TRI_OPEN>{$PRO_TRI_OPEN_mastervalue}</td>
+			<td class="{$PRO_TRI_DELETED_class} bs-gridcell" data-field=PRO_TRI_DELETED>{$PRO_TRI_DELETED_mastervalue}</td>
+			<td class="{$PRO_TRI_CANCELED_class} bs-gridcell" data-field=PRO_TRI_CANCELED>{$PRO_TRI_CANCELED_mastervalue}</td>
+			<td class="{$PRO_TRI_PAUSED_class} bs-gridcell" data-field=PRO_TRI_PAUSED>{$PRO_TRI_PAUSED_mastervalue}</td>
+			<td class="{$PRO_TRI_REASSIGNED_class} bs-gridcell" data-field=PRO_TRI_REASSIGNED>{$PRO_TRI_REASSIGNED_mastervalue}</td>
+			<td class="{$PRO_TRI_UNPAUSED_class} bs-gridcell" data-field=PRO_TRI_UNPAUSED>{$PRO_TRI_UNPAUSED_mastervalue}</td>
+			<td class="{$PRO_TYPE_PROCESS_class} bs-gridcell" data-field=PRO_TYPE_PROCESS>{$PRO_TYPE_PROCESS_mastervalue}</td>
+			<td class="{$PRO_SHOW_DELEGATE_class} bs-gridcell" data-field=PRO_SHOW_DELEGATE>{$PRO_SHOW_DELEGATE_mastervalue}</td>
+			<td class="{$PRO_SHOW_DYNAFORM_class} bs-gridcell" data-field=PRO_SHOW_DYNAFORM>{$PRO_SHOW_DYNAFORM_mastervalue}</td>
+			<td class="{$PRO_CATEGORY_class} bs-gridcell" data-field=PRO_CATEGORY>{$PRO_CATEGORY_mastervalue}</td>
+			<td class="{$PRO_SUB_CATEGORY_class} bs-gridcell" data-field=PRO_SUB_CATEGORY>{$PRO_SUB_CATEGORY_mastervalue}</td>
+			<td class="{$PRO_INDUSTRY_class} bs-gridcell" data-field=PRO_INDUSTRY>{$PRO_INDUSTRY_mastervalue}</td>
+			<td class="{$PRO_UPDATE_DATE_class} bs-gridcell" data-field=PRO_UPDATE_DATE>{$PRO_UPDATE_DATE_mastervalue}</td>
+			<td class="{$PRO_CREATE_DATE_class} bs-gridcell" data-field=PRO_CREATE_DATE>{$PRO_CREATE_DATE_mastervalue}</td>
+			<td class="{$PRO_CREATE_USER_class} bs-gridcell" data-field=PRO_CREATE_USER>{$PRO_CREATE_USER_mastervalue}</td>
+			<td class="{$PRO_HEIGHT_class} bs-gridcell" data-field=PRO_HEIGHT>{$PRO_HEIGHT_mastervalue}</td>
+			<td class="{$PRO_WIDTH_class} bs-gridcell" data-field=PRO_WIDTH>{$PRO_WIDTH_mastervalue}</td>
+			<td class="{$PRO_TITLE_X_class} bs-gridcell" data-field=PRO_TITLE_X>{$PRO_TITLE_X_mastervalue}</td>
+			<td class="{$PRO_TITLE_Y_class} bs-gridcell" data-field=PRO_TITLE_Y>{$PRO_TITLE_Y_mastervalue}</td>
+			<td class="{$PRO_DEBUG_class} bs-gridcell" data-field=PRO_DEBUG>{$PRO_DEBUG_mastervalue}</td>
+			<td class="{$PRO_DYNAFORMS_class} bs-gridcell" data-field=PRO_DYNAFORMS>{$PRO_DYNAFORMS_mastervalue}</td>
+			<td class="{$PRO_DERIVATION_SCREEN_TPL_class} bs-gridcell" data-field=PRO_DERIVATION_SCREEN_TPL>{$PRO_DERIVATION_SCREEN_TPL_mastervalue}</td>
+			<td class="{$PRO_COST_class} bs-gridcell" data-field=PRO_COST>{$PRO_COST_mastervalue}</td>
+			<td class="{$PRO_UNIT_COST_class} bs-gridcell" data-field=PRO_UNIT_COST>{$PRO_UNIT_COST_mastervalue}</td>
+			<td class="{$PRO_ITEE_class} bs-gridcell" data-field=PRO_ITEE>{$PRO_ITEE_mastervalue}</td>
+			<td class="{$PRO_ACTION_DONE_class} bs-gridcell" data-field=PRO_ACTION_DONE>{$PRO_ACTION_DONE_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,432 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel TIMER_EVENT add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN TMREVN_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_UID}" data-fieldname="TMREVN_UID" data-signal-error-for="TMREVN_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_UID}">
+		{BEGIN TMREVN_UID_label}{$label TIMER_EVENT TMREVN_UID}{END TMREVN_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_UID">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_UID_fieldblock}
+
+			{BEGIN PRJ_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID" data-signal-error-for="PRJ_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_UID}">
+		{BEGIN PRJ_UID_label}{$label TIMER_EVENT PRJ_UID}{END PRJ_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_UID">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT PRJ_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_UID_fieldblock}
+
+			{BEGIN EVN_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_EVN_UID}" data-fieldname="EVN_UID" data-signal-error-for="EVN_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_EVN_UID}">
+		{BEGIN EVN_UID_label}{$label TIMER_EVENT EVN_UID}{END EVN_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$EVN_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="EVN_UID">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT EVN_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END EVN_UID_fieldblock}
+
+			{BEGIN TMREVN_OPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_OPTION}" data-fieldname="TMREVN_OPTION" data-signal-error-for="TMREVN_OPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_OPTION}">
+		{BEGIN TMREVN_OPTION_label}{$label TIMER_EVENT TMREVN_OPTION}{END TMREVN_OPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_OPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_OPTION">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_OPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_OPTION_fieldblock}
+
+			{BEGIN TMREVN_START_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_START_DATE}" data-fieldname="TMREVN_START_DATE" data-signal-error-for="TMREVN_START_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_START_DATE}">
+		{BEGIN TMREVN_START_DATE_label}{$label TIMER_EVENT TMREVN_START_DATE}{END TMREVN_START_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_START_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_START_DATE">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_START_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_START_DATE_fieldblock}
+
+			{BEGIN TMREVN_END_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_END_DATE}" data-fieldname="TMREVN_END_DATE" data-signal-error-for="TMREVN_END_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_END_DATE}">
+		{BEGIN TMREVN_END_DATE_label}{$label TIMER_EVENT TMREVN_END_DATE}{END TMREVN_END_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_END_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_END_DATE">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_END_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_END_DATE_fieldblock}
+
+			{BEGIN TMREVN_DAY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_DAY}" data-fieldname="TMREVN_DAY" data-signal-error-for="TMREVN_DAY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_DAY}">
+		{BEGIN TMREVN_DAY_label}{$label TIMER_EVENT TMREVN_DAY}{END TMREVN_DAY_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_DAY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_DAY">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_DAY}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_DAY_fieldblock}
+
+			{BEGIN TMREVN_HOUR_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_HOUR}" data-fieldname="TMREVN_HOUR" data-signal-error-for="TMREVN_HOUR{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_HOUR}">
+		{BEGIN TMREVN_HOUR_label}{$label TIMER_EVENT TMREVN_HOUR}{END TMREVN_HOUR_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_HOUR_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_HOUR">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_HOUR}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_HOUR_fieldblock}
+
+			{BEGIN TMREVN_MINUTE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_MINUTE}" data-fieldname="TMREVN_MINUTE" data-signal-error-for="TMREVN_MINUTE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_MINUTE}">
+		{BEGIN TMREVN_MINUTE_label}{$label TIMER_EVENT TMREVN_MINUTE}{END TMREVN_MINUTE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_MINUTE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_MINUTE">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_MINUTE}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_MINUTE_fieldblock}
+
+			{BEGIN TMREVN_CONFIGURATION_DATA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_CONFIGURATION_DATA}" data-fieldname="TMREVN_CONFIGURATION_DATA" data-signal-error-for="TMREVN_CONFIGURATION_DATA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_CONFIGURATION_DATA}">
+		{BEGIN TMREVN_CONFIGURATION_DATA_label}{$label TIMER_EVENT TMREVN_CONFIGURATION_DATA}{END TMREVN_CONFIGURATION_DATA_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_CONFIGURATION_DATA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_CONFIGURATION_DATA">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_CONFIGURATION_DATA}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_CONFIGURATION_DATA_fieldblock}
+
+			{BEGIN TMREVN_NEXT_RUN_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_NEXT_RUN_DATE}" data-fieldname="TMREVN_NEXT_RUN_DATE" data-signal-error-for="TMREVN_NEXT_RUN_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_NEXT_RUN_DATE}">
+		{BEGIN TMREVN_NEXT_RUN_DATE_label}{$label TIMER_EVENT TMREVN_NEXT_RUN_DATE}{END TMREVN_NEXT_RUN_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_NEXT_RUN_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_NEXT_RUN_DATE">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_NEXT_RUN_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_NEXT_RUN_DATE_fieldblock}
+
+			{BEGIN TMREVN_LAST_RUN_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_LAST_RUN_DATE}" data-fieldname="TMREVN_LAST_RUN_DATE" data-signal-error-for="TMREVN_LAST_RUN_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_LAST_RUN_DATE}">
+		{BEGIN TMREVN_LAST_RUN_DATE_label}{$label TIMER_EVENT TMREVN_LAST_RUN_DATE}{END TMREVN_LAST_RUN_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_LAST_RUN_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_LAST_RUN_DATE">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_LAST_RUN_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_LAST_RUN_DATE_fieldblock}
+
+			{BEGIN TMREVN_LAST_EXECUTION_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_LAST_EXECUTION_DATE}" data-fieldname="TMREVN_LAST_EXECUTION_DATE" data-signal-error-for="TMREVN_LAST_EXECUTION_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_LAST_EXECUTION_DATE}">
+		{BEGIN TMREVN_LAST_EXECUTION_DATE_label}{$label TIMER_EVENT TMREVN_LAST_EXECUTION_DATE}{END TMREVN_LAST_EXECUTION_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_LAST_EXECUTION_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_LAST_EXECUTION_DATE">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_LAST_EXECUTION_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_LAST_EXECUTION_DATE_fieldblock}
+
+			{BEGIN TMREVN_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TMREVN_STATUS}" data-fieldname="TMREVN_STATUS" data-signal-error-for="TMREVN_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TMREVN_STATUS}">
+		{BEGIN TMREVN_STATUS_label}{$label TIMER_EVENT TMREVN_STATUS}{END TMREVN_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$TMREVN_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TMREVN_STATUS">
+		<div class="text-muted" >
+		{$tooltip TIMER_EVENT TMREVN_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END TMREVN_STATUS_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$DOC_UID_class}">{$label BPMN_DOCUMENTATION DOC_UID}</th>
+			<th class="{$PRJ_UID_class}">{$label BPMN_DOCUMENTATION PRJ_UID}</th>
+			<th class="{$DOC_ELEMENT_class}">{$label BPMN_DOCUMENTATION DOC_ELEMENT}</th>
+			<th class="{$DOC_ELEMENT_TYPE_class}">{$label BPMN_DOCUMENTATION DOC_ELEMENT_TYPE}</th>
+			<th class="{$DOC_DOCUMENTATION_class}">{$label BPMN_DOCUMENTATION DOC_DOCUMENTATION}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$DOC_UID_class}">{$DOC_UID_value}</td>
+			<td class="{$PRJ_UID_class}">{$PRJ_UID_value}</td>
+			<td class="{$DOC_ELEMENT_class}">{$DOC_ELEMENT_value}</td>
+			<td class="{$DOC_ELEMENT_TYPE_class}">{$DOC_ELEMENT_TYPE_value}</td>
+			<td class="{$DOC_DOCUMENTATION_class}">{$DOC_DOCUMENTATION_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

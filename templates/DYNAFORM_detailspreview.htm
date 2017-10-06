@@ -1,0 +1,59 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$DYN_UID_class}">{$label DYNAFORM DYN_UID}</th>
+			<th class="{$PRO_UID_class}">{$label DYNAFORM PRO_UID}</th>
+			<th class="{$DYN_TYPE_class}">{$label DYNAFORM DYN_TYPE}</th>
+			<th class="{$DYN_FILENAME_class}">{$label DYNAFORM DYN_FILENAME}</th>
+			<th class="{$DYN_CONTENT_class}">{$label DYNAFORM DYN_CONTENT}</th>
+			<th class="{$DYN_LABEL_class}">{$label DYNAFORM DYN_LABEL}</th>
+			<th class="{$DYN_VERSION_class}">{$label DYNAFORM DYN_VERSION}</th>
+			<th class="{$DYN_UPDATE_DATE_class}">{$label DYNAFORM DYN_UPDATE_DATE}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$DYN_UID_class}">{$DYN_UID_value}</td>
+			<td class="{$PRO_UID_class}">{$PRO_UID_value}</td>
+			<td class="{$DYN_TYPE_class}">{$DYN_TYPE_value}</td>
+			<td class="{$DYN_FILENAME_class}">{$DYN_FILENAME_value}</td>
+			<td class="{$DYN_CONTENT_class}">{$DYN_CONTENT_value}</td>
+			<td class="{$DYN_LABEL_class}">{$DYN_LABEL_value}</td>
+			<td class="{$DYN_VERSION_class}">{$DYN_VERSION_value}</td>
+			<td class="{$DYN_UPDATE_DATE_class}">{$DYN_UPDATE_DATE_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

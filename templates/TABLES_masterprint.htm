@@ -1,0 +1,79 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel TABLES masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$TABLE_CATALOG_class}">{$label TABLES TABLE_CATALOG}</th>
+			<th class="{$TABLE_SCHEMA_class}">{$label TABLES TABLE_SCHEMA}</th>
+			<th class="{$TABLE_NAME_class}">{$label TABLES TABLE_NAME}</th>
+			<th class="{$TABLE_TYPE_class}">{$label TABLES TABLE_TYPE}</th>
+			<th class="{$ENGINE_class}">{$label TABLES ENGINE}</th>
+			<th class="{$VERSION_class}">{$label TABLES VERSION}</th>
+			<th class="{$ROW_FORMAT_class}">{$label TABLES ROW_FORMAT}</th>
+			<th class="{$TABLE_ROWS_class}">{$label TABLES TABLE_ROWS}</th>
+			<th class="{$AVG_ROW_LENGTH_class}">{$label TABLES AVG_ROW_LENGTH}</th>
+			<th class="{$DATA_LENGTH_class}">{$label TABLES DATA_LENGTH}</th>
+			<th class="{$MAX_DATA_LENGTH_class}">{$label TABLES MAX_DATA_LENGTH}</th>
+			<th class="{$INDEX_LENGTH_class}">{$label TABLES INDEX_LENGTH}</th>
+			<th class="{$DATA_FREE_class}">{$label TABLES DATA_FREE}</th>
+			<th class="{$AUTO_INCREMENT_class}">{$label TABLES AUTO_INCREMENT}</th>
+			<th class="{$CREATE_TIME_class}">{$label TABLES CREATE_TIME}</th>
+			<th class="{$UPDATE_TIME_class}">{$label TABLES UPDATE_TIME}</th>
+			<th class="{$CHECK_TIME_class}">{$label TABLES CHECK_TIME}</th>
+			<th class="{$TABLE_COLLATION_class}">{$label TABLES TABLE_COLLATION}</th>
+			<th class="{$CHECKSUM_class}">{$label TABLES CHECKSUM}</th>
+			<th class="{$CREATE_OPTIONS_class}">{$label TABLES CREATE_OPTIONS}</th>
+			<th class="{$TABLE_COMMENT_class}">{$label TABLES TABLE_COMMENT}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$TABLE_CATALOG_class}">{$TABLE_CATALOG_mastervalue}</td>
+			<td class="{$TABLE_SCHEMA_class}">{$TABLE_SCHEMA_mastervalue}</td>
+			<td class="{$TABLE_NAME_class}">{$TABLE_NAME_mastervalue}</td>
+			<td class="{$TABLE_TYPE_class}">{$TABLE_TYPE_mastervalue}</td>
+			<td class="{$ENGINE_class}">{$ENGINE_mastervalue}</td>
+			<td class="{$VERSION_class}">{$VERSION_mastervalue}</td>
+			<td class="{$ROW_FORMAT_class}">{$ROW_FORMAT_mastervalue}</td>
+			<td class="{$TABLE_ROWS_class}">{$TABLE_ROWS_mastervalue}</td>
+			<td class="{$AVG_ROW_LENGTH_class}">{$AVG_ROW_LENGTH_mastervalue}</td>
+			<td class="{$DATA_LENGTH_class}">{$DATA_LENGTH_mastervalue}</td>
+			<td class="{$MAX_DATA_LENGTH_class}">{$MAX_DATA_LENGTH_mastervalue}</td>
+			<td class="{$INDEX_LENGTH_class}">{$INDEX_LENGTH_mastervalue}</td>
+			<td class="{$DATA_FREE_class}">{$DATA_FREE_mastervalue}</td>
+			<td class="{$AUTO_INCREMENT_class}">{$AUTO_INCREMENT_mastervalue}</td>
+			<td class="{$CREATE_TIME_class}">{$CREATE_TIME_mastervalue}</td>
+			<td class="{$UPDATE_TIME_class}">{$UPDATE_TIME_mastervalue}</td>
+			<td class="{$CHECK_TIME_class}">{$CHECK_TIME_mastervalue}</td>
+			<td class="{$TABLE_COLLATION_class}">{$TABLE_COLLATION_mastervalue}</td>
+			<td class="{$CHECKSUM_class}">{$CHECKSUM_mastervalue}</td>
+			<td class="{$CREATE_OPTIONS_class}">{$CREATE_OPTIONS_mastervalue}</td>
+			<td class="{$TABLE_COMMENT_class}">{$TABLE_COMMENT_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

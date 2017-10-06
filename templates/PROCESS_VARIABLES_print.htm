@@ -1,0 +1,263 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PROCESS_VARIABLES print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN VAR_UID_fieldheadercolumn}
+			<th class="{$VAR_UID_class}" {$VAR_UID_style}  data-field="VAR_UID">
+				{$label PROCESS_VARIABLES VAR_UID}
+			</th>
+			{END VAR_UID_fieldheadercolumn}
+			{BEGIN PRJ_UID_fieldheadercolumn}
+			<th class="{$PRJ_UID_class}" {$PRJ_UID_style}  data-field="PRJ_UID">
+				{$label PROCESS_VARIABLES PRJ_UID}
+			</th>
+			{END PRJ_UID_fieldheadercolumn}
+			{BEGIN VAR_NAME_fieldheadercolumn}
+			<th class="{$VAR_NAME_class}" {$VAR_NAME_style}  data-field="VAR_NAME">
+				{$label PROCESS_VARIABLES VAR_NAME}
+			</th>
+			{END VAR_NAME_fieldheadercolumn}
+			{BEGIN VAR_FIELD_TYPE_fieldheadercolumn}
+			<th class="{$VAR_FIELD_TYPE_class}" {$VAR_FIELD_TYPE_style}  data-field="VAR_FIELD_TYPE">
+				{$label PROCESS_VARIABLES VAR_FIELD_TYPE}
+			</th>
+			{END VAR_FIELD_TYPE_fieldheadercolumn}
+			{BEGIN VAR_FIELD_SIZE_fieldheadercolumn}
+			<th class="{$VAR_FIELD_SIZE_class}" {$VAR_FIELD_SIZE_style}  data-field="VAR_FIELD_SIZE">
+				{$label PROCESS_VARIABLES VAR_FIELD_SIZE}
+			</th>
+			{END VAR_FIELD_SIZE_fieldheadercolumn}
+			{BEGIN VAR_LABEL_fieldheadercolumn}
+			<th class="{$VAR_LABEL_class}" {$VAR_LABEL_style}  data-field="VAR_LABEL">
+				{$label PROCESS_VARIABLES VAR_LABEL}
+			</th>
+			{END VAR_LABEL_fieldheadercolumn}
+			{BEGIN VAR_DBCONNECTION_fieldheadercolumn}
+			<th class="{$VAR_DBCONNECTION_class}" {$VAR_DBCONNECTION_style}  data-field="VAR_DBCONNECTION">
+				{$label PROCESS_VARIABLES VAR_DBCONNECTION}
+			</th>
+			{END VAR_DBCONNECTION_fieldheadercolumn}
+			{BEGIN VAR_SQL_fieldheadercolumn}
+			<th class="{$VAR_SQL_class}" {$VAR_SQL_style}  data-field="VAR_SQL">
+				{$label PROCESS_VARIABLES VAR_SQL}
+			</th>
+			{END VAR_SQL_fieldheadercolumn}
+			{BEGIN VAR_NULL_fieldheadercolumn}
+			<th class="{$VAR_NULL_class}" {$VAR_NULL_style}  data-field="VAR_NULL">
+				{$label PROCESS_VARIABLES VAR_NULL}
+			</th>
+			{END VAR_NULL_fieldheadercolumn}
+			{BEGIN VAR_DEFAULT_fieldheadercolumn}
+			<th class="{$VAR_DEFAULT_class}" {$VAR_DEFAULT_style}  data-field="VAR_DEFAULT">
+				{$label PROCESS_VARIABLES VAR_DEFAULT}
+			</th>
+			{END VAR_DEFAULT_fieldheadercolumn}
+			{BEGIN VAR_ACCEPTED_VALUES_fieldheadercolumn}
+			<th class="{$VAR_ACCEPTED_VALUES_class}" {$VAR_ACCEPTED_VALUES_style}  data-field="VAR_ACCEPTED_VALUES">
+				{$label PROCESS_VARIABLES VAR_ACCEPTED_VALUES}
+			</th>
+			{END VAR_ACCEPTED_VALUES_fieldheadercolumn}
+			{BEGIN INP_DOC_UID_fieldheadercolumn}
+			<th class="{$INP_DOC_UID_class}" {$INP_DOC_UID_style}  data-field="INP_DOC_UID">
+				{$label PROCESS_VARIABLES INP_DOC_UID}
+			</th>
+			{END INP_DOC_UID_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN VAR_UID_fieldcolumn}
+			<td  class="{$VAR_UID_class}" {$VAR_UID_style} {$recordattrs}>
+				{$VAR_UID_value}
+			</td>
+			{END VAR_UID_fieldcolumn}
+			{BEGIN PRJ_UID_fieldcolumn}
+			<td  class="{$PRJ_UID_class}" {$PRJ_UID_style} {$recordattrs}>
+				{$PRJ_UID_value}
+			</td>
+			{END PRJ_UID_fieldcolumn}
+			{BEGIN VAR_NAME_fieldcolumn}
+			<td  class="{$VAR_NAME_class}" {$VAR_NAME_style} {$recordattrs}>
+				{$VAR_NAME_value}
+			</td>
+			{END VAR_NAME_fieldcolumn}
+			{BEGIN VAR_FIELD_TYPE_fieldcolumn}
+			<td  class="{$VAR_FIELD_TYPE_class}" {$VAR_FIELD_TYPE_style} {$recordattrs}>
+				{$VAR_FIELD_TYPE_value}
+			</td>
+			{END VAR_FIELD_TYPE_fieldcolumn}
+			{BEGIN VAR_FIELD_SIZE_fieldcolumn}
+			<td  class="{$VAR_FIELD_SIZE_class}" {$VAR_FIELD_SIZE_style} {$recordattrs}>
+				{$VAR_FIELD_SIZE_value}
+			</td>
+			{END VAR_FIELD_SIZE_fieldcolumn}
+			{BEGIN VAR_LABEL_fieldcolumn}
+			<td  class="{$VAR_LABEL_class}" {$VAR_LABEL_style} {$recordattrs}>
+				{$VAR_LABEL_value}
+			</td>
+			{END VAR_LABEL_fieldcolumn}
+			{BEGIN VAR_DBCONNECTION_fieldcolumn}
+			<td  class="{$VAR_DBCONNECTION_class}" {$VAR_DBCONNECTION_style} {$recordattrs}>
+				{$VAR_DBCONNECTION_value}
+			</td>
+			{END VAR_DBCONNECTION_fieldcolumn}
+			{BEGIN VAR_SQL_fieldcolumn}
+			<td  class="{$VAR_SQL_class}" {$VAR_SQL_style} {$recordattrs}>
+				{$VAR_SQL_value}
+			</td>
+			{END VAR_SQL_fieldcolumn}
+			{BEGIN VAR_NULL_fieldcolumn}
+			<td  class="{$VAR_NULL_class}" {$VAR_NULL_style} {$recordattrs}>
+				{$VAR_NULL_value}
+			</td>
+			{END VAR_NULL_fieldcolumn}
+			{BEGIN VAR_DEFAULT_fieldcolumn}
+			<td  class="{$VAR_DEFAULT_class}" {$VAR_DEFAULT_style} {$recordattrs}>
+				{$VAR_DEFAULT_value}
+			</td>
+			{END VAR_DEFAULT_fieldcolumn}
+			{BEGIN VAR_ACCEPTED_VALUES_fieldcolumn}
+			<td  class="{$VAR_ACCEPTED_VALUES_class}" {$VAR_ACCEPTED_VALUES_style} {$recordattrs}>
+				{$VAR_ACCEPTED_VALUES_value}
+			</td>
+			{END VAR_ACCEPTED_VALUES_fieldcolumn}
+			{BEGIN INP_DOC_UID_fieldcolumn}
+			<td  class="{$INP_DOC_UID_class}" {$INP_DOC_UID_style} {$recordattrs}>
+				{$INP_DOC_UID_value}
+			</td>
+			{END INP_DOC_UID_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

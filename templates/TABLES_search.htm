@@ -1,0 +1,512 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel TABLES search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN TABLE_CATALOG_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_CATALOG}" data-fieldname="TABLE_CATALOG">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_CATALOG}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_CATALOG}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_CATALOG_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_CATALOG_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_CATALOG_fieldblock}
+	{BEGIN TABLE_SCHEMA_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_SCHEMA}" data-fieldname="TABLE_SCHEMA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_SCHEMA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_SCHEMA}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_SCHEMA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_SCHEMA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_SCHEMA_fieldblock}
+	{BEGIN TABLE_NAME_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_NAME}" data-fieldname="TABLE_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_NAME_fieldblock}
+	{BEGIN TABLE_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_TYPE}" data-fieldname="TABLE_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_TYPE_fieldblock}
+	{BEGIN ENGINE_fieldblock}		
+	<div class="container {$fielddispclass_ENGINE}" data-fieldname="ENGINE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES ENGINE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ENGINE}
+			</div>
+			<div class="col-md-4" >
+				{$ENGINE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ENGINE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ENGINE_fieldblock}
+	{BEGIN VERSION_fieldblock}		
+	<div class="container {$fielddispclass_VERSION}" data-fieldname="VERSION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES VERSION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VERSION}
+			</div>
+			<div class="col-md-4" >
+				{$VERSION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VERSION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VERSION_fieldblock}
+	{BEGIN ROW_FORMAT_fieldblock}		
+	<div class="container {$fielddispclass_ROW_FORMAT}" data-fieldname="ROW_FORMAT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES ROW_FORMAT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROW_FORMAT}
+			</div>
+			<div class="col-md-4" >
+				{$ROW_FORMAT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROW_FORMAT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROW_FORMAT_fieldblock}
+	{BEGIN TABLE_ROWS_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_ROWS}" data-fieldname="TABLE_ROWS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_ROWS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_ROWS}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_ROWS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_ROWS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_ROWS_fieldblock}
+	{BEGIN AVG_ROW_LENGTH_fieldblock}		
+	<div class="container {$fielddispclass_AVG_ROW_LENGTH}" data-fieldname="AVG_ROW_LENGTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES AVG_ROW_LENGTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_AVG_ROW_LENGTH}
+			</div>
+			<div class="col-md-4" >
+				{$AVG_ROW_LENGTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$AVG_ROW_LENGTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END AVG_ROW_LENGTH_fieldblock}
+	{BEGIN DATA_LENGTH_fieldblock}		
+	<div class="container {$fielddispclass_DATA_LENGTH}" data-fieldname="DATA_LENGTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES DATA_LENGTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATA_LENGTH}
+			</div>
+			<div class="col-md-4" >
+				{$DATA_LENGTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATA_LENGTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATA_LENGTH_fieldblock}
+	{BEGIN MAX_DATA_LENGTH_fieldblock}		
+	<div class="container {$fielddispclass_MAX_DATA_LENGTH}" data-fieldname="MAX_DATA_LENGTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES MAX_DATA_LENGTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_MAX_DATA_LENGTH}
+			</div>
+			<div class="col-md-4" >
+				{$MAX_DATA_LENGTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$MAX_DATA_LENGTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END MAX_DATA_LENGTH_fieldblock}
+	{BEGIN INDEX_LENGTH_fieldblock}		
+	<div class="container {$fielddispclass_INDEX_LENGTH}" data-fieldname="INDEX_LENGTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES INDEX_LENGTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INDEX_LENGTH}
+			</div>
+			<div class="col-md-4" >
+				{$INDEX_LENGTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INDEX_LENGTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INDEX_LENGTH_fieldblock}
+	{BEGIN DATA_FREE_fieldblock}		
+	<div class="container {$fielddispclass_DATA_FREE}" data-fieldname="DATA_FREE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES DATA_FREE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATA_FREE}
+			</div>
+			<div class="col-md-4" >
+				{$DATA_FREE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATA_FREE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATA_FREE_fieldblock}
+	{BEGIN AUTO_INCREMENT_fieldblock}		
+	<div class="container {$fielddispclass_AUTO_INCREMENT}" data-fieldname="AUTO_INCREMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES AUTO_INCREMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_AUTO_INCREMENT}
+			</div>
+			<div class="col-md-4" >
+				{$AUTO_INCREMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$AUTO_INCREMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END AUTO_INCREMENT_fieldblock}
+	{BEGIN CREATE_TIME_fieldblock}		
+	<div class="container {$fielddispclass_CREATE_TIME}" data-fieldname="CREATE_TIME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES CREATE_TIME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CREATE_TIME}
+			</div>
+			<div class="col-md-4" >
+				{$CREATE_TIME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CREATE_TIME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CREATE_TIME_fieldblock}
+	{BEGIN UPDATE_TIME_fieldblock}		
+	<div class="container {$fielddispclass_UPDATE_TIME}" data-fieldname="UPDATE_TIME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES UPDATE_TIME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_UPDATE_TIME}
+			</div>
+			<div class="col-md-4" >
+				{$UPDATE_TIME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$UPDATE_TIME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END UPDATE_TIME_fieldblock}
+	{BEGIN CHECK_TIME_fieldblock}		
+	<div class="container {$fielddispclass_CHECK_TIME}" data-fieldname="CHECK_TIME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES CHECK_TIME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHECK_TIME}
+			</div>
+			<div class="col-md-4" >
+				{$CHECK_TIME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHECK_TIME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHECK_TIME_fieldblock}
+	{BEGIN TABLE_COLLATION_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_COLLATION}" data-fieldname="TABLE_COLLATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_COLLATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_COLLATION}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_COLLATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_COLLATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_COLLATION_fieldblock}
+	{BEGIN CHECKSUM_fieldblock}		
+	<div class="container {$fielddispclass_CHECKSUM}" data-fieldname="CHECKSUM">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES CHECKSUM}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHECKSUM}
+			</div>
+			<div class="col-md-4" >
+				{$CHECKSUM_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHECKSUM_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHECKSUM_fieldblock}
+	{BEGIN CREATE_OPTIONS_fieldblock}		
+	<div class="container {$fielddispclass_CREATE_OPTIONS}" data-fieldname="CREATE_OPTIONS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES CREATE_OPTIONS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CREATE_OPTIONS}
+			</div>
+			<div class="col-md-4" >
+				{$CREATE_OPTIONS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CREATE_OPTIONS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CREATE_OPTIONS_fieldblock}
+	{BEGIN TABLE_COMMENT_fieldblock}		
+	<div class="container {$fielddispclass_TABLE_COMMENT}" data-fieldname="TABLE_COMMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TABLES TABLE_COMMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TABLE_COMMENT}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_COMMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TABLE_COMMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TABLE_COMMENT_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel DASHLET_INSTANCE add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN DAS_INS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_UID}" data-fieldname="DAS_INS_UID" data-signal-error-for="DAS_INS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_UID}">
+		{BEGIN DAS_INS_UID_label}{$label DASHLET_INSTANCE DAS_INS_UID}{END DAS_INS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_UID">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_UID_fieldblock}
+
+			{BEGIN DAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_UID}" data-fieldname="DAS_UID" data-signal-error-for="DAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_UID}">
+		{BEGIN DAS_UID_label}{$label DASHLET_INSTANCE DAS_UID}{END DAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_UID">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_UID_fieldblock}
+
+			{BEGIN DAS_INS_OWNER_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_OWNER_TYPE}" data-fieldname="DAS_INS_OWNER_TYPE" data-signal-error-for="DAS_INS_OWNER_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_OWNER_TYPE}">
+		{BEGIN DAS_INS_OWNER_TYPE_label}{$label DASHLET_INSTANCE DAS_INS_OWNER_TYPE}{END DAS_INS_OWNER_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_OWNER_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_OWNER_TYPE">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_OWNER_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_OWNER_TYPE_fieldblock}
+
+			{BEGIN DAS_INS_OWNER_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_OWNER_UID}" data-fieldname="DAS_INS_OWNER_UID" data-signal-error-for="DAS_INS_OWNER_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_OWNER_UID}">
+		{BEGIN DAS_INS_OWNER_UID_label}{$label DASHLET_INSTANCE DAS_INS_OWNER_UID}{END DAS_INS_OWNER_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_OWNER_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_OWNER_UID">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_OWNER_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_OWNER_UID_fieldblock}
+
+			{BEGIN DAS_INS_ADDITIONAL_PROPERTIES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_ADDITIONAL_PROPERTIES}" data-fieldname="DAS_INS_ADDITIONAL_PROPERTIES" data-signal-error-for="DAS_INS_ADDITIONAL_PROPERTIES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_ADDITIONAL_PROPERTIES}">
+		{BEGIN DAS_INS_ADDITIONAL_PROPERTIES_label}{$label DASHLET_INSTANCE DAS_INS_ADDITIONAL_PROPERTIES}{END DAS_INS_ADDITIONAL_PROPERTIES_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_ADDITIONAL_PROPERTIES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_ADDITIONAL_PROPERTIES">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_ADDITIONAL_PROPERTIES}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_ADDITIONAL_PROPERTIES_fieldblock}
+
+			{BEGIN DAS_INS_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_CREATE_DATE}" data-fieldname="DAS_INS_CREATE_DATE" data-signal-error-for="DAS_INS_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_CREATE_DATE}">
+		{BEGIN DAS_INS_CREATE_DATE_label}{$label DASHLET_INSTANCE DAS_INS_CREATE_DATE}{END DAS_INS_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_CREATE_DATE_fieldblock}
+
+			{BEGIN DAS_INS_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_UPDATE_DATE}" data-fieldname="DAS_INS_UPDATE_DATE" data-signal-error-for="DAS_INS_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_UPDATE_DATE}">
+		{BEGIN DAS_INS_UPDATE_DATE_label}{$label DASHLET_INSTANCE DAS_INS_UPDATE_DATE}{END DAS_INS_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_UPDATE_DATE_fieldblock}
+
+			{BEGIN DAS_INS_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DAS_INS_STATUS}" data-fieldname="DAS_INS_STATUS" data-signal-error-for="DAS_INS_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DAS_INS_STATUS}">
+		{BEGIN DAS_INS_STATUS_label}{$label DASHLET_INSTANCE DAS_INS_STATUS}{END DAS_INS_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$DAS_INS_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DAS_INS_STATUS">
+		<div class="text-muted" >
+		{$tooltip DASHLET_INSTANCE DAS_INS_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END DAS_INS_STATUS_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

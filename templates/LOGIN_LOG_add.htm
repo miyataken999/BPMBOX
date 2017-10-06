@@ -1,0 +1,324 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel LOGIN_LOG add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN LOG_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_UID}" data-fieldname="LOG_UID" data-signal-error-for="LOG_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_UID}">
+		{BEGIN LOG_UID_label}{$label LOGIN_LOG LOG_UID}{END LOG_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_UID">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_UID_fieldblock}
+
+			{BEGIN LOG_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_STATUS}" data-fieldname="LOG_STATUS" data-signal-error-for="LOG_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_STATUS}">
+		{BEGIN LOG_STATUS_label}{$label LOGIN_LOG LOG_STATUS}{END LOG_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_STATUS">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_STATUS_fieldblock}
+
+			{BEGIN LOG_IP_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_IP}" data-fieldname="LOG_IP" data-signal-error-for="LOG_IP{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_IP}">
+		{BEGIN LOG_IP_label}{$label LOGIN_LOG LOG_IP}{END LOG_IP_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_IP_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_IP">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_IP}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_IP_fieldblock}
+
+			{BEGIN LOG_SID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_SID}" data-fieldname="LOG_SID" data-signal-error-for="LOG_SID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_SID}">
+		{BEGIN LOG_SID_label}{$label LOGIN_LOG LOG_SID}{END LOG_SID_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_SID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_SID">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_SID}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_SID_fieldblock}
+
+			{BEGIN LOG_INIT_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_INIT_DATE}" data-fieldname="LOG_INIT_DATE" data-signal-error-for="LOG_INIT_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_INIT_DATE}">
+		{BEGIN LOG_INIT_DATE_label}{$label LOGIN_LOG LOG_INIT_DATE}{END LOG_INIT_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_INIT_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_INIT_DATE">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_INIT_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_INIT_DATE_fieldblock}
+
+			{BEGIN LOG_END_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_END_DATE}" data-fieldname="LOG_END_DATE" data-signal-error-for="LOG_END_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_END_DATE}">
+		{BEGIN LOG_END_DATE_label}{$label LOGIN_LOG LOG_END_DATE}{END LOG_END_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_END_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_END_DATE">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_END_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_END_DATE_fieldblock}
+
+			{BEGIN LOG_CLIENT_HOSTNAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LOG_CLIENT_HOSTNAME}" data-fieldname="LOG_CLIENT_HOSTNAME" data-signal-error-for="LOG_CLIENT_HOSTNAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LOG_CLIENT_HOSTNAME}">
+		{BEGIN LOG_CLIENT_HOSTNAME_label}{$label LOGIN_LOG LOG_CLIENT_HOSTNAME}{END LOG_CLIENT_HOSTNAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$LOG_CLIENT_HOSTNAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LOG_CLIENT_HOSTNAME">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG LOG_CLIENT_HOSTNAME}
+		</div>
+	</div>
+</div>
+</div>
+{END LOG_CLIENT_HOSTNAME_fieldblock}
+
+			{BEGIN USR_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_USR_UID}" data-fieldname="USR_UID" data-signal-error-for="USR_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_USR_UID}">
+		{BEGIN USR_UID_label}{$label LOGIN_LOG USR_UID}{END USR_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$USR_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="USR_UID">
+		<div class="text-muted" >
+		{$tooltip LOGIN_LOG USR_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END USR_UID_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel ROUTE masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=ROU_UID]:before {
+		content: "{$label ROUTE ROU_UID}";
+	}
+	.bs-gridcell[data-field=ROU_PARENT]:before {
+		content: "{$label ROUTE ROU_PARENT}";
+	}
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label ROUTE PRO_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label ROUTE TAS_UID}";
+	}
+	.bs-gridcell[data-field=ROU_NEXT_TASK]:before {
+		content: "{$label ROUTE ROU_NEXT_TASK}";
+	}
+	.bs-gridcell[data-field=ROU_CASE]:before {
+		content: "{$label ROUTE ROU_CASE}";
+	}
+	.bs-gridcell[data-field=ROU_TYPE]:before {
+		content: "{$label ROUTE ROU_TYPE}";
+	}
+	.bs-gridcell[data-field=ROU_DEFAULT]:before {
+		content: "{$label ROUTE ROU_DEFAULT}";
+	}
+	.bs-gridcell[data-field=ROU_CONDITION]:before {
+		content: "{$label ROUTE ROU_CONDITION}";
+	}
+	.bs-gridcell[data-field=ROU_TO_LAST_USER]:before {
+		content: "{$label ROUTE ROU_TO_LAST_USER}";
+	}
+	.bs-gridcell[data-field=ROU_OPTIONAL]:before {
+		content: "{$label ROUTE ROU_OPTIONAL}";
+	}
+	.bs-gridcell[data-field=ROU_SEND_EMAIL]:before {
+		content: "{$label ROUTE ROU_SEND_EMAIL}";
+	}
+	.bs-gridcell[data-field=ROU_SOURCEANCHOR]:before {
+		content: "{$label ROUTE ROU_SOURCEANCHOR}";
+	}
+	.bs-gridcell[data-field=ROU_TARGETANCHOR]:before {
+		content: "{$label ROUTE ROU_TARGETANCHOR}";
+	}
+	.bs-gridcell[data-field=ROU_TO_PORT]:before {
+		content: "{$label ROUTE ROU_TO_PORT}";
+	}
+	.bs-gridcell[data-field=ROU_FROM_PORT]:before {
+		content: "{$label ROUTE ROU_FROM_PORT}";
+	}
+	.bs-gridcell[data-field=ROU_EVN_UID]:before {
+		content: "{$label ROUTE ROU_EVN_UID}";
+	}
+	.bs-gridcell[data-field=GAT_UID]:before {
+		content: "{$label ROUTE GAT_UID}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$ROU_UID_class}">{$label ROUTE ROU_UID}</th>
+			<th class="{$ROU_PARENT_class}">{$label ROUTE ROU_PARENT}</th>
+			<th class="{$PRO_UID_class}">{$label ROUTE PRO_UID}</th>
+			<th class="{$TAS_UID_class}">{$label ROUTE TAS_UID}</th>
+			<th class="{$ROU_NEXT_TASK_class}">{$label ROUTE ROU_NEXT_TASK}</th>
+			<th class="{$ROU_CASE_class}">{$label ROUTE ROU_CASE}</th>
+			<th class="{$ROU_TYPE_class}">{$label ROUTE ROU_TYPE}</th>
+			<th class="{$ROU_DEFAULT_class}">{$label ROUTE ROU_DEFAULT}</th>
+			<th class="{$ROU_CONDITION_class}">{$label ROUTE ROU_CONDITION}</th>
+			<th class="{$ROU_TO_LAST_USER_class}">{$label ROUTE ROU_TO_LAST_USER}</th>
+			<th class="{$ROU_OPTIONAL_class}">{$label ROUTE ROU_OPTIONAL}</th>
+			<th class="{$ROU_SEND_EMAIL_class}">{$label ROUTE ROU_SEND_EMAIL}</th>
+			<th class="{$ROU_SOURCEANCHOR_class}">{$label ROUTE ROU_SOURCEANCHOR}</th>
+			<th class="{$ROU_TARGETANCHOR_class}">{$label ROUTE ROU_TARGETANCHOR}</th>
+			<th class="{$ROU_TO_PORT_class}">{$label ROUTE ROU_TO_PORT}</th>
+			<th class="{$ROU_FROM_PORT_class}">{$label ROUTE ROU_FROM_PORT}</th>
+			<th class="{$ROU_EVN_UID_class}">{$label ROUTE ROU_EVN_UID}</th>
+			<th class="{$GAT_UID_class}">{$label ROUTE GAT_UID}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$ROU_UID_class} bs-gridcell" data-field=ROU_UID>{$ROU_UID_mastervalue}</td>
+			<td class="{$ROU_PARENT_class} bs-gridcell" data-field=ROU_PARENT>{$ROU_PARENT_mastervalue}</td>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$TAS_UID_class} bs-gridcell" data-field=TAS_UID>{$TAS_UID_mastervalue}</td>
+			<td class="{$ROU_NEXT_TASK_class} bs-gridcell" data-field=ROU_NEXT_TASK>{$ROU_NEXT_TASK_mastervalue}</td>
+			<td class="{$ROU_CASE_class} bs-gridcell" data-field=ROU_CASE>{$ROU_CASE_mastervalue}</td>
+			<td class="{$ROU_TYPE_class} bs-gridcell" data-field=ROU_TYPE>{$ROU_TYPE_mastervalue}</td>
+			<td class="{$ROU_DEFAULT_class} bs-gridcell" data-field=ROU_DEFAULT>{$ROU_DEFAULT_mastervalue}</td>
+			<td class="{$ROU_CONDITION_class} bs-gridcell" data-field=ROU_CONDITION>{$ROU_CONDITION_mastervalue}</td>
+			<td class="{$ROU_TO_LAST_USER_class} bs-gridcell" data-field=ROU_TO_LAST_USER>{$ROU_TO_LAST_USER_mastervalue}</td>
+			<td class="{$ROU_OPTIONAL_class} bs-gridcell" data-field=ROU_OPTIONAL>{$ROU_OPTIONAL_mastervalue}</td>
+			<td class="{$ROU_SEND_EMAIL_class} bs-gridcell" data-field=ROU_SEND_EMAIL>{$ROU_SEND_EMAIL_mastervalue}</td>
+			<td class="{$ROU_SOURCEANCHOR_class} bs-gridcell" data-field=ROU_SOURCEANCHOR>{$ROU_SOURCEANCHOR_mastervalue}</td>
+			<td class="{$ROU_TARGETANCHOR_class} bs-gridcell" data-field=ROU_TARGETANCHOR>{$ROU_TARGETANCHOR_mastervalue}</td>
+			<td class="{$ROU_TO_PORT_class} bs-gridcell" data-field=ROU_TO_PORT>{$ROU_TO_PORT_mastervalue}</td>
+			<td class="{$ROU_FROM_PORT_class} bs-gridcell" data-field=ROU_FROM_PORT>{$ROU_FROM_PORT_mastervalue}</td>
+			<td class="{$ROU_EVN_UID_class} bs-gridcell" data-field=ROU_EVN_UID>{$ROU_EVN_UID_mastervalue}</td>
+			<td class="{$GAT_UID_class} bs-gridcell" data-field=GAT_UID>{$GAT_UID_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

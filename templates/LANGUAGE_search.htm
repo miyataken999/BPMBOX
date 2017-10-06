@@ -1,0 +1,278 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel LANGUAGE search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN LAN_ID_fieldblock}		
+	<div class="container {$fielddispclass_LAN_ID}" data-fieldname="LAN_ID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_ID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_ID}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_ID_fieldblock}
+	{BEGIN LAN_LOCATION_fieldblock}		
+	<div class="container {$fielddispclass_LAN_LOCATION}" data-fieldname="LAN_LOCATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_LOCATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_LOCATION}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_LOCATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_LOCATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_LOCATION_fieldblock}
+	{BEGIN LAN_NAME_fieldblock}		
+	<div class="container {$fielddispclass_LAN_NAME}" data-fieldname="LAN_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_NAME_fieldblock}
+	{BEGIN LAN_NATIVE_NAME_fieldblock}		
+	<div class="container {$fielddispclass_LAN_NATIVE_NAME}" data-fieldname="LAN_NATIVE_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_NATIVE_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_NATIVE_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_NATIVE_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_NATIVE_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_NATIVE_NAME_fieldblock}
+	{BEGIN LAN_DIRECTION_fieldblock}		
+	<div class="container {$fielddispclass_LAN_DIRECTION}" data-fieldname="LAN_DIRECTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_DIRECTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_DIRECTION}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_DIRECTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_DIRECTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_DIRECTION_fieldblock}
+	{BEGIN LAN_WEIGHT_fieldblock}		
+	<div class="container {$fielddispclass_LAN_WEIGHT}" data-fieldname="LAN_WEIGHT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_WEIGHT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_WEIGHT}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_WEIGHT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_WEIGHT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_WEIGHT_fieldblock}
+	{BEGIN LAN_ENABLED_fieldblock}		
+	<div class="container {$fielddispclass_LAN_ENABLED}" data-fieldname="LAN_ENABLED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_ENABLED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_ENABLED}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_ENABLED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_ENABLED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_ENABLED_fieldblock}
+	{BEGIN LAN_CALENDAR_fieldblock}		
+	<div class="container {$fielddispclass_LAN_CALENDAR}" data-fieldname="LAN_CALENDAR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label LANGUAGE LAN_CALENDAR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAN_CALENDAR}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_CALENDAR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAN_CALENDAR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAN_CALENDAR_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel BPMN_PARTICIPANT print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN PAR_UID_fieldheadercolumn}
+			<th class="{$PAR_UID_class}" {$PAR_UID_style}  data-field="PAR_UID">
+				{$label BPMN_PARTICIPANT PAR_UID}
+			</th>
+			{END PAR_UID_fieldheadercolumn}
+			{BEGIN PRJ_UID_fieldheadercolumn}
+			<th class="{$PRJ_UID_class}" {$PRJ_UID_style}  data-field="PRJ_UID">
+				{$label BPMN_PARTICIPANT PRJ_UID}
+			</th>
+			{END PRJ_UID_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label BPMN_PARTICIPANT PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN LNS_UID_fieldheadercolumn}
+			<th class="{$LNS_UID_class}" {$LNS_UID_style}  data-field="LNS_UID">
+				{$label BPMN_PARTICIPANT LNS_UID}
+			</th>
+			{END LNS_UID_fieldheadercolumn}
+			{BEGIN PAR_NAME_fieldheadercolumn}
+			<th class="{$PAR_NAME_class}" {$PAR_NAME_style}  data-field="PAR_NAME">
+				{$label BPMN_PARTICIPANT PAR_NAME}
+			</th>
+			{END PAR_NAME_fieldheadercolumn}
+			{BEGIN PAR_MINIMUM_fieldheadercolumn}
+			<th class="{$PAR_MINIMUM_class}" {$PAR_MINIMUM_style}  data-field="PAR_MINIMUM">
+				{$label BPMN_PARTICIPANT PAR_MINIMUM}
+			</th>
+			{END PAR_MINIMUM_fieldheadercolumn}
+			{BEGIN PAR_MAXIMUM_fieldheadercolumn}
+			<th class="{$PAR_MAXIMUM_class}" {$PAR_MAXIMUM_style}  data-field="PAR_MAXIMUM">
+				{$label BPMN_PARTICIPANT PAR_MAXIMUM}
+			</th>
+			{END PAR_MAXIMUM_fieldheadercolumn}
+			{BEGIN PAR_NUM_PARTICIPANTS_fieldheadercolumn}
+			<th class="{$PAR_NUM_PARTICIPANTS_class}" {$PAR_NUM_PARTICIPANTS_style}  data-field="PAR_NUM_PARTICIPANTS">
+				{$label BPMN_PARTICIPANT PAR_NUM_PARTICIPANTS}
+			</th>
+			{END PAR_NUM_PARTICIPANTS_fieldheadercolumn}
+			{BEGIN PAR_IS_HORIZONTAL_fieldheadercolumn}
+			<th class="{$PAR_IS_HORIZONTAL_class}" {$PAR_IS_HORIZONTAL_style}  data-field="PAR_IS_HORIZONTAL">
+				{$label BPMN_PARTICIPANT PAR_IS_HORIZONTAL}
+			</th>
+			{END PAR_IS_HORIZONTAL_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN PAR_UID_fieldcolumn}
+			<td  class="{$PAR_UID_class}" {$PAR_UID_style} {$recordattrs}>
+				{$PAR_UID_value}
+			</td>
+			{END PAR_UID_fieldcolumn}
+			{BEGIN PRJ_UID_fieldcolumn}
+			<td  class="{$PRJ_UID_class}" {$PRJ_UID_style} {$recordattrs}>
+				{$PRJ_UID_value}
+			</td>
+			{END PRJ_UID_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN LNS_UID_fieldcolumn}
+			<td  class="{$LNS_UID_class}" {$LNS_UID_style} {$recordattrs}>
+				{$LNS_UID_value}
+			</td>
+			{END LNS_UID_fieldcolumn}
+			{BEGIN PAR_NAME_fieldcolumn}
+			<td  class="{$PAR_NAME_class}" {$PAR_NAME_style} {$recordattrs}>
+				{$PAR_NAME_value}
+			</td>
+			{END PAR_NAME_fieldcolumn}
+			{BEGIN PAR_MINIMUM_fieldcolumn}
+			<td  class="{$PAR_MINIMUM_class}" {$PAR_MINIMUM_style} {$recordattrs}>
+				{$PAR_MINIMUM_value}
+			</td>
+			{END PAR_MINIMUM_fieldcolumn}
+			{BEGIN PAR_MAXIMUM_fieldcolumn}
+			<td  class="{$PAR_MAXIMUM_class}" {$PAR_MAXIMUM_style} {$recordattrs}>
+				{$PAR_MAXIMUM_value}
+			</td>
+			{END PAR_MAXIMUM_fieldcolumn}
+			{BEGIN PAR_NUM_PARTICIPANTS_fieldcolumn}
+			<td  class="{$PAR_NUM_PARTICIPANTS_class}" {$PAR_NUM_PARTICIPANTS_style} {$recordattrs}>
+				{$PAR_NUM_PARTICIPANTS_value}
+			</td>
+			{END PAR_NUM_PARTICIPANTS_fieldcolumn}
+			{BEGIN PAR_IS_HORIZONTAL_fieldcolumn}
+			<td  class="{$PAR_IS_HORIZONTAL_class}" {$PAR_IS_HORIZONTAL_style} {$recordattrs}>
+				{$PAR_IS_HORIZONTAL_value}
+			</td>
+			{END PAR_IS_HORIZONTAL_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

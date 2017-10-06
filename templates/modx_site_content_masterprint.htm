@@ -1,0 +1,121 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel modx_site_content masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$link_class}">{$label modx_site_content link}</th>
+			<th class="{$id_class}">{$label modx_site_content id}</th>
+			<th class="{$url_class}">{$label modx_site_content url}</th>
+			<th class="{$content_class}">{$label modx_site_content content}</th>
+			<th class="{$introtext_class}">{$label modx_site_content introtext}</th>
+			<th class="{$menuindex_class}">{$label modx_site_content menuindex}</th>
+			<th class="{$richtext_class}">{$label modx_site_content richtext}</th>
+			<th class="{$modx_site_snippet_id_class}">{$label modx_site_content modx_site_snippet_id}</th>
+			<th class="{$modex_site_htmlsnippet_id_class}">{$label modx_site_content modex_site_htmlsnippet_id}</th>
+			<th class="{$template_class}">{$label modx_site_content template}</th>
+			<th class="{$type_class}">{$label modx_site_content type}</th>
+			<th class="{$publishedon_class}">{$label modx_site_content publishedon}</th>
+			<th class="{$contentType_class}">{$label modx_site_content contentType}</th>
+			<th class="{$pagetitle_class}">{$label modx_site_content pagetitle}</th>
+			<th class="{$longtitle_class}">{$label modx_site_content longtitle}</th>
+			<th class="{$description_class}">{$label modx_site_content description}</th>
+			<th class="{$alias_class}">{$label modx_site_content alias}</th>
+			<th class="{$link_attributes_class}">{$label modx_site_content link_attributes}</th>
+			<th class="{$published_class}">{$label modx_site_content published}</th>
+			<th class="{$pub_date_class}">{$label modx_site_content pub_date}</th>
+			<th class="{$unpub_date_class}">{$label modx_site_content unpub_date}</th>
+			<th class="{$parent_class}">{$label modx_site_content parent}</th>
+			<th class="{$isfolder_class}">{$label modx_site_content isfolder}</th>
+			<th class="{$searchable_class}">{$label modx_site_content searchable}</th>
+			<th class="{$cacheable_class}">{$label modx_site_content cacheable}</th>
+			<th class="{$createdby_class}">{$label modx_site_content createdby}</th>
+			<th class="{$createdon_class}">{$label modx_site_content createdon}</th>
+			<th class="{$editedby_class}">{$label modx_site_content editedby}</th>
+			<th class="{$editedon_class}">{$label modx_site_content editedon}</th>
+			<th class="{$deleted_class}">{$label modx_site_content deleted}</th>
+			<th class="{$deletedon_class}">{$label modx_site_content deletedon}</th>
+			<th class="{$deletedby_class}">{$label modx_site_content deletedby}</th>
+			<th class="{$publishedby_class}">{$label modx_site_content publishedby}</th>
+			<th class="{$menutitle_class}">{$label modx_site_content menutitle}</th>
+			<th class="{$donthit_class}">{$label modx_site_content donthit}</th>
+			<th class="{$haskeywords_class}">{$label modx_site_content haskeywords}</th>
+			<th class="{$hasmetatags_class}">{$label modx_site_content hasmetatags}</th>
+			<th class="{$privateweb_class}">{$label modx_site_content privateweb}</th>
+			<th class="{$privatemgr_class}">{$label modx_site_content privatemgr}</th>
+			<th class="{$content_dispo_class}">{$label modx_site_content content_dispo}</th>
+			<th class="{$hidemenu_class}">{$label modx_site_content hidemenu}</th>
+			<th class="{$alias_visible_class}">{$label modx_site_content alias_visible}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$link_class}">{$link_mastervalue}</td>
+			<td class="{$id_class}">{$id_mastervalue}</td>
+			<td class="{$url_class}">{$url_mastervalue}</td>
+			<td class="{$content_class}">{$content_mastervalue}</td>
+			<td class="{$introtext_class}">{$introtext_mastervalue}</td>
+			<td class="{$menuindex_class}">{$menuindex_mastervalue}</td>
+			<td class="{$richtext_class}">{$richtext_mastervalue}</td>
+			<td class="{$modx_site_snippet_id_class}">{$modx_site_snippet_id_mastervalue}</td>
+			<td class="{$modex_site_htmlsnippet_id_class}">{$modex_site_htmlsnippet_id_mastervalue}</td>
+			<td class="{$template_class}">{$template_mastervalue}</td>
+			<td class="{$type_class}">{$type_mastervalue}</td>
+			<td class="{$publishedon_class}">{$publishedon_mastervalue}</td>
+			<td class="{$contentType_class}">{$contentType_mastervalue}</td>
+			<td class="{$pagetitle_class}">{$pagetitle_mastervalue}</td>
+			<td class="{$longtitle_class}">{$longtitle_mastervalue}</td>
+			<td class="{$description_class}">{$description_mastervalue}</td>
+			<td class="{$alias_class}">{$alias_mastervalue}</td>
+			<td class="{$link_attributes_class}">{$link_attributes_mastervalue}</td>
+			<td class="{$published_class}">{$published_mastervalue}</td>
+			<td class="{$pub_date_class}">{$pub_date_mastervalue}</td>
+			<td class="{$unpub_date_class}">{$unpub_date_mastervalue}</td>
+			<td class="{$parent_class}">{$parent_mastervalue}</td>
+			<td class="{$isfolder_class}">{$isfolder_mastervalue}</td>
+			<td class="{$searchable_class}">{$searchable_mastervalue}</td>
+			<td class="{$cacheable_class}">{$cacheable_mastervalue}</td>
+			<td class="{$createdby_class}">{$createdby_mastervalue}</td>
+			<td class="{$createdon_class}">{$createdon_mastervalue}</td>
+			<td class="{$editedby_class}">{$editedby_mastervalue}</td>
+			<td class="{$editedon_class}">{$editedon_mastervalue}</td>
+			<td class="{$deleted_class}">{$deleted_mastervalue}</td>
+			<td class="{$deletedon_class}">{$deletedon_mastervalue}</td>
+			<td class="{$deletedby_class}">{$deletedby_mastervalue}</td>
+			<td class="{$publishedby_class}">{$publishedby_mastervalue}</td>
+			<td class="{$menutitle_class}">{$menutitle_mastervalue}</td>
+			<td class="{$donthit_class}">{$donthit_mastervalue}</td>
+			<td class="{$haskeywords_class}">{$haskeywords_mastervalue}</td>
+			<td class="{$hasmetatags_class}">{$hasmetatags_mastervalue}</td>
+			<td class="{$privateweb_class}">{$privateweb_mastervalue}</td>
+			<td class="{$privatemgr_class}">{$privatemgr_mastervalue}</td>
+			<td class="{$content_dispo_class}">{$content_dispo_mastervalue}</td>
+			<td class="{$hidemenu_class}">{$hidemenu_mastervalue}</td>
+			<td class="{$alias_visible_class}">{$alias_visible_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

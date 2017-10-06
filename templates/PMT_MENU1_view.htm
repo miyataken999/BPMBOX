@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <META name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    <META name="GENERATOR" content="MSHTML 11.00.9600.18739">
+    <LINK href="/live/preview/codebase/dhtmlxscheduler.css" 
+rel="stylesheet" type="text/css" charset="utf-8">
+    <LINK href="/live/preview/codebase/preview_skyblue.css" 
+rel="stylesheet" type="text/css" charset="utf-8">
+    <SCRIPT src="/live/preview/codebase/preview.js" type="text/javascript" charset="utf-8">
+    </SCRIPT>
+    <SCRIPT src="/live/preview/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8">
+    </SCRIPT>
+    <SCRIPT language="JavaScript" src="/live/preview/codebase/swfobject.js" type="text/javascript">
+    </SCRIPT>
+    <STYLE>
+      html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0px;
+      }
+    </STYLE>
+  </HEAD>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    <SCRIPT language="JavaScript" src="/live/codebase/php/{$iframe}" type="text/javascript">
+    </SCRIPT>
+    {BEGIN body}
+      {$header}
+      <STYLE>
+        {$containerCss}
+      </STYLE>
+      <DIV class="bs-top">
+        {BEGIN container_viewpage}
+          <DIV class="container" data-container="viewpage" data-pageid="{$pageid}" {$viewpage_chiddenattr}>
+            {BEGIN container_header}
+              <DIV class="col-md-9 col-md-offset-3" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+                {BEGIN viewheader}
+                  <H2 data-brick="viewheader" data-pageid="{$pageid}" {$viewheader_hiddenattr}>
+                    {$pagetitlelabel PMT_MENU1 view}
+                  </H2>
+                {END viewheader}
+              </DIV>
+            {END container_header}
+          </DIV>
+        {END container_viewpage}
+        {BEGIN container_fields}
+          <DIV class="form-horizontal col-md-12" data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}>
+            <DIV data-brick="viewfields" data-pageid="{$pageid}" {$viewfields_hiddenattr}>
+              {BEGIN MENU_URL_fieldblock}
+                <DIV class="container">
+                  <DIV class="{$fielddispclass_MENU_URL} bs-viewform-group" data-fieldname="MENU_URL">
+                    <LABEL class="bs-view-label col-md-4 text-right" for="{$labelfor_MENU_URL}">
+                      {$label PMT_MENU1 MENU_URL}
+                    </LABEL>
+                    <DIV class="col-md-6 bs-horizontal-value">
+                      {$MENU_URL_value}
+                      {$iframe}
+                       &nbsp;
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END MENU_URL_fieldblock}
+            </DIV>
+          </DIV>
+        {END container_fields}
+        {BEGIN container_bottombuttons}
+          <DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+            {BEGIN container_buttons}
+              <DIV class="form-group" data-container="buttons" data-pageid="{$pageid}" {$buttons_chiddenattr}>
+                {BEGIN container_leftbuttons}
+                  <DIV class="col-md-3 col-md-offset-3" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>
+                    {BEGIN viewbuttons}
+                      {BEGIN back_button}
+                        <BUTTON class="btn btn-primary" {$backbutton_attrs}>
+                          一覧に戻る
+                        </BUTTON>
+                      {END back_button}
+                      {BEGIN close_button}
+                        <BUTTON class="btn btn-primary" href="#" {$closebutton_attrs}>
+                          ウィンドウを閉じる
+                        </BUTTON>
+                      {END close_button}
+                    {END viewbuttons}
+                  </DIV>
+                {END container_leftbuttons}
+                {BEGIN container_leftbuttons_1}
+                  <DIV class="text-right col-md-3" data-container="leftbuttons_1" data-pageid="{$pageid}" {$leftbuttons_1_chiddenattr}>
+                    {BEGIN rightviewbuttons}
+                      <DIV class="btn-group" role="group">
+                        {BEGIN prev_button}
+                          <BUTTON class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}>
+                            <SPAN class="glyphicon glyphicon-chevron-left">
+                            </SPAN>
+                          </BUTTON>
+                        {END prev_button}
+                        {BEGIN next_button}
+                          <BUTTON class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}>
+                            <SPAN class="glyphicon glyphicon-chevron-right">
+                            </SPAN>
+                          </BUTTON>
+                        {END next_button}
+                        {BEGIN view_menu_button}
+                          <DIV class="btn-group dropup" role="group">
+                            <BUTTON class="btn btn-default dropdown-toggle {$groupbutton_class}" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+                              <SPAN class="glyphicon glyphicon-menu-hamburger">
+                              </SPAN>
+                            </BUTTON>
+                            <UL class="dropdown-menu dropdown-left">
+                              {BEGIN edit_page_button}
+                                <LI>
+                                  <A href="#" {$edit_page_button_attrs}>
+                                    編集
+                                  </A>
+                                </LI>
+                              {END edit_page_button}
+                            </UL>
+                          </DIV>
+                        {END view_menu_button}
+                      </DIV>
+                    {END rightviewbuttons}
+                  </DIV>
+                {END container_leftbuttons_1}
+              </DIV>
+            {END container_buttons}
+          </DIV>
+        {END container_bottombuttons}
+      </DIV>
+      <DIV class="bs-middle">
+        <DIV class="bs-topmiddle">
+        </DIV>
+        <DIV class="bs-left" {$blockattr_left}>
+        </DIV>
+        <DIV class="bs-center">
+        </DIV>
+        <DIV class="bs-right">
+        </DIV>
+      </DIV>
+      <DIV class="bs-bottom">
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

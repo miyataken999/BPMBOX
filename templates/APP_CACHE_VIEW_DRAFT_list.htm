@@ -1,0 +1,1705 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="APP_CACHE_VIEW_DRAFT_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="APP_CACHE_VIEW_DRAFT_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="APP_CACHE_VIEW_DRAFT_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+	{$simpleSearchFieldCombo}
+	
+	{$simpleSearchTypeCombo}
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+		{BEGIN updateselected_link}
+		<button type="button" class="btn btn-default" {$updateselectedlink_attrs} disabled>Update selected</button>
+	{END updateselected_link}
+		{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="APP_CACHE_VIEW_DRAFT_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="APP_CACHE_VIEW_DRAFT_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_UID" checked="checked" value="1" data-field="APP_UID">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_TITLE" checked="checked" value="1" data-field="APP_TITLE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_TITLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_INDEX" checked="checked" value="1" data-field="DEL_INDEX">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_INDEX}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_LAST_INDEX" checked="checked" value="1" data-field="DEL_LAST_INDEX">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_LAST_INDEX}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_NUMBER" checked="checked" value="1" data-field="APP_NUMBER">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_NUMBER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_STATUS" checked="checked" value="1" data-field="APP_STATUS">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_STATUS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_UID" checked="checked" value="1" data-field="USR_UID">
+			  <span>{$label APP_CACHE_VIEW_DRAFT USR_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PREVIOUS_USR_UID" checked="checked" value="1" data-field="PREVIOUS_USR_UID">
+			  <span>{$label APP_CACHE_VIEW_DRAFT PREVIOUS_USR_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_UID" checked="checked" value="1" data-field="TAS_UID">
+			  <span>{$label APP_CACHE_VIEW_DRAFT TAS_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PRO_UID" checked="checked" value="1" data-field="PRO_UID">
+			  <span>{$label APP_CACHE_VIEW_DRAFT PRO_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_DELEGATE_DATE" checked="checked" value="1" data-field="DEL_DELEGATE_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_DELEGATE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_INIT_DATE" checked="checked" value="1" data-field="DEL_INIT_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_INIT_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_FINISH_DATE" checked="checked" value="1" data-field="DEL_FINISH_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_FINISH_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_TASK_DUE_DATE" checked="checked" value="1" data-field="DEL_TASK_DUE_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_TASK_DUE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_RISK_DATE" checked="checked" value="1" data-field="DEL_RISK_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_RISK_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_THREAD_STATUS" checked="checked" value="1" data-field="DEL_THREAD_STATUS">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_THREAD_STATUS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_THREAD_STATUS" checked="checked" value="1" data-field="APP_THREAD_STATUS">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_THREAD_STATUS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_PRO_TITLE" checked="checked" value="1" data-field="APP_PRO_TITLE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_PRO_TITLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_TAS_TITLE" checked="checked" value="1" data-field="APP_TAS_TITLE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_TAS_TITLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_CURRENT_USER" checked="checked" value="1" data-field="APP_CURRENT_USER">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_CURRENT_USER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_DEL_PREVIOUS_USER" checked="checked" value="1" data-field="APP_DEL_PREVIOUS_USER">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_DEL_PREVIOUS_USER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_PRIORITY" checked="checked" value="1" data-field="DEL_PRIORITY">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_PRIORITY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_DURATION" checked="checked" value="1" data-field="DEL_DURATION">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_DURATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_QUEUE_DURATION" checked="checked" value="1" data-field="DEL_QUEUE_DURATION">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_QUEUE_DURATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_DELAY_DURATION" checked="checked" value="1" data-field="DEL_DELAY_DURATION">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_DELAY_DURATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_STARTED" checked="checked" value="1" data-field="DEL_STARTED">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_STARTED}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_FINISHED" checked="checked" value="1" data-field="DEL_FINISHED">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_FINISHED}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_DEL_DELAYED" checked="checked" value="1" data-field="DEL_DELAYED">
+			  <span>{$label APP_CACHE_VIEW_DRAFT DEL_DELAYED}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_CREATE_DATE" checked="checked" value="1" data-field="APP_CREATE_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_CREATE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_FINISH_DATE" checked="checked" value="1" data-field="APP_FINISH_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_FINISH_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_UPDATE_DATE" checked="checked" value="1" data-field="APP_UPDATE_DATE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_UPDATE_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_OVERDUE_PERCENTAGE" checked="checked" value="1" data-field="APP_OVERDUE_PERCENTAGE">
+			  <span>{$label APP_CACHE_VIEW_DRAFT APP_OVERDUE_PERCENTAGE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_UID}";
+	}
+	.bs-gridcell[data-field=DEL_INDEX]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_INDEX}";
+	}
+	.bs-gridcell[data-field=DEL_LAST_INDEX]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_LAST_INDEX}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_STATUS}";
+	}
+	.bs-gridcell[data-field=USR_UID]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT USR_UID}";
+	}
+	.bs-gridcell[data-field=PREVIOUS_USR_UID]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT PREVIOUS_USR_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT TAS_UID}";
+	}
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT PRO_UID}";
+	}
+	.bs-gridcell[data-field=DEL_DELEGATE_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_DELEGATE_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_INIT_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_INIT_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_FINISH_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_FINISH_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_TASK_DUE_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_TASK_DUE_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_RISK_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_RISK_DATE}";
+	}
+	.bs-gridcell[data-field=DEL_THREAD_STATUS]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_THREAD_STATUS}";
+	}
+	.bs-gridcell[data-field=APP_THREAD_STATUS]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_THREAD_STATUS}";
+	}
+	.bs-gridcell[data-field=APP_TITLE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_PRO_TITLE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_PRO_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_TAS_TITLE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_TAS_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_CURRENT_USER]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_CURRENT_USER}";
+	}
+	.bs-gridcell[data-field=APP_DEL_PREVIOUS_USER]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_DEL_PREVIOUS_USER}";
+	}
+	.bs-gridcell[data-field=DEL_PRIORITY]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_PRIORITY}";
+	}
+	.bs-gridcell[data-field=DEL_DURATION]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_DURATION}";
+	}
+	.bs-gridcell[data-field=DEL_QUEUE_DURATION]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_QUEUE_DURATION}";
+	}
+	.bs-gridcell[data-field=DEL_DELAY_DURATION]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_DELAY_DURATION}";
+	}
+	.bs-gridcell[data-field=DEL_STARTED]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_STARTED}";
+	}
+	.bs-gridcell[data-field=DEL_FINISHED]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_FINISHED}";
+	}
+	.bs-gridcell[data-field=DEL_DELAYED]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT DEL_DELAYED}";
+	}
+	.bs-gridcell[data-field=APP_CREATE_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=APP_FINISH_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_FINISH_DATE}";
+	}
+	.bs-gridcell[data-field=APP_UPDATE_DATE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=APP_OVERDUE_PERCENTAGE]:before {
+		content: "{$label APP_CACHE_VIEW_DRAFT APP_OVERDUE_PERCENTAGE}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN APP_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_UID_class}" data-field=APP_UID>
+									{BEGIN APP_UID_fieldheader}
+																				<span {$APP_UID_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_UID}
+										</span>
+									{END APP_UID_fieldheader}
+									</th>
+									{END APP_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_TITLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_TITLE_class}" data-field=APP_TITLE>
+									{BEGIN APP_TITLE_fieldheader}
+																				<span {$APP_TITLE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_TITLE}
+										</span>
+									{END APP_TITLE_fieldheader}
+									</th>
+									{END APP_TITLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_INDEX_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_INDEX_class}" data-field=DEL_INDEX>
+									{BEGIN DEL_INDEX_fieldheader}
+																				<span {$DEL_INDEX_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_INDEX}
+										</span>
+									{END DEL_INDEX_fieldheader}
+									</th>
+									{END DEL_INDEX_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_LAST_INDEX_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_LAST_INDEX_class}" data-field=DEL_LAST_INDEX>
+									{BEGIN DEL_LAST_INDEX_fieldheader}
+																				<span {$DEL_LAST_INDEX_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_LAST_INDEX}
+										</span>
+									{END DEL_LAST_INDEX_fieldheader}
+									</th>
+									{END DEL_LAST_INDEX_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_NUMBER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_NUMBER_class}" data-field=APP_NUMBER>
+									{BEGIN APP_NUMBER_fieldheader}
+																				<span {$APP_NUMBER_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_NUMBER}
+										</span>
+									{END APP_NUMBER_fieldheader}
+									</th>
+									{END APP_NUMBER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_STATUS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_STATUS_class}" data-field=APP_STATUS>
+									{BEGIN APP_STATUS_fieldheader}
+																				<span {$APP_STATUS_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_STATUS}
+										</span>
+									{END APP_STATUS_fieldheader}
+									</th>
+									{END APP_STATUS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_UID_class}" data-field=USR_UID>
+									{BEGIN USR_UID_fieldheader}
+																				<span {$USR_UID_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT USR_UID}
+										</span>
+									{END USR_UID_fieldheader}
+									</th>
+									{END USR_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PREVIOUS_USR_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PREVIOUS_USR_UID_class}" data-field=PREVIOUS_USR_UID>
+									{BEGIN PREVIOUS_USR_UID_fieldheader}
+																				<span {$PREVIOUS_USR_UID_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT PREVIOUS_USR_UID}
+										</span>
+									{END PREVIOUS_USR_UID_fieldheader}
+									</th>
+									{END PREVIOUS_USR_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_UID_class}" data-field=TAS_UID>
+									{BEGIN TAS_UID_fieldheader}
+																				<span {$TAS_UID_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT TAS_UID}
+										</span>
+									{END TAS_UID_fieldheader}
+									</th>
+									{END TAS_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PRO_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PRO_UID_class}" data-field=PRO_UID>
+									{BEGIN PRO_UID_fieldheader}
+																				<span {$PRO_UID_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT PRO_UID}
+										</span>
+									{END PRO_UID_fieldheader}
+									</th>
+									{END PRO_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_DELEGATE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_DELEGATE_DATE_class}" data-field=DEL_DELEGATE_DATE>
+									{BEGIN DEL_DELEGATE_DATE_fieldheader}
+																				<span {$DEL_DELEGATE_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_DELEGATE_DATE}
+										</span>
+									{END DEL_DELEGATE_DATE_fieldheader}
+									</th>
+									{END DEL_DELEGATE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_INIT_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_INIT_DATE_class}" data-field=DEL_INIT_DATE>
+									{BEGIN DEL_INIT_DATE_fieldheader}
+																				<span {$DEL_INIT_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_INIT_DATE}
+										</span>
+									{END DEL_INIT_DATE_fieldheader}
+									</th>
+									{END DEL_INIT_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_FINISH_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_FINISH_DATE_class}" data-field=DEL_FINISH_DATE>
+									{BEGIN DEL_FINISH_DATE_fieldheader}
+																				<span {$DEL_FINISH_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_FINISH_DATE}
+										</span>
+									{END DEL_FINISH_DATE_fieldheader}
+									</th>
+									{END DEL_FINISH_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_TASK_DUE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_TASK_DUE_DATE_class}" data-field=DEL_TASK_DUE_DATE>
+									{BEGIN DEL_TASK_DUE_DATE_fieldheader}
+																				<span {$DEL_TASK_DUE_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_TASK_DUE_DATE}
+										</span>
+									{END DEL_TASK_DUE_DATE_fieldheader}
+									</th>
+									{END DEL_TASK_DUE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_RISK_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_RISK_DATE_class}" data-field=DEL_RISK_DATE>
+									{BEGIN DEL_RISK_DATE_fieldheader}
+																				<span {$DEL_RISK_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_RISK_DATE}
+										</span>
+									{END DEL_RISK_DATE_fieldheader}
+									</th>
+									{END DEL_RISK_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_THREAD_STATUS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_THREAD_STATUS_class}" data-field=DEL_THREAD_STATUS>
+									{BEGIN DEL_THREAD_STATUS_fieldheader}
+																				<span {$DEL_THREAD_STATUS_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_THREAD_STATUS}
+										</span>
+									{END DEL_THREAD_STATUS_fieldheader}
+									</th>
+									{END DEL_THREAD_STATUS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_THREAD_STATUS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_THREAD_STATUS_class}" data-field=APP_THREAD_STATUS>
+									{BEGIN APP_THREAD_STATUS_fieldheader}
+																				<span {$APP_THREAD_STATUS_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_THREAD_STATUS}
+										</span>
+									{END APP_THREAD_STATUS_fieldheader}
+									</th>
+									{END APP_THREAD_STATUS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_PRO_TITLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_PRO_TITLE_class}" data-field=APP_PRO_TITLE>
+									{BEGIN APP_PRO_TITLE_fieldheader}
+																				<span {$APP_PRO_TITLE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_PRO_TITLE}
+										</span>
+									{END APP_PRO_TITLE_fieldheader}
+									</th>
+									{END APP_PRO_TITLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_TAS_TITLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_TAS_TITLE_class}" data-field=APP_TAS_TITLE>
+									{BEGIN APP_TAS_TITLE_fieldheader}
+																				<span {$APP_TAS_TITLE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_TAS_TITLE}
+										</span>
+									{END APP_TAS_TITLE_fieldheader}
+									</th>
+									{END APP_TAS_TITLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_CURRENT_USER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_CURRENT_USER_class}" data-field=APP_CURRENT_USER>
+									{BEGIN APP_CURRENT_USER_fieldheader}
+																				<span {$APP_CURRENT_USER_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_CURRENT_USER}
+										</span>
+									{END APP_CURRENT_USER_fieldheader}
+									</th>
+									{END APP_CURRENT_USER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_DEL_PREVIOUS_USER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_DEL_PREVIOUS_USER_class}" data-field=APP_DEL_PREVIOUS_USER>
+									{BEGIN APP_DEL_PREVIOUS_USER_fieldheader}
+																				<span {$APP_DEL_PREVIOUS_USER_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_DEL_PREVIOUS_USER}
+										</span>
+									{END APP_DEL_PREVIOUS_USER_fieldheader}
+									</th>
+									{END APP_DEL_PREVIOUS_USER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_PRIORITY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_PRIORITY_class}" data-field=DEL_PRIORITY>
+									{BEGIN DEL_PRIORITY_fieldheader}
+																				<span {$DEL_PRIORITY_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_PRIORITY}
+										</span>
+									{END DEL_PRIORITY_fieldheader}
+									</th>
+									{END DEL_PRIORITY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_DURATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_DURATION_class}" data-field=DEL_DURATION>
+									{BEGIN DEL_DURATION_fieldheader}
+																				<span {$DEL_DURATION_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_DURATION}
+										</span>
+									{END DEL_DURATION_fieldheader}
+									</th>
+									{END DEL_DURATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_QUEUE_DURATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_QUEUE_DURATION_class}" data-field=DEL_QUEUE_DURATION>
+									{BEGIN DEL_QUEUE_DURATION_fieldheader}
+																				<span {$DEL_QUEUE_DURATION_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_QUEUE_DURATION}
+										</span>
+									{END DEL_QUEUE_DURATION_fieldheader}
+									</th>
+									{END DEL_QUEUE_DURATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_DELAY_DURATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_DELAY_DURATION_class}" data-field=DEL_DELAY_DURATION>
+									{BEGIN DEL_DELAY_DURATION_fieldheader}
+																				<span {$DEL_DELAY_DURATION_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_DELAY_DURATION}
+										</span>
+									{END DEL_DELAY_DURATION_fieldheader}
+									</th>
+									{END DEL_DELAY_DURATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_STARTED_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_STARTED_class}" data-field=DEL_STARTED>
+									{BEGIN DEL_STARTED_fieldheader}
+																				<span {$DEL_STARTED_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_STARTED}
+										</span>
+									{END DEL_STARTED_fieldheader}
+									</th>
+									{END DEL_STARTED_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_FINISHED_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_FINISHED_class}" data-field=DEL_FINISHED>
+									{BEGIN DEL_FINISHED_fieldheader}
+																				<span {$DEL_FINISHED_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_FINISHED}
+										</span>
+									{END DEL_FINISHED_fieldheader}
+									</th>
+									{END DEL_FINISHED_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DEL_DELAYED_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DEL_DELAYED_class}" data-field=DEL_DELAYED>
+									{BEGIN DEL_DELAYED_fieldheader}
+																				<span {$DEL_DELAYED_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT DEL_DELAYED}
+										</span>
+									{END DEL_DELAYED_fieldheader}
+									</th>
+									{END DEL_DELAYED_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_CREATE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_CREATE_DATE_class}" data-field=APP_CREATE_DATE>
+									{BEGIN APP_CREATE_DATE_fieldheader}
+																				<span {$APP_CREATE_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_CREATE_DATE}
+										</span>
+									{END APP_CREATE_DATE_fieldheader}
+									</th>
+									{END APP_CREATE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_FINISH_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_FINISH_DATE_class}" data-field=APP_FINISH_DATE>
+									{BEGIN APP_FINISH_DATE_fieldheader}
+																				<span {$APP_FINISH_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_FINISH_DATE}
+										</span>
+									{END APP_FINISH_DATE_fieldheader}
+									</th>
+									{END APP_FINISH_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_UPDATE_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_UPDATE_DATE_class}" data-field=APP_UPDATE_DATE>
+									{BEGIN APP_UPDATE_DATE_fieldheader}
+																				<span {$APP_UPDATE_DATE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_UPDATE_DATE}
+										</span>
+									{END APP_UPDATE_DATE_fieldheader}
+									</th>
+									{END APP_UPDATE_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_OVERDUE_PERCENTAGE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_OVERDUE_PERCENTAGE_class}" data-field=APP_OVERDUE_PERCENTAGE>
+									{BEGIN APP_OVERDUE_PERCENTAGE_fieldheader}
+																				<span {$APP_OVERDUE_PERCENTAGE_orderlinkattrs}>
+											{$label APP_CACHE_VIEW_DRAFT APP_OVERDUE_PERCENTAGE}
+										</span>
+									{END APP_OVERDUE_PERCENTAGE_fieldheader}
+									</th>
+									{END APP_OVERDUE_PERCENTAGE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN APP_UID_fieldcolumn}
+	<td class="bs-gridcell {$APP_UID_class}"  data-field=APP_UID {$rowstyle} {$recordattrs}>
+		{$APP_UID_value}
+	</td>
+{END APP_UID_fieldcolumn}
+
+
+	{BEGIN APP_TITLE_fieldcolumn}
+	<td class="bs-gridcell {$APP_TITLE_class}"  data-field=APP_TITLE {$rowstyle} {$recordattrs}>
+		{$APP_TITLE_value}
+	</td>
+{END APP_TITLE_fieldcolumn}
+
+
+	{BEGIN DEL_INDEX_fieldcolumn}
+	<td class="bs-gridcell {$DEL_INDEX_class}"  data-field=DEL_INDEX {$rowstyle} {$recordattrs}>
+		{$DEL_INDEX_value}
+	</td>
+{END DEL_INDEX_fieldcolumn}
+
+
+	{BEGIN DEL_LAST_INDEX_fieldcolumn}
+	<td class="bs-gridcell {$DEL_LAST_INDEX_class}"  data-field=DEL_LAST_INDEX {$rowstyle} {$recordattrs}>
+		{$DEL_LAST_INDEX_value}
+	</td>
+{END DEL_LAST_INDEX_fieldcolumn}
+
+
+	{BEGIN APP_NUMBER_fieldcolumn}
+	<td class="bs-gridcell {$APP_NUMBER_class}"  data-field=APP_NUMBER {$rowstyle} {$recordattrs}>
+		{$APP_NUMBER_value}
+	</td>
+{END APP_NUMBER_fieldcolumn}
+
+
+	{BEGIN APP_STATUS_fieldcolumn}
+	<td class="bs-gridcell {$APP_STATUS_class}"  data-field=APP_STATUS {$rowstyle} {$recordattrs}>
+		{$APP_STATUS_value}
+	</td>
+{END APP_STATUS_fieldcolumn}
+
+
+	{BEGIN USR_UID_fieldcolumn}
+	<td class="bs-gridcell {$USR_UID_class}"  data-field=USR_UID {$rowstyle} {$recordattrs}>
+		{$USR_UID_value}
+	</td>
+{END USR_UID_fieldcolumn}
+
+
+	{BEGIN PREVIOUS_USR_UID_fieldcolumn}
+	<td class="bs-gridcell {$PREVIOUS_USR_UID_class}"  data-field=PREVIOUS_USR_UID {$rowstyle} {$recordattrs}>
+		{$PREVIOUS_USR_UID_value}
+	</td>
+{END PREVIOUS_USR_UID_fieldcolumn}
+
+
+	{BEGIN TAS_UID_fieldcolumn}
+	<td class="bs-gridcell {$TAS_UID_class}"  data-field=TAS_UID {$rowstyle} {$recordattrs}>
+		{$TAS_UID_value}
+	</td>
+{END TAS_UID_fieldcolumn}
+
+
+	{BEGIN PRO_UID_fieldcolumn}
+	<td class="bs-gridcell {$PRO_UID_class}"  data-field=PRO_UID {$rowstyle} {$recordattrs}>
+		{$PRO_UID_value}
+	</td>
+{END PRO_UID_fieldcolumn}
+
+
+	{BEGIN DEL_DELEGATE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$DEL_DELEGATE_DATE_class}"  data-field=DEL_DELEGATE_DATE {$rowstyle} {$recordattrs}>
+		{$DEL_DELEGATE_DATE_value}
+	</td>
+{END DEL_DELEGATE_DATE_fieldcolumn}
+
+
+	{BEGIN DEL_INIT_DATE_fieldcolumn}
+	<td class="bs-gridcell {$DEL_INIT_DATE_class}"  data-field=DEL_INIT_DATE {$rowstyle} {$recordattrs}>
+		{$DEL_INIT_DATE_value}
+	</td>
+{END DEL_INIT_DATE_fieldcolumn}
+
+
+	{BEGIN DEL_FINISH_DATE_fieldcolumn}
+	<td class="bs-gridcell {$DEL_FINISH_DATE_class}"  data-field=DEL_FINISH_DATE {$rowstyle} {$recordattrs}>
+		{$DEL_FINISH_DATE_value}
+	</td>
+{END DEL_FINISH_DATE_fieldcolumn}
+
+
+	{BEGIN DEL_TASK_DUE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$DEL_TASK_DUE_DATE_class}"  data-field=DEL_TASK_DUE_DATE {$rowstyle} {$recordattrs}>
+		{$DEL_TASK_DUE_DATE_value}
+	</td>
+{END DEL_TASK_DUE_DATE_fieldcolumn}
+
+
+	{BEGIN DEL_RISK_DATE_fieldcolumn}
+	<td class="bs-gridcell {$DEL_RISK_DATE_class}"  data-field=DEL_RISK_DATE {$rowstyle} {$recordattrs}>
+		{$DEL_RISK_DATE_value}
+	</td>
+{END DEL_RISK_DATE_fieldcolumn}
+
+
+	{BEGIN DEL_THREAD_STATUS_fieldcolumn}
+	<td class="bs-gridcell {$DEL_THREAD_STATUS_class}"  data-field=DEL_THREAD_STATUS {$rowstyle} {$recordattrs}>
+		{$DEL_THREAD_STATUS_value}
+	</td>
+{END DEL_THREAD_STATUS_fieldcolumn}
+
+
+	{BEGIN APP_THREAD_STATUS_fieldcolumn}
+	<td class="bs-gridcell {$APP_THREAD_STATUS_class}"  data-field=APP_THREAD_STATUS {$rowstyle} {$recordattrs}>
+		{$APP_THREAD_STATUS_value}
+	</td>
+{END APP_THREAD_STATUS_fieldcolumn}
+
+
+	{BEGIN APP_PRO_TITLE_fieldcolumn}
+	<td class="bs-gridcell {$APP_PRO_TITLE_class}"  data-field=APP_PRO_TITLE {$rowstyle} {$recordattrs}>
+		{$APP_PRO_TITLE_value}
+	</td>
+{END APP_PRO_TITLE_fieldcolumn}
+
+
+	{BEGIN APP_TAS_TITLE_fieldcolumn}
+	<td class="bs-gridcell {$APP_TAS_TITLE_class}"  data-field=APP_TAS_TITLE {$rowstyle} {$recordattrs}>
+		{$APP_TAS_TITLE_value}
+	</td>
+{END APP_TAS_TITLE_fieldcolumn}
+
+
+	{BEGIN APP_CURRENT_USER_fieldcolumn}
+	<td class="bs-gridcell {$APP_CURRENT_USER_class}"  data-field=APP_CURRENT_USER {$rowstyle} {$recordattrs}>
+		{$APP_CURRENT_USER_value}
+	</td>
+{END APP_CURRENT_USER_fieldcolumn}
+
+
+	{BEGIN APP_DEL_PREVIOUS_USER_fieldcolumn}
+	<td class="bs-gridcell {$APP_DEL_PREVIOUS_USER_class}"  data-field=APP_DEL_PREVIOUS_USER {$rowstyle} {$recordattrs}>
+		{$APP_DEL_PREVIOUS_USER_value}
+	</td>
+{END APP_DEL_PREVIOUS_USER_fieldcolumn}
+
+
+	{BEGIN DEL_PRIORITY_fieldcolumn}
+	<td class="bs-gridcell {$DEL_PRIORITY_class}"  data-field=DEL_PRIORITY {$rowstyle} {$recordattrs}>
+		{$DEL_PRIORITY_value}
+	</td>
+{END DEL_PRIORITY_fieldcolumn}
+
+
+	{BEGIN DEL_DURATION_fieldcolumn}
+	<td class="bs-gridcell {$DEL_DURATION_class}"  data-field=DEL_DURATION {$rowstyle} {$recordattrs}>
+		{$DEL_DURATION_value}
+	</td>
+{END DEL_DURATION_fieldcolumn}
+
+
+	{BEGIN DEL_QUEUE_DURATION_fieldcolumn}
+	<td class="bs-gridcell {$DEL_QUEUE_DURATION_class}"  data-field=DEL_QUEUE_DURATION {$rowstyle} {$recordattrs}>
+		{$DEL_QUEUE_DURATION_value}
+	</td>
+{END DEL_QUEUE_DURATION_fieldcolumn}
+
+
+	{BEGIN DEL_DELAY_DURATION_fieldcolumn}
+	<td class="bs-gridcell {$DEL_DELAY_DURATION_class}"  data-field=DEL_DELAY_DURATION {$rowstyle} {$recordattrs}>
+		{$DEL_DELAY_DURATION_value}
+	</td>
+{END DEL_DELAY_DURATION_fieldcolumn}
+
+
+	{BEGIN DEL_STARTED_fieldcolumn}
+	<td class="bs-gridcell {$DEL_STARTED_class}"  data-field=DEL_STARTED {$rowstyle} {$recordattrs}>
+		{$DEL_STARTED_value}
+	</td>
+{END DEL_STARTED_fieldcolumn}
+
+
+	{BEGIN DEL_FINISHED_fieldcolumn}
+	<td class="bs-gridcell {$DEL_FINISHED_class}"  data-field=DEL_FINISHED {$rowstyle} {$recordattrs}>
+		{$DEL_FINISHED_value}
+	</td>
+{END DEL_FINISHED_fieldcolumn}
+
+
+	{BEGIN DEL_DELAYED_fieldcolumn}
+	<td class="bs-gridcell {$DEL_DELAYED_class}"  data-field=DEL_DELAYED {$rowstyle} {$recordattrs}>
+		{$DEL_DELAYED_value}
+	</td>
+{END DEL_DELAYED_fieldcolumn}
+
+
+	{BEGIN APP_CREATE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$APP_CREATE_DATE_class}"  data-field=APP_CREATE_DATE {$rowstyle} {$recordattrs}>
+		{$APP_CREATE_DATE_value}
+	</td>
+{END APP_CREATE_DATE_fieldcolumn}
+
+
+	{BEGIN APP_FINISH_DATE_fieldcolumn}
+	<td class="bs-gridcell {$APP_FINISH_DATE_class}"  data-field=APP_FINISH_DATE {$rowstyle} {$recordattrs}>
+		{$APP_FINISH_DATE_value}
+	</td>
+{END APP_FINISH_DATE_fieldcolumn}
+
+
+	{BEGIN APP_UPDATE_DATE_fieldcolumn}
+	<td class="bs-gridcell {$APP_UPDATE_DATE_class}"  data-field=APP_UPDATE_DATE {$rowstyle} {$recordattrs}>
+		{$APP_UPDATE_DATE_value}
+	</td>
+{END APP_UPDATE_DATE_fieldcolumn}
+
+
+	{BEGIN APP_OVERDUE_PERCENTAGE_fieldcolumn}
+	<td class="bs-gridcell {$APP_OVERDUE_PERCENTAGE_class}"  data-field=APP_OVERDUE_PERCENTAGE {$rowstyle} {$recordattrs}>
+		{$APP_OVERDUE_PERCENTAGE_value}
+	</td>
+{END APP_OVERDUE_PERCENTAGE_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel APPLICATION_Report rprint}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_3{background-color: #FFB6C1;}
+		td.nbgroup_3{background-color: #FFB6C1;}
+		td.header_3 {
+			background-color: #D89AA4; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_4{background-color: #FFFACD;}
+		td.nbgroup_4{background-color: #FFFACD;}
+		td.header_4 {
+			background-color: #D8D4AE; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:120%;
+/*		padding: 4px 8px;*/
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+	         <style>
+            .report-title		{font:bold 12px arial, verdana, sans serif, helvetica;}
+            table.report		{border-collapse: collapse; border: solid 2px #000;}
+			table.report td	{padding: 3px; border: solid 1px #ccc;}
+            .groupsummary		{border-bottom: solid 1px #000;}
+            td.pagesummary		{background: #ffffbb;}
+            td.globalsummary	{background: #ffefb0;}
+			.page-summary		{border-top: 4px double #333;}
+			select.apply-style	{line-height: 1.4em; width: 90%;}
+			.buttonborder 		{margin-right: 10px;}
+			#wnd_header			{cursor: move;}
+			{$styleStr}
+		</style>
+
+{BEGIN group_field_colors}
+		<style>
+            td.group{$iteration}		{background: #{$color1};}
+            td.summary{$iteration}		{background: #{$color2};}
+		</style>
+{END group_field_colors}			
+
+	{$report_cross_header}
+	<table class="report" width="95%" cellpadding="1" cellspacing="0" align="center" id="legend" border=0>
+<tbody>
+		<tr>
+			<td class="blackshade">&nbsp;</td>
+			{BEGIN group_header}
+				<td class="blackshade">{$gr_value}</td>
+			{END group_header}
+			{BEGIN cross_totals}
+			<td class="globalsummary">{$totals}</td>
+			{END cross_totals}
+		</tr>
+	{BEGIN grid_row}
+		<tr>
+			<td class="blackshade">{$group_y}</td>
+			{BEGIN row_record}
+				<td class="data" id={$id_data}>{$row_value}</td>
+			{END row_record}
+			{BEGIN cross_totals}
+			<td class="globalsummary" id={$id_row_summary}>{$row_summary}</td>
+			{END cross_totals}
+		</tr>
+	{END grid_row}
+		{BEGIN cross_totals}
+		<tr>
+			<td class="pagesummary">{$totals}</td>
+			{BEGIN col_summary}
+				<td class="pagesummary" id={$id_col_summary}>{$col_summary}</td>
+			{END col_summary}
+			<td class="pagesummary" id="id_total_summary">{$total_summary}</td>
+		</tr>
+		{END cross_totals}
+</tbody>
+	</table>
+	<div id="location" src={$reportName} style="display: none;"></div>
+
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

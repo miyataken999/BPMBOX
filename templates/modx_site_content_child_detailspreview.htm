@@ -1,0 +1,83 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$link_class}">{$label modx_site_content_child link}</th>
+			<th class="{$url_class}">{$label modx_site_content_child url}</th>
+			<th class="{$content_class}">{$label modx_site_content_child content}</th>
+			<th class="{$id_class}">{$label modx_site_content_child id}</th>
+			<th class="{$menutitle_class}">{$label modx_site_content_child menutitle}</th>
+			<th class="{$longtitle_class}">{$label modx_site_content_child longtitle}</th>
+			<th class="{$pagetitle_class}">{$label modx_site_content_child pagetitle}</th>
+			<th class="{$template_class}">{$label modx_site_content_child template}</th>
+			<th class="{$description_class}">{$label modx_site_content_child description}</th>
+			<th class="{$alias_class}">{$label modx_site_content_child alias}</th>
+			<th class="{$alias_visible_class}">{$label modx_site_content_child alias_visible}</th>
+			<th class="{$published_class}">{$label modx_site_content_child published}</th>
+			<th class="{$menuindex_class}">{$label modx_site_content_child menuindex}</th>
+			<th class="{$modx_site_snippet_id_class}">{$label modx_site_content_child modx_site_snippet_id}</th>
+			<th class="{$modex_site_htmlsnippet_id_class}">{$label modx_site_content_child modex_site_htmlsnippet_id}</th>
+			<th class="{$type_class}">{$label modx_site_content_child type}</th>
+			<th class="{$link_attributes_class}">{$label modx_site_content_child link_attributes}</th>
+			<th class="{$parent_class}">{$label modx_site_content_child parent}</th>
+			<th class="{$searchable_class}">{$label modx_site_content_child searchable}</th>
+			<th class="{$cacheable_class}">{$label modx_site_content_child cacheable}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$link_class}">{$link_value}</td>
+			<td class="{$url_class}">{$url_value}</td>
+			<td class="{$content_class}">{$content_value}</td>
+			<td class="{$id_class}">{$id_value}</td>
+			<td class="{$menutitle_class}">{$menutitle_value}</td>
+			<td class="{$longtitle_class}">{$longtitle_value}</td>
+			<td class="{$pagetitle_class}">{$pagetitle_value}</td>
+			<td class="{$template_class}">{$template_value}</td>
+			<td class="{$description_class}">{$description_value}</td>
+			<td class="{$alias_class}">{$alias_value}</td>
+			<td class="{$alias_visible_class}">{$alias_visible_value}</td>
+			<td class="{$published_class}">{$published_value}</td>
+			<td class="{$menuindex_class}">{$menuindex_value}</td>
+			<td class="{$modx_site_snippet_id_class}">{$modx_site_snippet_id_value}</td>
+			<td class="{$modex_site_htmlsnippet_id_class}">{$modex_site_htmlsnippet_id_value}</td>
+			<td class="{$type_class}">{$type_value}</td>
+			<td class="{$link_attributes_class}">{$link_attributes_value}</td>
+			<td class="{$parent_class}">{$parent_value}</td>
+			<td class="{$searchable_class}">{$searchable_value}</td>
+			<td class="{$cacheable_class}">{$cacheable_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

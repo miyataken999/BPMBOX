@@ -1,0 +1,469 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>PDFビュー</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel USERS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN USR_UID_fieldheadercolumn}
+			<th class="{$USR_UID_class}" {$USR_UID_style}  data-field="USR_UID">
+				{$label USERS USR_UID}
+			</th>
+			{END USR_UID_fieldheadercolumn}
+			{BEGIN USR_USERNAME_fieldheadercolumn}
+			<th class="{$USR_USERNAME_class}" {$USR_USERNAME_style}  data-field="USR_USERNAME">
+				{$label USERS USR_USERNAME}
+			</th>
+			{END USR_USERNAME_fieldheadercolumn}
+			{BEGIN USR_PASSWORD_fieldheadercolumn}
+			<th class="{$USR_PASSWORD_class}" {$USR_PASSWORD_style}  data-field="USR_PASSWORD">
+				{$label USERS USR_PASSWORD}
+			</th>
+			{END USR_PASSWORD_fieldheadercolumn}
+			{BEGIN USR_FIRSTNAME_fieldheadercolumn}
+			<th class="{$USR_FIRSTNAME_class}" {$USR_FIRSTNAME_style}  data-field="USR_FIRSTNAME">
+				{$label USERS USR_FIRSTNAME}
+			</th>
+			{END USR_FIRSTNAME_fieldheadercolumn}
+			{BEGIN USR_LASTNAME_fieldheadercolumn}
+			<th class="{$USR_LASTNAME_class}" {$USR_LASTNAME_style}  data-field="USR_LASTNAME">
+				{$label USERS USR_LASTNAME}
+			</th>
+			{END USR_LASTNAME_fieldheadercolumn}
+			{BEGIN USR_EMAIL_fieldheadercolumn}
+			<th class="{$USR_EMAIL_class}" {$USR_EMAIL_style}  data-field="USR_EMAIL">
+				{$label USERS USR_EMAIL}
+			</th>
+			{END USR_EMAIL_fieldheadercolumn}
+			{BEGIN USR_DUE_DATE_fieldheadercolumn}
+			<th class="{$USR_DUE_DATE_class}" {$USR_DUE_DATE_style}  data-field="USR_DUE_DATE">
+				{$label USERS USR_DUE_DATE}
+			</th>
+			{END USR_DUE_DATE_fieldheadercolumn}
+			{BEGIN USR_CREATE_DATE_fieldheadercolumn}
+			<th class="{$USR_CREATE_DATE_class}" {$USR_CREATE_DATE_style}  data-field="USR_CREATE_DATE">
+				{$label USERS USR_CREATE_DATE}
+			</th>
+			{END USR_CREATE_DATE_fieldheadercolumn}
+			{BEGIN USR_UPDATE_DATE_fieldheadercolumn}
+			<th class="{$USR_UPDATE_DATE_class}" {$USR_UPDATE_DATE_style}  data-field="USR_UPDATE_DATE">
+				{$label USERS USR_UPDATE_DATE}
+			</th>
+			{END USR_UPDATE_DATE_fieldheadercolumn}
+			{BEGIN USR_STATUS_fieldheadercolumn}
+			<th class="{$USR_STATUS_class}" {$USR_STATUS_style}  data-field="USR_STATUS">
+				{$label USERS USR_STATUS}
+			</th>
+			{END USR_STATUS_fieldheadercolumn}
+			{BEGIN USR_COUNTRY_fieldheadercolumn}
+			<th class="{$USR_COUNTRY_class}" {$USR_COUNTRY_style}  data-field="USR_COUNTRY">
+				{$label USERS USR_COUNTRY}
+			</th>
+			{END USR_COUNTRY_fieldheadercolumn}
+			{BEGIN USR_CITY_fieldheadercolumn}
+			<th class="{$USR_CITY_class}" {$USR_CITY_style}  data-field="USR_CITY">
+				{$label USERS USR_CITY}
+			</th>
+			{END USR_CITY_fieldheadercolumn}
+			{BEGIN USR_LOCATION_fieldheadercolumn}
+			<th class="{$USR_LOCATION_class}" {$USR_LOCATION_style}  data-field="USR_LOCATION">
+				{$label USERS USR_LOCATION}
+			</th>
+			{END USR_LOCATION_fieldheadercolumn}
+			{BEGIN USR_ADDRESS_fieldheadercolumn}
+			<th class="{$USR_ADDRESS_class}" {$USR_ADDRESS_style}  data-field="USR_ADDRESS">
+				{$label USERS USR_ADDRESS}
+			</th>
+			{END USR_ADDRESS_fieldheadercolumn}
+			{BEGIN USR_PHONE_fieldheadercolumn}
+			<th class="{$USR_PHONE_class}" {$USR_PHONE_style}  data-field="USR_PHONE">
+				{$label USERS USR_PHONE}
+			</th>
+			{END USR_PHONE_fieldheadercolumn}
+			{BEGIN USR_FAX_fieldheadercolumn}
+			<th class="{$USR_FAX_class}" {$USR_FAX_style}  data-field="USR_FAX">
+				{$label USERS USR_FAX}
+			</th>
+			{END USR_FAX_fieldheadercolumn}
+			{BEGIN USR_CELLULAR_fieldheadercolumn}
+			<th class="{$USR_CELLULAR_class}" {$USR_CELLULAR_style}  data-field="USR_CELLULAR">
+				{$label USERS USR_CELLULAR}
+			</th>
+			{END USR_CELLULAR_fieldheadercolumn}
+			{BEGIN USR_ZIP_CODE_fieldheadercolumn}
+			<th class="{$USR_ZIP_CODE_class}" {$USR_ZIP_CODE_style}  data-field="USR_ZIP_CODE">
+				{$label USERS USR_ZIP_CODE}
+			</th>
+			{END USR_ZIP_CODE_fieldheadercolumn}
+			{BEGIN DEP_UID_fieldheadercolumn}
+			<th class="{$DEP_UID_class}" {$DEP_UID_style}  data-field="DEP_UID">
+				{$label USERS DEP_UID}
+			</th>
+			{END DEP_UID_fieldheadercolumn}
+			{BEGIN USR_POSITION_fieldheadercolumn}
+			<th class="{$USR_POSITION_class}" {$USR_POSITION_style}  data-field="USR_POSITION">
+				{$label USERS USR_POSITION}
+			</th>
+			{END USR_POSITION_fieldheadercolumn}
+			{BEGIN USR_RESUME_fieldheadercolumn}
+			<th class="{$USR_RESUME_class}" {$USR_RESUME_style}  data-field="USR_RESUME">
+				{$label USERS USR_RESUME}
+			</th>
+			{END USR_RESUME_fieldheadercolumn}
+			{BEGIN USR_BIRTHDAY_fieldheadercolumn}
+			<th class="{$USR_BIRTHDAY_class}" {$USR_BIRTHDAY_style}  data-field="USR_BIRTHDAY">
+				{$label USERS USR_BIRTHDAY}
+			</th>
+			{END USR_BIRTHDAY_fieldheadercolumn}
+			{BEGIN USR_ROLE_fieldheadercolumn}
+			<th class="{$USR_ROLE_class}" {$USR_ROLE_style}  data-field="USR_ROLE">
+				{$label USERS USR_ROLE}
+			</th>
+			{END USR_ROLE_fieldheadercolumn}
+			{BEGIN USR_REPORTS_TO_fieldheadercolumn}
+			<th class="{$USR_REPORTS_TO_class}" {$USR_REPORTS_TO_style}  data-field="USR_REPORTS_TO">
+				{$label USERS USR_REPORTS_TO}
+			</th>
+			{END USR_REPORTS_TO_fieldheadercolumn}
+			{BEGIN USR_REPLACED_BY_fieldheadercolumn}
+			<th class="{$USR_REPLACED_BY_class}" {$USR_REPLACED_BY_style}  data-field="USR_REPLACED_BY">
+				{$label USERS USR_REPLACED_BY}
+			</th>
+			{END USR_REPLACED_BY_fieldheadercolumn}
+			{BEGIN USR_UX_fieldheadercolumn}
+			<th class="{$USR_UX_class}" {$USR_UX_style}  data-field="USR_UX">
+				{$label USERS USR_UX}
+			</th>
+			{END USR_UX_fieldheadercolumn}
+			{BEGIN USR_COST_BY_HOUR_fieldheadercolumn}
+			<th class="{$USR_COST_BY_HOUR_class}" {$USR_COST_BY_HOUR_style}  data-field="USR_COST_BY_HOUR">
+				{$label USERS USR_COST_BY_HOUR}
+			</th>
+			{END USR_COST_BY_HOUR_fieldheadercolumn}
+			{BEGIN USR_UNIT_COST_fieldheadercolumn}
+			<th class="{$USR_UNIT_COST_class}" {$USR_UNIT_COST_style}  data-field="USR_UNIT_COST">
+				{$label USERS USR_UNIT_COST}
+			</th>
+			{END USR_UNIT_COST_fieldheadercolumn}
+			{BEGIN USR_PMDRIVE_FOLDER_UID_fieldheadercolumn}
+			<th class="{$USR_PMDRIVE_FOLDER_UID_class}" {$USR_PMDRIVE_FOLDER_UID_style}  data-field="USR_PMDRIVE_FOLDER_UID">
+				{$label USERS USR_PMDRIVE_FOLDER_UID}
+			</th>
+			{END USR_PMDRIVE_FOLDER_UID_fieldheadercolumn}
+			{BEGIN USR_BOOKMARK_START_CASES_fieldheadercolumn}
+			<th class="{$USR_BOOKMARK_START_CASES_class}" {$USR_BOOKMARK_START_CASES_style}  data-field="USR_BOOKMARK_START_CASES">
+				{$label USERS USR_BOOKMARK_START_CASES}
+			</th>
+			{END USR_BOOKMARK_START_CASES_fieldheadercolumn}
+			{BEGIN USR_TIME_ZONE_fieldheadercolumn}
+			<th class="{$USR_TIME_ZONE_class}" {$USR_TIME_ZONE_style}  data-field="USR_TIME_ZONE">
+				{$label USERS USR_TIME_ZONE}
+			</th>
+			{END USR_TIME_ZONE_fieldheadercolumn}
+			{BEGIN USR_DEFAULT_LANG_fieldheadercolumn}
+			<th class="{$USR_DEFAULT_LANG_class}" {$USR_DEFAULT_LANG_style}  data-field="USR_DEFAULT_LANG">
+				{$label USERS USR_DEFAULT_LANG}
+			</th>
+			{END USR_DEFAULT_LANG_fieldheadercolumn}
+			{BEGIN USR_LAST_LOGIN_fieldheadercolumn}
+			<th class="{$USR_LAST_LOGIN_class}" {$USR_LAST_LOGIN_style}  data-field="USR_LAST_LOGIN">
+				{$label USERS USR_LAST_LOGIN}
+			</th>
+			{END USR_LAST_LOGIN_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN USR_UID_fieldcolumn}
+			<td  class="{$USR_UID_class}" {$USR_UID_style} {$recordattrs}>
+				{$USR_UID_value}
+			</td>
+			{END USR_UID_fieldcolumn}
+			{BEGIN USR_USERNAME_fieldcolumn}
+			<td  class="{$USR_USERNAME_class}" {$USR_USERNAME_style} {$recordattrs}>
+				{$USR_USERNAME_value}
+			</td>
+			{END USR_USERNAME_fieldcolumn}
+			{BEGIN USR_PASSWORD_fieldcolumn}
+			<td  class="{$USR_PASSWORD_class}" {$USR_PASSWORD_style} {$recordattrs}>
+				{$USR_PASSWORD_value}
+			</td>
+			{END USR_PASSWORD_fieldcolumn}
+			{BEGIN USR_FIRSTNAME_fieldcolumn}
+			<td  class="{$USR_FIRSTNAME_class}" {$USR_FIRSTNAME_style} {$recordattrs}>
+				{$USR_FIRSTNAME_value}
+			</td>
+			{END USR_FIRSTNAME_fieldcolumn}
+			{BEGIN USR_LASTNAME_fieldcolumn}
+			<td  class="{$USR_LASTNAME_class}" {$USR_LASTNAME_style} {$recordattrs}>
+				{$USR_LASTNAME_value}
+			</td>
+			{END USR_LASTNAME_fieldcolumn}
+			{BEGIN USR_EMAIL_fieldcolumn}
+			<td  class="{$USR_EMAIL_class}" {$USR_EMAIL_style} {$recordattrs}>
+				{$USR_EMAIL_value}
+			</td>
+			{END USR_EMAIL_fieldcolumn}
+			{BEGIN USR_DUE_DATE_fieldcolumn}
+			<td  class="{$USR_DUE_DATE_class}" {$USR_DUE_DATE_style} {$recordattrs}>
+				{$USR_DUE_DATE_value}
+			</td>
+			{END USR_DUE_DATE_fieldcolumn}
+			{BEGIN USR_CREATE_DATE_fieldcolumn}
+			<td  class="{$USR_CREATE_DATE_class}" {$USR_CREATE_DATE_style} {$recordattrs}>
+				{$USR_CREATE_DATE_value}
+			</td>
+			{END USR_CREATE_DATE_fieldcolumn}
+			{BEGIN USR_UPDATE_DATE_fieldcolumn}
+			<td  class="{$USR_UPDATE_DATE_class}" {$USR_UPDATE_DATE_style} {$recordattrs}>
+				{$USR_UPDATE_DATE_value}
+			</td>
+			{END USR_UPDATE_DATE_fieldcolumn}
+			{BEGIN USR_STATUS_fieldcolumn}
+			<td  class="{$USR_STATUS_class}" {$USR_STATUS_style} {$recordattrs}>
+				{$USR_STATUS_value}
+			</td>
+			{END USR_STATUS_fieldcolumn}
+			{BEGIN USR_COUNTRY_fieldcolumn}
+			<td  class="{$USR_COUNTRY_class}" {$USR_COUNTRY_style} {$recordattrs}>
+				{$USR_COUNTRY_value}
+			</td>
+			{END USR_COUNTRY_fieldcolumn}
+			{BEGIN USR_CITY_fieldcolumn}
+			<td  class="{$USR_CITY_class}" {$USR_CITY_style} {$recordattrs}>
+				{$USR_CITY_value}
+			</td>
+			{END USR_CITY_fieldcolumn}
+			{BEGIN USR_LOCATION_fieldcolumn}
+			<td  class="{$USR_LOCATION_class}" {$USR_LOCATION_style} {$recordattrs}>
+				{$USR_LOCATION_value}
+			</td>
+			{END USR_LOCATION_fieldcolumn}
+			{BEGIN USR_ADDRESS_fieldcolumn}
+			<td  class="{$USR_ADDRESS_class}" {$USR_ADDRESS_style} {$recordattrs}>
+				{$USR_ADDRESS_value}
+			</td>
+			{END USR_ADDRESS_fieldcolumn}
+			{BEGIN USR_PHONE_fieldcolumn}
+			<td  class="{$USR_PHONE_class}" {$USR_PHONE_style} {$recordattrs}>
+				{$USR_PHONE_value}
+			</td>
+			{END USR_PHONE_fieldcolumn}
+			{BEGIN USR_FAX_fieldcolumn}
+			<td  class="{$USR_FAX_class}" {$USR_FAX_style} {$recordattrs}>
+				{$USR_FAX_value}
+			</td>
+			{END USR_FAX_fieldcolumn}
+			{BEGIN USR_CELLULAR_fieldcolumn}
+			<td  class="{$USR_CELLULAR_class}" {$USR_CELLULAR_style} {$recordattrs}>
+				{$USR_CELLULAR_value}
+			</td>
+			{END USR_CELLULAR_fieldcolumn}
+			{BEGIN USR_ZIP_CODE_fieldcolumn}
+			<td  class="{$USR_ZIP_CODE_class}" {$USR_ZIP_CODE_style} {$recordattrs}>
+				{$USR_ZIP_CODE_value}
+			</td>
+			{END USR_ZIP_CODE_fieldcolumn}
+			{BEGIN DEP_UID_fieldcolumn}
+			<td  class="{$DEP_UID_class}" {$DEP_UID_style} {$recordattrs}>
+				{$DEP_UID_value}
+			</td>
+			{END DEP_UID_fieldcolumn}
+			{BEGIN USR_POSITION_fieldcolumn}
+			<td  class="{$USR_POSITION_class}" {$USR_POSITION_style} {$recordattrs}>
+				{$USR_POSITION_value}
+			</td>
+			{END USR_POSITION_fieldcolumn}
+			{BEGIN USR_RESUME_fieldcolumn}
+			<td  class="{$USR_RESUME_class}" {$USR_RESUME_style} {$recordattrs}>
+				{$USR_RESUME_value}
+			</td>
+			{END USR_RESUME_fieldcolumn}
+			{BEGIN USR_BIRTHDAY_fieldcolumn}
+			<td  class="{$USR_BIRTHDAY_class}" {$USR_BIRTHDAY_style} {$recordattrs}>
+				{$USR_BIRTHDAY_value}
+			</td>
+			{END USR_BIRTHDAY_fieldcolumn}
+			{BEGIN USR_ROLE_fieldcolumn}
+			<td  class="{$USR_ROLE_class}" {$USR_ROLE_style} {$recordattrs}>
+				{$USR_ROLE_value}
+			</td>
+			{END USR_ROLE_fieldcolumn}
+			{BEGIN USR_REPORTS_TO_fieldcolumn}
+			<td  class="{$USR_REPORTS_TO_class}" {$USR_REPORTS_TO_style} {$recordattrs}>
+				{$USR_REPORTS_TO_value}
+			</td>
+			{END USR_REPORTS_TO_fieldcolumn}
+			{BEGIN USR_REPLACED_BY_fieldcolumn}
+			<td  class="{$USR_REPLACED_BY_class}" {$USR_REPLACED_BY_style} {$recordattrs}>
+				{$USR_REPLACED_BY_value}
+			</td>
+			{END USR_REPLACED_BY_fieldcolumn}
+			{BEGIN USR_UX_fieldcolumn}
+			<td  class="{$USR_UX_class}" {$USR_UX_style} {$recordattrs}>
+				{$USR_UX_value}
+			</td>
+			{END USR_UX_fieldcolumn}
+			{BEGIN USR_COST_BY_HOUR_fieldcolumn}
+			<td  class="{$USR_COST_BY_HOUR_class}" {$USR_COST_BY_HOUR_style} {$recordattrs}>
+				{$USR_COST_BY_HOUR_value}
+			</td>
+			{END USR_COST_BY_HOUR_fieldcolumn}
+			{BEGIN USR_UNIT_COST_fieldcolumn}
+			<td  class="{$USR_UNIT_COST_class}" {$USR_UNIT_COST_style} {$recordattrs}>
+				{$USR_UNIT_COST_value}
+			</td>
+			{END USR_UNIT_COST_fieldcolumn}
+			{BEGIN USR_PMDRIVE_FOLDER_UID_fieldcolumn}
+			<td  class="{$USR_PMDRIVE_FOLDER_UID_class}" {$USR_PMDRIVE_FOLDER_UID_style} {$recordattrs}>
+				{$USR_PMDRIVE_FOLDER_UID_value}
+			</td>
+			{END USR_PMDRIVE_FOLDER_UID_fieldcolumn}
+			{BEGIN USR_BOOKMARK_START_CASES_fieldcolumn}
+			<td  class="{$USR_BOOKMARK_START_CASES_class}" {$USR_BOOKMARK_START_CASES_style} {$recordattrs}>
+				{$USR_BOOKMARK_START_CASES_value}
+			</td>
+			{END USR_BOOKMARK_START_CASES_fieldcolumn}
+			{BEGIN USR_TIME_ZONE_fieldcolumn}
+			<td  class="{$USR_TIME_ZONE_class}" {$USR_TIME_ZONE_style} {$recordattrs}>
+				{$USR_TIME_ZONE_value}
+			</td>
+			{END USR_TIME_ZONE_fieldcolumn}
+			{BEGIN USR_DEFAULT_LANG_fieldcolumn}
+			<td  class="{$USR_DEFAULT_LANG_class}" {$USR_DEFAULT_LANG_style} {$recordattrs}>
+				{$USR_DEFAULT_LANG_value}
+			</td>
+			{END USR_DEFAULT_LANG_fieldcolumn}
+			{BEGIN USR_LAST_LOGIN_fieldcolumn}
+			<td  class="{$USR_LAST_LOGIN_class}" {$USR_LAST_LOGIN_style} {$recordattrs}>
+				{$USR_LAST_LOGIN_value}
+			</td>
+			{END USR_LAST_LOGIN_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="34">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

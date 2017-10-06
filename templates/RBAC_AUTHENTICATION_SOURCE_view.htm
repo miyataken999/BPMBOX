@@ -1,0 +1,342 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel RBAC_AUTHENTICATION_SOURCE view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN AUTH_SOURCE_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_UID} bs-viewform-group" data-fieldname="AUTH_SOURCE_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_UID}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_UID_fieldblock}
+	{BEGIN AUTH_SOURCE_NAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_NAME} bs-viewform-group" data-fieldname="AUTH_SOURCE_NAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_NAME}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_NAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_NAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_NAME_fieldblock}
+	{BEGIN AUTH_SOURCE_PROVIDER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_PROVIDER} bs-viewform-group" data-fieldname="AUTH_SOURCE_PROVIDER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_PROVIDER}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PROVIDER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_PROVIDER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_PROVIDER_fieldblock}
+	{BEGIN AUTH_SOURCE_SERVER_NAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_SERVER_NAME} bs-viewform-group" data-fieldname="AUTH_SOURCE_SERVER_NAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_SERVER_NAME}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SERVER_NAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_SERVER_NAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_SERVER_NAME_fieldblock}
+	{BEGIN AUTH_SOURCE_PORT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_PORT} bs-viewform-group" data-fieldname="AUTH_SOURCE_PORT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_PORT}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PORT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_PORT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_PORT_fieldblock}
+	{BEGIN AUTH_SOURCE_ENABLED_TLS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_ENABLED_TLS} bs-viewform-group" data-fieldname="AUTH_SOURCE_ENABLED_TLS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_ENABLED_TLS}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ENABLED_TLS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_ENABLED_TLS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_ENABLED_TLS_fieldblock}
+	{BEGIN AUTH_SOURCE_VERSION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_VERSION} bs-viewform-group" data-fieldname="AUTH_SOURCE_VERSION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_VERSION}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_VERSION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_VERSION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_VERSION_fieldblock}
+	{BEGIN AUTH_SOURCE_BASE_DN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_BASE_DN} bs-viewform-group" data-fieldname="AUTH_SOURCE_BASE_DN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_BASE_DN}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_BASE_DN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_BASE_DN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_BASE_DN_fieldblock}
+	{BEGIN AUTH_ANONYMOUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_ANONYMOUS} bs-viewform-group" data-fieldname="AUTH_ANONYMOUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_ANONYMOUS}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_ANONYMOUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_ANONYMOUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_ANONYMOUS_fieldblock}
+	{BEGIN AUTH_SOURCE_SEARCH_USER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_SEARCH_USER} bs-viewform-group" data-fieldname="AUTH_SOURCE_SEARCH_USER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_SEARCH_USER}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SEARCH_USER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_SEARCH_USER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_SEARCH_USER_fieldblock}
+	{BEGIN AUTH_SOURCE_PASSWORD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_PASSWORD} bs-viewform-group" data-fieldname="AUTH_SOURCE_PASSWORD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_PASSWORD}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PASSWORD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_PASSWORD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_PASSWORD_fieldblock}
+	{BEGIN AUTH_SOURCE_ATTRIBUTES_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_ATTRIBUTES} bs-viewform-group" data-fieldname="AUTH_SOURCE_ATTRIBUTES">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_ATTRIBUTES}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ATTRIBUTES}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_ATTRIBUTES_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_ATTRIBUTES_fieldblock}
+	{BEGIN AUTH_SOURCE_OBJECT_CLASSES_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_OBJECT_CLASSES} bs-viewform-group" data-fieldname="AUTH_SOURCE_OBJECT_CLASSES">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_OBJECT_CLASSES}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_OBJECT_CLASSES}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_OBJECT_CLASSES_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_OBJECT_CLASSES_fieldblock}
+	{BEGIN AUTH_SOURCE_DATA_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_AUTH_SOURCE_DATA} bs-viewform-group" data-fieldname="AUTH_SOURCE_DATA">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_AUTH_SOURCE_DATA}">
+			{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_DATA}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$AUTH_SOURCE_DATA_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END AUTH_SOURCE_DATA_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

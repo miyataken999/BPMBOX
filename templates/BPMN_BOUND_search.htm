@@ -1,0 +1,368 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel BPMN_BOUND search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN BOU_UID_fieldblock}		
+	<div class="container {$fielddispclass_BOU_UID}" data-fieldname="BOU_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_UID}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_UID_fieldblock}
+	{BEGIN PRJ_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND PRJ_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRJ_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRJ_UID_fieldblock}
+	{BEGIN DIA_UID_fieldblock}		
+	<div class="container {$fielddispclass_DIA_UID}" data-fieldname="DIA_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND DIA_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DIA_UID}
+			</div>
+			<div class="col-md-4" >
+				{$DIA_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DIA_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DIA_UID_fieldblock}
+	{BEGIN ELEMENT_UID_fieldblock}		
+	<div class="container {$fielddispclass_ELEMENT_UID}" data-fieldname="ELEMENT_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND ELEMENT_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ELEMENT_UID}
+			</div>
+			<div class="col-md-4" >
+				{$ELEMENT_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ELEMENT_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ELEMENT_UID_fieldblock}
+	{BEGIN BOU_ELEMENT_fieldblock}		
+	<div class="container {$fielddispclass_BOU_ELEMENT}" data-fieldname="BOU_ELEMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_ELEMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_ELEMENT}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_ELEMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_ELEMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_ELEMENT_fieldblock}
+	{BEGIN BOU_ELEMENT_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_BOU_ELEMENT_TYPE}" data-fieldname="BOU_ELEMENT_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_ELEMENT_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_ELEMENT_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_ELEMENT_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_ELEMENT_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_ELEMENT_TYPE_fieldblock}
+	{BEGIN BOU_X_fieldblock}		
+	<div class="container {$fielddispclass_BOU_X}" data-fieldname="BOU_X">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_X}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_X}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_X_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_X_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_X_fieldblock}
+	{BEGIN BOU_Y_fieldblock}		
+	<div class="container {$fielddispclass_BOU_Y}" data-fieldname="BOU_Y">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_Y}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_Y}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_Y_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_Y_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_Y_fieldblock}
+	{BEGIN BOU_WIDTH_fieldblock}		
+	<div class="container {$fielddispclass_BOU_WIDTH}" data-fieldname="BOU_WIDTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_WIDTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_WIDTH}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_WIDTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_WIDTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_WIDTH_fieldblock}
+	{BEGIN BOU_HEIGHT_fieldblock}		
+	<div class="container {$fielddispclass_BOU_HEIGHT}" data-fieldname="BOU_HEIGHT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_HEIGHT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_HEIGHT}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_HEIGHT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_HEIGHT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_HEIGHT_fieldblock}
+	{BEGIN BOU_REL_POSITION_fieldblock}		
+	<div class="container {$fielddispclass_BOU_REL_POSITION}" data-fieldname="BOU_REL_POSITION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_REL_POSITION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_REL_POSITION}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_REL_POSITION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_REL_POSITION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_REL_POSITION_fieldblock}
+	{BEGIN BOU_SIZE_IDENTICAL_fieldblock}		
+	<div class="container {$fielddispclass_BOU_SIZE_IDENTICAL}" data-fieldname="BOU_SIZE_IDENTICAL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_SIZE_IDENTICAL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_SIZE_IDENTICAL}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_SIZE_IDENTICAL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_SIZE_IDENTICAL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_SIZE_IDENTICAL_fieldblock}
+	{BEGIN BOU_CONTAINER_fieldblock}		
+	<div class="container {$fielddispclass_BOU_CONTAINER}" data-fieldname="BOU_CONTAINER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_BOUND BOU_CONTAINER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BOU_CONTAINER}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_CONTAINER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BOU_CONTAINER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BOU_CONTAINER_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

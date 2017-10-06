@@ -1,0 +1,318 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel items view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN item_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_item_id} bs-viewform-group" data-fieldname="item_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_item_id}">
+			{$label items item_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$item_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END item_id_fieldblock}
+	{BEGIN name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_name} bs-viewform-group" data-fieldname="name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_name}">
+			{$label items name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END name_fieldblock}
+	{BEGIN price_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_price} bs-viewform-group" data-fieldname="price">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_price}">
+			{$label items price}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$price_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END price_fieldblock}
+	{BEGIN url_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_url} bs-viewform-group" data-fieldname="url">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_url}">
+			{$label items url}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$url_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END url_fieldblock}
+	{BEGIN japanase_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_japanase} bs-viewform-group" data-fieldname="japanase">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_japanase}">
+			{$label items japanase}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$japanase_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END japanase_fieldblock}
+	{BEGIN count_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_count} bs-viewform-group" data-fieldname="count">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_count}">
+			{$label items count}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$count_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END count_fieldblock}
+	{BEGIN parent_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_parent} bs-viewform-group" data-fieldname="parent">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_parent}">
+			{$label items parent}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$parent_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END parent_fieldblock}
+	{BEGIN svm_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_svm} bs-viewform-group" data-fieldname="svm">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_svm}">
+			{$label items svm}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$svm_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END svm_fieldblock}
+	{BEGIN discription_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_discription} bs-viewform-group" data-fieldname="discription">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_discription}">
+			{$label items discription}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$discription_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END discription_fieldblock}
+	{BEGIN abstruct_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_abstruct} bs-viewform-group" data-fieldname="abstruct">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_abstruct}">
+			{$label items abstruct}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$abstruct_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END abstruct_fieldblock}
+	{BEGIN claim_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_claim} bs-viewform-group" data-fieldname="claim">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_claim}">
+			{$label items claim}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$claim_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END claim_fieldblock}
+	{BEGIN document_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_document} bs-viewform-group" data-fieldname="document">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_document}">
+			{$label items document}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$document_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END document_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

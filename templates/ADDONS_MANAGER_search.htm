@@ -1,0 +1,458 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel ADDONS_MANAGER search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN ADDON_ID_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_ID}" data-fieldname="ADDON_ID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_ID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_ID}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_ID_fieldblock}
+	{BEGIN STORE_ID_fieldblock}		
+	<div class="container {$fielddispclass_STORE_ID}" data-fieldname="STORE_ID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER STORE_ID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_STORE_ID}
+			</div>
+			<div class="col-md-4" >
+				{$STORE_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$STORE_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END STORE_ID_fieldblock}
+	{BEGIN ADDON_NAME_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_NAME}" data-fieldname="ADDON_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_NAME_fieldblock}
+	{BEGIN ADDON_NICK_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_NICK}" data-fieldname="ADDON_NICK">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_NICK}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_NICK}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_NICK_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_NICK_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_NICK_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_FILENAME_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_DOWNLOAD_FILENAME}" data-fieldname="ADDON_DOWNLOAD_FILENAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_DOWNLOAD_FILENAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_DOWNLOAD_FILENAME}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_FILENAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_FILENAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_DOWNLOAD_FILENAME_fieldblock}
+	{BEGIN ADDON_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_DESCRIPTION}" data-fieldname="ADDON_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_DESCRIPTION_fieldblock}
+	{BEGIN ADDON_STATE_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_STATE}" data-fieldname="ADDON_STATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_STATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_STATE}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_STATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_STATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_STATE_fieldblock}
+	{BEGIN ADDON_STATE_CHANGED_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_STATE_CHANGED}" data-fieldname="ADDON_STATE_CHANGED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_STATE_CHANGED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_STATE_CHANGED}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_STATE_CHANGED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_STATE_CHANGED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_STATE_CHANGED_fieldblock}
+	{BEGIN ADDON_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_STATUS}" data-fieldname="ADDON_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_STATUS_fieldblock}
+	{BEGIN ADDON_VERSION_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_VERSION}" data-fieldname="ADDON_VERSION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_VERSION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_VERSION}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_VERSION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_VERSION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_VERSION_fieldblock}
+	{BEGIN ADDON_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_TYPE}" data-fieldname="ADDON_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_TYPE_fieldblock}
+	{BEGIN ADDON_PUBLISHER_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_PUBLISHER}" data-fieldname="ADDON_PUBLISHER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_PUBLISHER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_PUBLISHER}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_PUBLISHER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_PUBLISHER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_PUBLISHER_fieldblock}
+	{BEGIN ADDON_RELEASE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_RELEASE_DATE}" data-fieldname="ADDON_RELEASE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_RELEASE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_RELEASE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_RELEASE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_RELEASE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_RELEASE_DATE_fieldblock}
+	{BEGIN ADDON_RELEASE_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_RELEASE_TYPE}" data-fieldname="ADDON_RELEASE_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_RELEASE_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_RELEASE_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_RELEASE_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_RELEASE_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_RELEASE_TYPE_fieldblock}
+	{BEGIN ADDON_RELEASE_NOTES_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_RELEASE_NOTES}" data-fieldname="ADDON_RELEASE_NOTES">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_RELEASE_NOTES}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_RELEASE_NOTES}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_RELEASE_NOTES_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_RELEASE_NOTES_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_RELEASE_NOTES_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_URL_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_DOWNLOAD_URL}" data-fieldname="ADDON_DOWNLOAD_URL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_DOWNLOAD_URL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_DOWNLOAD_URL}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_URL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_URL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_DOWNLOAD_URL_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_PROGRESS_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_DOWNLOAD_PROGRESS}" data-fieldname="ADDON_DOWNLOAD_PROGRESS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_DOWNLOAD_PROGRESS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_DOWNLOAD_PROGRESS}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_PROGRESS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_PROGRESS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_DOWNLOAD_PROGRESS_fieldblock}
+	{BEGIN ADDON_DOWNLOAD_MD5_fieldblock}		
+	<div class="container {$fielddispclass_ADDON_DOWNLOAD_MD5}" data-fieldname="ADDON_DOWNLOAD_MD5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ADDONS_MANAGER ADDON_DOWNLOAD_MD5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADDON_DOWNLOAD_MD5}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_MD5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADDON_DOWNLOAD_MD5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADDON_DOWNLOAD_MD5_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

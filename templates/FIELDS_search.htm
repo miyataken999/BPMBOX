@@ -1,0 +1,422 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel FIELDS search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN FLD_UID_fieldblock}		
+	<div class="container {$fielddispclass_FLD_UID}" data-fieldname="FLD_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_UID}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_UID_fieldblock}
+	{BEGIN ADD_TAB_UID_fieldblock}		
+	<div class="container {$fielddispclass_ADD_TAB_UID}" data-fieldname="ADD_TAB_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS ADD_TAB_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ADD_TAB_UID}
+			</div>
+			<div class="col-md-4" >
+				{$ADD_TAB_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ADD_TAB_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ADD_TAB_UID_fieldblock}
+	{BEGIN FLD_INDEX_fieldblock}		
+	<div class="container {$fielddispclass_FLD_INDEX}" data-fieldname="FLD_INDEX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_INDEX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_INDEX}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_INDEX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_INDEX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_INDEX_fieldblock}
+	{BEGIN FLD_NAME_fieldblock}		
+	<div class="container {$fielddispclass_FLD_NAME}" data-fieldname="FLD_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_NAME_fieldblock}
+	{BEGIN FLD_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_FLD_DESCRIPTION}" data-fieldname="FLD_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_DESCRIPTION_fieldblock}
+	{BEGIN FLD_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_FLD_TYPE}" data-fieldname="FLD_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_TYPE_fieldblock}
+	{BEGIN FLD_SIZE_fieldblock}		
+	<div class="container {$fielddispclass_FLD_SIZE}" data-fieldname="FLD_SIZE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_SIZE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_SIZE}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_SIZE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_SIZE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_SIZE_fieldblock}
+	{BEGIN FLD_NULL_fieldblock}		
+	<div class="container {$fielddispclass_FLD_NULL}" data-fieldname="FLD_NULL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_NULL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_NULL}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_NULL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_NULL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_NULL_fieldblock}
+	{BEGIN FLD_AUTO_INCREMENT_fieldblock}		
+	<div class="container {$fielddispclass_FLD_AUTO_INCREMENT}" data-fieldname="FLD_AUTO_INCREMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_AUTO_INCREMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_AUTO_INCREMENT}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_AUTO_INCREMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_AUTO_INCREMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_AUTO_INCREMENT_fieldblock}
+	{BEGIN FLD_KEY_fieldblock}		
+	<div class="container {$fielddispclass_FLD_KEY}" data-fieldname="FLD_KEY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_KEY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_KEY}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_KEY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_KEY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_KEY_fieldblock}
+	{BEGIN FLD_TABLE_INDEX_fieldblock}		
+	<div class="container {$fielddispclass_FLD_TABLE_INDEX}" data-fieldname="FLD_TABLE_INDEX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_TABLE_INDEX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_TABLE_INDEX}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_TABLE_INDEX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_TABLE_INDEX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_TABLE_INDEX_fieldblock}
+	{BEGIN FLD_FOREIGN_KEY_fieldblock}		
+	<div class="container {$fielddispclass_FLD_FOREIGN_KEY}" data-fieldname="FLD_FOREIGN_KEY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_FOREIGN_KEY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_FOREIGN_KEY}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_FOREIGN_KEY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_FOREIGN_KEY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_FOREIGN_KEY_fieldblock}
+	{BEGIN FLD_FOREIGN_KEY_TABLE_fieldblock}		
+	<div class="container {$fielddispclass_FLD_FOREIGN_KEY_TABLE}" data-fieldname="FLD_FOREIGN_KEY_TABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_FOREIGN_KEY_TABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_FOREIGN_KEY_TABLE}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_FOREIGN_KEY_TABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_FOREIGN_KEY_TABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_FOREIGN_KEY_TABLE_fieldblock}
+	{BEGIN FLD_DYN_NAME_fieldblock}		
+	<div class="container {$fielddispclass_FLD_DYN_NAME}" data-fieldname="FLD_DYN_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_DYN_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_DYN_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_DYN_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_DYN_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_DYN_NAME_fieldblock}
+	{BEGIN FLD_DYN_UID_fieldblock}		
+	<div class="container {$fielddispclass_FLD_DYN_UID}" data-fieldname="FLD_DYN_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_DYN_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_DYN_UID}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_DYN_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_DYN_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_DYN_UID_fieldblock}
+	{BEGIN FLD_FILTER_fieldblock}		
+	<div class="container {$fielddispclass_FLD_FILTER}" data-fieldname="FLD_FILTER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label FIELDS FLD_FILTER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FLD_FILTER}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_FILTER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FLD_FILTER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FLD_FILTER_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

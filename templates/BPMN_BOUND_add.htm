@@ -1,0 +1,414 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel BPMN_BOUND add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN BOU_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_UID}" data-fieldname="BOU_UID" data-signal-error-for="BOU_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_UID}">
+		{BEGIN BOU_UID_label}{$label BPMN_BOUND BOU_UID}{END BOU_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_UID_fieldblock}
+
+			{BEGIN PRJ_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID" data-signal-error-for="PRJ_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_UID}">
+		{BEGIN PRJ_UID_label}{$label BPMN_BOUND PRJ_UID}{END PRJ_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND PRJ_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_UID_fieldblock}
+
+			{BEGIN DIA_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DIA_UID}" data-fieldname="DIA_UID" data-signal-error-for="DIA_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DIA_UID}">
+		{BEGIN DIA_UID_label}{$label BPMN_BOUND DIA_UID}{END DIA_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DIA_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DIA_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND DIA_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DIA_UID_fieldblock}
+
+			{BEGIN ELEMENT_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ELEMENT_UID}" data-fieldname="ELEMENT_UID" data-signal-error-for="ELEMENT_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ELEMENT_UID}">
+		{BEGIN ELEMENT_UID_label}{$label BPMN_BOUND ELEMENT_UID}{END ELEMENT_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ELEMENT_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ELEMENT_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND ELEMENT_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END ELEMENT_UID_fieldblock}
+
+			{BEGIN BOU_ELEMENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_ELEMENT}" data-fieldname="BOU_ELEMENT" data-signal-error-for="BOU_ELEMENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_ELEMENT}">
+		{BEGIN BOU_ELEMENT_label}{$label BPMN_BOUND BOU_ELEMENT}{END BOU_ELEMENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_ELEMENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_ELEMENT">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_ELEMENT}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_ELEMENT_fieldblock}
+
+			{BEGIN BOU_ELEMENT_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_ELEMENT_TYPE}" data-fieldname="BOU_ELEMENT_TYPE" data-signal-error-for="BOU_ELEMENT_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_ELEMENT_TYPE}">
+		{BEGIN BOU_ELEMENT_TYPE_label}{$label BPMN_BOUND BOU_ELEMENT_TYPE}{END BOU_ELEMENT_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_ELEMENT_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_ELEMENT_TYPE">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_ELEMENT_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_ELEMENT_TYPE_fieldblock}
+
+			{BEGIN BOU_X_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_X}" data-fieldname="BOU_X" data-signal-error-for="BOU_X{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_X}">
+		{BEGIN BOU_X_label}{$label BPMN_BOUND BOU_X}{END BOU_X_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_X_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_X">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_X}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_X_fieldblock}
+
+			{BEGIN BOU_Y_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_Y}" data-fieldname="BOU_Y" data-signal-error-for="BOU_Y{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_Y}">
+		{BEGIN BOU_Y_label}{$label BPMN_BOUND BOU_Y}{END BOU_Y_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_Y_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_Y">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_Y}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_Y_fieldblock}
+
+			{BEGIN BOU_WIDTH_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_WIDTH}" data-fieldname="BOU_WIDTH" data-signal-error-for="BOU_WIDTH{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_WIDTH}">
+		{BEGIN BOU_WIDTH_label}{$label BPMN_BOUND BOU_WIDTH}{END BOU_WIDTH_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_WIDTH_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_WIDTH">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_WIDTH}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_WIDTH_fieldblock}
+
+			{BEGIN BOU_HEIGHT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_HEIGHT}" data-fieldname="BOU_HEIGHT" data-signal-error-for="BOU_HEIGHT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_HEIGHT}">
+		{BEGIN BOU_HEIGHT_label}{$label BPMN_BOUND BOU_HEIGHT}{END BOU_HEIGHT_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_HEIGHT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_HEIGHT">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_HEIGHT}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_HEIGHT_fieldblock}
+
+			{BEGIN BOU_REL_POSITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_REL_POSITION}" data-fieldname="BOU_REL_POSITION" data-signal-error-for="BOU_REL_POSITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_REL_POSITION}">
+		{BEGIN BOU_REL_POSITION_label}{$label BPMN_BOUND BOU_REL_POSITION}{END BOU_REL_POSITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_REL_POSITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_REL_POSITION">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_REL_POSITION}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_REL_POSITION_fieldblock}
+
+			{BEGIN BOU_SIZE_IDENTICAL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_SIZE_IDENTICAL}" data-fieldname="BOU_SIZE_IDENTICAL" data-signal-error-for="BOU_SIZE_IDENTICAL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_SIZE_IDENTICAL}">
+		{BEGIN BOU_SIZE_IDENTICAL_label}{$label BPMN_BOUND BOU_SIZE_IDENTICAL}{END BOU_SIZE_IDENTICAL_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_SIZE_IDENTICAL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_SIZE_IDENTICAL">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_SIZE_IDENTICAL}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_SIZE_IDENTICAL_fieldblock}
+
+			{BEGIN BOU_CONTAINER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BOU_CONTAINER}" data-fieldname="BOU_CONTAINER" data-signal-error-for="BOU_CONTAINER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BOU_CONTAINER}">
+		{BEGIN BOU_CONTAINER_label}{$label BPMN_BOUND BOU_CONTAINER}{END BOU_CONTAINER_label}
+	</label>
+	<div class="col-md-6" >
+		{$BOU_CONTAINER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BOU_CONTAINER">
+		<div class="text-muted" >
+		{$tooltip BPMN_BOUND BOU_CONTAINER}
+		</div>
+	</div>
+</div>
+</div>
+{END BOU_CONTAINER_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

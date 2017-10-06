@@ -1,0 +1,60 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel BPMN_DIAGRAM masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=DIA_UID]:before {
+		content: "{$label BPMN_DIAGRAM DIA_UID}";
+	}
+	.bs-gridcell[data-field=PRJ_UID]:before {
+		content: "{$label BPMN_DIAGRAM PRJ_UID}";
+	}
+	.bs-gridcell[data-field=DIA_NAME]:before {
+		content: "{$label BPMN_DIAGRAM DIA_NAME}";
+	}
+	.bs-gridcell[data-field=DIA_IS_CLOSABLE]:before {
+		content: "{$label BPMN_DIAGRAM DIA_IS_CLOSABLE}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$DIA_UID_class}">{$label BPMN_DIAGRAM DIA_UID}</th>
+			<th class="{$PRJ_UID_class}">{$label BPMN_DIAGRAM PRJ_UID}</th>
+			<th class="{$DIA_NAME_class}">{$label BPMN_DIAGRAM DIA_NAME}</th>
+			<th class="{$DIA_IS_CLOSABLE_class}">{$label BPMN_DIAGRAM DIA_IS_CLOSABLE}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$DIA_UID_class} bs-gridcell" data-field=DIA_UID>{$DIA_UID_mastervalue}</td>
+			<td class="{$PRJ_UID_class} bs-gridcell" data-field=PRJ_UID>{$PRJ_UID_mastervalue}</td>
+			<td class="{$DIA_NAME_class} bs-gridcell" data-field=DIA_NAME>{$DIA_NAME_mastervalue}</td>
+			<td class="{$DIA_IS_CLOSABLE_class} bs-gridcell" data-field=DIA_IS_CLOSABLE>{$DIA_IS_CLOSABLE_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

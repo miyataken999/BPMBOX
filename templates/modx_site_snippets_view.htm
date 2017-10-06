@@ -1,0 +1,306 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel modx_site_snippets view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_id} bs-viewform-group" data-fieldname="id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_id}">
+			{$label modx_site_snippets id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END id_fieldblock}
+	{BEGIN name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_name} bs-viewform-group" data-fieldname="name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_name}">
+			{$label modx_site_snippets name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END name_fieldblock}
+	{BEGIN description_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_description} bs-viewform-group" data-fieldname="description">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_description}">
+			{$label modx_site_snippets description}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$description_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END description_fieldblock}
+	{BEGIN editor_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_editor_type} bs-viewform-group" data-fieldname="editor_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_editor_type}">
+			{$label modx_site_snippets editor_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$editor_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END editor_type_fieldblock}
+	{BEGIN category_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_category} bs-viewform-group" data-fieldname="category">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_category}">
+			{$label modx_site_snippets category}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$category_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END category_fieldblock}
+	{BEGIN cache_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_cache_type} bs-viewform-group" data-fieldname="cache_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_cache_type}">
+			{$label modx_site_snippets cache_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$cache_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END cache_type_fieldblock}
+	{BEGIN snippet_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_snippet} bs-viewform-group" data-fieldname="snippet">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_snippet}">
+			{$label modx_site_snippets snippet}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$snippet_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END snippet_fieldblock}
+	{BEGIN locked_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_locked} bs-viewform-group" data-fieldname="locked">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_locked}">
+			{$label modx_site_snippets locked}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$locked_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END locked_fieldblock}
+	{BEGIN properties_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_properties} bs-viewform-group" data-fieldname="properties">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_properties}">
+			{$label modx_site_snippets properties}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$properties_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END properties_fieldblock}
+	{BEGIN moduleguid_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_moduleguid} bs-viewform-group" data-fieldname="moduleguid">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_moduleguid}">
+			{$label modx_site_snippets moduleguid}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$moduleguid_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END moduleguid_fieldblock}
+	{BEGIN modx_site_content_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_modx_site_content_id} bs-viewform-group" data-fieldname="modx_site_content_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_modx_site_content_id}">
+			{$label modx_site_snippets modx_site_content_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$modx_site_content_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END modx_site_content_id_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel items print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN item_id_fieldheadercolumn}
+			<th class="{$item_id_class}" {$item_id_style}  data-field="item_id">
+				{$label items item_id}
+			</th>
+			{END item_id_fieldheadercolumn}
+			{BEGIN name_fieldheadercolumn}
+			<th class="{$name_class}" {$name_style}  data-field="name">
+				{$label items name}
+			</th>
+			{END name_fieldheadercolumn}
+			{BEGIN price_fieldheadercolumn}
+			<th class="{$price_class}" {$price_style}  data-field="price">
+				{$label items price}
+			</th>
+			{END price_fieldheadercolumn}
+			{BEGIN discription_fieldheadercolumn}
+			<th class="{$discription_class}" {$discription_style}  data-field="discription">
+				{$label items discription}
+			</th>
+			{END discription_fieldheadercolumn}
+			{BEGIN abstruct_fieldheadercolumn}
+			<th class="{$abstruct_class}" {$abstruct_style}  data-field="abstruct">
+				{$label items abstruct}
+			</th>
+			{END abstruct_fieldheadercolumn}
+			{BEGIN claim_fieldheadercolumn}
+			<th class="{$claim_class}" {$claim_style}  data-field="claim">
+				{$label items claim}
+			</th>
+			{END claim_fieldheadercolumn}
+			{BEGIN url_fieldheadercolumn}
+			<th class="{$url_class}" {$url_style}  data-field="url">
+				{$label items url}
+			</th>
+			{END url_fieldheadercolumn}
+			{BEGIN japanase_fieldheadercolumn}
+			<th class="{$japanase_class}" {$japanase_style}  data-field="japanase">
+				{$label items japanase}
+			</th>
+			{END japanase_fieldheadercolumn}
+			{BEGIN count_fieldheadercolumn}
+			<th class="{$count_class}" {$count_style}  data-field="count">
+				{$label items count}
+			</th>
+			{END count_fieldheadercolumn}
+			{BEGIN parent_fieldheadercolumn}
+			<th class="{$parent_class}" {$parent_style}  data-field="parent">
+				{$label items parent}
+			</th>
+			{END parent_fieldheadercolumn}
+			{BEGIN svm_fieldheadercolumn}
+			<th class="{$svm_class}" {$svm_style}  data-field="svm">
+				{$label items svm}
+			</th>
+			{END svm_fieldheadercolumn}
+			{BEGIN document_fieldheadercolumn}
+			<th class="{$document_class}" {$document_style}  data-field="document">
+				{$label items document}
+			</th>
+			{END document_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN item_id_fieldcolumn}
+			<td  class="{$item_id_class}" {$item_id_style} {$recordattrs}>
+				{$item_id_value}
+			</td>
+			{END item_id_fieldcolumn}
+			{BEGIN name_fieldcolumn}
+			<td  class="{$name_class}" {$name_style} {$recordattrs}>
+				{$name_value}
+			</td>
+			{END name_fieldcolumn}
+			{BEGIN price_fieldcolumn}
+			<td  class="{$price_class}" {$price_style} {$recordattrs}>
+				{$price_value}
+			</td>
+			{END price_fieldcolumn}
+			{BEGIN discription_fieldcolumn}
+			<td  class="{$discription_class}" {$discription_style} {$recordattrs}>
+				{$discription_value}
+			</td>
+			{END discription_fieldcolumn}
+			{BEGIN abstruct_fieldcolumn}
+			<td  class="{$abstruct_class}" {$abstruct_style} {$recordattrs}>
+				{$abstruct_value}
+			</td>
+			{END abstruct_fieldcolumn}
+			{BEGIN claim_fieldcolumn}
+			<td  class="{$claim_class}" {$claim_style} {$recordattrs}>
+				{$claim_value}
+			</td>
+			{END claim_fieldcolumn}
+			{BEGIN url_fieldcolumn}
+			<td  class="{$url_class}" {$url_style} {$recordattrs}>
+				{$url_value}
+			</td>
+			{END url_fieldcolumn}
+			{BEGIN japanase_fieldcolumn}
+			<td  class="{$japanase_class}" {$japanase_style} {$recordattrs}>
+				{$japanase_value}
+			</td>
+			{END japanase_fieldcolumn}
+			{BEGIN count_fieldcolumn}
+			<td  class="{$count_class}" {$count_style} {$recordattrs}>
+				{$count_value}
+			</td>
+			{END count_fieldcolumn}
+			{BEGIN parent_fieldcolumn}
+			<td  class="{$parent_class}" {$parent_style} {$recordattrs}>
+				{$parent_value}
+			</td>
+			{END parent_fieldcolumn}
+			{BEGIN svm_fieldcolumn}
+			<td  class="{$svm_class}" {$svm_style} {$recordattrs}>
+				{$svm_value}
+			</td>
+			{END svm_fieldcolumn}
+			{BEGIN document_fieldcolumn}
+			<td  class="{$document_class}" {$document_style} {$recordattrs}>
+				{$document_value}
+			</td>
+			{END document_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,692 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel ROUTINES search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN SPECIFIC_NAME_fieldblock}		
+	<div class="container {$fielddispclass_SPECIFIC_NAME}" data-fieldname="SPECIFIC_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES SPECIFIC_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SPECIFIC_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$SPECIFIC_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SPECIFIC_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SPECIFIC_NAME_fieldblock}
+	{BEGIN ROUTINE_CATALOG_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_CATALOG}" data-fieldname="ROUTINE_CATALOG">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_CATALOG}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_CATALOG}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_CATALOG_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_CATALOG_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_CATALOG_fieldblock}
+	{BEGIN ROUTINE_SCHEMA_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_SCHEMA}" data-fieldname="ROUTINE_SCHEMA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_SCHEMA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_SCHEMA}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_SCHEMA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_SCHEMA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_SCHEMA_fieldblock}
+	{BEGIN ROUTINE_NAME_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_NAME}" data-fieldname="ROUTINE_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_NAME_fieldblock}
+	{BEGIN ROUTINE_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_TYPE}" data-fieldname="ROUTINE_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_TYPE_fieldblock}
+	{BEGIN DATA_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_DATA_TYPE}" data-fieldname="DATA_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES DATA_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATA_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$DATA_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATA_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATA_TYPE_fieldblock}
+	{BEGIN CHARACTER_MAXIMUM_LENGTH_fieldblock}		
+	<div class="container {$fielddispclass_CHARACTER_MAXIMUM_LENGTH}" data-fieldname="CHARACTER_MAXIMUM_LENGTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES CHARACTER_MAXIMUM_LENGTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHARACTER_MAXIMUM_LENGTH}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_MAXIMUM_LENGTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_MAXIMUM_LENGTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHARACTER_MAXIMUM_LENGTH_fieldblock}
+	{BEGIN CHARACTER_OCTET_LENGTH_fieldblock}		
+	<div class="container {$fielddispclass_CHARACTER_OCTET_LENGTH}" data-fieldname="CHARACTER_OCTET_LENGTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES CHARACTER_OCTET_LENGTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHARACTER_OCTET_LENGTH}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_OCTET_LENGTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_OCTET_LENGTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHARACTER_OCTET_LENGTH_fieldblock}
+	{BEGIN NUMERIC_PRECISION_fieldblock}		
+	<div class="container {$fielddispclass_NUMERIC_PRECISION}" data-fieldname="NUMERIC_PRECISION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES NUMERIC_PRECISION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_NUMERIC_PRECISION}
+			</div>
+			<div class="col-md-4" >
+				{$NUMERIC_PRECISION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NUMERIC_PRECISION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NUMERIC_PRECISION_fieldblock}
+	{BEGIN NUMERIC_SCALE_fieldblock}		
+	<div class="container {$fielddispclass_NUMERIC_SCALE}" data-fieldname="NUMERIC_SCALE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES NUMERIC_SCALE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_NUMERIC_SCALE}
+			</div>
+			<div class="col-md-4" >
+				{$NUMERIC_SCALE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NUMERIC_SCALE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NUMERIC_SCALE_fieldblock}
+	{BEGIN DATETIME_PRECISION_fieldblock}		
+	<div class="container {$fielddispclass_DATETIME_PRECISION}" data-fieldname="DATETIME_PRECISION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES DATETIME_PRECISION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATETIME_PRECISION}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIME_PRECISION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATETIME_PRECISION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATETIME_PRECISION_fieldblock}
+	{BEGIN CHARACTER_SET_NAME_fieldblock}		
+	<div class="container {$fielddispclass_CHARACTER_SET_NAME}" data-fieldname="CHARACTER_SET_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES CHARACTER_SET_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHARACTER_SET_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_SET_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_SET_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHARACTER_SET_NAME_fieldblock}
+	{BEGIN COLLATION_NAME_fieldblock}		
+	<div class="container {$fielddispclass_COLLATION_NAME}" data-fieldname="COLLATION_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES COLLATION_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_COLLATION_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$COLLATION_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COLLATION_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COLLATION_NAME_fieldblock}
+	{BEGIN DTD_IDENTIFIER_fieldblock}		
+	<div class="container {$fielddispclass_DTD_IDENTIFIER}" data-fieldname="DTD_IDENTIFIER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES DTD_IDENTIFIER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DTD_IDENTIFIER}
+			</div>
+			<div class="col-md-4" >
+				{$DTD_IDENTIFIER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DTD_IDENTIFIER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DTD_IDENTIFIER_fieldblock}
+	{BEGIN ROUTINE_BODY_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_BODY}" data-fieldname="ROUTINE_BODY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_BODY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_BODY}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_BODY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_BODY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_BODY_fieldblock}
+	{BEGIN ROUTINE_DEFINITION_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_DEFINITION}" data-fieldname="ROUTINE_DEFINITION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_DEFINITION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_DEFINITION}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_DEFINITION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_DEFINITION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_DEFINITION_fieldblock}
+	{BEGIN EXTERNAL_NAME_fieldblock}		
+	<div class="container {$fielddispclass_EXTERNAL_NAME}" data-fieldname="EXTERNAL_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES EXTERNAL_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EXTERNAL_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$EXTERNAL_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EXTERNAL_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EXTERNAL_NAME_fieldblock}
+	{BEGIN EXTERNAL_LANGUAGE_fieldblock}		
+	<div class="container {$fielddispclass_EXTERNAL_LANGUAGE}" data-fieldname="EXTERNAL_LANGUAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES EXTERNAL_LANGUAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EXTERNAL_LANGUAGE}
+			</div>
+			<div class="col-md-4" >
+				{$EXTERNAL_LANGUAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EXTERNAL_LANGUAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EXTERNAL_LANGUAGE_fieldblock}
+	{BEGIN PARAMETER_STYLE_fieldblock}		
+	<div class="container {$fielddispclass_PARAMETER_STYLE}" data-fieldname="PARAMETER_STYLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES PARAMETER_STYLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PARAMETER_STYLE}
+			</div>
+			<div class="col-md-4" >
+				{$PARAMETER_STYLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PARAMETER_STYLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PARAMETER_STYLE_fieldblock}
+	{BEGIN IS_DETERMINISTIC_fieldblock}		
+	<div class="container {$fielddispclass_IS_DETERMINISTIC}" data-fieldname="IS_DETERMINISTIC">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES IS_DETERMINISTIC}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_IS_DETERMINISTIC}
+			</div>
+			<div class="col-md-4" >
+				{$IS_DETERMINISTIC_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$IS_DETERMINISTIC_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END IS_DETERMINISTIC_fieldblock}
+	{BEGIN SQL_DATA_ACCESS_fieldblock}		
+	<div class="container {$fielddispclass_SQL_DATA_ACCESS}" data-fieldname="SQL_DATA_ACCESS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES SQL_DATA_ACCESS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SQL_DATA_ACCESS}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_DATA_ACCESS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_DATA_ACCESS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SQL_DATA_ACCESS_fieldblock}
+	{BEGIN SQL_PATH_fieldblock}		
+	<div class="container {$fielddispclass_SQL_PATH}" data-fieldname="SQL_PATH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES SQL_PATH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SQL_PATH}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_PATH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_PATH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SQL_PATH_fieldblock}
+	{BEGIN SECURITY_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_SECURITY_TYPE}" data-fieldname="SECURITY_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES SECURITY_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SECURITY_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$SECURITY_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SECURITY_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SECURITY_TYPE_fieldblock}
+	{BEGIN CREATED_fieldblock}		
+	<div class="container {$fielddispclass_CREATED}" data-fieldname="CREATED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES CREATED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CREATED}
+			</div>
+			<div class="col-md-4" >
+				{$CREATED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CREATED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CREATED_fieldblock}
+	{BEGIN LAST_ALTERED_fieldblock}		
+	<div class="container {$fielddispclass_LAST_ALTERED}" data-fieldname="LAST_ALTERED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES LAST_ALTERED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LAST_ALTERED}
+			</div>
+			<div class="col-md-4" >
+				{$LAST_ALTERED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LAST_ALTERED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LAST_ALTERED_fieldblock}
+	{BEGIN SQL_MODE_fieldblock}		
+	<div class="container {$fielddispclass_SQL_MODE}" data-fieldname="SQL_MODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES SQL_MODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SQL_MODE}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_MODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_MODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SQL_MODE_fieldblock}
+	{BEGIN ROUTINE_COMMENT_fieldblock}		
+	<div class="container {$fielddispclass_ROUTINE_COMMENT}" data-fieldname="ROUTINE_COMMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES ROUTINE_COMMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROUTINE_COMMENT}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_COMMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROUTINE_COMMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROUTINE_COMMENT_fieldblock}
+	{BEGIN DEFINER_fieldblock}		
+	<div class="container {$fielddispclass_DEFINER}" data-fieldname="DEFINER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES DEFINER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEFINER}
+			</div>
+			<div class="col-md-4" >
+				{$DEFINER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEFINER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEFINER_fieldblock}
+	{BEGIN CHARACTER_SET_CLIENT_fieldblock}		
+	<div class="container {$fielddispclass_CHARACTER_SET_CLIENT}" data-fieldname="CHARACTER_SET_CLIENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES CHARACTER_SET_CLIENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHARACTER_SET_CLIENT}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_SET_CLIENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_SET_CLIENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHARACTER_SET_CLIENT_fieldblock}
+	{BEGIN COLLATION_CONNECTION_fieldblock}		
+	<div class="container {$fielddispclass_COLLATION_CONNECTION}" data-fieldname="COLLATION_CONNECTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES COLLATION_CONNECTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_COLLATION_CONNECTION}
+			</div>
+			<div class="col-md-4" >
+				{$COLLATION_CONNECTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COLLATION_CONNECTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COLLATION_CONNECTION_fieldblock}
+	{BEGIN DATABASE_COLLATION_fieldblock}		
+	<div class="container {$fielddispclass_DATABASE_COLLATION}" data-fieldname="DATABASE_COLLATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTINES DATABASE_COLLATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATABASE_COLLATION}
+			</div>
+			<div class="col-md-4" >
+				{$DATABASE_COLLATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATABASE_COLLATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATABASE_COLLATION_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

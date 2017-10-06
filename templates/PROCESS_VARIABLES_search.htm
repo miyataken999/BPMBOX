@@ -1,0 +1,350 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel PROCESS_VARIABLES search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN VAR_UID_fieldblock}		
+	<div class="container {$fielddispclass_VAR_UID}" data-fieldname="VAR_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_UID}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_UID_fieldblock}
+	{BEGIN PRJ_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES PRJ_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRJ_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRJ_UID_fieldblock}
+	{BEGIN VAR_NAME_fieldblock}		
+	<div class="container {$fielddispclass_VAR_NAME}" data-fieldname="VAR_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_NAME_fieldblock}
+	{BEGIN VAR_FIELD_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_VAR_FIELD_TYPE}" data-fieldname="VAR_FIELD_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_FIELD_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_FIELD_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_FIELD_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_FIELD_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_FIELD_TYPE_fieldblock}
+	{BEGIN VAR_FIELD_SIZE_fieldblock}		
+	<div class="container {$fielddispclass_VAR_FIELD_SIZE}" data-fieldname="VAR_FIELD_SIZE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_FIELD_SIZE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_FIELD_SIZE}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_FIELD_SIZE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_FIELD_SIZE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_FIELD_SIZE_fieldblock}
+	{BEGIN VAR_LABEL_fieldblock}		
+	<div class="container {$fielddispclass_VAR_LABEL}" data-fieldname="VAR_LABEL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_LABEL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_LABEL}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_LABEL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_LABEL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_LABEL_fieldblock}
+	{BEGIN VAR_DBCONNECTION_fieldblock}		
+	<div class="container {$fielddispclass_VAR_DBCONNECTION}" data-fieldname="VAR_DBCONNECTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_DBCONNECTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_DBCONNECTION}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_DBCONNECTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_DBCONNECTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_DBCONNECTION_fieldblock}
+	{BEGIN VAR_SQL_fieldblock}		
+	<div class="container {$fielddispclass_VAR_SQL}" data-fieldname="VAR_SQL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_SQL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_SQL}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_SQL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_SQL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_SQL_fieldblock}
+	{BEGIN VAR_NULL_fieldblock}		
+	<div class="container {$fielddispclass_VAR_NULL}" data-fieldname="VAR_NULL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_NULL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_NULL}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_NULL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_NULL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_NULL_fieldblock}
+	{BEGIN VAR_DEFAULT_fieldblock}		
+	<div class="container {$fielddispclass_VAR_DEFAULT}" data-fieldname="VAR_DEFAULT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_DEFAULT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_DEFAULT}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_DEFAULT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_DEFAULT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_DEFAULT_fieldblock}
+	{BEGIN VAR_ACCEPTED_VALUES_fieldblock}		
+	<div class="container {$fielddispclass_VAR_ACCEPTED_VALUES}" data-fieldname="VAR_ACCEPTED_VALUES">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES VAR_ACCEPTED_VALUES}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_VAR_ACCEPTED_VALUES}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_ACCEPTED_VALUES_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VAR_ACCEPTED_VALUES_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VAR_ACCEPTED_VALUES_fieldblock}
+	{BEGIN INP_DOC_UID_fieldblock}		
+	<div class="container {$fielddispclass_INP_DOC_UID}" data-fieldname="INP_DOC_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS_VARIABLES INP_DOC_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_INP_DOC_UID}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$INP_DOC_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END INP_DOC_UID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

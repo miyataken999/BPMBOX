@@ -1,0 +1,282 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel LOGIN_LOG view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN LOG_ID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_ID} bs-viewform-group" data-fieldname="LOG_ID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_ID}">
+			{$label LOGIN_LOG LOG_ID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_ID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_ID_fieldblock}
+	{BEGIN LOG_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_UID} bs-viewform-group" data-fieldname="LOG_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_UID}">
+			{$label LOGIN_LOG LOG_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_UID_fieldblock}
+	{BEGIN LOG_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_STATUS} bs-viewform-group" data-fieldname="LOG_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_STATUS}">
+			{$label LOGIN_LOG LOG_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_STATUS_fieldblock}
+	{BEGIN LOG_IP_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_IP} bs-viewform-group" data-fieldname="LOG_IP">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_IP}">
+			{$label LOGIN_LOG LOG_IP}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_IP_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_IP_fieldblock}
+	{BEGIN LOG_SID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_SID} bs-viewform-group" data-fieldname="LOG_SID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_SID}">
+			{$label LOGIN_LOG LOG_SID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_SID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_SID_fieldblock}
+	{BEGIN LOG_INIT_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_INIT_DATE} bs-viewform-group" data-fieldname="LOG_INIT_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_INIT_DATE}">
+			{$label LOGIN_LOG LOG_INIT_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_INIT_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_INIT_DATE_fieldblock}
+	{BEGIN LOG_END_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_END_DATE} bs-viewform-group" data-fieldname="LOG_END_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_END_DATE}">
+			{$label LOGIN_LOG LOG_END_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_END_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_END_DATE_fieldblock}
+	{BEGIN LOG_CLIENT_HOSTNAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_LOG_CLIENT_HOSTNAME} bs-viewform-group" data-fieldname="LOG_CLIENT_HOSTNAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_LOG_CLIENT_HOSTNAME}">
+			{$label LOGIN_LOG LOG_CLIENT_HOSTNAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$LOG_CLIENT_HOSTNAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END LOG_CLIENT_HOSTNAME_fieldblock}
+	{BEGIN USR_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_UID} bs-viewform-group" data-fieldname="USR_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_UID}">
+			{$label LOGIN_LOG USR_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_UID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

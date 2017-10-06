@@ -1,0 +1,530 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel TRIGGERS1 search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN TRIGGER_CATALOG_fieldblock}		
+	<div class="container {$fielddispclass_TRIGGER_CATALOG}" data-fieldname="TRIGGER_CATALOG">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 TRIGGER_CATALOG}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TRIGGER_CATALOG}
+			</div>
+			<div class="col-md-4" >
+				{$TRIGGER_CATALOG_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TRIGGER_CATALOG_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TRIGGER_CATALOG_fieldblock}
+	{BEGIN TRIGGER_SCHEMA_fieldblock}		
+	<div class="container {$fielddispclass_TRIGGER_SCHEMA}" data-fieldname="TRIGGER_SCHEMA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 TRIGGER_SCHEMA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TRIGGER_SCHEMA}
+			</div>
+			<div class="col-md-4" >
+				{$TRIGGER_SCHEMA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TRIGGER_SCHEMA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TRIGGER_SCHEMA_fieldblock}
+	{BEGIN TRIGGER_NAME_fieldblock}		
+	<div class="container {$fielddispclass_TRIGGER_NAME}" data-fieldname="TRIGGER_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 TRIGGER_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TRIGGER_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$TRIGGER_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TRIGGER_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TRIGGER_NAME_fieldblock}
+	{BEGIN EVENT_MANIPULATION_fieldblock}		
+	<div class="container {$fielddispclass_EVENT_MANIPULATION}" data-fieldname="EVENT_MANIPULATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 EVENT_MANIPULATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVENT_MANIPULATION}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_MANIPULATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_MANIPULATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVENT_MANIPULATION_fieldblock}
+	{BEGIN EVENT_OBJECT_CATALOG_fieldblock}		
+	<div class="container {$fielddispclass_EVENT_OBJECT_CATALOG}" data-fieldname="EVENT_OBJECT_CATALOG">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 EVENT_OBJECT_CATALOG}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVENT_OBJECT_CATALOG}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_OBJECT_CATALOG_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_OBJECT_CATALOG_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVENT_OBJECT_CATALOG_fieldblock}
+	{BEGIN EVENT_OBJECT_SCHEMA_fieldblock}		
+	<div class="container {$fielddispclass_EVENT_OBJECT_SCHEMA}" data-fieldname="EVENT_OBJECT_SCHEMA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 EVENT_OBJECT_SCHEMA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVENT_OBJECT_SCHEMA}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_OBJECT_SCHEMA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_OBJECT_SCHEMA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVENT_OBJECT_SCHEMA_fieldblock}
+	{BEGIN EVENT_OBJECT_TABLE_fieldblock}		
+	<div class="container {$fielddispclass_EVENT_OBJECT_TABLE}" data-fieldname="EVENT_OBJECT_TABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 EVENT_OBJECT_TABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVENT_OBJECT_TABLE}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_OBJECT_TABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVENT_OBJECT_TABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVENT_OBJECT_TABLE_fieldblock}
+	{BEGIN ACTION_ORDER_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_ORDER}" data-fieldname="ACTION_ORDER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_ORDER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_ORDER}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_ORDER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_ORDER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_ORDER_fieldblock}
+	{BEGIN ACTION_CONDITION_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_CONDITION}" data-fieldname="ACTION_CONDITION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_CONDITION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_CONDITION}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_CONDITION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_CONDITION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_CONDITION_fieldblock}
+	{BEGIN ACTION_STATEMENT_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_STATEMENT}" data-fieldname="ACTION_STATEMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_STATEMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_STATEMENT}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_STATEMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_STATEMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_STATEMENT_fieldblock}
+	{BEGIN ACTION_ORIENTATION_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_ORIENTATION}" data-fieldname="ACTION_ORIENTATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_ORIENTATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_ORIENTATION}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_ORIENTATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_ORIENTATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_ORIENTATION_fieldblock}
+	{BEGIN ACTION_TIMING_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_TIMING}" data-fieldname="ACTION_TIMING">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_TIMING}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_TIMING}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_TIMING_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_TIMING_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_TIMING_fieldblock}
+	{BEGIN ACTION_REFERENCE_OLD_TABLE_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_REFERENCE_OLD_TABLE}" data-fieldname="ACTION_REFERENCE_OLD_TABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_REFERENCE_OLD_TABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_REFERENCE_OLD_TABLE}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_OLD_TABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_OLD_TABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_REFERENCE_OLD_TABLE_fieldblock}
+	{BEGIN ACTION_REFERENCE_NEW_TABLE_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_REFERENCE_NEW_TABLE}" data-fieldname="ACTION_REFERENCE_NEW_TABLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_REFERENCE_NEW_TABLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_REFERENCE_NEW_TABLE}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_NEW_TABLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_NEW_TABLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_REFERENCE_NEW_TABLE_fieldblock}
+	{BEGIN ACTION_REFERENCE_OLD_ROW_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_REFERENCE_OLD_ROW}" data-fieldname="ACTION_REFERENCE_OLD_ROW">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_REFERENCE_OLD_ROW}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_REFERENCE_OLD_ROW}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_OLD_ROW_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_OLD_ROW_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_REFERENCE_OLD_ROW_fieldblock}
+	{BEGIN ACTION_REFERENCE_NEW_ROW_fieldblock}		
+	<div class="container {$fielddispclass_ACTION_REFERENCE_NEW_ROW}" data-fieldname="ACTION_REFERENCE_NEW_ROW">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 ACTION_REFERENCE_NEW_ROW}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ACTION_REFERENCE_NEW_ROW}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_NEW_ROW_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ACTION_REFERENCE_NEW_ROW_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ACTION_REFERENCE_NEW_ROW_fieldblock}
+	{BEGIN CREATED_fieldblock}		
+	<div class="container {$fielddispclass_CREATED}" data-fieldname="CREATED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 CREATED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CREATED}
+			</div>
+			<div class="col-md-4" >
+				{$CREATED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CREATED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CREATED_fieldblock}
+	{BEGIN SQL_MODE_fieldblock}		
+	<div class="container {$fielddispclass_SQL_MODE}" data-fieldname="SQL_MODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 SQL_MODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SQL_MODE}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_MODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SQL_MODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SQL_MODE_fieldblock}
+	{BEGIN DEFINER_fieldblock}		
+	<div class="container {$fielddispclass_DEFINER}" data-fieldname="DEFINER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 DEFINER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEFINER}
+			</div>
+			<div class="col-md-4" >
+				{$DEFINER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEFINER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEFINER_fieldblock}
+	{BEGIN CHARACTER_SET_CLIENT_fieldblock}		
+	<div class="container {$fielddispclass_CHARACTER_SET_CLIENT}" data-fieldname="CHARACTER_SET_CLIENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 CHARACTER_SET_CLIENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CHARACTER_SET_CLIENT}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_SET_CLIENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CHARACTER_SET_CLIENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CHARACTER_SET_CLIENT_fieldblock}
+	{BEGIN COLLATION_CONNECTION_fieldblock}		
+	<div class="container {$fielddispclass_COLLATION_CONNECTION}" data-fieldname="COLLATION_CONNECTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 COLLATION_CONNECTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_COLLATION_CONNECTION}
+			</div>
+			<div class="col-md-4" >
+				{$COLLATION_CONNECTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COLLATION_CONNECTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COLLATION_CONNECTION_fieldblock}
+	{BEGIN DATABASE_COLLATION_fieldblock}		
+	<div class="container {$fielddispclass_DATABASE_COLLATION}" data-fieldname="DATABASE_COLLATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label TRIGGERS1 DATABASE_COLLATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DATABASE_COLLATION}
+			</div>
+			<div class="col-md-4" >
+				{$DATABASE_COLLATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DATABASE_COLLATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DATABASE_COLLATION_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

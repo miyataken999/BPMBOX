@@ -1,0 +1,1137 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PROCESS add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label PROCESS PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN PRO_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TITLE}" data-fieldname="PRO_TITLE" data-signal-error-for="PRO_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TITLE}">
+		{BEGIN PRO_TITLE_label}{$label PROCESS PRO_TITLE}{END PRO_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TITLE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TITLE_fieldblock}
+
+			{BEGIN PRO_DESCRIPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_DESCRIPTION}" data-fieldname="PRO_DESCRIPTION" data-signal-error-for="PRO_DESCRIPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_DESCRIPTION}">
+		{BEGIN PRO_DESCRIPTION_label}{$label PROCESS PRO_DESCRIPTION}{END PRO_DESCRIPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_DESCRIPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_DESCRIPTION">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_DESCRIPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_DESCRIPTION_fieldblock}
+
+			{BEGIN PRO_PARENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_PARENT}" data-fieldname="PRO_PARENT" data-signal-error-for="PRO_PARENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_PARENT}">
+		{BEGIN PRO_PARENT_label}{$label PROCESS PRO_PARENT}{END PRO_PARENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_PARENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_PARENT">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_PARENT}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_PARENT_fieldblock}
+
+			{BEGIN PRO_TIME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TIME}" data-fieldname="PRO_TIME" data-signal-error-for="PRO_TIME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TIME}">
+		{BEGIN PRO_TIME_label}{$label PROCESS PRO_TIME}{END PRO_TIME_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TIME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TIME">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TIME}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TIME_fieldblock}
+
+			{BEGIN PRO_TIMEUNIT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TIMEUNIT}" data-fieldname="PRO_TIMEUNIT" data-signal-error-for="PRO_TIMEUNIT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TIMEUNIT}">
+		{BEGIN PRO_TIMEUNIT_label}{$label PROCESS PRO_TIMEUNIT}{END PRO_TIMEUNIT_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TIMEUNIT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TIMEUNIT">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TIMEUNIT}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TIMEUNIT_fieldblock}
+
+			{BEGIN PRO_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_STATUS}" data-fieldname="PRO_STATUS" data-signal-error-for="PRO_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_STATUS}">
+		{BEGIN PRO_STATUS_label}{$label PROCESS PRO_STATUS}{END PRO_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_STATUS">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_STATUS_fieldblock}
+
+			{BEGIN PRO_TYPE_DAY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TYPE_DAY}" data-fieldname="PRO_TYPE_DAY" data-signal-error-for="PRO_TYPE_DAY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TYPE_DAY}">
+		{BEGIN PRO_TYPE_DAY_label}{$label PROCESS PRO_TYPE_DAY}{END PRO_TYPE_DAY_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TYPE_DAY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TYPE_DAY">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TYPE_DAY}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TYPE_DAY_fieldblock}
+
+			{BEGIN PRO_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TYPE}" data-fieldname="PRO_TYPE" data-signal-error-for="PRO_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TYPE}">
+		{BEGIN PRO_TYPE_label}{$label PROCESS PRO_TYPE}{END PRO_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TYPE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TYPE_fieldblock}
+
+			{BEGIN PRO_ASSIGNMENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_ASSIGNMENT}" data-fieldname="PRO_ASSIGNMENT" data-signal-error-for="PRO_ASSIGNMENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_ASSIGNMENT}">
+		{BEGIN PRO_ASSIGNMENT_label}{$label PROCESS PRO_ASSIGNMENT}{END PRO_ASSIGNMENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_ASSIGNMENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_ASSIGNMENT">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_ASSIGNMENT}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_ASSIGNMENT_fieldblock}
+
+			{BEGIN PRO_SHOW_MAP_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_SHOW_MAP}" data-fieldname="PRO_SHOW_MAP" data-signal-error-for="PRO_SHOW_MAP{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_SHOW_MAP}">
+		{BEGIN PRO_SHOW_MAP_label}{$label PROCESS PRO_SHOW_MAP}{END PRO_SHOW_MAP_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_SHOW_MAP_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_SHOW_MAP">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_SHOW_MAP}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_SHOW_MAP_fieldblock}
+
+			{BEGIN PRO_SHOW_MESSAGE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_SHOW_MESSAGE}" data-fieldname="PRO_SHOW_MESSAGE" data-signal-error-for="PRO_SHOW_MESSAGE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_SHOW_MESSAGE}">
+		{BEGIN PRO_SHOW_MESSAGE_label}{$label PROCESS PRO_SHOW_MESSAGE}{END PRO_SHOW_MESSAGE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_SHOW_MESSAGE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_SHOW_MESSAGE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_SHOW_MESSAGE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_SHOW_MESSAGE_fieldblock}
+
+			{BEGIN PRO_SUBPROCESS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_SUBPROCESS}" data-fieldname="PRO_SUBPROCESS" data-signal-error-for="PRO_SUBPROCESS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_SUBPROCESS}">
+		{BEGIN PRO_SUBPROCESS_label}{$label PROCESS PRO_SUBPROCESS}{END PRO_SUBPROCESS_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_SUBPROCESS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_SUBPROCESS">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_SUBPROCESS}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_SUBPROCESS_fieldblock}
+
+			{BEGIN PRO_TRI_OPEN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TRI_OPEN}" data-fieldname="PRO_TRI_OPEN" data-signal-error-for="PRO_TRI_OPEN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TRI_OPEN}">
+		{BEGIN PRO_TRI_OPEN_label}{$label PROCESS PRO_TRI_OPEN}{END PRO_TRI_OPEN_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TRI_OPEN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TRI_OPEN">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TRI_OPEN}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TRI_OPEN_fieldblock}
+
+			{BEGIN PRO_TRI_DELETED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TRI_DELETED}" data-fieldname="PRO_TRI_DELETED" data-signal-error-for="PRO_TRI_DELETED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TRI_DELETED}">
+		{BEGIN PRO_TRI_DELETED_label}{$label PROCESS PRO_TRI_DELETED}{END PRO_TRI_DELETED_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TRI_DELETED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TRI_DELETED">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TRI_DELETED}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TRI_DELETED_fieldblock}
+
+			{BEGIN PRO_TRI_CANCELED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TRI_CANCELED}" data-fieldname="PRO_TRI_CANCELED" data-signal-error-for="PRO_TRI_CANCELED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TRI_CANCELED}">
+		{BEGIN PRO_TRI_CANCELED_label}{$label PROCESS PRO_TRI_CANCELED}{END PRO_TRI_CANCELED_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TRI_CANCELED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TRI_CANCELED">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TRI_CANCELED}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TRI_CANCELED_fieldblock}
+
+			{BEGIN PRO_TRI_PAUSED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TRI_PAUSED}" data-fieldname="PRO_TRI_PAUSED" data-signal-error-for="PRO_TRI_PAUSED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TRI_PAUSED}">
+		{BEGIN PRO_TRI_PAUSED_label}{$label PROCESS PRO_TRI_PAUSED}{END PRO_TRI_PAUSED_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TRI_PAUSED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TRI_PAUSED">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TRI_PAUSED}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TRI_PAUSED_fieldblock}
+
+			{BEGIN PRO_TRI_REASSIGNED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TRI_REASSIGNED}" data-fieldname="PRO_TRI_REASSIGNED" data-signal-error-for="PRO_TRI_REASSIGNED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TRI_REASSIGNED}">
+		{BEGIN PRO_TRI_REASSIGNED_label}{$label PROCESS PRO_TRI_REASSIGNED}{END PRO_TRI_REASSIGNED_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TRI_REASSIGNED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TRI_REASSIGNED">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TRI_REASSIGNED}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TRI_REASSIGNED_fieldblock}
+
+			{BEGIN PRO_TRI_UNPAUSED_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TRI_UNPAUSED}" data-fieldname="PRO_TRI_UNPAUSED" data-signal-error-for="PRO_TRI_UNPAUSED{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TRI_UNPAUSED}">
+		{BEGIN PRO_TRI_UNPAUSED_label}{$label PROCESS PRO_TRI_UNPAUSED}{END PRO_TRI_UNPAUSED_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TRI_UNPAUSED_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TRI_UNPAUSED">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TRI_UNPAUSED}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TRI_UNPAUSED_fieldblock}
+
+			{BEGIN PRO_TYPE_PROCESS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TYPE_PROCESS}" data-fieldname="PRO_TYPE_PROCESS" data-signal-error-for="PRO_TYPE_PROCESS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TYPE_PROCESS}">
+		{BEGIN PRO_TYPE_PROCESS_label}{$label PROCESS PRO_TYPE_PROCESS}{END PRO_TYPE_PROCESS_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TYPE_PROCESS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TYPE_PROCESS">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TYPE_PROCESS}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TYPE_PROCESS_fieldblock}
+
+			{BEGIN PRO_SHOW_DELEGATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_SHOW_DELEGATE}" data-fieldname="PRO_SHOW_DELEGATE" data-signal-error-for="PRO_SHOW_DELEGATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_SHOW_DELEGATE}">
+		{BEGIN PRO_SHOW_DELEGATE_label}{$label PROCESS PRO_SHOW_DELEGATE}{END PRO_SHOW_DELEGATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_SHOW_DELEGATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_SHOW_DELEGATE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_SHOW_DELEGATE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_SHOW_DELEGATE_fieldblock}
+
+			{BEGIN PRO_SHOW_DYNAFORM_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_SHOW_DYNAFORM}" data-fieldname="PRO_SHOW_DYNAFORM" data-signal-error-for="PRO_SHOW_DYNAFORM{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_SHOW_DYNAFORM}">
+		{BEGIN PRO_SHOW_DYNAFORM_label}{$label PROCESS PRO_SHOW_DYNAFORM}{END PRO_SHOW_DYNAFORM_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_SHOW_DYNAFORM_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_SHOW_DYNAFORM">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_SHOW_DYNAFORM}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_SHOW_DYNAFORM_fieldblock}
+
+			{BEGIN PRO_CATEGORY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_CATEGORY}" data-fieldname="PRO_CATEGORY" data-signal-error-for="PRO_CATEGORY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_CATEGORY}">
+		{BEGIN PRO_CATEGORY_label}{$label PROCESS PRO_CATEGORY}{END PRO_CATEGORY_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_CATEGORY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_CATEGORY">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_CATEGORY}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_CATEGORY_fieldblock}
+
+			{BEGIN PRO_SUB_CATEGORY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_SUB_CATEGORY}" data-fieldname="PRO_SUB_CATEGORY" data-signal-error-for="PRO_SUB_CATEGORY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_SUB_CATEGORY}">
+		{BEGIN PRO_SUB_CATEGORY_label}{$label PROCESS PRO_SUB_CATEGORY}{END PRO_SUB_CATEGORY_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_SUB_CATEGORY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_SUB_CATEGORY">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_SUB_CATEGORY}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_SUB_CATEGORY_fieldblock}
+
+			{BEGIN PRO_INDUSTRY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_INDUSTRY}" data-fieldname="PRO_INDUSTRY" data-signal-error-for="PRO_INDUSTRY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_INDUSTRY}">
+		{BEGIN PRO_INDUSTRY_label}{$label PROCESS PRO_INDUSTRY}{END PRO_INDUSTRY_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_INDUSTRY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_INDUSTRY">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_INDUSTRY}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_INDUSTRY_fieldblock}
+
+			{BEGIN PRO_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UPDATE_DATE}" data-fieldname="PRO_UPDATE_DATE" data-signal-error-for="PRO_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UPDATE_DATE}">
+		{BEGIN PRO_UPDATE_DATE_label}{$label PROCESS PRO_UPDATE_DATE}{END PRO_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UPDATE_DATE_fieldblock}
+
+			{BEGIN PRO_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_CREATE_DATE}" data-fieldname="PRO_CREATE_DATE" data-signal-error-for="PRO_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_CREATE_DATE}">
+		{BEGIN PRO_CREATE_DATE_label}{$label PROCESS PRO_CREATE_DATE}{END PRO_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_CREATE_DATE_fieldblock}
+
+			{BEGIN PRO_CREATE_USER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_CREATE_USER}" data-fieldname="PRO_CREATE_USER" data-signal-error-for="PRO_CREATE_USER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_CREATE_USER}">
+		{BEGIN PRO_CREATE_USER_label}{$label PROCESS PRO_CREATE_USER}{END PRO_CREATE_USER_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_CREATE_USER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_CREATE_USER">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_CREATE_USER}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_CREATE_USER_fieldblock}
+
+			{BEGIN PRO_HEIGHT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_HEIGHT}" data-fieldname="PRO_HEIGHT" data-signal-error-for="PRO_HEIGHT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_HEIGHT}">
+		{BEGIN PRO_HEIGHT_label}{$label PROCESS PRO_HEIGHT}{END PRO_HEIGHT_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_HEIGHT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_HEIGHT">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_HEIGHT}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_HEIGHT_fieldblock}
+
+			{BEGIN PRO_WIDTH_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_WIDTH}" data-fieldname="PRO_WIDTH" data-signal-error-for="PRO_WIDTH{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_WIDTH}">
+		{BEGIN PRO_WIDTH_label}{$label PROCESS PRO_WIDTH}{END PRO_WIDTH_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_WIDTH_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_WIDTH">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_WIDTH}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_WIDTH_fieldblock}
+
+			{BEGIN PRO_TITLE_X_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TITLE_X}" data-fieldname="PRO_TITLE_X" data-signal-error-for="PRO_TITLE_X{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TITLE_X}">
+		{BEGIN PRO_TITLE_X_label}{$label PROCESS PRO_TITLE_X}{END PRO_TITLE_X_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TITLE_X_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TITLE_X">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TITLE_X}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TITLE_X_fieldblock}
+
+			{BEGIN PRO_TITLE_Y_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_TITLE_Y}" data-fieldname="PRO_TITLE_Y" data-signal-error-for="PRO_TITLE_Y{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_TITLE_Y}">
+		{BEGIN PRO_TITLE_Y_label}{$label PROCESS PRO_TITLE_Y}{END PRO_TITLE_Y_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_TITLE_Y_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_TITLE_Y">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_TITLE_Y}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_TITLE_Y_fieldblock}
+
+			{BEGIN PRO_DEBUG_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_DEBUG}" data-fieldname="PRO_DEBUG" data-signal-error-for="PRO_DEBUG{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_DEBUG}">
+		{BEGIN PRO_DEBUG_label}{$label PROCESS PRO_DEBUG}{END PRO_DEBUG_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_DEBUG_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_DEBUG">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_DEBUG}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_DEBUG_fieldblock}
+
+			{BEGIN PRO_DYNAFORMS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_DYNAFORMS}" data-fieldname="PRO_DYNAFORMS" data-signal-error-for="PRO_DYNAFORMS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_DYNAFORMS}">
+		{BEGIN PRO_DYNAFORMS_label}{$label PROCESS PRO_DYNAFORMS}{END PRO_DYNAFORMS_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_DYNAFORMS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_DYNAFORMS">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_DYNAFORMS}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_DYNAFORMS_fieldblock}
+
+			{BEGIN PRO_DERIVATION_SCREEN_TPL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_DERIVATION_SCREEN_TPL}" data-fieldname="PRO_DERIVATION_SCREEN_TPL" data-signal-error-for="PRO_DERIVATION_SCREEN_TPL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_DERIVATION_SCREEN_TPL}">
+		{BEGIN PRO_DERIVATION_SCREEN_TPL_label}{$label PROCESS PRO_DERIVATION_SCREEN_TPL}{END PRO_DERIVATION_SCREEN_TPL_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_DERIVATION_SCREEN_TPL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_DERIVATION_SCREEN_TPL">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_DERIVATION_SCREEN_TPL}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_DERIVATION_SCREEN_TPL_fieldblock}
+
+			{BEGIN PRO_COST_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_COST}" data-fieldname="PRO_COST" data-signal-error-for="PRO_COST{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_COST}">
+		{BEGIN PRO_COST_label}{$label PROCESS PRO_COST}{END PRO_COST_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_COST_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_COST">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_COST}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_COST_fieldblock}
+
+			{BEGIN PRO_UNIT_COST_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UNIT_COST}" data-fieldname="PRO_UNIT_COST" data-signal-error-for="PRO_UNIT_COST{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UNIT_COST}">
+		{BEGIN PRO_UNIT_COST_label}{$label PROCESS PRO_UNIT_COST}{END PRO_UNIT_COST_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UNIT_COST_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UNIT_COST">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_UNIT_COST}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UNIT_COST_fieldblock}
+
+			{BEGIN PRO_ITEE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_ITEE}" data-fieldname="PRO_ITEE" data-signal-error-for="PRO_ITEE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_ITEE}">
+		{BEGIN PRO_ITEE_label}{$label PROCESS PRO_ITEE}{END PRO_ITEE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_ITEE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_ITEE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_ITEE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_ITEE_fieldblock}
+
+			{BEGIN PRO_ACTION_DONE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_ACTION_DONE}" data-fieldname="PRO_ACTION_DONE" data-signal-error-for="PRO_ACTION_DONE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_ACTION_DONE}">
+		{BEGIN PRO_ACTION_DONE_label}{$label PROCESS PRO_ACTION_DONE}{END PRO_ACTION_DONE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_ACTION_DONE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_ACTION_DONE">
+		<div class="text-muted" >
+		{$tooltip PROCESS PRO_ACTION_DONE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_ACTION_DONE_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_PROCESS_VARIABLES}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">プロセス変数
+		<span>
+{BEGIN details_inlineadd_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PROCESS_VARIABLES_attrs}>インライン追加</button>
+{END details_inlineadd_PROCESS_VARIABLES_link}		
+{BEGIN details_add_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PROCESS_VARIABLES_attrs}>追加</button>
+{END details_add_PROCESS_VARIABLES_link}
+{BEGIN details_edit_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PROCESS_VARIABLES_attrs}>編集</button>
+{END details_edit_PROCESS_VARIABLES_link}
+{BEGIN details_updateselected_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PROCESS_VARIABLES_attrs}>Update selected</button>
+{END details_updateselected_PROCESS_VARIABLES_link}
+
+
+{BEGIN details_delete_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PROCESS_VARIABLES_attrs}>削除</button>
+{END details_delete_PROCESS_VARIABLES_link}
+
+{BEGIN saveall_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PROCESS_VARIABLES_attrs} {$savealllink_PROCESS_VARIABLES_span}>全て保存</button>
+{END saveall_PROCESS_VARIABLES_link}
+{BEGIN cancelall_PROCESS_VARIABLES_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PROCESS_VARIABLES_attrs} {$cancelalllink_PROCESS_VARIABLES_span}>キャンセル</button>
+{END cancelall_PROCESS_VARIABLES_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PROCESS_VARIABLES}
+</div>
+</div>
+</div>
+{END details_PROCESS_VARIABLES}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_TRIGGERS}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">トリガ
+		<span>
+{BEGIN details_inlineadd_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_TRIGGERS_attrs}>インライン追加</button>
+{END details_inlineadd_TRIGGERS_link}		
+{BEGIN details_add_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_TRIGGERS_attrs}>追加</button>
+{END details_add_TRIGGERS_link}
+{BEGIN details_edit_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_TRIGGERS_attrs}>編集</button>
+{END details_edit_TRIGGERS_link}
+{BEGIN details_updateselected_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_TRIGGERS_attrs}>Update selected</button>
+{END details_updateselected_TRIGGERS_link}
+
+
+{BEGIN details_delete_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_TRIGGERS_attrs}>削除</button>
+{END details_delete_TRIGGERS_link}
+
+{BEGIN saveall_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_TRIGGERS_attrs} {$savealllink_TRIGGERS_span}>全て保存</button>
+{END saveall_TRIGGERS_link}
+{BEGIN cancelall_TRIGGERS_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_TRIGGERS_attrs} {$cancelalllink_TRIGGERS_span}>キャンセル</button>
+{END cancelall_TRIGGERS_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_TRIGGERS}
+</div>
+</div>
+</div>
+{END details_TRIGGERS}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_DYNAFORM}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">ダイナフォーム
+		<span>
+{BEGIN details_inlineadd_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_DYNAFORM_attrs}>インライン追加</button>
+{END details_inlineadd_DYNAFORM_link}		
+{BEGIN details_add_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_DYNAFORM_attrs}>追加</button>
+{END details_add_DYNAFORM_link}
+{BEGIN details_edit_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_DYNAFORM_attrs}>編集</button>
+{END details_edit_DYNAFORM_link}
+{BEGIN details_updateselected_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_DYNAFORM_attrs}>Update selected</button>
+{END details_updateselected_DYNAFORM_link}
+
+
+{BEGIN details_delete_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_DYNAFORM_attrs}>削除</button>
+{END details_delete_DYNAFORM_link}
+
+{BEGIN saveall_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_DYNAFORM_attrs} {$savealllink_DYNAFORM_span}>全て保存</button>
+{END saveall_DYNAFORM_link}
+{BEGIN cancelall_DYNAFORM_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_DYNAFORM_attrs} {$cancelalllink_DYNAFORM_span}>キャンセル</button>
+{END cancelall_DYNAFORM_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_DYNAFORM}
+</div>
+</div>
+</div>
+{END details_DYNAFORM}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_SUB_PROCESS}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">サブプロセス
+		<span>
+{BEGIN details_inlineadd_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_SUB_PROCESS_attrs}>インライン追加</button>
+{END details_inlineadd_SUB_PROCESS_link}		
+{BEGIN details_add_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_SUB_PROCESS_attrs}>追加</button>
+{END details_add_SUB_PROCESS_link}
+{BEGIN details_edit_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_SUB_PROCESS_attrs}>編集</button>
+{END details_edit_SUB_PROCESS_link}
+{BEGIN details_updateselected_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_SUB_PROCESS_attrs}>Update selected</button>
+{END details_updateselected_SUB_PROCESS_link}
+
+
+{BEGIN details_delete_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_SUB_PROCESS_attrs}>削除</button>
+{END details_delete_SUB_PROCESS_link}
+
+{BEGIN saveall_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_SUB_PROCESS_attrs} {$savealllink_SUB_PROCESS_span}>全て保存</button>
+{END saveall_SUB_PROCESS_link}
+{BEGIN cancelall_SUB_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_SUB_PROCESS_attrs} {$cancelalllink_SUB_PROCESS_span}>キャンセル</button>
+{END cancelall_SUB_PROCESS_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_SUB_PROCESS}
+</div>
+</div>
+</div>
+{END details_SUB_PROCESS}
+	
+	
+	
+
+			
+		
+
+
+
+
+
+{BEGIN details_STEP}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">ステップ
+		<span>
+{BEGIN details_inlineadd_STEP_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_STEP_attrs}>インライン追加</button>
+{END details_inlineadd_STEP_link}		
+{BEGIN details_add_STEP_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_STEP_attrs}>追加</button>
+{END details_add_STEP_link}
+{BEGIN details_edit_STEP_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_STEP_attrs}>編集</button>
+{END details_edit_STEP_link}
+{BEGIN details_updateselected_STEP_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_STEP_attrs}>Update selected</button>
+{END details_updateselected_STEP_link}
+
+
+{BEGIN details_delete_STEP_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_STEP_attrs}>削除</button>
+{END details_delete_STEP_link}
+
+{BEGIN saveall_STEP_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_STEP_attrs} {$savealllink_STEP_span}>全て保存</button>
+{END saveall_STEP_link}
+{BEGIN cancelall_STEP_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_STEP_attrs} {$cancelalllink_STEP_span}>キャンセル</button>
+{END cancelall_STEP_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_STEP}
+</div>
+</div>
+</div>
+{END details_STEP}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

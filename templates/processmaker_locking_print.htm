@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel processmaker_locking print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN id_fieldheadercolumn}
+			<th class="{$id_class}" {$id_style}  data-field="id">
+				{$label processmaker_locking id}
+			</th>
+			{END id_fieldheadercolumn}
+			{BEGIN table_fieldheadercolumn}
+			<th class="{$table_class}" {$table_style}  data-field="table">
+				{$label processmaker_locking table}
+			</th>
+			{END table_fieldheadercolumn}
+			{BEGIN startdatetime_fieldheadercolumn}
+			<th class="{$startdatetime_class}" {$startdatetime_style}  data-field="startdatetime">
+				{$label processmaker_locking startdatetime}
+			</th>
+			{END startdatetime_fieldheadercolumn}
+			{BEGIN confirmdatetime_fieldheadercolumn}
+			<th class="{$confirmdatetime_class}" {$confirmdatetime_style}  data-field="confirmdatetime">
+				{$label processmaker_locking confirmdatetime}
+			</th>
+			{END confirmdatetime_fieldheadercolumn}
+			{BEGIN keys_fieldheadercolumn}
+			<th class="{$keys_class}" {$keys_style}  data-field="keys">
+				{$label processmaker_locking keys}
+			</th>
+			{END keys_fieldheadercolumn}
+			{BEGIN sessionid_fieldheadercolumn}
+			<th class="{$sessionid_class}" {$sessionid_style}  data-field="sessionid">
+				{$label processmaker_locking sessionid}
+			</th>
+			{END sessionid_fieldheadercolumn}
+			{BEGIN userid_fieldheadercolumn}
+			<th class="{$userid_class}" {$userid_style}  data-field="userid">
+				{$label processmaker_locking userid}
+			</th>
+			{END userid_fieldheadercolumn}
+			{BEGIN action_fieldheadercolumn}
+			<th class="{$action_class}" {$action_style}  data-field="action">
+				{$label processmaker_locking action}
+			</th>
+			{END action_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN id_fieldcolumn}
+			<td  class="{$id_class}" {$id_style} {$recordattrs}>
+				{$id_value}
+			</td>
+			{END id_fieldcolumn}
+			{BEGIN table_fieldcolumn}
+			<td  class="{$table_class}" {$table_style} {$recordattrs}>
+				{$table_value}
+			</td>
+			{END table_fieldcolumn}
+			{BEGIN startdatetime_fieldcolumn}
+			<td  class="{$startdatetime_class}" {$startdatetime_style} {$recordattrs}>
+				{$startdatetime_value}
+			</td>
+			{END startdatetime_fieldcolumn}
+			{BEGIN confirmdatetime_fieldcolumn}
+			<td  class="{$confirmdatetime_class}" {$confirmdatetime_style} {$recordattrs}>
+				{$confirmdatetime_value}
+			</td>
+			{END confirmdatetime_fieldcolumn}
+			{BEGIN keys_fieldcolumn}
+			<td  class="{$keys_class}" {$keys_style} {$recordattrs}>
+				{$keys_value}
+			</td>
+			{END keys_fieldcolumn}
+			{BEGIN sessionid_fieldcolumn}
+			<td  class="{$sessionid_class}" {$sessionid_style} {$recordattrs}>
+				{$sessionid_value}
+			</td>
+			{END sessionid_fieldcolumn}
+			{BEGIN userid_fieldcolumn}
+			<td  class="{$userid_class}" {$userid_style} {$recordattrs}>
+				{$userid_value}
+			</td>
+			{END userid_fieldcolumn}
+			{BEGIN action_fieldcolumn}
+			<td  class="{$action_class}" {$action_style} {$recordattrs}>
+				{$action_value}
+			</td>
+			{END action_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

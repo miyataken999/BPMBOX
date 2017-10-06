@@ -1,0 +1,402 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel BPMN_FLOW view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN FLO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_UID} bs-viewform-group" data-fieldname="FLO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_UID}">
+			{$label BPMN_FLOW FLO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_UID_fieldblock}
+	{BEGIN PRJ_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRJ_UID} bs-viewform-group" data-fieldname="PRJ_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRJ_UID}">
+			{$label BPMN_FLOW PRJ_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRJ_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRJ_UID_fieldblock}
+	{BEGIN DIA_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DIA_UID} bs-viewform-group" data-fieldname="DIA_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DIA_UID}">
+			{$label BPMN_FLOW DIA_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DIA_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DIA_UID_fieldblock}
+	{BEGIN FLO_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_TYPE} bs-viewform-group" data-fieldname="FLO_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_TYPE}">
+			{$label BPMN_FLOW FLO_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_TYPE_fieldblock}
+	{BEGIN FLO_NAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_NAME} bs-viewform-group" data-fieldname="FLO_NAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_NAME}">
+			{$label BPMN_FLOW FLO_NAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_NAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_NAME_fieldblock}
+	{BEGIN FLO_ELEMENT_ORIGIN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_ELEMENT_ORIGIN} bs-viewform-group" data-fieldname="FLO_ELEMENT_ORIGIN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_ELEMENT_ORIGIN}">
+			{$label BPMN_FLOW FLO_ELEMENT_ORIGIN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_ELEMENT_ORIGIN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_ELEMENT_ORIGIN_fieldblock}
+	{BEGIN FLO_ELEMENT_ORIGIN_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_ELEMENT_ORIGIN_TYPE} bs-viewform-group" data-fieldname="FLO_ELEMENT_ORIGIN_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_ELEMENT_ORIGIN_TYPE}">
+			{$label BPMN_FLOW FLO_ELEMENT_ORIGIN_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_ELEMENT_ORIGIN_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_ELEMENT_ORIGIN_TYPE_fieldblock}
+	{BEGIN FLO_ELEMENT_ORIGIN_PORT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_ELEMENT_ORIGIN_PORT} bs-viewform-group" data-fieldname="FLO_ELEMENT_ORIGIN_PORT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_ELEMENT_ORIGIN_PORT}">
+			{$label BPMN_FLOW FLO_ELEMENT_ORIGIN_PORT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_ELEMENT_ORIGIN_PORT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_ELEMENT_ORIGIN_PORT_fieldblock}
+	{BEGIN FLO_ELEMENT_DEST_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_ELEMENT_DEST} bs-viewform-group" data-fieldname="FLO_ELEMENT_DEST">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_ELEMENT_DEST}">
+			{$label BPMN_FLOW FLO_ELEMENT_DEST}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_ELEMENT_DEST_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_ELEMENT_DEST_fieldblock}
+	{BEGIN FLO_ELEMENT_DEST_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_ELEMENT_DEST_TYPE} bs-viewform-group" data-fieldname="FLO_ELEMENT_DEST_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_ELEMENT_DEST_TYPE}">
+			{$label BPMN_FLOW FLO_ELEMENT_DEST_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_ELEMENT_DEST_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_ELEMENT_DEST_TYPE_fieldblock}
+	{BEGIN FLO_ELEMENT_DEST_PORT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_ELEMENT_DEST_PORT} bs-viewform-group" data-fieldname="FLO_ELEMENT_DEST_PORT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_ELEMENT_DEST_PORT}">
+			{$label BPMN_FLOW FLO_ELEMENT_DEST_PORT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_ELEMENT_DEST_PORT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_ELEMENT_DEST_PORT_fieldblock}
+	{BEGIN FLO_IS_INMEDIATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_IS_INMEDIATE} bs-viewform-group" data-fieldname="FLO_IS_INMEDIATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_IS_INMEDIATE}">
+			{$label BPMN_FLOW FLO_IS_INMEDIATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_IS_INMEDIATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_IS_INMEDIATE_fieldblock}
+	{BEGIN FLO_CONDITION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_CONDITION} bs-viewform-group" data-fieldname="FLO_CONDITION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_CONDITION}">
+			{$label BPMN_FLOW FLO_CONDITION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_CONDITION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_CONDITION_fieldblock}
+	{BEGIN FLO_X1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_X1} bs-viewform-group" data-fieldname="FLO_X1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_X1}">
+			{$label BPMN_FLOW FLO_X1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_X1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_X1_fieldblock}
+	{BEGIN FLO_Y1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_Y1} bs-viewform-group" data-fieldname="FLO_Y1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_Y1}">
+			{$label BPMN_FLOW FLO_Y1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_Y1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_Y1_fieldblock}
+	{BEGIN FLO_X2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_X2} bs-viewform-group" data-fieldname="FLO_X2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_X2}">
+			{$label BPMN_FLOW FLO_X2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_X2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_X2_fieldblock}
+	{BEGIN FLO_Y2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_Y2} bs-viewform-group" data-fieldname="FLO_Y2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_Y2}">
+			{$label BPMN_FLOW FLO_Y2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_Y2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_Y2_fieldblock}
+	{BEGIN FLO_STATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_STATE} bs-viewform-group" data-fieldname="FLO_STATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_STATE}">
+			{$label BPMN_FLOW FLO_STATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_STATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_STATE_fieldblock}
+	{BEGIN FLO_POSITION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FLO_POSITION} bs-viewform-group" data-fieldname="FLO_POSITION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FLO_POSITION}">
+			{$label BPMN_FLOW FLO_POSITION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FLO_POSITION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FLO_POSITION_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,414 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel PMT_FIELD view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN APP_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_UID} bs-viewform-group" data-fieldname="APP_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_UID}">
+			{$label PMT_FIELD APP_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_UID_fieldblock}
+	{BEGIN APP_NUMBER_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_NUMBER} bs-viewform-group" data-fieldname="APP_NUMBER">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_NUMBER}">
+			{$label PMT_FIELD APP_NUMBER}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_NUMBER_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_NUMBER_fieldblock}
+	{BEGIN APP_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_STATUS} bs-viewform-group" data-fieldname="APP_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_STATUS}">
+			{$label PMT_FIELD APP_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_STATUS_fieldblock}
+	{BEGIN ROW_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ROW} bs-viewform-group" data-fieldname="ROW">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ROW}">
+			{$label PMT_FIELD ROW}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ROW_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ROW_fieldblock}
+	{BEGIN CHECKBOX0000000001_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000001} bs-viewform-group" data-fieldname="CHECKBOX0000000001">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000001}">
+			{$label PMT_FIELD CHECKBOX0000000001}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000001_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000001_fieldblock}
+	{BEGIN CHECKBOX0000000002_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000002} bs-viewform-group" data-fieldname="CHECKBOX0000000002">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000002}">
+			{$label PMT_FIELD CHECKBOX0000000002}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000002_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000002_fieldblock}
+	{BEGIN CHECKBOX0000000003_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000003} bs-viewform-group" data-fieldname="CHECKBOX0000000003">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000003}">
+			{$label PMT_FIELD CHECKBOX0000000003}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000003_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000003_fieldblock}
+	{BEGIN CHECKBOX0000000004_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000004} bs-viewform-group" data-fieldname="CHECKBOX0000000004">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000004}">
+			{$label PMT_FIELD CHECKBOX0000000004}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000004_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000004_fieldblock}
+	{BEGIN CHECKBOX0000000005_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000005} bs-viewform-group" data-fieldname="CHECKBOX0000000005">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000005}">
+			{$label PMT_FIELD CHECKBOX0000000005}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000005_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000005_fieldblock}
+	{BEGIN CHECKBOX0000000006_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000006} bs-viewform-group" data-fieldname="CHECKBOX0000000006">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000006}">
+			{$label PMT_FIELD CHECKBOX0000000006}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000006_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000006_fieldblock}
+	{BEGIN CHECKBOX0000000007_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000007} bs-viewform-group" data-fieldname="CHECKBOX0000000007">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000007}">
+			{$label PMT_FIELD CHECKBOX0000000007}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000007_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000007_fieldblock}
+	{BEGIN CHECKBOX0000000008_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000008} bs-viewform-group" data-fieldname="CHECKBOX0000000008">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000008}">
+			{$label PMT_FIELD CHECKBOX0000000008}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000008_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000008_fieldblock}
+	{BEGIN CHECKBOX0000000009_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000009} bs-viewform-group" data-fieldname="CHECKBOX0000000009">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000009}">
+			{$label PMT_FIELD CHECKBOX0000000009}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000009_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000009_fieldblock}
+	{BEGIN CHECKBOX0000000010_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000010} bs-viewform-group" data-fieldname="CHECKBOX0000000010">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000010}">
+			{$label PMT_FIELD CHECKBOX0000000010}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000010_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000010_fieldblock}
+	{BEGIN CHECKBOX0000000011_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000011} bs-viewform-group" data-fieldname="CHECKBOX0000000011">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000011}">
+			{$label PMT_FIELD CHECKBOX0000000011}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000011_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000011_fieldblock}
+	{BEGIN CHECKBOX0000000012_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_CHECKBOX0000000012} bs-viewform-group" data-fieldname="CHECKBOX0000000012">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_CHECKBOX0000000012}">
+			{$label PMT_FIELD CHECKBOX0000000012}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$CHECKBOX0000000012_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END CHECKBOX0000000012_fieldblock}
+	{BEGIN DROPDOWN0000000003_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DROPDOWN0000000003} bs-viewform-group" data-fieldname="DROPDOWN0000000003">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DROPDOWN0000000003}">
+			{$label PMT_FIELD DROPDOWN0000000003}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DROPDOWN0000000003_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DROPDOWN0000000003_fieldblock}
+	{BEGIN DROPDOWN0000000003_LABEL_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DROPDOWN0000000003_LABEL} bs-viewform-group" data-fieldname="DROPDOWN0000000003_LABEL">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DROPDOWN0000000003_LABEL}">
+			{$label PMT_FIELD DROPDOWN0000000003_LABEL}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DROPDOWN0000000003_LABEL_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DROPDOWN0000000003_LABEL_fieldblock}
+	{BEGIN TEXT0000000005_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXT0000000005} bs-viewform-group" data-fieldname="TEXT0000000005">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXT0000000005}">
+			{$label PMT_FIELD TEXT0000000005}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXT0000000005_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXT0000000005_fieldblock}
+	{BEGIN TEXT0000000006_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TEXT0000000006} bs-viewform-group" data-fieldname="TEXT0000000006">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TEXT0000000006}">
+			{$label PMT_FIELD TEXT0000000006}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TEXT0000000006_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TEXT0000000006_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

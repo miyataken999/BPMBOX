@@ -1,0 +1,150 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel APPLICATION masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label APPLICATION APP_UID}";
+	}
+	.bs-gridcell[data-field=APP_TITLE]:before {
+		content: "{$label APPLICATION APP_TITLE}";
+	}
+	.bs-gridcell[data-field=APP_DESCRIPTION]:before {
+		content: "{$label APPLICATION APP_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label APPLICATION APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_PARENT]:before {
+		content: "{$label APPLICATION APP_PARENT}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label APPLICATION APP_STATUS}";
+	}
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label APPLICATION PRO_UID}";
+	}
+	.bs-gridcell[data-field=APP_PROC_STATUS]:before {
+		content: "{$label APPLICATION APP_PROC_STATUS}";
+	}
+	.bs-gridcell[data-field=APP_PROC_CODE]:before {
+		content: "{$label APPLICATION APP_PROC_CODE}";
+	}
+	.bs-gridcell[data-field=APP_PARALLEL]:before {
+		content: "{$label APPLICATION APP_PARALLEL}";
+	}
+	.bs-gridcell[data-field=APP_INIT_USER]:before {
+		content: "{$label APPLICATION APP_INIT_USER}";
+	}
+	.bs-gridcell[data-field=APP_CUR_USER]:before {
+		content: "{$label APPLICATION APP_CUR_USER}";
+	}
+	.bs-gridcell[data-field=APP_CREATE_DATE]:before {
+		content: "{$label APPLICATION APP_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=APP_INIT_DATE]:before {
+		content: "{$label APPLICATION APP_INIT_DATE}";
+	}
+	.bs-gridcell[data-field=APP_FINISH_DATE]:before {
+		content: "{$label APPLICATION APP_FINISH_DATE}";
+	}
+	.bs-gridcell[data-field=APP_UPDATE_DATE]:before {
+		content: "{$label APPLICATION APP_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=APP_DATA]:before {
+		content: "{$label APPLICATION APP_DATA}";
+	}
+	.bs-gridcell[data-field=APP_PIN]:before {
+		content: "{$label APPLICATION APP_PIN}";
+	}
+	.bs-gridcell[data-field=APP_DURATION]:before {
+		content: "{$label APPLICATION APP_DURATION}";
+	}
+	.bs-gridcell[data-field=APP_DELAY_DURATION]:before {
+		content: "{$label APPLICATION APP_DELAY_DURATION}";
+	}
+	.bs-gridcell[data-field=APP_DRIVE_FOLDER_UID]:before {
+		content: "{$label APPLICATION APP_DRIVE_FOLDER_UID}";
+	}
+	.bs-gridcell[data-field=APP_ROUTING_DATA]:before {
+		content: "{$label APPLICATION APP_ROUTING_DATA}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$APP_UID_class}">{$label APPLICATION APP_UID}</th>
+			<th class="{$APP_TITLE_class}">{$label APPLICATION APP_TITLE}</th>
+			<th class="{$APP_DESCRIPTION_class}">{$label APPLICATION APP_DESCRIPTION}</th>
+			<th class="{$APP_NUMBER_class}">{$label APPLICATION APP_NUMBER}</th>
+			<th class="{$APP_PARENT_class}">{$label APPLICATION APP_PARENT}</th>
+			<th class="{$APP_STATUS_class}">{$label APPLICATION APP_STATUS}</th>
+			<th class="{$PRO_UID_class}">{$label APPLICATION PRO_UID}</th>
+			<th class="{$APP_PROC_STATUS_class}">{$label APPLICATION APP_PROC_STATUS}</th>
+			<th class="{$APP_PROC_CODE_class}">{$label APPLICATION APP_PROC_CODE}</th>
+			<th class="{$APP_PARALLEL_class}">{$label APPLICATION APP_PARALLEL}</th>
+			<th class="{$APP_INIT_USER_class}">{$label APPLICATION APP_INIT_USER}</th>
+			<th class="{$APP_CUR_USER_class}">{$label APPLICATION APP_CUR_USER}</th>
+			<th class="{$APP_CREATE_DATE_class}">{$label APPLICATION APP_CREATE_DATE}</th>
+			<th class="{$APP_INIT_DATE_class}">{$label APPLICATION APP_INIT_DATE}</th>
+			<th class="{$APP_FINISH_DATE_class}">{$label APPLICATION APP_FINISH_DATE}</th>
+			<th class="{$APP_UPDATE_DATE_class}">{$label APPLICATION APP_UPDATE_DATE}</th>
+			<th class="{$APP_DATA_class}">{$label APPLICATION APP_DATA}</th>
+			<th class="{$APP_PIN_class}">{$label APPLICATION APP_PIN}</th>
+			<th class="{$APP_DURATION_class}">{$label APPLICATION APP_DURATION}</th>
+			<th class="{$APP_DELAY_DURATION_class}">{$label APPLICATION APP_DELAY_DURATION}</th>
+			<th class="{$APP_DRIVE_FOLDER_UID_class}">{$label APPLICATION APP_DRIVE_FOLDER_UID}</th>
+			<th class="{$APP_ROUTING_DATA_class}">{$label APPLICATION APP_ROUTING_DATA}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$APP_TITLE_class} bs-gridcell" data-field=APP_TITLE>{$APP_TITLE_mastervalue}</td>
+			<td class="{$APP_DESCRIPTION_class} bs-gridcell" data-field=APP_DESCRIPTION>{$APP_DESCRIPTION_mastervalue}</td>
+			<td class="{$APP_NUMBER_class} bs-gridcell" data-field=APP_NUMBER>{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_PARENT_class} bs-gridcell" data-field=APP_PARENT>{$APP_PARENT_mastervalue}</td>
+			<td class="{$APP_STATUS_class} bs-gridcell" data-field=APP_STATUS>{$APP_STATUS_mastervalue}</td>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$APP_PROC_STATUS_class} bs-gridcell" data-field=APP_PROC_STATUS>{$APP_PROC_STATUS_mastervalue}</td>
+			<td class="{$APP_PROC_CODE_class} bs-gridcell" data-field=APP_PROC_CODE>{$APP_PROC_CODE_mastervalue}</td>
+			<td class="{$APP_PARALLEL_class} bs-gridcell" data-field=APP_PARALLEL>{$APP_PARALLEL_mastervalue}</td>
+			<td class="{$APP_INIT_USER_class} bs-gridcell" data-field=APP_INIT_USER>{$APP_INIT_USER_mastervalue}</td>
+			<td class="{$APP_CUR_USER_class} bs-gridcell" data-field=APP_CUR_USER>{$APP_CUR_USER_mastervalue}</td>
+			<td class="{$APP_CREATE_DATE_class} bs-gridcell" data-field=APP_CREATE_DATE>{$APP_CREATE_DATE_mastervalue}</td>
+			<td class="{$APP_INIT_DATE_class} bs-gridcell" data-field=APP_INIT_DATE>{$APP_INIT_DATE_mastervalue}</td>
+			<td class="{$APP_FINISH_DATE_class} bs-gridcell" data-field=APP_FINISH_DATE>{$APP_FINISH_DATE_mastervalue}</td>
+			<td class="{$APP_UPDATE_DATE_class} bs-gridcell" data-field=APP_UPDATE_DATE>{$APP_UPDATE_DATE_mastervalue}</td>
+			<td class="{$APP_DATA_class} bs-gridcell" data-field=APP_DATA>{$APP_DATA_mastervalue}</td>
+			<td class="{$APP_PIN_class} bs-gridcell" data-field=APP_PIN>{$APP_PIN_mastervalue}</td>
+			<td class="{$APP_DURATION_class} bs-gridcell" data-field=APP_DURATION>{$APP_DURATION_mastervalue}</td>
+			<td class="{$APP_DELAY_DURATION_class} bs-gridcell" data-field=APP_DELAY_DURATION>{$APP_DELAY_DURATION_mastervalue}</td>
+			<td class="{$APP_DRIVE_FOLDER_UID_class} bs-gridcell" data-field=APP_DRIVE_FOLDER_UID>{$APP_DRIVE_FOLDER_UID_mastervalue}</td>
+			<td class="{$APP_ROUTING_DATA_class} bs-gridcell" data-field=APP_ROUTING_DATA>{$APP_ROUTING_DATA_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

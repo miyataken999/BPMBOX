@@ -1,0 +1,300 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel STEP_TRIGGER add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN STEP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_STEP_UID}" data-fieldname="STEP_UID" data-signal-error-for="STEP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_STEP_UID}">
+		{BEGIN STEP_UID_label}{$label STEP_TRIGGER STEP_UID}{END STEP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$STEP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="STEP_UID">
+		<div class="text-muted" >
+		{$tooltip STEP_TRIGGER STEP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END STEP_UID_fieldblock}
+
+			{BEGIN TAS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID" data-signal-error-for="TAS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAS_UID}">
+		{BEGIN TAS_UID_label}{$label STEP_TRIGGER TAS_UID}{END TAS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAS_UID">
+		<div class="text-muted" >
+		{$tooltip STEP_TRIGGER TAS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TAS_UID_fieldblock}
+
+			{BEGIN TRI_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TRI_UID}" data-fieldname="TRI_UID" data-signal-error-for="TRI_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TRI_UID}">
+		{BEGIN TRI_UID_label}{$label STEP_TRIGGER TRI_UID}{END TRI_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$TRI_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TRI_UID">
+		<div class="text-muted" >
+		{$tooltip STEP_TRIGGER TRI_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END TRI_UID_fieldblock}
+
+			{BEGIN ST_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ST_TYPE}" data-fieldname="ST_TYPE" data-signal-error-for="ST_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ST_TYPE}">
+		{BEGIN ST_TYPE_label}{$label STEP_TRIGGER ST_TYPE}{END ST_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ST_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ST_TYPE">
+		<div class="text-muted" >
+		{$tooltip STEP_TRIGGER ST_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ST_TYPE_fieldblock}
+
+			{BEGIN ST_CONDITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ST_CONDITION}" data-fieldname="ST_CONDITION" data-signal-error-for="ST_CONDITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ST_CONDITION}">
+		{BEGIN ST_CONDITION_label}{$label STEP_TRIGGER ST_CONDITION}{END ST_CONDITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ST_CONDITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ST_CONDITION">
+		<div class="text-muted" >
+		{$tooltip STEP_TRIGGER ST_CONDITION}
+		</div>
+	</div>
+</div>
+</div>
+{END ST_CONDITION_fieldblock}
+
+			{BEGIN ST_POSITION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ST_POSITION}" data-fieldname="ST_POSITION" data-signal-error-for="ST_POSITION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ST_POSITION}">
+		{BEGIN ST_POSITION_label}{$label STEP_TRIGGER ST_POSITION}{END ST_POSITION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ST_POSITION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ST_POSITION">
+		<div class="text-muted" >
+		{$tooltip STEP_TRIGGER ST_POSITION}
+		</div>
+	</div>
+</div>
+</div>
+{END ST_POSITION_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

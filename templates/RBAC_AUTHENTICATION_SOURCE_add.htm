@@ -1,0 +1,432 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel RBAC_AUTHENTICATION_SOURCE add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN AUTH_SOURCE_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_UID}" data-fieldname="AUTH_SOURCE_UID" data-signal-error-for="AUTH_SOURCE_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_UID}">
+		{BEGIN AUTH_SOURCE_UID_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_UID}{END AUTH_SOURCE_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_UID">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_UID_fieldblock}
+
+			{BEGIN AUTH_SOURCE_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_NAME}" data-fieldname="AUTH_SOURCE_NAME" data-signal-error-for="AUTH_SOURCE_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_NAME}">
+		{BEGIN AUTH_SOURCE_NAME_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_NAME}{END AUTH_SOURCE_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_NAME">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_NAME_fieldblock}
+
+			{BEGIN AUTH_SOURCE_PROVIDER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_PROVIDER}" data-fieldname="AUTH_SOURCE_PROVIDER" data-signal-error-for="AUTH_SOURCE_PROVIDER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_PROVIDER}">
+		{BEGIN AUTH_SOURCE_PROVIDER_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PROVIDER}{END AUTH_SOURCE_PROVIDER_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_PROVIDER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_PROVIDER">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PROVIDER}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_PROVIDER_fieldblock}
+
+			{BEGIN AUTH_SOURCE_SERVER_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_SERVER_NAME}" data-fieldname="AUTH_SOURCE_SERVER_NAME" data-signal-error-for="AUTH_SOURCE_SERVER_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_SERVER_NAME}">
+		{BEGIN AUTH_SOURCE_SERVER_NAME_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SERVER_NAME}{END AUTH_SOURCE_SERVER_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_SERVER_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_SERVER_NAME">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SERVER_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_SERVER_NAME_fieldblock}
+
+			{BEGIN AUTH_SOURCE_PORT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_PORT}" data-fieldname="AUTH_SOURCE_PORT" data-signal-error-for="AUTH_SOURCE_PORT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_PORT}">
+		{BEGIN AUTH_SOURCE_PORT_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PORT}{END AUTH_SOURCE_PORT_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_PORT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_PORT">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PORT}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_PORT_fieldblock}
+
+			{BEGIN AUTH_SOURCE_ENABLED_TLS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_ENABLED_TLS}" data-fieldname="AUTH_SOURCE_ENABLED_TLS" data-signal-error-for="AUTH_SOURCE_ENABLED_TLS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_ENABLED_TLS}">
+		{BEGIN AUTH_SOURCE_ENABLED_TLS_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ENABLED_TLS}{END AUTH_SOURCE_ENABLED_TLS_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_ENABLED_TLS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_ENABLED_TLS">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ENABLED_TLS}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_ENABLED_TLS_fieldblock}
+
+			{BEGIN AUTH_SOURCE_VERSION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_VERSION}" data-fieldname="AUTH_SOURCE_VERSION" data-signal-error-for="AUTH_SOURCE_VERSION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_VERSION}">
+		{BEGIN AUTH_SOURCE_VERSION_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_VERSION}{END AUTH_SOURCE_VERSION_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_VERSION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_VERSION">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_VERSION}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_VERSION_fieldblock}
+
+			{BEGIN AUTH_SOURCE_BASE_DN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_BASE_DN}" data-fieldname="AUTH_SOURCE_BASE_DN" data-signal-error-for="AUTH_SOURCE_BASE_DN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_BASE_DN}">
+		{BEGIN AUTH_SOURCE_BASE_DN_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_BASE_DN}{END AUTH_SOURCE_BASE_DN_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_BASE_DN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_BASE_DN">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_BASE_DN}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_BASE_DN_fieldblock}
+
+			{BEGIN AUTH_ANONYMOUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_ANONYMOUS}" data-fieldname="AUTH_ANONYMOUS" data-signal-error-for="AUTH_ANONYMOUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_ANONYMOUS}">
+		{BEGIN AUTH_ANONYMOUS_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_ANONYMOUS}{END AUTH_ANONYMOUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_ANONYMOUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_ANONYMOUS">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_ANONYMOUS}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_ANONYMOUS_fieldblock}
+
+			{BEGIN AUTH_SOURCE_SEARCH_USER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_SEARCH_USER}" data-fieldname="AUTH_SOURCE_SEARCH_USER" data-signal-error-for="AUTH_SOURCE_SEARCH_USER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_SEARCH_USER}">
+		{BEGIN AUTH_SOURCE_SEARCH_USER_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SEARCH_USER}{END AUTH_SOURCE_SEARCH_USER_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_SEARCH_USER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_SEARCH_USER">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SEARCH_USER}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_SEARCH_USER_fieldblock}
+
+			{BEGIN AUTH_SOURCE_PASSWORD_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_PASSWORD}" data-fieldname="AUTH_SOURCE_PASSWORD" data-signal-error-for="AUTH_SOURCE_PASSWORD{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_PASSWORD}">
+		{BEGIN AUTH_SOURCE_PASSWORD_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PASSWORD}{END AUTH_SOURCE_PASSWORD_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_PASSWORD_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_PASSWORD">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PASSWORD}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_PASSWORD_fieldblock}
+
+			{BEGIN AUTH_SOURCE_ATTRIBUTES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_ATTRIBUTES}" data-fieldname="AUTH_SOURCE_ATTRIBUTES" data-signal-error-for="AUTH_SOURCE_ATTRIBUTES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_ATTRIBUTES}">
+		{BEGIN AUTH_SOURCE_ATTRIBUTES_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ATTRIBUTES}{END AUTH_SOURCE_ATTRIBUTES_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_ATTRIBUTES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_ATTRIBUTES">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ATTRIBUTES}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_ATTRIBUTES_fieldblock}
+
+			{BEGIN AUTH_SOURCE_OBJECT_CLASSES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_OBJECT_CLASSES}" data-fieldname="AUTH_SOURCE_OBJECT_CLASSES" data-signal-error-for="AUTH_SOURCE_OBJECT_CLASSES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_OBJECT_CLASSES}">
+		{BEGIN AUTH_SOURCE_OBJECT_CLASSES_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_OBJECT_CLASSES}{END AUTH_SOURCE_OBJECT_CLASSES_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_OBJECT_CLASSES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_OBJECT_CLASSES">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_OBJECT_CLASSES}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_OBJECT_CLASSES_fieldblock}
+
+			{BEGIN AUTH_SOURCE_DATA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AUTH_SOURCE_DATA}" data-fieldname="AUTH_SOURCE_DATA" data-signal-error-for="AUTH_SOURCE_DATA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AUTH_SOURCE_DATA}">
+		{BEGIN AUTH_SOURCE_DATA_label}{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_DATA}{END AUTH_SOURCE_DATA_label}
+	</label>
+	<div class="col-md-6" >
+		{$AUTH_SOURCE_DATA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AUTH_SOURCE_DATA">
+		<div class="text-muted" >
+		{$tooltip RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_DATA}
+		</div>
+	</div>
+</div>
+</div>
+{END AUTH_SOURCE_DATA_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel general_log print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN event_time_fieldheadercolumn}
+			<th class="{$event_time_class}" {$event_time_style}  data-field="event_time">
+				{$label general_log event_time}
+			</th>
+			{END event_time_fieldheadercolumn}
+			{BEGIN user_host_fieldheadercolumn}
+			<th class="{$user_host_class}" {$user_host_style}  data-field="user_host">
+				{$label general_log user_host}
+			</th>
+			{END user_host_fieldheadercolumn}
+			{BEGIN thread_id_fieldheadercolumn}
+			<th class="{$thread_id_class}" {$thread_id_style}  data-field="thread_id">
+				{$label general_log thread_id}
+			</th>
+			{END thread_id_fieldheadercolumn}
+			{BEGIN server_id_fieldheadercolumn}
+			<th class="{$server_id_class}" {$server_id_style}  data-field="server_id">
+				{$label general_log server_id}
+			</th>
+			{END server_id_fieldheadercolumn}
+			{BEGIN command_type_fieldheadercolumn}
+			<th class="{$command_type_class}" {$command_type_style}  data-field="command_type">
+				{$label general_log command_type}
+			</th>
+			{END command_type_fieldheadercolumn}
+			{BEGIN argument_fieldheadercolumn}
+			<th class="{$argument_class}" {$argument_style}  data-field="argument">
+				{$label general_log argument}
+			</th>
+			{END argument_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN event_time_fieldcolumn}
+			<td  class="{$event_time_class}" {$event_time_style} {$recordattrs}>
+				{$event_time_value}
+			</td>
+			{END event_time_fieldcolumn}
+			{BEGIN user_host_fieldcolumn}
+			<td  class="{$user_host_class}" {$user_host_style} {$recordattrs}>
+				{$user_host_value}
+			</td>
+			{END user_host_fieldcolumn}
+			{BEGIN thread_id_fieldcolumn}
+			<td  class="{$thread_id_class}" {$thread_id_style} {$recordattrs}>
+				{$thread_id_value}
+			</td>
+			{END thread_id_fieldcolumn}
+			{BEGIN server_id_fieldcolumn}
+			<td  class="{$server_id_class}" {$server_id_style} {$recordattrs}>
+				{$server_id_value}
+			</td>
+			{END server_id_fieldcolumn}
+			{BEGIN command_type_fieldcolumn}
+			<td  class="{$command_type_class}" {$command_type_style} {$recordattrs}>
+				{$command_type_value}
+			</td>
+			{END command_type_fieldcolumn}
+			{BEGIN argument_fieldcolumn}
+			<td  class="{$argument_class}" {$argument_style} {$recordattrs}>
+				{$argument_value}
+			</td>
+			{END argument_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

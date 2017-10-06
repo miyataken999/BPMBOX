@@ -1,0 +1,315 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel TASK masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label TASK PRO_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label TASK TAS_UID}";
+	}
+	.bs-gridcell[data-field=TAS_TITLE]:before {
+		content: "{$label TASK TAS_TITLE}";
+	}
+	.bs-gridcell[data-field=TAS_DESCRIPTION]:before {
+		content: "{$label TASK TAS_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_TITLE]:before {
+		content: "{$label TASK TAS_DEF_TITLE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_SUBJECT_MESSAGE]:before {
+		content: "{$label TASK TAS_DEF_SUBJECT_MESSAGE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_PROC_CODE]:before {
+		content: "{$label TASK TAS_DEF_PROC_CODE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_MESSAGE]:before {
+		content: "{$label TASK TAS_DEF_MESSAGE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_DESCRIPTION]:before {
+		content: "{$label TASK TAS_DEF_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=TAS_TYPE]:before {
+		content: "{$label TASK TAS_TYPE}";
+	}
+	.bs-gridcell[data-field=TAS_DURATION]:before {
+		content: "{$label TASK TAS_DURATION}";
+	}
+	.bs-gridcell[data-field=TAS_DELAY_TYPE]:before {
+		content: "{$label TASK TAS_DELAY_TYPE}";
+	}
+	.bs-gridcell[data-field=TAS_TEMPORIZER]:before {
+		content: "{$label TASK TAS_TEMPORIZER}";
+	}
+	.bs-gridcell[data-field=TAS_TYPE_DAY]:before {
+		content: "{$label TASK TAS_TYPE_DAY}";
+	}
+	.bs-gridcell[data-field=TAS_TIMEUNIT]:before {
+		content: "{$label TASK TAS_TIMEUNIT}";
+	}
+	.bs-gridcell[data-field=TAS_ALERT]:before {
+		content: "{$label TASK TAS_ALERT}";
+	}
+	.bs-gridcell[data-field=TAS_PRIORITY_VARIABLE]:before {
+		content: "{$label TASK TAS_PRIORITY_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_TYPE]:before {
+		content: "{$label TASK TAS_ASSIGN_TYPE}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_VARIABLE]:before {
+		content: "{$label TASK TAS_ASSIGN_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_GROUP_VARIABLE]:before {
+		content: "{$label TASK TAS_GROUP_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_MI_INSTANCE_VARIABLE]:before {
+		content: "{$label TASK TAS_MI_INSTANCE_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_MI_COMPLETE_VARIABLE]:before {
+		content: "{$label TASK TAS_MI_COMPLETE_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_LOCATION]:before {
+		content: "{$label TASK TAS_ASSIGN_LOCATION}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_LOCATION_ADHOC]:before {
+		content: "{$label TASK TAS_ASSIGN_LOCATION_ADHOC}";
+	}
+	.bs-gridcell[data-field=TAS_TRANSFER_FLY]:before {
+		content: "{$label TASK TAS_TRANSFER_FLY}";
+	}
+	.bs-gridcell[data-field=TAS_LAST_ASSIGNED]:before {
+		content: "{$label TASK TAS_LAST_ASSIGNED}";
+	}
+	.bs-gridcell[data-field=TAS_USER]:before {
+		content: "{$label TASK TAS_USER}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_UPLOAD]:before {
+		content: "{$label TASK TAS_CAN_UPLOAD}";
+	}
+	.bs-gridcell[data-field=TAS_VIEW_UPLOAD]:before {
+		content: "{$label TASK TAS_VIEW_UPLOAD}";
+	}
+	.bs-gridcell[data-field=TAS_VIEW_ADDITIONAL_DOCUMENTATION]:before {
+		content: "{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_CANCEL]:before {
+		content: "{$label TASK TAS_CAN_CANCEL}";
+	}
+	.bs-gridcell[data-field=TAS_OWNER_APP]:before {
+		content: "{$label TASK TAS_OWNER_APP}";
+	}
+	.bs-gridcell[data-field=STG_UID]:before {
+		content: "{$label TASK STG_UID}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_PAUSE]:before {
+		content: "{$label TASK TAS_CAN_PAUSE}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_SEND_MESSAGE]:before {
+		content: "{$label TASK TAS_CAN_SEND_MESSAGE}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_DELETE_DOCS]:before {
+		content: "{$label TASK TAS_CAN_DELETE_DOCS}";
+	}
+	.bs-gridcell[data-field=TAS_SELF_SERVICE]:before {
+		content: "{$label TASK TAS_SELF_SERVICE}";
+	}
+	.bs-gridcell[data-field=TAS_START]:before {
+		content: "{$label TASK TAS_START}";
+	}
+	.bs-gridcell[data-field=TAS_TO_LAST_USER]:before {
+		content: "{$label TASK TAS_TO_LAST_USER}";
+	}
+	.bs-gridcell[data-field=TAS_SEND_LAST_EMAIL]:before {
+		content: "{$label TASK TAS_SEND_LAST_EMAIL}";
+	}
+	.bs-gridcell[data-field=TAS_DERIVATION]:before {
+		content: "{$label TASK TAS_DERIVATION}";
+	}
+	.bs-gridcell[data-field=TAS_POSX]:before {
+		content: "{$label TASK TAS_POSX}";
+	}
+	.bs-gridcell[data-field=TAS_POSY]:before {
+		content: "{$label TASK TAS_POSY}";
+	}
+	.bs-gridcell[data-field=TAS_WIDTH]:before {
+		content: "{$label TASK TAS_WIDTH}";
+	}
+	.bs-gridcell[data-field=TAS_HEIGHT]:before {
+		content: "{$label TASK TAS_HEIGHT}";
+	}
+	.bs-gridcell[data-field=TAS_COLOR]:before {
+		content: "{$label TASK TAS_COLOR}";
+	}
+	.bs-gridcell[data-field=TAS_EVN_UID]:before {
+		content: "{$label TASK TAS_EVN_UID}";
+	}
+	.bs-gridcell[data-field=TAS_BOUNDARY]:before {
+		content: "{$label TASK TAS_BOUNDARY}";
+	}
+	.bs-gridcell[data-field=TAS_DERIVATION_SCREEN_TPL]:before {
+		content: "{$label TASK TAS_DERIVATION_SCREEN_TPL}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TIMEOUT]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TIMEOUT}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TIME]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TIME}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TIME_UNIT]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TIME_UNIT}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TRIGGER_UID]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TRIGGER_UID}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_EXECUTION]:before {
+		content: "{$label TASK TAS_SELFSERVICE_EXECUTION}";
+	}
+	.bs-gridcell[data-field=TAS_NOT_EMAIL_FROM_FORMAT]:before {
+		content: "{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$PRO_UID_class}">{$label TASK PRO_UID}</th>
+			<th class="{$TAS_UID_class}">{$label TASK TAS_UID}</th>
+			<th class="{$TAS_TITLE_class}">{$label TASK TAS_TITLE}</th>
+			<th class="{$TAS_DESCRIPTION_class}">{$label TASK TAS_DESCRIPTION}</th>
+			<th class="{$TAS_DEF_TITLE_class}">{$label TASK TAS_DEF_TITLE}</th>
+			<th class="{$TAS_DEF_SUBJECT_MESSAGE_class}">{$label TASK TAS_DEF_SUBJECT_MESSAGE}</th>
+			<th class="{$TAS_DEF_PROC_CODE_class}">{$label TASK TAS_DEF_PROC_CODE}</th>
+			<th class="{$TAS_DEF_MESSAGE_class}">{$label TASK TAS_DEF_MESSAGE}</th>
+			<th class="{$TAS_DEF_DESCRIPTION_class}">{$label TASK TAS_DEF_DESCRIPTION}</th>
+			<th class="{$TAS_TYPE_class}">{$label TASK TAS_TYPE}</th>
+			<th class="{$TAS_DURATION_class}">{$label TASK TAS_DURATION}</th>
+			<th class="{$TAS_DELAY_TYPE_class}">{$label TASK TAS_DELAY_TYPE}</th>
+			<th class="{$TAS_TEMPORIZER_class}">{$label TASK TAS_TEMPORIZER}</th>
+			<th class="{$TAS_TYPE_DAY_class}">{$label TASK TAS_TYPE_DAY}</th>
+			<th class="{$TAS_TIMEUNIT_class}">{$label TASK TAS_TIMEUNIT}</th>
+			<th class="{$TAS_ALERT_class}">{$label TASK TAS_ALERT}</th>
+			<th class="{$TAS_PRIORITY_VARIABLE_class}">{$label TASK TAS_PRIORITY_VARIABLE}</th>
+			<th class="{$TAS_ASSIGN_TYPE_class}">{$label TASK TAS_ASSIGN_TYPE}</th>
+			<th class="{$TAS_ASSIGN_VARIABLE_class}">{$label TASK TAS_ASSIGN_VARIABLE}</th>
+			<th class="{$TAS_GROUP_VARIABLE_class}">{$label TASK TAS_GROUP_VARIABLE}</th>
+			<th class="{$TAS_MI_INSTANCE_VARIABLE_class}">{$label TASK TAS_MI_INSTANCE_VARIABLE}</th>
+			<th class="{$TAS_MI_COMPLETE_VARIABLE_class}">{$label TASK TAS_MI_COMPLETE_VARIABLE}</th>
+			<th class="{$TAS_ASSIGN_LOCATION_class}">{$label TASK TAS_ASSIGN_LOCATION}</th>
+			<th class="{$TAS_ASSIGN_LOCATION_ADHOC_class}">{$label TASK TAS_ASSIGN_LOCATION_ADHOC}</th>
+			<th class="{$TAS_TRANSFER_FLY_class}">{$label TASK TAS_TRANSFER_FLY}</th>
+			<th class="{$TAS_LAST_ASSIGNED_class}">{$label TASK TAS_LAST_ASSIGNED}</th>
+			<th class="{$TAS_USER_class}">{$label TASK TAS_USER}</th>
+			<th class="{$TAS_CAN_UPLOAD_class}">{$label TASK TAS_CAN_UPLOAD}</th>
+			<th class="{$TAS_VIEW_UPLOAD_class}">{$label TASK TAS_VIEW_UPLOAD}</th>
+			<th class="{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_class}">{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}</th>
+			<th class="{$TAS_CAN_CANCEL_class}">{$label TASK TAS_CAN_CANCEL}</th>
+			<th class="{$TAS_OWNER_APP_class}">{$label TASK TAS_OWNER_APP}</th>
+			<th class="{$STG_UID_class}">{$label TASK STG_UID}</th>
+			<th class="{$TAS_CAN_PAUSE_class}">{$label TASK TAS_CAN_PAUSE}</th>
+			<th class="{$TAS_CAN_SEND_MESSAGE_class}">{$label TASK TAS_CAN_SEND_MESSAGE}</th>
+			<th class="{$TAS_CAN_DELETE_DOCS_class}">{$label TASK TAS_CAN_DELETE_DOCS}</th>
+			<th class="{$TAS_SELF_SERVICE_class}">{$label TASK TAS_SELF_SERVICE}</th>
+			<th class="{$TAS_START_class}">{$label TASK TAS_START}</th>
+			<th class="{$TAS_TO_LAST_USER_class}">{$label TASK TAS_TO_LAST_USER}</th>
+			<th class="{$TAS_SEND_LAST_EMAIL_class}">{$label TASK TAS_SEND_LAST_EMAIL}</th>
+			<th class="{$TAS_DERIVATION_class}">{$label TASK TAS_DERIVATION}</th>
+			<th class="{$TAS_POSX_class}">{$label TASK TAS_POSX}</th>
+			<th class="{$TAS_POSY_class}">{$label TASK TAS_POSY}</th>
+			<th class="{$TAS_WIDTH_class}">{$label TASK TAS_WIDTH}</th>
+			<th class="{$TAS_HEIGHT_class}">{$label TASK TAS_HEIGHT}</th>
+			<th class="{$TAS_COLOR_class}">{$label TASK TAS_COLOR}</th>
+			<th class="{$TAS_EVN_UID_class}">{$label TASK TAS_EVN_UID}</th>
+			<th class="{$TAS_BOUNDARY_class}">{$label TASK TAS_BOUNDARY}</th>
+			<th class="{$TAS_DERIVATION_SCREEN_TPL_class}">{$label TASK TAS_DERIVATION_SCREEN_TPL}</th>
+			<th class="{$TAS_SELFSERVICE_TIMEOUT_class}">{$label TASK TAS_SELFSERVICE_TIMEOUT}</th>
+			<th class="{$TAS_SELFSERVICE_TIME_class}">{$label TASK TAS_SELFSERVICE_TIME}</th>
+			<th class="{$TAS_SELFSERVICE_TIME_UNIT_class}">{$label TASK TAS_SELFSERVICE_TIME_UNIT}</th>
+			<th class="{$TAS_SELFSERVICE_TRIGGER_UID_class}">{$label TASK TAS_SELFSERVICE_TRIGGER_UID}</th>
+			<th class="{$TAS_SELFSERVICE_EXECUTION_class}">{$label TASK TAS_SELFSERVICE_EXECUTION}</th>
+			<th class="{$TAS_NOT_EMAIL_FROM_FORMAT_class}">{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$TAS_UID_class} bs-gridcell" data-field=TAS_UID>{$TAS_UID_mastervalue}</td>
+			<td class="{$TAS_TITLE_class} bs-gridcell" data-field=TAS_TITLE>{$TAS_TITLE_mastervalue}</td>
+			<td class="{$TAS_DESCRIPTION_class} bs-gridcell" data-field=TAS_DESCRIPTION>{$TAS_DESCRIPTION_mastervalue}</td>
+			<td class="{$TAS_DEF_TITLE_class} bs-gridcell" data-field=TAS_DEF_TITLE>{$TAS_DEF_TITLE_mastervalue}</td>
+			<td class="{$TAS_DEF_SUBJECT_MESSAGE_class} bs-gridcell" data-field=TAS_DEF_SUBJECT_MESSAGE>{$TAS_DEF_SUBJECT_MESSAGE_mastervalue}</td>
+			<td class="{$TAS_DEF_PROC_CODE_class} bs-gridcell" data-field=TAS_DEF_PROC_CODE>{$TAS_DEF_PROC_CODE_mastervalue}</td>
+			<td class="{$TAS_DEF_MESSAGE_class} bs-gridcell" data-field=TAS_DEF_MESSAGE>{$TAS_DEF_MESSAGE_mastervalue}</td>
+			<td class="{$TAS_DEF_DESCRIPTION_class} bs-gridcell" data-field=TAS_DEF_DESCRIPTION>{$TAS_DEF_DESCRIPTION_mastervalue}</td>
+			<td class="{$TAS_TYPE_class} bs-gridcell" data-field=TAS_TYPE>{$TAS_TYPE_mastervalue}</td>
+			<td class="{$TAS_DURATION_class} bs-gridcell" data-field=TAS_DURATION>{$TAS_DURATION_mastervalue}</td>
+			<td class="{$TAS_DELAY_TYPE_class} bs-gridcell" data-field=TAS_DELAY_TYPE>{$TAS_DELAY_TYPE_mastervalue}</td>
+			<td class="{$TAS_TEMPORIZER_class} bs-gridcell" data-field=TAS_TEMPORIZER>{$TAS_TEMPORIZER_mastervalue}</td>
+			<td class="{$TAS_TYPE_DAY_class} bs-gridcell" data-field=TAS_TYPE_DAY>{$TAS_TYPE_DAY_mastervalue}</td>
+			<td class="{$TAS_TIMEUNIT_class} bs-gridcell" data-field=TAS_TIMEUNIT>{$TAS_TIMEUNIT_mastervalue}</td>
+			<td class="{$TAS_ALERT_class} bs-gridcell" data-field=TAS_ALERT>{$TAS_ALERT_mastervalue}</td>
+			<td class="{$TAS_PRIORITY_VARIABLE_class} bs-gridcell" data-field=TAS_PRIORITY_VARIABLE>{$TAS_PRIORITY_VARIABLE_mastervalue}</td>
+			<td class="{$TAS_ASSIGN_TYPE_class} bs-gridcell" data-field=TAS_ASSIGN_TYPE>{$TAS_ASSIGN_TYPE_mastervalue}</td>
+			<td class="{$TAS_ASSIGN_VARIABLE_class} bs-gridcell" data-field=TAS_ASSIGN_VARIABLE>{$TAS_ASSIGN_VARIABLE_mastervalue}</td>
+			<td class="{$TAS_GROUP_VARIABLE_class} bs-gridcell" data-field=TAS_GROUP_VARIABLE>{$TAS_GROUP_VARIABLE_mastervalue}</td>
+			<td class="{$TAS_MI_INSTANCE_VARIABLE_class} bs-gridcell" data-field=TAS_MI_INSTANCE_VARIABLE>{$TAS_MI_INSTANCE_VARIABLE_mastervalue}</td>
+			<td class="{$TAS_MI_COMPLETE_VARIABLE_class} bs-gridcell" data-field=TAS_MI_COMPLETE_VARIABLE>{$TAS_MI_COMPLETE_VARIABLE_mastervalue}</td>
+			<td class="{$TAS_ASSIGN_LOCATION_class} bs-gridcell" data-field=TAS_ASSIGN_LOCATION>{$TAS_ASSIGN_LOCATION_mastervalue}</td>
+			<td class="{$TAS_ASSIGN_LOCATION_ADHOC_class} bs-gridcell" data-field=TAS_ASSIGN_LOCATION_ADHOC>{$TAS_ASSIGN_LOCATION_ADHOC_mastervalue}</td>
+			<td class="{$TAS_TRANSFER_FLY_class} bs-gridcell" data-field=TAS_TRANSFER_FLY>{$TAS_TRANSFER_FLY_mastervalue}</td>
+			<td class="{$TAS_LAST_ASSIGNED_class} bs-gridcell" data-field=TAS_LAST_ASSIGNED>{$TAS_LAST_ASSIGNED_mastervalue}</td>
+			<td class="{$TAS_USER_class} bs-gridcell" data-field=TAS_USER>{$TAS_USER_mastervalue}</td>
+			<td class="{$TAS_CAN_UPLOAD_class} bs-gridcell" data-field=TAS_CAN_UPLOAD>{$TAS_CAN_UPLOAD_mastervalue}</td>
+			<td class="{$TAS_VIEW_UPLOAD_class} bs-gridcell" data-field=TAS_VIEW_UPLOAD>{$TAS_VIEW_UPLOAD_mastervalue}</td>
+			<td class="{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_class} bs-gridcell" data-field=TAS_VIEW_ADDITIONAL_DOCUMENTATION>{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_mastervalue}</td>
+			<td class="{$TAS_CAN_CANCEL_class} bs-gridcell" data-field=TAS_CAN_CANCEL>{$TAS_CAN_CANCEL_mastervalue}</td>
+			<td class="{$TAS_OWNER_APP_class} bs-gridcell" data-field=TAS_OWNER_APP>{$TAS_OWNER_APP_mastervalue}</td>
+			<td class="{$STG_UID_class} bs-gridcell" data-field=STG_UID>{$STG_UID_mastervalue}</td>
+			<td class="{$TAS_CAN_PAUSE_class} bs-gridcell" data-field=TAS_CAN_PAUSE>{$TAS_CAN_PAUSE_mastervalue}</td>
+			<td class="{$TAS_CAN_SEND_MESSAGE_class} bs-gridcell" data-field=TAS_CAN_SEND_MESSAGE>{$TAS_CAN_SEND_MESSAGE_mastervalue}</td>
+			<td class="{$TAS_CAN_DELETE_DOCS_class} bs-gridcell" data-field=TAS_CAN_DELETE_DOCS>{$TAS_CAN_DELETE_DOCS_mastervalue}</td>
+			<td class="{$TAS_SELF_SERVICE_class} bs-gridcell" data-field=TAS_SELF_SERVICE>{$TAS_SELF_SERVICE_mastervalue}</td>
+			<td class="{$TAS_START_class} bs-gridcell" data-field=TAS_START>{$TAS_START_mastervalue}</td>
+			<td class="{$TAS_TO_LAST_USER_class} bs-gridcell" data-field=TAS_TO_LAST_USER>{$TAS_TO_LAST_USER_mastervalue}</td>
+			<td class="{$TAS_SEND_LAST_EMAIL_class} bs-gridcell" data-field=TAS_SEND_LAST_EMAIL>{$TAS_SEND_LAST_EMAIL_mastervalue}</td>
+			<td class="{$TAS_DERIVATION_class} bs-gridcell" data-field=TAS_DERIVATION>{$TAS_DERIVATION_mastervalue}</td>
+			<td class="{$TAS_POSX_class} bs-gridcell" data-field=TAS_POSX>{$TAS_POSX_mastervalue}</td>
+			<td class="{$TAS_POSY_class} bs-gridcell" data-field=TAS_POSY>{$TAS_POSY_mastervalue}</td>
+			<td class="{$TAS_WIDTH_class} bs-gridcell" data-field=TAS_WIDTH>{$TAS_WIDTH_mastervalue}</td>
+			<td class="{$TAS_HEIGHT_class} bs-gridcell" data-field=TAS_HEIGHT>{$TAS_HEIGHT_mastervalue}</td>
+			<td class="{$TAS_COLOR_class} bs-gridcell" data-field=TAS_COLOR>{$TAS_COLOR_mastervalue}</td>
+			<td class="{$TAS_EVN_UID_class} bs-gridcell" data-field=TAS_EVN_UID>{$TAS_EVN_UID_mastervalue}</td>
+			<td class="{$TAS_BOUNDARY_class} bs-gridcell" data-field=TAS_BOUNDARY>{$TAS_BOUNDARY_mastervalue}</td>
+			<td class="{$TAS_DERIVATION_SCREEN_TPL_class} bs-gridcell" data-field=TAS_DERIVATION_SCREEN_TPL>{$TAS_DERIVATION_SCREEN_TPL_mastervalue}</td>
+			<td class="{$TAS_SELFSERVICE_TIMEOUT_class} bs-gridcell" data-field=TAS_SELFSERVICE_TIMEOUT>{$TAS_SELFSERVICE_TIMEOUT_mastervalue}</td>
+			<td class="{$TAS_SELFSERVICE_TIME_class} bs-gridcell" data-field=TAS_SELFSERVICE_TIME>{$TAS_SELFSERVICE_TIME_mastervalue}</td>
+			<td class="{$TAS_SELFSERVICE_TIME_UNIT_class} bs-gridcell" data-field=TAS_SELFSERVICE_TIME_UNIT>{$TAS_SELFSERVICE_TIME_UNIT_mastervalue}</td>
+			<td class="{$TAS_SELFSERVICE_TRIGGER_UID_class} bs-gridcell" data-field=TAS_SELFSERVICE_TRIGGER_UID>{$TAS_SELFSERVICE_TRIGGER_UID_mastervalue}</td>
+			<td class="{$TAS_SELFSERVICE_EXECUTION_class} bs-gridcell" data-field=TAS_SELFSERVICE_EXECUTION>{$TAS_SELFSERVICE_EXECUTION_mastervalue}</td>
+			<td class="{$TAS_NOT_EMAIL_FROM_FORMAT_class} bs-gridcell" data-field=TAS_NOT_EMAIL_FROM_FORMAT>{$TAS_NOT_EMAIL_FROM_FORMAT_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

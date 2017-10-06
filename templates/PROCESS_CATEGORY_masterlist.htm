@@ -1,0 +1,60 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel PROCESS_CATEGORY masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=CATEGORY_UID]:before {
+		content: "{$label PROCESS_CATEGORY CATEGORY_UID}";
+	}
+	.bs-gridcell[data-field=CATEGORY_PARENT]:before {
+		content: "{$label PROCESS_CATEGORY CATEGORY_PARENT}";
+	}
+	.bs-gridcell[data-field=CATEGORY_NAME]:before {
+		content: "{$label PROCESS_CATEGORY CATEGORY_NAME}";
+	}
+	.bs-gridcell[data-field=CATEGORY_ICON]:before {
+		content: "{$label PROCESS_CATEGORY CATEGORY_ICON}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$CATEGORY_UID_class}">{$label PROCESS_CATEGORY CATEGORY_UID}</th>
+			<th class="{$CATEGORY_PARENT_class}">{$label PROCESS_CATEGORY CATEGORY_PARENT}</th>
+			<th class="{$CATEGORY_NAME_class}">{$label PROCESS_CATEGORY CATEGORY_NAME}</th>
+			<th class="{$CATEGORY_ICON_class}">{$label PROCESS_CATEGORY CATEGORY_ICON}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$CATEGORY_UID_class} bs-gridcell" data-field=CATEGORY_UID>{$CATEGORY_UID_mastervalue}</td>
+			<td class="{$CATEGORY_PARENT_class} bs-gridcell" data-field=CATEGORY_PARENT>{$CATEGORY_PARENT_mastervalue}</td>
+			<td class="{$CATEGORY_NAME_class} bs-gridcell" data-field=CATEGORY_NAME>{$CATEGORY_NAME_mastervalue}</td>
+			<td class="{$CATEGORY_ICON_class} bs-gridcell" data-field=CATEGORY_ICON>{$CATEGORY_ICON_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

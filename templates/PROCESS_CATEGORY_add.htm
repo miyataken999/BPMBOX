@@ -1,0 +1,303 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PROCESS_CATEGORY add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN CATEGORY_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CATEGORY_UID}" data-fieldname="CATEGORY_UID" data-signal-error-for="CATEGORY_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CATEGORY_UID}">
+		{BEGIN CATEGORY_UID_label}{$label PROCESS_CATEGORY CATEGORY_UID}{END CATEGORY_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$CATEGORY_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CATEGORY_UID">
+		<div class="text-muted" >
+		{$tooltip PROCESS_CATEGORY CATEGORY_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END CATEGORY_UID_fieldblock}
+
+			{BEGIN CATEGORY_PARENT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CATEGORY_PARENT}" data-fieldname="CATEGORY_PARENT" data-signal-error-for="CATEGORY_PARENT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CATEGORY_PARENT}">
+		{BEGIN CATEGORY_PARENT_label}{$label PROCESS_CATEGORY CATEGORY_PARENT}{END CATEGORY_PARENT_label}
+	</label>
+	<div class="col-md-6" >
+		{$CATEGORY_PARENT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CATEGORY_PARENT">
+		<div class="text-muted" >
+		{$tooltip PROCESS_CATEGORY CATEGORY_PARENT}
+		</div>
+	</div>
+</div>
+</div>
+{END CATEGORY_PARENT_fieldblock}
+
+			{BEGIN CATEGORY_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CATEGORY_NAME}" data-fieldname="CATEGORY_NAME" data-signal-error-for="CATEGORY_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CATEGORY_NAME}">
+		{BEGIN CATEGORY_NAME_label}{$label PROCESS_CATEGORY CATEGORY_NAME}{END CATEGORY_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$CATEGORY_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CATEGORY_NAME">
+		<div class="text-muted" >
+		{$tooltip PROCESS_CATEGORY CATEGORY_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END CATEGORY_NAME_fieldblock}
+
+			{BEGIN CATEGORY_ICON_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CATEGORY_ICON}" data-fieldname="CATEGORY_ICON" data-signal-error-for="CATEGORY_ICON{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CATEGORY_ICON}">
+		{BEGIN CATEGORY_ICON_label}{$label PROCESS_CATEGORY CATEGORY_ICON}{END CATEGORY_ICON_label}
+	</label>
+	<div class="col-md-6" >
+		{$CATEGORY_ICON_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CATEGORY_ICON">
+		<div class="text-muted" >
+		{$tooltip PROCESS_CATEGORY CATEGORY_ICON}
+		</div>
+	</div>
+</div>
+</div>
+{END CATEGORY_ICON_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_PROCESS}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">プロセス
+		<span>
+{BEGIN details_inlineadd_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PROCESS_attrs}>インライン追加</button>
+{END details_inlineadd_PROCESS_link}		
+{BEGIN details_add_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PROCESS_attrs}>追加</button>
+{END details_add_PROCESS_link}
+{BEGIN details_edit_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PROCESS_attrs}>編集</button>
+{END details_edit_PROCESS_link}
+{BEGIN details_updateselected_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PROCESS_attrs}>Update selected</button>
+{END details_updateselected_PROCESS_link}
+
+
+{BEGIN details_delete_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PROCESS_attrs}>削除</button>
+{END details_delete_PROCESS_link}
+
+{BEGIN saveall_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PROCESS_attrs} {$savealllink_PROCESS_span}>全て保存</button>
+{END saveall_PROCESS_link}
+{BEGIN cancelall_PROCESS_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PROCESS_attrs} {$cancelalllink_PROCESS_span}>キャンセル</button>
+{END cancelall_PROCESS_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PROCESS}
+</div>
+</div>
+</div>
+{END details_PROCESS}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

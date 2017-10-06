@@ -1,0 +1,205 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel USERS masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=USR_UID]:before {
+		content: "{$label USERS USR_UID}";
+	}
+	.bs-gridcell[data-field=USR_USERNAME]:before {
+		content: "{$label USERS USR_USERNAME}";
+	}
+	.bs-gridcell[data-field=USR_PASSWORD]:before {
+		content: "{$label USERS USR_PASSWORD}";
+	}
+	.bs-gridcell[data-field=USR_FIRSTNAME]:before {
+		content: "{$label USERS USR_FIRSTNAME}";
+	}
+	.bs-gridcell[data-field=USR_LASTNAME]:before {
+		content: "{$label USERS USR_LASTNAME}";
+	}
+	.bs-gridcell[data-field=USR_EMAIL]:before {
+		content: "{$label USERS USR_EMAIL}";
+	}
+	.bs-gridcell[data-field=USR_DUE_DATE]:before {
+		content: "{$label USERS USR_DUE_DATE}";
+	}
+	.bs-gridcell[data-field=USR_CREATE_DATE]:before {
+		content: "{$label USERS USR_CREATE_DATE}";
+	}
+	.bs-gridcell[data-field=USR_UPDATE_DATE]:before {
+		content: "{$label USERS USR_UPDATE_DATE}";
+	}
+	.bs-gridcell[data-field=USR_STATUS]:before {
+		content: "{$label USERS USR_STATUS}";
+	}
+	.bs-gridcell[data-field=USR_COUNTRY]:before {
+		content: "{$label USERS USR_COUNTRY}";
+	}
+	.bs-gridcell[data-field=USR_CITY]:before {
+		content: "{$label USERS USR_CITY}";
+	}
+	.bs-gridcell[data-field=USR_LOCATION]:before {
+		content: "{$label USERS USR_LOCATION}";
+	}
+	.bs-gridcell[data-field=USR_ADDRESS]:before {
+		content: "{$label USERS USR_ADDRESS}";
+	}
+	.bs-gridcell[data-field=USR_PHONE]:before {
+		content: "{$label USERS USR_PHONE}";
+	}
+	.bs-gridcell[data-field=USR_FAX]:before {
+		content: "{$label USERS USR_FAX}";
+	}
+	.bs-gridcell[data-field=USR_CELLULAR]:before {
+		content: "{$label USERS USR_CELLULAR}";
+	}
+	.bs-gridcell[data-field=USR_ZIP_CODE]:before {
+		content: "{$label USERS USR_ZIP_CODE}";
+	}
+	.bs-gridcell[data-field=DEP_UID]:before {
+		content: "{$label USERS DEP_UID}";
+	}
+	.bs-gridcell[data-field=USR_POSITION]:before {
+		content: "{$label USERS USR_POSITION}";
+	}
+	.bs-gridcell[data-field=USR_RESUME]:before {
+		content: "{$label USERS USR_RESUME}";
+	}
+	.bs-gridcell[data-field=USR_BIRTHDAY]:before {
+		content: "{$label USERS USR_BIRTHDAY}";
+	}
+	.bs-gridcell[data-field=USR_ROLE]:before {
+		content: "{$label USERS USR_ROLE}";
+	}
+	.bs-gridcell[data-field=USR_REPORTS_TO]:before {
+		content: "{$label USERS USR_REPORTS_TO}";
+	}
+	.bs-gridcell[data-field=USR_REPLACED_BY]:before {
+		content: "{$label USERS USR_REPLACED_BY}";
+	}
+	.bs-gridcell[data-field=USR_UX]:before {
+		content: "{$label USERS USR_UX}";
+	}
+	.bs-gridcell[data-field=USR_COST_BY_HOUR]:before {
+		content: "{$label USERS USR_COST_BY_HOUR}";
+	}
+	.bs-gridcell[data-field=USR_UNIT_COST]:before {
+		content: "{$label USERS USR_UNIT_COST}";
+	}
+	.bs-gridcell[data-field=USR_PMDRIVE_FOLDER_UID]:before {
+		content: "{$label USERS USR_PMDRIVE_FOLDER_UID}";
+	}
+	.bs-gridcell[data-field=USR_BOOKMARK_START_CASES]:before {
+		content: "{$label USERS USR_BOOKMARK_START_CASES}";
+	}
+	.bs-gridcell[data-field=USR_TIME_ZONE]:before {
+		content: "{$label USERS USR_TIME_ZONE}";
+	}
+	.bs-gridcell[data-field=USR_DEFAULT_LANG]:before {
+		content: "{$label USERS USR_DEFAULT_LANG}";
+	}
+	.bs-gridcell[data-field=USR_LAST_LOGIN]:before {
+		content: "{$label USERS USR_LAST_LOGIN}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$USR_UID_class}">{$label USERS USR_UID}</th>
+			<th class="{$USR_USERNAME_class}">{$label USERS USR_USERNAME}</th>
+			<th class="{$USR_PASSWORD_class}">{$label USERS USR_PASSWORD}</th>
+			<th class="{$USR_FIRSTNAME_class}">{$label USERS USR_FIRSTNAME}</th>
+			<th class="{$USR_LASTNAME_class}">{$label USERS USR_LASTNAME}</th>
+			<th class="{$USR_EMAIL_class}">{$label USERS USR_EMAIL}</th>
+			<th class="{$USR_DUE_DATE_class}">{$label USERS USR_DUE_DATE}</th>
+			<th class="{$USR_CREATE_DATE_class}">{$label USERS USR_CREATE_DATE}</th>
+			<th class="{$USR_UPDATE_DATE_class}">{$label USERS USR_UPDATE_DATE}</th>
+			<th class="{$USR_STATUS_class}">{$label USERS USR_STATUS}</th>
+			<th class="{$USR_COUNTRY_class}">{$label USERS USR_COUNTRY}</th>
+			<th class="{$USR_CITY_class}">{$label USERS USR_CITY}</th>
+			<th class="{$USR_LOCATION_class}">{$label USERS USR_LOCATION}</th>
+			<th class="{$USR_ADDRESS_class}">{$label USERS USR_ADDRESS}</th>
+			<th class="{$USR_PHONE_class}">{$label USERS USR_PHONE}</th>
+			<th class="{$USR_FAX_class}">{$label USERS USR_FAX}</th>
+			<th class="{$USR_CELLULAR_class}">{$label USERS USR_CELLULAR}</th>
+			<th class="{$USR_ZIP_CODE_class}">{$label USERS USR_ZIP_CODE}</th>
+			<th class="{$DEP_UID_class}">{$label USERS DEP_UID}</th>
+			<th class="{$USR_POSITION_class}">{$label USERS USR_POSITION}</th>
+			<th class="{$USR_RESUME_class}">{$label USERS USR_RESUME}</th>
+			<th class="{$USR_BIRTHDAY_class}">{$label USERS USR_BIRTHDAY}</th>
+			<th class="{$USR_ROLE_class}">{$label USERS USR_ROLE}</th>
+			<th class="{$USR_REPORTS_TO_class}">{$label USERS USR_REPORTS_TO}</th>
+			<th class="{$USR_REPLACED_BY_class}">{$label USERS USR_REPLACED_BY}</th>
+			<th class="{$USR_UX_class}">{$label USERS USR_UX}</th>
+			<th class="{$USR_COST_BY_HOUR_class}">{$label USERS USR_COST_BY_HOUR}</th>
+			<th class="{$USR_UNIT_COST_class}">{$label USERS USR_UNIT_COST}</th>
+			<th class="{$USR_PMDRIVE_FOLDER_UID_class}">{$label USERS USR_PMDRIVE_FOLDER_UID}</th>
+			<th class="{$USR_BOOKMARK_START_CASES_class}">{$label USERS USR_BOOKMARK_START_CASES}</th>
+			<th class="{$USR_TIME_ZONE_class}">{$label USERS USR_TIME_ZONE}</th>
+			<th class="{$USR_DEFAULT_LANG_class}">{$label USERS USR_DEFAULT_LANG}</th>
+			<th class="{$USR_LAST_LOGIN_class}">{$label USERS USR_LAST_LOGIN}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$USR_UID_class} bs-gridcell" data-field=USR_UID>{$USR_UID_mastervalue}</td>
+			<td class="{$USR_USERNAME_class} bs-gridcell" data-field=USR_USERNAME>{$USR_USERNAME_mastervalue}</td>
+			<td class="{$USR_PASSWORD_class} bs-gridcell" data-field=USR_PASSWORD>{$USR_PASSWORD_mastervalue}</td>
+			<td class="{$USR_FIRSTNAME_class} bs-gridcell" data-field=USR_FIRSTNAME>{$USR_FIRSTNAME_mastervalue}</td>
+			<td class="{$USR_LASTNAME_class} bs-gridcell" data-field=USR_LASTNAME>{$USR_LASTNAME_mastervalue}</td>
+			<td class="{$USR_EMAIL_class} bs-gridcell" data-field=USR_EMAIL>{$USR_EMAIL_mastervalue}</td>
+			<td class="{$USR_DUE_DATE_class} bs-gridcell" data-field=USR_DUE_DATE>{$USR_DUE_DATE_mastervalue}</td>
+			<td class="{$USR_CREATE_DATE_class} bs-gridcell" data-field=USR_CREATE_DATE>{$USR_CREATE_DATE_mastervalue}</td>
+			<td class="{$USR_UPDATE_DATE_class} bs-gridcell" data-field=USR_UPDATE_DATE>{$USR_UPDATE_DATE_mastervalue}</td>
+			<td class="{$USR_STATUS_class} bs-gridcell" data-field=USR_STATUS>{$USR_STATUS_mastervalue}</td>
+			<td class="{$USR_COUNTRY_class} bs-gridcell" data-field=USR_COUNTRY>{$USR_COUNTRY_mastervalue}</td>
+			<td class="{$USR_CITY_class} bs-gridcell" data-field=USR_CITY>{$USR_CITY_mastervalue}</td>
+			<td class="{$USR_LOCATION_class} bs-gridcell" data-field=USR_LOCATION>{$USR_LOCATION_mastervalue}</td>
+			<td class="{$USR_ADDRESS_class} bs-gridcell" data-field=USR_ADDRESS>{$USR_ADDRESS_mastervalue}</td>
+			<td class="{$USR_PHONE_class} bs-gridcell" data-field=USR_PHONE>{$USR_PHONE_mastervalue}</td>
+			<td class="{$USR_FAX_class} bs-gridcell" data-field=USR_FAX>{$USR_FAX_mastervalue}</td>
+			<td class="{$USR_CELLULAR_class} bs-gridcell" data-field=USR_CELLULAR>{$USR_CELLULAR_mastervalue}</td>
+			<td class="{$USR_ZIP_CODE_class} bs-gridcell" data-field=USR_ZIP_CODE>{$USR_ZIP_CODE_mastervalue}</td>
+			<td class="{$DEP_UID_class} bs-gridcell" data-field=DEP_UID>{$DEP_UID_mastervalue}</td>
+			<td class="{$USR_POSITION_class} bs-gridcell" data-field=USR_POSITION>{$USR_POSITION_mastervalue}</td>
+			<td class="{$USR_RESUME_class} bs-gridcell" data-field=USR_RESUME>{$USR_RESUME_mastervalue}</td>
+			<td class="{$USR_BIRTHDAY_class} bs-gridcell" data-field=USR_BIRTHDAY>{$USR_BIRTHDAY_mastervalue}</td>
+			<td class="{$USR_ROLE_class} bs-gridcell" data-field=USR_ROLE>{$USR_ROLE_mastervalue}</td>
+			<td class="{$USR_REPORTS_TO_class} bs-gridcell" data-field=USR_REPORTS_TO>{$USR_REPORTS_TO_mastervalue}</td>
+			<td class="{$USR_REPLACED_BY_class} bs-gridcell" data-field=USR_REPLACED_BY>{$USR_REPLACED_BY_mastervalue}</td>
+			<td class="{$USR_UX_class} bs-gridcell" data-field=USR_UX>{$USR_UX_mastervalue}</td>
+			<td class="{$USR_COST_BY_HOUR_class} bs-gridcell" data-field=USR_COST_BY_HOUR>{$USR_COST_BY_HOUR_mastervalue}</td>
+			<td class="{$USR_UNIT_COST_class} bs-gridcell" data-field=USR_UNIT_COST>{$USR_UNIT_COST_mastervalue}</td>
+			<td class="{$USR_PMDRIVE_FOLDER_UID_class} bs-gridcell" data-field=USR_PMDRIVE_FOLDER_UID>{$USR_PMDRIVE_FOLDER_UID_mastervalue}</td>
+			<td class="{$USR_BOOKMARK_START_CASES_class} bs-gridcell" data-field=USR_BOOKMARK_START_CASES>{$USR_BOOKMARK_START_CASES_mastervalue}</td>
+			<td class="{$USR_TIME_ZONE_class} bs-gridcell" data-field=USR_TIME_ZONE>{$USR_TIME_ZONE_mastervalue}</td>
+			<td class="{$USR_DEFAULT_LANG_class} bs-gridcell" data-field=USR_DEFAULT_LANG>{$USR_DEFAULT_LANG_mastervalue}</td>
+			<td class="{$USR_LAST_LOGIN_class} bs-gridcell" data-field=USR_LAST_LOGIN>{$USR_LAST_LOGIN_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

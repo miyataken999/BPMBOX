@@ -1,0 +1,65 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$GAT_UID_class}">{$label BPMN_GATEWAY GAT_UID}</th>
+			<th class="{$PRJ_UID_class}">{$label BPMN_GATEWAY PRJ_UID}</th>
+			<th class="{$PRO_UID_class}">{$label BPMN_GATEWAY PRO_UID}</th>
+			<th class="{$GAT_NAME_class}">{$label BPMN_GATEWAY GAT_NAME}</th>
+			<th class="{$GAT_TYPE_class}">{$label BPMN_GATEWAY GAT_TYPE}</th>
+			<th class="{$GAT_DIRECTION_class}">{$label BPMN_GATEWAY GAT_DIRECTION}</th>
+			<th class="{$GAT_INSTANTIATE_class}">{$label BPMN_GATEWAY GAT_INSTANTIATE}</th>
+			<th class="{$GAT_EVENT_GATEWAY_TYPE_class}">{$label BPMN_GATEWAY GAT_EVENT_GATEWAY_TYPE}</th>
+			<th class="{$GAT_ACTIVATION_COUNT_class}">{$label BPMN_GATEWAY GAT_ACTIVATION_COUNT}</th>
+			<th class="{$GAT_WAITING_FOR_START_class}">{$label BPMN_GATEWAY GAT_WAITING_FOR_START}</th>
+			<th class="{$GAT_DEFAULT_FLOW_class}">{$label BPMN_GATEWAY GAT_DEFAULT_FLOW}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$GAT_UID_class}">{$GAT_UID_value}</td>
+			<td class="{$PRJ_UID_class}">{$PRJ_UID_value}</td>
+			<td class="{$PRO_UID_class}">{$PRO_UID_value}</td>
+			<td class="{$GAT_NAME_class}">{$GAT_NAME_value}</td>
+			<td class="{$GAT_TYPE_class}">{$GAT_TYPE_value}</td>
+			<td class="{$GAT_DIRECTION_class}">{$GAT_DIRECTION_value}</td>
+			<td class="{$GAT_INSTANTIATE_class}">{$GAT_INSTANTIATE_value}</td>
+			<td class="{$GAT_EVENT_GATEWAY_TYPE_class}">{$GAT_EVENT_GATEWAY_TYPE_value}</td>
+			<td class="{$GAT_ACTIVATION_COUNT_class}">{$GAT_ACTIVATION_COUNT_value}</td>
+			<td class="{$GAT_WAITING_FOR_START_class}">{$GAT_WAITING_FOR_START_value}</td>
+			<td class="{$GAT_DEFAULT_FLOW_class}">{$GAT_DEFAULT_FLOW_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

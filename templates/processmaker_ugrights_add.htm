@@ -1,0 +1,234 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel processmaker_ugrights add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN TableName_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TableName}" data-fieldname="TableName" data-signal-error-for="TableName{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TableName}">
+		{BEGIN TableName_label}{$label processmaker_ugrights TableName}{END TableName_label}
+	</label>
+	<div class="col-md-6" >
+		{$TableName_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TableName">
+		<div class="text-muted" >
+		{$tooltip processmaker_ugrights TableName}
+		</div>
+	</div>
+</div>
+</div>
+{END TableName_fieldblock}
+
+			{BEGIN GroupID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_GroupID}" data-fieldname="GroupID" data-signal-error-for="GroupID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_GroupID}">
+		{BEGIN GroupID_label}{$label processmaker_ugrights GroupID}{END GroupID_label}
+	</label>
+	<div class="col-md-6" >
+		{$GroupID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="GroupID">
+		<div class="text-muted" >
+		{$tooltip processmaker_ugrights GroupID}
+		</div>
+	</div>
+</div>
+</div>
+{END GroupID_fieldblock}
+
+			{BEGIN AccessMask_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_AccessMask}" data-fieldname="AccessMask" data-signal-error-for="AccessMask{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_AccessMask}">
+		{BEGIN AccessMask_label}{$label processmaker_ugrights AccessMask}{END AccessMask_label}
+	</label>
+	<div class="col-md-6" >
+		{$AccessMask_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="AccessMask">
+		<div class="text-muted" >
+		{$tooltip processmaker_ugrights AccessMask}
+		</div>
+	</div>
+</div>
+</div>
+{END AccessMask_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

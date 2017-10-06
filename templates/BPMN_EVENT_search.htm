@@ -1,0 +1,548 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel BPMN_EVENT search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN EVN_UID_fieldblock}		
+	<div class="container {$fielddispclass_EVN_UID}" data-fieldname="EVN_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_UID}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_UID_fieldblock}
+	{BEGIN PRJ_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT PRJ_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRJ_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRJ_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRJ_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN EVN_NAME_fieldblock}		
+	<div class="container {$fielddispclass_EVN_NAME}" data-fieldname="EVN_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_NAME_fieldblock}
+	{BEGIN EVN_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_EVN_TYPE}" data-fieldname="EVN_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_TYPE_fieldblock}
+	{BEGIN EVN_MARKER_fieldblock}		
+	<div class="container {$fielddispclass_EVN_MARKER}" data-fieldname="EVN_MARKER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_MARKER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_MARKER}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_MARKER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_MARKER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_MARKER_fieldblock}
+	{BEGIN EVN_IS_INTERRUPTING_fieldblock}		
+	<div class="container {$fielddispclass_EVN_IS_INTERRUPTING}" data-fieldname="EVN_IS_INTERRUPTING">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_IS_INTERRUPTING}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_IS_INTERRUPTING}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_IS_INTERRUPTING_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_IS_INTERRUPTING_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_IS_INTERRUPTING_fieldblock}
+	{BEGIN EVN_ATTACHED_TO_fieldblock}		
+	<div class="container {$fielddispclass_EVN_ATTACHED_TO}" data-fieldname="EVN_ATTACHED_TO">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_ATTACHED_TO}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_ATTACHED_TO}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ATTACHED_TO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ATTACHED_TO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_ATTACHED_TO_fieldblock}
+	{BEGIN EVN_CANCEL_ACTIVITY_fieldblock}		
+	<div class="container {$fielddispclass_EVN_CANCEL_ACTIVITY}" data-fieldname="EVN_CANCEL_ACTIVITY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_CANCEL_ACTIVITY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_CANCEL_ACTIVITY}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_CANCEL_ACTIVITY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_CANCEL_ACTIVITY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_CANCEL_ACTIVITY_fieldblock}
+	{BEGIN EVN_ACTIVITY_REF_fieldblock}		
+	<div class="container {$fielddispclass_EVN_ACTIVITY_REF}" data-fieldname="EVN_ACTIVITY_REF">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_ACTIVITY_REF}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_ACTIVITY_REF}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ACTIVITY_REF_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ACTIVITY_REF_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_ACTIVITY_REF_fieldblock}
+	{BEGIN EVN_WAIT_FOR_COMPLETION_fieldblock}		
+	<div class="container {$fielddispclass_EVN_WAIT_FOR_COMPLETION}" data-fieldname="EVN_WAIT_FOR_COMPLETION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_WAIT_FOR_COMPLETION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_WAIT_FOR_COMPLETION}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_WAIT_FOR_COMPLETION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_WAIT_FOR_COMPLETION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_WAIT_FOR_COMPLETION_fieldblock}
+	{BEGIN EVN_ERROR_NAME_fieldblock}		
+	<div class="container {$fielddispclass_EVN_ERROR_NAME}" data-fieldname="EVN_ERROR_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_ERROR_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_ERROR_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ERROR_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ERROR_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_ERROR_NAME_fieldblock}
+	{BEGIN EVN_ERROR_CODE_fieldblock}		
+	<div class="container {$fielddispclass_EVN_ERROR_CODE}" data-fieldname="EVN_ERROR_CODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_ERROR_CODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_ERROR_CODE}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ERROR_CODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ERROR_CODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_ERROR_CODE_fieldblock}
+	{BEGIN EVN_ESCALATION_NAME_fieldblock}		
+	<div class="container {$fielddispclass_EVN_ESCALATION_NAME}" data-fieldname="EVN_ESCALATION_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_ESCALATION_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_ESCALATION_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ESCALATION_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ESCALATION_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_ESCALATION_NAME_fieldblock}
+	{BEGIN EVN_ESCALATION_CODE_fieldblock}		
+	<div class="container {$fielddispclass_EVN_ESCALATION_CODE}" data-fieldname="EVN_ESCALATION_CODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_ESCALATION_CODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_ESCALATION_CODE}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ESCALATION_CODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_ESCALATION_CODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_ESCALATION_CODE_fieldblock}
+	{BEGIN EVN_CONDITION_fieldblock}		
+	<div class="container {$fielddispclass_EVN_CONDITION}" data-fieldname="EVN_CONDITION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_CONDITION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_CONDITION}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_CONDITION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_CONDITION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_CONDITION_fieldblock}
+	{BEGIN EVN_MESSAGE_fieldblock}		
+	<div class="container {$fielddispclass_EVN_MESSAGE}" data-fieldname="EVN_MESSAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_MESSAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_MESSAGE}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_MESSAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_MESSAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_MESSAGE_fieldblock}
+	{BEGIN EVN_OPERATION_NAME_fieldblock}		
+	<div class="container {$fielddispclass_EVN_OPERATION_NAME}" data-fieldname="EVN_OPERATION_NAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_OPERATION_NAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_OPERATION_NAME}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_OPERATION_NAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_OPERATION_NAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_OPERATION_NAME_fieldblock}
+	{BEGIN EVN_OPERATION_IMPLEMENTATION_REF_fieldblock}		
+	<div class="container {$fielddispclass_EVN_OPERATION_IMPLEMENTATION_REF}" data-fieldname="EVN_OPERATION_IMPLEMENTATION_REF">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_OPERATION_IMPLEMENTATION_REF}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_OPERATION_IMPLEMENTATION_REF}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_OPERATION_IMPLEMENTATION_REF_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_OPERATION_IMPLEMENTATION_REF_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_OPERATION_IMPLEMENTATION_REF_fieldblock}
+	{BEGIN EVN_TIME_DATE_fieldblock}		
+	<div class="container {$fielddispclass_EVN_TIME_DATE}" data-fieldname="EVN_TIME_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_TIME_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_TIME_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TIME_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TIME_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_TIME_DATE_fieldblock}
+	{BEGIN EVN_TIME_CYCLE_fieldblock}		
+	<div class="container {$fielddispclass_EVN_TIME_CYCLE}" data-fieldname="EVN_TIME_CYCLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_TIME_CYCLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_TIME_CYCLE}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TIME_CYCLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TIME_CYCLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_TIME_CYCLE_fieldblock}
+	{BEGIN EVN_TIME_DURATION_fieldblock}		
+	<div class="container {$fielddispclass_EVN_TIME_DURATION}" data-fieldname="EVN_TIME_DURATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_TIME_DURATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_TIME_DURATION}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TIME_DURATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_TIME_DURATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_TIME_DURATION_fieldblock}
+	{BEGIN EVN_BEHAVIOR_fieldblock}		
+	<div class="container {$fielddispclass_EVN_BEHAVIOR}" data-fieldname="EVN_BEHAVIOR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label BPMN_EVENT EVN_BEHAVIOR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_EVN_BEHAVIOR}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_BEHAVIOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EVN_BEHAVIOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EVN_BEHAVIOR_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

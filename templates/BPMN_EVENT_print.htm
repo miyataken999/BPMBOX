@@ -1,0 +1,373 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel BPMN_EVENT print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN EVN_UID_fieldheadercolumn}
+			<th class="{$EVN_UID_class}" {$EVN_UID_style}  data-field="EVN_UID">
+				{$label BPMN_EVENT EVN_UID}
+			</th>
+			{END EVN_UID_fieldheadercolumn}
+			{BEGIN PRJ_UID_fieldheadercolumn}
+			<th class="{$PRJ_UID_class}" {$PRJ_UID_style}  data-field="PRJ_UID">
+				{$label BPMN_EVENT PRJ_UID}
+			</th>
+			{END PRJ_UID_fieldheadercolumn}
+			{BEGIN PRO_UID_fieldheadercolumn}
+			<th class="{$PRO_UID_class}" {$PRO_UID_style}  data-field="PRO_UID">
+				{$label BPMN_EVENT PRO_UID}
+			</th>
+			{END PRO_UID_fieldheadercolumn}
+			{BEGIN EVN_NAME_fieldheadercolumn}
+			<th class="{$EVN_NAME_class}" {$EVN_NAME_style}  data-field="EVN_NAME">
+				{$label BPMN_EVENT EVN_NAME}
+			</th>
+			{END EVN_NAME_fieldheadercolumn}
+			{BEGIN EVN_TYPE_fieldheadercolumn}
+			<th class="{$EVN_TYPE_class}" {$EVN_TYPE_style}  data-field="EVN_TYPE">
+				{$label BPMN_EVENT EVN_TYPE}
+			</th>
+			{END EVN_TYPE_fieldheadercolumn}
+			{BEGIN EVN_MARKER_fieldheadercolumn}
+			<th class="{$EVN_MARKER_class}" {$EVN_MARKER_style}  data-field="EVN_MARKER">
+				{$label BPMN_EVENT EVN_MARKER}
+			</th>
+			{END EVN_MARKER_fieldheadercolumn}
+			{BEGIN EVN_IS_INTERRUPTING_fieldheadercolumn}
+			<th class="{$EVN_IS_INTERRUPTING_class}" {$EVN_IS_INTERRUPTING_style}  data-field="EVN_IS_INTERRUPTING">
+				{$label BPMN_EVENT EVN_IS_INTERRUPTING}
+			</th>
+			{END EVN_IS_INTERRUPTING_fieldheadercolumn}
+			{BEGIN EVN_ATTACHED_TO_fieldheadercolumn}
+			<th class="{$EVN_ATTACHED_TO_class}" {$EVN_ATTACHED_TO_style}  data-field="EVN_ATTACHED_TO">
+				{$label BPMN_EVENT EVN_ATTACHED_TO}
+			</th>
+			{END EVN_ATTACHED_TO_fieldheadercolumn}
+			{BEGIN EVN_CANCEL_ACTIVITY_fieldheadercolumn}
+			<th class="{$EVN_CANCEL_ACTIVITY_class}" {$EVN_CANCEL_ACTIVITY_style}  data-field="EVN_CANCEL_ACTIVITY">
+				{$label BPMN_EVENT EVN_CANCEL_ACTIVITY}
+			</th>
+			{END EVN_CANCEL_ACTIVITY_fieldheadercolumn}
+			{BEGIN EVN_ACTIVITY_REF_fieldheadercolumn}
+			<th class="{$EVN_ACTIVITY_REF_class}" {$EVN_ACTIVITY_REF_style}  data-field="EVN_ACTIVITY_REF">
+				{$label BPMN_EVENT EVN_ACTIVITY_REF}
+			</th>
+			{END EVN_ACTIVITY_REF_fieldheadercolumn}
+			{BEGIN EVN_WAIT_FOR_COMPLETION_fieldheadercolumn}
+			<th class="{$EVN_WAIT_FOR_COMPLETION_class}" {$EVN_WAIT_FOR_COMPLETION_style}  data-field="EVN_WAIT_FOR_COMPLETION">
+				{$label BPMN_EVENT EVN_WAIT_FOR_COMPLETION}
+			</th>
+			{END EVN_WAIT_FOR_COMPLETION_fieldheadercolumn}
+			{BEGIN EVN_ERROR_NAME_fieldheadercolumn}
+			<th class="{$EVN_ERROR_NAME_class}" {$EVN_ERROR_NAME_style}  data-field="EVN_ERROR_NAME">
+				{$label BPMN_EVENT EVN_ERROR_NAME}
+			</th>
+			{END EVN_ERROR_NAME_fieldheadercolumn}
+			{BEGIN EVN_ERROR_CODE_fieldheadercolumn}
+			<th class="{$EVN_ERROR_CODE_class}" {$EVN_ERROR_CODE_style}  data-field="EVN_ERROR_CODE">
+				{$label BPMN_EVENT EVN_ERROR_CODE}
+			</th>
+			{END EVN_ERROR_CODE_fieldheadercolumn}
+			{BEGIN EVN_ESCALATION_NAME_fieldheadercolumn}
+			<th class="{$EVN_ESCALATION_NAME_class}" {$EVN_ESCALATION_NAME_style}  data-field="EVN_ESCALATION_NAME">
+				{$label BPMN_EVENT EVN_ESCALATION_NAME}
+			</th>
+			{END EVN_ESCALATION_NAME_fieldheadercolumn}
+			{BEGIN EVN_ESCALATION_CODE_fieldheadercolumn}
+			<th class="{$EVN_ESCALATION_CODE_class}" {$EVN_ESCALATION_CODE_style}  data-field="EVN_ESCALATION_CODE">
+				{$label BPMN_EVENT EVN_ESCALATION_CODE}
+			</th>
+			{END EVN_ESCALATION_CODE_fieldheadercolumn}
+			{BEGIN EVN_CONDITION_fieldheadercolumn}
+			<th class="{$EVN_CONDITION_class}" {$EVN_CONDITION_style}  data-field="EVN_CONDITION">
+				{$label BPMN_EVENT EVN_CONDITION}
+			</th>
+			{END EVN_CONDITION_fieldheadercolumn}
+			{BEGIN EVN_MESSAGE_fieldheadercolumn}
+			<th class="{$EVN_MESSAGE_class}" {$EVN_MESSAGE_style}  data-field="EVN_MESSAGE">
+				{$label BPMN_EVENT EVN_MESSAGE}
+			</th>
+			{END EVN_MESSAGE_fieldheadercolumn}
+			{BEGIN EVN_OPERATION_NAME_fieldheadercolumn}
+			<th class="{$EVN_OPERATION_NAME_class}" {$EVN_OPERATION_NAME_style}  data-field="EVN_OPERATION_NAME">
+				{$label BPMN_EVENT EVN_OPERATION_NAME}
+			</th>
+			{END EVN_OPERATION_NAME_fieldheadercolumn}
+			{BEGIN EVN_OPERATION_IMPLEMENTATION_REF_fieldheadercolumn}
+			<th class="{$EVN_OPERATION_IMPLEMENTATION_REF_class}" {$EVN_OPERATION_IMPLEMENTATION_REF_style}  data-field="EVN_OPERATION_IMPLEMENTATION_REF">
+				{$label BPMN_EVENT EVN_OPERATION_IMPLEMENTATION_REF}
+			</th>
+			{END EVN_OPERATION_IMPLEMENTATION_REF_fieldheadercolumn}
+			{BEGIN EVN_TIME_DATE_fieldheadercolumn}
+			<th class="{$EVN_TIME_DATE_class}" {$EVN_TIME_DATE_style}  data-field="EVN_TIME_DATE">
+				{$label BPMN_EVENT EVN_TIME_DATE}
+			</th>
+			{END EVN_TIME_DATE_fieldheadercolumn}
+			{BEGIN EVN_TIME_CYCLE_fieldheadercolumn}
+			<th class="{$EVN_TIME_CYCLE_class}" {$EVN_TIME_CYCLE_style}  data-field="EVN_TIME_CYCLE">
+				{$label BPMN_EVENT EVN_TIME_CYCLE}
+			</th>
+			{END EVN_TIME_CYCLE_fieldheadercolumn}
+			{BEGIN EVN_TIME_DURATION_fieldheadercolumn}
+			<th class="{$EVN_TIME_DURATION_class}" {$EVN_TIME_DURATION_style}  data-field="EVN_TIME_DURATION">
+				{$label BPMN_EVENT EVN_TIME_DURATION}
+			</th>
+			{END EVN_TIME_DURATION_fieldheadercolumn}
+			{BEGIN EVN_BEHAVIOR_fieldheadercolumn}
+			<th class="{$EVN_BEHAVIOR_class}" {$EVN_BEHAVIOR_style}  data-field="EVN_BEHAVIOR">
+				{$label BPMN_EVENT EVN_BEHAVIOR}
+			</th>
+			{END EVN_BEHAVIOR_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN EVN_UID_fieldcolumn}
+			<td  class="{$EVN_UID_class}" {$EVN_UID_style} {$recordattrs}>
+				{$EVN_UID_value}
+			</td>
+			{END EVN_UID_fieldcolumn}
+			{BEGIN PRJ_UID_fieldcolumn}
+			<td  class="{$PRJ_UID_class}" {$PRJ_UID_style} {$recordattrs}>
+				{$PRJ_UID_value}
+			</td>
+			{END PRJ_UID_fieldcolumn}
+			{BEGIN PRO_UID_fieldcolumn}
+			<td  class="{$PRO_UID_class}" {$PRO_UID_style} {$recordattrs}>
+				{$PRO_UID_value}
+			</td>
+			{END PRO_UID_fieldcolumn}
+			{BEGIN EVN_NAME_fieldcolumn}
+			<td  class="{$EVN_NAME_class}" {$EVN_NAME_style} {$recordattrs}>
+				{$EVN_NAME_value}
+			</td>
+			{END EVN_NAME_fieldcolumn}
+			{BEGIN EVN_TYPE_fieldcolumn}
+			<td  class="{$EVN_TYPE_class}" {$EVN_TYPE_style} {$recordattrs}>
+				{$EVN_TYPE_value}
+			</td>
+			{END EVN_TYPE_fieldcolumn}
+			{BEGIN EVN_MARKER_fieldcolumn}
+			<td  class="{$EVN_MARKER_class}" {$EVN_MARKER_style} {$recordattrs}>
+				{$EVN_MARKER_value}
+			</td>
+			{END EVN_MARKER_fieldcolumn}
+			{BEGIN EVN_IS_INTERRUPTING_fieldcolumn}
+			<td  class="{$EVN_IS_INTERRUPTING_class}" {$EVN_IS_INTERRUPTING_style} {$recordattrs}>
+				{$EVN_IS_INTERRUPTING_value}
+			</td>
+			{END EVN_IS_INTERRUPTING_fieldcolumn}
+			{BEGIN EVN_ATTACHED_TO_fieldcolumn}
+			<td  class="{$EVN_ATTACHED_TO_class}" {$EVN_ATTACHED_TO_style} {$recordattrs}>
+				{$EVN_ATTACHED_TO_value}
+			</td>
+			{END EVN_ATTACHED_TO_fieldcolumn}
+			{BEGIN EVN_CANCEL_ACTIVITY_fieldcolumn}
+			<td  class="{$EVN_CANCEL_ACTIVITY_class}" {$EVN_CANCEL_ACTIVITY_style} {$recordattrs}>
+				{$EVN_CANCEL_ACTIVITY_value}
+			</td>
+			{END EVN_CANCEL_ACTIVITY_fieldcolumn}
+			{BEGIN EVN_ACTIVITY_REF_fieldcolumn}
+			<td  class="{$EVN_ACTIVITY_REF_class}" {$EVN_ACTIVITY_REF_style} {$recordattrs}>
+				{$EVN_ACTIVITY_REF_value}
+			</td>
+			{END EVN_ACTIVITY_REF_fieldcolumn}
+			{BEGIN EVN_WAIT_FOR_COMPLETION_fieldcolumn}
+			<td  class="{$EVN_WAIT_FOR_COMPLETION_class}" {$EVN_WAIT_FOR_COMPLETION_style} {$recordattrs}>
+				{$EVN_WAIT_FOR_COMPLETION_value}
+			</td>
+			{END EVN_WAIT_FOR_COMPLETION_fieldcolumn}
+			{BEGIN EVN_ERROR_NAME_fieldcolumn}
+			<td  class="{$EVN_ERROR_NAME_class}" {$EVN_ERROR_NAME_style} {$recordattrs}>
+				{$EVN_ERROR_NAME_value}
+			</td>
+			{END EVN_ERROR_NAME_fieldcolumn}
+			{BEGIN EVN_ERROR_CODE_fieldcolumn}
+			<td  class="{$EVN_ERROR_CODE_class}" {$EVN_ERROR_CODE_style} {$recordattrs}>
+				{$EVN_ERROR_CODE_value}
+			</td>
+			{END EVN_ERROR_CODE_fieldcolumn}
+			{BEGIN EVN_ESCALATION_NAME_fieldcolumn}
+			<td  class="{$EVN_ESCALATION_NAME_class}" {$EVN_ESCALATION_NAME_style} {$recordattrs}>
+				{$EVN_ESCALATION_NAME_value}
+			</td>
+			{END EVN_ESCALATION_NAME_fieldcolumn}
+			{BEGIN EVN_ESCALATION_CODE_fieldcolumn}
+			<td  class="{$EVN_ESCALATION_CODE_class}" {$EVN_ESCALATION_CODE_style} {$recordattrs}>
+				{$EVN_ESCALATION_CODE_value}
+			</td>
+			{END EVN_ESCALATION_CODE_fieldcolumn}
+			{BEGIN EVN_CONDITION_fieldcolumn}
+			<td  class="{$EVN_CONDITION_class}" {$EVN_CONDITION_style} {$recordattrs}>
+				{$EVN_CONDITION_value}
+			</td>
+			{END EVN_CONDITION_fieldcolumn}
+			{BEGIN EVN_MESSAGE_fieldcolumn}
+			<td  class="{$EVN_MESSAGE_class}" {$EVN_MESSAGE_style} {$recordattrs}>
+				{$EVN_MESSAGE_value}
+			</td>
+			{END EVN_MESSAGE_fieldcolumn}
+			{BEGIN EVN_OPERATION_NAME_fieldcolumn}
+			<td  class="{$EVN_OPERATION_NAME_class}" {$EVN_OPERATION_NAME_style} {$recordattrs}>
+				{$EVN_OPERATION_NAME_value}
+			</td>
+			{END EVN_OPERATION_NAME_fieldcolumn}
+			{BEGIN EVN_OPERATION_IMPLEMENTATION_REF_fieldcolumn}
+			<td  class="{$EVN_OPERATION_IMPLEMENTATION_REF_class}" {$EVN_OPERATION_IMPLEMENTATION_REF_style} {$recordattrs}>
+				{$EVN_OPERATION_IMPLEMENTATION_REF_value}
+			</td>
+			{END EVN_OPERATION_IMPLEMENTATION_REF_fieldcolumn}
+			{BEGIN EVN_TIME_DATE_fieldcolumn}
+			<td  class="{$EVN_TIME_DATE_class}" {$EVN_TIME_DATE_style} {$recordattrs}>
+				{$EVN_TIME_DATE_value}
+			</td>
+			{END EVN_TIME_DATE_fieldcolumn}
+			{BEGIN EVN_TIME_CYCLE_fieldcolumn}
+			<td  class="{$EVN_TIME_CYCLE_class}" {$EVN_TIME_CYCLE_style} {$recordattrs}>
+				{$EVN_TIME_CYCLE_value}
+			</td>
+			{END EVN_TIME_CYCLE_fieldcolumn}
+			{BEGIN EVN_TIME_DURATION_fieldcolumn}
+			<td  class="{$EVN_TIME_DURATION_class}" {$EVN_TIME_DURATION_style} {$recordattrs}>
+				{$EVN_TIME_DURATION_value}
+			</td>
+			{END EVN_TIME_DURATION_fieldcolumn}
+			{BEGIN EVN_BEHAVIOR_fieldcolumn}
+			<td  class="{$EVN_BEHAVIOR_class}" {$EVN_BEHAVIOR_style} {$recordattrs}>
+				{$EVN_BEHAVIOR_value}
+			</td>
+			{END EVN_BEHAVIOR_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

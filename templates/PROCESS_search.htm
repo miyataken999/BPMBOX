@@ -1,0 +1,836 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel PROCESS search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN PRO_TITLE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TITLE}" data-fieldname="PRO_TITLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TITLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TITLE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TITLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TITLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TITLE_fieldblock}
+	{BEGIN PRO_DESCRIPTION_fieldblock}		
+	<div class="container {$fielddispclass_PRO_DESCRIPTION}" data-fieldname="PRO_DESCRIPTION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_DESCRIPTION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_DESCRIPTION}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DESCRIPTION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DESCRIPTION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_DESCRIPTION_fieldblock}
+	{BEGIN PRO_PARENT_fieldblock}		
+	<div class="container {$fielddispclass_PRO_PARENT}" data-fieldname="PRO_PARENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_PARENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_PARENT}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_PARENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_PARENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_PARENT_fieldblock}
+	{BEGIN PRO_TIME_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TIME}" data-fieldname="PRO_TIME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TIME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TIME}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TIME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TIME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TIME_fieldblock}
+	{BEGIN PRO_TIMEUNIT_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TIMEUNIT}" data-fieldname="PRO_TIMEUNIT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TIMEUNIT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TIMEUNIT}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TIMEUNIT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TIMEUNIT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TIMEUNIT_fieldblock}
+	{BEGIN PRO_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_PRO_STATUS}" data-fieldname="PRO_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_STATUS_fieldblock}
+	{BEGIN PRO_TYPE_DAY_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TYPE_DAY}" data-fieldname="PRO_TYPE_DAY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TYPE_DAY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TYPE_DAY}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TYPE_DAY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TYPE_DAY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TYPE_DAY_fieldblock}
+	{BEGIN PRO_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TYPE}" data-fieldname="PRO_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TYPE_fieldblock}
+	{BEGIN PRO_ASSIGNMENT_fieldblock}		
+	<div class="container {$fielddispclass_PRO_ASSIGNMENT}" data-fieldname="PRO_ASSIGNMENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_ASSIGNMENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_ASSIGNMENT}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_ASSIGNMENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_ASSIGNMENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_ASSIGNMENT_fieldblock}
+	{BEGIN PRO_SHOW_MAP_fieldblock}		
+	<div class="container {$fielddispclass_PRO_SHOW_MAP}" data-fieldname="PRO_SHOW_MAP">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_SHOW_MAP}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_SHOW_MAP}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_MAP_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_MAP_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_SHOW_MAP_fieldblock}
+	{BEGIN PRO_SHOW_MESSAGE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_SHOW_MESSAGE}" data-fieldname="PRO_SHOW_MESSAGE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_SHOW_MESSAGE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_SHOW_MESSAGE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_MESSAGE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_MESSAGE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_SHOW_MESSAGE_fieldblock}
+	{BEGIN PRO_SUBPROCESS_fieldblock}		
+	<div class="container {$fielddispclass_PRO_SUBPROCESS}" data-fieldname="PRO_SUBPROCESS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_SUBPROCESS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_SUBPROCESS}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SUBPROCESS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SUBPROCESS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_SUBPROCESS_fieldblock}
+	{BEGIN PRO_TRI_OPEN_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TRI_OPEN}" data-fieldname="PRO_TRI_OPEN">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TRI_OPEN}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TRI_OPEN}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_OPEN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_OPEN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TRI_OPEN_fieldblock}
+	{BEGIN PRO_TRI_DELETED_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TRI_DELETED}" data-fieldname="PRO_TRI_DELETED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TRI_DELETED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TRI_DELETED}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_DELETED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_DELETED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TRI_DELETED_fieldblock}
+	{BEGIN PRO_TRI_CANCELED_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TRI_CANCELED}" data-fieldname="PRO_TRI_CANCELED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TRI_CANCELED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TRI_CANCELED}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_CANCELED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_CANCELED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TRI_CANCELED_fieldblock}
+	{BEGIN PRO_TRI_PAUSED_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TRI_PAUSED}" data-fieldname="PRO_TRI_PAUSED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TRI_PAUSED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TRI_PAUSED}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_PAUSED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_PAUSED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TRI_PAUSED_fieldblock}
+	{BEGIN PRO_TRI_REASSIGNED_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TRI_REASSIGNED}" data-fieldname="PRO_TRI_REASSIGNED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TRI_REASSIGNED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TRI_REASSIGNED}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_REASSIGNED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_REASSIGNED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TRI_REASSIGNED_fieldblock}
+	{BEGIN PRO_TRI_UNPAUSED_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TRI_UNPAUSED}" data-fieldname="PRO_TRI_UNPAUSED">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TRI_UNPAUSED}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TRI_UNPAUSED}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_UNPAUSED_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TRI_UNPAUSED_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TRI_UNPAUSED_fieldblock}
+	{BEGIN PRO_TYPE_PROCESS_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TYPE_PROCESS}" data-fieldname="PRO_TYPE_PROCESS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TYPE_PROCESS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TYPE_PROCESS}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TYPE_PROCESS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TYPE_PROCESS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TYPE_PROCESS_fieldblock}
+	{BEGIN PRO_SHOW_DELEGATE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_SHOW_DELEGATE}" data-fieldname="PRO_SHOW_DELEGATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_SHOW_DELEGATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_SHOW_DELEGATE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_DELEGATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_DELEGATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_SHOW_DELEGATE_fieldblock}
+	{BEGIN PRO_SHOW_DYNAFORM_fieldblock}		
+	<div class="container {$fielddispclass_PRO_SHOW_DYNAFORM}" data-fieldname="PRO_SHOW_DYNAFORM">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_SHOW_DYNAFORM}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_SHOW_DYNAFORM}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_DYNAFORM_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SHOW_DYNAFORM_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_SHOW_DYNAFORM_fieldblock}
+	{BEGIN PRO_CATEGORY_fieldblock}		
+	<div class="container {$fielddispclass_PRO_CATEGORY}" data-fieldname="PRO_CATEGORY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_CATEGORY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_CATEGORY}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_CATEGORY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_CATEGORY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_CATEGORY_fieldblock}
+	{BEGIN PRO_SUB_CATEGORY_fieldblock}		
+	<div class="container {$fielddispclass_PRO_SUB_CATEGORY}" data-fieldname="PRO_SUB_CATEGORY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_SUB_CATEGORY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_SUB_CATEGORY}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SUB_CATEGORY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_SUB_CATEGORY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_SUB_CATEGORY_fieldblock}
+	{BEGIN PRO_INDUSTRY_fieldblock}		
+	<div class="container {$fielddispclass_PRO_INDUSTRY}" data-fieldname="PRO_INDUSTRY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_INDUSTRY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_INDUSTRY}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_INDUSTRY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_INDUSTRY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_INDUSTRY_fieldblock}
+	{BEGIN PRO_UPDATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UPDATE_DATE}" data-fieldname="PRO_UPDATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_UPDATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UPDATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UPDATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UPDATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UPDATE_DATE_fieldblock}
+	{BEGIN PRO_CREATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_CREATE_DATE}" data-fieldname="PRO_CREATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_CREATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_CREATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_CREATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_CREATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_CREATE_DATE_fieldblock}
+	{BEGIN PRO_CREATE_USER_fieldblock}		
+	<div class="container {$fielddispclass_PRO_CREATE_USER}" data-fieldname="PRO_CREATE_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_CREATE_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_CREATE_USER}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_CREATE_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_CREATE_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_CREATE_USER_fieldblock}
+	{BEGIN PRO_HEIGHT_fieldblock}		
+	<div class="container {$fielddispclass_PRO_HEIGHT}" data-fieldname="PRO_HEIGHT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_HEIGHT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_HEIGHT}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_HEIGHT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_HEIGHT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_HEIGHT_fieldblock}
+	{BEGIN PRO_WIDTH_fieldblock}		
+	<div class="container {$fielddispclass_PRO_WIDTH}" data-fieldname="PRO_WIDTH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_WIDTH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_WIDTH}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_WIDTH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_WIDTH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_WIDTH_fieldblock}
+	{BEGIN PRO_TITLE_X_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TITLE_X}" data-fieldname="PRO_TITLE_X">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TITLE_X}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TITLE_X}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TITLE_X_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TITLE_X_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TITLE_X_fieldblock}
+	{BEGIN PRO_TITLE_Y_fieldblock}		
+	<div class="container {$fielddispclass_PRO_TITLE_Y}" data-fieldname="PRO_TITLE_Y">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_TITLE_Y}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_TITLE_Y}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TITLE_Y_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_TITLE_Y_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_TITLE_Y_fieldblock}
+	{BEGIN PRO_DEBUG_fieldblock}		
+	<div class="container {$fielddispclass_PRO_DEBUG}" data-fieldname="PRO_DEBUG">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_DEBUG}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_DEBUG}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DEBUG_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DEBUG_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_DEBUG_fieldblock}
+	{BEGIN PRO_DYNAFORMS_fieldblock}		
+	<div class="container {$fielddispclass_PRO_DYNAFORMS}" data-fieldname="PRO_DYNAFORMS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_DYNAFORMS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_DYNAFORMS}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DYNAFORMS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DYNAFORMS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_DYNAFORMS_fieldblock}
+	{BEGIN PRO_DERIVATION_SCREEN_TPL_fieldblock}		
+	<div class="container {$fielddispclass_PRO_DERIVATION_SCREEN_TPL}" data-fieldname="PRO_DERIVATION_SCREEN_TPL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_DERIVATION_SCREEN_TPL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_DERIVATION_SCREEN_TPL}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DERIVATION_SCREEN_TPL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_DERIVATION_SCREEN_TPL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_DERIVATION_SCREEN_TPL_fieldblock}
+	{BEGIN PRO_COST_fieldblock}		
+	<div class="container {$fielddispclass_PRO_COST}" data-fieldname="PRO_COST">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_COST}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_COST}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_COST_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_COST_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_COST_fieldblock}
+	{BEGIN PRO_UNIT_COST_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UNIT_COST}" data-fieldname="PRO_UNIT_COST">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_UNIT_COST}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UNIT_COST}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UNIT_COST_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UNIT_COST_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UNIT_COST_fieldblock}
+	{BEGIN PRO_ITEE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_ITEE}" data-fieldname="PRO_ITEE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_ITEE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_ITEE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_ITEE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_ITEE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_ITEE_fieldblock}
+	{BEGIN PRO_ACTION_DONE_fieldblock}		
+	<div class="container {$fielddispclass_PRO_ACTION_DONE}" data-fieldname="PRO_ACTION_DONE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label PROCESS PRO_ACTION_DONE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_ACTION_DONE}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_ACTION_DONE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_ACTION_DONE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_ACTION_DONE_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

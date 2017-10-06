@@ -1,0 +1,462 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel APP_DELEGATION view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN APP_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_UID} bs-viewform-group" data-fieldname="APP_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_UID}">
+			{$label APP_DELEGATION APP_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_UID_fieldblock}
+	{BEGIN DEL_INDEX_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_INDEX} bs-viewform-group" data-fieldname="DEL_INDEX">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_INDEX}">
+			{$label APP_DELEGATION DEL_INDEX}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_INDEX_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_INDEX_fieldblock}
+	{BEGIN DEL_PREVIOUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_PREVIOUS} bs-viewform-group" data-fieldname="DEL_PREVIOUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_PREVIOUS}">
+			{$label APP_DELEGATION DEL_PREVIOUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_PREVIOUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_PREVIOUS_fieldblock}
+	{BEGIN DEL_LAST_INDEX_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_LAST_INDEX} bs-viewform-group" data-fieldname="DEL_LAST_INDEX">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_LAST_INDEX}">
+			{$label APP_DELEGATION DEL_LAST_INDEX}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_LAST_INDEX_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_LAST_INDEX_fieldblock}
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label APP_DELEGATION PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TAS_UID} bs-viewform-group" data-fieldname="TAS_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TAS_UID}">
+			{$label APP_DELEGATION TAS_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TAS_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TAS_UID_fieldblock}
+	{BEGIN USR_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_USR_UID} bs-viewform-group" data-fieldname="USR_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_USR_UID}">
+			{$label APP_DELEGATION USR_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$USR_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END USR_UID_fieldblock}
+	{BEGIN DEL_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_TYPE} bs-viewform-group" data-fieldname="DEL_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_TYPE}">
+			{$label APP_DELEGATION DEL_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_TYPE_fieldblock}
+	{BEGIN DEL_THREAD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_THREAD} bs-viewform-group" data-fieldname="DEL_THREAD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_THREAD}">
+			{$label APP_DELEGATION DEL_THREAD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_THREAD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_THREAD_fieldblock}
+	{BEGIN DEL_THREAD_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_THREAD_STATUS} bs-viewform-group" data-fieldname="DEL_THREAD_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_THREAD_STATUS}">
+			{$label APP_DELEGATION DEL_THREAD_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_THREAD_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_THREAD_STATUS_fieldblock}
+	{BEGIN DEL_PRIORITY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_PRIORITY} bs-viewform-group" data-fieldname="DEL_PRIORITY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_PRIORITY}">
+			{$label APP_DELEGATION DEL_PRIORITY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_PRIORITY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_PRIORITY_fieldblock}
+	{BEGIN DEL_DELEGATE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DELEGATE_DATE} bs-viewform-group" data-fieldname="DEL_DELEGATE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DELEGATE_DATE}">
+			{$label APP_DELEGATION DEL_DELEGATE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DELEGATE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DELEGATE_DATE_fieldblock}
+	{BEGIN DEL_INIT_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_INIT_DATE} bs-viewform-group" data-fieldname="DEL_INIT_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_INIT_DATE}">
+			{$label APP_DELEGATION DEL_INIT_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_INIT_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_INIT_DATE_fieldblock}
+	{BEGIN DEL_FINISH_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_FINISH_DATE} bs-viewform-group" data-fieldname="DEL_FINISH_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_FINISH_DATE}">
+			{$label APP_DELEGATION DEL_FINISH_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_FINISH_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_FINISH_DATE_fieldblock}
+	{BEGIN DEL_TASK_DUE_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_TASK_DUE_DATE} bs-viewform-group" data-fieldname="DEL_TASK_DUE_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_TASK_DUE_DATE}">
+			{$label APP_DELEGATION DEL_TASK_DUE_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_TASK_DUE_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_TASK_DUE_DATE_fieldblock}
+	{BEGIN DEL_RISK_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_RISK_DATE} bs-viewform-group" data-fieldname="DEL_RISK_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_RISK_DATE}">
+			{$label APP_DELEGATION DEL_RISK_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_RISK_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_RISK_DATE_fieldblock}
+	{BEGIN DEL_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DURATION} bs-viewform-group" data-fieldname="DEL_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DURATION}">
+			{$label APP_DELEGATION DEL_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DURATION_fieldblock}
+	{BEGIN DEL_QUEUE_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_QUEUE_DURATION} bs-viewform-group" data-fieldname="DEL_QUEUE_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_QUEUE_DURATION}">
+			{$label APP_DELEGATION DEL_QUEUE_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_QUEUE_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_QUEUE_DURATION_fieldblock}
+	{BEGIN DEL_DELAY_DURATION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DELAY_DURATION} bs-viewform-group" data-fieldname="DEL_DELAY_DURATION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DELAY_DURATION}">
+			{$label APP_DELEGATION DEL_DELAY_DURATION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DELAY_DURATION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DELAY_DURATION_fieldblock}
+	{BEGIN DEL_STARTED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_STARTED} bs-viewform-group" data-fieldname="DEL_STARTED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_STARTED}">
+			{$label APP_DELEGATION DEL_STARTED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_STARTED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_STARTED_fieldblock}
+	{BEGIN DEL_FINISHED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_FINISHED} bs-viewform-group" data-fieldname="DEL_FINISHED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_FINISHED}">
+			{$label APP_DELEGATION DEL_FINISHED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_FINISHED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_FINISHED_fieldblock}
+	{BEGIN DEL_DELAYED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DELAYED} bs-viewform-group" data-fieldname="DEL_DELAYED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DELAYED}">
+			{$label APP_DELEGATION DEL_DELAYED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DELAYED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DELAYED_fieldblock}
+	{BEGIN DEL_DATA_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DEL_DATA} bs-viewform-group" data-fieldname="DEL_DATA">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DEL_DATA}">
+			{$label APP_DELEGATION DEL_DATA}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DEL_DATA_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DEL_DATA_fieldblock}
+	{BEGIN APP_OVERDUE_PERCENTAGE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_APP_OVERDUE_PERCENTAGE} bs-viewform-group" data-fieldname="APP_OVERDUE_PERCENTAGE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_APP_OVERDUE_PERCENTAGE}">
+			{$label APP_DELEGATION APP_OVERDUE_PERCENTAGE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$APP_OVERDUE_PERCENTAGE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END APP_OVERDUE_PERCENTAGE_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

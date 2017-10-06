@@ -1,0 +1,80 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">戻る {$backtomasterlink_caption}</a><span>{$pagetitlelabel BPMN_PROCESS masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label BPMN_PROCESS PRO_UID}";
+	}
+	.bs-gridcell[data-field=PRJ_UID]:before {
+		content: "{$label BPMN_PROCESS PRJ_UID}";
+	}
+	.bs-gridcell[data-field=DIA_UID]:before {
+		content: "{$label BPMN_PROCESS DIA_UID}";
+	}
+	.bs-gridcell[data-field=PRO_NAME]:before {
+		content: "{$label BPMN_PROCESS PRO_NAME}";
+	}
+	.bs-gridcell[data-field=PRO_TYPE]:before {
+		content: "{$label BPMN_PROCESS PRO_TYPE}";
+	}
+	.bs-gridcell[data-field=PRO_IS_EXECUTABLE]:before {
+		content: "{$label BPMN_PROCESS PRO_IS_EXECUTABLE}";
+	}
+	.bs-gridcell[data-field=PRO_IS_CLOSED]:before {
+		content: "{$label BPMN_PROCESS PRO_IS_CLOSED}";
+	}
+	.bs-gridcell[data-field=PRO_IS_SUBPROCESS]:before {
+		content: "{$label BPMN_PROCESS PRO_IS_SUBPROCESS}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$PRO_UID_class}">{$label BPMN_PROCESS PRO_UID}</th>
+			<th class="{$PRJ_UID_class}">{$label BPMN_PROCESS PRJ_UID}</th>
+			<th class="{$DIA_UID_class}">{$label BPMN_PROCESS DIA_UID}</th>
+			<th class="{$PRO_NAME_class}">{$label BPMN_PROCESS PRO_NAME}</th>
+			<th class="{$PRO_TYPE_class}">{$label BPMN_PROCESS PRO_TYPE}</th>
+			<th class="{$PRO_IS_EXECUTABLE_class}">{$label BPMN_PROCESS PRO_IS_EXECUTABLE}</th>
+			<th class="{$PRO_IS_CLOSED_class}">{$label BPMN_PROCESS PRO_IS_CLOSED}</th>
+			<th class="{$PRO_IS_SUBPROCESS_class}">{$label BPMN_PROCESS PRO_IS_SUBPROCESS}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$PRO_UID_class} bs-gridcell" data-field=PRO_UID>{$PRO_UID_mastervalue}</td>
+			<td class="{$PRJ_UID_class} bs-gridcell" data-field=PRJ_UID>{$PRJ_UID_mastervalue}</td>
+			<td class="{$DIA_UID_class} bs-gridcell" data-field=DIA_UID>{$DIA_UID_mastervalue}</td>
+			<td class="{$PRO_NAME_class} bs-gridcell" data-field=PRO_NAME>{$PRO_NAME_mastervalue}</td>
+			<td class="{$PRO_TYPE_class} bs-gridcell" data-field=PRO_TYPE>{$PRO_TYPE_mastervalue}</td>
+			<td class="{$PRO_IS_EXECUTABLE_class} bs-gridcell" data-field=PRO_IS_EXECUTABLE>{$PRO_IS_EXECUTABLE_mastervalue}</td>
+			<td class="{$PRO_IS_CLOSED_class} bs-gridcell" data-field=PRO_IS_CLOSED>{$PRO_IS_CLOSED_mastervalue}</td>
+			<td class="{$PRO_IS_SUBPROCESS_class} bs-gridcell" data-field=PRO_IS_SUBPROCESS>{$PRO_IS_SUBPROCESS_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

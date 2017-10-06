@@ -1,0 +1,366 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel ADDITIONAL_TABLES view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN ADD_TAB_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_UID} bs-viewform-group" data-fieldname="ADD_TAB_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_UID}">
+			{$label ADDITIONAL_TABLES ADD_TAB_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_UID_fieldblock}
+	{BEGIN ADD_TAB_NAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_NAME} bs-viewform-group" data-fieldname="ADD_TAB_NAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_NAME}">
+			{$label ADDITIONAL_TABLES ADD_TAB_NAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_NAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_NAME_fieldblock}
+	{BEGIN ADD_TAB_CLASS_NAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_CLASS_NAME} bs-viewform-group" data-fieldname="ADD_TAB_CLASS_NAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_CLASS_NAME}">
+			{$label ADDITIONAL_TABLES ADD_TAB_CLASS_NAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_CLASS_NAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_CLASS_NAME_fieldblock}
+	{BEGIN ADD_TAB_DESCRIPTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_DESCRIPTION} bs-viewform-group" data-fieldname="ADD_TAB_DESCRIPTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_DESCRIPTION}">
+			{$label ADDITIONAL_TABLES ADD_TAB_DESCRIPTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_DESCRIPTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_DESCRIPTION_fieldblock}
+	{BEGIN ADD_TAB_SDW_LOG_INSERT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_SDW_LOG_INSERT} bs-viewform-group" data-fieldname="ADD_TAB_SDW_LOG_INSERT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_SDW_LOG_INSERT}">
+			{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_INSERT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_SDW_LOG_INSERT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_SDW_LOG_INSERT_fieldblock}
+	{BEGIN ADD_TAB_SDW_LOG_UPDATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_SDW_LOG_UPDATE} bs-viewform-group" data-fieldname="ADD_TAB_SDW_LOG_UPDATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_SDW_LOG_UPDATE}">
+			{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_UPDATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_SDW_LOG_UPDATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_SDW_LOG_UPDATE_fieldblock}
+	{BEGIN ADD_TAB_SDW_LOG_DELETE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_SDW_LOG_DELETE} bs-viewform-group" data-fieldname="ADD_TAB_SDW_LOG_DELETE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_SDW_LOG_DELETE}">
+			{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_DELETE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_SDW_LOG_DELETE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_SDW_LOG_DELETE_fieldblock}
+	{BEGIN ADD_TAB_SDW_LOG_SELECT_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_SDW_LOG_SELECT} bs-viewform-group" data-fieldname="ADD_TAB_SDW_LOG_SELECT">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_SDW_LOG_SELECT}">
+			{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_SELECT}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_SDW_LOG_SELECT_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_SDW_LOG_SELECT_fieldblock}
+	{BEGIN ADD_TAB_SDW_MAX_LENGTH_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_SDW_MAX_LENGTH} bs-viewform-group" data-fieldname="ADD_TAB_SDW_MAX_LENGTH">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_SDW_MAX_LENGTH}">
+			{$label ADDITIONAL_TABLES ADD_TAB_SDW_MAX_LENGTH}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_SDW_MAX_LENGTH_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_SDW_MAX_LENGTH_fieldblock}
+	{BEGIN ADD_TAB_SDW_AUTO_DELETE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_SDW_AUTO_DELETE} bs-viewform-group" data-fieldname="ADD_TAB_SDW_AUTO_DELETE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_SDW_AUTO_DELETE}">
+			{$label ADDITIONAL_TABLES ADD_TAB_SDW_AUTO_DELETE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_SDW_AUTO_DELETE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_SDW_AUTO_DELETE_fieldblock}
+	{BEGIN ADD_TAB_PLG_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_PLG_UID} bs-viewform-group" data-fieldname="ADD_TAB_PLG_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_PLG_UID}">
+			{$label ADDITIONAL_TABLES ADD_TAB_PLG_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_PLG_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_PLG_UID_fieldblock}
+	{BEGIN DBS_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_DBS_UID} bs-viewform-group" data-fieldname="DBS_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_DBS_UID}">
+			{$label ADDITIONAL_TABLES DBS_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$DBS_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END DBS_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label ADDITIONAL_TABLES PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN ADD_TAB_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_TYPE} bs-viewform-group" data-fieldname="ADD_TAB_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_TYPE}">
+			{$label ADDITIONAL_TABLES ADD_TAB_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_TYPE_fieldblock}
+	{BEGIN ADD_TAB_GRID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_GRID} bs-viewform-group" data-fieldname="ADD_TAB_GRID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_GRID}">
+			{$label ADDITIONAL_TABLES ADD_TAB_GRID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_GRID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_GRID_fieldblock}
+	{BEGIN ADD_TAB_TAG_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ADD_TAB_TAG} bs-viewform-group" data-fieldname="ADD_TAB_TAG">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ADD_TAB_TAG}">
+			{$label ADDITIONAL_TABLES ADD_TAB_TAG}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ADD_TAB_TAG_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ADD_TAB_TAG_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

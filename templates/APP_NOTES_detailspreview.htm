@@ -1,0 +1,63 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$APP_UID_class}">{$label APP_NOTES APP_UID}</th>
+			<th class="{$USR_UID_class}">{$label APP_NOTES USR_UID}</th>
+			<th class="{$NOTE_DATE_class}">{$label APP_NOTES NOTE_DATE}</th>
+			<th class="{$NOTE_CONTENT_class}">{$label APP_NOTES NOTE_CONTENT}</th>
+			<th class="{$NOTE_TYPE_class}">{$label APP_NOTES NOTE_TYPE}</th>
+			<th class="{$NOTE_AVAILABILITY_class}">{$label APP_NOTES NOTE_AVAILABILITY}</th>
+			<th class="{$NOTE_ORIGIN_OBJ_class}">{$label APP_NOTES NOTE_ORIGIN_OBJ}</th>
+			<th class="{$NOTE_AFFECTED_OBJ1_class}">{$label APP_NOTES NOTE_AFFECTED_OBJ1}</th>
+			<th class="{$NOTE_AFFECTED_OBJ2_class}">{$label APP_NOTES NOTE_AFFECTED_OBJ2}</th>
+			<th class="{$NOTE_RECIPIENTS_class}">{$label APP_NOTES NOTE_RECIPIENTS}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$APP_UID_class}">{$APP_UID_value}</td>
+			<td class="{$USR_UID_class}">{$USR_UID_value}</td>
+			<td class="{$NOTE_DATE_class}">{$NOTE_DATE_value}</td>
+			<td class="{$NOTE_CONTENT_class}">{$NOTE_CONTENT_value}</td>
+			<td class="{$NOTE_TYPE_class}">{$NOTE_TYPE_value}</td>
+			<td class="{$NOTE_AVAILABILITY_class}">{$NOTE_AVAILABILITY_value}</td>
+			<td class="{$NOTE_ORIGIN_OBJ_class}">{$NOTE_ORIGIN_OBJ_value}</td>
+			<td class="{$NOTE_AFFECTED_OBJ1_class}">{$NOTE_AFFECTED_OBJ1_value}</td>
+			<td class="{$NOTE_AFFECTED_OBJ2_class}">{$NOTE_AFFECTED_OBJ2_value}</td>
+			<td class="{$NOTE_RECIPIENTS_class}">{$NOTE_RECIPIENTS_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

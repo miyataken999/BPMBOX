@@ -1,0 +1,458 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel ROUTE search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN ROU_UID_fieldblock}		
+	<div class="container {$fielddispclass_ROU_UID}" data-fieldname="ROU_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_UID}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_UID_fieldblock}
+	{BEGIN ROU_PARENT_fieldblock}		
+	<div class="container {$fielddispclass_ROU_PARENT}" data-fieldname="ROU_PARENT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_PARENT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_PARENT}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_PARENT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_PARENT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_PARENT_fieldblock}
+	{BEGIN PRO_UID_fieldblock}		
+	<div class="container {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE PRO_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PRO_UID}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PRO_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PRO_UID_fieldblock}
+	{BEGIN TAS_UID_fieldblock}		
+	<div class="container {$fielddispclass_TAS_UID}" data-fieldname="TAS_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE TAS_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAS_UID}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAS_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAS_UID_fieldblock}
+	{BEGIN ROU_NEXT_TASK_fieldblock}		
+	<div class="container {$fielddispclass_ROU_NEXT_TASK}" data-fieldname="ROU_NEXT_TASK">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_NEXT_TASK}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_NEXT_TASK}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_NEXT_TASK_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_NEXT_TASK_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_NEXT_TASK_fieldblock}
+	{BEGIN ROU_CASE_fieldblock}		
+	<div class="container {$fielddispclass_ROU_CASE}" data-fieldname="ROU_CASE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_CASE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_CASE}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_CASE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_CASE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_CASE_fieldblock}
+	{BEGIN ROU_TYPE_fieldblock}		
+	<div class="container {$fielddispclass_ROU_TYPE}" data-fieldname="ROU_TYPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_TYPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_TYPE}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TYPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TYPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_TYPE_fieldblock}
+	{BEGIN ROU_DEFAULT_fieldblock}		
+	<div class="container {$fielddispclass_ROU_DEFAULT}" data-fieldname="ROU_DEFAULT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_DEFAULT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_DEFAULT}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_DEFAULT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_DEFAULT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_DEFAULT_fieldblock}
+	{BEGIN ROU_CONDITION_fieldblock}		
+	<div class="container {$fielddispclass_ROU_CONDITION}" data-fieldname="ROU_CONDITION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_CONDITION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_CONDITION}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_CONDITION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_CONDITION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_CONDITION_fieldblock}
+	{BEGIN ROU_TO_LAST_USER_fieldblock}		
+	<div class="container {$fielddispclass_ROU_TO_LAST_USER}" data-fieldname="ROU_TO_LAST_USER">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_TO_LAST_USER}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_TO_LAST_USER}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TO_LAST_USER_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TO_LAST_USER_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_TO_LAST_USER_fieldblock}
+	{BEGIN ROU_OPTIONAL_fieldblock}		
+	<div class="container {$fielddispclass_ROU_OPTIONAL}" data-fieldname="ROU_OPTIONAL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_OPTIONAL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_OPTIONAL}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_OPTIONAL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_OPTIONAL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_OPTIONAL_fieldblock}
+	{BEGIN ROU_SEND_EMAIL_fieldblock}		
+	<div class="container {$fielddispclass_ROU_SEND_EMAIL}" data-fieldname="ROU_SEND_EMAIL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_SEND_EMAIL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_SEND_EMAIL}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_SEND_EMAIL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_SEND_EMAIL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_SEND_EMAIL_fieldblock}
+	{BEGIN ROU_SOURCEANCHOR_fieldblock}		
+	<div class="container {$fielddispclass_ROU_SOURCEANCHOR}" data-fieldname="ROU_SOURCEANCHOR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_SOURCEANCHOR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_SOURCEANCHOR}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_SOURCEANCHOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_SOURCEANCHOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_SOURCEANCHOR_fieldblock}
+	{BEGIN ROU_TARGETANCHOR_fieldblock}		
+	<div class="container {$fielddispclass_ROU_TARGETANCHOR}" data-fieldname="ROU_TARGETANCHOR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_TARGETANCHOR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_TARGETANCHOR}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TARGETANCHOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TARGETANCHOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_TARGETANCHOR_fieldblock}
+	{BEGIN ROU_TO_PORT_fieldblock}		
+	<div class="container {$fielddispclass_ROU_TO_PORT}" data-fieldname="ROU_TO_PORT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_TO_PORT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_TO_PORT}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TO_PORT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_TO_PORT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_TO_PORT_fieldblock}
+	{BEGIN ROU_FROM_PORT_fieldblock}		
+	<div class="container {$fielddispclass_ROU_FROM_PORT}" data-fieldname="ROU_FROM_PORT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_FROM_PORT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_FROM_PORT}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_FROM_PORT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_FROM_PORT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_FROM_PORT_fieldblock}
+	{BEGIN ROU_EVN_UID_fieldblock}		
+	<div class="container {$fielddispclass_ROU_EVN_UID}" data-fieldname="ROU_EVN_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE ROU_EVN_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ROU_EVN_UID}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_EVN_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ROU_EVN_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ROU_EVN_UID_fieldblock}
+	{BEGIN GAT_UID_fieldblock}		
+	<div class="container {$fielddispclass_GAT_UID}" data-fieldname="GAT_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label ROUTE GAT_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_GAT_UID}
+			</div>
+			<div class="col-md-4" >
+				{$GAT_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$GAT_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END GAT_UID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

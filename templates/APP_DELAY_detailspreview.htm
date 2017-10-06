@@ -1,0 +1,71 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$APP_DELAY_UID_class}">{$label APP_DELAY APP_DELAY_UID}</th>
+			<th class="{$PRO_UID_class}">{$label APP_DELAY PRO_UID}</th>
+			<th class="{$APP_UID_class}">{$label APP_DELAY APP_UID}</th>
+			<th class="{$APP_THREAD_INDEX_class}">{$label APP_DELAY APP_THREAD_INDEX}</th>
+			<th class="{$APP_DEL_INDEX_class}">{$label APP_DELAY APP_DEL_INDEX}</th>
+			<th class="{$APP_TYPE_class}">{$label APP_DELAY APP_TYPE}</th>
+			<th class="{$APP_STATUS_class}">{$label APP_DELAY APP_STATUS}</th>
+			<th class="{$APP_NEXT_TASK_class}">{$label APP_DELAY APP_NEXT_TASK}</th>
+			<th class="{$APP_DELEGATION_USER_class}">{$label APP_DELAY APP_DELEGATION_USER}</th>
+			<th class="{$APP_ENABLE_ACTION_USER_class}">{$label APP_DELAY APP_ENABLE_ACTION_USER}</th>
+			<th class="{$APP_ENABLE_ACTION_DATE_class}">{$label APP_DELAY APP_ENABLE_ACTION_DATE}</th>
+			<th class="{$APP_DISABLE_ACTION_USER_class}">{$label APP_DELAY APP_DISABLE_ACTION_USER}</th>
+			<th class="{$APP_DISABLE_ACTION_DATE_class}">{$label APP_DELAY APP_DISABLE_ACTION_DATE}</th>
+			<th class="{$APP_AUTOMATIC_DISABLED_DATE_class}">{$label APP_DELAY APP_AUTOMATIC_DISABLED_DATE}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$APP_DELAY_UID_class}">{$APP_DELAY_UID_value}</td>
+			<td class="{$PRO_UID_class}">{$PRO_UID_value}</td>
+			<td class="{$APP_UID_class}">{$APP_UID_value}</td>
+			<td class="{$APP_THREAD_INDEX_class}">{$APP_THREAD_INDEX_value}</td>
+			<td class="{$APP_DEL_INDEX_class}">{$APP_DEL_INDEX_value}</td>
+			<td class="{$APP_TYPE_class}">{$APP_TYPE_value}</td>
+			<td class="{$APP_STATUS_class}">{$APP_STATUS_value}</td>
+			<td class="{$APP_NEXT_TASK_class}">{$APP_NEXT_TASK_value}</td>
+			<td class="{$APP_DELEGATION_USER_class}">{$APP_DELEGATION_USER_value}</td>
+			<td class="{$APP_ENABLE_ACTION_USER_class}">{$APP_ENABLE_ACTION_USER_value}</td>
+			<td class="{$APP_ENABLE_ACTION_DATE_class}">{$APP_ENABLE_ACTION_DATE_value}</td>
+			<td class="{$APP_DISABLE_ACTION_USER_class}">{$APP_DISABLE_ACTION_USER_value}</td>
+			<td class="{$APP_DISABLE_ACTION_DATE_class}">{$APP_DISABLE_ACTION_DATE_value}</td>
+			<td class="{$APP_AUTOMATIC_DISABLED_DATE_class}">{$APP_AUTOMATIC_DISABLED_DATE_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

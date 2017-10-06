@@ -1,0 +1,162 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel CASE_CONSOLIDATED print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN TAS_UID_fieldheadercolumn}
+			<th class="{$TAS_UID_class}" {$TAS_UID_style}  data-field="TAS_UID">
+				{$label CASE_CONSOLIDATED TAS_UID}
+			</th>
+			{END TAS_UID_fieldheadercolumn}
+			{BEGIN DYN_UID_fieldheadercolumn}
+			<th class="{$DYN_UID_class}" {$DYN_UID_style}  data-field="DYN_UID">
+				{$label CASE_CONSOLIDATED DYN_UID}
+			</th>
+			{END DYN_UID_fieldheadercolumn}
+			{BEGIN REP_TAB_UID_fieldheadercolumn}
+			<th class="{$REP_TAB_UID_class}" {$REP_TAB_UID_style}  data-field="REP_TAB_UID">
+				{$label CASE_CONSOLIDATED REP_TAB_UID}
+			</th>
+			{END REP_TAB_UID_fieldheadercolumn}
+			{BEGIN CON_STATUS_fieldheadercolumn}
+			<th class="{$CON_STATUS_class}" {$CON_STATUS_style}  data-field="CON_STATUS">
+				{$label CASE_CONSOLIDATED CON_STATUS}
+			</th>
+			{END CON_STATUS_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN TAS_UID_fieldcolumn}
+			<td  class="{$TAS_UID_class}" {$TAS_UID_style} {$recordattrs}>
+				{$TAS_UID_value}
+			</td>
+			{END TAS_UID_fieldcolumn}
+			{BEGIN DYN_UID_fieldcolumn}
+			<td  class="{$DYN_UID_class}" {$DYN_UID_style} {$recordattrs}>
+				{$DYN_UID_value}
+			</td>
+			{END DYN_UID_fieldcolumn}
+			{BEGIN REP_TAB_UID_fieldcolumn}
+			<td  class="{$REP_TAB_UID_class}" {$REP_TAB_UID_style} {$recordattrs}>
+				{$REP_TAB_UID_value}
+			</td>
+			{END REP_TAB_UID_fieldcolumn}
+			{BEGIN CON_STATUS_fieldcolumn}
+			<td  class="{$CON_STATUS_class}" {$CON_STATUS_style} {$recordattrs}>
+				{$CON_STATUS_value}
+			</td>
+			{END CON_STATUS_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">抽出件数: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$APP_UID_class}">{$label PMT_ECCUBE APP_UID}</th>
+			<th class="{$APP_NUMBER_class}">{$label PMT_ECCUBE APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label PMT_ECCUBE APP_STATUS}</th>
+			<th class="{$APPLICATION_class}">{$label PMT_ECCUBE APPLICATION}</th>
+			<th class="{$APPLICATION_LABEL_class}">{$label PMT_ECCUBE APPLICATION_LABEL}</th>
+			<th class="{$ECCTEXTAREAVAR007_class}">{$label PMT_ECCUBE ECCTEXTAREAVAR007}</th>
+			<th class="{$JPN_class}">{$label PMT_ECCUBE JPN}</th>
+			<th class="{$JPN_LABEL_class}">{$label PMT_ECCUBE JPN_LABEL}</th>
+			<th class="{$PROCESS_class}">{$label PMT_ECCUBE PROCESS}</th>
+			<th class="{$PROCESS_LABEL_class}">{$label PMT_ECCUBE PROCESS_LABEL}</th>
+			<th class="{$DATETIMEVAR001_class}">{$label PMT_ECCUBE DATETIMEVAR001}</th>
+			<th class="{$DATETIMEVAR001_LABEL_class}">{$label PMT_ECCUBE DATETIMEVAR001_LABEL}</th>
+			<th class="{$DATETIMEVAR002_class}">{$label PMT_ECCUBE DATETIMEVAR002}</th>
+			<th class="{$DATETIMEVAR002_LABEL_class}">{$label PMT_ECCUBE DATETIMEVAR002_LABEL}</th>
+			<th class="{$SATEI_class}">{$label PMT_ECCUBE SATEI}</th>
+			<th class="{$SATEI_LABEL_class}">{$label PMT_ECCUBE SATEI_LABEL}</th>
+			<th class="{$TEXTVAR004_class}">{$label PMT_ECCUBE TEXTVAR004}</th>
+			<th class="{$TEXTVAR004_LABEL_class}">{$label PMT_ECCUBE TEXTVAR004_LABEL}</th>
+			<th class="{$TEXTVAR009_class}">{$label PMT_ECCUBE TEXTVAR009}</th>
+			<th class="{$TEXTVAR009_LABEL_class}">{$label PMT_ECCUBE TEXTVAR009_LABEL}</th>
+			<th class="{$TEXTVAR011_class}">{$label PMT_ECCUBE TEXTVAR011}</th>
+			<th class="{$TEXTVAR011_LABEL_class}">{$label PMT_ECCUBE TEXTVAR011_LABEL}</th>
+			<th class="{$TEXTVAR012_class}">{$label PMT_ECCUBE TEXTVAR012}</th>
+			<th class="{$TEXTVAR012_LABEL_class}">{$label PMT_ECCUBE TEXTVAR012_LABEL}</th>
+			<th class="{$TEXTVAR013_class}">{$label PMT_ECCUBE TEXTVAR013}</th>
+			<th class="{$TEXTVAR013_LABEL_class}">{$label PMT_ECCUBE TEXTVAR013_LABEL}</th>
+			<th class="{$TEXTAREAVAR003_class}">{$label PMT_ECCUBE TEXTAREAVAR003}</th>
+			<th class="{$TEXTAREAVAR003_LABEL_class}">{$label PMT_ECCUBE TEXTAREAVAR003_LABEL}</th>
+			<th class="{$TEXTAREAVAR004_class}">{$label PMT_ECCUBE TEXTAREAVAR004}</th>
+			<th class="{$TEXTAREAVAR004_LABEL_class}">{$label PMT_ECCUBE TEXTAREAVAR004_LABEL}</th>
+			<th class="{$TEXTAREAVAR005_class}">{$label PMT_ECCUBE TEXTAREAVAR005}</th>
+			<th class="{$TEXTAREAVAR005_LABEL_class}">{$label PMT_ECCUBE TEXTAREAVAR005_LABEL}</th>
+			<th class="{$TEXTAREAVAR006_class}">{$label PMT_ECCUBE TEXTAREAVAR006}</th>
+			<th class="{$TEXTAREAVAR006_LABEL_class}">{$label PMT_ECCUBE TEXTAREAVAR006_LABEL}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$APP_UID_class}">{$APP_UID_value}</td>
+			<td class="{$APP_NUMBER_class}">{$APP_NUMBER_value}</td>
+			<td class="{$APP_STATUS_class}">{$APP_STATUS_value}</td>
+			<td class="{$APPLICATION_class}">{$APPLICATION_value}</td>
+			<td class="{$APPLICATION_LABEL_class}">{$APPLICATION_LABEL_value}</td>
+			<td class="{$ECCTEXTAREAVAR007_class}">{$ECCTEXTAREAVAR007_value}</td>
+			<td class="{$JPN_class}">{$JPN_value}</td>
+			<td class="{$JPN_LABEL_class}">{$JPN_LABEL_value}</td>
+			<td class="{$PROCESS_class}">{$PROCESS_value}</td>
+			<td class="{$PROCESS_LABEL_class}">{$PROCESS_LABEL_value}</td>
+			<td class="{$DATETIMEVAR001_class}">{$DATETIMEVAR001_value}</td>
+			<td class="{$DATETIMEVAR001_LABEL_class}">{$DATETIMEVAR001_LABEL_value}</td>
+			<td class="{$DATETIMEVAR002_class}">{$DATETIMEVAR002_value}</td>
+			<td class="{$DATETIMEVAR002_LABEL_class}">{$DATETIMEVAR002_LABEL_value}</td>
+			<td class="{$SATEI_class}">{$SATEI_value}</td>
+			<td class="{$SATEI_LABEL_class}">{$SATEI_LABEL_value}</td>
+			<td class="{$TEXTVAR004_class}">{$TEXTVAR004_value}</td>
+			<td class="{$TEXTVAR004_LABEL_class}">{$TEXTVAR004_LABEL_value}</td>
+			<td class="{$TEXTVAR009_class}">{$TEXTVAR009_value}</td>
+			<td class="{$TEXTVAR009_LABEL_class}">{$TEXTVAR009_LABEL_value}</td>
+			<td class="{$TEXTVAR011_class}">{$TEXTVAR011_value}</td>
+			<td class="{$TEXTVAR011_LABEL_class}">{$TEXTVAR011_LABEL_value}</td>
+			<td class="{$TEXTVAR012_class}">{$TEXTVAR012_value}</td>
+			<td class="{$TEXTVAR012_LABEL_class}">{$TEXTVAR012_LABEL_value}</td>
+			<td class="{$TEXTVAR013_class}">{$TEXTVAR013_value}</td>
+			<td class="{$TEXTVAR013_LABEL_class}">{$TEXTVAR013_LABEL_value}</td>
+			<td class="{$TEXTAREAVAR003_class}">{$TEXTAREAVAR003_value}</td>
+			<td class="{$TEXTAREAVAR003_LABEL_class}">{$TEXTAREAVAR003_LABEL_value}</td>
+			<td class="{$TEXTAREAVAR004_class}">{$TEXTAREAVAR004_value}</td>
+			<td class="{$TEXTAREAVAR004_LABEL_class}">{$TEXTAREAVAR004_LABEL_value}</td>
+			<td class="{$TEXTAREAVAR005_class}">{$TEXTAREAVAR005_value}</td>
+			<td class="{$TEXTAREAVAR005_LABEL_class}">{$TEXTAREAVAR005_LABEL_value}</td>
+			<td class="{$TEXTAREAVAR006_class}">{$TEXTAREAVAR006_value}</td>
+			<td class="{$TEXTAREAVAR006_LABEL_class}">{$TEXTAREAVAR006_LABEL_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

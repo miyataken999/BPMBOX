@@ -1,0 +1,51 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel RBAC_ROLES masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$ROL_UID_class}">{$label RBAC_ROLES ROL_UID}</th>
+			<th class="{$ROL_PARENT_class}">{$label RBAC_ROLES ROL_PARENT}</th>
+			<th class="{$ROL_SYSTEM_class}">{$label RBAC_ROLES ROL_SYSTEM}</th>
+			<th class="{$ROL_CODE_class}">{$label RBAC_ROLES ROL_CODE}</th>
+			<th class="{$ROL_CREATE_DATE_class}">{$label RBAC_ROLES ROL_CREATE_DATE}</th>
+			<th class="{$ROL_UPDATE_DATE_class}">{$label RBAC_ROLES ROL_UPDATE_DATE}</th>
+			<th class="{$ROL_STATUS_class}">{$label RBAC_ROLES ROL_STATUS}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$ROL_UID_class}">{$ROL_UID_mastervalue}</td>
+			<td class="{$ROL_PARENT_class}">{$ROL_PARENT_mastervalue}</td>
+			<td class="{$ROL_SYSTEM_class}">{$ROL_SYSTEM_mastervalue}</td>
+			<td class="{$ROL_CODE_class}">{$ROL_CODE_mastervalue}</td>
+			<td class="{$ROL_CREATE_DATE_class}">{$ROL_CREATE_DATE_mastervalue}</td>
+			<td class="{$ROL_UPDATE_DATE_class}">{$ROL_UPDATE_DATE_mastervalue}</td>
+			<td class="{$ROL_STATUS_class}">{$ROL_STATUS_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

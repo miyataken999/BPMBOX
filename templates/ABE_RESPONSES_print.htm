@@ -1,0 +1,192 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel ABE_RESPONSES print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN ABE_RES_UID_fieldheadercolumn}
+			<th class="{$ABE_RES_UID_class}" {$ABE_RES_UID_style}  data-field="ABE_RES_UID">
+				{$label ABE_RESPONSES ABE_RES_UID}
+			</th>
+			{END ABE_RES_UID_fieldheadercolumn}
+			{BEGIN ABE_REQ_UID_fieldheadercolumn}
+			<th class="{$ABE_REQ_UID_class}" {$ABE_REQ_UID_style}  data-field="ABE_REQ_UID">
+				{$label ABE_RESPONSES ABE_REQ_UID}
+			</th>
+			{END ABE_REQ_UID_fieldheadercolumn}
+			{BEGIN ABE_RES_CLIENT_IP_fieldheadercolumn}
+			<th class="{$ABE_RES_CLIENT_IP_class}" {$ABE_RES_CLIENT_IP_style}  data-field="ABE_RES_CLIENT_IP">
+				{$label ABE_RESPONSES ABE_RES_CLIENT_IP}
+			</th>
+			{END ABE_RES_CLIENT_IP_fieldheadercolumn}
+			{BEGIN ABE_RES_DATA_fieldheadercolumn}
+			<th class="{$ABE_RES_DATA_class}" {$ABE_RES_DATA_style}  data-field="ABE_RES_DATA">
+				{$label ABE_RESPONSES ABE_RES_DATA}
+			</th>
+			{END ABE_RES_DATA_fieldheadercolumn}
+			{BEGIN ABE_RES_DATE_fieldheadercolumn}
+			<th class="{$ABE_RES_DATE_class}" {$ABE_RES_DATE_style}  data-field="ABE_RES_DATE">
+				{$label ABE_RESPONSES ABE_RES_DATE}
+			</th>
+			{END ABE_RES_DATE_fieldheadercolumn}
+			{BEGIN ABE_RES_STATUS_fieldheadercolumn}
+			<th class="{$ABE_RES_STATUS_class}" {$ABE_RES_STATUS_style}  data-field="ABE_RES_STATUS">
+				{$label ABE_RESPONSES ABE_RES_STATUS}
+			</th>
+			{END ABE_RES_STATUS_fieldheadercolumn}
+			{BEGIN ABE_RES_MESSAGE_fieldheadercolumn}
+			<th class="{$ABE_RES_MESSAGE_class}" {$ABE_RES_MESSAGE_style}  data-field="ABE_RES_MESSAGE">
+				{$label ABE_RESPONSES ABE_RES_MESSAGE}
+			</th>
+			{END ABE_RES_MESSAGE_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN ABE_RES_UID_fieldcolumn}
+			<td  class="{$ABE_RES_UID_class}" {$ABE_RES_UID_style} {$recordattrs}>
+				{$ABE_RES_UID_value}
+			</td>
+			{END ABE_RES_UID_fieldcolumn}
+			{BEGIN ABE_REQ_UID_fieldcolumn}
+			<td  class="{$ABE_REQ_UID_class}" {$ABE_REQ_UID_style} {$recordattrs}>
+				{$ABE_REQ_UID_value}
+			</td>
+			{END ABE_REQ_UID_fieldcolumn}
+			{BEGIN ABE_RES_CLIENT_IP_fieldcolumn}
+			<td  class="{$ABE_RES_CLIENT_IP_class}" {$ABE_RES_CLIENT_IP_style} {$recordattrs}>
+				{$ABE_RES_CLIENT_IP_value}
+			</td>
+			{END ABE_RES_CLIENT_IP_fieldcolumn}
+			{BEGIN ABE_RES_DATA_fieldcolumn}
+			<td  class="{$ABE_RES_DATA_class}" {$ABE_RES_DATA_style} {$recordattrs}>
+				{$ABE_RES_DATA_value}
+			</td>
+			{END ABE_RES_DATA_fieldcolumn}
+			{BEGIN ABE_RES_DATE_fieldcolumn}
+			<td  class="{$ABE_RES_DATE_class}" {$ABE_RES_DATE_style} {$recordattrs}>
+				{$ABE_RES_DATE_value}
+			</td>
+			{END ABE_RES_DATE_fieldcolumn}
+			{BEGIN ABE_RES_STATUS_fieldcolumn}
+			<td  class="{$ABE_RES_STATUS_class}" {$ABE_RES_STATUS_style} {$recordattrs}>
+				{$ABE_RES_STATUS_value}
+			</td>
+			{END ABE_RES_STATUS_fieldcolumn}
+			{BEGIN ABE_RES_MESSAGE_fieldcolumn}
+			<td  class="{$ABE_RES_MESSAGE_class}" {$ABE_RES_MESSAGE_style} {$recordattrs}>
+				{$ABE_RES_MESSAGE_value}
+			</td>
+			{END ABE_RES_MESSAGE_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

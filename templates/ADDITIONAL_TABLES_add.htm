@@ -1,0 +1,468 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel ADDITIONAL_TABLES add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN ADD_TAB_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_UID}" data-fieldname="ADD_TAB_UID" data-signal-error-for="ADD_TAB_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_UID}">
+		{BEGIN ADD_TAB_UID_label}{$label ADDITIONAL_TABLES ADD_TAB_UID}{END ADD_TAB_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_UID">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_UID_fieldblock}
+
+			{BEGIN ADD_TAB_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_NAME}" data-fieldname="ADD_TAB_NAME" data-signal-error-for="ADD_TAB_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_NAME}">
+		{BEGIN ADD_TAB_NAME_label}{$label ADDITIONAL_TABLES ADD_TAB_NAME}{END ADD_TAB_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_NAME">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_NAME_fieldblock}
+
+			{BEGIN ADD_TAB_CLASS_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_CLASS_NAME}" data-fieldname="ADD_TAB_CLASS_NAME" data-signal-error-for="ADD_TAB_CLASS_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_CLASS_NAME}">
+		{BEGIN ADD_TAB_CLASS_NAME_label}{$label ADDITIONAL_TABLES ADD_TAB_CLASS_NAME}{END ADD_TAB_CLASS_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_CLASS_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_CLASS_NAME">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_CLASS_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_CLASS_NAME_fieldblock}
+
+			{BEGIN ADD_TAB_DESCRIPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_DESCRIPTION}" data-fieldname="ADD_TAB_DESCRIPTION" data-signal-error-for="ADD_TAB_DESCRIPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_DESCRIPTION}">
+		{BEGIN ADD_TAB_DESCRIPTION_label}{$label ADDITIONAL_TABLES ADD_TAB_DESCRIPTION}{END ADD_TAB_DESCRIPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_DESCRIPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_DESCRIPTION">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_DESCRIPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_DESCRIPTION_fieldblock}
+
+			{BEGIN ADD_TAB_SDW_LOG_INSERT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_SDW_LOG_INSERT}" data-fieldname="ADD_TAB_SDW_LOG_INSERT" data-signal-error-for="ADD_TAB_SDW_LOG_INSERT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_SDW_LOG_INSERT}">
+		{BEGIN ADD_TAB_SDW_LOG_INSERT_label}{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_INSERT}{END ADD_TAB_SDW_LOG_INSERT_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_SDW_LOG_INSERT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_SDW_LOG_INSERT">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_SDW_LOG_INSERT}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_SDW_LOG_INSERT_fieldblock}
+
+			{BEGIN ADD_TAB_SDW_LOG_UPDATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_SDW_LOG_UPDATE}" data-fieldname="ADD_TAB_SDW_LOG_UPDATE" data-signal-error-for="ADD_TAB_SDW_LOG_UPDATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_SDW_LOG_UPDATE}">
+		{BEGIN ADD_TAB_SDW_LOG_UPDATE_label}{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_UPDATE}{END ADD_TAB_SDW_LOG_UPDATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_SDW_LOG_UPDATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_SDW_LOG_UPDATE">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_SDW_LOG_UPDATE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_SDW_LOG_UPDATE_fieldblock}
+
+			{BEGIN ADD_TAB_SDW_LOG_DELETE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_SDW_LOG_DELETE}" data-fieldname="ADD_TAB_SDW_LOG_DELETE" data-signal-error-for="ADD_TAB_SDW_LOG_DELETE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_SDW_LOG_DELETE}">
+		{BEGIN ADD_TAB_SDW_LOG_DELETE_label}{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_DELETE}{END ADD_TAB_SDW_LOG_DELETE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_SDW_LOG_DELETE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_SDW_LOG_DELETE">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_SDW_LOG_DELETE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_SDW_LOG_DELETE_fieldblock}
+
+			{BEGIN ADD_TAB_SDW_LOG_SELECT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_SDW_LOG_SELECT}" data-fieldname="ADD_TAB_SDW_LOG_SELECT" data-signal-error-for="ADD_TAB_SDW_LOG_SELECT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_SDW_LOG_SELECT}">
+		{BEGIN ADD_TAB_SDW_LOG_SELECT_label}{$label ADDITIONAL_TABLES ADD_TAB_SDW_LOG_SELECT}{END ADD_TAB_SDW_LOG_SELECT_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_SDW_LOG_SELECT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_SDW_LOG_SELECT">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_SDW_LOG_SELECT}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_SDW_LOG_SELECT_fieldblock}
+
+			{BEGIN ADD_TAB_SDW_MAX_LENGTH_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_SDW_MAX_LENGTH}" data-fieldname="ADD_TAB_SDW_MAX_LENGTH" data-signal-error-for="ADD_TAB_SDW_MAX_LENGTH{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_SDW_MAX_LENGTH}">
+		{BEGIN ADD_TAB_SDW_MAX_LENGTH_label}{$label ADDITIONAL_TABLES ADD_TAB_SDW_MAX_LENGTH}{END ADD_TAB_SDW_MAX_LENGTH_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_SDW_MAX_LENGTH_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_SDW_MAX_LENGTH">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_SDW_MAX_LENGTH}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_SDW_MAX_LENGTH_fieldblock}
+
+			{BEGIN ADD_TAB_SDW_AUTO_DELETE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_SDW_AUTO_DELETE}" data-fieldname="ADD_TAB_SDW_AUTO_DELETE" data-signal-error-for="ADD_TAB_SDW_AUTO_DELETE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_SDW_AUTO_DELETE}">
+		{BEGIN ADD_TAB_SDW_AUTO_DELETE_label}{$label ADDITIONAL_TABLES ADD_TAB_SDW_AUTO_DELETE}{END ADD_TAB_SDW_AUTO_DELETE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_SDW_AUTO_DELETE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_SDW_AUTO_DELETE">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_SDW_AUTO_DELETE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_SDW_AUTO_DELETE_fieldblock}
+
+			{BEGIN ADD_TAB_PLG_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_PLG_UID}" data-fieldname="ADD_TAB_PLG_UID" data-signal-error-for="ADD_TAB_PLG_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_PLG_UID}">
+		{BEGIN ADD_TAB_PLG_UID_label}{$label ADDITIONAL_TABLES ADD_TAB_PLG_UID}{END ADD_TAB_PLG_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_PLG_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_PLG_UID">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_PLG_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_PLG_UID_fieldblock}
+
+			{BEGIN DBS_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DBS_UID}" data-fieldname="DBS_UID" data-signal-error-for="DBS_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DBS_UID}">
+		{BEGIN DBS_UID_label}{$label ADDITIONAL_TABLES DBS_UID}{END DBS_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DBS_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DBS_UID">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES DBS_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DBS_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label ADDITIONAL_TABLES PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN ADD_TAB_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_TYPE}" data-fieldname="ADD_TAB_TYPE" data-signal-error-for="ADD_TAB_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_TYPE}">
+		{BEGIN ADD_TAB_TYPE_label}{$label ADDITIONAL_TABLES ADD_TAB_TYPE}{END ADD_TAB_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_TYPE">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_TYPE_fieldblock}
+
+			{BEGIN ADD_TAB_GRID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_GRID}" data-fieldname="ADD_TAB_GRID" data-signal-error-for="ADD_TAB_GRID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_GRID}">
+		{BEGIN ADD_TAB_GRID_label}{$label ADDITIONAL_TABLES ADD_TAB_GRID}{END ADD_TAB_GRID_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_GRID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_GRID">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_GRID}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_GRID_fieldblock}
+
+			{BEGIN ADD_TAB_TAG_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ADD_TAB_TAG}" data-fieldname="ADD_TAB_TAG" data-signal-error-for="ADD_TAB_TAG{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ADD_TAB_TAG}">
+		{BEGIN ADD_TAB_TAG_label}{$label ADDITIONAL_TABLES ADD_TAB_TAG}{END ADD_TAB_TAG_label}
+	</label>
+	<div class="col-md-6" >
+		{$ADD_TAB_TAG_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ADD_TAB_TAG">
+		<div class="text-muted" >
+		{$tooltip ADDITIONAL_TABLES ADD_TAB_TAG}
+		</div>
+	</div>
+</div>
+</div>
+{END ADD_TAB_TAG_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

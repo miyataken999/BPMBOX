@@ -1,0 +1,262 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel RBAC_AUTHENTICATION_SOURCE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN AUTH_SOURCE_UID_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_UID_class}" {$AUTH_SOURCE_UID_style}  data-field="AUTH_SOURCE_UID">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_UID}
+			</th>
+			{END AUTH_SOURCE_UID_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_NAME_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_NAME_class}" {$AUTH_SOURCE_NAME_style}  data-field="AUTH_SOURCE_NAME">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_NAME}
+			</th>
+			{END AUTH_SOURCE_NAME_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_PROVIDER_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_PROVIDER_class}" {$AUTH_SOURCE_PROVIDER_style}  data-field="AUTH_SOURCE_PROVIDER">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PROVIDER}
+			</th>
+			{END AUTH_SOURCE_PROVIDER_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_SERVER_NAME_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_SERVER_NAME_class}" {$AUTH_SOURCE_SERVER_NAME_style}  data-field="AUTH_SOURCE_SERVER_NAME">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SERVER_NAME}
+			</th>
+			{END AUTH_SOURCE_SERVER_NAME_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_PORT_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_PORT_class}" {$AUTH_SOURCE_PORT_style}  data-field="AUTH_SOURCE_PORT">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PORT}
+			</th>
+			{END AUTH_SOURCE_PORT_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_ENABLED_TLS_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_ENABLED_TLS_class}" {$AUTH_SOURCE_ENABLED_TLS_style}  data-field="AUTH_SOURCE_ENABLED_TLS">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ENABLED_TLS}
+			</th>
+			{END AUTH_SOURCE_ENABLED_TLS_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_VERSION_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_VERSION_class}" {$AUTH_SOURCE_VERSION_style}  data-field="AUTH_SOURCE_VERSION">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_VERSION}
+			</th>
+			{END AUTH_SOURCE_VERSION_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_BASE_DN_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_BASE_DN_class}" {$AUTH_SOURCE_BASE_DN_style}  data-field="AUTH_SOURCE_BASE_DN">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_BASE_DN}
+			</th>
+			{END AUTH_SOURCE_BASE_DN_fieldheadercolumn}
+			{BEGIN AUTH_ANONYMOUS_fieldheadercolumn}
+			<th class="{$AUTH_ANONYMOUS_class}" {$AUTH_ANONYMOUS_style}  data-field="AUTH_ANONYMOUS">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_ANONYMOUS}
+			</th>
+			{END AUTH_ANONYMOUS_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_SEARCH_USER_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_SEARCH_USER_class}" {$AUTH_SOURCE_SEARCH_USER_style}  data-field="AUTH_SOURCE_SEARCH_USER">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_SEARCH_USER}
+			</th>
+			{END AUTH_SOURCE_SEARCH_USER_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_PASSWORD_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_PASSWORD_class}" {$AUTH_SOURCE_PASSWORD_style}  data-field="AUTH_SOURCE_PASSWORD">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_PASSWORD}
+			</th>
+			{END AUTH_SOURCE_PASSWORD_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_ATTRIBUTES_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_ATTRIBUTES_class}" {$AUTH_SOURCE_ATTRIBUTES_style}  data-field="AUTH_SOURCE_ATTRIBUTES">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_ATTRIBUTES}
+			</th>
+			{END AUTH_SOURCE_ATTRIBUTES_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_OBJECT_CLASSES_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_OBJECT_CLASSES_class}" {$AUTH_SOURCE_OBJECT_CLASSES_style}  data-field="AUTH_SOURCE_OBJECT_CLASSES">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_OBJECT_CLASSES}
+			</th>
+			{END AUTH_SOURCE_OBJECT_CLASSES_fieldheadercolumn}
+			{BEGIN AUTH_SOURCE_DATA_fieldheadercolumn}
+			<th class="{$AUTH_SOURCE_DATA_class}" {$AUTH_SOURCE_DATA_style}  data-field="AUTH_SOURCE_DATA">
+				{$label RBAC_AUTHENTICATION_SOURCE AUTH_SOURCE_DATA}
+			</th>
+			{END AUTH_SOURCE_DATA_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN AUTH_SOURCE_UID_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_UID_class}" {$AUTH_SOURCE_UID_style} {$recordattrs}>
+				{$AUTH_SOURCE_UID_value}
+			</td>
+			{END AUTH_SOURCE_UID_fieldcolumn}
+			{BEGIN AUTH_SOURCE_NAME_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_NAME_class}" {$AUTH_SOURCE_NAME_style} {$recordattrs}>
+				{$AUTH_SOURCE_NAME_value}
+			</td>
+			{END AUTH_SOURCE_NAME_fieldcolumn}
+			{BEGIN AUTH_SOURCE_PROVIDER_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_PROVIDER_class}" {$AUTH_SOURCE_PROVIDER_style} {$recordattrs}>
+				{$AUTH_SOURCE_PROVIDER_value}
+			</td>
+			{END AUTH_SOURCE_PROVIDER_fieldcolumn}
+			{BEGIN AUTH_SOURCE_SERVER_NAME_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_SERVER_NAME_class}" {$AUTH_SOURCE_SERVER_NAME_style} {$recordattrs}>
+				{$AUTH_SOURCE_SERVER_NAME_value}
+			</td>
+			{END AUTH_SOURCE_SERVER_NAME_fieldcolumn}
+			{BEGIN AUTH_SOURCE_PORT_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_PORT_class}" {$AUTH_SOURCE_PORT_style} {$recordattrs}>
+				{$AUTH_SOURCE_PORT_value}
+			</td>
+			{END AUTH_SOURCE_PORT_fieldcolumn}
+			{BEGIN AUTH_SOURCE_ENABLED_TLS_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_ENABLED_TLS_class}" {$AUTH_SOURCE_ENABLED_TLS_style} {$recordattrs}>
+				{$AUTH_SOURCE_ENABLED_TLS_value}
+			</td>
+			{END AUTH_SOURCE_ENABLED_TLS_fieldcolumn}
+			{BEGIN AUTH_SOURCE_VERSION_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_VERSION_class}" {$AUTH_SOURCE_VERSION_style} {$recordattrs}>
+				{$AUTH_SOURCE_VERSION_value}
+			</td>
+			{END AUTH_SOURCE_VERSION_fieldcolumn}
+			{BEGIN AUTH_SOURCE_BASE_DN_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_BASE_DN_class}" {$AUTH_SOURCE_BASE_DN_style} {$recordattrs}>
+				{$AUTH_SOURCE_BASE_DN_value}
+			</td>
+			{END AUTH_SOURCE_BASE_DN_fieldcolumn}
+			{BEGIN AUTH_ANONYMOUS_fieldcolumn}
+			<td  class="{$AUTH_ANONYMOUS_class}" {$AUTH_ANONYMOUS_style} {$recordattrs}>
+				{$AUTH_ANONYMOUS_value}
+			</td>
+			{END AUTH_ANONYMOUS_fieldcolumn}
+			{BEGIN AUTH_SOURCE_SEARCH_USER_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_SEARCH_USER_class}" {$AUTH_SOURCE_SEARCH_USER_style} {$recordattrs}>
+				{$AUTH_SOURCE_SEARCH_USER_value}
+			</td>
+			{END AUTH_SOURCE_SEARCH_USER_fieldcolumn}
+			{BEGIN AUTH_SOURCE_PASSWORD_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_PASSWORD_class}" {$AUTH_SOURCE_PASSWORD_style} {$recordattrs}>
+				{$AUTH_SOURCE_PASSWORD_value}
+			</td>
+			{END AUTH_SOURCE_PASSWORD_fieldcolumn}
+			{BEGIN AUTH_SOURCE_ATTRIBUTES_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_ATTRIBUTES_class}" {$AUTH_SOURCE_ATTRIBUTES_style} {$recordattrs}>
+				{$AUTH_SOURCE_ATTRIBUTES_value}
+			</td>
+			{END AUTH_SOURCE_ATTRIBUTES_fieldcolumn}
+			{BEGIN AUTH_SOURCE_OBJECT_CLASSES_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_OBJECT_CLASSES_class}" {$AUTH_SOURCE_OBJECT_CLASSES_style} {$recordattrs}>
+				{$AUTH_SOURCE_OBJECT_CLASSES_value}
+			</td>
+			{END AUTH_SOURCE_OBJECT_CLASSES_fieldcolumn}
+			{BEGIN AUTH_SOURCE_DATA_fieldcolumn}
+			<td  class="{$AUTH_SOURCE_DATA_class}" {$AUTH_SOURCE_DATA_style} {$recordattrs}>
+				{$AUTH_SOURCE_DATA_value}
+			</td>
+			{END AUTH_SOURCE_DATA_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

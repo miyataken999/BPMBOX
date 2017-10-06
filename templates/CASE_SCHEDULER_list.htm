@@ -1,0 +1,1504 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="CASE_SCHEDULER_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="CASE_SCHEDULER_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="CASE_SCHEDULER_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+	{$simpleSearchFieldCombo}
+	
+	{$simpleSearchTypeCombo}
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="CASE_SCHEDULER_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="CASE_SCHEDULER_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_UID" checked="checked" value="1" data-field="SCH_UID">
+			  <span>{$label CASE_SCHEDULER SCH_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_DEL_USER_NAME" checked="checked" value="1" data-field="SCH_DEL_USER_NAME">
+			  <span>{$label CASE_SCHEDULER SCH_DEL_USER_NAME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_DEL_USER_PASS" checked="checked" value="1" data-field="SCH_DEL_USER_PASS">
+			  <span>{$label CASE_SCHEDULER SCH_DEL_USER_PASS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_DEL_USER_UID" checked="checked" value="1" data-field="SCH_DEL_USER_UID">
+			  <span>{$label CASE_SCHEDULER SCH_DEL_USER_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_NAME" checked="checked" value="1" data-field="SCH_NAME">
+			  <span>{$label CASE_SCHEDULER SCH_NAME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PRO_UID" checked="checked" value="1" data-field="PRO_UID">
+			  <span>{$label CASE_SCHEDULER PRO_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_UID" checked="checked" value="1" data-field="TAS_UID">
+			  <span>{$label CASE_SCHEDULER TAS_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_TIME_NEXT_RUN" checked="checked" value="1" data-field="SCH_TIME_NEXT_RUN">
+			  <span>{$label CASE_SCHEDULER SCH_TIME_NEXT_RUN}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_LAST_RUN_TIME" checked="checked" value="1" data-field="SCH_LAST_RUN_TIME">
+			  <span>{$label CASE_SCHEDULER SCH_LAST_RUN_TIME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_STATE" checked="checked" value="1" data-field="SCH_STATE">
+			  <span>{$label CASE_SCHEDULER SCH_STATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_LAST_STATE" checked="checked" value="1" data-field="SCH_LAST_STATE">
+			  <span>{$label CASE_SCHEDULER SCH_LAST_STATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_USR_UID" checked="checked" value="1" data-field="USR_UID">
+			  <span>{$label CASE_SCHEDULER USR_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_OPTION" checked="checked" value="1" data-field="SCH_OPTION">
+			  <span>{$label CASE_SCHEDULER SCH_OPTION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_START_TIME" checked="checked" value="1" data-field="SCH_START_TIME">
+			  <span>{$label CASE_SCHEDULER SCH_START_TIME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_START_DATE" checked="checked" value="1" data-field="SCH_START_DATE">
+			  <span>{$label CASE_SCHEDULER SCH_START_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_DAYS_PERFORM_TASK" checked="checked" value="1" data-field="SCH_DAYS_PERFORM_TASK">
+			  <span>{$label CASE_SCHEDULER SCH_DAYS_PERFORM_TASK}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_EVERY_DAYS" checked="checked" value="1" data-field="SCH_EVERY_DAYS">
+			  <span>{$label CASE_SCHEDULER SCH_EVERY_DAYS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_WEEK_DAYS" checked="checked" value="1" data-field="SCH_WEEK_DAYS">
+			  <span>{$label CASE_SCHEDULER SCH_WEEK_DAYS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_START_DAY" checked="checked" value="1" data-field="SCH_START_DAY">
+			  <span>{$label CASE_SCHEDULER SCH_START_DAY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_MONTHS" checked="checked" value="1" data-field="SCH_MONTHS">
+			  <span>{$label CASE_SCHEDULER SCH_MONTHS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_END_DATE" checked="checked" value="1" data-field="SCH_END_DATE">
+			  <span>{$label CASE_SCHEDULER SCH_END_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_REPEAT_EVERY" checked="checked" value="1" data-field="SCH_REPEAT_EVERY">
+			  <span>{$label CASE_SCHEDULER SCH_REPEAT_EVERY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_REPEAT_UNTIL" checked="checked" value="1" data-field="SCH_REPEAT_UNTIL">
+			  <span>{$label CASE_SCHEDULER SCH_REPEAT_UNTIL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_REPEAT_STOP_IF_RUNNING" checked="checked" value="1" data-field="SCH_REPEAT_STOP_IF_RUNNING">
+			  <span>{$label CASE_SCHEDULER SCH_REPEAT_STOP_IF_RUNNING}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_SCH_EXECUTION_DATE" checked="checked" value="1" data-field="SCH_EXECUTION_DATE">
+			  <span>{$label CASE_SCHEDULER SCH_EXECUTION_DATE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_CASE_SH_PLUGIN_UID" checked="checked" value="1" data-field="CASE_SH_PLUGIN_UID">
+			  <span>{$label CASE_SCHEDULER CASE_SH_PLUGIN_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=SCH_UID]:before {
+		content: "{$label CASE_SCHEDULER SCH_UID}";
+	}
+	.bs-gridcell[data-field=SCH_DEL_USER_NAME]:before {
+		content: "{$label CASE_SCHEDULER SCH_DEL_USER_NAME}";
+	}
+	.bs-gridcell[data-field=SCH_DEL_USER_PASS]:before {
+		content: "{$label CASE_SCHEDULER SCH_DEL_USER_PASS}";
+	}
+	.bs-gridcell[data-field=SCH_DEL_USER_UID]:before {
+		content: "{$label CASE_SCHEDULER SCH_DEL_USER_UID}";
+	}
+	.bs-gridcell[data-field=SCH_NAME]:before {
+		content: "{$label CASE_SCHEDULER SCH_NAME}";
+	}
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label CASE_SCHEDULER PRO_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label CASE_SCHEDULER TAS_UID}";
+	}
+	.bs-gridcell[data-field=SCH_TIME_NEXT_RUN]:before {
+		content: "{$label CASE_SCHEDULER SCH_TIME_NEXT_RUN}";
+	}
+	.bs-gridcell[data-field=SCH_LAST_RUN_TIME]:before {
+		content: "{$label CASE_SCHEDULER SCH_LAST_RUN_TIME}";
+	}
+	.bs-gridcell[data-field=SCH_STATE]:before {
+		content: "{$label CASE_SCHEDULER SCH_STATE}";
+	}
+	.bs-gridcell[data-field=SCH_LAST_STATE]:before {
+		content: "{$label CASE_SCHEDULER SCH_LAST_STATE}";
+	}
+	.bs-gridcell[data-field=USR_UID]:before {
+		content: "{$label CASE_SCHEDULER USR_UID}";
+	}
+	.bs-gridcell[data-field=SCH_OPTION]:before {
+		content: "{$label CASE_SCHEDULER SCH_OPTION}";
+	}
+	.bs-gridcell[data-field=SCH_START_TIME]:before {
+		content: "{$label CASE_SCHEDULER SCH_START_TIME}";
+	}
+	.bs-gridcell[data-field=SCH_START_DATE]:before {
+		content: "{$label CASE_SCHEDULER SCH_START_DATE}";
+	}
+	.bs-gridcell[data-field=SCH_DAYS_PERFORM_TASK]:before {
+		content: "{$label CASE_SCHEDULER SCH_DAYS_PERFORM_TASK}";
+	}
+	.bs-gridcell[data-field=SCH_EVERY_DAYS]:before {
+		content: "{$label CASE_SCHEDULER SCH_EVERY_DAYS}";
+	}
+	.bs-gridcell[data-field=SCH_WEEK_DAYS]:before {
+		content: "{$label CASE_SCHEDULER SCH_WEEK_DAYS}";
+	}
+	.bs-gridcell[data-field=SCH_START_DAY]:before {
+		content: "{$label CASE_SCHEDULER SCH_START_DAY}";
+	}
+	.bs-gridcell[data-field=SCH_MONTHS]:before {
+		content: "{$label CASE_SCHEDULER SCH_MONTHS}";
+	}
+	.bs-gridcell[data-field=SCH_END_DATE]:before {
+		content: "{$label CASE_SCHEDULER SCH_END_DATE}";
+	}
+	.bs-gridcell[data-field=SCH_REPEAT_EVERY]:before {
+		content: "{$label CASE_SCHEDULER SCH_REPEAT_EVERY}";
+	}
+	.bs-gridcell[data-field=SCH_REPEAT_UNTIL]:before {
+		content: "{$label CASE_SCHEDULER SCH_REPEAT_UNTIL}";
+	}
+	.bs-gridcell[data-field=SCH_REPEAT_STOP_IF_RUNNING]:before {
+		content: "{$label CASE_SCHEDULER SCH_REPEAT_STOP_IF_RUNNING}";
+	}
+	.bs-gridcell[data-field=SCH_EXECUTION_DATE]:before {
+		content: "{$label CASE_SCHEDULER SCH_EXECUTION_DATE}";
+	}
+	.bs-gridcell[data-field=CASE_SH_PLUGIN_UID]:before {
+		content: "{$label CASE_SCHEDULER CASE_SH_PLUGIN_UID}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN SCH_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_UID_class}" data-field=SCH_UID>
+									{BEGIN SCH_UID_fieldheader}
+																				<span {$SCH_UID_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_UID}
+										</span>
+									{END SCH_UID_fieldheader}
+									</th>
+									{END SCH_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_DEL_USER_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_DEL_USER_NAME_class}" data-field=SCH_DEL_USER_NAME>
+									{BEGIN SCH_DEL_USER_NAME_fieldheader}
+																				<span {$SCH_DEL_USER_NAME_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_DEL_USER_NAME}
+										</span>
+									{END SCH_DEL_USER_NAME_fieldheader}
+									</th>
+									{END SCH_DEL_USER_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_DEL_USER_PASS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_DEL_USER_PASS_class}" data-field=SCH_DEL_USER_PASS>
+									{BEGIN SCH_DEL_USER_PASS_fieldheader}
+																				<span {$SCH_DEL_USER_PASS_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_DEL_USER_PASS}
+										</span>
+									{END SCH_DEL_USER_PASS_fieldheader}
+									</th>
+									{END SCH_DEL_USER_PASS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_DEL_USER_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_DEL_USER_UID_class}" data-field=SCH_DEL_USER_UID>
+									{BEGIN SCH_DEL_USER_UID_fieldheader}
+																				<span {$SCH_DEL_USER_UID_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_DEL_USER_UID}
+										</span>
+									{END SCH_DEL_USER_UID_fieldheader}
+									</th>
+									{END SCH_DEL_USER_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_NAME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_NAME_class}" data-field=SCH_NAME>
+									{BEGIN SCH_NAME_fieldheader}
+																				<span {$SCH_NAME_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_NAME}
+										</span>
+									{END SCH_NAME_fieldheader}
+									</th>
+									{END SCH_NAME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PRO_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PRO_UID_class}" data-field=PRO_UID>
+									{BEGIN PRO_UID_fieldheader}
+																				<span {$PRO_UID_orderlinkattrs}>
+											{$label CASE_SCHEDULER PRO_UID}
+										</span>
+									{END PRO_UID_fieldheader}
+									</th>
+									{END PRO_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_UID_class}" data-field=TAS_UID>
+									{BEGIN TAS_UID_fieldheader}
+																				<span {$TAS_UID_orderlinkattrs}>
+											{$label CASE_SCHEDULER TAS_UID}
+										</span>
+									{END TAS_UID_fieldheader}
+									</th>
+									{END TAS_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_TIME_NEXT_RUN_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_TIME_NEXT_RUN_class}" data-field=SCH_TIME_NEXT_RUN>
+									{BEGIN SCH_TIME_NEXT_RUN_fieldheader}
+																				<span {$SCH_TIME_NEXT_RUN_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_TIME_NEXT_RUN}
+										</span>
+									{END SCH_TIME_NEXT_RUN_fieldheader}
+									</th>
+									{END SCH_TIME_NEXT_RUN_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_LAST_RUN_TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_LAST_RUN_TIME_class}" data-field=SCH_LAST_RUN_TIME>
+									{BEGIN SCH_LAST_RUN_TIME_fieldheader}
+																				<span {$SCH_LAST_RUN_TIME_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_LAST_RUN_TIME}
+										</span>
+									{END SCH_LAST_RUN_TIME_fieldheader}
+									</th>
+									{END SCH_LAST_RUN_TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_STATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_STATE_class}" data-field=SCH_STATE>
+									{BEGIN SCH_STATE_fieldheader}
+																				<span {$SCH_STATE_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_STATE}
+										</span>
+									{END SCH_STATE_fieldheader}
+									</th>
+									{END SCH_STATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_LAST_STATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_LAST_STATE_class}" data-field=SCH_LAST_STATE>
+									{BEGIN SCH_LAST_STATE_fieldheader}
+																				<span {$SCH_LAST_STATE_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_LAST_STATE}
+										</span>
+									{END SCH_LAST_STATE_fieldheader}
+									</th>
+									{END SCH_LAST_STATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN USR_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$USR_UID_class}" data-field=USR_UID>
+									{BEGIN USR_UID_fieldheader}
+																				<span {$USR_UID_orderlinkattrs}>
+											{$label CASE_SCHEDULER USR_UID}
+										</span>
+									{END USR_UID_fieldheader}
+									</th>
+									{END USR_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_OPTION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_OPTION_class}" data-field=SCH_OPTION>
+									{BEGIN SCH_OPTION_fieldheader}
+																				<span {$SCH_OPTION_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_OPTION}
+										</span>
+									{END SCH_OPTION_fieldheader}
+									</th>
+									{END SCH_OPTION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_START_TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_START_TIME_class}" data-field=SCH_START_TIME>
+									{BEGIN SCH_START_TIME_fieldheader}
+																				<span {$SCH_START_TIME_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_START_TIME}
+										</span>
+									{END SCH_START_TIME_fieldheader}
+									</th>
+									{END SCH_START_TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_START_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_START_DATE_class}" data-field=SCH_START_DATE>
+									{BEGIN SCH_START_DATE_fieldheader}
+																				<span {$SCH_START_DATE_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_START_DATE}
+										</span>
+									{END SCH_START_DATE_fieldheader}
+									</th>
+									{END SCH_START_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_DAYS_PERFORM_TASK_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_DAYS_PERFORM_TASK_class}" data-field=SCH_DAYS_PERFORM_TASK>
+									{BEGIN SCH_DAYS_PERFORM_TASK_fieldheader}
+																				<span {$SCH_DAYS_PERFORM_TASK_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_DAYS_PERFORM_TASK}
+										</span>
+									{END SCH_DAYS_PERFORM_TASK_fieldheader}
+									</th>
+									{END SCH_DAYS_PERFORM_TASK_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_EVERY_DAYS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_EVERY_DAYS_class}" data-field=SCH_EVERY_DAYS>
+									{BEGIN SCH_EVERY_DAYS_fieldheader}
+																				<span {$SCH_EVERY_DAYS_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_EVERY_DAYS}
+										</span>
+									{END SCH_EVERY_DAYS_fieldheader}
+									</th>
+									{END SCH_EVERY_DAYS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_WEEK_DAYS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_WEEK_DAYS_class}" data-field=SCH_WEEK_DAYS>
+									{BEGIN SCH_WEEK_DAYS_fieldheader}
+																				<span {$SCH_WEEK_DAYS_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_WEEK_DAYS}
+										</span>
+									{END SCH_WEEK_DAYS_fieldheader}
+									</th>
+									{END SCH_WEEK_DAYS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_START_DAY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_START_DAY_class}" data-field=SCH_START_DAY>
+									{BEGIN SCH_START_DAY_fieldheader}
+																				<span {$SCH_START_DAY_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_START_DAY}
+										</span>
+									{END SCH_START_DAY_fieldheader}
+									</th>
+									{END SCH_START_DAY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_MONTHS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_MONTHS_class}" data-field=SCH_MONTHS>
+									{BEGIN SCH_MONTHS_fieldheader}
+																				<span {$SCH_MONTHS_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_MONTHS}
+										</span>
+									{END SCH_MONTHS_fieldheader}
+									</th>
+									{END SCH_MONTHS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_END_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_END_DATE_class}" data-field=SCH_END_DATE>
+									{BEGIN SCH_END_DATE_fieldheader}
+																				<span {$SCH_END_DATE_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_END_DATE}
+										</span>
+									{END SCH_END_DATE_fieldheader}
+									</th>
+									{END SCH_END_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_REPEAT_EVERY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_REPEAT_EVERY_class}" data-field=SCH_REPEAT_EVERY>
+									{BEGIN SCH_REPEAT_EVERY_fieldheader}
+																				<span {$SCH_REPEAT_EVERY_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_REPEAT_EVERY}
+										</span>
+									{END SCH_REPEAT_EVERY_fieldheader}
+									</th>
+									{END SCH_REPEAT_EVERY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_REPEAT_UNTIL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_REPEAT_UNTIL_class}" data-field=SCH_REPEAT_UNTIL>
+									{BEGIN SCH_REPEAT_UNTIL_fieldheader}
+																				<span {$SCH_REPEAT_UNTIL_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_REPEAT_UNTIL}
+										</span>
+									{END SCH_REPEAT_UNTIL_fieldheader}
+									</th>
+									{END SCH_REPEAT_UNTIL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_REPEAT_STOP_IF_RUNNING_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_REPEAT_STOP_IF_RUNNING_class}" data-field=SCH_REPEAT_STOP_IF_RUNNING>
+									{BEGIN SCH_REPEAT_STOP_IF_RUNNING_fieldheader}
+																				<span {$SCH_REPEAT_STOP_IF_RUNNING_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_REPEAT_STOP_IF_RUNNING}
+										</span>
+									{END SCH_REPEAT_STOP_IF_RUNNING_fieldheader}
+									</th>
+									{END SCH_REPEAT_STOP_IF_RUNNING_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_EXECUTION_DATE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_EXECUTION_DATE_class}" data-field=SCH_EXECUTION_DATE>
+									{BEGIN SCH_EXECUTION_DATE_fieldheader}
+																				<span {$SCH_EXECUTION_DATE_orderlinkattrs}>
+											{$label CASE_SCHEDULER SCH_EXECUTION_DATE}
+										</span>
+									{END SCH_EXECUTION_DATE_fieldheader}
+									</th>
+									{END SCH_EXECUTION_DATE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CASE_SH_PLUGIN_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CASE_SH_PLUGIN_UID_class}" data-field=CASE_SH_PLUGIN_UID>
+									{BEGIN CASE_SH_PLUGIN_UID_fieldheader}
+																				<span {$CASE_SH_PLUGIN_UID_orderlinkattrs}>
+											{$label CASE_SCHEDULER CASE_SH_PLUGIN_UID}
+										</span>
+									{END CASE_SH_PLUGIN_UID_fieldheader}
+									</th>
+									{END CASE_SH_PLUGIN_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN SCH_UID_fieldcolumn}
+	<td class="bs-gridcell {$SCH_UID_class}"  data-field=SCH_UID {$rowstyle} {$recordattrs}>
+		{$SCH_UID_value}
+	</td>
+{END SCH_UID_fieldcolumn}
+
+
+	{BEGIN SCH_DEL_USER_NAME_fieldcolumn}
+	<td class="bs-gridcell {$SCH_DEL_USER_NAME_class}"  data-field=SCH_DEL_USER_NAME {$rowstyle} {$recordattrs}>
+		{$SCH_DEL_USER_NAME_value}
+	</td>
+{END SCH_DEL_USER_NAME_fieldcolumn}
+
+
+	{BEGIN SCH_DEL_USER_PASS_fieldcolumn}
+	<td class="bs-gridcell {$SCH_DEL_USER_PASS_class}"  data-field=SCH_DEL_USER_PASS {$rowstyle} {$recordattrs}>
+		{$SCH_DEL_USER_PASS_value}
+	</td>
+{END SCH_DEL_USER_PASS_fieldcolumn}
+
+
+	{BEGIN SCH_DEL_USER_UID_fieldcolumn}
+	<td class="bs-gridcell {$SCH_DEL_USER_UID_class}"  data-field=SCH_DEL_USER_UID {$rowstyle} {$recordattrs}>
+		{$SCH_DEL_USER_UID_value}
+	</td>
+{END SCH_DEL_USER_UID_fieldcolumn}
+
+
+	{BEGIN SCH_NAME_fieldcolumn}
+	<td class="bs-gridcell {$SCH_NAME_class}"  data-field=SCH_NAME {$rowstyle} {$recordattrs}>
+		{$SCH_NAME_value}
+	</td>
+{END SCH_NAME_fieldcolumn}
+
+
+	{BEGIN PRO_UID_fieldcolumn}
+	<td class="bs-gridcell {$PRO_UID_class}"  data-field=PRO_UID {$rowstyle} {$recordattrs}>
+		{$PRO_UID_value}
+	</td>
+{END PRO_UID_fieldcolumn}
+
+
+	{BEGIN TAS_UID_fieldcolumn}
+	<td class="bs-gridcell {$TAS_UID_class}"  data-field=TAS_UID {$rowstyle} {$recordattrs}>
+		{$TAS_UID_value}
+	</td>
+{END TAS_UID_fieldcolumn}
+
+
+	{BEGIN SCH_TIME_NEXT_RUN_fieldcolumn}
+	<td class="bs-gridcell {$SCH_TIME_NEXT_RUN_class}"  data-field=SCH_TIME_NEXT_RUN {$rowstyle} {$recordattrs}>
+		{$SCH_TIME_NEXT_RUN_value}
+	</td>
+{END SCH_TIME_NEXT_RUN_fieldcolumn}
+
+
+	{BEGIN SCH_LAST_RUN_TIME_fieldcolumn}
+	<td class="bs-gridcell {$SCH_LAST_RUN_TIME_class}"  data-field=SCH_LAST_RUN_TIME {$rowstyle} {$recordattrs}>
+		{$SCH_LAST_RUN_TIME_value}
+	</td>
+{END SCH_LAST_RUN_TIME_fieldcolumn}
+
+
+	{BEGIN SCH_STATE_fieldcolumn}
+	<td class="bs-gridcell {$SCH_STATE_class}"  data-field=SCH_STATE {$rowstyle} {$recordattrs}>
+		{$SCH_STATE_value}
+	</td>
+{END SCH_STATE_fieldcolumn}
+
+
+	{BEGIN SCH_LAST_STATE_fieldcolumn}
+	<td class="bs-gridcell {$SCH_LAST_STATE_class}"  data-field=SCH_LAST_STATE {$rowstyle} {$recordattrs}>
+		{$SCH_LAST_STATE_value}
+	</td>
+{END SCH_LAST_STATE_fieldcolumn}
+
+
+	{BEGIN USR_UID_fieldcolumn}
+	<td class="bs-gridcell {$USR_UID_class}"  data-field=USR_UID {$rowstyle} {$recordattrs}>
+		{$USR_UID_value}
+	</td>
+{END USR_UID_fieldcolumn}
+
+
+	{BEGIN SCH_OPTION_fieldcolumn}
+	<td class="bs-gridcell {$SCH_OPTION_class}"  data-field=SCH_OPTION {$rowstyle} {$recordattrs}>
+		{$SCH_OPTION_value}
+	</td>
+{END SCH_OPTION_fieldcolumn}
+
+
+	{BEGIN SCH_START_TIME_fieldcolumn}
+	<td class="bs-gridcell {$SCH_START_TIME_class}"  data-field=SCH_START_TIME {$rowstyle} {$recordattrs}>
+		{$SCH_START_TIME_value}
+	</td>
+{END SCH_START_TIME_fieldcolumn}
+
+
+	{BEGIN SCH_START_DATE_fieldcolumn}
+	<td class="bs-gridcell {$SCH_START_DATE_class}"  data-field=SCH_START_DATE {$rowstyle} {$recordattrs}>
+		{$SCH_START_DATE_value}
+	</td>
+{END SCH_START_DATE_fieldcolumn}
+
+
+	{BEGIN SCH_DAYS_PERFORM_TASK_fieldcolumn}
+	<td class="bs-gridcell {$SCH_DAYS_PERFORM_TASK_class}"  data-field=SCH_DAYS_PERFORM_TASK {$rowstyle} {$recordattrs}>
+		{$SCH_DAYS_PERFORM_TASK_value}
+	</td>
+{END SCH_DAYS_PERFORM_TASK_fieldcolumn}
+
+
+	{BEGIN SCH_EVERY_DAYS_fieldcolumn}
+	<td class="bs-gridcell {$SCH_EVERY_DAYS_class}"  data-field=SCH_EVERY_DAYS {$rowstyle} {$recordattrs}>
+		{$SCH_EVERY_DAYS_value}
+	</td>
+{END SCH_EVERY_DAYS_fieldcolumn}
+
+
+	{BEGIN SCH_WEEK_DAYS_fieldcolumn}
+	<td class="bs-gridcell {$SCH_WEEK_DAYS_class}"  data-field=SCH_WEEK_DAYS {$rowstyle} {$recordattrs}>
+		{$SCH_WEEK_DAYS_value}
+	</td>
+{END SCH_WEEK_DAYS_fieldcolumn}
+
+
+	{BEGIN SCH_START_DAY_fieldcolumn}
+	<td class="bs-gridcell {$SCH_START_DAY_class}"  data-field=SCH_START_DAY {$rowstyle} {$recordattrs}>
+		{$SCH_START_DAY_value}
+	</td>
+{END SCH_START_DAY_fieldcolumn}
+
+
+	{BEGIN SCH_MONTHS_fieldcolumn}
+	<td class="bs-gridcell {$SCH_MONTHS_class}"  data-field=SCH_MONTHS {$rowstyle} {$recordattrs}>
+		{$SCH_MONTHS_value}
+	</td>
+{END SCH_MONTHS_fieldcolumn}
+
+
+	{BEGIN SCH_END_DATE_fieldcolumn}
+	<td class="bs-gridcell {$SCH_END_DATE_class}"  data-field=SCH_END_DATE {$rowstyle} {$recordattrs}>
+		{$SCH_END_DATE_value}
+	</td>
+{END SCH_END_DATE_fieldcolumn}
+
+
+	{BEGIN SCH_REPEAT_EVERY_fieldcolumn}
+	<td class="bs-gridcell {$SCH_REPEAT_EVERY_class}"  data-field=SCH_REPEAT_EVERY {$rowstyle} {$recordattrs}>
+		{$SCH_REPEAT_EVERY_value}
+	</td>
+{END SCH_REPEAT_EVERY_fieldcolumn}
+
+
+	{BEGIN SCH_REPEAT_UNTIL_fieldcolumn}
+	<td class="bs-gridcell {$SCH_REPEAT_UNTIL_class}"  data-field=SCH_REPEAT_UNTIL {$rowstyle} {$recordattrs}>
+		{$SCH_REPEAT_UNTIL_value}
+	</td>
+{END SCH_REPEAT_UNTIL_fieldcolumn}
+
+
+	{BEGIN SCH_REPEAT_STOP_IF_RUNNING_fieldcolumn}
+	<td class="bs-gridcell {$SCH_REPEAT_STOP_IF_RUNNING_class}"  data-field=SCH_REPEAT_STOP_IF_RUNNING {$rowstyle} {$recordattrs}>
+		{$SCH_REPEAT_STOP_IF_RUNNING_value}
+	</td>
+{END SCH_REPEAT_STOP_IF_RUNNING_fieldcolumn}
+
+
+	{BEGIN SCH_EXECUTION_DATE_fieldcolumn}
+	<td class="bs-gridcell {$SCH_EXECUTION_DATE_class}"  data-field=SCH_EXECUTION_DATE {$rowstyle} {$recordattrs}>
+		{$SCH_EXECUTION_DATE_value}
+	</td>
+{END SCH_EXECUTION_DATE_fieldcolumn}
+
+
+	{BEGIN CASE_SH_PLUGIN_UID_fieldcolumn}
+	<td class="bs-gridcell {$CASE_SH_PLUGIN_UID_class}"  data-field=CASE_SH_PLUGIN_UID {$rowstyle} {$recordattrs}>
+		{$CASE_SH_PLUGIN_UID_value}
+	</td>
+{END CASE_SH_PLUGIN_UID_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

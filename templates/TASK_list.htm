@@ -1,0 +1,2533 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >選択対象のエクスポート</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="TASK_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="TASK_export.php"  {$exportlink_attrs}>結果のエクスポート</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="TASK_import.php?{$crosstable_attrs}"  {$importlink_attrs}>インポート</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+	{$simpleSearchFieldCombo}
+	
+	{$simpleSearchTypeCombo}
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="TASK_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="TASK_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_APP_CACHE_VIEW}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsAPP_CACHE_VIEW{$id}">
+									<input type="checkbox" value="APP_CACHE_VIEW" id="printDetailsAPP_CACHE_VIEW{$id}" checked>
+									履歴一覧
+								</label>
+							</div>
+					{END print_details_APP_CACHE_VIEW}
+					{BEGIN print_details_STEP_TRIGGER}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsSTEP_TRIGGER{$id}">
+									<input type="checkbox" value="STEP_TRIGGER" id="printDetailsSTEP_TRIGGER{$id}" checked>
+									ステップトリガ
+								</label>
+							</div>
+					{END print_details_STEP_TRIGGER}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PRO_UID" checked="checked" value="1" data-field="PRO_UID">
+			  <span>{$label TASK PRO_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_UID" checked="checked" value="1" data-field="TAS_UID">
+			  <span>{$label TASK TAS_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TITLE" checked="checked" value="1" data-field="TAS_TITLE">
+			  <span>{$label TASK TAS_TITLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DESCRIPTION" checked="checked" value="1" data-field="TAS_DESCRIPTION">
+			  <span>{$label TASK TAS_DESCRIPTION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DEF_TITLE" checked="checked" value="1" data-field="TAS_DEF_TITLE">
+			  <span>{$label TASK TAS_DEF_TITLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DEF_SUBJECT_MESSAGE" checked="checked" value="1" data-field="TAS_DEF_SUBJECT_MESSAGE">
+			  <span>{$label TASK TAS_DEF_SUBJECT_MESSAGE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DEF_PROC_CODE" checked="checked" value="1" data-field="TAS_DEF_PROC_CODE">
+			  <span>{$label TASK TAS_DEF_PROC_CODE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DEF_MESSAGE" checked="checked" value="1" data-field="TAS_DEF_MESSAGE">
+			  <span>{$label TASK TAS_DEF_MESSAGE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DEF_DESCRIPTION" checked="checked" value="1" data-field="TAS_DEF_DESCRIPTION">
+			  <span>{$label TASK TAS_DEF_DESCRIPTION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TYPE" checked="checked" value="1" data-field="TAS_TYPE">
+			  <span>{$label TASK TAS_TYPE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DURATION" checked="checked" value="1" data-field="TAS_DURATION">
+			  <span>{$label TASK TAS_DURATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DELAY_TYPE" checked="checked" value="1" data-field="TAS_DELAY_TYPE">
+			  <span>{$label TASK TAS_DELAY_TYPE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TEMPORIZER" checked="checked" value="1" data-field="TAS_TEMPORIZER">
+			  <span>{$label TASK TAS_TEMPORIZER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TYPE_DAY" checked="checked" value="1" data-field="TAS_TYPE_DAY">
+			  <span>{$label TASK TAS_TYPE_DAY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TIMEUNIT" checked="checked" value="1" data-field="TAS_TIMEUNIT">
+			  <span>{$label TASK TAS_TIMEUNIT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_ALERT" checked="checked" value="1" data-field="TAS_ALERT">
+			  <span>{$label TASK TAS_ALERT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_PRIORITY_VARIABLE" checked="checked" value="1" data-field="TAS_PRIORITY_VARIABLE">
+			  <span>{$label TASK TAS_PRIORITY_VARIABLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_ASSIGN_TYPE" checked="checked" value="1" data-field="TAS_ASSIGN_TYPE">
+			  <span>{$label TASK TAS_ASSIGN_TYPE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_ASSIGN_VARIABLE" checked="checked" value="1" data-field="TAS_ASSIGN_VARIABLE">
+			  <span>{$label TASK TAS_ASSIGN_VARIABLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_GROUP_VARIABLE" checked="checked" value="1" data-field="TAS_GROUP_VARIABLE">
+			  <span>{$label TASK TAS_GROUP_VARIABLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_MI_INSTANCE_VARIABLE" checked="checked" value="1" data-field="TAS_MI_INSTANCE_VARIABLE">
+			  <span>{$label TASK TAS_MI_INSTANCE_VARIABLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_MI_COMPLETE_VARIABLE" checked="checked" value="1" data-field="TAS_MI_COMPLETE_VARIABLE">
+			  <span>{$label TASK TAS_MI_COMPLETE_VARIABLE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_ASSIGN_LOCATION" checked="checked" value="1" data-field="TAS_ASSIGN_LOCATION">
+			  <span>{$label TASK TAS_ASSIGN_LOCATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_ASSIGN_LOCATION_ADHOC" checked="checked" value="1" data-field="TAS_ASSIGN_LOCATION_ADHOC">
+			  <span>{$label TASK TAS_ASSIGN_LOCATION_ADHOC}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TRANSFER_FLY" checked="checked" value="1" data-field="TAS_TRANSFER_FLY">
+			  <span>{$label TASK TAS_TRANSFER_FLY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_LAST_ASSIGNED" checked="checked" value="1" data-field="TAS_LAST_ASSIGNED">
+			  <span>{$label TASK TAS_LAST_ASSIGNED}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_USER" checked="checked" value="1" data-field="TAS_USER">
+			  <span>{$label TASK TAS_USER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_CAN_UPLOAD" checked="checked" value="1" data-field="TAS_CAN_UPLOAD">
+			  <span>{$label TASK TAS_CAN_UPLOAD}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_VIEW_UPLOAD" checked="checked" value="1" data-field="TAS_VIEW_UPLOAD">
+			  <span>{$label TASK TAS_VIEW_UPLOAD}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_VIEW_ADDITIONAL_DOCUMENTATION" checked="checked" value="1" data-field="TAS_VIEW_ADDITIONAL_DOCUMENTATION">
+			  <span>{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_CAN_CANCEL" checked="checked" value="1" data-field="TAS_CAN_CANCEL">
+			  <span>{$label TASK TAS_CAN_CANCEL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_OWNER_APP" checked="checked" value="1" data-field="TAS_OWNER_APP">
+			  <span>{$label TASK TAS_OWNER_APP}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_STG_UID" checked="checked" value="1" data-field="STG_UID">
+			  <span>{$label TASK STG_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_CAN_PAUSE" checked="checked" value="1" data-field="TAS_CAN_PAUSE">
+			  <span>{$label TASK TAS_CAN_PAUSE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_CAN_SEND_MESSAGE" checked="checked" value="1" data-field="TAS_CAN_SEND_MESSAGE">
+			  <span>{$label TASK TAS_CAN_SEND_MESSAGE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_CAN_DELETE_DOCS" checked="checked" value="1" data-field="TAS_CAN_DELETE_DOCS">
+			  <span>{$label TASK TAS_CAN_DELETE_DOCS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SELF_SERVICE" checked="checked" value="1" data-field="TAS_SELF_SERVICE">
+			  <span>{$label TASK TAS_SELF_SERVICE}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_START" checked="checked" value="1" data-field="TAS_START">
+			  <span>{$label TASK TAS_START}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_TO_LAST_USER" checked="checked" value="1" data-field="TAS_TO_LAST_USER">
+			  <span>{$label TASK TAS_TO_LAST_USER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SEND_LAST_EMAIL" checked="checked" value="1" data-field="TAS_SEND_LAST_EMAIL">
+			  <span>{$label TASK TAS_SEND_LAST_EMAIL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DERIVATION" checked="checked" value="1" data-field="TAS_DERIVATION">
+			  <span>{$label TASK TAS_DERIVATION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_POSX" checked="checked" value="1" data-field="TAS_POSX">
+			  <span>{$label TASK TAS_POSX}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_POSY" checked="checked" value="1" data-field="TAS_POSY">
+			  <span>{$label TASK TAS_POSY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_WIDTH" checked="checked" value="1" data-field="TAS_WIDTH">
+			  <span>{$label TASK TAS_WIDTH}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_HEIGHT" checked="checked" value="1" data-field="TAS_HEIGHT">
+			  <span>{$label TASK TAS_HEIGHT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_COLOR" checked="checked" value="1" data-field="TAS_COLOR">
+			  <span>{$label TASK TAS_COLOR}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_EVN_UID" checked="checked" value="1" data-field="TAS_EVN_UID">
+			  <span>{$label TASK TAS_EVN_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_BOUNDARY" checked="checked" value="1" data-field="TAS_BOUNDARY">
+			  <span>{$label TASK TAS_BOUNDARY}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_DERIVATION_SCREEN_TPL" checked="checked" value="1" data-field="TAS_DERIVATION_SCREEN_TPL">
+			  <span>{$label TASK TAS_DERIVATION_SCREEN_TPL}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SELFSERVICE_TIMEOUT" checked="checked" value="1" data-field="TAS_SELFSERVICE_TIMEOUT">
+			  <span>{$label TASK TAS_SELFSERVICE_TIMEOUT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SELFSERVICE_TIME" checked="checked" value="1" data-field="TAS_SELFSERVICE_TIME">
+			  <span>{$label TASK TAS_SELFSERVICE_TIME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SELFSERVICE_TIME_UNIT" checked="checked" value="1" data-field="TAS_SELFSERVICE_TIME_UNIT">
+			  <span>{$label TASK TAS_SELFSERVICE_TIME_UNIT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SELFSERVICE_TRIGGER_UID" checked="checked" value="1" data-field="TAS_SELFSERVICE_TRIGGER_UID">
+			  <span>{$label TASK TAS_SELFSERVICE_TRIGGER_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_SELFSERVICE_EXECUTION" checked="checked" value="1" data-field="TAS_SELFSERVICE_EXECUTION">
+			  <span>{$label TASK TAS_SELFSERVICE_EXECUTION}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TAS_NOT_EMAIL_FROM_FORMAT" checked="checked" value="1" data-field="TAS_NOT_EMAIL_FROM_FORMAT">
+			  <span>{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=PRO_UID]:before {
+		content: "{$label TASK PRO_UID}";
+	}
+	.bs-gridcell[data-field=TAS_UID]:before {
+		content: "{$label TASK TAS_UID}";
+	}
+	.bs-gridcell[data-field=TAS_TITLE]:before {
+		content: "{$label TASK TAS_TITLE}";
+	}
+	.bs-gridcell[data-field=TAS_DESCRIPTION]:before {
+		content: "{$label TASK TAS_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_TITLE]:before {
+		content: "{$label TASK TAS_DEF_TITLE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_SUBJECT_MESSAGE]:before {
+		content: "{$label TASK TAS_DEF_SUBJECT_MESSAGE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_PROC_CODE]:before {
+		content: "{$label TASK TAS_DEF_PROC_CODE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_MESSAGE]:before {
+		content: "{$label TASK TAS_DEF_MESSAGE}";
+	}
+	.bs-gridcell[data-field=TAS_DEF_DESCRIPTION]:before {
+		content: "{$label TASK TAS_DEF_DESCRIPTION}";
+	}
+	.bs-gridcell[data-field=TAS_TYPE]:before {
+		content: "{$label TASK TAS_TYPE}";
+	}
+	.bs-gridcell[data-field=TAS_DURATION]:before {
+		content: "{$label TASK TAS_DURATION}";
+	}
+	.bs-gridcell[data-field=TAS_DELAY_TYPE]:before {
+		content: "{$label TASK TAS_DELAY_TYPE}";
+	}
+	.bs-gridcell[data-field=TAS_TEMPORIZER]:before {
+		content: "{$label TASK TAS_TEMPORIZER}";
+	}
+	.bs-gridcell[data-field=TAS_TYPE_DAY]:before {
+		content: "{$label TASK TAS_TYPE_DAY}";
+	}
+	.bs-gridcell[data-field=TAS_TIMEUNIT]:before {
+		content: "{$label TASK TAS_TIMEUNIT}";
+	}
+	.bs-gridcell[data-field=TAS_ALERT]:before {
+		content: "{$label TASK TAS_ALERT}";
+	}
+	.bs-gridcell[data-field=TAS_PRIORITY_VARIABLE]:before {
+		content: "{$label TASK TAS_PRIORITY_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_TYPE]:before {
+		content: "{$label TASK TAS_ASSIGN_TYPE}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_VARIABLE]:before {
+		content: "{$label TASK TAS_ASSIGN_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_GROUP_VARIABLE]:before {
+		content: "{$label TASK TAS_GROUP_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_MI_INSTANCE_VARIABLE]:before {
+		content: "{$label TASK TAS_MI_INSTANCE_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_MI_COMPLETE_VARIABLE]:before {
+		content: "{$label TASK TAS_MI_COMPLETE_VARIABLE}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_LOCATION]:before {
+		content: "{$label TASK TAS_ASSIGN_LOCATION}";
+	}
+	.bs-gridcell[data-field=TAS_ASSIGN_LOCATION_ADHOC]:before {
+		content: "{$label TASK TAS_ASSIGN_LOCATION_ADHOC}";
+	}
+	.bs-gridcell[data-field=TAS_TRANSFER_FLY]:before {
+		content: "{$label TASK TAS_TRANSFER_FLY}";
+	}
+	.bs-gridcell[data-field=TAS_LAST_ASSIGNED]:before {
+		content: "{$label TASK TAS_LAST_ASSIGNED}";
+	}
+	.bs-gridcell[data-field=TAS_USER]:before {
+		content: "{$label TASK TAS_USER}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_UPLOAD]:before {
+		content: "{$label TASK TAS_CAN_UPLOAD}";
+	}
+	.bs-gridcell[data-field=TAS_VIEW_UPLOAD]:before {
+		content: "{$label TASK TAS_VIEW_UPLOAD}";
+	}
+	.bs-gridcell[data-field=TAS_VIEW_ADDITIONAL_DOCUMENTATION]:before {
+		content: "{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_CANCEL]:before {
+		content: "{$label TASK TAS_CAN_CANCEL}";
+	}
+	.bs-gridcell[data-field=TAS_OWNER_APP]:before {
+		content: "{$label TASK TAS_OWNER_APP}";
+	}
+	.bs-gridcell[data-field=STG_UID]:before {
+		content: "{$label TASK STG_UID}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_PAUSE]:before {
+		content: "{$label TASK TAS_CAN_PAUSE}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_SEND_MESSAGE]:before {
+		content: "{$label TASK TAS_CAN_SEND_MESSAGE}";
+	}
+	.bs-gridcell[data-field=TAS_CAN_DELETE_DOCS]:before {
+		content: "{$label TASK TAS_CAN_DELETE_DOCS}";
+	}
+	.bs-gridcell[data-field=TAS_SELF_SERVICE]:before {
+		content: "{$label TASK TAS_SELF_SERVICE}";
+	}
+	.bs-gridcell[data-field=TAS_START]:before {
+		content: "{$label TASK TAS_START}";
+	}
+	.bs-gridcell[data-field=TAS_TO_LAST_USER]:before {
+		content: "{$label TASK TAS_TO_LAST_USER}";
+	}
+	.bs-gridcell[data-field=TAS_SEND_LAST_EMAIL]:before {
+		content: "{$label TASK TAS_SEND_LAST_EMAIL}";
+	}
+	.bs-gridcell[data-field=TAS_DERIVATION]:before {
+		content: "{$label TASK TAS_DERIVATION}";
+	}
+	.bs-gridcell[data-field=TAS_POSX]:before {
+		content: "{$label TASK TAS_POSX}";
+	}
+	.bs-gridcell[data-field=TAS_POSY]:before {
+		content: "{$label TASK TAS_POSY}";
+	}
+	.bs-gridcell[data-field=TAS_WIDTH]:before {
+		content: "{$label TASK TAS_WIDTH}";
+	}
+	.bs-gridcell[data-field=TAS_HEIGHT]:before {
+		content: "{$label TASK TAS_HEIGHT}";
+	}
+	.bs-gridcell[data-field=TAS_COLOR]:before {
+		content: "{$label TASK TAS_COLOR}";
+	}
+	.bs-gridcell[data-field=TAS_EVN_UID]:before {
+		content: "{$label TASK TAS_EVN_UID}";
+	}
+	.bs-gridcell[data-field=TAS_BOUNDARY]:before {
+		content: "{$label TASK TAS_BOUNDARY}";
+	}
+	.bs-gridcell[data-field=TAS_DERIVATION_SCREEN_TPL]:before {
+		content: "{$label TASK TAS_DERIVATION_SCREEN_TPL}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TIMEOUT]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TIMEOUT}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TIME]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TIME}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TIME_UNIT]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TIME_UNIT}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_TRIGGER_UID]:before {
+		content: "{$label TASK TAS_SELFSERVICE_TRIGGER_UID}";
+	}
+	.bs-gridcell[data-field=TAS_SELFSERVICE_EXECUTION]:before {
+		content: "{$label TASK TAS_SELFSERVICE_EXECUTION}";
+	}
+	.bs-gridcell[data-field=TAS_NOT_EMAIL_FROM_FORMAT]:before {
+		content: "{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN TASK_dtable_column}
+									<th >&nbsp;</th>
+									{END TASK_dtable_column}
+									
+									{BEGIN PRO_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PRO_UID_class}" data-field=PRO_UID>
+									{BEGIN PRO_UID_fieldheader}
+																				<span {$PRO_UID_orderlinkattrs}>
+											{$label TASK PRO_UID}
+										</span>
+									{END PRO_UID_fieldheader}
+									</th>
+									{END PRO_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_UID_class}" data-field=TAS_UID>
+									{BEGIN TAS_UID_fieldheader}
+																				<span {$TAS_UID_orderlinkattrs}>
+											{$label TASK TAS_UID}
+										</span>
+									{END TAS_UID_fieldheader}
+									</th>
+									{END TAS_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TITLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TITLE_class}" data-field=TAS_TITLE>
+									{BEGIN TAS_TITLE_fieldheader}
+																				<span {$TAS_TITLE_orderlinkattrs}>
+											{$label TASK TAS_TITLE}
+										</span>
+									{END TAS_TITLE_fieldheader}
+									</th>
+									{END TAS_TITLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DESCRIPTION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DESCRIPTION_class}" data-field=TAS_DESCRIPTION>
+									{BEGIN TAS_DESCRIPTION_fieldheader}
+																				<span {$TAS_DESCRIPTION_orderlinkattrs}>
+											{$label TASK TAS_DESCRIPTION}
+										</span>
+									{END TAS_DESCRIPTION_fieldheader}
+									</th>
+									{END TAS_DESCRIPTION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DEF_TITLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DEF_TITLE_class}" data-field=TAS_DEF_TITLE>
+									{BEGIN TAS_DEF_TITLE_fieldheader}
+																				<span {$TAS_DEF_TITLE_orderlinkattrs}>
+											{$label TASK TAS_DEF_TITLE}
+										</span>
+									{END TAS_DEF_TITLE_fieldheader}
+									</th>
+									{END TAS_DEF_TITLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DEF_SUBJECT_MESSAGE_class}" data-field=TAS_DEF_SUBJECT_MESSAGE>
+									{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldheader}
+																				<span {$TAS_DEF_SUBJECT_MESSAGE_orderlinkattrs}>
+											{$label TASK TAS_DEF_SUBJECT_MESSAGE}
+										</span>
+									{END TAS_DEF_SUBJECT_MESSAGE_fieldheader}
+									</th>
+									{END TAS_DEF_SUBJECT_MESSAGE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DEF_PROC_CODE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DEF_PROC_CODE_class}" data-field=TAS_DEF_PROC_CODE>
+									{BEGIN TAS_DEF_PROC_CODE_fieldheader}
+																				<span {$TAS_DEF_PROC_CODE_orderlinkattrs}>
+											{$label TASK TAS_DEF_PROC_CODE}
+										</span>
+									{END TAS_DEF_PROC_CODE_fieldheader}
+									</th>
+									{END TAS_DEF_PROC_CODE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DEF_MESSAGE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DEF_MESSAGE_class}" data-field=TAS_DEF_MESSAGE>
+									{BEGIN TAS_DEF_MESSAGE_fieldheader}
+																				<span {$TAS_DEF_MESSAGE_orderlinkattrs}>
+											{$label TASK TAS_DEF_MESSAGE}
+										</span>
+									{END TAS_DEF_MESSAGE_fieldheader}
+									</th>
+									{END TAS_DEF_MESSAGE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DEF_DESCRIPTION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DEF_DESCRIPTION_class}" data-field=TAS_DEF_DESCRIPTION>
+									{BEGIN TAS_DEF_DESCRIPTION_fieldheader}
+																				<span {$TAS_DEF_DESCRIPTION_orderlinkattrs}>
+											{$label TASK TAS_DEF_DESCRIPTION}
+										</span>
+									{END TAS_DEF_DESCRIPTION_fieldheader}
+									</th>
+									{END TAS_DEF_DESCRIPTION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TYPE_class}" data-field=TAS_TYPE>
+									{BEGIN TAS_TYPE_fieldheader}
+																				<span {$TAS_TYPE_orderlinkattrs}>
+											{$label TASK TAS_TYPE}
+										</span>
+									{END TAS_TYPE_fieldheader}
+									</th>
+									{END TAS_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DURATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DURATION_class}" data-field=TAS_DURATION>
+									{BEGIN TAS_DURATION_fieldheader}
+																				<span {$TAS_DURATION_orderlinkattrs}>
+											{$label TASK TAS_DURATION}
+										</span>
+									{END TAS_DURATION_fieldheader}
+									</th>
+									{END TAS_DURATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DELAY_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DELAY_TYPE_class}" data-field=TAS_DELAY_TYPE>
+									{BEGIN TAS_DELAY_TYPE_fieldheader}
+																				<span {$TAS_DELAY_TYPE_orderlinkattrs}>
+											{$label TASK TAS_DELAY_TYPE}
+										</span>
+									{END TAS_DELAY_TYPE_fieldheader}
+									</th>
+									{END TAS_DELAY_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TEMPORIZER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TEMPORIZER_class}" data-field=TAS_TEMPORIZER>
+									{BEGIN TAS_TEMPORIZER_fieldheader}
+																				<span {$TAS_TEMPORIZER_orderlinkattrs}>
+											{$label TASK TAS_TEMPORIZER}
+										</span>
+									{END TAS_TEMPORIZER_fieldheader}
+									</th>
+									{END TAS_TEMPORIZER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TYPE_DAY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TYPE_DAY_class}" data-field=TAS_TYPE_DAY>
+									{BEGIN TAS_TYPE_DAY_fieldheader}
+																				<span {$TAS_TYPE_DAY_orderlinkattrs}>
+											{$label TASK TAS_TYPE_DAY}
+										</span>
+									{END TAS_TYPE_DAY_fieldheader}
+									</th>
+									{END TAS_TYPE_DAY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TIMEUNIT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TIMEUNIT_class}" data-field=TAS_TIMEUNIT>
+									{BEGIN TAS_TIMEUNIT_fieldheader}
+																				<span {$TAS_TIMEUNIT_orderlinkattrs}>
+											{$label TASK TAS_TIMEUNIT}
+										</span>
+									{END TAS_TIMEUNIT_fieldheader}
+									</th>
+									{END TAS_TIMEUNIT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_ALERT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_ALERT_class}" data-field=TAS_ALERT>
+									{BEGIN TAS_ALERT_fieldheader}
+																				<span {$TAS_ALERT_orderlinkattrs}>
+											{$label TASK TAS_ALERT}
+										</span>
+									{END TAS_ALERT_fieldheader}
+									</th>
+									{END TAS_ALERT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_PRIORITY_VARIABLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_PRIORITY_VARIABLE_class}" data-field=TAS_PRIORITY_VARIABLE>
+									{BEGIN TAS_PRIORITY_VARIABLE_fieldheader}
+																				<span {$TAS_PRIORITY_VARIABLE_orderlinkattrs}>
+											{$label TASK TAS_PRIORITY_VARIABLE}
+										</span>
+									{END TAS_PRIORITY_VARIABLE_fieldheader}
+									</th>
+									{END TAS_PRIORITY_VARIABLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_ASSIGN_TYPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_ASSIGN_TYPE_class}" data-field=TAS_ASSIGN_TYPE>
+									{BEGIN TAS_ASSIGN_TYPE_fieldheader}
+																				<span {$TAS_ASSIGN_TYPE_orderlinkattrs}>
+											{$label TASK TAS_ASSIGN_TYPE}
+										</span>
+									{END TAS_ASSIGN_TYPE_fieldheader}
+									</th>
+									{END TAS_ASSIGN_TYPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_ASSIGN_VARIABLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_ASSIGN_VARIABLE_class}" data-field=TAS_ASSIGN_VARIABLE>
+									{BEGIN TAS_ASSIGN_VARIABLE_fieldheader}
+																				<span {$TAS_ASSIGN_VARIABLE_orderlinkattrs}>
+											{$label TASK TAS_ASSIGN_VARIABLE}
+										</span>
+									{END TAS_ASSIGN_VARIABLE_fieldheader}
+									</th>
+									{END TAS_ASSIGN_VARIABLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_GROUP_VARIABLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_GROUP_VARIABLE_class}" data-field=TAS_GROUP_VARIABLE>
+									{BEGIN TAS_GROUP_VARIABLE_fieldheader}
+																				<span {$TAS_GROUP_VARIABLE_orderlinkattrs}>
+											{$label TASK TAS_GROUP_VARIABLE}
+										</span>
+									{END TAS_GROUP_VARIABLE_fieldheader}
+									</th>
+									{END TAS_GROUP_VARIABLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_MI_INSTANCE_VARIABLE_class}" data-field=TAS_MI_INSTANCE_VARIABLE>
+									{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldheader}
+																				<span {$TAS_MI_INSTANCE_VARIABLE_orderlinkattrs}>
+											{$label TASK TAS_MI_INSTANCE_VARIABLE}
+										</span>
+									{END TAS_MI_INSTANCE_VARIABLE_fieldheader}
+									</th>
+									{END TAS_MI_INSTANCE_VARIABLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_MI_COMPLETE_VARIABLE_class}" data-field=TAS_MI_COMPLETE_VARIABLE>
+									{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldheader}
+																				<span {$TAS_MI_COMPLETE_VARIABLE_orderlinkattrs}>
+											{$label TASK TAS_MI_COMPLETE_VARIABLE}
+										</span>
+									{END TAS_MI_COMPLETE_VARIABLE_fieldheader}
+									</th>
+									{END TAS_MI_COMPLETE_VARIABLE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_ASSIGN_LOCATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_ASSIGN_LOCATION_class}" data-field=TAS_ASSIGN_LOCATION>
+									{BEGIN TAS_ASSIGN_LOCATION_fieldheader}
+																				<span {$TAS_ASSIGN_LOCATION_orderlinkattrs}>
+											{$label TASK TAS_ASSIGN_LOCATION}
+										</span>
+									{END TAS_ASSIGN_LOCATION_fieldheader}
+									</th>
+									{END TAS_ASSIGN_LOCATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_ASSIGN_LOCATION_ADHOC_class}" data-field=TAS_ASSIGN_LOCATION_ADHOC>
+									{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldheader}
+																				<span {$TAS_ASSIGN_LOCATION_ADHOC_orderlinkattrs}>
+											{$label TASK TAS_ASSIGN_LOCATION_ADHOC}
+										</span>
+									{END TAS_ASSIGN_LOCATION_ADHOC_fieldheader}
+									</th>
+									{END TAS_ASSIGN_LOCATION_ADHOC_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TRANSFER_FLY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TRANSFER_FLY_class}" data-field=TAS_TRANSFER_FLY>
+									{BEGIN TAS_TRANSFER_FLY_fieldheader}
+																				<span {$TAS_TRANSFER_FLY_orderlinkattrs}>
+											{$label TASK TAS_TRANSFER_FLY}
+										</span>
+									{END TAS_TRANSFER_FLY_fieldheader}
+									</th>
+									{END TAS_TRANSFER_FLY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_LAST_ASSIGNED_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_LAST_ASSIGNED_class}" data-field=TAS_LAST_ASSIGNED>
+									{BEGIN TAS_LAST_ASSIGNED_fieldheader}
+																				<span {$TAS_LAST_ASSIGNED_orderlinkattrs}>
+											{$label TASK TAS_LAST_ASSIGNED}
+										</span>
+									{END TAS_LAST_ASSIGNED_fieldheader}
+									</th>
+									{END TAS_LAST_ASSIGNED_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_USER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_USER_class}" data-field=TAS_USER>
+									{BEGIN TAS_USER_fieldheader}
+																				<span {$TAS_USER_orderlinkattrs}>
+											{$label TASK TAS_USER}
+										</span>
+									{END TAS_USER_fieldheader}
+									</th>
+									{END TAS_USER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_CAN_UPLOAD_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_CAN_UPLOAD_class}" data-field=TAS_CAN_UPLOAD>
+									{BEGIN TAS_CAN_UPLOAD_fieldheader}
+																				<span {$TAS_CAN_UPLOAD_orderlinkattrs}>
+											{$label TASK TAS_CAN_UPLOAD}
+										</span>
+									{END TAS_CAN_UPLOAD_fieldheader}
+									</th>
+									{END TAS_CAN_UPLOAD_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_VIEW_UPLOAD_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_VIEW_UPLOAD_class}" data-field=TAS_VIEW_UPLOAD>
+									{BEGIN TAS_VIEW_UPLOAD_fieldheader}
+																				<span {$TAS_VIEW_UPLOAD_orderlinkattrs}>
+											{$label TASK TAS_VIEW_UPLOAD}
+										</span>
+									{END TAS_VIEW_UPLOAD_fieldheader}
+									</th>
+									{END TAS_VIEW_UPLOAD_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_VIEW_ADDITIONAL_DOCUMENTATION_class}" data-field=TAS_VIEW_ADDITIONAL_DOCUMENTATION>
+									{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldheader}
+																				<span {$TAS_VIEW_ADDITIONAL_DOCUMENTATION_orderlinkattrs}>
+											{$label TASK TAS_VIEW_ADDITIONAL_DOCUMENTATION}
+										</span>
+									{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldheader}
+									</th>
+									{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_CAN_CANCEL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_CAN_CANCEL_class}" data-field=TAS_CAN_CANCEL>
+									{BEGIN TAS_CAN_CANCEL_fieldheader}
+																				<span {$TAS_CAN_CANCEL_orderlinkattrs}>
+											{$label TASK TAS_CAN_CANCEL}
+										</span>
+									{END TAS_CAN_CANCEL_fieldheader}
+									</th>
+									{END TAS_CAN_CANCEL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_OWNER_APP_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_OWNER_APP_class}" data-field=TAS_OWNER_APP>
+									{BEGIN TAS_OWNER_APP_fieldheader}
+																				<span {$TAS_OWNER_APP_orderlinkattrs}>
+											{$label TASK TAS_OWNER_APP}
+										</span>
+									{END TAS_OWNER_APP_fieldheader}
+									</th>
+									{END TAS_OWNER_APP_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN STG_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$STG_UID_class}" data-field=STG_UID>
+									{BEGIN STG_UID_fieldheader}
+																				<span {$STG_UID_orderlinkattrs}>
+											{$label TASK STG_UID}
+										</span>
+									{END STG_UID_fieldheader}
+									</th>
+									{END STG_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_CAN_PAUSE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_CAN_PAUSE_class}" data-field=TAS_CAN_PAUSE>
+									{BEGIN TAS_CAN_PAUSE_fieldheader}
+																				<span {$TAS_CAN_PAUSE_orderlinkattrs}>
+											{$label TASK TAS_CAN_PAUSE}
+										</span>
+									{END TAS_CAN_PAUSE_fieldheader}
+									</th>
+									{END TAS_CAN_PAUSE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_CAN_SEND_MESSAGE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_CAN_SEND_MESSAGE_class}" data-field=TAS_CAN_SEND_MESSAGE>
+									{BEGIN TAS_CAN_SEND_MESSAGE_fieldheader}
+																				<span {$TAS_CAN_SEND_MESSAGE_orderlinkattrs}>
+											{$label TASK TAS_CAN_SEND_MESSAGE}
+										</span>
+									{END TAS_CAN_SEND_MESSAGE_fieldheader}
+									</th>
+									{END TAS_CAN_SEND_MESSAGE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_CAN_DELETE_DOCS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_CAN_DELETE_DOCS_class}" data-field=TAS_CAN_DELETE_DOCS>
+									{BEGIN TAS_CAN_DELETE_DOCS_fieldheader}
+																				<span {$TAS_CAN_DELETE_DOCS_orderlinkattrs}>
+											{$label TASK TAS_CAN_DELETE_DOCS}
+										</span>
+									{END TAS_CAN_DELETE_DOCS_fieldheader}
+									</th>
+									{END TAS_CAN_DELETE_DOCS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SELF_SERVICE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SELF_SERVICE_class}" data-field=TAS_SELF_SERVICE>
+									{BEGIN TAS_SELF_SERVICE_fieldheader}
+																				<span {$TAS_SELF_SERVICE_orderlinkattrs}>
+											{$label TASK TAS_SELF_SERVICE}
+										</span>
+									{END TAS_SELF_SERVICE_fieldheader}
+									</th>
+									{END TAS_SELF_SERVICE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_START_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_START_class}" data-field=TAS_START>
+									{BEGIN TAS_START_fieldheader}
+																				<span {$TAS_START_orderlinkattrs}>
+											{$label TASK TAS_START}
+										</span>
+									{END TAS_START_fieldheader}
+									</th>
+									{END TAS_START_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_TO_LAST_USER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_TO_LAST_USER_class}" data-field=TAS_TO_LAST_USER>
+									{BEGIN TAS_TO_LAST_USER_fieldheader}
+																				<span {$TAS_TO_LAST_USER_orderlinkattrs}>
+											{$label TASK TAS_TO_LAST_USER}
+										</span>
+									{END TAS_TO_LAST_USER_fieldheader}
+									</th>
+									{END TAS_TO_LAST_USER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SEND_LAST_EMAIL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SEND_LAST_EMAIL_class}" data-field=TAS_SEND_LAST_EMAIL>
+									{BEGIN TAS_SEND_LAST_EMAIL_fieldheader}
+																				<span {$TAS_SEND_LAST_EMAIL_orderlinkattrs}>
+											{$label TASK TAS_SEND_LAST_EMAIL}
+										</span>
+									{END TAS_SEND_LAST_EMAIL_fieldheader}
+									</th>
+									{END TAS_SEND_LAST_EMAIL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DERIVATION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DERIVATION_class}" data-field=TAS_DERIVATION>
+									{BEGIN TAS_DERIVATION_fieldheader}
+																				<span {$TAS_DERIVATION_orderlinkattrs}>
+											{$label TASK TAS_DERIVATION}
+										</span>
+									{END TAS_DERIVATION_fieldheader}
+									</th>
+									{END TAS_DERIVATION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_POSX_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_POSX_class}" data-field=TAS_POSX>
+									{BEGIN TAS_POSX_fieldheader}
+																				<span {$TAS_POSX_orderlinkattrs}>
+											{$label TASK TAS_POSX}
+										</span>
+									{END TAS_POSX_fieldheader}
+									</th>
+									{END TAS_POSX_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_POSY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_POSY_class}" data-field=TAS_POSY>
+									{BEGIN TAS_POSY_fieldheader}
+																				<span {$TAS_POSY_orderlinkattrs}>
+											{$label TASK TAS_POSY}
+										</span>
+									{END TAS_POSY_fieldheader}
+									</th>
+									{END TAS_POSY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_WIDTH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_WIDTH_class}" data-field=TAS_WIDTH>
+									{BEGIN TAS_WIDTH_fieldheader}
+																				<span {$TAS_WIDTH_orderlinkattrs}>
+											{$label TASK TAS_WIDTH}
+										</span>
+									{END TAS_WIDTH_fieldheader}
+									</th>
+									{END TAS_WIDTH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_HEIGHT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_HEIGHT_class}" data-field=TAS_HEIGHT>
+									{BEGIN TAS_HEIGHT_fieldheader}
+																				<span {$TAS_HEIGHT_orderlinkattrs}>
+											{$label TASK TAS_HEIGHT}
+										</span>
+									{END TAS_HEIGHT_fieldheader}
+									</th>
+									{END TAS_HEIGHT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_COLOR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_COLOR_class}" data-field=TAS_COLOR>
+									{BEGIN TAS_COLOR_fieldheader}
+																				<span {$TAS_COLOR_orderlinkattrs}>
+											{$label TASK TAS_COLOR}
+										</span>
+									{END TAS_COLOR_fieldheader}
+									</th>
+									{END TAS_COLOR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_EVN_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_EVN_UID_class}" data-field=TAS_EVN_UID>
+									{BEGIN TAS_EVN_UID_fieldheader}
+																				<span {$TAS_EVN_UID_orderlinkattrs}>
+											{$label TASK TAS_EVN_UID}
+										</span>
+									{END TAS_EVN_UID_fieldheader}
+									</th>
+									{END TAS_EVN_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_BOUNDARY_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_BOUNDARY_class}" data-field=TAS_BOUNDARY>
+									{BEGIN TAS_BOUNDARY_fieldheader}
+																				<span {$TAS_BOUNDARY_orderlinkattrs}>
+											{$label TASK TAS_BOUNDARY}
+										</span>
+									{END TAS_BOUNDARY_fieldheader}
+									</th>
+									{END TAS_BOUNDARY_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_DERIVATION_SCREEN_TPL_class}" data-field=TAS_DERIVATION_SCREEN_TPL>
+									{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldheader}
+																				<span {$TAS_DERIVATION_SCREEN_TPL_orderlinkattrs}>
+											{$label TASK TAS_DERIVATION_SCREEN_TPL}
+										</span>
+									{END TAS_DERIVATION_SCREEN_TPL_fieldheader}
+									</th>
+									{END TAS_DERIVATION_SCREEN_TPL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SELFSERVICE_TIMEOUT_class}" data-field=TAS_SELFSERVICE_TIMEOUT>
+									{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldheader}
+																				<span {$TAS_SELFSERVICE_TIMEOUT_orderlinkattrs}>
+											{$label TASK TAS_SELFSERVICE_TIMEOUT}
+										</span>
+									{END TAS_SELFSERVICE_TIMEOUT_fieldheader}
+									</th>
+									{END TAS_SELFSERVICE_TIMEOUT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SELFSERVICE_TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SELFSERVICE_TIME_class}" data-field=TAS_SELFSERVICE_TIME>
+									{BEGIN TAS_SELFSERVICE_TIME_fieldheader}
+																				<span {$TAS_SELFSERVICE_TIME_orderlinkattrs}>
+											{$label TASK TAS_SELFSERVICE_TIME}
+										</span>
+									{END TAS_SELFSERVICE_TIME_fieldheader}
+									</th>
+									{END TAS_SELFSERVICE_TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SELFSERVICE_TIME_UNIT_class}" data-field=TAS_SELFSERVICE_TIME_UNIT>
+									{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldheader}
+																				<span {$TAS_SELFSERVICE_TIME_UNIT_orderlinkattrs}>
+											{$label TASK TAS_SELFSERVICE_TIME_UNIT}
+										</span>
+									{END TAS_SELFSERVICE_TIME_UNIT_fieldheader}
+									</th>
+									{END TAS_SELFSERVICE_TIME_UNIT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SELFSERVICE_TRIGGER_UID_class}" data-field=TAS_SELFSERVICE_TRIGGER_UID>
+									{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldheader}
+																				<span {$TAS_SELFSERVICE_TRIGGER_UID_orderlinkattrs}>
+											{$label TASK TAS_SELFSERVICE_TRIGGER_UID}
+										</span>
+									{END TAS_SELFSERVICE_TRIGGER_UID_fieldheader}
+									</th>
+									{END TAS_SELFSERVICE_TRIGGER_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_SELFSERVICE_EXECUTION_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_SELFSERVICE_EXECUTION_class}" data-field=TAS_SELFSERVICE_EXECUTION>
+									{BEGIN TAS_SELFSERVICE_EXECUTION_fieldheader}
+																				<span {$TAS_SELFSERVICE_EXECUTION_orderlinkattrs}>
+											{$label TASK TAS_SELFSERVICE_EXECUTION}
+										</span>
+									{END TAS_SELFSERVICE_EXECUTION_fieldheader}
+									</th>
+									{END TAS_SELFSERVICE_EXECUTION_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAS_NOT_EMAIL_FROM_FORMAT_class}" data-field=TAS_NOT_EMAIL_FROM_FORMAT>
+									{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldheader}
+																				<span {$TAS_NOT_EMAIL_FROM_FORMAT_orderlinkattrs}>
+											{$label TASK TAS_NOT_EMAIL_FROM_FORMAT}
+										</span>
+									{END TAS_NOT_EMAIL_FROM_FORMAT_fieldheader}
+									</th>
+									{END TAS_NOT_EMAIL_FROM_FORMAT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN TASK_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+										
+				
+					<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge STEP_TRIGGER_badge" {$STEP_TRIGGER_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$STEP_TRIGGER_cntspan_class}" >{$STEP_TRIGGER_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
+	</td>
+	{END TASK_dtable_column}
+
+
+	{BEGIN PRO_UID_fieldcolumn}
+	<td class="bs-gridcell {$PRO_UID_class}"  data-field=PRO_UID {$rowstyle} {$recordattrs}>
+		{$PRO_UID_value}
+	</td>
+{END PRO_UID_fieldcolumn}
+
+
+	{BEGIN TAS_UID_fieldcolumn}
+	<td class="bs-gridcell {$TAS_UID_class}"  data-field=TAS_UID {$rowstyle} {$recordattrs}>
+		{$TAS_UID_value}
+	</td>
+{END TAS_UID_fieldcolumn}
+
+
+	{BEGIN TAS_TITLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TITLE_class}"  data-field=TAS_TITLE {$rowstyle} {$recordattrs}>
+		{$TAS_TITLE_value}
+	</td>
+{END TAS_TITLE_fieldcolumn}
+
+
+	{BEGIN TAS_DESCRIPTION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DESCRIPTION_class}"  data-field=TAS_DESCRIPTION {$rowstyle} {$recordattrs}>
+		{$TAS_DESCRIPTION_value}
+	</td>
+{END TAS_DESCRIPTION_fieldcolumn}
+
+
+	{BEGIN TAS_DEF_TITLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DEF_TITLE_class}"  data-field=TAS_DEF_TITLE {$rowstyle} {$recordattrs}>
+		{$TAS_DEF_TITLE_value}
+	</td>
+{END TAS_DEF_TITLE_fieldcolumn}
+
+
+	{BEGIN TAS_DEF_SUBJECT_MESSAGE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DEF_SUBJECT_MESSAGE_class}"  data-field=TAS_DEF_SUBJECT_MESSAGE {$rowstyle} {$recordattrs}>
+		{$TAS_DEF_SUBJECT_MESSAGE_value}
+	</td>
+{END TAS_DEF_SUBJECT_MESSAGE_fieldcolumn}
+
+
+	{BEGIN TAS_DEF_PROC_CODE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DEF_PROC_CODE_class}"  data-field=TAS_DEF_PROC_CODE {$rowstyle} {$recordattrs}>
+		{$TAS_DEF_PROC_CODE_value}
+	</td>
+{END TAS_DEF_PROC_CODE_fieldcolumn}
+
+
+	{BEGIN TAS_DEF_MESSAGE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DEF_MESSAGE_class}"  data-field=TAS_DEF_MESSAGE {$rowstyle} {$recordattrs}>
+		{$TAS_DEF_MESSAGE_value}
+	</td>
+{END TAS_DEF_MESSAGE_fieldcolumn}
+
+
+	{BEGIN TAS_DEF_DESCRIPTION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DEF_DESCRIPTION_class}"  data-field=TAS_DEF_DESCRIPTION {$rowstyle} {$recordattrs}>
+		{$TAS_DEF_DESCRIPTION_value}
+	</td>
+{END TAS_DEF_DESCRIPTION_fieldcolumn}
+
+
+	{BEGIN TAS_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TYPE_class}"  data-field=TAS_TYPE {$rowstyle} {$recordattrs}>
+		{$TAS_TYPE_value}
+	</td>
+{END TAS_TYPE_fieldcolumn}
+
+
+	{BEGIN TAS_DURATION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DURATION_class}"  data-field=TAS_DURATION {$rowstyle} {$recordattrs}>
+		{$TAS_DURATION_value}
+	</td>
+{END TAS_DURATION_fieldcolumn}
+
+
+	{BEGIN TAS_DELAY_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DELAY_TYPE_class}"  data-field=TAS_DELAY_TYPE {$rowstyle} {$recordattrs}>
+		{$TAS_DELAY_TYPE_value}
+	</td>
+{END TAS_DELAY_TYPE_fieldcolumn}
+
+
+	{BEGIN TAS_TEMPORIZER_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TEMPORIZER_class}"  data-field=TAS_TEMPORIZER {$rowstyle} {$recordattrs}>
+		{$TAS_TEMPORIZER_value}
+	</td>
+{END TAS_TEMPORIZER_fieldcolumn}
+
+
+	{BEGIN TAS_TYPE_DAY_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TYPE_DAY_class}"  data-field=TAS_TYPE_DAY {$rowstyle} {$recordattrs}>
+		{$TAS_TYPE_DAY_value}
+	</td>
+{END TAS_TYPE_DAY_fieldcolumn}
+
+
+	{BEGIN TAS_TIMEUNIT_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TIMEUNIT_class}"  data-field=TAS_TIMEUNIT {$rowstyle} {$recordattrs}>
+		{$TAS_TIMEUNIT_value}
+	</td>
+{END TAS_TIMEUNIT_fieldcolumn}
+
+
+	{BEGIN TAS_ALERT_fieldcolumn}
+	<td class="bs-gridcell {$TAS_ALERT_class}"  data-field=TAS_ALERT {$rowstyle} {$recordattrs}>
+		{$TAS_ALERT_value}
+	</td>
+{END TAS_ALERT_fieldcolumn}
+
+
+	{BEGIN TAS_PRIORITY_VARIABLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_PRIORITY_VARIABLE_class}"  data-field=TAS_PRIORITY_VARIABLE {$rowstyle} {$recordattrs}>
+		{$TAS_PRIORITY_VARIABLE_value}
+	</td>
+{END TAS_PRIORITY_VARIABLE_fieldcolumn}
+
+
+	{BEGIN TAS_ASSIGN_TYPE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_ASSIGN_TYPE_class}"  data-field=TAS_ASSIGN_TYPE {$rowstyle} {$recordattrs}>
+		{$TAS_ASSIGN_TYPE_value}
+	</td>
+{END TAS_ASSIGN_TYPE_fieldcolumn}
+
+
+	{BEGIN TAS_ASSIGN_VARIABLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_ASSIGN_VARIABLE_class}"  data-field=TAS_ASSIGN_VARIABLE {$rowstyle} {$recordattrs}>
+		{$TAS_ASSIGN_VARIABLE_value}
+	</td>
+{END TAS_ASSIGN_VARIABLE_fieldcolumn}
+
+
+	{BEGIN TAS_GROUP_VARIABLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_GROUP_VARIABLE_class}"  data-field=TAS_GROUP_VARIABLE {$rowstyle} {$recordattrs}>
+		{$TAS_GROUP_VARIABLE_value}
+	</td>
+{END TAS_GROUP_VARIABLE_fieldcolumn}
+
+
+	{BEGIN TAS_MI_INSTANCE_VARIABLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_MI_INSTANCE_VARIABLE_class}"  data-field=TAS_MI_INSTANCE_VARIABLE {$rowstyle} {$recordattrs}>
+		{$TAS_MI_INSTANCE_VARIABLE_value}
+	</td>
+{END TAS_MI_INSTANCE_VARIABLE_fieldcolumn}
+
+
+	{BEGIN TAS_MI_COMPLETE_VARIABLE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_MI_COMPLETE_VARIABLE_class}"  data-field=TAS_MI_COMPLETE_VARIABLE {$rowstyle} {$recordattrs}>
+		{$TAS_MI_COMPLETE_VARIABLE_value}
+	</td>
+{END TAS_MI_COMPLETE_VARIABLE_fieldcolumn}
+
+
+	{BEGIN TAS_ASSIGN_LOCATION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_ASSIGN_LOCATION_class}"  data-field=TAS_ASSIGN_LOCATION {$rowstyle} {$recordattrs}>
+		{$TAS_ASSIGN_LOCATION_value}
+	</td>
+{END TAS_ASSIGN_LOCATION_fieldcolumn}
+
+
+	{BEGIN TAS_ASSIGN_LOCATION_ADHOC_fieldcolumn}
+	<td class="bs-gridcell {$TAS_ASSIGN_LOCATION_ADHOC_class}"  data-field=TAS_ASSIGN_LOCATION_ADHOC {$rowstyle} {$recordattrs}>
+		{$TAS_ASSIGN_LOCATION_ADHOC_value}
+	</td>
+{END TAS_ASSIGN_LOCATION_ADHOC_fieldcolumn}
+
+
+	{BEGIN TAS_TRANSFER_FLY_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TRANSFER_FLY_class}"  data-field=TAS_TRANSFER_FLY {$rowstyle} {$recordattrs}>
+		{$TAS_TRANSFER_FLY_value}
+	</td>
+{END TAS_TRANSFER_FLY_fieldcolumn}
+
+
+	{BEGIN TAS_LAST_ASSIGNED_fieldcolumn}
+	<td class="bs-gridcell {$TAS_LAST_ASSIGNED_class}"  data-field=TAS_LAST_ASSIGNED {$rowstyle} {$recordattrs}>
+		{$TAS_LAST_ASSIGNED_value}
+	</td>
+{END TAS_LAST_ASSIGNED_fieldcolumn}
+
+
+	{BEGIN TAS_USER_fieldcolumn}
+	<td class="bs-gridcell {$TAS_USER_class}"  data-field=TAS_USER {$rowstyle} {$recordattrs}>
+		{$TAS_USER_value}
+	</td>
+{END TAS_USER_fieldcolumn}
+
+
+	{BEGIN TAS_CAN_UPLOAD_fieldcolumn}
+	<td class="bs-gridcell {$TAS_CAN_UPLOAD_class}"  data-field=TAS_CAN_UPLOAD {$rowstyle} {$recordattrs}>
+		{$TAS_CAN_UPLOAD_value}
+	</td>
+{END TAS_CAN_UPLOAD_fieldcolumn}
+
+
+	{BEGIN TAS_VIEW_UPLOAD_fieldcolumn}
+	<td class="bs-gridcell {$TAS_VIEW_UPLOAD_class}"  data-field=TAS_VIEW_UPLOAD {$rowstyle} {$recordattrs}>
+		{$TAS_VIEW_UPLOAD_value}
+	</td>
+{END TAS_VIEW_UPLOAD_fieldcolumn}
+
+
+	{BEGIN TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_VIEW_ADDITIONAL_DOCUMENTATION_class}"  data-field=TAS_VIEW_ADDITIONAL_DOCUMENTATION {$rowstyle} {$recordattrs}>
+		{$TAS_VIEW_ADDITIONAL_DOCUMENTATION_value}
+	</td>
+{END TAS_VIEW_ADDITIONAL_DOCUMENTATION_fieldcolumn}
+
+
+	{BEGIN TAS_CAN_CANCEL_fieldcolumn}
+	<td class="bs-gridcell {$TAS_CAN_CANCEL_class}"  data-field=TAS_CAN_CANCEL {$rowstyle} {$recordattrs}>
+		{$TAS_CAN_CANCEL_value}
+	</td>
+{END TAS_CAN_CANCEL_fieldcolumn}
+
+
+	{BEGIN TAS_OWNER_APP_fieldcolumn}
+	<td class="bs-gridcell {$TAS_OWNER_APP_class}"  data-field=TAS_OWNER_APP {$rowstyle} {$recordattrs}>
+		{$TAS_OWNER_APP_value}
+	</td>
+{END TAS_OWNER_APP_fieldcolumn}
+
+
+	{BEGIN STG_UID_fieldcolumn}
+	<td class="bs-gridcell {$STG_UID_class}"  data-field=STG_UID {$rowstyle} {$recordattrs}>
+		{$STG_UID_value}
+	</td>
+{END STG_UID_fieldcolumn}
+
+
+	{BEGIN TAS_CAN_PAUSE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_CAN_PAUSE_class}"  data-field=TAS_CAN_PAUSE {$rowstyle} {$recordattrs}>
+		{$TAS_CAN_PAUSE_value}
+	</td>
+{END TAS_CAN_PAUSE_fieldcolumn}
+
+
+	{BEGIN TAS_CAN_SEND_MESSAGE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_CAN_SEND_MESSAGE_class}"  data-field=TAS_CAN_SEND_MESSAGE {$rowstyle} {$recordattrs}>
+		{$TAS_CAN_SEND_MESSAGE_value}
+	</td>
+{END TAS_CAN_SEND_MESSAGE_fieldcolumn}
+
+
+	{BEGIN TAS_CAN_DELETE_DOCS_fieldcolumn}
+	<td class="bs-gridcell {$TAS_CAN_DELETE_DOCS_class}"  data-field=TAS_CAN_DELETE_DOCS {$rowstyle} {$recordattrs}>
+		{$TAS_CAN_DELETE_DOCS_value}
+	</td>
+{END TAS_CAN_DELETE_DOCS_fieldcolumn}
+
+
+	{BEGIN TAS_SELF_SERVICE_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SELF_SERVICE_class}"  data-field=TAS_SELF_SERVICE {$rowstyle} {$recordattrs}>
+		{$TAS_SELF_SERVICE_value}
+	</td>
+{END TAS_SELF_SERVICE_fieldcolumn}
+
+
+	{BEGIN TAS_START_fieldcolumn}
+	<td class="bs-gridcell {$TAS_START_class}"  data-field=TAS_START {$rowstyle} {$recordattrs}>
+		{$TAS_START_value}
+	</td>
+{END TAS_START_fieldcolumn}
+
+
+	{BEGIN TAS_TO_LAST_USER_fieldcolumn}
+	<td class="bs-gridcell {$TAS_TO_LAST_USER_class}"  data-field=TAS_TO_LAST_USER {$rowstyle} {$recordattrs}>
+		{$TAS_TO_LAST_USER_value}
+	</td>
+{END TAS_TO_LAST_USER_fieldcolumn}
+
+
+	{BEGIN TAS_SEND_LAST_EMAIL_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SEND_LAST_EMAIL_class}"  data-field=TAS_SEND_LAST_EMAIL {$rowstyle} {$recordattrs}>
+		{$TAS_SEND_LAST_EMAIL_value}
+	</td>
+{END TAS_SEND_LAST_EMAIL_fieldcolumn}
+
+
+	{BEGIN TAS_DERIVATION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DERIVATION_class}"  data-field=TAS_DERIVATION {$rowstyle} {$recordattrs}>
+		{$TAS_DERIVATION_value}
+	</td>
+{END TAS_DERIVATION_fieldcolumn}
+
+
+	{BEGIN TAS_POSX_fieldcolumn}
+	<td class="bs-gridcell {$TAS_POSX_class}"  data-field=TAS_POSX {$rowstyle} {$recordattrs}>
+		{$TAS_POSX_value}
+	</td>
+{END TAS_POSX_fieldcolumn}
+
+
+	{BEGIN TAS_POSY_fieldcolumn}
+	<td class="bs-gridcell {$TAS_POSY_class}"  data-field=TAS_POSY {$rowstyle} {$recordattrs}>
+		{$TAS_POSY_value}
+	</td>
+{END TAS_POSY_fieldcolumn}
+
+
+	{BEGIN TAS_WIDTH_fieldcolumn}
+	<td class="bs-gridcell {$TAS_WIDTH_class}"  data-field=TAS_WIDTH {$rowstyle} {$recordattrs}>
+		{$TAS_WIDTH_value}
+	</td>
+{END TAS_WIDTH_fieldcolumn}
+
+
+	{BEGIN TAS_HEIGHT_fieldcolumn}
+	<td class="bs-gridcell {$TAS_HEIGHT_class}"  data-field=TAS_HEIGHT {$rowstyle} {$recordattrs}>
+		{$TAS_HEIGHT_value}
+	</td>
+{END TAS_HEIGHT_fieldcolumn}
+
+
+	{BEGIN TAS_COLOR_fieldcolumn}
+	<td class="bs-gridcell {$TAS_COLOR_class}"  data-field=TAS_COLOR {$rowstyle} {$recordattrs}>
+		{$TAS_COLOR_value}
+	</td>
+{END TAS_COLOR_fieldcolumn}
+
+
+	{BEGIN TAS_EVN_UID_fieldcolumn}
+	<td class="bs-gridcell {$TAS_EVN_UID_class}"  data-field=TAS_EVN_UID {$rowstyle} {$recordattrs}>
+		{$TAS_EVN_UID_value}
+	</td>
+{END TAS_EVN_UID_fieldcolumn}
+
+
+	{BEGIN TAS_BOUNDARY_fieldcolumn}
+	<td class="bs-gridcell {$TAS_BOUNDARY_class}"  data-field=TAS_BOUNDARY {$rowstyle} {$recordattrs}>
+		{$TAS_BOUNDARY_value}
+	</td>
+{END TAS_BOUNDARY_fieldcolumn}
+
+
+	{BEGIN TAS_DERIVATION_SCREEN_TPL_fieldcolumn}
+	<td class="bs-gridcell {$TAS_DERIVATION_SCREEN_TPL_class}"  data-field=TAS_DERIVATION_SCREEN_TPL {$rowstyle} {$recordattrs}>
+		{$TAS_DERIVATION_SCREEN_TPL_value}
+	</td>
+{END TAS_DERIVATION_SCREEN_TPL_fieldcolumn}
+
+
+	{BEGIN TAS_SELFSERVICE_TIMEOUT_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SELFSERVICE_TIMEOUT_class}"  data-field=TAS_SELFSERVICE_TIMEOUT {$rowstyle} {$recordattrs}>
+		{$TAS_SELFSERVICE_TIMEOUT_value}
+	</td>
+{END TAS_SELFSERVICE_TIMEOUT_fieldcolumn}
+
+
+	{BEGIN TAS_SELFSERVICE_TIME_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SELFSERVICE_TIME_class}"  data-field=TAS_SELFSERVICE_TIME {$rowstyle} {$recordattrs}>
+		{$TAS_SELFSERVICE_TIME_value}
+	</td>
+{END TAS_SELFSERVICE_TIME_fieldcolumn}
+
+
+	{BEGIN TAS_SELFSERVICE_TIME_UNIT_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SELFSERVICE_TIME_UNIT_class}"  data-field=TAS_SELFSERVICE_TIME_UNIT {$rowstyle} {$recordattrs}>
+		{$TAS_SELFSERVICE_TIME_UNIT_value}
+	</td>
+{END TAS_SELFSERVICE_TIME_UNIT_fieldcolumn}
+
+
+	{BEGIN TAS_SELFSERVICE_TRIGGER_UID_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SELFSERVICE_TRIGGER_UID_class}"  data-field=TAS_SELFSERVICE_TRIGGER_UID {$rowstyle} {$recordattrs}>
+		{$TAS_SELFSERVICE_TRIGGER_UID_value}
+	</td>
+{END TAS_SELFSERVICE_TRIGGER_UID_fieldcolumn}
+
+
+	{BEGIN TAS_SELFSERVICE_EXECUTION_fieldcolumn}
+	<td class="bs-gridcell {$TAS_SELFSERVICE_EXECUTION_class}"  data-field=TAS_SELFSERVICE_EXECUTION {$rowstyle} {$recordattrs}>
+		{$TAS_SELFSERVICE_EXECUTION_value}
+	</td>
+{END TAS_SELFSERVICE_EXECUTION_fieldcolumn}
+
+
+	{BEGIN TAS_NOT_EMAIL_FROM_FORMAT_fieldcolumn}
+	<td class="bs-gridcell {$TAS_NOT_EMAIL_FROM_FORMAT_class}"  data-field=TAS_NOT_EMAIL_FROM_FORMAT {$rowstyle} {$recordattrs}>
+		{$TAS_NOT_EMAIL_FROM_FORMAT_value}
+	</td>
+{END TAS_NOT_EMAIL_FROM_FORMAT_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

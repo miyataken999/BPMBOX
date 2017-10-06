@@ -1,0 +1,414 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel BPMN_PROJECT add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>編集</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN PRJ_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_UID}" data-fieldname="PRJ_UID" data-signal-error-for="PRJ_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_UID}">
+		{BEGIN PRJ_UID_label}{$label BPMN_PROJECT PRJ_UID}{END PRJ_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_UID">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_UID_fieldblock}
+
+			{BEGIN PRJ_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_NAME}" data-fieldname="PRJ_NAME" data-signal-error-for="PRJ_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_NAME}">
+		{BEGIN PRJ_NAME_label}{$label BPMN_PROJECT PRJ_NAME}{END PRJ_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_NAME">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_NAME_fieldblock}
+
+			{BEGIN PRJ_DESCRIPTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_DESCRIPTION}" data-fieldname="PRJ_DESCRIPTION" data-signal-error-for="PRJ_DESCRIPTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_DESCRIPTION}">
+		{BEGIN PRJ_DESCRIPTION_label}{$label BPMN_PROJECT PRJ_DESCRIPTION}{END PRJ_DESCRIPTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_DESCRIPTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_DESCRIPTION">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_DESCRIPTION}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_DESCRIPTION_fieldblock}
+
+			{BEGIN PRJ_TARGET_NAMESPACE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_TARGET_NAMESPACE}" data-fieldname="PRJ_TARGET_NAMESPACE" data-signal-error-for="PRJ_TARGET_NAMESPACE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_TARGET_NAMESPACE}">
+		{BEGIN PRJ_TARGET_NAMESPACE_label}{$label BPMN_PROJECT PRJ_TARGET_NAMESPACE}{END PRJ_TARGET_NAMESPACE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_TARGET_NAMESPACE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_TARGET_NAMESPACE">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_TARGET_NAMESPACE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_TARGET_NAMESPACE_fieldblock}
+
+			{BEGIN PRJ_EXPRESION_LANGUAGE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_EXPRESION_LANGUAGE}" data-fieldname="PRJ_EXPRESION_LANGUAGE" data-signal-error-for="PRJ_EXPRESION_LANGUAGE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_EXPRESION_LANGUAGE}">
+		{BEGIN PRJ_EXPRESION_LANGUAGE_label}{$label BPMN_PROJECT PRJ_EXPRESION_LANGUAGE}{END PRJ_EXPRESION_LANGUAGE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_EXPRESION_LANGUAGE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_EXPRESION_LANGUAGE">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_EXPRESION_LANGUAGE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_EXPRESION_LANGUAGE_fieldblock}
+
+			{BEGIN PRJ_TYPE_LANGUAGE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_TYPE_LANGUAGE}" data-fieldname="PRJ_TYPE_LANGUAGE" data-signal-error-for="PRJ_TYPE_LANGUAGE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_TYPE_LANGUAGE}">
+		{BEGIN PRJ_TYPE_LANGUAGE_label}{$label BPMN_PROJECT PRJ_TYPE_LANGUAGE}{END PRJ_TYPE_LANGUAGE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_TYPE_LANGUAGE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_TYPE_LANGUAGE">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_TYPE_LANGUAGE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_TYPE_LANGUAGE_fieldblock}
+
+			{BEGIN PRJ_EXPORTER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_EXPORTER}" data-fieldname="PRJ_EXPORTER" data-signal-error-for="PRJ_EXPORTER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_EXPORTER}">
+		{BEGIN PRJ_EXPORTER_label}{$label BPMN_PROJECT PRJ_EXPORTER}{END PRJ_EXPORTER_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_EXPORTER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_EXPORTER">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_EXPORTER}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_EXPORTER_fieldblock}
+
+			{BEGIN PRJ_EXPORTER_VERSION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_EXPORTER_VERSION}" data-fieldname="PRJ_EXPORTER_VERSION" data-signal-error-for="PRJ_EXPORTER_VERSION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_EXPORTER_VERSION}">
+		{BEGIN PRJ_EXPORTER_VERSION_label}{$label BPMN_PROJECT PRJ_EXPORTER_VERSION}{END PRJ_EXPORTER_VERSION_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_EXPORTER_VERSION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_EXPORTER_VERSION">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_EXPORTER_VERSION}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_EXPORTER_VERSION_fieldblock}
+
+			{BEGIN PRJ_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_CREATE_DATE}" data-fieldname="PRJ_CREATE_DATE" data-signal-error-for="PRJ_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_CREATE_DATE}">
+		{BEGIN PRJ_CREATE_DATE_label}{$label BPMN_PROJECT PRJ_CREATE_DATE}{END PRJ_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_CREATE_DATE_fieldblock}
+
+			{BEGIN PRJ_UPDATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_UPDATE_DATE}" data-fieldname="PRJ_UPDATE_DATE" data-signal-error-for="PRJ_UPDATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_UPDATE_DATE}">
+		{BEGIN PRJ_UPDATE_DATE_label}{$label BPMN_PROJECT PRJ_UPDATE_DATE}{END PRJ_UPDATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_UPDATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_UPDATE_DATE">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_UPDATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_UPDATE_DATE_fieldblock}
+
+			{BEGIN PRJ_AUTHOR_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_AUTHOR}" data-fieldname="PRJ_AUTHOR" data-signal-error-for="PRJ_AUTHOR{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_AUTHOR}">
+		{BEGIN PRJ_AUTHOR_label}{$label BPMN_PROJECT PRJ_AUTHOR}{END PRJ_AUTHOR_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_AUTHOR_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_AUTHOR">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_AUTHOR}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_AUTHOR_fieldblock}
+
+			{BEGIN PRJ_AUTHOR_VERSION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_AUTHOR_VERSION}" data-fieldname="PRJ_AUTHOR_VERSION" data-signal-error-for="PRJ_AUTHOR_VERSION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_AUTHOR_VERSION}">
+		{BEGIN PRJ_AUTHOR_VERSION_label}{$label BPMN_PROJECT PRJ_AUTHOR_VERSION}{END PRJ_AUTHOR_VERSION_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_AUTHOR_VERSION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_AUTHOR_VERSION">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_AUTHOR_VERSION}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_AUTHOR_VERSION_fieldblock}
+
+			{BEGIN PRJ_ORIGINAL_SOURCE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRJ_ORIGINAL_SOURCE}" data-fieldname="PRJ_ORIGINAL_SOURCE" data-signal-error-for="PRJ_ORIGINAL_SOURCE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRJ_ORIGINAL_SOURCE}">
+		{BEGIN PRJ_ORIGINAL_SOURCE_label}{$label BPMN_PROJECT PRJ_ORIGINAL_SOURCE}{END PRJ_ORIGINAL_SOURCE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRJ_ORIGINAL_SOURCE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRJ_ORIGINAL_SOURCE">
+		<div class="text-muted" >
+		{$tooltip BPMN_PROJECT PRJ_ORIGINAL_SOURCE}
+		</div>
+	</div>
+</div>
+</div>
+{END PRJ_ORIGINAL_SOURCE_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">リセット</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">一覧に戻る</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">キャンセル(Cancel)</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

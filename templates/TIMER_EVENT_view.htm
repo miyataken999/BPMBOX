@@ -1,0 +1,342 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel TIMER_EVENT view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN TMREVN_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_UID} bs-viewform-group" data-fieldname="TMREVN_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_UID}">
+			{$label TIMER_EVENT TMREVN_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_UID_fieldblock}
+	{BEGIN PRJ_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRJ_UID} bs-viewform-group" data-fieldname="PRJ_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRJ_UID}">
+			{$label TIMER_EVENT PRJ_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRJ_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRJ_UID_fieldblock}
+	{BEGIN EVN_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_EVN_UID} bs-viewform-group" data-fieldname="EVN_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_EVN_UID}">
+			{$label TIMER_EVENT EVN_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$EVN_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END EVN_UID_fieldblock}
+	{BEGIN TMREVN_OPTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_OPTION} bs-viewform-group" data-fieldname="TMREVN_OPTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_OPTION}">
+			{$label TIMER_EVENT TMREVN_OPTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_OPTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_OPTION_fieldblock}
+	{BEGIN TMREVN_START_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_START_DATE} bs-viewform-group" data-fieldname="TMREVN_START_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_START_DATE}">
+			{$label TIMER_EVENT TMREVN_START_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_START_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_START_DATE_fieldblock}
+	{BEGIN TMREVN_END_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_END_DATE} bs-viewform-group" data-fieldname="TMREVN_END_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_END_DATE}">
+			{$label TIMER_EVENT TMREVN_END_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_END_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_END_DATE_fieldblock}
+	{BEGIN TMREVN_DAY_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_DAY} bs-viewform-group" data-fieldname="TMREVN_DAY">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_DAY}">
+			{$label TIMER_EVENT TMREVN_DAY}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_DAY_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_DAY_fieldblock}
+	{BEGIN TMREVN_HOUR_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_HOUR} bs-viewform-group" data-fieldname="TMREVN_HOUR">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_HOUR}">
+			{$label TIMER_EVENT TMREVN_HOUR}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_HOUR_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_HOUR_fieldblock}
+	{BEGIN TMREVN_MINUTE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_MINUTE} bs-viewform-group" data-fieldname="TMREVN_MINUTE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_MINUTE}">
+			{$label TIMER_EVENT TMREVN_MINUTE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_MINUTE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_MINUTE_fieldblock}
+	{BEGIN TMREVN_CONFIGURATION_DATA_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_CONFIGURATION_DATA} bs-viewform-group" data-fieldname="TMREVN_CONFIGURATION_DATA">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_CONFIGURATION_DATA}">
+			{$label TIMER_EVENT TMREVN_CONFIGURATION_DATA}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_CONFIGURATION_DATA_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_CONFIGURATION_DATA_fieldblock}
+	{BEGIN TMREVN_NEXT_RUN_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_NEXT_RUN_DATE} bs-viewform-group" data-fieldname="TMREVN_NEXT_RUN_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_NEXT_RUN_DATE}">
+			{$label TIMER_EVENT TMREVN_NEXT_RUN_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_NEXT_RUN_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_NEXT_RUN_DATE_fieldblock}
+	{BEGIN TMREVN_LAST_RUN_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_LAST_RUN_DATE} bs-viewform-group" data-fieldname="TMREVN_LAST_RUN_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_LAST_RUN_DATE}">
+			{$label TIMER_EVENT TMREVN_LAST_RUN_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_LAST_RUN_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_LAST_RUN_DATE_fieldblock}
+	{BEGIN TMREVN_LAST_EXECUTION_DATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_LAST_EXECUTION_DATE} bs-viewform-group" data-fieldname="TMREVN_LAST_EXECUTION_DATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_LAST_EXECUTION_DATE}">
+			{$label TIMER_EVENT TMREVN_LAST_EXECUTION_DATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_LAST_EXECUTION_DATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_LAST_EXECUTION_DATE_fieldblock}
+	{BEGIN TMREVN_STATUS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_TMREVN_STATUS} bs-viewform-group" data-fieldname="TMREVN_STATUS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_TMREVN_STATUS}">
+			{$label TIMER_EVENT TMREVN_STATUS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$TMREVN_STATUS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END TMREVN_STATUS_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
