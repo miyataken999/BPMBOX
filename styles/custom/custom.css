@@ -1,0 +1,124 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+@media (min-width: 768px)
+.sidebar {
+    width: 100px;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: block;
+    padding: 0px;
+    background-color: #fcfcfc;
+    border-right: 1px solid #a0a0a0;
+    overflow: hidden;
+    position: absolute;
+    min-height: 100%;
+}
+
+@media (min-width: 768px){
+
+	.bs-sidebarlogo:after {
+		display:table;
+		content:' ';
+		clear: both;
+	}
+	
+	.bs-sidebarlogo > .navbar-brand {
+		font-size:22px;
+	}
+
+	.bs-sidebar-main, .bs-fixedsidebarmain {
+		display: table;
+		width: auto;
+	}
+
+	.sidebar {
+		width:200px;
+		left: 0;
+		top:0;
+		z-index: 200;
+		display: block;
+		padding: 0px;
+		background-color: #fcfcfc;
+		border-right: 1px solid #a0a0a0;
+		overflow: hidden;
+		position: absolute;
+		min-height:100%;
+	}
+
+	.bs-sidebar-main {
+		margin-left: 200px;
+	}
+	.sidebar  .panel.panel {
+		border-radius:0;
+		border-left: none;
+		border-right: none;
+		margin-left: 0;
+		margin-right: 0;
+		margin:0;
+		border-bottom: none;
+	}
+	.sidebar  .panel.panel > .panel-heading {
+		border-radius: 0;
+	}
+	.sidebar  .panel.panel > .panel-body {
+		padding-bottom:10px;
+	}
+	.sidebar  .panel.panel > .panel-footer {
+		border-top: none;
+		background: transparent;
+		padding-top: 0;
+	}
+	
+	.sidebar .list-group-item {
+		padding: 8px 15px;
+	}
+	.sidebar .form-group {
+		margin-bottom:10px;
+	}
+
+	.sidebar.bs-fixed {
+		overflow-x: hidden;
+		position: fixed;
+		height:100%;
+	}
+	.sidebar.bs-fixed > .sidebar-contents{
+		width: 216px;
+		overflow-y: scroll;
+		height:100%;
+	}
+
+
+	.bs-fixedheader {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 2;
+		
+		/* header if present needs this style */
+		background: white;
+	}
+}
+
+@media (min-width: 768px) {
+
+
+	:not([data-hidden]) + .bs-wrapper > .bs-fixedheader {
+		width: calc(100% - 300px);
+	}
+
+	:not([data-hidden]) + .bs-wrapper  {
+		margin-left: 200px;
+	}
+
+	.navbar .breadcrumb {
+		background: transparent;
+		margin:0;
+	}
+}

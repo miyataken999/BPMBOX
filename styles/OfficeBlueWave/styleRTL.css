@@ -1,0 +1,1306 @@
+.OfficeBlueWave.rnr-s-empty > .rnr-c
+{
+background:none;
+
+}
+.OfficeBlueWave.rnr-s-empty > .rnr-c .rnr-leftbricks
+{
+margin-right: 10px;
+}
+.OfficeBlueWave.rnr-s-empty > .rnr-c .rnr-rightbricks
+{
+margin-left: 10px;
+}
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-empty > * > :not(.rnr-b-wrapper) .style1
+{
+color: #333333;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-empty > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-empty > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-empty > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-empty > * > :not(.rnr-b-wrapper) .style2
+{
+color: #333333;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-empty > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-empty > * > :not(.rnr-b-wrapper) .style3
+{
+color: #333333;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-empty > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-empty > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-menu > * > :not(.rnr-b-wrapper) .style1
+{
+background-color: #16589C;
+background: linear-gradient(0.750000turn, #11467C, #16589C, #11467C);
+;
+color: #FFFFFF;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-menu > .rnr-c.rnr-ch
+{
+background-color: #16589C;
+background: linear-gradient(0.750000turn, #11467C, #16589C, #11467C);
+;
+
+}
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-menu > * > :not(.rnr-b-wrapper) .style2
+{
+background-color: #D2D8DC;
+background: linear-gradient(0.750000turn, #A8ACB0, #D2D8DC, #A8ACB0);
+;
+color: #333333;
+font-family: Tahoma, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-menu > * > :not(.rnr-b-wrapper) .style3
+{
+background-color: #D2D8DC;
+background: linear-gradient(0.750000turn, #A8ACB0, #D2D8DC, #A8ACB0);
+;
+color: #333333;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-menu > .rnr-c .rnr-leftbricks
+{
+margin-right: 0px;
+}
+.OfficeBlueWave.rnr-s-menu > .rnr-c .rnr-rightbricks
+{
+margin-left: 0px;
+}
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-menu > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-menu > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 0px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-menu > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 0px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-menu > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-menu > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-menu > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-hmenu > .rnr-c
+{
+background:none;
+
+}
+.OfficeBlueWave.rnr-s-hmenu > .rnr-c .rnr-leftbricks
+{
+margin-right: 10px;
+}
+.OfficeBlueWave.rnr-s-hmenu > .rnr-c .rnr-rightbricks
+{
+margin-left: 10px;
+}
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-hmenu > * > :not(.rnr-b-wrapper) .style1
+{
+color: #FFFF00;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-hmenu > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 6px 4px;
+}
+.OfficeBlueWave.rnr-s-hmenu > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-hmenu > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-hmenu > * > :not(.rnr-b-wrapper) .style2
+{
+color: #FFFF00;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-hmenu > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-hmenu > * > :not(.rnr-b-wrapper) .style3
+{
+color: #FFFF00;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-hmenu > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-hmenu > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-undermenu > * > :not(.rnr-b-wrapper) .style1
+{
+background-color: #16589C;
+background: linear-gradient(0.000000turn, #11467C, #16589C, #11467C);
+;
+color: #FFFFFF;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-undermenu > .rnr-c.rnr-ch
+{
+background-color: #16589C;
+background: linear-gradient(0.000000turn, #11467C, #16589C, #11467C);
+;
+
+}
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-undermenu > * > :not(.rnr-b-wrapper) .style2
+{
+background-image: none; background-color: #FFFF00;color: #FFFF00;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-undermenu > * > :not(.rnr-b-wrapper) .style3
+{
+background-image: none; background-color: #FFFF00;color: #FFFF00;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-undermenu > .rnr-c .rnr-leftbricks
+{
+margin-right: 0px;
+}
+.OfficeBlueWave.rnr-s-undermenu > .rnr-c .rnr-rightbricks
+{
+margin-left: 0px;
+}
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-undermenu > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-undermenu > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 0px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-undermenu > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 0px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-undermenu > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-undermenu > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-undermenu > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-c
+{
+border-top-right-radius: 3px;border-top-left-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-ch > .rnr-b-hmenu:first-child
+{
+border-top-right-radius: 3px; padding-right: 1px;
+border-bottom-right-radius: 3px; padding-right: 1px;
+
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-ch> .rnr-b-hmenu:last-child
+{
+border-top-left-radius: 3px; padding-left: 1px;
+border-bottom-left-radius: 3px; padding-left: 1px;
+
+}
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-fields > * > :not(.rnr-b-wrapper) .style1
+{
+background-color: #FFFFFF;
+background: linear-gradient(0.000000turn, #FFFFFF, #FFFFFF);
+;
+color: #333381;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: bold; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-c.rnr-ch
+{
+background-color: #FFFFFF;
+background: linear-gradient(0.000000turn, #FFFFFF, #FFFFFF);
+;
+
+}
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-fields > * > :not(.rnr-b-wrapper) .style2
+{
+background-color: #105198;
+background: linear-gradient(0.000000turn, #0F4C8E, #105198, #0F4C8E);
+;
+color: #FFFFFF;
+font-family: Avant Garde, sans-serif; font-size: 14px; font-weight: bold; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-fields > * > :not(.rnr-b-wrapper) .style3
+{
+background-image: none; background-color: #FFFFFF;color: #696969;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-c .rnr-leftbricks
+{
+margin-right: 3px;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-c .rnr-rightbricks
+{
+margin-left: 3px;
+}
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-fields > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 7px 6px;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 3px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-fields > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 3px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-fields > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 8px 10px;
+}
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-fields > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-fields > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 8px 4px;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-c
+{
+border-top-right-radius: 10px;border-top-left-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-ch > .rnr-b-hmenu:first-child
+{
+border-top-right-radius: 10px; padding-right: 5px;
+border-bottom-right-radius: 10px; padding-right: 5px;
+
+}
+.OfficeBlueWave.rnr-s-form > .rnr-ch> .rnr-b-hmenu:last-child
+{
+border-top-left-radius: 10px; padding-left: 5px;
+border-bottom-left-radius: 10px; padding-left: 5px;
+
+}
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-form > * > :not(.rnr-b-wrapper) .style1
+{
+background-image: none; background-color: #6699CC;color: #000080;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-c.rnr-ch
+{
+background-image: none; background-color: #6699CC;
+}
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-form > * > :not(.rnr-b-wrapper) .style2
+{
+background-image: none; background-color: #004080;color: #FFFFFF;
+font-family: Tahoma, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-form > * > :not(.rnr-b-wrapper) .style3
+{
+background-image: none; background-color: #6699CC;color: #003366;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-c .rnr-leftbricks
+{
+margin-right: 10px;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-c .rnr-rightbricks
+{
+margin-left: 10px;
+}
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-form > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-form > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-form > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-form > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-form > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-c
+{
+border: solid #C0C0C0 1px;border-top-right-radius: 4px;border-top-left-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-ch > .rnr-b-hmenu:first-child
+{
+border-top-right-radius: 3px; padding-right: 2px;
+border-bottom-right-radius: 3px; padding-right: 2px;
+
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-ch> .rnr-b-hmenu:last-child
+{
+border-top-left-radius: 3px; padding-left: 2px;
+border-bottom-left-radius: 3px; padding-left: 2px;
+
+}
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-1 > * > :not(.rnr-b-wrapper) .style1
+{
+background-color: #6699CC;
+background: linear-gradient(0.750000turn, #517AA3, #6699CC, #517AA3);
+;
+color: #404040;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-c.rnr-ch
+{
+background-color: #6699CC;
+background: linear-gradient(0.750000turn, #517AA3, #6699CC, #517AA3);
+;
+
+}
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-1 > * > :not(.rnr-b-wrapper) .style2
+{
+background-color: #004080;
+background: linear-gradient(0.000000turn, #003C78, #004080, #003C78);
+;
+color: #FFFFFF;
+font-family: Avant Garde, sans-serif; font-size: 14px; font-weight: bold; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-1 > * > :not(.rnr-b-wrapper) .style3
+{
+background-image: none; background-color: #6699CC;color: #404040;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-c .rnr-leftbricks
+{
+margin-right: 4px;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-c .rnr-rightbricks
+{
+margin-left: 4px;
+}
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-1 > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 4px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-1 > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 4px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-1 > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 8px 10px;
+}
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-1 > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-1 > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 10px;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-c
+{
+border-top-right-radius: 2px;border-top-left-radius: 2px;border-bottom-right-radius: 2px;border-bottom-left-radius: 2px;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-ch > .rnr-b-hmenu:first-child
+{
+border-top-right-radius: 2px; padding-right: 1px;
+border-bottom-right-radius: 2px; padding-right: 1px;
+
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-ch> .rnr-b-hmenu:last-child
+{
+border-top-left-radius: 2px; padding-left: 1px;
+border-bottom-left-radius: 2px; padding-left: 1px;
+
+}
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-2 > * > :not(.rnr-b-wrapper) .style1
+{
+background-color: #6699CC;
+background: linear-gradient(0.000000turn, #D1E0EF, #6699CC);
+;
+color: #404040;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-c.rnr-ch
+{
+background-color: #6699CC;
+background: linear-gradient(0.000000turn, #D1E0EF, #6699CC);
+;
+
+}
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-2 > * > :not(.rnr-b-wrapper) .style2
+{
+background-image: none; background-color: #3366FF;color: #FFFFFF;
+font-family: Tahoma, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-2 > * > :not(.rnr-b-wrapper) .style3
+{
+background-image: none; background-color: #6699CC;color: #404040;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-c .rnr-leftbricks
+{
+margin-right: 2px;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-c .rnr-rightbricks
+{
+margin-left: 2px;
+}
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-2 > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 7px 4px;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 2px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-2 > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 2px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-2 > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-2 > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-2 > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-c
+{
+border-top-right-radius: 10px;border-top-left-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-ch > .rnr-b-hmenu:first-child
+{
+border-top-right-radius: 10px; padding-right: 5px;
+border-bottom-right-radius: 10px; padding-right: 5px;
+
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-ch> .rnr-b-hmenu:last-child
+{
+border-top-left-radius: 10px; padding-left: 5px;
+border-bottom-left-radius: 10px; padding-left: 5px;
+
+}
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style1,
+.OfficeBlueWave.rnr-s-3 > * > :not(.rnr-b-wrapper) .style1
+{
+background-color: #6699CC;
+background: linear-gradient(0.750000turn, #517AA3, #6699CC, #517AA3);
+;
+color: #000000;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-c.rnr-ch
+{
+background-color: #6699CC;
+background: linear-gradient(0.750000turn, #517AA3, #6699CC, #517AA3);
+;
+
+}
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style2,
+.OfficeBlueWave.rnr-s-3 > * > :not(.rnr-b-wrapper) .style2
+{
+background-image: none; background-color: #3366FF;color: #FFFFFF;
+font-family: Tahoma, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style3,
+.OfficeBlueWave.rnr-s-3 > * > :not(.rnr-b-wrapper) .style3
+{
+background-image: none; background-color: #004080;color: #FFFFFF;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-c .rnr-leftbricks
+{
+margin-right: 10px;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-c .rnr-rightbricks
+{
+margin-left: 10px;
+}
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style1:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-3 > * > :not(.rnr-b-wrapper) .style1,
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style1 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-ch:before
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-3 > .rnr-ch:after
+{
+content: "";display:table-cell;padding:0 0 0 10px; background:transparent;
+}
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style2:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-3 > * > :not(.rnr-b-wrapper) .style2,
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style2 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style3:not(.rnr-hfiller),
+.OfficeBlueWave.rnr-s-3 > * > :not(.rnr-b-wrapper) .style3,
+.OfficeBlueWave.rnr-s-3 > :not(.runner-c) > *.style3 > .fieldGrid > * > * > td
+{
+padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-toprow > th:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-toprow > th:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-toprow > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-toprow > td:not(.rnr-cs)
+{
+background-color: #16589C; background-image: none;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;color: #FFFFFF;padding: 5px 6px;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-bottomrow > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-bottomrow > td:not(.rnr-cs)
+{
+background-color: #DCE2E6; background-image: none;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;color: #333333;padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-row > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-row > td:not(.rnr-cs)
+{
+background-color: #EDF1F3; background-image: none;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;color: #333333;color: #333333;padding: 5px 4px;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-row:nth-last-child(2n+1) > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-row:nth-last-child(2n+1) > td:not(.rnr-cs)
+{
+background-color: #FFFFFF; background-image: none;color: #333333;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical).hoverable > * > .rnr-row:hover > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord.hoverable > * > .rnr-row:hover > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-row > td.rnr-selected,
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-row > td.rnr-selected
+{
+background-color: #DCDCDC; background-image: none;color: #333333;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical).hoverable > * > .rnr-row:hover:nth-last-child(2n+1) > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord.hoverable > * > .rnr-row:hover:nth-last-child(2n+1) > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > * > .rnr-row:nth-last-child(2n+1) > td.rnr-selected,
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > * > .rnr-row:nth-last-child(2n+1) > td.rnr-selected
+{
+background-color: #DCE2E6; background-image: none;color: #333333;
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > thead > tr:last-child > th:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > thead > tr:last-child > th:not(.rnr-cs)
+{
+border-bottom: solid #D8DCDE 1px;
+
+}
+.OfficeBlueWave.rnr-s-grid > table:not(.runner-c):not(.vertical) > tbody > tr:not(.rnr-bottomrow) + .rnr-bottomrow > td:not(.rnr-cs),
+.OfficeBlueWave.rnr-s-grid > table.vertical > * > tr > td > table.rnr-vrecord > tbody > tr:not(.rnr-bottomrow) + .rnr-bottomrow > td:not(.rnr-cs)
+{
+border-top: solid #D8DCDE 1px;
+
+}
+.OfficeBlueWave .rnr-search-highlight
+{
+color: #FF0000; background-color: transparent;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > *,
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *:not(.subitem)
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.750000turn, #999999, #C0C0C0, #999999);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > hr,
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *:not(.subitem) > hr
+{
+border-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > *:hover:not(.expanded):not(.menuSeparator),
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *:not(.subitem):not(.manage):hover:not(.menuSeparator)
+{
+background-color: #DCDCDC;
+background: linear-gradient(0.750000turn, #B0B0B0, #DCDCDC, #B0B0B0);
+;
+color:#3366FF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > *.current.current.current,
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *:not(.subitem).current.current.current
+{
+background-color: #16589C;
+background: linear-gradient(0.750000turn, #11467C, #16589C, #11467C);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > *:hover:hover:hover.expanded
+{
+background-color: #DCDCDC;
+background: linear-gradient(0.750000turn, #B0B0B0, #DCDCDC, #B0B0B0);
+;
+color:#3366FF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > ul li,
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *.subitem
+{
+background-color: #A9A9A9;
+background: linear-gradient(0.750000turn, #ADADAD, #A9A9A9, #ADADAD);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > ul li > hr,
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *.subitem > hr
+{
+border-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > ul li:hover:not(.expanded):not(.menuSeparator),
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *.subitem:hover:not(.menuSeparator)
+{
+background-image:none; background-color: #DCDCDC;color:#FFFF00;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > ul li.current.current.current,
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *.subitem.current.current.current
+{
+background-image:none; background-color: #16589C;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > ul li:hover:hover:hover.expanded
+{
+background-image:none; background-color: #DCDCDC;color:#FFFF00;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *:not(.subitem) > div
+{
+padding: 8px 4px; margin:1px 2px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > :not(ul) > *
+{
+padding: 8px 4px; margin:1px 2px;
+}
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *.subitem > div
+{
+padding: 7px 7px; margin:1px 3px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > * > ul li > :not(ul) > *
+{
+padding: 7px 7px; margin:1px 3px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main >  * ul > li:not(:first-child)
+{
+border-top: solid #000000 1px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.main > *:not(:first-child),
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *:not(.subitem):not(:first-child)
+{
+border-top:solid #000000 1px;
+}
+.OfficeBlueWave .rnr-b-vmenu.tree.main > *.subitem:not(:first-child)
+{
+border-top: solid #000000 1px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > *,
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *:not(.subitem)
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.000000turn, #E5E5E5, #C0C0C0);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > hr,
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *:not(.subitem) > hr
+{
+border-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > *:hover:not(.expanded):not(.menuSeparator),
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *:not(.subitem):not(.manage):hover:not(.menuSeparator)
+{
+background-color: #DCDCDC;
+background: linear-gradient(0.000000turn, #F1F1F1, #DCDCDC);
+;
+color:#3366FF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > *.current.current.current,
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *:not(.subitem).current.current.current
+{
+background-color: #16589C;
+background: linear-gradient(0.000000turn, #A1BCD7, #16589C);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > *:hover:hover:hover.expanded
+{
+background-color: #DCDCDC;
+background: linear-gradient(0.000000turn, #F1F1F1, #DCDCDC);
+;
+color:#3366FF;font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > ul li,
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *.subitem
+{
+background-image:none; background-color: #A9A9A9;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > ul li > hr,
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *.subitem > hr
+{
+border-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > ul li:hover:not(.expanded):not(.menuSeparator),
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *.subitem:hover:not(.menuSeparator)
+{
+background-image:none; background-color: #DCDCDC;color:#FFFF00;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > ul li.current.current.current,
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *.subitem.current.current.current
+{
+background-image:none; background-color: #16589C;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > ul li:hover:hover:hover.expanded
+{
+background-image:none; background-color: #DCDCDC;color:#FFFF00;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *:not(.subitem) > div
+{
+padding: 8px 4px; margin:1px 2px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > :not(ul) > *
+{
+padding: 8px 4px; margin:1px 2px;
+}
+.OfficeBlueWave .rnr-b-vmenu.tree.second > *.subitem > div
+{
+padding: 4px 3px; margin:1px 1px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second > * > ul li > :not(ul) > *
+{
+padding: 4px 3px; margin:1px 1px;
+}
+.OfficeBlueWave .rnr-b-vmenu.simple.second >  * ul
+{
+box-shadow:5px 5px 3px rgba(0,0,0,0.2);
+}
+.OfficeBlueWave .rnr-b-hmenu.main > div:not(.rnr-hseparator)
+{
+background: transparent;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;padding: 19px 20px;border: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main
+{
+background-color: #6699CC;
+background: linear-gradient(0.000000turn, #517AA3, #6699CC, #517AA3);
+;
+
+}
+.OfficeBlueWave .rnr-b-hmenu.main > div:not(.rnr-hseparator) > hr
+{
+border-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-b-hmenu.main:hover:not(.expanded) > div:not(.rnr-hseparator)
+{
+background: transparent;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main:hover:not(.expanded)
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.000000turn, #999999, #C0C0C0, #999999);
+;
+
+}
+.OfficeBlueWave .rnr-b-hmenu.main.current.current > div:not(.rnr-hseparator)
+{
+background: transparent;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main.current.current
+{
+background-color: #16589C;
+background: linear-gradient(0.000000turn, #11467C, #16589C, #11467C);
+;
+
+}
+.OfficeBlueWave .rnr-b-hmenu.main:hover.expanded > div:not(.rnr-hseparator)
+{
+background: transparent;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main:hover.expanded
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.000000turn, #999999, #C0C0C0, #999999);
+;
+
+}
+.OfficeBlueWave .rnr-b-hmenu.main > ul li
+{
+background-image:none; background-color: #00FFFF;color:#000080;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main > ul li > hr
+{
+border-color:#000080;
+}
+.OfficeBlueWave .rnr-b-hmenu.main > ul li:hover:not(.expanded):not(.menuSeparator)
+{
+background-image:none; background-color: #00CCCC;color:#0000FF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main > ul li.current.current
+{
+background-image:none; background-color: #3366FF;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main > ul li:hover.expanded
+{
+background-image:none; background-color: #00CCCC;color:#0000FF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.main > ul li > div > div
+{
+padding: 9px 14px; margin:1px 6px;
+}
+.OfficeBlueWave .rnr-b-hmenu.main:not(:last-child)
+{
+border-right: solid #000000 1px;
+}
+.OfficeBlueWave :not(.rnr-b-hmenu):not(.main) + .rnr-b-hmenu.main
+{
+border-left: solid #000000 1px;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > div:not(.rnr-hseparator)
+{
+background-color: #6699CC;
+background: linear-gradient(0.000000turn, #517AA3, #6699CC, #517AA3);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;padding: 5px 4px;border-top-left-radius: 8px;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > div:not(.rnr-hseparator) > hr
+{
+border-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-b-hmenu.second:hover:not(.expanded) > div:not(.rnr-hseparator)
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.000000turn, #999999, #C0C0C0, #999999);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second.current.current > div:not(.rnr-hseparator)
+{
+background-color: #16589C;
+background: linear-gradient(0.000000turn, #11467C, #16589C, #11467C);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second:hover.expanded > div:not(.rnr-hseparator)
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.000000turn, #999999, #C0C0C0, #999999);
+;
+color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > ul li
+{
+background-image:none; background-color: #00FFFF;color:#000080;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > ul li > hr
+{
+border-color:#000080;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > ul li:hover:not(.expanded):not(.menuSeparator)
+{
+background-image:none; background-color: #00CCCC;color:#0000FF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > ul li.current.current
+{
+background-image:none; background-color: #3366FF;color:#FFFFFF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > ul li:hover.expanded
+{
+background-image:none; background-color: #00CCCC;color:#0000FF;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; text-decoration: none;
+}
+.OfficeBlueWave .rnr-b-hmenu.second > ul li > div > div
+{
+padding: 4px 3px; margin:1px 1px;
+}
+.OfficeBlueWave .rnr-b-hmenu.second ul
+{
+box-shadow:5px 5px 3px rgba(0,0,0,0.2);
+}
+.OfficeBlueWave .rnr-b-hmenu.second.rnr-b-hmenu.rnr-b-hmenu
+{
+padding-bottom: 0; padding-left:0; padding-right:0; vertical-align: bottom;
+}
+body.OfficeBlueWave
+{
+
+background-color:#FFFFFF;
+}
+.OfficeBlueWave .rnr-list
+{
+color: #FFFFFF;background-color: #6699CC;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;border: solid #004080 1px;box-shadow:5px 5px 3px rgba(0,0,0,0.2);
+}
+.OfficeBlueWave .rnr-tab.selected
+{
+background-color:#0000FF;
+border-top-right-radius:4px;
+border-top-left-radius:4px;
+
+}
+.OfficeBlueWave .rnr-tab
+{
+background-color:#C0C0C0;
+border-top-right-radius:4px;
+border-top-left-radius:4px;
+border: solid #000000 1px; border-bottom-width:0;
+}
+.OfficeBlueWave .rnr-tab.selected > a
+{
+color: #FFFFFF;
+
+}
+.OfficeBlueWave .rnr-tab > a
+{
+color: #000000;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .yui-navset .yui-content
+{
+border: solid #0000FF 1px;border-top-width: 5px;
+}
+.OfficeBlueWave .rnr-stepnav > a.active,
+.OfficeBlueWave .rnr-stepnav > a:hover:not(.active)
+{
+background-color: #EDF1F3;
+background: linear-gradient(0.000000turn, #F9FBFB, #EDF1F3);
+;
+color: #16589C;
+
+}
+.OfficeBlueWave .rnr-stepnav > a.active:after,
+.OfficeBlueWave .rnr-stepnav > a:hover:not(.active):after
+{
+background-color: #EDF1F3;
+background: linear-gradient(0.875000turn, #F9FBFB, #EDF1F3);
+;
+
+}
+.OfficeBlueWave .rnr-stepnav > a:not(.active),
+.OfficeBlueWave .rnr-stepnav > a:not(.active):after
+{
+background-image: none; background-color: #C0C0C0;
+
+}
+.OfficeBlueWave .rnr-stepnav > a:before
+{
+background-image: none; background: #DCDCDC;
+
+}
+.OfficeBlueWave .rnr-stepnav > a:not(.active)
+{
+color: #A9A9A9;
+
+}
+.OfficeBlueWave .rnr-stepnav > a:before 
+{
+color: #333333;
+
+}
+.OfficeBlueWave .rnr-stepnav > a,
+ .rnr-pagewrapper .OfficeBlueWave .rnr-stepnav > a,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .rnr-stepnav > a
+{
+font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave  .rnr-message
+{
+background-color: #6699CC;border: solid #004080 2px;color: #008000;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave  .rnr-error.rnr-error
+{
+color: #A80000;font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .yui3-panel-content.yui3-panel-content
+{
+border: solid #C0C0C0 1px;border-radius: 4px;
+}
+.OfficeBlueWave  .yui3-panel .yui3-widget-hd.yui3-widget-hd.yui3-widget-hd
+{
+background-color: #004080;
+background: linear-gradient(0.000000turn, #003C78, #004080, #003C78);
+;
+font-family: Avant Garde, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;color: #FFFFFF;
+}
+.OfficeBlueWave  .yui3-widget-ft
+{
+background-color: #105198;
+background: linear-gradient(0.000000turn, #0F4C8E, #105198, #0F4C8E);
+;
+font-family: Avant Garde, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;color: #FFFFFF;
+}
+.OfficeBlueWave .rnr-dbbordered
+{
+border: solid #C0C0C0 1px;border-radius: 4px;
+}
+.OfficeBlueWave  .rnr-dbelemheader
+{
+background-color: #004080;
+background: linear-gradient(0.000000turn, #003C78, #004080, #003C78);
+;
+font-family: Avant Garde, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;color: #FFFFFF;
+}
+.OfficeBlueWave  .rnr-dbelemfooter
+{
+background-color: #D8D8D8;
+background: linear-gradient(0.000000turn, #CBCBCB, #D8D8D8, #CBCBCB);
+;
+font-family: Avant Garde, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; text-decoration: none;color: #000000;
+}
+.OfficeBlueWave  .rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow
+{
+background-color: #FFFACD; background-image: none;color: #4C4951;
+}
+.OfficeBlueWave .rnr-dashboard
+{
+background-color: #FFFFFF;
+}
+.OfficeBlueWave .rnr-button.rnr-button,
+.OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.rnr-button,
+.OfficeBlueWave .button.button.button.rnr-button.rnr-button,
+ .rnr-pagewrapper .OfficeBlueWave .rnr-button.rnr-button,
+ .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.rnr-button,
+ .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button.rnr-button,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .rnr-button.rnr-button,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.rnr-button,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button.rnr-button
+{
+border: solid 1px;border-radius: 2px;padding: 3px 10px 3px;background-color: #EDF1F3;
+background: linear-gradient(0.000000turn, #F9FBFB, #EDF1F3);
+;
+border-color: #000080;color: #16589C;
+font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .rnr-button.rnr-button.img,
+.OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.rnr-button.img,
+.OfficeBlueWave .button.button.button.rnr-button.rnr-button.img,
+ .rnr-pagewrapper .OfficeBlueWave .rnr-button.rnr-button.img,
+ .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.rnr-button.img,
+ .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button.rnr-button.img,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .rnr-button.rnr-button.img,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.rnr-button.img,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button.rnr-button.img
+{
+padding: 3px;
+
+}
+.OfficeBlueWave .rnr-button:hover,
+.OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button:hover,
+.OfficeBlueWave .button.button.button.rnr-button:hover,
+ .rnr-pagewrapper .OfficeBlueWave .rnr-button:hover,
+ .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button:hover,
+ .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button:hover,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .rnr-button:hover,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button:hover,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button:hover
+{
+background-color: #DCDCDC;
+background: linear-gradient(0.000000turn, #F5F5F5, #DCDCDC);
+;
+border-color: #000000;color: #333333;
+
+}
+.OfficeBlueWave .rnr-button:active,
+.OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button:active,
+.OfficeBlueWave .button.button.button.rnr-button:active,
+ .rnr-pagewrapper .OfficeBlueWave .rnr-button:active,
+ .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button:active,
+ .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button:active,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .rnr-button:active,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button:active,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button:active
+{
+background-color: #DCDCDC;
+background: linear-gradient(0.000000turn, #F5F5F5, #DCDCDC);
+;
+border-color: #C0C0C0;color: #333333;
+
+}
+.OfficeBlueWave .rnr-button.disabled,
+.OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.disabled,
+.OfficeBlueWave .button.button.button.rnr-button.disabled,
+ .rnr-pagewrapper .OfficeBlueWave .rnr-button.disabled,
+ .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.disabled,
+ .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button.disabled,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .rnr-button.disabled,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.asbuttons > * > *:not(.rnr-wrapper) .rnr-button.disabled,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .button.button.button.rnr-button.disabled
+{
+background-color: #C0C0C0;
+background: linear-gradient(0.000000turn, #EDEDED, #C0C0C0);
+;
+border-color: #DCDCDC;color: #A9A9A9;
+
+}
+.OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.rnr-button,
+.OfficeBlueWave .link.link.link.rnr-button.rnr-button,
+ .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.rnr-button,
+ .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button.rnr-button,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.rnr-button,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button.rnr-button
+{
+background: none; border: none; ;
+border: none;border-radius: 0px;padding: 4px 8px 4px;color: #404040;
+font-family: Tahoma, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.rnr-button.img,
+.OfficeBlueWave .link.link.link.rnr-button.rnr-button.img,
+ .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.rnr-button.img,
+ .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button.rnr-button.img,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.rnr-button.img,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button.rnr-button.img
+{
+padding: 4px;
+
+}
+.OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button:hover,
+.OfficeBlueWave .link.link.link.rnr-button:hover,
+ .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button:hover,
+ .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button:hover,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button:hover,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button:hover
+{
+color: #696969;
+
+}
+.OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button:active,
+.OfficeBlueWave .link.link.link.rnr-button:active,
+ .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button:active,
+ .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button:active,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button:active,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button:active
+{
+color: #004080;
+
+}
+.OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.disabled,
+.OfficeBlueWave .link.link.link.rnr-button.disabled,
+ .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.disabled,
+ .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button.disabled,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave.aslinks > * > *:not(.rnr-wrapper) .rnr-button.disabled,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .link.link.link.rnr-button.disabled
+{
+color: #DCDCDC;
+
+}
+.OfficeBlueWave .main.main.main.rnr-button.rnr-button,
+ .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button.rnr-button,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button.rnr-button
+{
+border: solid 1px;border-radius: 2px;padding: 3px 12px 4px;background-image: none; background-color: #EDF1F3;
+border-color: #000080;color: #16589C;
+font-family: Tahoma, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;
+}
+.OfficeBlueWave .main.main.main.rnr-button.rnr-button.img,
+ .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button.rnr-button.img,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button.rnr-button.img
+{
+padding: 3px;
+
+}
+.OfficeBlueWave .main.main.main.rnr-button:hover,
+ .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button:hover,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button:hover
+{
+background-image: none; background-color: #DCDCDC;
+border-color: #000000;color: #333333;
+
+}
+.OfficeBlueWave .main.main.main.rnr-button:active,
+ .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button:active,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button:active
+{
+background-image: none; background-color: #DCDCDC;
+border-color: #C0C0C0;color: #333333;
+
+}
+.OfficeBlueWave .main.main.main.rnr-button.disabled,
+ .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button.disabled,
+ .rnr-pagewrapper .rnr-pagewrapper .OfficeBlueWave .main.main.main.rnr-button.disabled
+{
+background-image: none; background-color: #C0C0C0;
+border-color: #DCDCDC;color: #A9A9A9;
+
+}
+ .rnr-left, .rnr-center {
+ background: #ffffff !important;
+ }
+ 
